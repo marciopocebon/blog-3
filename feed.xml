@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>uGeek - Blog de Tecnología</title>
+    <link>https://ugeek.github.io/blog</link>
+    <description>Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek</description>
+    <image>
+       <url>https://ugeek.github.io/blog/ugeek.png</url>
+       <title>uGeek - Blog de Tecnología</title>
+       <link>https://ugeek.github.io/blog</link>
+    </image>
+    <language>es</language>
+    <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
+   <item>
+    <title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</link>
+    <description>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi</description>
+    <pubDate>Sun, 06 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</guid>
+   </item>
+   <item>
+    <title>Elimina archivos duplicados con fduples</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</link>
+    <description>fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados</description>
+    <pubDate>Sat, 05 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</guid>
+   </item>
+   <item>
+    <title>Crear un Blog en GitLab</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.html</link>
+    <description>Como podemos eliminar líneas en Blanco</description>
+    <pubDate>Fri, 04 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.html</guid>
+   </item>
+   <item>
+    <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</link>
+    <description>Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.</description>
+    <pubDate>Thu, 03 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</guid>
+   </item>
+   <item>
+    <title>El poder de la terminal y el scripting</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</link>
+    <description>Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center</description>
+    <pubDate>Thu, 03 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</guid>
+   </item>
+   <item>
+    <title>Con Emacs también podemos editar Markdown</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
+    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?</description>
+    <pubDate>Thu, 03 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</guid>
+   </item>
+   <item>
+    <title>Kde Connect en Ubuntu...</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
+    <description>He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso</description>
+    <pubDate>Wed, 02 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</guid>
+   </item>
+   <item>
+    <title>Crear listas m3u para minidlna o vlc</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</link>
+    <description>Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...</description>
+    <pubDate>Wed, 02 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</guid>
+   </item>
+   <item>
+    <title>Kde Connect en Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
+    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla</description>
+    <pubDate>Mon, 31 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</guid>
+   </item>
+   <item>
+    <title>Eliminar comentarios de nuestros script</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html</link>
+    <description>Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...</description>
+    <pubDate>Sun, 30 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html</guid>
+   </item>
+   <item>
+    <title>Redirigir el tráfico de una página web a otra</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</link>
+    <description>Hay veces que queremos redirigir el tráfico de una página a otra... </description>
+    <pubDate>Sat, 29 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</guid>
+   </item>
+   <item>
+    <title>Descargar todos los episodios de un Podcast con wget</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</link>
+    <description>Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget. </description>
+    <pubDate>Fri, 28 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</guid>
+   </item>
+   <item>
+    <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
+    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc </description>
+    <pubDate>Fri, 28 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid>
+   </item>
+   <item>
+    <title>minidlna</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-27-minidlna.html</link>
+    <description>DLNA es un servidor multimedia </description>
+    <pubDate>Thu, 27 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-27-minidlna.html</guid>
+   </item>
+   <item>
+    <title>Eliminar líneas en Blanco con sed</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</link>
+    <description>Como podemos eliminar líneas en Blanco</description>
+    <pubDate>Thu, 27 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</guid>
+   </item>
+  </channel>
+</rss>
