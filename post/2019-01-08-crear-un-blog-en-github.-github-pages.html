@@ -6,11 +6,11 @@
 <!-- 2019-01-08 mar 21:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
+<title>Crear un Blog en GitHub. GitHub Pages</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi"
+<meta name="description" content="Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown"
  />
-<meta name="keywords" content="docker, nextcloud" />
+<meta name="keywords" content="git, servidor, blog, html," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -248,83 +248,32 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org7d5ddbc" class="outline-2">
-<h2 id="org7d5ddbc">NextcloudPi. Nextcloud en Raspbian con Docker</h2>
-<div class="outline-text-2" id="text-org7d5ddbc">
-</div>
-<div id="outline-container-org818b146" class="outline-3">
-<h3 id="org818b146">Descargar Imagen y Crear Contenedor NextcloudPi</h3>
-<div class="outline-text-3" id="text-org818b146">
+<div id="outline-container-orgd38c422" class="outline-2">
+<h2 id="orgd38c422">Crear un Blog en GitHub. GitHub Pages</h2>
+<div class="outline-text-2" id="text-orgd38c422">
 <p>
-Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.
+Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown.
+Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo.
+Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"&#x2026; y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros.
 </p>
 
-<p>
-Si tenemos un servidor como apache2, vamos a detener el servicio para no utilizar el puerto 80, que éste utiliza por defecto.
-</p>
-
-<p>
-Tendrás que modificar en este comando el usuario <b>pi</b> por tu usuario y la ip <b>192.168.1.100</b> por la ip local de tu raspberry.
-</p>
-
-<pre class="example">
-sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloudplus/:/data --name nextcloudpi ownyourbits/nextcloudplus-armhf 192.168.1.100
-</pre>
-</div>
-</div>
-
-<div id="outline-container-orga1fe615" class="outline-3">
-<h3 id="orga1fe615">Iniciar Nextcloud</h3>
-<div class="outline-text-3" id="text-orga1fe615">
-<p>
-Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.
-</p>
-
-<p>
-Guardamos las 2 contraseñas y le damos a <b>Activar</b> en la parte inferior.
-</p>
-
-<p>
-Una contraseña será para la web de administración de <b>NextcloudPi</b> por el puerto 4443 y la otra contraseña será para el servicio <b>Nextcloud</b> por el puerto 80 o 443.
-</p>
-</div>
-</div>
-<div id="outline-container-orgcf51e81" class="outline-3">
-<h3 id="orgcf51e81">Crear Certificado</h3>
-<div class="outline-text-3" id="text-orgcf51e81">
-<p>
-Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.
-</p>
-
-<p>
-Ahora vamos a ip::4443 y vamos a crear el certificado en el apartado: Let’s Encrypt.
-</p>
-
-<p>
-Abriremos los puertos 443 y 80 de nuestro Router, dirigiendo el tráfico a la ip local de nuestra Raspberry y clicaremos <b>Ejecutar</b>.
-</p>
-
-<p>
-De forma automática, nos generará el certificado por 3 meses.
-</p>
-
-<p>
-<a href="https://ownyourbits.com/nextcloudpi/">NextcloudPi</a>
-</p>
+<ol class="org-ol">
+<li>Creamos el repositorio en GitHub</li>
+<li>Bajamos este, a nuestro dispositivo haciendo un <code>git clone repositorio</code></li>
+<li>Ya tenemos nuestra carpeta de GitHub en local. Añadimos los archivos .html que queremos subir a nuestro GitHub Pages</li>
+<li>Subimos todos los archivos a GitHub con los comandos: <code>git add . ; git commit -m "primer commit" ; git push</code></li>
+<li>Ahora vamos a habilitar el servidor web. Vamos a <b>Settings</b></li>
+<li>En el apartado <b>GitHub Pages</b>, en <b>Source</b>, cambiamos el estado de <b>None</b> a <b>Master Branch</b>. Despues pulsaremos el boton <b>Save</b></li>
+</ol>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.html">Crear un Blog en GitLab</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
 </div>
 </div>
 </div>

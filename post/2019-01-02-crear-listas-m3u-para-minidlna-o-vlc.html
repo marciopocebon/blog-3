@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-08 mar 20:18 -->
+<!-- 2019-01-08 mar 21:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Crear listas m3u para minidlna o vlc</title>
@@ -248,26 +248,26 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgc229036" class="outline-2">
-<h2 id="orgc229036">Crear listas m3u para minidlna o vlc</h2>
-<div class="outline-text-2" id="text-orgc229036">
+<div id="outline-container-orgd341c26" class="outline-2">
+<h2 id="orgd341c26">Crear listas m3u para minidlna o vlc</h2>
+<div class="outline-text-2" id="text-orgd341c26">
 <p>
 Un archivo <b>.m3u</b>, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc.
 Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidlna.html">minidlna</a>, te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.
 </p>
 </div>
-<div id="outline-container-orgc714440" class="outline-3">
-<h3 id="orgc714440">Crear lista para minidlna</h3>
-<div class="outline-text-3" id="text-orgc714440">
+<div id="outline-container-org1073197" class="outline-3">
+<h3 id="org1073197">Crear lista para minidlna</h3>
+<div class="outline-text-3" id="text-org1073197">
 <ul class="org-ul">
 <li>Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.</li>
 <li>No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd4b1eea" class="outline-3">
-<h3 id="orgd4b1eea">Lista dentro de un directorio</h3>
-<div class="outline-text-3" id="text-orgd4b1eea">
+<div id="outline-container-orgbea35f1" class="outline-3">
+<h3 id="orgbea35f1">Lista dentro de un directorio</h3>
+<div class="outline-text-3" id="text-orgbea35f1">
 <ol class="org-ol">
 <li>Nos situamos en el directorio:</li>
 </ol>
@@ -276,9 +276,9 @@ Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidln
 </p>
 </div>
 
-<div id="outline-container-org958f8ec" class="outline-4">
-<h4 id="org958f8ec">Explicación del comando de listado</h4>
-<div class="outline-text-4" id="text-org958f8ec">
+<div id="outline-container-org667a5f8" class="outline-4">
+<h4 id="org667a5f8">Explicación del comando de listado</h4>
+<div class="outline-text-4" id="text-org667a5f8">
 <ul class="org-ul">
 <li>ls -&gt; lista archivos dentro de la carpeta</li>
 <li>-1 -&gt; mostrar un archivo por línea</li>
@@ -290,18 +290,18 @@ Después, podríamos ordenar el listado de diferente maneras, por ejemplo con co
 </div>
 </div>
 </div>
-<div id="outline-container-orgce01d72" class="outline-3">
-<h3 id="orgce01d72">Lista recursiva entrando dentro de subcarpetas</h3>
-<div class="outline-text-3" id="text-orgce01d72">
+<div id="outline-container-org01e1cb9" class="outline-3">
+<h3 id="org01e1cb9">Lista recursiva entrando dentro de subcarpetas</h3>
+<div class="outline-text-3" id="text-org01e1cb9">
 <p>
 <code>ls -1 -R | grep .mp3 &gt; lista.m3u</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4956b49" class="outline-3">
-<h3 id="org4956b49">Reproducir la lista desde nuestra terminal con vlc</h3>
-<div class="outline-text-3" id="text-org4956b49">
+<div id="outline-container-org2adfa1c" class="outline-3">
+<h3 id="org2adfa1c">Reproducir la lista desde nuestra terminal con vlc</h3>
+<div class="outline-text-3" id="text-org2adfa1c">
 <p>
 <code>vlc lista.m3u</code>
 </p>
@@ -324,7 +324,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-08 mar 20:18</p>
+<p class="date">Created: 2019-01-08 mar 21:30</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

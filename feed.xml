@@ -13,6 +13,13 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Crear un Blog en GitHub. GitHub Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html</link>
+    <description>Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown</description>
+    <pubDate>Tue, 08 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html</guid>
+   </item>
+   <item>
     <title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
     <link>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</link>
     <description>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi</description>
