@@ -6,11 +6,11 @@
 <!-- 2019-01-08 mar 21:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Eliminar comentarios de nuestros script</title>
+<title>Crear un Blog en GitLab. GitLab Pages</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..."
+<meta name="description" content="Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico."
  />
-<meta name="keywords" content="bash, grep, sed, unix" />
+<meta name="keywords" content="gitlab, servidor, blog, html, git" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -248,23 +248,64 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org83a321e" class="outline-2">
-<h2 id="org83a321e">Eliminar comentarios de nuestros script</h2>
-<div class="outline-text-2" id="text-org83a321e">
+<div id="outline-container-orgcf00812" class="outline-2">
+<h2 id="orgcf00812">Crear un Blog en GitLab. GitLab Pages</h2>
+<div class="outline-text-2" id="text-orgcf00812">
+</div>
+
+<div id="outline-container-org4883de5" class="outline-3">
+<h3 id="org4883de5">Intro</h3>
+<div class="outline-text-3" id="text-org4883de5">
 <p>
-Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , <b>bash</b>, va a ser tan sencillo como hacer uso de nuestro querido <b>grep</b>:
+Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las <a href="https://pages.github.com/">GitLabPages</a> y sin límite de espacio ni tráfico. El único limite, creo recordar, es que los archivo que subamos no pueden exceder de 15mb. Aún así, para mi es más que suficiente. 
 </p>
 
 <p>
-<code>cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code>
+Dando por hecho que ya tienes una cuenta creada, solo falta decidir si el repositorio que vas a crear, será como uno de tus proyectos o vas a crear un grupo. El punto positivo de crear el grupo, es que podrás elegir una url tipo miblog.gitlab.io.
 </p>
 
 <p>
-Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos <b>sed</b>::
+También decir que el repositorio que crees, a diferencia de GitHub, podrás hacerlo tanto público como privado. Eso no exime el correcto funcionamiento de la Página en el servidor web. 
 </p>
 
 <p>
-<code>cat archivo.sh |  grep -v ^# | sed '/^ *$/d' &gt; archivo_nuevo.sh</code>
+Imaginar tener vuestra Raspberry con git instalado y enviando información a nuestro servidor GitLab mediante cron. Esto puede ser muy muy interesante, una puerta de acceso al mundo exterior. jejeje
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39ae7ee" class="outline-3">
+<h3 id="org39ae7ee">Creamos el repositorio</h3>
+<div class="outline-text-3" id="text-org39ae7ee">
+<p>
+Una vez creado el repositorio, tendremos que crear un archivo llamado  <b>.gitlab-ci.yml</b> y dentro de este, escribir el siguiente código:
+</p>
+<pre class="example">
+pages:
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+</pre>
+</div>
+</div>
+<div id="outline-container-org52a99e5" class="outline-3">
+<h3 id="org52a99e5">Crear el servidor</h3>
+<div class="outline-text-3" id="text-org52a99e5">
+<ol class="org-ol">
+<li>Vamos al apartado <b>CI/CC</b></li>
+<li>Vamos a <b>Configuración -&gt; General -&gt; Avanced -&gt; Expand</b></li>
+<li>En Path, añadimos junto al proyecto, el dominio que queremos utilizar. Ejem: miblog.gitlab.io</li>
+<li>Esperamos aproximadamente un minuto, veremos desde la página de GitLab una animación de una redonda que va cargando y&#x2026;</li>
+</ol>
+
+<p>
+Ya Está!!! Nuestro servidor esta funcionando!!!
 </p>
 <br><br>
 <p>
@@ -272,13 +313,10 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
