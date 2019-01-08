@@ -34,11 +34,11 @@
     <guid>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</guid>
    </item>
    <item>
-    <title>Crear un Blog en GitLab</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.html</link>
-    <description>Como podemos eliminar líneas en Blanco</description>
+    <title>Crear un Blog en GitLab. GitLab Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</link>
+    <description>Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico.</description>
     <pubDate>Fri, 04 Jan 2019 18:00 +0100</pubDate>
-    <guid>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</guid>
    </item>
    <item>
     <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
