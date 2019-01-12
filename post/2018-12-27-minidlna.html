@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-12 ds. 17:35 -->
+<!-- 2019-01-12 ds. 17:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>minidlna</title>
@@ -248,9 +248,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org1f01ab4" class="outline-2">
-<h2 id="org1f01ab4">minidlna</h2>
-<div class="outline-text-2" id="text-org1f01ab4">
+<div id="outline-container-org4bbc701" class="outline-2">
+<h2 id="org4bbc701">minidlna</h2>
+<div class="outline-text-2" id="text-org4bbc701">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -262,18 +262,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-orgd4fabc2" class="outline-3">
-<h3 id="orgd4fabc2">Instalación</h3>
-<div class="outline-text-3" id="text-orgd4fabc2">
+<div id="outline-container-orgc1beb7a" class="outline-3">
+<h3 id="orgc1beb7a">Instalación</h3>
+<div class="outline-text-3" id="text-orgc1beb7a">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgaf57cce" class="outline-3">
-<h3 id="orgaf57cce">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orgaf57cce">
+<div id="outline-container-org6f529e8" class="outline-3">
+<h3 id="org6f529e8">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-org6f529e8">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -298,9 +298,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-org49e780b" class="outline-3">
-<h3 id="org49e780b">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org49e780b">
+<div id="outline-container-org3487ac9" class="outline-3">
+<h3 id="org3487ac9">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-org3487ac9">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -311,9 +311,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-orgd9086c3" class="outline-3">
-<h3 id="orgd9086c3">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgd9086c3">
+<div id="outline-container-org78948d1" class="outline-3">
+<h3 id="org78948d1">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org78948d1">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -324,9 +324,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org3eeef8a" class="outline-3">
-<h3 id="org3eeef8a">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org3eeef8a">
+<div id="outline-container-org0805bf8" class="outline-3">
+<h3 id="org0805bf8">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org0805bf8">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -349,9 +349,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-orge44af04" class="outline-3">
-<h3 id="orge44af04">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-orge44af04">
+<div id="outline-container-org9fdad59" class="outline-3">
+<h3 id="org9fdad59">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-org9fdad59">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -366,9 +366,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org369bc60" class="outline-3">
-<h3 id="org369bc60">Puertos</h3>
-<div class="outline-text-3" id="text-org369bc60">
+<div id="outline-container-org26a8658" class="outline-3">
+<h3 id="org26a8658">Puertos</h3>
+<div class="outline-text-3" id="text-org26a8658">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -382,13 +382,20 @@ En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder
 También te puede interesar:
 </p>
 
+<ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
+</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-12 ds. 17:35</p>
+<p class="date">Created: 2019-01-12 ds. 17:51</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
