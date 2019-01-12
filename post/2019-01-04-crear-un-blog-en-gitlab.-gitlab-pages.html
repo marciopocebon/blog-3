@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-08 mar 21:44 -->
+<!-- 2019-01-12 ds. 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Crear un Blog en GitLab. GitLab Pages</title>
@@ -243,19 +243,19 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss"><img src="../icon/podcast.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="feed.xml"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="uGeek"></a></div>
+<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgd85ff86" class="outline-2">
-<h2 id="orgd85ff86">Crear un Blog en GitLab. GitLab Pages</h2>
-<div class="outline-text-2" id="text-orgd85ff86">
+<div id="outline-container-org030d32c" class="outline-2">
+<h2 id="org030d32c">Crear un Blog en GitLab. GitLab Pages</h2>
+<div class="outline-text-2" id="text-org030d32c">
 </div>
 
-<div id="outline-container-org6f70533" class="outline-3">
-<h3 id="org6f70533">Intro</h3>
-<div class="outline-text-3" id="text-org6f70533">
+<div id="outline-container-org0db85f0" class="outline-3">
+<h3 id="org0db85f0">Intro</h3>
+<div class="outline-text-3" id="text-org0db85f0">
 <p>
 Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las <a href="https://pages.github.com/">GitLabPages</a> y sin límite de espacio ni tráfico. El único limite, creo recordar, es que los archivo que subamos no pueden exceder de 15mb. Aún así, para mi es más que suficiente. 
 </p>
@@ -274,9 +274,9 @@ Imaginar tener vuestra Raspberry con git instalado y enviando información a nue
 </div>
 </div>
 
-<div id="outline-container-org7265c6d" class="outline-3">
-<h3 id="org7265c6d">Creamos el repositorio</h3>
-<div class="outline-text-3" id="text-org7265c6d">
+<div id="outline-container-org8baad67" class="outline-3">
+<h3 id="org8baad67">Creamos el repositorio</h3>
+<div class="outline-text-3" id="text-org8baad67">
 <p>
 Una vez creado el repositorio, tendremos que crear un archivo llamado  <b>.gitlab-ci.yml</b> y dentro de este, escribir el siguiente código:
 </p>
@@ -294,9 +294,10 @@ pages:
 </pre>
 </div>
 </div>
-<div id="outline-container-orgfc38601" class="outline-3">
-<h3 id="orgfc38601">Crear el servidor</h3>
-<div class="outline-text-3" id="text-orgfc38601">
+
+<div id="outline-container-org59d018c" class="outline-3">
+<h3 id="org59d018c">Crear el servidor</h3>
+<div class="outline-text-3" id="text-org59d018c">
 <ol class="org-ol">
 <li>Vamos al apartado <b>CI/CC</b></li>
 <li>Vamos a <b>Configuración -&gt; General -&gt; Avanced -&gt; Expand</b></li>
@@ -307,12 +308,14 @@ pages:
 <p>
 Ya Está!!! Nuestro servidor esta funcionando!!!
 </p>
+
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
@@ -321,7 +324,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-08 mar 21:44</p>
+<p class="date">Created: 2019-01-12 ds. 11:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

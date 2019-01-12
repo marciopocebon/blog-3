@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>uGeek - Blog de Tecnología</title>
+    <title>uGeek Blog </title>
     <link>https://ugeek.github.io/blog</link>
     <description>Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek</description>
     <image>
        <url>https://ugeek.github.io/blog/ugeek.png</url>
-       <title>uGeek - Blog de Tecnología</title>
+       <title>uGeek Blog </title>
        <link>https://ugeek.github.io/blog</link>
     </image>
     <language>es</language>
@@ -29,7 +29,7 @@
    <item>
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
-    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc </description>
+    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc</description>
     <pubDate>Fri, 28 Dec 2018 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid>
    </item>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-08 mar 21:44 -->
+<!-- 2019-01-12 ds. 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
@@ -243,18 +243,19 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss"><img src="../icon/podcast.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="feed.xml"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="uGeek"></a></div>
+<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgb73008c" class="outline-2">
-<h2 id="orgb73008c">NextcloudPi. Nextcloud en Raspbian con Docker</h2>
-<div class="outline-text-2" id="text-orgb73008c">
+<div id="outline-container-org40c0456" class="outline-2">
+<h2 id="org40c0456">NextcloudPi. Nextcloud en Raspbian con Docker</h2>
+<div class="outline-text-2" id="text-org40c0456">
 </div>
-<div id="outline-container-org6e9602c" class="outline-3">
-<h3 id="org6e9602c">Descargar Imagen y Crear Contenedor NextcloudPi</h3>
-<div class="outline-text-3" id="text-org6e9602c">
+
+<div id="outline-container-orgce62db3" class="outline-3">
+<h3 id="orgce62db3">Descargar Imagen y Crear Contenedor NextcloudPi</h3>
+<div class="outline-text-3" id="text-orgce62db3">
 <p>
 Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.
 </p>
@@ -273,9 +274,9 @@ sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloud
 </div>
 </div>
 
-<div id="outline-container-org5bf2afb" class="outline-3">
-<h3 id="org5bf2afb">Iniciar Nextcloud</h3>
-<div class="outline-text-3" id="text-org5bf2afb">
+<div id="outline-container-orgc2cf5e1" class="outline-3">
+<h3 id="orgc2cf5e1">Iniciar Nextcloud</h3>
+<div class="outline-text-3" id="text-orgc2cf5e1">
 <p>
 Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.
 </p>
@@ -289,9 +290,10 @@ Una contraseña será para la web de administración de <b>NextcloudPi</b> por e
 </p>
 </div>
 </div>
-<div id="outline-container-orgb003d46" class="outline-3">
-<h3 id="orgb003d46">Crear Certificado</h3>
-<div class="outline-text-3" id="text-orgb003d46">
+
+<div id="outline-container-orgd8c6447" class="outline-3">
+<h3 id="orgd8c6447">Crear Certificado</h3>
+<div class="outline-text-3" id="text-orgd8c6447">
 <p>
 Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.
 </p>
@@ -311,6 +313,7 @@ De forma automática, nos generará el certificado por 3 meses.
 <p>
 <a href="https://ownyourbits.com/nextcloudpi/">NextcloudPi</a>
 </p>
+
 <br><br>
 <p>
 También te puede interesar:
@@ -329,7 +332,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-08 mar 21:44</p>
+<p class="date">Created: 2019-01-12 ds. 11:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

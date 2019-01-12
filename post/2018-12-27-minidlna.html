@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-08 mar 21:44 -->
+<!-- 2019-01-12 ds. 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>minidlna</title>
@@ -243,14 +243,14 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss"><img src="../icon/podcast.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="feed.xml"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="uGeek"></a></div>
+<div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgf8e737b" class="outline-2">
-<h2 id="orgf8e737b">minidlna</h2>
-<div class="outline-text-2" id="text-orgf8e737b">
+<div id="outline-container-org147c66c" class="outline-2">
+<h2 id="org147c66c">minidlna</h2>
+<div class="outline-text-2" id="text-org147c66c">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -262,18 +262,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org800b512" class="outline-3">
-<h3 id="org800b512">Instalación</h3>
-<div class="outline-text-3" id="text-org800b512">
+<div id="outline-container-org8bf5db9" class="outline-3">
+<h3 id="org8bf5db9">Instalación</h3>
+<div class="outline-text-3" id="text-org8bf5db9">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org70c1b6b" class="outline-3">
-<h3 id="org70c1b6b">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-org70c1b6b">
+<div id="outline-container-orgbc25c75" class="outline-3">
+<h3 id="orgbc25c75">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgbc25c75">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -298,9 +298,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-orgfbf44d2" class="outline-3">
-<h3 id="orgfbf44d2">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-orgfbf44d2">
+<div id="outline-container-org8cf6472" class="outline-3">
+<h3 id="org8cf6472">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-org8cf6472">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -311,9 +311,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org7fdd05d" class="outline-3">
-<h3 id="org7fdd05d">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org7fdd05d">
+<div id="outline-container-org76d18da" class="outline-3">
+<h3 id="org76d18da">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org76d18da">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -324,9 +324,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-orgc1842a9" class="outline-3">
-<h3 id="orgc1842a9">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-orgc1842a9">
+<div id="outline-container-orga37f286" class="outline-3">
+<h3 id="orga37f286">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-orga37f286">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -349,9 +349,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-orgaa4c8e6" class="outline-3">
-<h3 id="orgaa4c8e6">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-orgaa4c8e6">
+<div id="outline-container-orgaf36733" class="outline-3">
+<h3 id="orgaf36733">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgaf36733">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -365,9 +365,10 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0753da" class="outline-3">
-<h3 id="orgb0753da">Puertos</h3>
-<div class="outline-text-3" id="text-orgb0753da">
+
+<div id="outline-container-org841b2ee" class="outline-3">
+<h3 id="org841b2ee">Puertos</h3>
+<div class="outline-text-3" id="text-org841b2ee">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -375,6 +376,7 @@ En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder
 <li>TCP = 8200</li>
 <li>UDP = 1900</li>
 </ul>
+
 <br><br>
 <p>
 También te puede interesar:
@@ -393,7 +395,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-08 mar 21:44</p>
+<p class="date">Created: 2019-01-12 ds. 11:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -6,11 +6,11 @@
 <!-- 2019-01-12 ds. 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Descargar todos los episodios de un Podcast con wget</title>
+<title>Ignorar archivos que no queremos que suban a Git</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget."
+<meta name="description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:"
  />
-<meta name="keywords" content="bash,podcast,unix,terminal" />
+<meta name="keywords" content="git," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -248,28 +248,26 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org3f38373" class="outline-2">
-<h2 id="org3f38373">Descargar todos los episodios de un Podcast con wget</h2>
-<div class="outline-text-2" id="text-org3f38373">
+<div id="outline-container-org2720574" class="outline-2">
+<h2 id="org2720574">Ignorar archivos que no queremos que suban a Git</h2>
+<div class="outline-text-2" id="text-org2720574">
 <p>
-Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.
+Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc&#x2026; Esto tiene una fácil solución:
+</p>
+</div>
+<div id="outline-container-org7483304" class="outline-3">
+<h3 id="org7483304">Creando el archivo <b>.gitignore</b> para ignorar archivos</h3>
+<div class="outline-text-3" id="text-org7483304">
+<p>
+Para determinar los archivos que queremos que no suban al repositorio, tenemos que crear una archivo de texto plano oculto llamado <b>.gitignore en la raíz de la carpeta en la que queramos ignorar ese tipo de archivo.</b>
 </p>
 
 <p>
-Tan simple como escribir esta única línea sustituyendo <b>"FEED"</b>, por el Feed del Podcast que desees descargar.
+Hay que tener en cuenta, que si lo ponemos en la raíz inicial del proyecto, esto excluirá a esa carpeta y resto de subcarpetas de este repositorio.
 </p>
-<pre class="example">
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</pre>
 
 <p>
-Como ejemplo, te dejo el Podcast de uGeek 😜
-</p>
-<pre class="example">
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</pre>
-<p>
-A disfrutar con la magia de la terminal&#x2026;
+La sintaxis es prácticamente igual que si hiciéramos un scritp en bash. "#" podemos utilizarlo para los comentarios.
 </p>
 
 <br><br>
@@ -278,12 +276,11 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
