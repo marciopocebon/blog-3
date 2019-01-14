@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-12 ds. 17:51 -->
+<!-- 2019-01-14 dl. 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Crear un Blog en GitLab. GitLab Pages</title>
@@ -188,8 +188,32 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date())
-gtag('config', 'UA-999999999-1');
+gtag('config', 'UA-131560140-1');
 </script>
+<link rel=canonical href=https://ugeek.gitlab.io />
+<meta property=og:type content=website />
+<meta property=og:locale content=es_ES />
+<meta property=og:title content=Blog de uGeek />
+<meta name=author content=Angel. uGeek />
+<meta property=og:site_name content=uGeek. Blog de Tecnología/>
+<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
+<meta property=og:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<meta property=og:image content=https://ugeek.gitlab.io/ugeek.jpg />
+<meta property=og:image:secure_url content=https://ugeek.gitlab.io/ugeek.jpg />
+<meta property=og:image:width content=640 />
+<meta property=og:image:height content=366 />
+<meta name=twitter:site content=@ugeekpodcast />
+<meta name=twitter:card content=summary_large_image />
+<meta name=twitter:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
+<meta name=twitter:title content=uGeek. Blog de Tecnología />
+<meta name=twitter:site content=@ugeekpodcast />
+<meta name=twitter:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<link rel=shortlink href=https://ugeek.gitlab.io/ />
+<link rel=shortcut icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png type=image/x-icon />
+<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=32x32 />
+<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
+<link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
 <div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
@@ -248,14 +272,14 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org0b5b820" class="outline-2">
-<h2 id="org0b5b820">Crear un Blog en GitLab. GitLab Pages</h2>
-<div class="outline-text-2" id="text-org0b5b820">
+<div id="outline-container-orgcabb5e6" class="outline-2">
+<h2 id="orgcabb5e6">Crear un Blog en GitLab. GitLab Pages</h2>
+<div class="outline-text-2" id="text-orgcabb5e6">
 </div>
 
-<div id="outline-container-orgc3910f2" class="outline-3">
-<h3 id="orgc3910f2">Intro</h3>
-<div class="outline-text-3" id="text-orgc3910f2">
+<div id="outline-container-org0e61382" class="outline-3">
+<h3 id="org0e61382">Intro</h3>
+<div class="outline-text-3" id="text-org0e61382">
 <p>
 Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las <a href="https://pages.github.com/">GitLabPages</a> y sin límite de espacio ni tráfico. El único limite, creo recordar, es que los archivo que subamos no pueden exceder de 15mb. Aún así, para mi es más que suficiente. 
 </p>
@@ -274,9 +298,9 @@ Imaginar tener vuestra Raspberry con git instalado y enviando información a nue
 </div>
 </div>
 
-<div id="outline-container-org73b4459" class="outline-3">
-<h3 id="org73b4459">Creamos el repositorio</h3>
-<div class="outline-text-3" id="text-org73b4459">
+<div id="outline-container-orgfe628db" class="outline-3">
+<h3 id="orgfe628db">Creamos el repositorio</h3>
+<div class="outline-text-3" id="text-orgfe628db">
 <p>
 Una vez creado el repositorio, tendremos que crear un archivo llamado  <b>.gitlab-ci.yml</b> y dentro de este, escribir el siguiente código:
 </p>
@@ -295,9 +319,9 @@ pages:
 </div>
 </div>
 
-<div id="outline-container-org7547eca" class="outline-3">
-<h3 id="org7547eca">Crear el servidor</h3>
-<div class="outline-text-3" id="text-org7547eca">
+<div id="outline-container-orgbd6baad" class="outline-3">
+<h3 id="orgbd6baad">Crear el servidor</h3>
+<div class="outline-text-3" id="text-orgbd6baad">
 <ol class="org-ol">
 <li>Vamos al apartado <b>CI/CC</b></li>
 <li>Vamos a <b>Configuración -&gt; General -&gt; Avanced -&gt; Expand</b></li>
@@ -324,7 +348,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-12 ds. 17:51</p>
+<p class="date">Created: 2019-01-14 dl. 17:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

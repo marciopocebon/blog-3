@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-12 ds. 17:51 -->
+<!-- 2019-01-14 dl. 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>minidlna</title>
@@ -188,8 +188,32 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date())
-gtag('config', 'UA-999999999-1');
+gtag('config', 'UA-131560140-1');
 </script>
+<link rel=canonical href=https://ugeek.gitlab.io />
+<meta property=og:type content=website />
+<meta property=og:locale content=es_ES />
+<meta property=og:title content=Blog de uGeek />
+<meta name=author content=Angel. uGeek />
+<meta property=og:site_name content=uGeek. Blog de Tecnología/>
+<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
+<meta property=og:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<meta property=og:image content=https://ugeek.gitlab.io/ugeek.jpg />
+<meta property=og:image:secure_url content=https://ugeek.gitlab.io/ugeek.jpg />
+<meta property=og:image:width content=640 />
+<meta property=og:image:height content=366 />
+<meta name=twitter:site content=@ugeekpodcast />
+<meta name=twitter:card content=summary_large_image />
+<meta name=twitter:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
+<meta name=twitter:title content=uGeek. Blog de Tecnología />
+<meta name=twitter:site content=@ugeekpodcast />
+<meta name=twitter:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<link rel=shortlink href=https://ugeek.gitlab.io/ />
+<link rel=shortcut icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png type=image/x-icon />
+<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=32x32 />
+<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
+<link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
+<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
 <div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
@@ -248,9 +272,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org4bbc701" class="outline-2">
-<h2 id="org4bbc701">minidlna</h2>
-<div class="outline-text-2" id="text-org4bbc701">
+<div id="outline-container-org0ac4747" class="outline-2">
+<h2 id="org0ac4747">minidlna</h2>
+<div class="outline-text-2" id="text-org0ac4747">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -262,18 +286,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-orgc1beb7a" class="outline-3">
-<h3 id="orgc1beb7a">Instalación</h3>
-<div class="outline-text-3" id="text-orgc1beb7a">
+<div id="outline-container-org2460636" class="outline-3">
+<h3 id="org2460636">Instalación</h3>
+<div class="outline-text-3" id="text-org2460636">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6f529e8" class="outline-3">
-<h3 id="org6f529e8">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-org6f529e8">
+<div id="outline-container-orgf97ee88" class="outline-3">
+<h3 id="orgf97ee88">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgf97ee88">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -298,9 +322,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-org3487ac9" class="outline-3">
-<h3 id="org3487ac9">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org3487ac9">
+<div id="outline-container-org59104fc" class="outline-3">
+<h3 id="org59104fc">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-org59104fc">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -311,9 +335,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org78948d1" class="outline-3">
-<h3 id="org78948d1">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org78948d1">
+<div id="outline-container-org3ea23b4" class="outline-3">
+<h3 id="org3ea23b4">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org3ea23b4">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -324,9 +348,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org0805bf8" class="outline-3">
-<h3 id="org0805bf8">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org0805bf8">
+<div id="outline-container-org445b528" class="outline-3">
+<h3 id="org445b528">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org445b528">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -349,9 +373,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-org9fdad59" class="outline-3">
-<h3 id="org9fdad59">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org9fdad59">
+<div id="outline-container-orgfd92abc" class="outline-3">
+<h3 id="orgfd92abc">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgfd92abc">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -366,9 +390,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org26a8658" class="outline-3">
-<h3 id="org26a8658">Puertos</h3>
-<div class="outline-text-3" id="text-org26a8658">
+<div id="outline-container-orgff79004" class="outline-3">
+<h3 id="orgff79004">Puertos</h3>
+<div class="outline-text-3" id="text-orgff79004">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -386,6 +410,7 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
 </ul>
@@ -395,7 +420,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-12 ds. 17:51</p>
+<p class="date">Created: 2019-01-14 dl. 17:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
