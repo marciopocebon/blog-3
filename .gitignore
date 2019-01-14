@@ -1,4 +1,5 @@
 *.org
 *.sh
-#*.csv
-
+*.csv
+#*
+*.txt
