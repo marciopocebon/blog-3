@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2019-01-14 dl. 19:22 -->
+<!-- 2019-01-14 dl. 19:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>minidlna</title>
@@ -272,9 +272,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org661eeb2" class="outline-2">
-<h2 id="org661eeb2">minidlna</h2>
-<div class="outline-text-2" id="text-org661eeb2">
+<div id="outline-container-org853c3fe" class="outline-2">
+<h2 id="org853c3fe">minidlna</h2>
+<div class="outline-text-2" id="text-org853c3fe">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -286,18 +286,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org5e721ce" class="outline-3">
-<h3 id="org5e721ce">Instalación</h3>
-<div class="outline-text-3" id="text-org5e721ce">
+<div id="outline-container-org89642f8" class="outline-3">
+<h3 id="org89642f8">Instalación</h3>
+<div class="outline-text-3" id="text-org89642f8">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org18fb1b6" class="outline-3">
-<h3 id="org18fb1b6">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-org18fb1b6">
+<div id="outline-container-orge3595ea" class="outline-3">
+<h3 id="orge3595ea">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orge3595ea">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -322,9 +322,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-orgfc4274e" class="outline-3">
-<h3 id="orgfc4274e">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-orgfc4274e">
+<div id="outline-container-orgf6d6cff" class="outline-3">
+<h3 id="orgf6d6cff">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orgf6d6cff">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -335,9 +335,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org85815c4" class="outline-3">
-<h3 id="org85815c4">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org85815c4">
+<div id="outline-container-org7c2764d" class="outline-3">
+<h3 id="org7c2764d">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org7c2764d">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -348,9 +348,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org305ef1b" class="outline-3">
-<h3 id="org305ef1b">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org305ef1b">
+<div id="outline-container-org4404ff9" class="outline-3">
+<h3 id="org4404ff9">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org4404ff9">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -373,9 +373,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-org52269a7" class="outline-3">
-<h3 id="org52269a7">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org52269a7">
+<div id="outline-container-orgda0cec0" class="outline-3">
+<h3 id="orgda0cec0">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgda0cec0">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -390,9 +390,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org6eaf8f7" class="outline-3">
-<h3 id="org6eaf8f7">Puertos</h3>
-<div class="outline-text-3" id="text-org6eaf8f7">
+<div id="outline-container-org752bf93" class="outline-3">
+<h3 id="org752bf93">Puertos</h3>
+<div class="outline-text-3" id="text-org752bf93">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -420,7 +420,7 @@ También te puede interesar:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-01-14 dl. 19:22</p>
+<p class="date">Created: 2019-01-14 dl. 19:32</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
