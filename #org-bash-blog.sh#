@@ -24,12 +24,14 @@
 
 ################################################################################
 # MAIN CONTENT. INDEX PAGE
-INDEX=$(echo "Bienvenidos al Blog de uGeek")
+INDEX=$(echo "Bienvenidos al Blog de uGeek. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el [[https://ugeek.github.io][Podcast]]. He decidido separar el blog, porque era muy complejo localizar los tutoriales entre tanto Podcast, y ahora, en este blog, quedará todo bien clasificado.")
 #######
+ULTIMO_TITULO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/ugeek" | grep '<title>' | head -3 | tail -1 | sed 's/<title>/ /g' | sed 's/<\/title>/ /g')
+ULTIMO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '<enclosure url="[^"]*' | grep -o '[^"]*$' | head -1)
 # MAIN CONTENT NEXT. INDEX PAGE
 INDEX_NEXT=$(echo "
-* Último Podcast
-#+HTML:<script async src="https://telegram.org/js/telegram-widget.js?5" data-telegram-post="uGeek/3" data-width="100%"></script></div>
+* $ULTIMO_TITULO_PODCAST
+#+HTML: <audio controls=''><source src="$ULTIMO_PODCAST" />Tu navegador no soporta reproductor de Podcast.</audio>'
 ")
 ################################################################################
 # FOOTER WEB. ALL PAGES
@@ -46,9 +48,45 @@ GOOGLE_ANALITYCS=$(echo "#+HTML_HEAD: <!-- Global site tag (gtag.js) - Google An
 #+HTML_HEAD:  function gtag(){dataLayer.push(arguments);}
 #+HTML_HEAD:  gtag('js', new Date())
 #+HTML_HEAD:
-#+HTML_HEAD:  gtag('config', 'UA-999999999-1');
+#+HTML_HEAD:  gtag('config', 'UA-131560140-1');
 #+HTML_HEAD: </script>
+#+HTML_HEAD:<link rel="canonical" href="https://ugeek.gitlab.io" />
+#+HTML_HEAD:<meta property="og:type" content="website" />
+#+HTML_HEAD:<meta property="og:locale" content="es_ES" />
+#+HTML_HEAD:<meta property="og:title" content="Blog de uGeek" />
+#+HTML_HEAD:<meta name="author" content="Angel. uGeek" />
+
+
+#+HTML_HEAD:<meta property="og:site_name" content="uGeek. Blog de Tecnología"/>
+#+HTML_HEAD:<meta property="og:description" content="uGeek. Blog y Podcast de  Tecnología sobre GNU/Linux, Android, Domotica,..." />
+#+HTML_HEAD:<meta property="og:image" content="https://ugeek.gitlab.io/icon/ugeek-256x256.png" />
+
+#+HTML_HEAD:<meta property="og:image" content="https://ugeek.gitlab.io/ugeek.jpg" />
+#+HTML_HEAD:<meta property="og:image:secure_url" content="https://ugeek.gitlab.io/ugeek.jpg" />
+#+HTML_HEAD:<meta property="og:image:width" content="640" />
+#+HTML_HEAD:<meta property="og:image:height" content="366" />
+
+#+HTML_HEAD:<meta name="twitter:site" content="@ugeekpodcast" />
+#+HTML_HEAD:<meta name="twitter:card" content="summary_large_image" />
+#+HTML_HEAD:<meta name="twitter:description" content="uGeek. Blog y Podcast de  Tecnología sobre GNU/Linux, Android, Domotica,..." />
+#+HTML_HEAD:<meta name="twitter:title" content="uGeek. Blog de Tecnología" />
+#+HTML_HEAD:<meta name="twitter:site" content="@ugeekpodcast" />
+#+HTML_HEAD:<meta name="twitter:image" content="https://ugeek.gitlab.io/icon/ugeek-256x256.png" />
+
+#+HTML_HEAD:<link rel="shortlink' href='https://ugeek.gitlab.io/" />
+#+HTML_HEAD:<link rel="shortcut icon" href="https://ugeek.gitlab.io/icon/ugeek-256x256.png" type="image/x-icon" />
+#+HTML_HEAD:<link rel="icon" href="https://ugeek.gitlab.io/icon/ugeek-256x256.png" sizes="32x32" />
+#+HTML_HEAD:<link rel="icon" href="https://ugeek.gitlab.io/icon/ugeek-256x256.png" sizes="192x192" />
+#+HTML_HEAD:<link rel="apple-touch-icon-precomposed" href="https://ugeek.gitlab.io/icon/ugeek-256x256.png" />
+
+
+#+HTML_HEAD:<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.gitlab.io/feed/" />
+
+    
 ")
+
+
+
 ################################################################################
 TITLE=$(grep "#+TITLE:" blog.org | cut -d " " -f2-)
 LINK=$(grep "#+LINK:" blog.org | cut -d " " -f2-)
