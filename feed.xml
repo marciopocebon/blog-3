@@ -13,6 +13,28 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>GPG. Cifrado de archivos simétrico</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</link>
+    <description>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html&gt;GPG. Cifrado de archivos simétrico&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 17 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</guid>
+   </item>
+   <item>
     <title>Ignorar archivos que no queremos que suban a Git</title>
     <link>https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html</link>
     <description>Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:... 

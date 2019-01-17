@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ignorar archivos que no queremos que suban a Git</title>
+<title>GPG. Cifrado de archivos simétrico</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:"
+<meta name="description" content="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg"
  />
-<meta name="keywords" content="git," />
+<meta name="keywords" content="gpg, nube, servidor" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,47 +271,63 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org9a54dfc" class="outline-2">
-<h2 id="org9a54dfc">Ignorar archivos que no queremos que suban a Git</h2>
-<div class="outline-text-2" id="text-org9a54dfc">
+<div id="outline-container-orgf444942" class="outline-2">
+<h2 id="orgf444942">GPG. Cifrado de archivos simétrico</h2>
+<div class="outline-text-2" id="text-orgf444942">
 <p>
-Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc&#x2026; Esto tiene una fácil solución:
+En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.
 </p>
 </div>
-<div id="outline-container-orgbeed30e" class="outline-3">
-<h3 id="orgbeed30e">Creando el archivo <b>.gitignore</b> para ignorar archivos</h3>
-<div class="outline-text-3" id="text-orgbeed30e">
+
+<div id="outline-container-org46c9689" class="outline-4">
+<h4 id="org46c9689">Cifrado</h4>
+<div class="outline-text-4" id="text-org46c9689">
 <p>
-Para determinar los archivos que queremos que no suban al repositorio, tenemos que crear una archivo de texto plano oculto llamado <b>.gitignore en la raíz de la carpeta en la que queramos ignorar ese tipo de archivo.</b>
+<code>gpg -c archivo.txt</code>
 </p>
 
 <p>
-Hay que tener en cuenta, que si lo ponemos en la raíz inicial del proyecto, esto excluirá a esa carpeta y resto de subcarpetas de este repositorio.
+Te pedirá contraseña para cifrar el archivo.
 </p>
 
 <p>
-La sintaxis es prácticamente igual que si hiciéramos un scritp en bash. "#" podemos utilizarlo para los comentarios.
+Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:
+</p>
+<pre class="example">
+gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt
+</pre>
+</div>
+</div>
+<div id="outline-container-org91395b7" class="outline-4">
+<h4 id="org91395b7">Descifrado</h4>
+<div class="outline-text-4" id="text-org91395b7">
+<p>
+<code>gpg filename.txt.gpg</code>
 </p>
 
-<ul class="org-ul">
-<li><p>
-Si no queremos que <b>no</b> suban los archivos extensión .log, utilizariamos:
-</p>
 
 <p>
-<code>*.log</code>
-</p></li>
-</ul>
+Pata automatizar como en el caso anterior&#x2026;
+</p>
+<pre class="example">
+gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg
+</pre>
+</div>
+</div>
+<div id="outline-container-org8b23fe0" class="outline-4">
+<h4 id="org8b23fe0">Conclusión</h4>
+<div class="outline-text-4" id="text-org8b23fe0">
+<p>
+Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso y dandole un poco mas de seguridad.
+</p>
+
+
 
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
-</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>

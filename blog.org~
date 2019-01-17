@@ -1,0 +1,898 @@
+#+TITLE: uGeek Blog 
+#+LINK: https://ugeek.github.io/blog
+#+DESCRIPTION: Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek
+#+KEYWORDS: GNU, linux, Raspberry, android, domótica 
+#+AUTHOR: Angel
+#+LANGUAGE: es
+#+STARTUP: logdone
+#+STARTUP: inlineimages
+#+OPTIONS: timestamp:nil html-postamble:nil toc:t num:nil ^:nil toc:nil title:nil author:nil date:nil created:nil' 
+#+startup: hideblocks
+#+HTML_HEAD: <div id="logo"><a href="index.html"><img src="__icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">   
+#+HTML_HEAD:  
+#+html: <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+#+html: <div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
+#+html: <div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="__icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/feed.xml" alt="rss"><img src="__icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="__icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="__icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+#+html: <div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
+#+html: <div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+#+html:<br><br><br><br><br><br><br><br><br><br>                                                                                             
+ 
+
+* Desplazar con las flechas por el Historial de la Terminal (Linuxito)
+
+
+
+Crear o editar el archivo =.inputrc= en el $HOME de nuestro usuario:
+
+Yo como sabéis utilizo emacs, pero podríamos utilizar vim, nano... 
+=emacs .inputrc=
+
+Dentro del mismo, agregar las siguientes líneas:
+#+BEGIN_SRC 
+## flecha arriba
+"\e[A":history-search-backward
+## flecha abajo
+"\e[B":history-search-forward
+#+END_SRC
+- https://www.linuxito.com/2-uncategorised/1160-configurar-bash-para-que-las-flechas-de-teclado-se-comporten-como-en-csh
+
+* Sustituir comas de un .csv por Tabulado, Barra Vertical, etc ...
+
+El comando *sed* es un vicio y con la terminal y cualquier archivo de texto, puedes hacer maraviallas.
+
+=sed -i 's|,|\t\t|g' archivo.csv= 
+
+* Script para publicar
+
+#+BEGIN_SRC 
+# Copiar los html,xml y carpeta de post
+cp -r *.html *.xml post/ /home/angel/git/blog/
+
+# Subir a git
+git add . ; git commit -m "nuevo post" ; git push
+#+END_SRC
+
+* Crear tu propio Feed o Rss
+** Que es un Feed o rss
+
+Es una archivo de texto plano en formato .xml, que contiene información sobre, por ejemplo, el titulo, descripción y url de una página web.
+Así, sin necesidad de acceder a la página web y solo leyendo este archivo .xml, con una aplicación destinada a este fin, podremos saber si hay nuevas publicaciones. 
+
+** Estructura
+
+El archivo xml esta compuesto principalmente de dos bloques:
+1) El contenedor global, que son las etiquetas de inicio y final, etiqueta *rss* para el formato 2.0.
+2) El Canal (channel) que proporcionará los artículos o datos.(Título, descripción, url,...)
+
+** Etiquetas Principales
+
+El rss es el contenedor y dentro, esta el canal(channel) de distribución, compuesto por varias etiquetas, dependiendo del tipo de Feed.
+#+BEGIN_SRC 
+<rss version="2.0"><font></font>
+<channel><font></font>
+...<font></font>
+</channel><font></font>
+</rss>
+#+END_SRC
+
+** Detectar el feed a través de nuestro Navegador
+
+Para que en nuestro navegador detecte que tenemos una fuente rss (RSS 2.0) en nuestro sitio, tenemos que adjuntar este código entre las etiquetas <head></head>.
+
+
+Sustituir la url y título:
+#+BEGIN_SRC 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">
+#+END_SRC
+
+En el caso de disponer otro tipo de rss como RSS 0.92 o Atom, el código a añadir sería el siguiente:
+
+#+BEGIN_SRC bash
+# RSS 0.92
+<link rel="alternate" type="text/xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología"/>
+
+# Atom
+<link rel="alternate" type="application/atom+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología" />
+#+END_SRC
+
+** test
+
+Bienvenido al Blog de uGeek. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el [[https://ugeek.github.io][Podcast]]. He decidido separar el blog, porque era muy complejo localizar los tutoriales entre tanto Podcast y ahora, en este blog, quedará todo bien clasificado.
+
+** google analitycs
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131560140-1');
+</script>
+
+* Transforma tus Documentos escaneados a Texto
+
+La nueva versión de sistema OCR Tesseract 4 es uno de los mejores OCR de código abierto y nos va permitir poder extraer el texto de documentos escaneados, pdf, etc...
+
+Tesseract 4 agrega un nuevo motor de OCR basado en redes neuronales LSTM. Y es de Google.
+
+Para los idiomas basados ​​en el latín, los datos del modelo existente proporcionados se han capacitado en aproximadamente 400000 líneas de texto que abarcan aproximadamente 4500 fuentes .
+
+** Instalación
+
+Super simple!!! está en los repositorios. En Ubuntu 18.04, contamos con la versión tesseract 4.0.0-beta.1
+#+BEGIN_SRC 
+sudo apt install tesseract-ocr
+sudo apt install libtesseract-dev
+#+END_SRC
+Comprobar la versión:
+=tesseract --version=
+
+Tesseract 4 tiene dos motores OCR: 
+1) Motor Legacy Tesseract
+2) Motor LSTM. Hay cuatro modos de operación elegidos usando la =--oem= opción. 
+- 0 motor de legado solamente.
+- 1 Motor de redes neuronales LSTM solamente.
+- 2 motores Legacy + LSTM.
+- 3 Predeterminado, basado en lo que está disponible.
+
+** Instalando los Idiomas
+
+Tesseract tiene mas de 100 Idiomas, así que para el correcto funcionamiento, necesitamos instalar el paquete del idioma que utilizaremos. Para instalar el diccionario en castellano:
+=sudo apt install tesseract-ocr-spa=
+
+Si quisieras instalar todos los idiomas:
+=sudo apt install tesseract-ocr-spa=
+
+Otros idiomas como Catalán, Ingles, Frances,...
+=sudo apt-get install tesseract-ocr-cat tesseract-ocr-eng tesseract-ocr-fra=
+
+** Vamos a extraer el Texto
+
+Tesseract puede extraer el contenido de archivos de imagen más comunes como jpg, png, tiff...
+
+Ver el texto en la terminal:
+=tesseract imagen.jpg stdout=
+
+=tesseract image.jpg stdout -l spa --oem 1=
+Enviar el contenido de la imágen a un archivo de texto:
+=tesseract imagen.jpg imagen=
+No utilices la extiensión =.txt= en el comando, ya que Tesseract lo escribe esta extensión por defecto.
+
+** Procesar la imagen para Mejorar la Precisión de OCR
+
+Por varios motivos, como el color de fondo del documento, tamaño de letra, etc... Tesseract no consigue leer correctamente el contenido de la imagen. Para mejorar esto, instalaremos Imagemagick. 
+
+* Instalando Imagemagick
+
+Imagemagick es una herramienta para terminal que y nos permite recortar, redimensionar, cambiar color... de imágenes.
+=sudo apt install imagemagick=
+
+** Redimensionar la Imagen:
+
+Apliando la imagen, aumentaremos el tamaño del texto.
+El porcentaje indica el tanto por ciento "%" de ampliación. 100% sería el tamaño actual.
+=convert -resize 150% archivo_entrada.jpg archivo_salida.jpg=
+
+** Escala Grises
+
+El color con el texto, puede confundir a Tesseract. Utilicemos la escala de grises.
+=convert archivo_entrada.jpg -type Grayscale archivo_salida.jpg=
+
+** Binarizar
+
+Tras este procesado, podemos binarizar indicando drásticamente que convierta los pixels a blanco y negro. Podemos variar el umbral mediante el porcentaje "%" nuevamente.
+
+=convert archivo_entrada.jpg -threshold 55% archivo_salida.jpg=
+
+
+
+- [[https://www.howtoforge.com/tutorial/tesseract-ocr-installation-and-usage-on-ubuntu-16-04/][Fuente]]
+
+* Twitter para Terminal
+** Instalación
+
+=sudo pip3 install rainbowstream=
+
+** Iniciando
+
+Iniciamos 
+=rainbowstream=
+
+- Se abrirá el navegador y nos mostrará el pin para introducirlo en la terminal.
+- Una vez hecho esto, ya podemos utilizar twitter desde la terminal.
+
+** Uso
+
+- Mostrar los últimos 10 Tweets =home 10=
+- Twittear, introducimos *t* el tweet y enter. ejem: =t esto es un tweet=
+
+
+
+| h | ayuda                                   |
+| p | Para pausar la transmisión de twitter   |
+| r | Para reanudar la transmisión de twitter |
+| c | Borrar pantalla                         |
+| v | Versión para la transmisión de twitter  |
+| q | salir                                   |
+
+theme                                                           
+theme Name-of-theme                                             
+notification                                                    
+whois @testuserlinux                                            
+mentions                                                        
+view @ testuserlinux                                            
+s string                                                        
+inbox                                                           
+fl @twitter_user                                                
+ufl @twitter_user                                               
+block @twitter_user                                             
+unblock @twitter_user                                           
+report @twitter_user                                            
+List home                                                       
+
+- https://linuxconfig.org/tweet-from-the-linux-command-line-with-rainbow-stream
+- https://linoxide.com/linux-how-to/install-rainbow-stream-commandline-twitter-client-linux/
+
+- [[https://rainbowstream.readthedocs.io/en/latest/][rainbowstream]]
+
+
+* =======
+* Convertir de Markdown a Org Mode gracias a Pandoc
+:PROPERTIES:
+:TITLE:    Convertir de Markdown a Org Mode gracias a Pandoc
+:EXPORT_FILE_NAME: Convertir-de-markdown-a-org-Mode-gracias-a-pandoc
+:DESCRIPTION: Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc
+:EXPORT_DATE: 2018-12-28
+:CATEGORY: emacs
+:TAG:      emacs,pandoc,orgmode,markdown
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:
+
+=sudo apt install pandoc=
+
+Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.
+
+1) Markdown a Org Mode. Ejecutamos este comando en la terminal.
+
+=pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md=
+
+2) Muchos archivos Markdown a un único Org Mode.
+
+Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:
+
+=find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;=
+
+Recordar verificar que la conversión se ha hecho correctamente.
+
+* Con Emacs, también podemos editar Markdown
+:PROPERTIES:
+:TITLE:    Con Emacs también podemos editar Markdown
+:EXPORT_FILE_NAME: Con Emacs tambien podemos editar Markdown
+:DESCRIPTION: He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?
+:EXPORT_DATE: 2019-01-03
+:CATEGORY: emacs
+:TAG:      emacs, orgmode, markdown, melpa
+:END:
+
+He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?.
+Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra.
+Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo.
+Resaltado de Sintaxis
+
+Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en [[https://melpa.org/][Melpa]], [[https://github.com/jrblevin/markdown-mode][markdown-mode]].
+
+** Instalación
+
+=M-x package-install RET markdown-mode RET=
+
+** Previsualización del documento
+
+Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd.
+
+Instalación:
+
+=M-x package-install RET flymd RET=
+
+Ahora si queremos previsualizar el documento, solo tenemos que introducir en Emacs:
+
+=M-x flymd-flyit=
+
+Esto, nos lanzará un archivo temporal y abrirá nuestro navegador web, para previsualizar el documento.
+
+Por defecto se refresca en tiempo real y que podemos deshabilitar
+
+* Kde Connect en Ubuntu, Debian, Lubuntu, Mint... y derivadas
+:PROPERTIES:
+:TITLE:    Kde Connect en Ubuntu...
+:EXPORT_FILE_NAME: kdeconnect-en-ubuntu
+:DESCRIPTION: He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso
+:EXPORT_DATE: 2019-01-02
+:CATEGORY: bash
+:TAG:      bash, terminal, i3, kdeconnect, ubuntu
+:END:
+
+He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.
+
+Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.
+
+Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.
+
+** Instalación
+
+1) Instalamos en nuestro Ubuntu
+
+=sudo apt install kdeconnect=
+
+Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil.
+Instala esto:
+
+#+BEGIN_SRC 
+sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
+sudo apt update
+sudo apt install kdeconnect indicator-kdeconnect
+#+END_SRC
+
+2) Instalamos la app en nuestro movil, tablet…
+
+3) Buscará dentro de nuestra red local los dispositivos con Kde Connect. Empareja tu dispositivo y… Ya está!! Si quieres seguir con la terminal, sigue leyendo.
+
+4) Vamos ha hacer el emparejamiento desde la Terminal. El comando *kdeconnect-cli - -help* nos mostrará todos los comandos disponibles.
+
+5) Vamos a listar dispositivos disponibles en nuestra red local desde la terminal
+
+=kdeconnect-cli -l=
+
+La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:
+#+BEGIN_SRC 
+angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
+        - Xiami A1: 35826fca13f58Gsu (reachable)
+	    1 device found  
+#+END_SRC
+    
+6) Vinculamos PC a mi Xiaomi A1 con nuestro:
+
+=kdeconnect-cli -d 35826fca13f58Gsu --pair=
+
+7) En tu movil, tablet Android, recibirás una solicitud para vincularlo.
+
+8) Ya está condectado Kde Connect!!!
+
+Si tienes i3 y quieres que se inicie Kde Connect por defecto, escribe estas líneas en tu archivo de configuración:
+#+BEGIN_SRC 
+# Autostart kdeconnect
+exec --no-startup-id /usr/bin/indicator-kdeconnect
+#+END_SRC
+
+* Crear listas m3u para minidlna o vlc
+:PROPERTIES:
+:TITLE:    Crear listas m3u para minidlna o vlc
+:EXPORT_FILE_NAME: crear-listas-m3u-para-minidlna-o-vlc
+:DESCRIPTION: Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...
+:EXPORT_DATE: 2019-01-02
+:CATEGORY: bash
+:TAG:      bash, grep ,ls ,unix ,servidor, minidlna, multimedia
+:END:
+
+Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc.
+Cuando viste el artículo de [[https://ugeek.gitlab.io/2018-12-27-minidlna.html][minidlna]], te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.
+
+** Crear lista para minidlna
+
+- Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.
+- No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.
+
+** Lista dentro de un directorio
+
+1) Nos situamos en el directorio:
+=ls -1 | grep .mp3 > lista.m3u=
+
+*** Explicación del comando de listado
+
+ - ls -> lista archivos dentro de la carpeta
+ - -1 -> mostrar un archivo por línea
+  
+Después, podríamos ordenar el listado de diferente maneras, por ejemplo con comandos como *sort*.
+
+** Lista recursiva entrando dentro de subcarpetas
+
+=ls -1 -R | grep .mp3 > lista.m3u=
+
+** Reproducir la lista desde nuestra terminal con vlc
+
+=vlc lista.m3u=
+
+* Redirigir el tráfico de una página web a otra
+:PROPERTIES:
+:TITLE:    Redirigir el tráfico de una página web a otra
+:EXPORT_FILE_NAME: redirigir-el-trafico-de-pagina-web-a-otra
+:DESCRIPTION: Hay veces que queremos redirigir el tráfico de una página a otra...
+:EXPORT_DATE: 2018-12-29
+:CATEGORY: html
+:TAG:      html,servidor
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Hay veces que queremos redirigir el tráfico de una página a otra. Un modo muy rápido y sencillo, sería crear un archivo .html con el siguiente código. En este ejemplo, el tiempo de espera hasta redirigir es de *3 segundos*. Podemos personalizarlo al tiempo de deseemos. 
+#+BEGIN_SRC
+<html>
+<head>
+<title>Redirigir al navegador a otra URL</title>
+<META HTTP-EQUIV="REFRESH" CONTENT="3;URL=https://ugeek.gitlab.io">
+</head>
+<body>
+Esta página te redigirá en 3 segundos a https://ugeek.gitlab.io/
+</body>
+</html> 
+#+END_SRC
+
+* Eliminar comentarios de nuestros script
+:PROPERTIES:
+:TITLE:    Eliminar comentarios de nuestros script
+:EXPORT_FILE_NAME: eliminar-comentarios-de-nuestros-script
+:DESCRIPTION: Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...
+:EXPORT_DATE: 2018-12-30
+:CATEGORY: unix
+:TAG:      bash, grep, sed, unix
+:END:
+
+Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , *bash*, va a ser tan sencillo como hacer uso de nuestro querido *grep*:
+
+=cat archivo.sh |  grep -v ^# > archivo_nuevo.sh=
+
+Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos *sed*::
+
+=cat archivo.sh |  grep -v ^# | sed '/^ *$/d' > archivo_nuevo.sh=
+
+* minidlna
+:PROPERTIES:
+:TITLE:    minidlna
+:EXPORT_FILE_NAME: minidlna
+:DESCRIPTION: DLNA es un servidor multimedia
+:EXPORT_DATE: 2018-12-27
+:CATEGORY: servidor
+:TAG:      servidor,raspberry,minidlna,multimedia
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
+
+[[./images-blog/dlna.png]]
+
+** Instalación
+
+=sudo apt install minidlna=
+
+** Archivo de configuración del servicio
+
+=sudo nano /etc/minidlna.conf=
+
+Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:
+
+#+BEGIN_SRC 
+media_dir=V,/media/Peliculas
+media_dir=P,/media/Fotos
+media_dir=A,/media/Musica
+#+END_SRC
+
+Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:
+
+=media_dir=PV,/media/Peliculas_y_ Fotos=
+
+** Descubrir el servidor en nuestra Red
+
+Quitaremos la "#" delante de inotify y pondremos *yes*.
+#+BEGIN_SRC  
+# Automatic discovery of new files in the media_dir directory. 
+inotify=yes
+#+END_SRC
+
+** Poner nombre a nuestro servidor
+
+Aquí podremos poner nombre a nuestro servidor:
+#+BEGIN_SRC
+# Name that the DLNA server presents to clients.
+friendly_name=Mi Servidor DLNA
+#+END_SRC
+
+** Iniciar, Detener, Restaurar servicio
+
+=exec /usr/sbin/service minidlna start=
+
+o
+
+=sudo service minidlna start=
+
+=sudo service minidlna stop=
+
+=sudo service minidlna restart=
+
+** Forzar el reescaneado
+
+Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
+
+=sudo service minidlna force-reload=
+
+Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través de nuestro servidor DLNA.
+
+** Puertos
+
+En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
+- TCP = 8200
+- UDP = 1900
+
+* Kde Connect en Emacs
+:PROPERTIES:
+:TITLE:    Kde Connect en Emacs
+:EXPORT_FILE_NAME: kde-connecte-en-emacs
+:DESCRIPTION: Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla
+:EXPORT_DATE: 2018-12-31
+:CATEGORY: emacs
+:TAG:      emacs,sincronización,kdeconnect
+:END:
+
+Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla:
+
+** Instalación
+
+Teniendo los repositorios de Melpa:
+
+    1) Instalación: *M-x package-install RET kdeconnect*
+    2) Listamos los dispositivos de nuestra red local: *M-x kdeconnect-list-devices*
+    3) Buscamos los búfer anteriores para copiar los id de nuestros dispositivos (C-x Izquierda)
+    4) Introducimos el id de nuestro dispositivo: *M-x kdeconnect-select-active-device RET id*
+    5) Hacemos un ping para comprobar que se ha conectado correctamente: *M-x kdeconnect-ping*
+
+YA ESTA!!!
+
+*Ahora si copiamos un texto en el portapapeles de nuestro Emacs, podremos pegarlo en el otro dispositivo gracias a Kde Connect.*
+
+Vamos a enviar un texto desde Emacs al otro dispositivo *M-x kdeconnect-ping-msg RET Texto*
+
+Os dejo el resto de funciones para que juguéis y el repositorio donde está toda la información:
+
+** Resto de Funciones disponibles
+
+| Función                         | 	Descripción                                                               |
+|---------------------------------+-----------------------------------------------------------------------------|
+| kdeconnect-get-active-device    | 	Mostrar el dispositivo activo                                             |
+| kdeconnect-list-devices         | 	Muestra todos los dispositivos visibles, incluso los no disponibles.      |
+| kdeconnect-ping                 | 	Enviar una notificación al dispositivo activo.                            |
+| kdeconnect-ping-msg             | 	Envía una notificación con un mensaje personalizado al dispositivo activo |
+| kdeconnect-refresh              | 	Escanee la red y actualice las conexiones disponibles                     |
+| kdeconnect-ring                 | 	Hacer que suene el dispositivo activo (útil para encontrarlo)             |
+| kdeconnect-select-active-device | 	Seleccione el dispositivo activo de kdeconnect-devices                    |
+| kdeconnect-enviar-archivo       | 	Enviar el archivo seleccionado al dispositivo activo                      |
+| kdeconnect-enviar-sms           | 	Enviar un SMS al destino especificado                                     |
+
+[[https://github.com/carldotac/kdeconnect.el][Repositorio en GitHub]]
+
+* Descargar todos los episodios de un Podcast con wget
+:PROPERTIES:
+:TITLE:    Descargar todos los episodios de un Podcast con wget
+:EXPORT_FILE_NAME: descargar-todos-los-episodios-de-un-podcast-con-bash
+:DESCRIPTION: Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.
+:EXPORT_DATE: 2018-12-28
+:CATEGORY: terminal
+:TAG:      bash,podcast,unix,terminal
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.
+
+Tan simple como escribir esta única línea sustituyendo *"FEED"*, por el Feed del Podcast que desees descargar.
+#+BEGIN_SRC 
+wget -q -O- "FEED" | grep -o '<enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+#+END_SRC
+
+Como ejemplo, te dejo el Podcast de uGeek 😜
+#+BEGIN_SRC  
+wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '<enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+#+END_SRC
+A disfrutar con la magia de la terminal...
+
+* Visualiza tus Notas Markdown Versión Web con MkDocs
+:PROPERTIES:
+:TITLE:    Visualiza tus Notas Markdown Versión Web con MkDocs
+:EXPORT_FILE_NAME: Visualiza tus Notas Markdown Version Web con MkDocs
+:DESCRIPTION: Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.
+:EXPORT_DATE: 2019-01-03
+:CATEGORY: servidor
+:TAG:      servidor,raspberry,markdown,notas
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.
+
+** Instalación
+
+Instalaremos en debian, ubuntu,… con:
+
+=sudo apt install mkdocs=
+
+También podemos hacerlo por Python así:
+
+=sudo pip install mkdocs=
+
+** Iniciando
+
+Ahora vamos a crear un nuevo proyecto, una carpeta donde depositaremos todas nuestras notas para después verlas en la web.
+#+BEGIN_SRC 
+mkdocs new my-project
+cd my-project
+#+END_SRC
+
+** Iniciamos el servidor
+
+=mkdocs serve=
+
+Para acceder remotamente, desde cualquier dispositivo dentro de nuestra red local, ejecutaremos dentro de la carpeta anteriormente creada:
+
+=mkdocs serve -a 0.0.0.0:8000=
+
+Ahora nos conectaremos desde cualquier dispositivo a: http://ip:8000
+
+Si quieres publicarlo en tu servidor web de un modo permanente, con un comando podremos generar un sitio estático a partir de nuestro MkDocs.
+
+Nos situamos en la raíz de la carpeta, donde arrancamos el servidor y ejecutamos:
+
+=mkdocs build=
+
+Esto creará una carpeta llamada site, que contendrá todos los archivos de nuestra web estática.
+
+* El poder de la terminal y el scripting
+:PROPERTIES:
+:TITLE:    El poder de la terminal y el scripting
+:EXPORT_FILE_NAME: El poder de la terminal y el scripting
+:DESCRIPTION: Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center
+:EXPORT_DATE: 2019-01-03
+:CATEGORY: unix
+:TAG:      bash,terminal,scrits
+:IMAGE:    ./images/blog/dockeronrapi.png
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Hace más de medio año que los chicos de [[https://slimbook.es/][Slimbook]] crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, [[https://linuxcenter.es/][Linux Center]].
+El objetivo principal, es el de dar conocimiento tanto del Software Libre como de GNU/Linux. Allí se brinda la posibilidad, tanto de ofrecer charlas como asistir a ellas de forma totalmente gratuita. Afortunadamente, todos aquellos que vivimos lejos de Valencia, podemos ver estas a través de su [[https://www.youtube.com/channel/UCEGWt2UciVyz1MC7rYtBg6w][canal en YouTube]]. Os dejo esta charla muy interesante sobre la terminal que impartió  Raúl Rodrigo.
+
+#+HTML: <iframe width="560" height="315" src="https://www.youtube.com/embed/AgvRdj2-Yog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+* Eliminar líneas en Blanco con sed
+:PROPERTIES:
+:TITLE:    Eliminar líneas en Blanco con sed
+:EXPORT_FILE_NAME: eliminar-lineas-en-blanco
+:DESCRIPTION: Como podemos eliminar líneas en Blanco
+:EXPORT_DATE: 2018-12-27
+:IMAGE:    ./images/blog/dockeronrapi.png
+:CATEGORY: unix
+:TAG:      bash,unix,terminal,sed
+:URL_AUDIO: https://anchor.fm/s/106db04/podcast/play/1672064/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2018-10-5%2FComo-Actualizar-tus-Dockers-9eca01f3ed771.m4a
+:END:
+
+Para eliminar líneas en Blanco de un archivo de texto, podriamos utilizar *sed*.
+
+[[./images-blog/sed.png]]
+
+
+=cat archivo | sed '/^ *$/d' > nuevo_archivo=
+
+* Crear un Blog en GitLab. GitLab Pages
+:PROPERTIES:
+:TITLE:    Crear un Blog en GitLab. GitLab Pages
+:EXPORT_FILE_NAME: Crear un Blog en GitLab. GitLab Pages
+:DESCRIPTION: Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico.
+:EXPORT_DATE: 2019-01-04
+:CATEGORY: git
+:TAG:      gitlab, servidor, blog, html, git
+:END:
+
+** Intro
+
+Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las [[https://pages.github.com/][GitLabPages]] y sin límite de espacio ni tráfico. El único limite, creo recordar, es que los archivo que subamos no pueden exceder de 15mb. Aún así, para mi es más que suficiente. 
+
+Dando por hecho que ya tienes una cuenta creada, solo falta decidir si el repositorio que vas a crear, será como uno de tus proyectos o vas a crear un grupo. El punto positivo de crear el grupo, es que podrás elegir una url tipo miblog.gitlab.io.
+
+También decir que el repositorio que crees, a diferencia de GitHub, podrás hacerlo tanto público como privado. Eso no exime el correcto funcionamiento de la Página en el servidor web. 
+
+Imaginar tener vuestra Raspberry con git instalado y enviando información a nuestro servidor GitLab mediante cron. Esto puede ser muy muy interesante, una puerta de acceso al mundo exterior. jejeje
+
+** Creamos el repositorio
+
+Una vez creado el repositorio, tendremos que crear un archivo llamado  *.gitlab-ci.yml* y dentro de este, escribir el siguiente código:
+#+BEGIN_SRC 
+pages:
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+#+END_SRC
+
+** Crear el servidor
+
+1) Vamos al apartado *CI/CC*
+2) Vamos a *Configuración -> General -> Avanced -> Expand*
+3) En Path, añadimos junto al proyecto, el dominio que queremos utilizar. Ejem: miblog.gitlab.io
+4) Esperamos aproximadamente un minuto, veremos desde la página de GitLab una animación de una redonda que va cargando y...
+
+Ya Está!!! Nuestro servidor esta funcionando!!!
+
+* Elimina archivos duplicados con fduples
+:PROPERTIES:
+:TITLE:    Elimina archivos duplicados con fduples
+:EXPORT_FILE_NAME: Elimina archivos duplicados con fduples
+:DESCRIPTION: fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados
+:EXPORT_DATE: 2019-01-05
+:CATEGORY: terminal
+:TAG:      bash,unix,terminal
+:END:
+
+fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados:
+
+** Instalación
+
+=sudo apt install fdupes=
+
+** Ver cuantos archivos duplicados tenemos
+
+Para *ver los archivos duplicados* en una carpeta, utilizaremos el siguiente comando:
+
+=fdupes ~/ruta=
+
+** Eliminar archivos duplicados
+
+En caso de aparecer archivos, para eliminarlos, utilizaremos =-d=:
+
+=fdupes -d ~/ruta=
+
+Tranquilo, esto no eliminará los archivos, simplemente mostrará un asistente donde aparecerán los archivos repetidos y cual de ellos, mediante un número delante, queremos conservar:
+
+#+BEGIN_SRC 
+Set 1 of 147, preserve files [1 - 2, all]: 1
+
+   [+] /home/angel/fotos/photo_0001.jpg
+   [-] /home/angel/fotos/2019-01-05-15:15.jpg
+#+END_SRC
+Para entrar recursivamente a subcarpetas dentro de esta, utilizaremos como siempre =-r=
+
+=fdupes -d ~/ruta=
+* NextcloudPi. Nextcloud en Raspbian con Docker
+:PROPERTIES:
+:TITLE:    NextcloudPi. Nextcloud en Raspbian con Docker
+:EXPORT_FILE_NAME: NextcloudPi. Nextcloud en Raspbian con Docker
+:DESCRIPTION: Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi
+:EXPORT_DATE: 2019-01-06
+:CATEGORY: servidor
+:TAG:      docker, nextcloud
+:END:
+
+** Descargar Imagen y Crear Contenedor NextcloudPi
+
+Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.
+
+Si tenemos un servidor como apache2, vamos a detener el servicio para no utilizar el puerto 80, que éste utiliza por defecto.
+
+Tendrás que modificar en este comando el usuario *pi* por tu usuario y la ip *192.168.1.100* por la ip local de tu raspberry.
+
+#+BEGIN_SRC 
+sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloudplus/:/data --name nextcloudpi ownyourbits/nextcloudplus-armhf 192.168.1.100
+#+END_SRC
+
+** Iniciar Nextcloud
+
+Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.
+
+Guardamos las 2 contraseñas y le damos a *Activar* en la parte inferior.
+
+Una contraseña será para la web de administración de *NextcloudPi* por el puerto 4443 y la otra contraseña será para el servicio *Nextcloud* por el puerto 80 o 443.
+
+** Crear Certificado
+
+Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.
+
+Ahora vamos a ip::4443 y vamos a crear el certificado en el apartado: Let’s Encrypt.
+
+Abriremos los puertos 443 y 80 de nuestro Router, dirigiendo el tráfico a la ip local de nuestra Raspberry y clicaremos *Ejecutar*.
+
+De forma automática, nos generará el certificado por 3 meses.
+
+[[https://ownyourbits.com/nextcloudpi/][NextcloudPi]]
+
+* Crear un Blog en GitHub. GitHub Pages
+:PROPERTIES:
+:TITLE:    Crear un Blog en GitHub. GitHub Pages
+:EXPORT_FILE_NAME: Crear un Blog en GitHub. GitHub Pages
+:DESCRIPTION: Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown
+:EXPORT_DATE: 2019-01-08
+:CATEGORY: git
+:TAG:      git, servidor, blog, html,
+:END:
+
+Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown.
+
+Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo.
+
+Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web.
+
+Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"... y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros.
+
+** Creando la Web estática con GitHub Pages
+
+1) Creamos el repositorio en GitHub
+2) Bajamos este, a nuestro dispositivo haciendo un =git clone repositorio=
+3) Ya tenemos nuestra carpeta de GitHub en local. Añadimos los archivos .html que queremos subir a nuestro GitHub Pages
+4) Subimos todos los archivos a GitHub con los comandos: =git add . ; git commit -m "primer commit" ; git push=
+5) Ahora vamos a habilitar el servidor web. Vamos a *Settings*
+6) En el apartado *GitHub Pages*, en *Source*, cambiamos el estado de *None* a *Master Branch*. Despues pulsaremos el boton *Save*
+7) Ya está guardado y si volvemos a este apartado de *GitHub Pages*, aparecerá la nueva url creada para nuestro nuevo servidor web, tipo:  https://ugeek.github.io/nombre_del_repositorio/ 
+
+* Ignorar archivos que no queremos que suban a Git
+:PROPERTIES:
+:TITLE:    Ignorar archivos que no queremos que suban a Git
+:EXPORT_FILE_NAME: Ignorar archivos que no queremos que suban a Git
+:DESCRIPTION: Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:
+:EXPORT_DATE: 2019-01-12
+:CATEGORY: git
+:TAG:      git,
+:END:
+ Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene una fácil solución:
+** Creando el archivo *.gitignore* para ignorar archivos 
+Para determinar los archivos que queremos que no suban al repositorio, tenemos que crear una archivo de texto plano oculto llamado *.gitignore en la raíz de la carpeta en la que queramos ignorar ese tipo de archivo.*
+
+Hay que tener en cuenta, que si lo ponemos en la raíz inicial del proyecto, esto excluirá a esa carpeta y resto de subcarpetas de este repositorio.
+
+La sintaxis es prácticamente igual que si hiciéramos un scritp en bash. "#" podemos utilizarlo para los comentarios.
+
+- Si no queremos que *no* suban los archivos extensión .log, utilizariamos:
+ 
+ =*.log=
+  
+* TODO GPG. Cifrado de archivos simétrico
+:PROPERTIES:
+:TITLE:    GPG. Cifrado de archivos simétrico
+:EXPORT_FILE_NAME: GPG Cifrado de archivos simetrico
+:DESCRIPTION: En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg
+:EXPORT_DATE: 2019-01-17
+:CATEGORY: seguridad
+:TAG:      gpg, nube, servidor
+:END:
+
+En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.
+ 
+*** Cifrado
+
+=gpg -c archivo.txt=
+ 
+Te pedirá contraseña para cifrar el archivo.
+
+Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:
+#+begin_src
+gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt
+#+end_src
+*** Descifrado
+
+=gpg filename.txt.gpg=
+
+
+Pata automatizar como en el caso anterior...
+#+begin_src 
+gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg
+#+end_src
+*** Conclusión
+Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso y dandole un poco mas de seguridad.
+
+
+
