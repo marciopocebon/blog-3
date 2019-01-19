@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5105ee6" class="outline-2">
-<h2 id="org5105ee6">minidlna</h2>
-<div class="outline-text-2" id="text-org5105ee6">
+<div id="outline-container-org7f0917a" class="outline-2">
+<h2 id="org7f0917a">minidlna</h2>
+<div class="outline-text-2" id="text-org7f0917a">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org63a8ea1" class="outline-3">
-<h3 id="org63a8ea1">Instalación</h3>
-<div class="outline-text-3" id="text-org63a8ea1">
+<div id="outline-container-orgc0e5805" class="outline-3">
+<h3 id="orgc0e5805">Instalación</h3>
+<div class="outline-text-3" id="text-orgc0e5805">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgef02a20" class="outline-3">
-<h3 id="orgef02a20">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orgef02a20">
+<div id="outline-container-orgef40b81" class="outline-3">
+<h3 id="orgef40b81">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgef40b81">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -321,9 +321,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-org81041c6" class="outline-3">
-<h3 id="org81041c6">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org81041c6">
+<div id="outline-container-orgbfdea40" class="outline-3">
+<h3 id="orgbfdea40">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orgbfdea40">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -334,9 +334,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org6302ae8" class="outline-3">
-<h3 id="org6302ae8">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org6302ae8">
+<div id="outline-container-org87fa0af" class="outline-3">
+<h3 id="org87fa0af">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org87fa0af">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -347,9 +347,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-orgbfb1a40" class="outline-3">
-<h3 id="orgbfb1a40">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-orgbfb1a40">
+<div id="outline-container-orgd2ee286" class="outline-3">
+<h3 id="orgd2ee286">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-orgd2ee286">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -372,9 +372,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-org5b4cd6d" class="outline-3">
-<h3 id="org5b4cd6d">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org5b4cd6d">
+<div id="outline-container-orgc867083" class="outline-3">
+<h3 id="orgc867083">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgc867083">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -389,9 +389,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org9a23cfd" class="outline-3">
-<h3 id="org9a23cfd">Puertos</h3>
-<div class="outline-text-3" id="text-org9a23cfd">
+<div id="outline-container-orgd85905e" class="outline-3">
+<h3 id="orgd85905e">Puertos</h3>
+<div class="outline-text-3" id="text-orgd85905e">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -400,12 +400,17 @@ En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder
 <li>UDP = 1900</li>
 </ul>
 
+<br>
+<p>
+Publicado por Angel el domingo 30 diciembre del 2018  
+</p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
