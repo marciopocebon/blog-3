@@ -267,13 +267,13 @@ for the JavaScript code in this tag.
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Episodios</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org7f0917a" class="outline-2">
-<h2 id="org7f0917a">minidlna</h2>
-<div class="outline-text-2" id="text-org7f0917a">
+<div id="outline-container-orgc07d8ce" class="outline-2">
+<h2 id="orgc07d8ce">minidlna</h2>
+<div class="outline-text-2" id="text-orgc07d8ce">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-orgc0e5805" class="outline-3">
-<h3 id="orgc0e5805">Instalación</h3>
-<div class="outline-text-3" id="text-orgc0e5805">
+<div id="outline-container-orgc1de1f3" class="outline-3">
+<h3 id="orgc1de1f3">Instalación</h3>
+<div class="outline-text-3" id="text-orgc1de1f3">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgef40b81" class="outline-3">
-<h3 id="orgef40b81">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orgef40b81">
+<div id="outline-container-orgf57584c" class="outline-3">
+<h3 id="orgf57584c">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgf57584c">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -321,9 +321,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-orgbfdea40" class="outline-3">
-<h3 id="orgbfdea40">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-orgbfdea40">
+<div id="outline-container-orga06012c" class="outline-3">
+<h3 id="orga06012c">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orga06012c">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -334,9 +334,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org87fa0af" class="outline-3">
-<h3 id="org87fa0af">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org87fa0af">
+<div id="outline-container-orgadd8c64" class="outline-3">
+<h3 id="orgadd8c64">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-orgadd8c64">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -347,9 +347,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-orgd2ee286" class="outline-3">
-<h3 id="orgd2ee286">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-orgd2ee286">
+<div id="outline-container-org624c527" class="outline-3">
+<h3 id="org624c527">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org624c527">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -372,9 +372,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-orgc867083" class="outline-3">
-<h3 id="orgc867083">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-orgc867083">
+<div id="outline-container-orgb1d2f83" class="outline-3">
+<h3 id="orgb1d2f83">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgb1d2f83">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -389,9 +389,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-orgd85905e" class="outline-3">
-<h3 id="orgd85905e">Puertos</h3>
-<div class="outline-text-3" id="text-orgd85905e">
+<div id="outline-container-orgd85ffc3" class="outline-3">
+<h3 id="orgd85ffc3">Puertos</h3>
+<div class="outline-text-3" id="text-orgd85ffc3">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
