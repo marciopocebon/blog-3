@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kde Connect en Emacs</title>
+<title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla"
+<meta name="description" content="Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor."
  />
-<meta name="keywords" content="emacs,sincronización,kdeconnect" />
+<meta name="keywords" content="servidor, raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,129 +271,183 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org607ac94" class="outline-2">
-<h2 id="org607ac94">Kde Connect en Emacs</h2>
-<div class="outline-text-2" id="text-org607ac94">
+<div id="outline-container-orgd72f5c6" class="outline-2">
+<h2 id="orgd72f5c6">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
+<div class="outline-text-2" id="text-orgd72f5c6">
 <p>
-Por culpa del <a href="https://www.atareao.es/podcast/integrando-android-con-ubuntu/">Podcast de atareao.es</a>, he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla:
+Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
 </p>
+
+<p>
+Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.
+</p>
+
+<p>
+Características:
+</p>
+
+<ul class="org-ul">
+<li>Mensajería</li>
+<li>Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,…</li>
+<li>Llamadas</li>
+<li>Video Llamadas</li>
+<li>Doble Cifrados</li>
+<li>Varios Clientes y totalmente multiplataforma</li>
+</ul>
 </div>
 
-<div id="outline-container-orgd57e9ae" class="outline-3">
-<h3 id="orgd57e9ae">Instalación</h3>
-<div class="outline-text-3" id="text-orgd57e9ae">
+<div id="outline-container-org82fe428" class="outline-3">
+<h3 id="org82fe428">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
+<div class="outline-text-3" id="text-org82fe428">
+<pre class="example">
+sudo apt-get install build-essential python2.7-dev libffi-dev \
+		     python-pip python-setuptools sqlite3 \
+		     libssl-dev python-virtualenv libjpeg-dev
+sudo pip install --upgrade pip
+sudo pip install --upgrade ndg-httpsclient
+sudo pip install --upgrade virtualenv
+</pre>
+
 <p>
-Teniendo los repositorios de Melpa:
+Este segunda comando ten paciencia, se crearan los certificados, etc … y <b>tardará mucho tiempo, probablemente una hora</b>, recomiendo detener servicios
 </p>
 
+<pre class="example">
+virtualenv -p python2.7 ~/.synapse
+source ~/.synapse/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install https://github.com/matrix-org/synapse/tarball/master
+</pre>
+
+<p>
+Instala también el modulo para synapse.app.
+</p>
+
+<p>
+<code>pip install (--upgrade) synapseclient</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1af1f7" class="outline-3">
+<h3 id="orga1af1f7">CONFIGURAR SYNAPSE</h3>
+<div class="outline-text-3" id="text-orga1af1f7">
+<p>
+Recuerda sustituir el nombre del servidor <b>my.domain.name</b>
+En –report-stats= tienes que seleccionar <b>yes o no</b>.
+</p>
+
+<p>
+<code>cd ~/.synapse</code>
+</p>
+
+<pre class="example">
+python2.7 -B -m synapse.app.homeserver \
+    --server-name=my.domain.name \
+    --config-path=homeserver.yaml \
+    --generate-config \
+    --report-stats=[yes|no]
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org71f94e2" class="outline-3">
+<h3 id="org71f94e2">INICIAR SERVIDOR</h3>
+<div class="outline-text-3" id="text-org71f94e2">
 <ol class="org-ol">
-<li>Instalación: <b>M-x package-install RET kdeconnect</b></li>
-<li>Listamos los dispositivos de nuestra red local: <b>M-x kdeconnect-list-devices</b></li>
-<li>Buscamos los búfer anteriores para copiar los id de nuestros dispositivos (C-x Izquierda)</li>
-<li>Introducimos el id de nuestro dispositivo: <b>M-x kdeconnect-select-active-device RET id</b></li>
-<li>Hacemos un ping para comprobar que se ha conectado correctamente: <b>M-x kdeconnect-ping</b></li>
+<li>Nos situamos en la carpeta de <b>synapse</b></li>
 </ol>
 
 <p>
-YA ESTA!!!
+<code>cd ~/.synapse</code>
+</p>
+
+<ol class="org-ol">
+<li>Iniciar el servidor</li>
+</ol>
+
+<p>
+<code>source ./bin/activate ; synctl start</code>
 </p>
 
 <p>
-<b>Ahora si copiamos un texto en el portapapeles de nuestro Emacs, podremos pegarlo en el otro dispositivo gracias a Kde Connect.</b>
+La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <b>no te recomiendo que la uses</b>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.
+<b>Detener el servicio, si lo deseamos:</b>
 </p>
 
 <p>
-Vamos a enviar un texto desde Emacs al otro dispositivo <b>M-x kdeconnect-ping-msg RET Texto</b>
+<code>source ./bin/activate ; synctl stop</code>
 </p>
 
 <p>
-Os dejo el resto de funciones para que juguéis y el repositorio donde está toda la información:
+CREAR USUARIOS
+</p>
+
+<p>
+Iniciamos el servidor y situándonos dentro del directorio <b>.synapse</b>
+</p>
+
+<p>
+<code>cd ~/.synapse</code>
+</p>
+
+<p>
+Ejecutaremos el siguiente comando:
+</p>
+
+<p>
+<code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code>
+</p>
+
+<p>
+Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.
 </p>
 </div>
 </div>
+<div id="outline-container-orgb8167ac" class="outline-3">
+<h3 id="orgb8167ac">UTILIZAR EL CLIENTE RIOT</h3>
+<div class="outline-text-3" id="text-orgb8167ac">
 
-<div id="outline-container-org2b48083" class="outline-3">
-<h3 id="org2b48083">Resto de Funciones disponibles</h3>
-<div class="outline-text-3" id="text-org2b48083">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<div class="figure">
+<p><img src="../images-blog/riot.png" alt="riot.png" />
+</p>
+</div>
 
 
-<colgroup>
-<col  class="org-left" />
+<ol class="org-ol">
+<li>Pondermos en nombre de usuario y contraseña</li>
+<li>Habilitamos opciones de servidor propietarias</li>
+<li>En servidor, ponemos <a href="https://ip:8448">https://ip:8448</a></li>
+</ol>
+<p>
+ENCONTRARSE LOS USUARIOS
+</p>
 
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Función</th>
-<th scope="col" class="org-left">Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">kdeconnect-get-active-device</td>
-<td class="org-left">Mostrar el dispositivo activo</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-list-devices</td>
-<td class="org-left">Muestra todos los dispositivos visibles, incluso los no disponibles.</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-ping</td>
-<td class="org-left">Enviar una notificación al dispositivo activo.</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-ping-msg</td>
-<td class="org-left">Envía una notificación con un mensaje personalizado al dispositivo activo</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-refresh</td>
-<td class="org-left">Escanee la red y actualice las conexiones disponibles</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-ring</td>
-<td class="org-left">Hacer que suene el dispositivo activo (útil para encontrarlo)</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-select-active-device</td>
-<td class="org-left">Seleccione el dispositivo activo de kdeconnect-devices</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-enviar-archivo</td>
-<td class="org-left">Enviar el archivo seleccionado al dispositivo activo</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-enviar-sms</td>
-<td class="org-left">Enviar un SMS al destino especificado</td>
-</tr>
-</tbody>
-</table>
+<ol class="org-ol">
+<li>Creamos una sala</li>
+<li>En configuración de la sala, en <b>acceso a la Sala</b> y seleccionamos:</li>
+</ol>
 
 <p>
-<a href="https://github.com/carldotac/kdeconnect.el">Repositorio en GitHub</a>
+“Los que saben el enlace de la sala, incluso huespedes”
 </p>
+
+<p>
+3 )Ahora en <b>Avanzado</b>, compartimos al otro usuario <b>La identificación interna de esta Sala</b>
+</p>
+
 
 <br>
 <p>
-Publicado por Angel el lunes 31 diciembre del 2018  
+Publicado por Angel el domingo 20 enero del 2019  
 </p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
-</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>
