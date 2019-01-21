@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GitHub en la Terminal. Comandos</title>
+<title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal"
+<meta name="description" content="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás"
  />
-<meta name="keywords" content="terminal,github" />
+<meta name="keywords" content="antergos,comandos,terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,182 +271,234 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5cccd5c" class="outline-2">
-<h2 id="org5cccd5c">Utilizando Git con la Terminal. GitHub</h2>
-<div class="outline-text-2" id="text-org5cccd5c">
+<div id="outline-container-orgb40b3bc" class="outline-2">
+<h2 id="orgb40b3bc">Antergos. Comandos para terminal y derivadas de Arch Linux</h2>
+<div class="outline-text-2" id="text-orgb40b3bc">
 <p>
-Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
-potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.
+Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el
+Sistema Operativo, instalar y demás…
+</p>
+
+<p>
+Aquí iré añadiendo periodicamente comandos para ir conociendolos.
 </p>
 </div>
 
-<div id="outline-container-orgace3f24" class="outline-3">
-<h3 id="orgace3f24">Instalando Git</h3>
-<div class="outline-text-3" id="text-orgace3f24">
+<div id="outline-container-orgb786c4a" class="outline-3">
+<h3 id="orgb786c4a">pacman</h3>
+<div class="outline-text-3" id="text-orgb786c4a">
 <p>
-<code>sudo apt install git</code>
+Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.
+</p>
+</div>
+<div id="outline-container-orgbf7f8fb" class="outline-4">
+<h4 id="orgbf7f8fb">Actualizar el Sistema Operativo y repositorios</h4>
+<div class="outline-text-4" id="text-orgbf7f8fb">
+<p>
+<code>sudo pacman -Syyuu</code>   
 </p>
 </div>
 </div>
-
-<div id="outline-container-org1e7a0a6" class="outline-3">
-<h3 id="org1e7a0a6">Comprobar si tenemos clave pública ssh</h3>
-<div class="outline-text-3" id="text-org1e7a0a6">
+<div id="outline-container-orgb10b60e" class="outline-4">
+<h4 id="orgb10b60e">Buscar en los repositorios (usaremos de ejem: gimp)</h4>
+<div class="outline-text-4" id="text-orgb10b60e">
 <p>
-Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <b>~/.ssh</b> y miraremos si existe el archivo <b>*.pub</b>. 
+<code>sudo pacman -Ss gimp</code>
 </p>
 </div>
 </div>
-<div id="outline-container-org0b95c57" class="outline-3">
-<h3 id="org0b95c57">Generando tu clave pública ssh</h3>
-<div class="outline-text-3" id="text-org0b95c57">
+<div id="outline-container-org42686b6" class="outline-4">
+<h4 id="org42686b6">Instalar aplicaciones</h4>
+<div class="outline-text-4" id="text-org42686b6">
 <p>
-Si no existe, vamos a generarlo.
-</p>
-
-<p>
-Ejecutaremos el comando:
-</p>
-
-<p>
-<code>ssh-keygen</code>
-</p>
-
-<p>
-Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.
-</p>
-
-<p>
-Cuando termine, aparecerán un par de ficheros dentro de <b>~/.ssh/</b> se llamarán <b>id_rsa</b> y <b>id_rsa.pub</b> o adquirán el nombre que has elegido si has puesto alguno en el paso anterior.
-</p>
-
-<p>
-Ahora abre el fichero acabado en <b>.pub</b> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:
-</p>
-
-<p>
-<code>cat id_rsa.pub</code>
+<code>sudo pacman -S gimp</code>
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orgaf62cf0" class="outline-3">
-<h3 id="orgaf62cf0">Añadiendo la  clave en GitHub</h3>
-<div class="outline-text-3" id="text-orgaf62cf0">
+<div id="outline-container-orgbf9df2b" class="outline-3">
+<h3 id="orgbf9df2b">yaourt</h3>
+<div class="outline-text-3" id="text-orgbf9df2b">
 <p>
-Haz click en tu foto de perfil de arriba a la derecha, después ve a <b>settings &gt; SSH and GPG keys &gt; New SSH key</b>. Pega la clave  y pulsa finalizar.
+Las aplicaciones que no esten en los repositorios oficiales de Arch, estan en AUR. AUR (Arch User Repository) es el lugar donde la
+comunidad de Arch Linux puede subir los PKGBUILD de las aplicaciones, bibliotecas, etc.,
 </p>
 
 <p>
-A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.
+Para instalar desde Aur utilizaremos yaourt.
 </p>
+</div>
 
+<div id="outline-container-org8b4ed3c" class="outline-4">
+<h4 id="org8b4ed3c">Actualizar los repositorios</h4>
+<div class="outline-text-4" id="text-org8b4ed3c">
 <p>
-Comprobaremos la conexión con GitHub
-<code>ssh -T git@github.com</code>
+<code>yaourt -Syu</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc45725a" class="outline-3">
-<h3 id="orgc45725a">Iniciando cuenta con GitHub</h3>
-<div class="outline-text-3" id="text-orgc45725a">
+<div id="outline-container-org8505d6b" class="outline-4">
+<h4 id="org8505d6b">Buscar en yaourt (usaremos de ejem: utext)</h4>
+<div class="outline-text-4" id="text-org8505d6b">
 <p>
-Solo la primera vez, especificamos nuestro correo y nombre de usuario:
-</p>
-
-<p>
-<code>git config --global user.email "tucorreo@gmail.com"</code>
-</p>
-
-<p>
-<code>git config --global user.name "Tu Nombre"</code>
-</p>
-
-<p>
-Para ver el archivo de configuración:
-<code>cat ~/.gitconfig</code>
+<code>yaourt -Ss utext</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2a6be15" class="outline-3">
-<h3 id="org2a6be15">Clonar Repositorio en local</h3>
-<div class="outline-text-3" id="text-org2a6be15">
+<div id="outline-container-orgfddd723" class="outline-4">
+<h4 id="orgfddd723">Instalar aplicaciones que no encontremos en Pacman (como utext)</h4>
+<div class="outline-text-4" id="text-orgfddd723">
 <p>
-Ves al repositorio de GitHub y haz click en <b>Clone or download</b> en la zona de la derecha, te saldrá <b>Clone with HTTPS o Clone with SSH GitHub</b>
+<code>yaourt -S utext</code>
 </p>
-
-<p>
-Haz click sobre <b>Use SSH</b> y después pulsa sobre el botón de copiar que hay debajo.
-</p>
-
-<p>
-Ahora vamos a la terminal y pegamos la url con <b>git clone</b> para clonar el repositorio:
-</p>
-
-<p>
-<code>git clone git@github.com:ugeek/ugeek.github.io.git</code>
-</p>
-
-<p>
-Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!
-</p>
+</div>
 </div>
 </div>
 
 
-<div id="outline-container-org2998b9a" class="outline-3">
-<h3 id="org2998b9a">Comandos Básicos</h3>
-<div class="outline-text-3" id="text-org2998b9a">
-<p>
-Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:
-</p>
-
+<div id="outline-container-org0ca5abb" class="outline-3">
+<h3 id="org0ca5abb">Guía de comandos básicos de Pacman</h3>
+<div class="outline-text-3" id="text-org0ca5abb">
+</div>
+<div id="outline-container-org93ed298" class="outline-4">
+<h4 id="org93ed298">Instalar paquetes</h4>
+<div class="outline-text-4" id="text-org93ed298">
 <ul class="org-ul">
-<li>Ver estado desde el último cambio  <code>git status</code></li>
-<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
-<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
-<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
-<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
-</ul>
-
-
-<p>
-Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberiamos verificar o descargar el contenido remoto de GitHub a local.
-</p>
-<ul class="org-ul">
-<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
+<li><code>pacman -S “paquete”</code>  Instala un paquete.</li>
+<li><code>pacman -Sy “paquete”</code> Sincroniza repositorios e instala el paquete.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9e16efc" class="outline-3">
-<h3 id="org9e16efc">Resumen</h3>
-<div class="outline-text-3" id="text-org9e16efc">
+<div id="outline-container-orgc4be0da" class="outline-4">
+<h4 id="orgc4be0da">Actualizar paquetes</h4>
+<div class="outline-text-4" id="text-orgc4be0da">
+<ul class="org-ul">
+<li><code>pacman -Sy</code>  Sincroniza repositorios.</li>
+<li><code>pacman -Syy</code>  Fuerza la sincronización de repositorios incluso para paquetes que parecen actualizados.</li>
+<li><code>pacman -Syu</code>  Sincroniza repositorios y actualiza paquetes.</li>
+<li><code>pacman -Syyu</code>  Fuerza sincronización y actualiza paquetes.</li>
+<li><code>pacman -Su</code>  Actualiza paquetes sin sincronizar repositorios.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5f21b76" class="outline-4">
+<h4 id="org5f21b76">Buscar paquetes</h4>
+<div class="outline-text-4" id="text-org5f21b76">
+<ul class="org-ul">
+<li><code>pacman -Ss “paquete”</code>  Busca un paquete.</li>
+<li><code>pacman -Si “paquete”</code>  Muestra información detallada de un paquete.</li>
+<li><code>pacman -Sg “grupo”</code>  Lista los paquetes que pertenecen a un grupo.</li>
+<li><code>pacman -Qs “paquete”</code>  Busca un paquete YA instalado.</li>
+<li><code>pacman -Qi “paquete”</code>  Muestra información detallada de un paquete YA instalado.</li>
+<li><code>pacman -Qdt</code>  Muestra paquetes huerfanos.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5335ffe" class="outline-4">
+<h4 id="org5335ffe">Eliminar paquetes</h4>
+<div class="outline-text-4" id="text-org5335ffe">
+<ul class="org-ul">
+<li><code>pacman -R “paquete”</code>  Borra paquete sin sus dependencias.</li>
+<li><code>pacman -Rs “paquete”</code>  Borra paquete y sus dependencias no utilizadas.</li>
+</ul>
+
+
 <p>
-Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <b>subir</b> y <b>bajar</b>, los archivos de una carpeta al repositorio remoto.
+Fuente: sobrebits.com
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgce230a1" class="outline-3">
+<h3 id="orgce230a1">Aplicaciones Imprescindibles</h3>
+<div class="outline-text-3" id="text-orgce230a1">
+<p>
+Navegador Chrome
 </p>
 
 <p>
-Todo se resume en:
+<code>yaourt -S google-chrome</code>
 </p>
 
 <p>
-Subir
+Editor de video
 </p>
 
 <p>
-<code>git add . ; git commit -m "comentario" ; git push</code>
+<code>sudo pacman -S openshot</code>
 </p>
 
 <p>
-Bajar
+Notas de Nextcloud
 </p>
 
 <p>
-<code>git pull</code>
+<code>yaourt -S qownnotes</code>
 </p>
+
+<p>
+Descarga videos de youtube
+</p>
+
+<p>
+<code>sudo pacman -S clipgrab</code>
+</p>
+
+<p>
+Hacer capturas de pantalla
+</p>
+
+<p>
+<code>yaourt -S shutter</code>
+</p>
+
+<p>
+Convertir audios de m4a a MP3
+</p>
+
+<p>
+<code>sudo pacman -S soundconverter</code>
+</p>
+
+<p>
+Editor de Fotografía
+</p>
+
+<p>
+<code>sudo pacman -S gimp</code>
+</p>
+
+<p>
+Instalar Inkscape
+</p>
+
+<p>
+<code>sudo pacman -S inkscape</code>
+</p>
+
+<p>
+Transmission
+</p>
+
+<p>
+<code>sudo pacman -S transmission-gtk</code>
+</p>
+
+<p>
+Skype
+</p>
+
+<p>
+<code>sudo pacman -S skype</code>
+</p>
+
 <br>
 <p>
 Publicado por Angel el lunes 21 enero del 2019  
@@ -456,11 +508,6 @@ Publicado por Angel el lunes 21 enero del 2019
 También te puede interesar:
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
-</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>
