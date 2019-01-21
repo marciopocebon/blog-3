@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Crear un Blog en GitHub. GitHub Pages</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="git, servidor, blog, html," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="index.html"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,6 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -265,39 +265,61 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org0322960" class="outline-2">
+<h2 id="org0322960">Crear un Blog en GitHub. GitHub Pages</h2>
+<div class="outline-text-2" id="text-org0322960">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown.
 </p>
 
-<div id="outline-container-org80d1382" class="outline-2">
-<h2 id="org80d1382">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org80d1382">
+<p>
+Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo.
+</p>
+
+<p>
+Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web.
+</p>
+
+<p>
+Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"&#x2026; y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros.
+</p>
+</div>
+
+<div id="outline-container-orgd939ec6" class="outline-3">
+<h3 id="orgd939ec6">Creando la Web estática con GitHub Pages</h3>
+<div class="outline-text-3" id="text-orgd939ec6">
+<ol class="org-ol">
+<li>Creamos el repositorio en GitHub</li>
+<li>Bajamos este, a nuestro dispositivo haciendo un <code>git clone repositorio</code></li>
+<li>Ya tenemos nuestra carpeta de GitHub en local. Añadimos los archivos .html que queremos subir a nuestro GitHub Pages</li>
+<li>Subimos todos los archivos a GitHub con los comandos: <code>git add . ; git commit -m "primer commit" ; git push</code></li>
+<li>Ahora vamos a habilitar el servidor web. Vamos a <b>Settings</b></li>
+<li>En el apartado <b>GitHub Pages</b>, en <b>Source</b>, cambiamos el estado de <b>None</b> a <b>Master Branch</b>. Despues pulsaremos el boton <b>Save</b></li>
+<li>Ya está guardado y si volvemos a este apartado de <b>GitHub Pages</b>, aparecerá la nueva url creada para nuestro nuevo servidor web, tipo:  <a href="https://ugeek.github.io/nombre_del_repositorio/">https://ugeek.github.io/nombre_del_repositorio/</a></li>
+</ol>
+
+<br>
+<p>
+Publicado por Angel el martes 08 enero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <ul class="org-ul">
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
-</div>
-</div>
-
-
-<div id="outline-container-org47bbe9b" class="outline-2">
-<h2 id="org47bbe9b">Proyectos Nuevos y el Poder de la Terminal </h2>
-<div class="outline-text-2" id="text-org47bbe9b">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2104087/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-0-14%2F8334197-44100-2-c4850a50f905e.mp3 />Tu navegador no soporta reproductor de Podcast.</audio>'
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>GPG. Cifrado de archivos simétrico</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="gpg, nube, servidor, raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="index.html"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,6 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -265,39 +265,77 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org591d57a" class="outline-2">
+<h2 id="org591d57a">GPG. Cifrado de archivos simétrico</h2>
+<div class="outline-text-2" id="text-org591d57a">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.
+</p>
+</div>
+
+<div id="outline-container-orgb343e99" class="outline-3">
+<h3 id="orgb343e99">Cifrado</h3>
+<div class="outline-text-3" id="text-orgb343e99">
+<p>
+<code>gpg -c archivo.txt</code>
 </p>
 
-<div id="outline-container-org80d1382" class="outline-2">
-<h2 id="org80d1382">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org80d1382">
-<ul class="org-ul">
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
+<p>
+Te pedirá contraseña para cifrar el archivo.
+</p>
 
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
-</ul>
+<p>
+Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:
+</p>
+<pre class="example">
+gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt
+</pre>
 </div>
 </div>
+<div id="outline-container-org2d93460" class="outline-3">
+<h3 id="org2d93460">Descifrado</h3>
+<div class="outline-text-3" id="text-org2d93460">
+<p>
+<code>gpg archivo.txt.gpg</code>
+</p>
 
 
-<div id="outline-container-org47bbe9b" class="outline-2">
-<h2 id="org47bbe9b">Proyectos Nuevos y el Poder de la Terminal </h2>
-<div class="outline-text-2" id="text-org47bbe9b">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2104087/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-0-14%2F8334197-44100-2-c4850a50f905e.mp3 />Tu navegador no soporta reproductor de Podcast.</audio>'
+<p>
+Para automatizar como en el caso anterior&#x2026;
+</p>
+<pre class="example">
+gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg
+</pre>
+</div>
+</div>
+<div id="outline-container-org00b57d7" class="outline-3">
+<h3 id="org00b57d7">Conclusión</h3>
+<div class="outline-text-3" id="text-org00b57d7">
+<p>
+Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso, dandole un poco mas de seguridad.
+</p>
+
+
+
+
+
+<br>
+<p>
+Publicado por Angel el jueves 17 enero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

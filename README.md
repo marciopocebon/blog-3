@@ -1,1 +1,1 @@
-# org-bash-blog
+# blog

@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="Voy a explicar en este post, como generar el Feed del podcast de forma automática."
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="servidor, jekyll,rss" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="index.html"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,6 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -265,39 +265,151 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org49dece1" class="outline-2">
+<h2 id="org49dece1">Crear el Feed para el podcast en tu Blog con Jekyll</h2>
+<div class="outline-text-2" id="text-org49dece1">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Voy a explicar en este post, como generar el Feed del podcast de forma automática.
+</p>
+</div>
+
+<div id="outline-container-org5daa545" class="outline-3">
+<h3 id="org5daa545">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h3>
+<div class="outline-text-3" id="text-org5daa545">
+<pre class="example">
+---
+layout: null
+---
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+&gt;
+
+&lt;channel&gt;
+&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
+&lt;atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /&gt;
+&lt;link&gt;{{ site.url }}&lt;/link&gt;
+&lt;description&gt;{{ site.podcast_description }}&lt;/description&gt;
+&lt;lastBuildDate&gt;{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/lastBuildDate&gt;
+&lt;language&gt;es-es&lt;/language&gt;
+&lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
+&lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt;
+&lt;generator&gt;http://jekyllrb.com&lt;/generator&gt;
+&lt;itunes:summary&gt;{{ site.podcast_summary }}&lt;/itunes:summary&gt;
+&lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
+&lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
+&lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+&lt;itunes:owner&gt;
+&lt;itunes:name&gt;{{ site.podcast_owner }}&lt;/itunes:name&gt;
+&lt;itunes:email&gt;{{ site.podcast_email }}&lt;/itunes:email&gt;
+&lt;/itunes:owner&gt;
+&lt;managingEditor&gt;{{ site.podcast_email }} ({{ site.podcast_owner }})&lt;/managingEditor&gt;
+&lt;itunes:subtitle&gt;{{ site.podcast_subtitle }}&lt;/itunes:subtitle&gt;
+&lt;image&gt;
+&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
+&lt;url&gt;{{ site.url }}{{ site.podcast_album_art }}&lt;/url&gt;
+&lt;link&gt;{{ site.url }}&lt;/link&gt;
+&lt;/image&gt;
+&lt;itunes:category text="{{ site.podcast_category }}"&gt;
+&lt;itunes:category text="{{ site.podcast_subcategory_one }}" /&gt;
+&lt;itunes:category text="{{ site.podcast_subcategory_two }}" /&gt;
+&lt;/itunes:category&gt;
+{% for ep in site.categories.podcast %}
+  &lt;item&gt;
+    &lt;title&gt;{{ ep.title }}&lt;/title&gt;
+    &lt;link&gt;{{ site.url }}{{ ep.url }}&lt;/link&gt;
+    &lt;comments&gt;{{ site.url }}{{ ep.url }}#comments&lt;/comments&gt;
+    &lt;pubDate&gt;{{ ep.date | date: "%a, %d %b %Y %T %z" }}&lt;/pubDate&gt;
+    &lt;dc:creator&gt;&lt;![CDATA[{{ site.author | cdata_escape }}]]&gt;&lt;/dc:creator&gt;
+{% for category in ep.categories %}
+    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
+{% endfor %}
+{% for category in ep.tags %}
+    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
+{% endfor %}
+    &lt;guid isPermaLink="{% if ep.podcast_guid %}false{% else %}true{% endif %}"&gt;{{ site.url }}{% if ep.podcast_guid %}/{{ ep.podcast_guid }}{% else %}{{ ep.url }}{% endif %}&lt;/guid&gt;
+    &lt;description&gt;
+	&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;
+    &lt;/description&gt;
+    &lt;content:encoded&gt;
+	&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;
+    &lt;/content:encoded&gt;
+
+    &lt;enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" /&gt;
+    &lt;itunes:subtitle&gt;&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:subtitle&gt;
+    &lt;itunes:summary&gt;&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:summary&gt;
+    &lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
+    &lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+    &lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
+    &lt;itunes:duration&gt;{{ ep.podcast_duration }}&lt;/itunes:duration&gt;
+  &lt;/item&gt;
+{% endfor %}
+&lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org45a42a5" class="outline-3">
+<h3 id="org45a42a5">Añadimos en el archivo _config.yml, el siguiente contenido:</h3>
+<div class="outline-text-3" id="text-org45a42a5">
+<pre class="example">
+# Podcast Feed Settings
+podcast_url: https://ugeek.github.io
+podcast_album_art: https://ugeek.github.io/img/ugeek.png
+podcast_title: uGeek
+podcast_owner: Angel
+podcast_email: ugeekpodcast@gmail.com
+podcast_category: Technology
+podcast_subcategory_one: Linux
+podcast_subcategory_two: Gadgets
+podcast_explicit: "no"
+podcast_author: Angel
+podcast_description: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_summary: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+</pre>
+</div>
+</div>
+<div id="outline-container-org0b13a40" class="outline-3">
+<h3 id="org0b13a40">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h3>
+<div class="outline-text-3" id="text-org0b13a40">
+<pre class="example">
+---
+layout: post
+title: "046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"
+date: 2017-04-21
+categories: podcast
+image: img/ugeek.png
+podcast_link: https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3
+tags: [syncthing, resilio, dukto, sincronización carpetas, podcast]
+comments: true
+---
+</pre>
+
+<br>
+<p>
+Publicado por Angel el lunes 21 enero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
 </p>
 
-<div id="outline-container-org80d1382" class="outline-2">
-<h2 id="org80d1382">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org80d1382">
-<ul class="org-ul">
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-org47bbe9b" class="outline-2">
-<h2 id="org47bbe9b">Proyectos Nuevos y el Poder de la Terminal </h2>
-<div class="outline-text-2" id="text-org47bbe9b">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2104087/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-0-14%2F8334197-44100-2-c4850a50f905e.mp3 />Tu navegador no soporta reproductor de Podcast.</audio>'
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

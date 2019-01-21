@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Utilizando Git con la Terminal. GitHub</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="terminal,github" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="index.html"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,6 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -265,39 +265,210 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-orgef5bf69" class="outline-2">
+<h2 id="orgef5bf69">Utilizando Git con la Terminal. GitHub</h2>
+<div class="outline-text-2" id="text-orgef5bf69">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
+potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.
+</p>
+</div>
+
+<div id="outline-container-orga7b8107" class="outline-3">
+<h3 id="orga7b8107">Instalando Git</h3>
+<div class="outline-text-3" id="text-orga7b8107">
+<p>
+<code>sudo apt install git</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae84feb" class="outline-3">
+<h3 id="orgae84feb">Comprobar si tenemos clave pública ssh</h3>
+<div class="outline-text-3" id="text-orgae84feb">
+<p>
+Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <b>~/.ssh</b> y miraremos si existe el archivo <b>*.pub</b>. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1e8484" class="outline-3">
+<h3 id="orgb1e8484">Generando tu clave pública ssh</h3>
+<div class="outline-text-3" id="text-orgb1e8484">
+<p>
+Si no existe, vamos a generarlo.
 </p>
 
-<div id="outline-container-org80d1382" class="outline-2">
-<h2 id="org80d1382">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org80d1382">
+<p>
+Ejecutaremos el comando:
+</p>
+
+<p>
+<code>ssh-keygen</code>
+</p>
+
+<p>
+Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.
+</p>
+
+<p>
+Cuando termine, aparecerán un par de ficheros dentro de <b>~/.ssh/</b> se llamarán <b>id_rsa</b> y <b>id_rsa.pub</b> o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior.
+</p>
+
+<p>
+Ahora abre el fichero acabado en <b>.pub</b> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:
+</p>
+
+<p>
+<code>cat id_rsa.pub</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga588273" class="outline-3">
+<h3 id="orga588273">Añadiendo la  clave en GitHub</h3>
+<div class="outline-text-3" id="text-orga588273">
+<p>
+Haz click en tu foto de perfil de arriba a la derecha, después ve a <b>settings &gt; SSH and GPG keys &gt; New SSH key</b>. Pega la clave  y pulsa finalizar.
+</p>
+
+<p>
+A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.
+</p>
+
+<p>
+Comprobaremos la conexión con GitHub
+</p>
+
+<p>
+<code>ssh -T git@github.com</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8af12d" class="outline-3">
+<h3 id="orgf8af12d">Iniciando cuenta con GitHub</h3>
+<div class="outline-text-3" id="text-orgf8af12d">
+<p>
+Solo la primera vez, especificamos nuestro correo y nombre de usuario:
+</p>
+
+<p>
+<code>git config --global user.email "tucorreo@gmail.com"</code>
+</p>
+
+<p>
+<code>git config --global user.name "Tu Nombre"</code>
+</p>
+
+<p>
+Para ver el archivo de configuración:
+</p>
+
+<p>
+<code>cat ~/.gitconfig</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0ea26a" class="outline-3">
+<h3 id="orge0ea26a">Clonar Repositorio en local</h3>
+<div class="outline-text-3" id="text-orge0ea26a">
+<p>
+Ves al repositorio de GitHub y haz click en <b>Clone or download</b> en la zona de la derecha, te saldrá <b>Clone with HTTPS o Clone with SSH GitHub</b>
+</p>
+
+<p>
+Haz click sobre <b>Use SSH</b> y después pulsa sobre el botón de copiar que hay debajo.
+</p>
+
+<p>
+Ahora vamos a la terminal y pegamos la url con <b>git clone</b> para clonar el repositorio:
+</p>
+
+<p>
+<code>git clone git@github.com:ugeek/ugeek.github.io.git</code>
+</p>
+
+<p>
+Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org282c69e" class="outline-3">
+<h3 id="org282c69e">Comandos Básicos</h3>
+<div class="outline-text-3" id="text-org282c69e">
+<p>
+Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:
+</p>
+
 <ul class="org-ul">
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
+<li>Ver estado desde el último cambio  <code>git status</code></li>
+<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
+<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
+<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
+<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
+</ul>
 
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
 
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+<p>
+Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberíamos verificar o descargar el contenido remoto de GitHub a local.
+</p>
+<ul class="org-ul">
+<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
 </ul>
 </div>
 </div>
 
+<div id="outline-container-orgd321522" class="outline-3">
+<h3 id="orgd321522">Resumen</h3>
+<div class="outline-text-3" id="text-orgd321522">
+<p>
+Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <b>subir</b> y <b>bajar</b>, los archivos de una carpeta al repositorio remoto.
+</p>
 
-<div id="outline-container-org47bbe9b" class="outline-2">
-<h2 id="org47bbe9b">Proyectos Nuevos y el Poder de la Terminal </h2>
-<div class="outline-text-2" id="text-org47bbe9b">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2104087/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-0-14%2F8334197-44100-2-c4850a50f905e.mp3 />Tu navegador no soporta reproductor de Podcast.</audio>'
+<p>
+Todo se resume en:
+</p>
+
+<p>
+Subir
+</p>
+
+<p>
+<code>git add . ; git commit -m "comentario" ; git push</code>
+</p>
+
+<p>
+Bajar
+</p>
+
+<p>
+<code>git pull</code>
+</p>
+<br>
+<p>
+Publicado por Angel el lunes 21 enero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

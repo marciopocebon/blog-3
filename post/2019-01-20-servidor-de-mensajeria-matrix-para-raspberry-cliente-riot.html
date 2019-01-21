@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor."
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="servidor, raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="index.html"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,6 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -265,39 +265,190 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org2076e7d" class="outline-2">
+<h2 id="org2076e7d">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
+<div class="outline-text-2" id="text-org2076e7d">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
 </p>
 
-<div id="outline-container-org80d1382" class="outline-2">
-<h2 id="org80d1382">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org80d1382">
+<p>
+Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.
+</p>
+
+<p>
+Características:
+</p>
+
 <ul class="org-ul">
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+<li>Mensajería</li>
+<li>Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,…</li>
+<li>Llamadas</li>
+<li>Video Llamadas</li>
+<li>Doble Cifrados</li>
+<li>Varios Clientes y totalmente multiplataforma</li>
 </ul>
 </div>
+
+<div id="outline-container-org542eaa0" class="outline-3">
+<h3 id="org542eaa0">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
+<div class="outline-text-3" id="text-org542eaa0">
+<pre class="example">
+sudo apt-get install build-essential python2.7-dev libffi-dev \
+		     python-pip python-setuptools sqlite3 \
+		     libssl-dev python-virtualenv libjpeg-dev
+sudo pip install --upgrade pip
+sudo pip install --upgrade ndg-httpsclient
+sudo pip install --upgrade virtualenv
+</pre>
+
+<p>
+Este segunda comando ten paciencia, se crearan los certificados, etc … y <b>tardará mucho tiempo, probablemente una hora</b>, recomiendo detener servicios
+</p>
+
+<pre class="example">
+virtualenv -p python2.7 ~/.synapse
+source ~/.synapse/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install https://github.com/matrix-org/synapse/tarball/master
+</pre>
+
+<p>
+Instala también el modulo para synapse.app.
+</p>
+
+<p>
+<code>pip install (--upgrade) synapseclient</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23ff04f" class="outline-3">
+<h3 id="org23ff04f">CONFIGURAR SYNAPSE</h3>
+<div class="outline-text-3" id="text-org23ff04f">
+<p>
+Recuerda sustituir el nombre del servidor <b>my.domain.name</b>
+En –report-stats= tienes que seleccionar <b>yes o no</b>.
+</p>
+
+<p>
+<code>cd ~/.synapse</code>
+</p>
+
+<pre class="example">
+python2.7 -B -m synapse.app.homeserver \
+    --server-name=my.domain.name \
+    --config-path=homeserver.yaml \
+    --generate-config \
+    --report-stats=[yes|no]
+</pre>
+</div>
 </div>
 
 
-<div id="outline-container-org47bbe9b" class="outline-2">
-<h2 id="org47bbe9b">Proyectos Nuevos y el Poder de la Terminal </h2>
-<div class="outline-text-2" id="text-org47bbe9b">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2104087/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-0-14%2F8334197-44100-2-c4850a50f905e.mp3 />Tu navegador no soporta reproductor de Podcast.</audio>'
+<div id="outline-container-orgad170e3" class="outline-3">
+<h3 id="orgad170e3">INICIAR SERVIDOR</h3>
+<div class="outline-text-3" id="text-orgad170e3">
+<ol class="org-ol">
+<li>Nos situamos en la carpeta de <b>synapse</b></li>
+</ol>
+
+<p>
+<code>cd ~/.synapse</code>
+</p>
+
+<ol class="org-ol">
+<li>Iniciar el servidor</li>
+</ol>
+
+<p>
+<code>source ./bin/activate ; synctl start</code>
+</p>
+
+<p>
+La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <b>no te recomiendo que la uses</b>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.
+<b>Detener el servicio, si lo deseamos:</b>
+</p>
+
+<p>
+<code>source ./bin/activate ; synctl stop</code>
+</p>
+
+<p>
+CREAR USUARIOS
+</p>
+
+<p>
+Iniciamos el servidor y situándonos dentro del directorio <b>.synapse</b>
+</p>
+
+<p>
+<code>cd ~/.synapse</code>
+</p>
+
+<p>
+Ejecutaremos el siguiente comando:
+</p>
+
+<p>
+<code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code>
+</p>
+
+<p>
+Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.
+</p>
+</div>
+</div>
+<div id="outline-container-org281d199" class="outline-3">
+<h3 id="org281d199">UTILIZAR EL CLIENTE RIOT</h3>
+<div class="outline-text-3" id="text-org281d199">
+
+<div class="figure">
+<p><img src="../images-blog/riot.png" alt="riot.png" />
+</p>
+</div>
+
+
+<ol class="org-ol">
+<li>Pondermos en nombre de usuario y contraseña</li>
+<li>Habilitamos opciones de servidor propietarias</li>
+<li>En servidor, ponemos <a href="https://ip:8448">https://ip:8448</a></li>
+</ol>
+<p>
+ENCONTRARSE LOS USUARIOS
+</p>
+
+<ol class="org-ol">
+<li>Creamos una sala</li>
+<li>En configuración de la sala, en <b>acceso a la Sala</b> y seleccionamos:</li>
+</ol>
+
+<p>
+“Los que saben el enlace de la sala, incluso huespedes”
+</p>
+
+<p>
+3 )Ahora en <b>Avanzado</b>, compartimos al otro usuario <b>La identificación interna de esta Sala</b>
+</p>
+
+<br>
+<p>
+Publicado por Angel el domingo 20 enero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
