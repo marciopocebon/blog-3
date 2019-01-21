@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kde Connect en Ubuntu&#x2026;</title>
+<title>GitHub en la Terminal. Comandos</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso"
+<meta name="description" content="Voy a explicar en este post, como generar el Feed del podcast de forma automática."
  />
-<meta name="keywords" content="bash, terminal, i3, kdeconnect, ubuntu" />
+<meta name="keywords" content="terminal,github" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,92 +271,69 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org4d0bb03" class="outline-2">
-<h2 id="org4d0bb03">Kde Connect en Ubuntu, Debian, Lubuntu, Mint&#x2026; y derivadas</h2>
-<div class="outline-text-2" id="text-org4d0bb03">
+<div id="outline-container-org9d5cf96" class="outline-2">
+<h2 id="org9d5cf96">GitHub en la Terminal. Comandos</h2>
+<div class="outline-text-2" id="text-org9d5cf96">
 <p>
-He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.
+Hoy he empezado a utilizar GitHub desde la Terminal. Hasta ahora lo hacia desde la propia interfaz web y he de decir que no hay ni punto
+de comparación.
 </p>
 
 <p>
-Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.
+Utilizar la terminal es muchísimo más rápido tanto el poder previsulizar el blog en local, como el subir las modificaciones una vez
+testeadas en local, a GitHub.
 </p>
 
 <p>
-Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.
+Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
+potente que esta.
 </p>
 </div>
 
-<div id="outline-container-org6303480" class="outline-3">
-<h3 id="org6303480">Instalación</h3>
-<div class="outline-text-3" id="text-org6303480">
-<ol class="org-ol">
-<li>Instalamos en nuestro Ubuntu</li>
-</ol>
-
+<div id="outline-container-org42ca272" class="outline-3">
+<h3 id="org42ca272">Iniciando</h3>
+<div class="outline-text-3" id="text-org42ca272">
 <p>
-<code>sudo apt install kdeconnect</code>
+Solo la primera vez, especificamos nuestro correo y nombre de usuario:
 </p>
 
 <p>
-Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil.
-Instala esto:
-</p>
-
-<pre class="example">
-sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
-sudo apt update
-sudo apt install kdeconnect indicator-kdeconnect
-</pre>
-
-<ol class="org-ol">
-<li>Instalamos la app en nuestro movil, tablet…</li>
-
-<li>Buscará dentro de nuestra red local los dispositivos con Kde Connect. Empareja tu dispositivo y… Ya está!! Si quieres seguir con la terminal, sigue leyendo.</li>
-
-<li>Vamos ha hacer el emparejamiento desde la Terminal. El comando <b>kdeconnect-cli - -help</b> nos mostrará todos los comandos disponibles.</li>
-
-<li>Vamos a listar dispositivos disponibles en nuestra red local desde la terminal</li>
-</ol>
-
-<p>
-<code>kdeconnect-cli -l</code>
+<code>git config --global user.email "tucorreo@gmail.com"</code>
 </p>
 
 <p>
-La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:
+<code>git config --global user.name "Tu Nombre"</code>
 </p>
-<pre class="example">
-angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
-	- Xiami A1: 35826fca13f58Gsu (reachable)
-	    1 device found  
-</pre>
+</div>
+</div>
 
-<ol class="org-ol">
-<li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
-</ol>
+<div id="outline-container-org3491d5a" class="outline-3">
+<h3 id="org3491d5a">Comandos Básicos</h3>
+<div class="outline-text-3" id="text-org3491d5a">
+<p>
+En resume, los pasos básicos para enviar archivos a una rama master de github, serian estos:
+</p>
+
+<ul class="org-ul">
+<li>Vemos el estado desde el último cambio  <code>git status</code></li>
+
+<li>Añadimos a git todos los cambios que hemos hecho en local <code>git add .</code></li>
+
+<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
+
+<li>Empujamos el archivo, ahora si, a github  <code>git push</code> o <code>git push origin master</code></li>
+</ul>
 
 <p>
-<code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code>
+Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberiamos verificar o descargar el contenido remoto de GitHub a local.
 </p>
 
-<ol class="org-ol">
-<li>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</li>
-
-<li>Ya está condectado Kde Connect!!!</li>
-</ol>
-
-<p>
-Si tienes i3 y quieres que se inicie Kde Connect por defecto, escribe estas líneas en tu archivo de configuración:
-</p>
-<pre class="example">
-# Autostart kdeconnect
-exec --no-startup-id /usr/bin/indicator-kdeconnect
-</pre>
-
+<ul class="org-ul">
+<li>Para ello escribiremos en la terminal <code>git pull origin master</code></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el miércoles 02 enero del 2019  
+Publicado por Angel el lunes 21 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -364,12 +341,9 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>

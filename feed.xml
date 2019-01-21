@@ -13,6 +13,50 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>GitHub en la Terminal. Comandos</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html</link>
+    <description>Voy a explicar en este post, como generar el Feed del podcast de forma automática.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html&gt;GitHub en la Terminal. Comandos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 21 Jan 2019 15:16 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html</guid>
+   </item>
+   <item>
+    <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</link>
+    <description>Voy a explicar en este post, como generar el Feed del podcast de forma automática.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html&gt;Crear el Feed para el podcast en tu Blog con Jekyll&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 21 Jan 2019 16:16 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</guid>
+   </item>
+   <item>
     <title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
     <link>https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html</link>
     <description>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.... 
