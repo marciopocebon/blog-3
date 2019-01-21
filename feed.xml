@@ -13,10 +13,10 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
-    <title>GitHub en la Terminal. Comandos</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html</link>
+    <title>Utilizando Git con la Terminal. GitHub</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</link>
     <description>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html&gt;GitHub en la Terminal. Comandos&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html&gt;Utilizando Git con la Terminal. GitHub&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -32,7 +32,7 @@
 
 </description>
     <pubDate>Mon, 21 Jan 2019 15:16 +0100</pubDate>
-    <guid>https://ugeek.github.io/blog/post/2019-01-21-github-en-la-terminal-comandos.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</guid>
    </item>
    <item>
     <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>

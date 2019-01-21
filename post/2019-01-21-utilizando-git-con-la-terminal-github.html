@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kde Connect en Ubuntu&#x2026;</title>
+<title>Utilizando Git con la Terminal. GitHub</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso"
+<meta name="description" content="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal"
  />
-<meta name="keywords" content="bash, terminal, i3, kdeconnect, ubuntu" />
+<meta name="keywords" content="terminal,github" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,92 +271,191 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org310c9e1" class="outline-2">
-<h2 id="org310c9e1">Kde Connect en Ubuntu, Debian, Lubuntu, Mint&#x2026; y derivadas</h2>
-<div class="outline-text-2" id="text-org310c9e1">
+<div id="outline-container-orgea3cf8a" class="outline-2">
+<h2 id="orgea3cf8a">Utilizando Git con la Terminal. GitHub</h2>
+<div class="outline-text-2" id="text-orgea3cf8a">
 <p>
-He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.
-</p>
-
-<p>
-Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.
-</p>
-
-<p>
-Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.
+Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
+potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.
 </p>
 </div>
 
-<div id="outline-container-org2c94b69" class="outline-3">
-<h3 id="org2c94b69">Instalación</h3>
-<div class="outline-text-3" id="text-org2c94b69">
-<ol class="org-ol">
-<li>Instalamos en nuestro Ubuntu</li>
-</ol>
-
+<div id="outline-container-orgd11bd5e" class="outline-3">
+<h3 id="orgd11bd5e">Instalando Git</h3>
+<div class="outline-text-3" id="text-orgd11bd5e">
 <p>
-<code>sudo apt install kdeconnect</code>
+<code>sudo apt install git</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga03d702" class="outline-3">
+<h3 id="orga03d702">Comprobar si tenemos clave pública ssh</h3>
+<div class="outline-text-3" id="text-orga03d702">
+<p>
+Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <b>~/.ssh</b> y miraremos si existe el archivo <b>*.pub</b>. 
+</p>
+</div>
+</div>
+<div id="outline-container-org1a4e3c2" class="outline-3">
+<h3 id="org1a4e3c2">Generando tu clave pública ssh</h3>
+<div class="outline-text-3" id="text-org1a4e3c2">
+<p>
+Si no existe, vamos a generarlo.
 </p>
 
 <p>
-Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil.
-Instala esto:
-</p>
-
-<pre class="example">
-sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
-sudo apt update
-sudo apt install kdeconnect indicator-kdeconnect
-</pre>
-
-<ol class="org-ol">
-<li>Instalamos la app en nuestro movil, tablet…</li>
-
-<li>Buscará dentro de nuestra red local los dispositivos con Kde Connect. Empareja tu dispositivo y… Ya está!! Si quieres seguir con la terminal, sigue leyendo.</li>
-
-<li>Vamos ha hacer el emparejamiento desde la Terminal. El comando <b>kdeconnect-cli - -help</b> nos mostrará todos los comandos disponibles.</li>
-
-<li>Vamos a listar dispositivos disponibles en nuestra red local desde la terminal</li>
-</ol>
-
-<p>
-<code>kdeconnect-cli -l</code>
+Ejecutaremos el comando:
 </p>
 
 <p>
-La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:
+<code>ssh-keygen</code>
 </p>
-<pre class="example">
-angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
-	- Xiami A1: 35826fca13f58Gsu (reachable)
-	    1 device found  
-</pre>
-
-<ol class="org-ol">
-<li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
-</ol>
 
 <p>
-<code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code>
+Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.
 </p>
-
-<ol class="org-ol">
-<li>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</li>
-
-<li>Ya está condectado Kde Connect!!!</li>
-</ol>
 
 <p>
-Si tienes i3 y quieres que se inicie Kde Connect por defecto, escribe estas líneas en tu archivo de configuración:
+Cuando termine, aparecerán un par de ficheros dentro de <b>~/.ssh/</b> se llamarán <b>id_rsa</b> y <b>id_rsa.pub</b> o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior.
 </p>
-<pre class="example">
-# Autostart kdeconnect
-exec --no-startup-id /usr/bin/indicator-kdeconnect
-</pre>
 
+<p>
+Ahora abre el fichero acabado en <b>.pub</b> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:
+</p>
+
+<p>
+<code>cat id_rsa.pub</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedfcb69" class="outline-3">
+<h3 id="orgedfcb69">Añadiendo la  clave en GitHub</h3>
+<div class="outline-text-3" id="text-orgedfcb69">
+<p>
+Haz click en tu foto de perfil de arriba a la derecha, después ve a <b>settings &gt; SSH and GPG keys &gt; New SSH key</b>. Pega la clave  y pulsa finalizar.
+</p>
+
+<p>
+A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.
+</p>
+
+<p>
+Comprobaremos la conexión con GitHub
+</p>
+
+<p>
+<code>ssh -T git@github.com</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75c84ac" class="outline-3">
+<h3 id="org75c84ac">Iniciando cuenta con GitHub</h3>
+<div class="outline-text-3" id="text-org75c84ac">
+<p>
+Solo la primera vez, especificamos nuestro correo y nombre de usuario:
+</p>
+
+<p>
+<code>git config --global user.email "tucorreo@gmail.com"</code>
+</p>
+
+<p>
+<code>git config --global user.name "Tu Nombre"</code>
+</p>
+
+<p>
+Para ver el archivo de configuración:
+</p>
+
+<p>
+<code>cat ~/.gitconfig</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2b73c2" class="outline-3">
+<h3 id="orge2b73c2">Clonar Repositorio en local</h3>
+<div class="outline-text-3" id="text-orge2b73c2">
+<p>
+Ves al repositorio de GitHub y haz click en <b>Clone or download</b> en la zona de la derecha, te saldrá <b>Clone with HTTPS o Clone with SSH GitHub</b>
+</p>
+
+<p>
+Haz click sobre <b>Use SSH</b> y después pulsa sobre el botón de copiar que hay debajo.
+</p>
+
+<p>
+Ahora vamos a la terminal y pegamos la url con <b>git clone</b> para clonar el repositorio:
+</p>
+
+<p>
+<code>git clone git@github.com:ugeek/ugeek.github.io.git</code>
+</p>
+
+<p>
+Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org32a55fe" class="outline-3">
+<h3 id="org32a55fe">Comandos Básicos</h3>
+<div class="outline-text-3" id="text-org32a55fe">
+<p>
+Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:
+</p>
+
+<ul class="org-ul">
+<li>Ver estado desde el último cambio  <code>git status</code></li>
+<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
+<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
+<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
+<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
+</ul>
+
+
+<p>
+Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberíamos verificar o descargar el contenido remoto de GitHub a local.
+</p>
+<ul class="org-ul">
+<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8132f26" class="outline-3">
+<h3 id="org8132f26">Resumen</h3>
+<div class="outline-text-3" id="text-org8132f26">
+<p>
+Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <b>subir</b> y <b>bajar</b>, los archivos de una carpeta al repositorio remoto.
+</p>
+
+<p>
+Todo se resume en:
+</p>
+
+<p>
+Subir
+</p>
+
+<p>
+<code>git add . ; git commit -m "comentario" ; git push</code>
+</p>
+
+<p>
+Bajar
+</p>
+
+<p>
+<code>git pull</code>
+</p>
 <br>
 <p>
-Publicado por Angel el miércoles 02 enero del 2019  
+Publicado por Angel el lunes 21 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -364,12 +463,9 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
