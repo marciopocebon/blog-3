@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>GitHub en la Terminal. Comandos</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Voy a explicar en este post, como generar el Feed del podcast de forma automática."
+<meta name="description" content="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal"
  />
 <meta name="keywords" content="terminal,github" />
 <style type="text/css">
@@ -271,28 +271,86 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org9d5cf96" class="outline-2">
-<h2 id="org9d5cf96">GitHub en la Terminal. Comandos</h2>
-<div class="outline-text-2" id="text-org9d5cf96">
-<p>
-Hoy he empezado a utilizar GitHub desde la Terminal. Hasta ahora lo hacia desde la propia interfaz web y he de decir que no hay ni punto
-de comparación.
-</p>
-
-<p>
-Utilizar la terminal es muchísimo más rápido tanto el poder previsulizar el blog en local, como el subir las modificaciones una vez
-testeadas en local, a GitHub.
-</p>
-
+<div id="outline-container-org5cccd5c" class="outline-2">
+<h2 id="org5cccd5c">Utilizando Git con la Terminal. GitHub</h2>
+<div class="outline-text-2" id="text-org5cccd5c">
 <p>
 Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
-potente que esta.
+potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.
 </p>
 </div>
 
-<div id="outline-container-org42ca272" class="outline-3">
-<h3 id="org42ca272">Iniciando</h3>
-<div class="outline-text-3" id="text-org42ca272">
+<div id="outline-container-orgace3f24" class="outline-3">
+<h3 id="orgace3f24">Instalando Git</h3>
+<div class="outline-text-3" id="text-orgace3f24">
+<p>
+<code>sudo apt install git</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e7a0a6" class="outline-3">
+<h3 id="org1e7a0a6">Comprobar si tenemos clave pública ssh</h3>
+<div class="outline-text-3" id="text-org1e7a0a6">
+<p>
+Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <b>~/.ssh</b> y miraremos si existe el archivo <b>*.pub</b>. 
+</p>
+</div>
+</div>
+<div id="outline-container-org0b95c57" class="outline-3">
+<h3 id="org0b95c57">Generando tu clave pública ssh</h3>
+<div class="outline-text-3" id="text-org0b95c57">
+<p>
+Si no existe, vamos a generarlo.
+</p>
+
+<p>
+Ejecutaremos el comando:
+</p>
+
+<p>
+<code>ssh-keygen</code>
+</p>
+
+<p>
+Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.
+</p>
+
+<p>
+Cuando termine, aparecerán un par de ficheros dentro de <b>~/.ssh/</b> se llamarán <b>id_rsa</b> y <b>id_rsa.pub</b> o adquirán el nombre que has elegido si has puesto alguno en el paso anterior.
+</p>
+
+<p>
+Ahora abre el fichero acabado en <b>.pub</b> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:
+</p>
+
+<p>
+<code>cat id_rsa.pub</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf62cf0" class="outline-3">
+<h3 id="orgaf62cf0">Añadiendo la  clave en GitHub</h3>
+<div class="outline-text-3" id="text-orgaf62cf0">
+<p>
+Haz click en tu foto de perfil de arriba a la derecha, después ve a <b>settings &gt; SSH and GPG keys &gt; New SSH key</b>. Pega la clave  y pulsa finalizar.
+</p>
+
+<p>
+A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.
+</p>
+
+<p>
+Comprobaremos la conexión con GitHub
+<code>ssh -T git@github.com</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc45725a" class="outline-3">
+<h3 id="orgc45725a">Iniciando cuenta con GitHub</h3>
+<div class="outline-text-3" id="text-orgc45725a">
 <p>
 Solo la primera vez, especificamos nuestro correo y nombre de usuario:
 </p>
@@ -304,33 +362,91 @@ Solo la primera vez, especificamos nuestro correo y nombre de usuario:
 <p>
 <code>git config --global user.name "Tu Nombre"</code>
 </p>
+
+<p>
+Para ver el archivo de configuración:
+<code>cat ~/.gitconfig</code>
+</p>
 </div>
 </div>
 
-<div id="outline-container-org3491d5a" class="outline-3">
-<h3 id="org3491d5a">Comandos Básicos</h3>
-<div class="outline-text-3" id="text-org3491d5a">
+<div id="outline-container-org2a6be15" class="outline-3">
+<h3 id="org2a6be15">Clonar Repositorio en local</h3>
+<div class="outline-text-3" id="text-org2a6be15">
 <p>
-En resume, los pasos básicos para enviar archivos a una rama master de github, serian estos:
+Ves al repositorio de GitHub y haz click en <b>Clone or download</b> en la zona de la derecha, te saldrá <b>Clone with HTTPS o Clone with SSH GitHub</b>
+</p>
+
+<p>
+Haz click sobre <b>Use SSH</b> y después pulsa sobre el botón de copiar que hay debajo.
+</p>
+
+<p>
+Ahora vamos a la terminal y pegamos la url con <b>git clone</b> para clonar el repositorio:
+</p>
+
+<p>
+<code>git clone git@github.com:ugeek/ugeek.github.io.git</code>
+</p>
+
+<p>
+Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org2998b9a" class="outline-3">
+<h3 id="org2998b9a">Comandos Básicos</h3>
+<div class="outline-text-3" id="text-org2998b9a">
+<p>
+Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:
 </p>
 
 <ul class="org-ul">
-<li>Vemos el estado desde el último cambio  <code>git status</code></li>
-
-<li>Añadimos a git todos los cambios que hemos hecho en local <code>git add .</code></li>
-
+<li>Ver estado desde el último cambio  <code>git status</code></li>
+<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
+<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
 <li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
-
-<li>Empujamos el archivo, ahora si, a github  <code>git push</code> o <code>git push origin master</code></li>
+<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
 </ul>
+
 
 <p>
 Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberiamos verificar o descargar el contenido remoto de GitHub a local.
 </p>
-
 <ul class="org-ul">
-<li>Para ello escribiremos en la terminal <code>git pull origin master</code></li>
+<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-org9e16efc" class="outline-3">
+<h3 id="org9e16efc">Resumen</h3>
+<div class="outline-text-3" id="text-org9e16efc">
+<p>
+Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <b>subir</b> y <b>bajar</b>, los archivos de una carpeta al repositorio remoto.
+</p>
+
+<p>
+Todo se resume en:
+</p>
+
+<p>
+Subir
+</p>
+
+<p>
+<code>git add . ; git commit -m "comentario" ; git push</code>
+</p>
+
+<p>
+Bajar
+</p>
+
+<p>
+<code>git pull</code>
+</p>
 <br>
 <p>
 Publicado por Angel el lunes 21 enero del 2019  
