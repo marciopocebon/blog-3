@@ -267,13 +267,13 @@ for the JavaScript code in this tag.
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org2cabfcb" class="outline-2">
-<h2 id="org2cabfcb">Antergos. Comandos para terminal y derivadas de Arch Linux</h2>
-<div class="outline-text-2" id="text-org2cabfcb">
+<div id="outline-container-orge0a8ac7" class="outline-2">
+<h2 id="orge0a8ac7">Antergos. Comandos para terminal y derivadas de Arch Linux</h2>
+<div class="outline-text-2" id="text-orge0a8ac7">
 <p>
 Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el
 Sistema Operativo, instalar y demás…
@@ -284,32 +284,32 @@ Aquí iré añadiendo periodicamente comandos para ir conociendolos.
 </p>
 </div>
 
-<div id="outline-container-org13512af" class="outline-3">
-<h3 id="org13512af">pacman</h3>
-<div class="outline-text-3" id="text-org13512af">
+<div id="outline-container-org4798804" class="outline-3">
+<h3 id="org4798804">pacman</h3>
+<div class="outline-text-3" id="text-org4798804">
 <p>
 Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.
 </p>
 </div>
-<div id="outline-container-orgabdd772" class="outline-4">
-<h4 id="orgabdd772">Actualizar el Sistema Operativo y repositorios</h4>
-<div class="outline-text-4" id="text-orgabdd772">
+<div id="outline-container-org15620bd" class="outline-4">
+<h4 id="org15620bd">Actualizar el Sistema Operativo y repositorios</h4>
+<div class="outline-text-4" id="text-org15620bd">
 <p>
 <code>sudo pacman -Syyuu</code>   
 </p>
 </div>
 </div>
-<div id="outline-container-org61c62dc" class="outline-4">
-<h4 id="org61c62dc">Buscar en los repositorios (usaremos de ejem: gimp)</h4>
-<div class="outline-text-4" id="text-org61c62dc">
+<div id="outline-container-orgccd8913" class="outline-4">
+<h4 id="orgccd8913">Buscar en los repositorios (usaremos de ejem: gimp)</h4>
+<div class="outline-text-4" id="text-orgccd8913">
 <p>
 <code>sudo pacman -Ss gimp</code>
 </p>
 </div>
 </div>
-<div id="outline-container-org25a7b70" class="outline-4">
-<h4 id="org25a7b70">Instalar aplicaciones</h4>
-<div class="outline-text-4" id="text-org25a7b70">
+<div id="outline-container-orgc64339e" class="outline-4">
+<h4 id="orgc64339e">Instalar aplicaciones</h4>
+<div class="outline-text-4" id="text-orgc64339e">
 <p>
 <code>sudo pacman -S gimp</code>
 </p>
@@ -317,9 +317,9 @@ Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.
 </div>
 </div>
 
-<div id="outline-container-orgf32c893" class="outline-3">
-<h3 id="orgf32c893">yaourt</h3>
-<div class="outline-text-3" id="text-orgf32c893">
+<div id="outline-container-orge1a97ad" class="outline-3">
+<h3 id="orge1a97ad">yaourt</h3>
+<div class="outline-text-3" id="text-orge1a97ad">
 <p>
 Las aplicaciones que no esten en los repositorios oficiales de Arch, estan en AUR. AUR (Arch User Repository) es el lugar donde la
 comunidad de Arch Linux puede subir los PKGBUILD de las aplicaciones, bibliotecas, etc.,
@@ -330,27 +330,27 @@ Para instalar desde Aur utilizaremos yaourt.
 </p>
 </div>
 
-<div id="outline-container-orgfb8f90e" class="outline-4">
-<h4 id="orgfb8f90e">Actualizar los repositorios</h4>
-<div class="outline-text-4" id="text-orgfb8f90e">
+<div id="outline-container-org5b4f059" class="outline-4">
+<h4 id="org5b4f059">Actualizar los repositorios</h4>
+<div class="outline-text-4" id="text-org5b4f059">
 <p>
 <code>yaourt -Syu</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf2dcc43" class="outline-4">
-<h4 id="orgf2dcc43">Buscar en yaourt (usaremos de ejem: utext)</h4>
-<div class="outline-text-4" id="text-orgf2dcc43">
+<div id="outline-container-orgdaed246" class="outline-4">
+<h4 id="orgdaed246">Buscar en yaourt (usaremos de ejem: utext)</h4>
+<div class="outline-text-4" id="text-orgdaed246">
 <p>
 <code>yaourt -Ss utext</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org87845c1" class="outline-4">
-<h4 id="org87845c1">Instalar aplicaciones que no encontremos en Pacman (como utext)</h4>
-<div class="outline-text-4" id="text-org87845c1">
+<div id="outline-container-org71d3f8f" class="outline-4">
+<h4 id="org71d3f8f">Instalar aplicaciones que no encontremos en Pacman (como utext)</h4>
+<div class="outline-text-4" id="text-org71d3f8f">
 <p>
 <code>yaourt -S utext</code>
 </p>
@@ -359,13 +359,13 @@ Para instalar desde Aur utilizaremos yaourt.
 </div>
 
 
-<div id="outline-container-org17b8878" class="outline-3">
-<h3 id="org17b8878">Guía de comandos básicos de Pacman</h3>
-<div class="outline-text-3" id="text-org17b8878">
+<div id="outline-container-orgc2cc26f" class="outline-3">
+<h3 id="orgc2cc26f">Guía de comandos básicos de Pacman</h3>
+<div class="outline-text-3" id="text-orgc2cc26f">
 </div>
-<div id="outline-container-org427fd99" class="outline-4">
-<h4 id="org427fd99">Instalar paquetes</h4>
-<div class="outline-text-4" id="text-org427fd99">
+<div id="outline-container-org6c035c8" class="outline-4">
+<h4 id="org6c035c8">Instalar paquetes</h4>
+<div class="outline-text-4" id="text-org6c035c8">
 <ul class="org-ul">
 <li><code>pacman -S “paquete”</code>  Instala un paquete.</li>
 <li><code>pacman -Sy “paquete”</code> Sincroniza repositorios e instala el paquete.</li>
@@ -373,9 +373,9 @@ Para instalar desde Aur utilizaremos yaourt.
 </div>
 </div>
 
-<div id="outline-container-orgd5e5504" class="outline-4">
-<h4 id="orgd5e5504">Actualizar paquetes</h4>
-<div class="outline-text-4" id="text-orgd5e5504">
+<div id="outline-container-orga24b7eb" class="outline-4">
+<h4 id="orga24b7eb">Actualizar paquetes</h4>
+<div class="outline-text-4" id="text-orga24b7eb">
 <ul class="org-ul">
 <li><code>pacman -Sy</code>  Sincroniza repositorios.</li>
 <li><code>pacman -Syy</code>  Fuerza la sincronización de repositorios incluso para paquetes que parecen actualizados.</li>
@@ -386,9 +386,9 @@ Para instalar desde Aur utilizaremos yaourt.
 </div>
 </div>
 
-<div id="outline-container-orgf5b3f9f" class="outline-4">
-<h4 id="orgf5b3f9f">Buscar paquetes</h4>
-<div class="outline-text-4" id="text-orgf5b3f9f">
+<div id="outline-container-orgc67d1e0" class="outline-4">
+<h4 id="orgc67d1e0">Buscar paquetes</h4>
+<div class="outline-text-4" id="text-orgc67d1e0">
 <ul class="org-ul">
 <li><code>pacman -Ss “paquete”</code>  Busca un paquete.</li>
 <li><code>pacman -Si “paquete”</code>  Muestra información detallada de un paquete.</li>
@@ -400,9 +400,9 @@ Para instalar desde Aur utilizaremos yaourt.
 </div>
 </div>
 
-<div id="outline-container-org05490e9" class="outline-4">
-<h4 id="org05490e9">Eliminar paquetes</h4>
-<div class="outline-text-4" id="text-org05490e9">
+<div id="outline-container-org67c56d3" class="outline-4">
+<h4 id="org67c56d3">Eliminar paquetes</h4>
+<div class="outline-text-4" id="text-org67c56d3">
 <ul class="org-ul">
 <li><code>pacman -R “paquete”</code>  Borra paquete sin sus dependencias.</li>
 <li><code>pacman -Rs “paquete”</code>  Borra paquete y sus dependencias no utilizadas.</li>
@@ -416,9 +416,9 @@ Fuente: sobrebits.com
 </div>
 </div>
 
-<div id="outline-container-org60c6805" class="outline-3">
-<h3 id="org60c6805">Aplicaciones Imprescindibles</h3>
-<div class="outline-text-3" id="text-org60c6805">
+<div id="outline-container-org98ca6d5" class="outline-3">
+<h3 id="org98ca6d5">Aplicaciones Imprescindibles</h3>
+<div class="outline-text-3" id="text-org98ca6d5">
 <p>
 Navegador Chrome
 </p>

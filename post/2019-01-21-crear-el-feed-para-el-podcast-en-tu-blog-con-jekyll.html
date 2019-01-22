@@ -267,21 +267,21 @@ for the JavaScript code in this tag.
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a ./href="../tag.html"><tt>Tags</tt></a></div>
+<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org0244599" class="outline-2">
-<h2 id="org0244599">Crear el Feed para el podcast en tu Blog con Jekyll</h2>
-<div class="outline-text-2" id="text-org0244599">
+<div id="outline-container-org8f88950" class="outline-2">
+<h2 id="org8f88950">Crear el Feed para el podcast en tu Blog con Jekyll</h2>
+<div class="outline-text-2" id="text-org8f88950">
 <p>
 Voy a explicar en este post, como generar el Feed del podcast de forma automática.
 </p>
 </div>
 
-<div id="outline-container-orgd84d4a1" class="outline-3">
-<h3 id="orgd84d4a1">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-orgd84d4a1">
+<div id="outline-container-org2ec6141" class="outline-3">
+<h3 id="org2ec6141">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h3>
+<div class="outline-text-3" id="text-org2ec6141">
 <pre class="example">
 ---
 layout: null
@@ -362,9 +362,9 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 </div>
 </div>
 
-<div id="outline-container-org1c409b6" class="outline-3">
-<h3 id="org1c409b6">Añadimos en el archivo _config.yml, el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-org1c409b6">
+<div id="outline-container-org24c740e" class="outline-3">
+<h3 id="org24c740e">Añadimos en el archivo _config.yml, el siguiente contenido:</h3>
+<div class="outline-text-3" id="text-org24c740e">
 <pre class="example">
 # Podcast Feed Settings
 podcast_url: https://ugeek.github.io
@@ -383,9 +383,9 @@ podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd21d9a4" class="outline-3">
-<h3 id="orgd21d9a4">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h3>
-<div class="outline-text-3" id="text-orgd21d9a4">
+<div id="outline-container-org75876d6" class="outline-3">
+<h3 id="org75876d6">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h3>
+<div class="outline-text-3" id="text-org75876d6">
 <pre class="example">
 ---
 layout: post
