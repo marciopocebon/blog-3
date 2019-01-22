@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Utilizando Git con la Terminal. GitHub</title>
+<title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal"
+<meta name="description" content="Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web"
  />
-<meta name="keywords" content="terminal,github" />
+<meta name="keywords" content="markdown, servidor" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,191 +271,81 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orga62f1d6" class="outline-2">
-<h2 id="orga62f1d6">Utilizando Git con la Terminal. GitHub</h2>
-<div class="outline-text-2" id="text-orga62f1d6">
+<div id="outline-container-orgb970595" class="outline-2">
+<h2 id="orgb970595">Visualiza tus Notas Markdown Versión Web con MkDocs</h2>
+<div class="outline-text-2" id="text-orgb970595">
 <p>
-Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y
-potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.
+Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.
 </p>
 </div>
 
-<div id="outline-container-orga670028" class="outline-3">
-<h3 id="orga670028">Instalando Git</h3>
-<div class="outline-text-3" id="text-orga670028">
+<div id="outline-container-org721a922" class="outline-3">
+<h3 id="org721a922">Instalación</h3>
+<div class="outline-text-3" id="text-org721a922">
 <p>
-<code>sudo apt install git</code>
+Instalaremos en debian, ubuntu,… con:
 </p>
+
+<p>
+<code>sudo apt install mkdocs</code>
+</p>
+
+<p>
+También podemos hacerlo por Python así:
+</p>
+
+<p>
+<code>sudo pip install mkdocs</code>
+</p>
+
+<p>
+Ahora vamos a crear un nuevo proyecto, una carpeta donde depositaremos todas nuestras notas para después verlas en la web.
+</p>
+<pre class="example">
+mkdocs new my-project
+cd my-project
+</pre>
 </div>
 </div>
-
-<div id="outline-container-orge76e411" class="outline-3">
-<h3 id="orge76e411">Comprobar si tenemos clave pública ssh</h3>
-<div class="outline-text-3" id="text-orge76e411">
+<div id="outline-container-orgd838b85" class="outline-3">
+<h3 id="orgd838b85">Iniciamos el servidor:</h3>
+<div class="outline-text-3" id="text-orgd838b85">
 <p>
-Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <b>~/.ssh</b> y miraremos si existe el archivo <b>*.pub</b>. 
-</p>
-</div>
-</div>
-<div id="outline-container-org8a1dad6" class="outline-3">
-<h3 id="org8a1dad6">Generando tu clave pública ssh</h3>
-<div class="outline-text-3" id="text-org8a1dad6">
-<p>
-Si no existe, vamos a generarlo.
+<code>mkdocs serve</code>
 </p>
 
 <p>
-Ejecutaremos el comando:
+Para acceder remotamente, desde cualquier dispositivo dentro de nuestra red local, ejecutaremos dentro de la carpeta anteriormente creada:
 </p>
 
 <p>
-<code>ssh-keygen</code>
+<code>mkdocs serve -a 0.0.0.0:8000</code>
 </p>
 
 <p>
-Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.
+Ahora nos conectaremos desde cualquier dispositivo a: <a href="http://ip:8000">http://ip:8000</a>
 </p>
 
 <p>
-Cuando termine, aparecerán un par de ficheros dentro de <b>~/.ssh/</b> se llamarán <b>id_rsa</b> y <b>id_rsa.pub</b> o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior.
+Si quieres publicarlo en tu servidor web de un modo permanente, con un comando podremos generar un sitio estático a partir de nuestro
+MkDocs.
 </p>
 
 <p>
-Ahora abre el fichero acabado en <b>.pub</b> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:
+Nos situamos en la raíz de la carpeta, donde arrancamos el servidor y ejecutamos:
 </p>
 
 <p>
-<code>cat id_rsa.pub</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org7ef2613" class="outline-3">
-<h3 id="org7ef2613">Añadiendo la  clave en GitHub</h3>
-<div class="outline-text-3" id="text-org7ef2613">
-<p>
-Haz click en tu foto de perfil de arriba a la derecha, después ve a <b>settings &gt; SSH and GPG keys &gt; New SSH key</b>. Pega la clave  y pulsa finalizar.
+<code>mkdocs build</code>
 </p>
 
 <p>
-A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.
+Esto creará una carpeta llamada site, que contendrá todos los archivos de nuestra web estática.
 </p>
 
-<p>
-Comprobaremos la conexión con GitHub
-</p>
-
-<p>
-<code>ssh -T git@github.com</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org66b936d" class="outline-3">
-<h3 id="org66b936d">Iniciando cuenta con GitHub</h3>
-<div class="outline-text-3" id="text-org66b936d">
-<p>
-Solo la primera vez, especificamos nuestro correo y nombre de usuario:
-</p>
-
-<p>
-<code>git config --global user.email "tucorreo@gmail.com"</code>
-</p>
-
-<p>
-<code>git config --global user.name "Tu Nombre"</code>
-</p>
-
-<p>
-Para ver el archivo de configuración:
-</p>
-
-<p>
-<code>cat ~/.gitconfig</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge243bb7" class="outline-3">
-<h3 id="orge243bb7">Clonar Repositorio en local</h3>
-<div class="outline-text-3" id="text-orge243bb7">
-<p>
-Ves al repositorio de GitHub y haz click en <b>Clone or download</b> en la zona de la derecha, te saldrá <b>Clone with HTTPS o Clone with SSH GitHub</b>
-</p>
-
-<p>
-Haz click sobre <b>Use SSH</b> y después pulsa sobre el botón de copiar que hay debajo.
-</p>
-
-<p>
-Ahora vamos a la terminal y pegamos la url con <b>git clone</b> para clonar el repositorio:
-</p>
-
-<p>
-<code>git clone git@github.com:ugeek/ugeek.github.io.git</code>
-</p>
-
-<p>
-Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org0716c97" class="outline-3">
-<h3 id="org0716c97">Comandos Básicos</h3>
-<div class="outline-text-3" id="text-org0716c97">
-<p>
-Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:
-</p>
-
-<ul class="org-ul">
-<li>Ver estado desde el último cambio  <code>git status</code></li>
-<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
-<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
-<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
-<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
-</ul>
-
-
-<p>
-Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberíamos verificar o descargar el contenido remoto de GitHub a local.
-</p>
-<ul class="org-ul">
-<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orga4a52f1" class="outline-3">
-<h3 id="orga4a52f1">Resumen</h3>
-<div class="outline-text-3" id="text-orga4a52f1">
-<p>
-Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <b>subir</b> y <b>bajar</b>, los archivos de una carpeta al repositorio remoto.
-</p>
-
-<p>
-Todo se resume en:
-</p>
-
-<p>
-Subir
-</p>
-
-<p>
-<code>git add . ; git commit -m "comentario" ; git push</code>
-</p>
-
-<p>
-Bajar
-</p>
-
-<p>
-<code>git pull</code>
-</p>
 <br>
 <p>
-Publicado por Angel el lunes 21 enero del 2019  
+Publicado por Angel el martes 22 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -463,9 +353,8 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
