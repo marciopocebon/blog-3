@@ -13,10 +13,10 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
-    <title>Utiliza paquetes Snap</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html</link>
+    <title>Paquetes Snap</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</link>
     <description>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html&gt;Utiliza paquetes Snap&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html&gt;Paquetes Snap&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -32,7 +32,7 @@
 
 </description>
     <pubDate>Thu, 24 Jan 2019 21:30 +0100</pubDate>
-    <guid>https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</guid>
    </item>
    <item>
     <title>Utilizando Git con la Terminal. GitHub</title>

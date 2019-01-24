@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kde Connect en Ubuntu&#x2026;</title>
+<title>Paquetes Snap</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso"
+<meta name="description" content="Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones."
  />
-<meta name="keywords" content="bash, terminal, i3, kdeconnect, ubuntu" />
+<meta name="keywords" content="paquetes," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,106 +271,143 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgaea1b21" class="outline-2">
-<h2 id="orgaea1b21">Kde Connect en Ubuntu, Debian, Lubuntu, Mint&#x2026; y derivadas</h2>
-<div class="outline-text-2" id="text-orgaea1b21">
+<div id="outline-container-org3476cce" class="outline-2">
+<h2 id="org3476cce">Paquetes Snap</h2>
+<div class="outline-text-2" id="text-org3476cce">
 <p>
-He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.
-</p>
-
-<p>
-Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.
-</p>
-
-<p>
-Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.
+Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. 
 </p>
 </div>
 
-<div id="outline-container-orgbe1f8ae" class="outline-3">
-<h3 id="orgbe1f8ae">Instalación</h3>
-<div class="outline-text-3" id="text-orgbe1f8ae">
-<ol class="org-ol">
-<li>Instalamos en nuestro Ubuntu</li>
-</ol>
-
+<div id="outline-container-orgfc5ba0c" class="outline-3">
+<h3 id="orgfc5ba0c">Tienda de aplicaciones</h3>
+<div class="outline-text-3" id="text-orgfc5ba0c">
 <p>
-<code>sudo apt install kdeconnect</code>
+El amplio catalogo de snaps, los encontraras en una web gestionada por Canonical.
+</p>
+<ul class="org-ul">
+<li><a href="https://snapcraft.io/store">https://snapcraft.io/store</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb2db584" class="outline-3">
+<h3 id="orgb2db584">Instalación de snap, si no está en tu distro derivada de debian</h3>
+<div class="outline-text-3" id="text-orgb2db584">
+<p>
+<code>sudo apt install snapd</code>
 </p>
 
 <p>
-Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil.
-Instala esto:
+Para otras distribuciones, visita <a href="https://snapcraft.io/">https://snapcraft.io/</a>
 </p>
-
-<pre class="example">
-sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
-sudo apt update
-sudo apt install kdeconnect indicator-kdeconnect
-</pre>
-
-<ol class="org-ol">
-<li>Instalamos la app en nuestro movil, tablet…</li>
-
-<li>Buscará dentro de nuestra red local los dispositivos con Kde Connect. Empareja tu dispositivo y… Ya está!! Si quieres seguir con la terminal, sigue leyendo.</li>
-
-<li>Vamos ha hacer el emparejamiento desde la Terminal. El comando <b>kdeconnect-cli - -help</b> nos mostrará todos los comandos disponibles.</li>
-
-<li>Vamos a listar dispositivos disponibles en nuestra red local desde la terminal</li>
-</ol>
-
+</div>
+</div>
+<div id="outline-container-org9e76b6a" class="outline-3">
+<h3 id="org9e76b6a">Ubiación de los paquetes snap en nuestro sistema</h3>
+<div class="outline-text-3" id="text-org9e76b6a">
 <p>
-<code>kdeconnect-cli -l</code>
+Una vez instalado los paquetes, estos van a la ubicación <b>/snap/bin/nombre_de_paquete</b>. Podemos conocer la ubicación con:
 </p>
 
 <p>
-La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:
+<code>which paquete</code>
 </p>
-<pre class="example">
-angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
-	- Xiami A1: 35826fca13f58Gsu (reachable)
-	    1 device found  
-</pre>
-
-<ol class="org-ol">
-<li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
-</ol>
 
 <p>
-<code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code>
+También creará una carpeta llamada snap en el $HOME de nuestro usuario <b><i>home/usuario/snap</i></b>, donde depositará snap los archivos de configuración de los paquetes.
 </p>
+</div>
+</div>
+<div id="outline-container-orgfca166b" class="outline-3">
+<h3 id="orgfca166b">Tabla de comandos básicos snap</h3>
+<div class="outline-text-3" id="text-orgfca166b">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<ol class="org-ol">
-<li>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</li>
 
-<li>Ya está condectado Kde Connect!!!</li>
-</ol>
+<colgroup>
+<col  class="org-left" />
 
-<p>
-Si tienes i3 y quieres que se inicie Kde Connect por defecto, escribe estas líneas en tu archivo de configuración:
-</p>
-<pre class="example">
-# Autostart kdeconnect
-exec --no-startup-id /usr/bin/indicator-kdeconnect
-</pre>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Utilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>sudo snap refresh</code></td>
+<td class="org-left">Actualizar todos los paquetes</td>
+</tr>
 
+<tr>
+<td class="org-left"><code>sudo snap refresh paquete</code></td>
+<td class="org-left">Actualizar un determinado paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap list</code></td>
+<td class="org-left">Listar los paquetes instalados</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap search paquete</code> o <code>snap find paquete</code></td>
+<td class="org-left">Buscar Paquetes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sudo snap install paquete</code></td>
+<td class="org-left">Instalar paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sudo snap remove paquete</code></td>
+<td class="org-left">Desinstalar paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap info paquete</code></td>
+<td class="org-left">Información del paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap disable paquete</code></td>
+<td class="org-left">Deshabilitar un servicio</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap enable paquete</code></td>
+<td class="org-left">Habilitar</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap version</code></td>
+<td class="org-left">Conocer la versión de snap</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap help</code></td>
+<td class="org-left">Ayuda</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul class="org-ul">
+<li>Desde mi raspberry, no he podido actualizar con <b>snap refresh</b> y he tenido que utilizar <b>snap refresh syncthing,</b> en el caso de la versión 1.0 de Syncthing.</li>
+<li>Con <b>snap info paquete</b> nos aparece toda la información de este paquete,así como las actualizaciones que ha ido teniendo este.</li>
+<li>Utilizar la instrucción <b>disable</b>, deshabilitará por completo el paquete, no solo lo detendrá, sino que lo dejará inaccesible para el sistema. Como si no estuviera instalado.</li>
+</ul>
 <br>
 <p>
-Publicado por Angel el miércoles 02 enero del 2019  
+Publicado por Angel el jueves 24 enero del 2019  
 </p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
-</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>
