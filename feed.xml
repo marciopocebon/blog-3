@@ -13,6 +13,28 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Utiliza paquetes Snap</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html</link>
+    <description>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html&gt;Utiliza paquetes Snap&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 24 Jan 2019 21:30 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-24-utiliza-paquetes-snap.html</guid>
+   </item>
+   <item>
     <title>Utilizando Git con la Terminal. GitHub</title>
     <link>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</link>
     <description>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal... 

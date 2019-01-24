@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
+<title>Utiliza paquetes Snap</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc"
+<meta name="description" content="Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones."
  />
-<meta name="keywords" content="emacs,pandoc,orgmode,markdown" />
+<meta name="keywords" content="paquetes," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,59 +271,145 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org776e702" class="outline-2">
-<h2 id="org776e702">Convertir de Markdown a Org Mode gracias a Pandoc</h2>
-<div class="outline-text-2" id="text-org776e702">
+<div id="outline-container-orga955872" class="outline-2">
+<h2 id="orga955872">Utiliza paquetes Snap</h2>
+<div class="outline-text-2" id="text-orga955872">
 <p>
-Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:
+Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. 
+</p>
+</div>
+
+<div id="outline-container-org79c9398" class="outline-3">
+<h3 id="org79c9398">Tienda de aplicaciones</h3>
+<div class="outline-text-3" id="text-org79c9398">
+<p>
+El amplio catalogo de snaps, los encontraras en una web gestionada por Canonical.
+</p>
+<ul class="org-ul">
+<li><a href="https://snapcraft.io/store">https://snapcraft.io/store</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76c5664" class="outline-3">
+<h3 id="org76c5664">Instalación de snap, si no está en tu distro derivada de debian</h3>
+<div class="outline-text-3" id="text-org76c5664">
+<p>
+<code>sudo apt install snapd</code>
 </p>
 
 <p>
-<code>sudo apt install pandoc</code>
+Para otras distribuciones, visita <a href="https://snapcraft.io/">https://snapcraft.io/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6ac43d" class="outline-3">
+<h3 id="orgf6ac43d">Ubiación de los paquetes snap en nuestro sistema</h3>
+<div class="outline-text-3" id="text-orgf6ac43d">
+<p>
+Una vez instalado los paquetes, estos van a la ubicación <b>/snap/bin/nombre_de_paquete</b>. Podemos conocer la ubicación con:
 </p>
 
 <p>
-Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.
-</p>
-
-<ol class="org-ol">
-<li>Markdown a Org Mode. Ejecutamos este comando en la terminal.</li>
-</ol>
-
-<p>
-<code>pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md</code>
-</p>
-
-<ol class="org-ol">
-<li>Muchos archivos Markdown a un único Org Mode.</li>
-</ol>
-
-<p>
-Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:
+<code>which paquete</code>
 </p>
 
 <p>
-<code>find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;</code>
+También creará una carpeta llamada snap en el $HOME de nuestro usuario <b><i>home/usuario/snap</i></b>, donde depositará snap los archivos de configuración de los paquetes.
 </p>
+</div>
+</div>
+<div id="outline-container-orge63bb36" class="outline-3">
+<h3 id="orge63bb36">Tabla de comandos básicos snap</h3>
+<div class="outline-text-3" id="text-orge63bb36">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<p>
-Recordar verificar que la conversión se ha hecho correctamente.
-</p>
 
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Utilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>sudo snap refresh</code></td>
+<td class="org-left">Actualizar todos los paquetes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sudo snap refresh paquete</code></td>
+<td class="org-left">Actualizar un determinado paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap list</code></td>
+<td class="org-left">Listar los paquetes instalados</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap search paquete</code> o <code>snap find paquete</code></td>
+<td class="org-left">Buscar Paquetes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sudo snap install paquete</code></td>
+<td class="org-left">Instalar paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sudo snap remove paquete</code></td>
+<td class="org-left">Desinstalar paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap info paquete</code></td>
+<td class="org-left">Información del paquete</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap disable paquete</code></td>
+<td class="org-left">Deshabilitar un servicio</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap enable paquete</code></td>
+<td class="org-left">Habilitar</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap version</code></td>
+<td class="org-left">Conocer la versión de snap</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>snap help</code></td>
+<td class="org-left">Ayuda</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul class="org-ul">
+<li>Desde mi raspberry, no he podido actualizar con <b>snap refresh</b> y he tenido que utilizar <b>snap refresh syncthing,</b> en el caso de la versión 1.0 de Syncthing.</li>
+<li>Con <b>snap info paquete</b> nos aparece toda la información de este paquete,así como las actualizaciones que ha ido teniendo este.</li>
+<li>Utilizar la instrucción <b>disable</b>, deshabilitará por completo el paquete, no solo lo detendrá, sino que lo dejará inaccesible para el sistema. Como si no estuviera instalado.</li>
+</ul>
 <br>
 <p>
-Publicado por Angel el viernes 28 diciembre del 2018 
+Publicado por Angel el jueves 24 enero del 2019  
 </p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
-</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
