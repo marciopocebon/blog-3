@@ -13,6 +13,28 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Castero. Podcatcher ligero para Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</link>
+    <description>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html&gt;Castero. Podcatcher ligero para Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 26 Jan 2019 14:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</guid>
+   </item>
+   <item>
     <title>Paquetes Snap</title>
     <link>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</link>
     <description>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ... 

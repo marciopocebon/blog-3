@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
+<title>Castero. Podcatcher  ligero para Terminal</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web."
+<meta name="description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal."
  />
-<meta name="keywords" content="servidor,raspberry,markdown,notas" />
+<meta name="keywords" content="podcast," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,86 +271,117 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org9d52a95" class="outline-2">
-<h2 id="org9d52a95">Visualiza tus Notas Markdown Versión Web con MkDocs</h2>
-<div class="outline-text-2" id="text-org9d52a95">
+<div id="outline-container-org73e6d73" class="outline-2">
+<h2 id="org73e6d73">Castero. Podcatcher  ligero para Terminal</h2>
+<div class="outline-text-2" id="text-org73e6d73">
 <p>
-Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.
-</p>
-</div>
-
-<div id="outline-container-org7cb6d0e" class="outline-3">
-<h3 id="org7cb6d0e">Instalación</h3>
-<div class="outline-text-3" id="text-org7cb6d0e">
-<p>
-Instalaremos en debian, ubuntu,… con:
+Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, <a href="https://github.com/xgi/castero">Castero</a> nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.
 </p>
 
-<p>
-<code>sudo apt install mkdocs</code>
-</p>
 
-<p>
-También podemos hacerlo por Python así:
-</p>
-
-<p>
-<code>sudo pip install mkdocs</code>
+<div class="figure">
+<p><img src="../images-blog/castero.png" alt="castero.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org159ec11" class="outline-3">
-<h3 id="org159ec11">Iniciando</h3>
-<div class="outline-text-3" id="text-org159ec11">
+<div id="outline-container-orgbeef672" class="outline-3">
+<h3 id="orgbeef672">Instalación</h3>
+<div class="outline-text-3" id="text-orgbeef672">
 <p>
-Ahora vamos a crear un nuevo proyecto, una carpeta donde depositaremos todas nuestras notas para después verlas en la web.
+Si no tenemos los módulos de python pip:
+<code>sudo apt install python3-pip</code>
+</p>
+
+<p>
+Instalación de castero:
+</p>
+
+<p>
+<code>sudo pip3 install castero</code>
+</p>
+
+<p>
+Para poder escuchar los podcast, requiere de aplicaciones externas como vlc versión 2.2.3 o superior o mpv con libmpv
+</p>
+</div>
+</div>
+
+<div id="outline-container-org546e0c3" class="outline-3">
+<h3 id="org546e0c3">Iniciando Castero</h3>
+<div class="outline-text-3" id="text-org546e0c3">
+<p>
+Tan simple como escribir en tu terminal 
+</p>
+
+<p>
+<code>caster</code>
+</p>
+
+<p>
+Se abrirá una pantalla dividida en 3 partes:
+</p>
+<ul class="org-ul">
+<li>Feed: Los podcast que estamos suscritos a través de su Feed</li>
+<li>Episodies: Los episodios disponibles para ser escuchados</li>
+<li>Metadata: La información del episodio seleccionado</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd64901c" class="outline-3">
+<h3 id="orgd64901c">Uso</h3>
+<div class="outline-text-3" id="text-orgd64901c">
+<p>
+La verdad es que es muy sencillo de utilizar. No iremos desplazando por las columnas de la pantalla con los cursores de izquierda, derecha, arriba, abajo.
+</p>
+
+<p>
+Para salir, como la mayoría de las app's de ternimal <b>q</b>.
+</p>
+
+<p>
+Para añadir el Feed deseado <b>a</b>&#x2026;
 </p>
 <pre class="example">
-mkdocs new my-project
-cd my-project
+Comandos
+    h - pantalla de ayuda
+    q - salir del cliente
+    a - añadir un feed
+    d - eliminar el feed seleccionado
+    r - recargar / actualizar feeds
+    s - guardar el episodio para la reproducción sin conexión
+    flechas - navegar por los menús
+    página arriba / abajo - menús de desplazamiento
+    entrar - reproducir el feed / episodio seleccionado
+    espacio - agregar el feed / episodio seleccionado a la cola
+    c - borrar la cola
+    n - ir al siguiente episodio en la cola
+    i - Invertir el orden del menú
+    p o k - pausa / reproducir el episodio actual
+    f o l - buscar hacia adelante
+    b o j - buscar hacia atrás
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org97be614" class="outline-3">
-<h3 id="org97be614">Iniciamos el servidor</h3>
-<div class="outline-text-3" id="text-org97be614">
+
+<div id="outline-container-org620ba6d" class="outline-3">
+<h3 id="org620ba6d">Archivos de configuración</h3>
+<div class="outline-text-3" id="text-org620ba6d">
 <p>
-<code>mkdocs serve</code>
+El archivo de configuración se encuentra en {HOME}/.config/castero/ después de que el cliente se haya ejecutado al menos una vez.
+La información de los Podcast está en {HOME}/.local/share/castero/feeds , pero este archivo no se puede editar de forma manual.
 </p>
 
-<p>
-Para acceder remotamente, desde cualquier dispositivo dentro de nuestra red local, ejecutaremos dentro de la carpeta anteriormente creada:
-</p>
 
-<p>
-<code>mkdocs serve -a 0.0.0.0:8000</code>
-</p>
 
-<p>
-Ahora nos conectaremos desde cualquier dispositivo a: <a href="http://ip:8000">http://ip:8000</a>
-</p>
-
-<p>
-Si quieres publicarlo en tu servidor web de un modo permanente, con un comando podremos generar un sitio estático a partir de nuestro MkDocs.
-</p>
-
-<p>
-Nos situamos en la raíz de la carpeta, donde arrancamos el servidor y ejecutamos:
-</p>
-
-<p>
-<code>mkdocs build</code>
-</p>
-
-<p>
-Esto creará una carpeta llamada site, que contendrá todos los archivos de nuestra web estática.
-</p>
-
+<ul class="org-ul">
+<li><a href="https://github.com/xgi/castero">Repositorio de Castero</a></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el jueves 03 enero del 2019  
+Publicado por Angel el sábado 26 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -358,15 +389,14 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
