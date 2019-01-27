@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ignorar archivos que no queremos que suban a Git</title>
+<title>Lee Super rápido en Emacs con Spray</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:"
+<meta name="description" content="No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo."
  />
-<meta name="keywords" content="git," />
+<meta name="keywords" content="melpa," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,41 +271,111 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orged8e95d" class="outline-2">
-<h2 id="orged8e95d">Ignorar archivos que no queremos que suban a Git</h2>
-<div class="outline-text-2" id="text-orged8e95d">
-<p>
-Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc&#x2026; Esto tiene una fácil solución:
+<div id="outline-container-org29ec7f4" class="outline-2">
+<h2 id="org29ec7f4">Lee Super rápido en Emacs con Spray</h2>
+<div class="outline-text-2" id="text-org29ec7f4">
+
+<div class="figure">
+<p><img src="../images-blog/spray.gif" alt="spray.gif" />
 </p>
 </div>
-<div id="outline-container-org6ef1a9a" class="outline-3">
-<h3 id="org6ef1a9a">Creando el archivo <b>.gitignore</b> para ignorar archivos</h3>
-<div class="outline-text-3" id="text-org6ef1a9a">
+
 <p>
-Para determinar los archivos que queremos que no suban al repositorio, tenemos que crear una archivo de texto plano oculto llamado <b>.gitignore en la raíz de la carpeta en la que queramos ignorar ese tipo de archivo.</b>
+No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.
+</p>
+</div>
+<div id="outline-container-org224770b" class="outline-3">
+<h3 id="org224770b">Instalación</h3>
+<div class="outline-text-3" id="text-org224770b">
+<p>
+Instalaremos desde los repositorios de Melpa:
 </p>
 
 <p>
-Hay que tener en cuenta, que si lo ponemos en la raíz inicial del proyecto, esto excluirá a esa carpeta y resto de subcarpetas de este repositorio.
+<code>M-x package-install RET spray</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3304b7a" class="outline-3">
+<h3 id="org3304b7a">Atajo de Teclado</h3>
+<div class="outline-text-3" id="text-org3304b7a">
+<p>
+La verdad es que si utilizamos un atajo instantáneo, tal como recomienda su desarrollador, aunque a priori pueda parecer una tontería, es un paquete que puede ser muy interesante tener instalado. El desarrollador recomienda utilizar la tecla <b>F6</b> para hacer uso de <b>spray</b>, aunque como sabes, puedes utilizar cualquier otro atajo si este ya lo tienes ocupado.
 </p>
 
 <p>
-La sintaxis es prácticamente igual que si hiciéramos un scritp en bash. "#" podemos utilizarlo para los comentarios.
+Para añadir este atajo, tenemos que añadir a nuestro archivo de configuración de emacs, ya sea el archivo <b>.emacs</b> o <b>init.el</b>, la siguiente línea:
+</p>
+
+<p>
+<code>(global-set-key (kbd "&lt;f6&gt;") 'spray-mode)</code> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51993a4" class="outline-3">
+<h3 id="org51993a4">Modo de uso</h3>
+<div class="outline-text-3" id="text-org51993a4">
+<p>
+La verdad es que es muy fácil de utilizar. Simplemente tenemos que situarnos el la parte del texto que deseamos leer y pulsar la tecla <b>F6</b>. Para salir de <b>spray</b>, pulsaremos nuevamente la tecla <b>F6</b>.
+</p>
+
+<p>
+Algunos atajos mas:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">spray-start/stop (SPC)</td>
+<td class="org-left">pausar o reanudar la fumigación</td>
+</tr>
+
+<tr>
+<td class="org-left">spray-backward-word (h, &lt;left&gt;)</td>
+<td class="org-left">hacer una pausa y volver a la última palabra</td>
+</tr>
+
+<tr>
+<td class="org-left">spray-forward-word (l, &lt;right&gt;)</td>
+<td class="org-left">inversa de spray-backward-word</td>
+</tr>
+
+<tr>
+<td class="org-left">spray-faster (F)</td>
+<td class="org-left">aumenta la velocidad</td>
+</tr>
+
+<tr>
+<td class="org-left">spray-slower (s)</td>
+<td class="org-left">disminuye la velocidad</td>
+</tr>
+
+<tr>
+<td class="org-left">spray-quit (q, &lt;return&gt;)</td>
+<td class="org-left">dejar spray-mode</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Hay muchas mas opciones como cambiar la posición de spray en la pantalla, así como cambiar los colores. Si quieres entrar mas en profundidad, te recomiendo visitar el <a href="https://gitlab.com/iankelling/spray">repositorio del desarrollador.</a>
 </p>
 
 <ul class="org-ul">
-<li><p>
-Si no queremos que <b>no</b> suban los archivos extensión .log, utilizariamos:
-</p>
-
-<p>
-<code>*.log</code>
-</p></li>
+<li><a href="https://gitlab.com/iankelling/spray">Repositorio</a></li>
 </ul>
-
 <br>
 <p>
-Publicado por Angel el sábado 12 enero del 2019  
+Publicado por Angel el domingo 27 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -313,10 +383,9 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>

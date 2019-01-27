@@ -13,6 +13,28 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Lee Super rápido en Emacs con Spray</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
+    <description>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 27 Jan 2019 19:15 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</guid>
+   </item>
+   <item>
     <title>Castero. Podcatcher ligero para Terminal</title>
     <link>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</link>
     <description>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.... 

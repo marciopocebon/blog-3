@@ -13,23 +13,90 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Lee Super rápido en Emacs con Spray</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
+    <description>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 27 Jan 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</guid>
+   </item>
+   <item>
     <title>Con Emacs también podemos editar Markdown</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
-    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?</description>
+    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html&gt;Con Emacs también podemos editar Markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
     <pubDate>Thu, 03 Jan 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</guid>
    </item>
    <item>
     <title>Kde Connect en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
-    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla</description>
+    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html&gt;Kde Connect en Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
     <pubDate>Mon, 31 Dec 2018 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</guid>
    </item>
    <item>
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
-    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc</description>
+    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html&gt;Convertir de Markdown a Org Mode gracias a Pandoc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
     <pubDate>Fri, 28 Dec 2018 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid>
    </item>
