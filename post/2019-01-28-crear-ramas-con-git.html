@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Eliminar comentarios de nuestros script</title>
+<title>Crear ramas con Git</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..."
+<meta name="description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master"
  />
-<meta name="keywords" content="bash, grep, sed, unix" />
+<meta name="keywords" content="git" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,28 +271,99 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org621de4c" class="outline-2">
-<h2 id="org621de4c">Eliminar comentarios de nuestros script</h2>
-<div class="outline-text-2" id="text-org621de4c">
+<div id="outline-container-org31d9644" class="outline-2">
+<h2 id="org31d9644">Crear ramas con Git</h2>
+<div class="outline-text-2" id="text-org31d9644">
 <p>
-Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , <b>bash</b>, va a ser tan sencillo como hacer uso de nuestro querido <b>grep</b>:
+Todos los repositorios de <b>git</b>, tienen la rama <b>master</b> (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio <b>master</b>. 
+</p>
+
+
+<div class="figure">
+<p><img src="../images-blog/git.png" alt="git.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95e35c0" class="outline-3">
+<h3 id="org95e35c0">Crear rama</h3>
+<div class="outline-text-3" id="text-org95e35c0">
+<p>
+Para crear una rama, utilizaremos el comando <b>git branch</b>. Vamos a crear una rama que llamaremos <b>test</b>
 </p>
 
 <p>
-<code>cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code>
+<code>git branch test</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0854b0" class="outline-3">
+<h3 id="orgb0854b0">Cambiar de rama</h3>
+<div class="outline-text-3" id="text-orgb0854b0">
+<p>
+Ahora tenemos una nueva rama, la rama <b>test</b>. Para acceder a ella, utilizaremos el comando <b>git checkout</b>
 </p>
 
 <p>
-Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos <b>sed</b>::
+<code>git chekcout test</code>
 </p>
 
 <p>
-<code>cat archivo.sh |  grep -v ^# | sed '/^ *$/d' &gt; archivo_nuevo.sh</code>
+Si hemos introducido este comando, ya no estaremos en la rama <b>master</b> , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada.
 </p>
+
+<p>
+Antes de volver nuevamente a la rama <b>master</b>, tenemos que hacer un <b>git push</b> y poner al día la rama <b>test</b>.
+</p>
+
+<p>
+Para volver a la rama <b>master</b>:
+</p>
+
+<p>
+<code>git checkout master</code>
+</p>
+
+<p>
+Ya estamos de nuevo en la rama <b>master</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ac90e2" class="outline-3">
+<h3 id="org0ac90e2">Borrar una rama</h3>
+<div class="outline-text-3" id="text-org0ac90e2">
+<p>
+Si ya hemos acabado con la rama <b>test</b> y queremos eliminarla en el repositorio local, utilizaremos el comando <b>git branch -d</b>
+</p>
+
+<p>
+<code>git branch -d test</code>
+</p>
+
+<p>
+Para forzar el borrado en caso de algún error:
+</p>
+
+<p>
+<code>git branch -D test</code>
+</p>
+
+
+<p>
+Para eliminar el repositorio remosto <b>git push origin :</b>
+</p>
+
+<p>
+<code>git push origin :test</code>
+</p>
+
+
 
 <br>
 <p>
-Publicado por Angel el domingo 30 diciembre del 2018  
+Publicado por Angel el lunes 28 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -300,13 +371,14 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html">Castero. Podcatcher ligero para Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
