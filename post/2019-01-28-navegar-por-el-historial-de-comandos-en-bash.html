@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Eliminar comentarios de nuestros script</title>
+<title>Navegar por el Historial de comandos en Bash</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..."
+<meta name="description" content="Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito"
  />
-<meta name="keywords" content="bash, grep, sed, unix" />
+<meta name="keywords" content="terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,28 +271,44 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgeed5781" class="outline-2">
-<h2 id="orgeed5781">Eliminar comentarios de nuestros script</h2>
-<div class="outline-text-2" id="text-orgeed5781">
+<div id="outline-container-org9cd2218" class="outline-2">
+<h2 id="org9cd2218">Navegar por el Historial de comandos en Bash</h2>
+<div class="outline-text-2" id="text-org9cd2218">
 <p>
-Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , <b>bash</b>, va a ser tan sencillo como hacer uso de nuestro querido <b>grep</b>:
+Hace unas semanas, en el blog de <a href="https://www.linuxito.com/">Linuxito</a>, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de <a href="https://www.linuxito.com/">Linuxito</a>, que siempre crea artículos muy interesantes.
+</p>
+</div>
+
+<div id="outline-container-orgbbfc4d5" class="outline-3">
+<h3 id="orgbbfc4d5">Creamos archivo .inputrc</h3>
+<div class="outline-text-3" id="text-orgbbfc4d5">
+<p>
+En la raíz del directorio $HOME, crearemos el archivo oculto <b>.inputrc</b>. Utilizaremos por ejemplo <b>nano</b>, para crear el archivo.
 </p>
 
 <p>
-<code>cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code>
+<code>nano .inputrc</code>
 </p>
 
 <p>
-Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos <b>sed</b>::
+Una vez abierto, copiaremos en el siguiente contenido:
 </p>
-
+<pre class="example">
+## Flecha Arriba
+"\e[A":history-search-backward
+## Flecha Abajo
+"\e[B":history-search-forward
+</pre>
 <p>
-<code>cat archivo.sh |  grep -v ^# | sed '/^ *$/d' &gt; archivo_nuevo.sh</code>
+Espero que disfrutéis de este truquillo igual que yo.
 </p>
 
+<ul class="org-ul">
+<li><a href="https://www.linuxito.com/2-uncategorised/1160-configurar-bash-para-que-las-flechas-de-teclado-se-comporten-como-en-csh">Fuente</a></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el domingo 30 diciembre del 2018  
+Publicado por Angel el lunes 28 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -300,13 +316,16 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
