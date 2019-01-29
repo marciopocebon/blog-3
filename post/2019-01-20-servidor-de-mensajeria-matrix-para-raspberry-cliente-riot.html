@@ -189,16 +189,16 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date())
 gtag('config', 'UA-131560140-1');
 </script>
-<link rel=canonical href=https://ugeek.gitlab.io />
+<link rel=canonical href=https://ugeek.github.io />
 <meta property=og:type content=website />
 <meta property=og:locale content=es_ES />
 <meta property=og:title content=Blog de uGeek />
 <meta name=author content=Angel. uGeek />
 <meta property=og:site_name content=uGeek. Blog de Tecnología/>
 <meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.gitlab.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.gitlab.io/ugeek.jpg />
+<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
+<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
+<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
 <meta property=og:image:width content=640 />
 <meta property=og:image:height content=366 />
 <meta name=twitter:site content=@ugeekpodcast />
@@ -206,13 +206,13 @@ gtag('config', 'UA-131560140-1');
 <meta name=twitter:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
 <meta name=twitter:title content=uGeek. Blog de Tecnología />
 <meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
-<link rel=shortlink href=https://ugeek.gitlab.io/ />
-<link rel=shortcut icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
+<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
+<link rel=shortlink href=https://ugeek.github.io/ />
+<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
+<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
+<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
+<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
+<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org43b855e" class="outline-2">
-<h2 id="org43b855e">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
-<div class="outline-text-2" id="text-org43b855e">
+<div id="outline-container-org24d6384" class="outline-2">
+<h2 id="org24d6384">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
+<div class="outline-text-2" id="text-org24d6384">
 <p>
 Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
 </p>
@@ -296,9 +296,9 @@ Características:
 </ul>
 </div>
 
-<div id="outline-container-orgee1cb7e" class="outline-3">
-<h3 id="orgee1cb7e">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
-<div class="outline-text-3" id="text-orgee1cb7e">
+<div id="outline-container-org53bd64c" class="outline-3">
+<h3 id="org53bd64c">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
+<div class="outline-text-3" id="text-org53bd64c">
 <pre class="example">
 sudo apt-get install build-essential python2.7-dev libffi-dev \
 		     python-pip python-setuptools sqlite3 \
@@ -330,9 +330,9 @@ Instala también el modulo para synapse.app.
 </div>
 </div>
 
-<div id="outline-container-org13d849f" class="outline-3">
-<h3 id="org13d849f">CONFIGURAR SYNAPSE</h3>
-<div class="outline-text-3" id="text-org13d849f">
+<div id="outline-container-org579cfd1" class="outline-3">
+<h3 id="org579cfd1">CONFIGURAR SYNAPSE</h3>
+<div class="outline-text-3" id="text-org579cfd1">
 <p>
 Recuerda sustituir el nombre del servidor <b>my.domain.name</b>
 En –report-stats= tienes que seleccionar <b>yes o no</b>.
@@ -353,9 +353,9 @@ python2.7 -B -m synapse.app.homeserver \
 </div>
 
 
-<div id="outline-container-orgf187239" class="outline-3">
-<h3 id="orgf187239">INICIAR SERVIDOR</h3>
-<div class="outline-text-3" id="text-orgf187239">
+<div id="outline-container-org17ece3f" class="outline-3">
+<h3 id="org17ece3f">INICIAR SERVIDOR</h3>
+<div class="outline-text-3" id="text-org17ece3f">
 <ol class="org-ol">
 <li>Nos situamos en la carpeta de <b>synapse</b></li>
 </ol>
@@ -406,9 +406,9 @@ Ahora nos preguntará por el usuario, contraseña y si este usuario es administr
 </p>
 </div>
 </div>
-<div id="outline-container-org9aed3ea" class="outline-3">
-<h3 id="org9aed3ea">UTILIZAR EL CLIENTE RIOT</h3>
-<div class="outline-text-3" id="text-org9aed3ea">
+<div id="outline-container-org00d3dda" class="outline-3">
+<h3 id="org00d3dda">UTILIZAR EL CLIENTE RIOT</h3>
+<div class="outline-text-3" id="text-org00d3dda">
 
 <div class="figure">
 <p><img src="../images-blog/riot.png" alt="riot.png" />
