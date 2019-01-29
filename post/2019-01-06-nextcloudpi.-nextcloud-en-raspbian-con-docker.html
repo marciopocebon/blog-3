@@ -213,7 +213,7 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
-<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
@@ -265,20 +265,20 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5620fea" class="outline-2">
-<h2 id="org5620fea">NextcloudPi. Nextcloud en Raspbian con Docker</h2>
-<div class="outline-text-2" id="text-org5620fea">
+<div id="outline-container-orgf392905" class="outline-2">
+<h2 id="orgf392905">NextcloudPi. Nextcloud en Raspbian con Docker</h2>
+<div class="outline-text-2" id="text-orgf392905">
 </div>
 
-<div id="outline-container-orga9bac8b" class="outline-3">
-<h3 id="orga9bac8b">Descargar Imagen y Crear Contenedor NextcloudPi</h3>
-<div class="outline-text-3" id="text-orga9bac8b">
+<div id="outline-container-org1030848" class="outline-3">
+<h3 id="org1030848">Descargar Imagen y Crear Contenedor NextcloudPi</h3>
+<div class="outline-text-3" id="text-org1030848">
 <p>
 Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.
 </p>
@@ -297,9 +297,9 @@ sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloud
 </div>
 </div>
 
-<div id="outline-container-orgecb6194" class="outline-3">
-<h3 id="orgecb6194">Iniciar Nextcloud</h3>
-<div class="outline-text-3" id="text-orgecb6194">
+<div id="outline-container-org83adaff" class="outline-3">
+<h3 id="org83adaff">Iniciar Nextcloud</h3>
+<div class="outline-text-3" id="text-org83adaff">
 <p>
 Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.
 </p>
@@ -314,9 +314,9 @@ Una contraseña será para la web de administración de <b>NextcloudPi</b> por e
 </div>
 </div>
 
-<div id="outline-container-orgabfbc11" class="outline-3">
-<h3 id="orgabfbc11">Crear Certificado</h3>
-<div class="outline-text-3" id="text-orgabfbc11">
+<div id="outline-container-org6dfb1af" class="outline-3">
+<h3 id="org6dfb1af">Crear Certificado</h3>
+<div class="outline-text-3" id="text-org6dfb1af">
 <p>
 Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.
 </p>

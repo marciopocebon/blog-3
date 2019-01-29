@@ -213,7 +213,7 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.gitlab.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.gitlab.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.gitlab.io/feed/ />
-<div id="logo"><a href="../index.html"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
@@ -265,23 +265,23 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="../index.html"><tt>Blog de Tecnología</tt></div></a>
+<div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a ./href="../list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
+<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org00ad47c" class="outline-2">
-<h2 id="org00ad47c">GPG. Cifrado de archivos simétrico</h2>
-<div class="outline-text-2" id="text-org00ad47c">
+<div id="outline-container-org33c50a1" class="outline-2">
+<h2 id="org33c50a1">GPG. Cifrado de archivos simétrico</h2>
+<div class="outline-text-2" id="text-org33c50a1">
 <p>
 En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.
 </p>
 </div>
 
-<div id="outline-container-orgbdc8718" class="outline-3">
-<h3 id="orgbdc8718">Cifrado</h3>
-<div class="outline-text-3" id="text-orgbdc8718">
+<div id="outline-container-org8d276ef" class="outline-3">
+<h3 id="org8d276ef">Cifrado</h3>
+<div class="outline-text-3" id="text-org8d276ef">
 <p>
 <code>gpg -c archivo.txt</code>
 </p>
@@ -298,9 +298,9 @@ gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt
 </pre>
 </div>
 </div>
-<div id="outline-container-orge9aa23e" class="outline-3">
-<h3 id="orge9aa23e">Descifrado</h3>
-<div class="outline-text-3" id="text-orge9aa23e">
+<div id="outline-container-orgb25233a" class="outline-3">
+<h3 id="orgb25233a">Descifrado</h3>
+<div class="outline-text-3" id="text-orgb25233a">
 <p>
 <code>gpg archivo.txt.gpg</code>
 </p>
@@ -314,9 +314,9 @@ gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg
 </pre>
 </div>
 </div>
-<div id="outline-container-org2506e87" class="outline-3">
-<h3 id="org2506e87">Conclusión</h3>
-<div class="outline-text-3" id="text-org2506e87">
+<div id="outline-container-orgee1d4f7" class="outline-3">
+<h3 id="orgee1d4f7">Conclusión</h3>
+<div class="outline-text-3" id="text-orgee1d4f7">
 <p>
 Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso, dandole un poco mas de seguridad.
 </p>
