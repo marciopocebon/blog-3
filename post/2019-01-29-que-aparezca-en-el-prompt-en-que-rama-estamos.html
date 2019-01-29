@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
+<title>Que aparezca en el Prompt en que rama estamos</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor."
+<meta name="description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos"
  />
-<meta name="keywords" content="servidor, raspberry" />
+<meta name="keywords" content="terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,183 +271,101 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="../index.html" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgddcf6be" class="outline-2">
-<h2 id="orgddcf6be">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
-<div class="outline-text-2" id="text-orgddcf6be">
+<div id="outline-container-orge0a0570" class="outline-2">
+<h2 id="orge0a0570">Que aparezca en el Prompt en que rama estamos</h2>
+<div class="outline-text-2" id="text-orge0a0570">
 <p>
-Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
+Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.  
+Es cierto que con un <b>git status</b>, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos:
 </p>
-
-<p>
-Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.
-</p>
-
-<p>
-Características:
-</p>
-
-<ul class="org-ul">
-<li>Mensajería</li>
-<li>Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,…</li>
-<li>Llamadas</li>
-<li>Video Llamadas</li>
-<li>Doble Cifrados</li>
-<li>Varios Clientes y totalmente multiplataforma</li>
-</ul>
 </div>
 
-<div id="outline-container-org465ba5b" class="outline-3">
-<h3 id="org465ba5b">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
-<div class="outline-text-3" id="text-org465ba5b">
-<pre class="example">
-sudo apt-get install build-essential python2.7-dev libffi-dev \
-		     python-pip python-setuptools sqlite3 \
-		     libssl-dev python-virtualenv libjpeg-dev
-sudo pip install --upgrade pip
-sudo pip install --upgrade ndg-httpsclient
-sudo pip install --upgrade virtualenv
-</pre>
-
+<div id="outline-container-org54359ce" class="outline-3">
+<h3 id="org54359ce">Descargando .git-prompt.sh</h3>
+<div class="outline-text-3" id="text-org54359ce">
 <p>
-Este segunda comando ten paciencia, se crearan los certificados, etc … y <b>tardará mucho tiempo, probablemente una hora</b>, recomiendo detener servicios
-</p>
-
-<pre class="example">
-virtualenv -p python2.7 ~/.synapse
-source ~/.synapse/bin/activate
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install https://github.com/matrix-org/synapse/tarball/master
-</pre>
-
-<p>
-Instala también el modulo para synapse.app.
+Descargamos con wget .git-prompt.sh:
 </p>
 
 <p>
-<code>pip install (--upgrade) synapseclient</code>
+<code>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org73cfc2e" class="outline-3">
-<h3 id="org73cfc2e">CONFIGURAR SYNAPSE</h3>
-<div class="outline-text-3" id="text-org73cfc2e">
+<div id="outline-container-org923ebc9" class="outline-3">
+<h3 id="org923ebc9">Editamos ~/.bashrc</h3>
+<div class="outline-text-3" id="text-org923ebc9">
 <p>
-Recuerda sustituir el nombre del servidor <b>my.domain.name</b>
-En –report-stats= tienes que seleccionar <b>yes o no</b>.
+Vamos al archivo de configuración de bash <b>~/.bashrc</b> para editarlo con emacs:
 </p>
 
 <p>
-<code>cd ~/.synapse</code>
+<code>emacs ~/.bashrc</code>
 </p>
 
+<p>
+Y añadimos el siguiente código:
+</p>
 <pre class="example">
-python2.7 -B -m synapse.app.homeserver \
-    --server-name=my.domain.name \
-    --config-path=homeserver.yaml \
-    --generate-config \
-    --report-stats=[yes|no]
+source ~/.git-prompt.sh
+PS1="\n[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;33m\]\u\[\033[32m\]$ \[\033[0m\]"
 </pre>
 </div>
 </div>
 
-
-<div id="outline-container-orgd9db4ef" class="outline-3">
-<h3 id="orgd9db4ef">INICIAR SERVIDOR</h3>
-<div class="outline-text-3" id="text-orgd9db4ef">
-<ol class="org-ol">
-<li>Nos situamos en la carpeta de <b>synapse</b></li>
-</ol>
-
+<div id="outline-container-org1038251" class="outline-3">
+<h3 id="org1038251">Personalizando</h3>
+<div class="outline-text-3" id="text-org1038251">
 <p>
-<code>cd ~/.synapse</code>
-</p>
-
-<ol class="org-ol">
-<li>Iniciar el servidor</li>
-</ol>
-
-<p>
-<code>source ./bin/activate ; synctl start</code>
-</p>
-
-<p>
-La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <b>no te recomiendo que la uses</b>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.
-<b>Detener el servicio, si lo deseamos:</b>
-</p>
-
-<p>
-<code>source ./bin/activate ; synctl stop</code>
-</p>
-
-<p>
-CREAR USUARIOS
-</p>
-
-<p>
-Iniciamos el servidor y situándonos dentro del directorio <b>.synapse</b>
-</p>
-
-<p>
-<code>cd ~/.synapse</code>
-</p>
-
-<p>
-Ejecutaremos el siguiente comando:
-</p>
-
-<p>
-<code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code>
-</p>
-
-<p>
-Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.
-</p>
-</div>
-</div>
-<div id="outline-container-org4d2f076" class="outline-3">
-<h3 id="org4d2f076">UTILIZAR EL CLIENTE RIOT</h3>
-<div class="outline-text-3" id="text-org4d2f076">
-
-<div class="figure">
-<p><img src="../images-blog/riot.png" alt="riot.png" />
+Aquí te dejo esta tabla, por si quieres personalizar a tu gusto un poco mas el prompt:
 </p>
 </div>
 
+<div id="outline-container-orgde2e3f6" class="outline-4">
+<h4 id="orgde2e3f6">Texto</h4>
+<div class="outline-text-4" id="text-orgde2e3f6">
+<pre class="example">
+Usuario, nombre de host y su color de visualización = \u@\h \[\033[32m\]               
+Directorio de trabajo actual y su color de visualización = \w\[\033[33m\]                  
+Nombre de rama de git y su color de visualización = \$(parse_git_branch)\[\033[00m\] 
+</pre>
+</div>
+</div>
 
-<ol class="org-ol">
-<li>Pondermos en nombre de usuario y contraseña</li>
-<li>Habilitamos opciones de servidor propietarias</li>
-<li>En servidor, ponemos <a href="https://ip:8448">https://ip:8448</a></li>
-</ol>
-<p>
-ENCONTRARSE LOS USUARIOS
-</p>
+<div id="outline-container-orgef69ddf" class="outline-4">
+<h4 id="orgef69ddf">Colores</h4>
+<div class="outline-text-4" id="text-orgef69ddf">
+<pre class="example">
+Rojo = \[\033[0;31m\]  
+Amarillo = \[\033[0;33m\]  
+Verde = \[\033[0;32m\]" 
+Sin color = \[\033[0m\]"    
+</pre>
 
-<ol class="org-ol">
-<li>Creamos una sala</li>
-<li>En configuración de la sala, en <b>acceso a la Sala</b> y seleccionamos:</li>
-</ol>
 
-<p>
-“Los que saben el enlace de la sala, incluso huespedes”
-</p>
-
-<p>
-3 )Ahora en <b>Avanzado</b>, compartimos al otro usuario <b>La identificación interna de esta Sala</b>
-</p>
 
 <br>
 <p>
-Publicado por Angel el domingo 20 enero del 2019  
+Publicado por Angel el martes 29 enero del 2019  
 </p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
+<ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

@@ -13,6 +13,28 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Que aparezca en el Prompt en que rama estamos</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html</link>
+    <description>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html&gt;Que aparezca en el Prompt en que rama estamos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 29 Jan 2019 16:15 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html</guid>
+   </item>
+   <item>
     <title>Navegar por el Historial de comandos en Bash</title>
     <link>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</link>
     <description>Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito... 
