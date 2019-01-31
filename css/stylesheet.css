@@ -51,8 +51,8 @@ body {
 #menu {
 
   position: absolute;
-  font-size: 1.625em;
-  top: 5.125em; }
+  font-size: 1.425em;
+  top: 7.525em; }
 
 @media all and (min-width: 1000px){
     #menu { left: 10%; } }
