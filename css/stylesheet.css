@@ -6,8 +6,11 @@
 @media all and (max-width: 1000px){
     body { margin: 1em; } }
 
+
 body {
-  font-family: "Ubuntu", serif; }
+		font-family: "Lato";
+  	 font-size: 18px; 
+								 , serif; }
 
 
 @media all and (min-width: 1000px){
