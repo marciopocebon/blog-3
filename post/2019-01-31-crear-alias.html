@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>El poder de la terminal y el scripting</title>
+<title>Crear Alias</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center"
+<meta name="description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando"
  />
-<meta name="keywords" content="bash,terminal,scrits" />
+<meta name="keywords" content="terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,19 +271,48 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org68848a3" class="outline-2">
-<h2 id="org68848a3">El poder de la terminal y el scripting</h2>
-<div class="outline-text-2" id="text-org68848a3">
+<div id="outline-container-orgaacf32e" class="outline-2">
+<h2 id="orgaacf32e">Crear Alias</h2>
+<div class="outline-text-2" id="text-orgaacf32e">
 <p>
-Hace más de medio año que los chicos de <a href="https://slimbook.es/">Slimbook</a> crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, <a href="https://linuxcenter.es/">Linux Center</a>.
-El objetivo principal, es el de dar conocimiento tanto del Software Libre como de GNU/Linux. Allí se brinda la posibilidad, tanto de ofrecer charlas como asistir a ellas de forma totalmente gratuita. Afortunadamente, todos aquellos que vivimos lejos de Valencia, podemos ver estas a través de su <a href="https://www.youtube.com/channel/UCEGWt2UciVyz1MC7rYtBg6w">canal en YouTube</a>. Os dejo esta charla muy interesante sobre la terminal que impartió  Raúl Rodrigo.
+Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los <b>alias</b>. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando.
 </p>
+</div>
+<div id="outline-container-org6c19d98" class="outline-3">
+<h3 id="org6c19d98">Crear Alias</h3>
+<div class="outline-text-3" id="text-org6c19d98">
+<p>
+Para crear el alias, editaremos el archivo <b>.bashrc</b>
+<b><i>home/usuario</i>.bashrc</b>
+</p>
+<pre class="example">
+sudo nano /home/usuario/.bashrc
+</pre>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AgvRdj2-Yog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Al final del contenido de este archivo, iremos introduciendo los alias así:
+</p>
+<pre class="example">
+alias palabra='comando'
+</pre>
+</div>
+</div>
+<div id="outline-container-orgd74c369" class="outline-3">
+<h3 id="orgd74c369">Ejemplo de Alias</h3>
+<div class="outline-text-3" id="text-orgd74c369">
+<p>
+Si añadimos esta línea en Ubuntu, cada vez que escribamos en la terminal <b>actualizar</b>, se ejecutará los comandos para actualizar y además al final aparecerá un mensaje de: "Sistema Operativo Actualizado"
+</p>
+<pre class="example">
+alias actualizar='sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; clear &amp;&amp; echo "Sistema Operativo Actualizado"'
+</pre>
 
+<p>
+Con una simple palabra, hemos actualizado nuestro Ubuntu. Practica y diviértete creando <b>alias</b>
+</p>
 <br>
 <p>
-Publicado por Angel el jueves 03 enero del 2019  
+Publicado por Angel el jueves 31 enero del 2019  
 </p>
 <br><br>
 <p>
@@ -291,13 +320,19 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb| para subirlos a Telegram u otra nube pública</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

@@ -3,6 +3,8 @@
         max-width: 80%;
         margin: auto; } }
 
+
+
 @media all and (max-width: 1000px){
     body { margin: 1em; } }
 
