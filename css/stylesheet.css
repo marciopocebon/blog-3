@@ -8,13 +8,9 @@
 
 
 body {
-<<<<<<< HEAD
 		font-family: "Lato";
   	 font-size: 16px; 
 								 , serif; }
-=======
-  font-family: "Lato", serif; }
->>>>>>> dc36742cd35f3e9ee5c083c2c43ce2b62c37d6f1
 
 
 @media all and (min-width: 1000px){
@@ -53,8 +49,9 @@ body {
 
 
 #menu {
+
   position: absolute;
-  font-size: 1.825em;
+  font-size: 1.625em;
   top: 5.125em; }
 
 @media all and (min-width: 1000px){
