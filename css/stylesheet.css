@@ -7,10 +7,13 @@
     body { margin: 1em; } }
 
 
+
+
 body {
 		font-family: "Lato";
   	 font-size: 16px; 
 								 , serif; }
+
 
 
 @media all and (min-width: 1000px){
@@ -18,6 +21,9 @@ body {
 
 @media all and (max-width: 1000px){
     #me { left: 1em; } }
+
+
+
 
 
 #logo img {
@@ -34,12 +40,13 @@ body {
     #logo { left: 10%; } }
 
 
+ /* Letras centrales de uGeek */
 
 #ugeek {
 
   position: absolute;
-  font-size: 2.50em;
-  top: 1.00em; }
+  font-size: 2.00em;
+  top: 1.25em; }
 
 @media all and (min-width: 1000px){
     #ugeek { left: 42%; } }
@@ -47,6 +54,8 @@ body {
 @media all and (max-width: 1000px){
     #ugeek { left: 42%; } }
 
+
+ /* Artículos Podcast Tags */
 
 #menu {
 
