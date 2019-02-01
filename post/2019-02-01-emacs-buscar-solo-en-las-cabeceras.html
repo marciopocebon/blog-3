@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
+<title>Emacs: Buscar solo en las Cabeceras</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc"
+<meta name="description" content="Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados"
  />
-<meta name="keywords" content="emacs,pandoc,orgmode,markdown" />
+<meta name="keywords" content="orgmode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,48 +271,82 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org451073b" class="outline-2">
-<h2 id="org451073b">Convertir de Markdown a Org Mode gracias a Pandoc</h2>
-<div class="outline-text-2" id="text-org451073b">
+<div id="outline-container-org1364a88" class="outline-2">
+<h2 id="org1364a88">Emacs: Buscar solo en las Cabeceras</h2>
+<div class="outline-text-2" id="text-org1364a88">
 <p>
-Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:
+Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados.
 </p>
 
 <p>
-<code>sudo apt install pandoc</code>
+Lo ideal sería poder buscar palabras solo en la cabeceras y no a lo largo del orgmode. En este <a href="https://mentat.za.net/blog/2016/12/15/org-mode-header-search/">Post de https://mentat.za.net</a>, explica como hacer búsqueda solo en las cabecera de primer nivel. Yo, tal como tengo estructuradas mis notas, necesitaba que buscara en todas las cabeceras. Así que he hecho una pequeña modificación al código y aquí os explico el resultado.
+</p>
+</div>
+
+<div id="outline-container-org6fab72b" class="outline-3">
+<h3 id="org6fab72b">Búsqueda en  cabeceras de mi orgmode</h3>
+<div class="outline-text-3" id="text-org6fab72b">
+<p>
+Pensé en replicar tantas veces como fuera necesario, la línea '(setq unread-command-events (listify-key-sequence "^* "))', e ir añadiendo Cabeceras, pero solo me ha bastado una, como aparece en esta cajetilla de código, para que entienda emacs que debe buscar en todas las Cabeceras. No me parece que sea una forma correcta, pero&#x2026; Funciona!!!!
 </p>
 
 <p>
-Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.
+Añade en <b>init.es</b> o <b>.emacs</b>, las siguientes líneas:
 </p>
+<pre class="example">
+(defun stefan/isearch-heading ()
+  (interactive)
+  (setq unread-command-events (listify-key-sequence "^* "))
+  (setq unread-command-events (listify-key-sequence "^** "))
+  (isearch-mode t t nil t))
 
-<ol class="org-ol">
-<li>Markdown a Org Mode. Ejecutamos este comando en la terminal.</li>
-</ol>
+
+(defun org-mode-keys ()
+  (interactive)
+  (local-set-key (kbd "C-c h") 'stefan/isearch-heading)
+)
+(add-hook 'org-mode-hook 'org-mode-keys)
+</pre>
+</div>
+</div>
+<div id="outline-container-org183f366" class="outline-3">
+<h3 id="org183f366">Hacer Búsquedas</h3>
+<div class="outline-text-3" id="text-org183f366">
+<p>
+Para buscar una palabra que estará en cualquiera de las cabeceras, pulsaremos las teclas <b>C-c h</b>. Recuerda que podrás personalizar el atajo que desees cambiando este en el código. 
+</p>
 
 <p>
-<code>pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md</code>
-</p>
-
-<ol class="org-ol">
-<li>Muchos archivos Markdown a un único Org Mode.</li>
-</ol>
-
-<p>
-Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:
+Una vez hecha la primera búsqueda, si tienes mas cabeceras con la misma palabra que deseas buscar, debes de pulsar <b>C-s</b> todo el rato, ara ir avanzando a lo largo de las coincidencias
 </p>
 
 <p>
-<code>find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;</code>
+Tengo que decir que el único punto negativo, es que encuentra la palabra, siempre que sea la primera que aparece en el título de la cabecera. Si está a lo largo del título, no la encuentra. De ahí, que en el código aparece "^*". Es una cosa que tenemos que tener en cuenta cuando creemos nuestras notas. 
 </p>
-
+</div>
+</div>
+<div id="outline-container-org771ae8a" class="outline-3">
+<h3 id="org771ae8a">Buscar en Cabeceras de Primer Nivel</h3>
+<div class="outline-text-3" id="text-org771ae8a">
 <p>
-Recordar verificar que la conversión se ha hecho correctamente.
+Código para solo Buscar en cabeceras de primer nivel:
 </p>
+<pre class="example">
+(defun stefan/isearch-heading ()
+  (interactive)
+  (setq unread-command-events (listify-key-sequence "^* "))
+  (isearch-mode t t nil t))
 
+
+(defun org-mode-keys ()
+  (interactive)
+  (local-set-key (kbd "C-c h") 'stefan/isearch-heading)
+)
+(add-hook 'org-mode-hook 'org-mode-keys)
+</pre>
 <br>
 <p>
-Publicado por Angel el viernes 28 diciembre del 2018 
+Publicado por Angel el viernes 01 febrero del 2019  
 </p>
 <br><br>
 <p>
@@ -326,6 +360,7 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2019-02-01 vie 21:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
+<title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc"
- />
-<meta name="keywords" content="emacs,pandoc,orgmode,markdown" />
+<meta name="author" content="angel" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,40 +180,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<link rel=canonical href=https://ugeek.github.io />
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
-<meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<meta name=twitter:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta name=twitter:title content=uGeek. Blog de Tecnología />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortlink href=https://ugeek.github.io/ />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -264,70 +229,11 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
-<br><br><br><br><br><br><br><br><br><br>
-
-<div id="outline-container-org451073b" class="outline-2">
-<h2 id="org451073b">Convertir de Markdown a Org Mode gracias a Pandoc</h2>
-<div class="outline-text-2" id="text-org451073b">
-<p>
-Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:
-</p>
-
-<p>
-<code>sudo apt install pandoc</code>
-</p>
-
-<p>
-Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.
-</p>
-
-<ol class="org-ol">
-<li>Markdown a Org Mode. Ejecutamos este comando en la terminal.</li>
-</ol>
-
-<p>
-<code>pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md</code>
-</p>
-
-<ol class="org-ol">
-<li>Muchos archivos Markdown a un único Org Mode.</li>
-</ol>
-
-<p>
-Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:
-</p>
-
-<p>
-<code>find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;</code>
-</p>
-
-<p>
-Recordar verificar que la conversión se ha hecho correctamente.
-</p>
-
-<br>
-<p>
-Publicado por Angel el viernes 28 diciembre del 2018 
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
-</div>
+<div id="postamble" class="status">
+<p class="author">Author: angel</p>
+<p class="date">Created: 2019-02-01 vie 21:32</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
