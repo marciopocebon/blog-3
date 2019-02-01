@@ -14,9 +14,9 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>OrgMode: Buscar solo en las Cabeceras</title>
-    <link>https://ugeek.github.io/blog/post/2019-02-01-emacs-buscar-solo-en-las-cabeceras.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</link>
     <description>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-emacs-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -36,7 +36,7 @@
 
 </description>
     <pubDate>Fri, 01 Feb 2019 18:00 +0100</pubDate>
-    <guid>https://ugeek.github.io/blog/post/2019-02-01-emacs-buscar-solo-en-las-cabeceras.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</guid>
    </item>
    <item>
     <title>Lee Super rápido en Emacs con Spray</title>
