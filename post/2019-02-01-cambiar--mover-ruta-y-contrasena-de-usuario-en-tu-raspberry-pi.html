@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="https://ugeek.github.io"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -215,7 +213,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
-<meta name="google-site-verification" content="ENnOaWTA9BlPz40VgoCRCpIlCgS4weW2KXOP9oqftpg" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -267,38 +266,118 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org0ef9a77" class="outline-2">
+<h2 id="org0ef9a77">Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</h2>
+<div class="outline-text-2" id="text-org0ef9a77">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Vamos a cambiar el usuario "Pi", por defecto, por el usuario que deseemos, cambiando la carpeta /home/pi por /home/Nuevo_usuario
+</p>
+</div>
+
+<div id="outline-container-org97d549a" class="outline-3">
+<h3 id="org97d549a">Habilitando el usuario root</h3>
+<div class="outline-text-3" id="text-org97d549a">
+<p>
+Vamos a habilitar el usuario root, que por defecto esta deshabilitado
 </p>
 
-<div id="outline-container-org666f851" class="outline-2">
-<h2 id="org666f851">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org666f851">
+<p>
+<code>sudo passwd root</code>
+</p>
+
+<p>
+Ahora deberemos habilitar el acceso a root desde ssh:
+Buscaremos la sección <b>#Authentication:</b> y en PermitRootLogin, cambiaremos el valor que haya a continuación por yes.
+</p>
+<pre class="example">
+#PermitRootLogin prohibit-password
+PermitRootLogin yes
+</pre>
+<p>
+Quitar el "#" para que surja efecto.
+</p>
+
+<p>
+<code>sudo nano /etc/ssh/sshd_config</code>
+</p>
+
+<p>
+Reiniciamos el servidor ssh <b>en caso de problemas también la raspberry</b>
+</p>
+
+<p>
+<code>sudo service ssh restart</code>
+</p>
+
+<p>
+<b>En caso de tener algún servicio instalado, detener todos los servicios</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf561b8" class="outline-3">
+<h3 id="orgbf561b8">Entrando como root</h3>
+<div class="outline-text-3" id="text-orgbf561b8">
+<p>
+<b>Entramos por ssh como root</b> (salimos de la sesión actual y entramos como root) y vamos a cambiar el nombre de usuario por el que deseemos
+</p>
+
+<p>
+<code>sudo usermod -l nuevo_usuario pi -md /home/nuevo_usuario</code>
+</p>
+
+<p>
+El usuario Pi, seguirá en la máquina. Cambiaremos este por nuestro nuevo usuario:
+</p>
+
+<p>
+<code>sudo groupmod -n nuevo_ de_grupo  pi</code>
+</p>
+
+<p>
+Salimos del ssh y nos logueamos con el nuevo nombre de usuario
+</p>
+
+<p>
+Deshabilitamos root, quitando la contraseña de root
+</p>
+
+<p>
+<code>sudo passwd –l root</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3e03f0" class="outline-3">
+<h3 id="orgf3e03f0">Cambiar contraseña</h3>
+<div class="outline-text-3" id="text-orgf3e03f0">
+<p>
+<code>passwd</code>
+Nos pedirá la nueva contraseña y que la repitamos.
+</p>
+<br>
+<p>
+Publicado por Angel el viernes 01 febrero del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <ul class="org-ul">
-<li><i>2019-02-01</i> - <a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
-
-<li><i>2019-02-01</i> - <a href="https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</a></li>
-
-<li><i>2019-01-31</i> - <a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
-
-<li><i>2019-01-29</i> - <a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
-
-<li><i>2019-01-29</i> - <a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
 </ul>
-</div>
-</div>
-
-
-<div id="outline-container-orgb46fa0a" class="outline-2">
-<h2 id="orgb46fa0a">33 Servicios de Software Libre, en un servidor Gratis que puedes utilizar </h2>
-<div class="outline-text-2" id="text-orgb46fa0a">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2236419/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2019-0-30%2F33-Servicios-de-Software-Libre-1d8774ace9ec5.m4a />Tu navegador no soporta reproductor de Podcast.</audio>'
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>

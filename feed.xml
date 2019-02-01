@@ -40,6 +40,33 @@
     <guid>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</guid>
    </item>
    <item>
+    <title>Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html</link>
+    <description>En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html&gt;Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 01 Feb 2019 23:45 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html</guid>
+   </item>
+   <item>
     <title>Crear Alias</title>
     <link>https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html</link>
     <description>Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando... 
