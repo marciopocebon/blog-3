@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</title>
+<title>Instalar Docker en Raspberry Pi con Raspbian</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry"
+<meta name="description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este"
  />
-<meta name="keywords" content="raspberry" />
+<meta name="keywords" content="raspberry,raspbian" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,98 +271,81 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5620a47" class="outline-2">
-<h2 id="org5620a47">Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</h2>
-<div class="outline-text-2" id="text-org5620a47">
+<div id="outline-container-orge962a54" class="outline-2">
+<h2 id="orge962a54">Instalar Docker en Raspberry Pi con Raspbian</h2>
+<div class="outline-text-2" id="text-orge962a54">
 <p>
-Vamos a cambiar el usuario "Pi", por defecto, por el usuario que deseemos, cambiando la carpeta /home/pi por /home/Nuevo_usuario
+En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.
 </p>
 </div>
-
-<div id="outline-container-orgc2f89b5" class="outline-3">
-<h3 id="orgc2f89b5">Habilitando el usuario root</h3>
-<div class="outline-text-3" id="text-orgc2f89b5">
+<div id="outline-container-orgc76b3c2" class="outline-3">
+<h3 id="orgc76b3c2">Instala primero algunos paquetes que necesitamos</h3>
+<div class="outline-text-3" id="text-orgc76b3c2">
 <p>
-Vamos a habilitar el usuario root, que por defecto esta deshabilitado
+<code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code>
 </p>
+</div>
+</div>
 
+<div id="outline-container-org0fe6900" class="outline-3">
+<h3 id="org0fe6900">Obtener la clave de firma Docker para paquetes</h3>
+<div class="outline-text-3" id="text-org0fe6900">
 <p>
-<code>sudo passwd root</code>
+<code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code>
 </p>
+</div>
+</div>
 
-<p>
-Ahora deberemos habilitar el acceso a root desde ssh:
-Buscaremos la sección <b>#Authentication:</b> y en PermitRootLogin, cambiaremos el valor que haya a continuación por yes.
-</p>
+<div id="outline-container-orgb0fbd37" class="outline-3">
+<h3 id="orgb0fbd37">Añadimos los repositorios oficiales</h3>
+<div class="outline-text-3" id="text-orgb0fbd37">
 <pre class="example">
-#PermitRootLogin prohibit-password
-PermitRootLogin yes
+sudo echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+     $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+</pre>
+</div>
+</div>
+<div id="outline-container-org6c34945" class="outline-3">
+<h3 id="org6c34945">Instalamos Docker</h3>
+<div class="outline-text-3" id="text-org6c34945">
+<pre class="example">
+sudo apt update
+sudo apt install docker-ce
+</pre>
+</div>
+</div>
+<div id="outline-container-org44d597c" class="outline-3">
+<h3 id="org44d597c">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h3>
+<div class="outline-text-3" id="text-org44d597c">
+<pre class="example">
+sudo systemctl enable docker
+sudo systemctl start docker
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orge9a2221" class="outline-3">
+<h3 id="orge9a2221">Crear el grupo Docker, para no tener que poner sudo</h3>
+<div class="outline-text-3" id="text-orge9a2221">
+<pre class="example">
+sudo groupadd docker
+sudo usermod -aG docker $USER
 </pre>
 <p>
-Quitar el "#" para que surja efecto.
-</p>
-
-<p>
-<code>sudo nano /etc/ssh/sshd_config</code>
-</p>
-
-<p>
-Reiniciamos el servidor ssh <b>en caso de problemas también la raspberry</b>
-</p>
-
-<p>
-<code>sudo service ssh restart</code>
-</p>
-
-<p>
-<b>En caso de tener algún servicio instalado, detener todos los servicios</b>
+Salir de la terminal y volver a entrar
 </p>
 </div>
 </div>
-
-<div id="outline-container-org6049d0b" class="outline-3">
-<h3 id="org6049d0b">Entrando como root</h3>
-<div class="outline-text-3" id="text-org6049d0b">
+<div id="outline-container-org2e28b00" class="outline-3">
+<h3 id="org2e28b00">Instalar Portainer</h3>
+<div class="outline-text-3" id="text-org2e28b00">
 <p>
-<b>Entramos por ssh como root</b> (salimos de la sesión actual y entramos como root) y vamos a cambiar el nombre de usuario por el que deseemos
-</p>
-
-<p>
-<code>sudo usermod -l nuevo_usuario pi -md /home/nuevo_usuario</code>
-</p>
-
-<p>
-El usuario Pi, seguirá en la máquina. Cambiaremos este por nuestro nuevo usuario:
-</p>
-
-<p>
-<code>sudo groupmod -n nuevo_ de_grupo  pi</code>
-</p>
-
-<p>
-Salimos del ssh y nos logueamos con el nuevo nombre de usuario
-</p>
-
-<p>
-Deshabilitamos root, quitando la contraseña de root
-</p>
-
-<p>
-<code>sudo passwd –l root</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf0ab5b3" class="outline-3">
-<h3 id="orgf0ab5b3">Cambiar contraseña</h3>
-<div class="outline-text-3" id="text-orgf0ab5b3">
-<p>
-<code>passwd</code>
-Nos pedirá la nueva contraseña y que la repitamos.
+<code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code>
 </p>
 <br>
 <p>
-Publicado por Angel el viernes 01 febrero del 2019  
+Publicado por Angel el domingo 03 febrero del 2019  
 </p>
 <br><br>
 <p>
@@ -370,12 +353,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">Cambiar| mover ruta y contraseña de usuario en tu Raspberry Pi</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
