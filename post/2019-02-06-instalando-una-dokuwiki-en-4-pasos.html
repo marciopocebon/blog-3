@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
+<title>Instalando una Dokuwiki en 4 pasos</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás"
+<meta name="description" content="Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2."
  />
-<meta name="keywords" content="antergos,comandos,terminal" />
+<meta name="keywords" content="raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,243 +271,131 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org8f18ee9" class="outline-2">
-<h2 id="org8f18ee9">Antergos. Comandos para terminal y derivadas de Arch Linux</h2>
-<div class="outline-text-2" id="text-org8f18ee9">
-<p>
-Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el
-Sistema Operativo, instalar y demás…
-</p>
+<div id="outline-container-org6fb3c74" class="outline-2">
+<h2 id="org6fb3c74">Instalando una Dokuwiki en 4 pasos</h2>
+<div class="outline-text-2" id="text-org6fb3c74">
 
-<p>
-Aquí iré añadiendo periodicamente comandos para ir conociendolos.
+<div class="figure">
+<p><img src="../images-blog/dokuwiki.png" alt="dokuwiki.png" />
 </p>
 </div>
 
-<div id="outline-container-org3f2ae73" class="outline-3">
-<h3 id="org3f2ae73">pacman</h3>
-<div class="outline-text-3" id="text-org3f2ae73">
-<p>
-Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.
-</p>
-</div>
-<div id="outline-container-org648cc9a" class="outline-4">
-<h4 id="org648cc9a">Actualizar el Sistema Operativo y repositorios</h4>
-<div class="outline-text-4" id="text-org648cc9a">
-<p>
-<code>sudo pacman -Syyuu</code>   
-</p>
-</div>
-</div>
-<div id="outline-container-org4242d47" class="outline-4">
-<h4 id="org4242d47">Buscar en los repositorios (usaremos de ejem: gimp)</h4>
-<div class="outline-text-4" id="text-org4242d47">
-<p>
-<code>sudo pacman -Ss gimp</code>
-</p>
-</div>
-</div>
-<div id="outline-container-org3a4f937" class="outline-4">
-<h4 id="org3a4f937">Instalar aplicaciones</h4>
-<div class="outline-text-4" id="text-org3a4f937">
-<p>
-<code>sudo pacman -S gimp</code>
-</p>
-</div>
-</div>
-</div>
 
-<div id="outline-container-org73b2600" class="outline-3">
-<h3 id="org73b2600">yaourt</h3>
-<div class="outline-text-3" id="text-org73b2600">
 <p>
-Las aplicaciones que no esten en los repositorios oficiales de Arch, estan en AUR. AUR (Arch User Repository) es el lugar donde la
-comunidad de Arch Linux puede subir los PKGBUILD de las aplicaciones, bibliotecas, etc.,
+Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts.
+En este post os explico como instalar Dokuwiki en tan solo 4 pasos. Doy por hecho que tienes instalado apache2.
 </p>
 
 <p>
-Para instalar desde Aur utilizaremos yaourt.
+<code>sudo apt install apache2</code>
+</p>
+
+<p>
+Lo bueno que tiene dokuwiki, es que no tenemos que instalar base de datos y todas nuestras entradas están en formato texto plano.
 </p>
 </div>
-
-<div id="outline-container-orgba86251" class="outline-4">
-<h4 id="orgba86251">Actualizar los repositorios</h4>
-<div class="outline-text-4" id="text-orgba86251">
+<div id="outline-container-org0ae762c" class="outline-3">
+<h3 id="org0ae762c">Descargando Dokuwiki</h3>
+<div class="outline-text-3" id="text-org0ae762c">
 <p>
-<code>yaourt -Syu</code>
+Hay Versiones estables y no estables. Descargamos con wget, por ejemplo, la versión estable copiando el link de la ruta desde la web de <a href="https://www.dokuwiki.org/dokuwiki">DokuWiki</a>.
+</p>
+
+<p>
+Nos situamos en  <code>/var/www/html/</code>, raiz de nuestro servidor web y descargamos ahí el archivo comprimido con <b>wget</b>:
+</p>
+
+<p>
+Si no tenemos permisos, podremos descargarlo utilizando <b>sudo</b>. Posteriormente, para descomprimir la carpeta, también tendremos que usarlo. <code>sudo wget ...</code>, <code>sudo tar ...</code>, <code>sudo mv ...</code>
+</p>
+
+<p>
+<code>wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbbfe219" class="outline-4">
-<h4 id="orgbbfe219">Buscar en yaourt (usaremos de ejem: utext)</h4>
-<div class="outline-text-4" id="text-orgbbfe219">
+<div id="outline-container-orgced665d" class="outline-3">
+<h3 id="orgced665d">Descomprimamos</h3>
+<div class="outline-text-3" id="text-orgced665d">
 <p>
-<code>yaourt -Ss utext</code>
+Descomprimimos el archivo descargado. Si no es este el nombre, utiliza el nombre del archivo.
+</p>
+
+<p>
+<code>tar -xzvf dokuwiki-stable.tgz</code>
+</p>
+
+<p>
+Renombra la carpeta con el nombre que desees, yo en mi caso, le podré <b>dokuwiki</b>:
+</p>
+
+<p>
+<code>mv dokuwiki-stable/ dokuwiki/</code>
+</p>
+
+<p>
+Ahora vamos a dar permisos de visualización y edición desde el navegador
+</p>
+
+<p>
+<code>sudo chown -R www-data:www-data /var/www/html/dokuwiki</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd29cdae" class="outline-4">
-<h4 id="orgd29cdae">Instalar aplicaciones que no encontremos en Pacman (como utext)</h4>
-<div class="outline-text-4" id="text-orgd29cdae">
+<div id="outline-container-orgcbcc3b2" class="outline-3">
+<h3 id="orgcbcc3b2">Dando el último paso</h3>
+<div class="outline-text-3" id="text-orgcbcc3b2">
 <p>
-<code>yaourt -S utext</code>
+Accedemos desde el navegador web, a la ip de nuestro servidor y la siguiente ruta:
+<a href="http://ip/dokuwiki/install.php">http://ip/dokuwiki/install.php</a>
+</p>
+
+<p>
+Rellenamos los datos de administrador y pulsamos al final para que se inicie la instalación.
+</p>
+
+<p>
+Elimina el archivo <b>install.php</b>
 </p>
 </div>
 </div>
-</div>
 
-
-<div id="outline-container-orgbc6f4c2" class="outline-3">
-<h3 id="orgbc6f4c2">Guía de comandos básicos de Pacman</h3>
-<div class="outline-text-3" id="text-orgbc6f4c2">
-</div>
-<div id="outline-container-orgc346ad2" class="outline-4">
-<h4 id="orgc346ad2">Instalar paquetes</h4>
-<div class="outline-text-4" id="text-orgc346ad2">
-<ul class="org-ul">
-<li><code>pacman -S “paquete”</code>  Instala un paquete.</li>
-<li><code>pacman -Sy “paquete”</code> Sincroniza repositorios e instala el paquete.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgee57828" class="outline-4">
-<h4 id="orgee57828">Actualizar paquetes</h4>
-<div class="outline-text-4" id="text-orgee57828">
-<ul class="org-ul">
-<li><code>pacman -Sy</code>  Sincroniza repositorios.</li>
-<li><code>pacman -Syy</code>  Fuerza la sincronización de repositorios incluso para paquetes que parecen actualizados.</li>
-<li><code>pacman -Syu</code>  Sincroniza repositorios y actualiza paquetes.</li>
-<li><code>pacman -Syyu</code>  Fuerza sincronización y actualiza paquetes.</li>
-<li><code>pacman -Su</code>  Actualiza paquetes sin sincronizar repositorios.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orga8cf264" class="outline-4">
-<h4 id="orga8cf264">Buscar paquetes</h4>
-<div class="outline-text-4" id="text-orga8cf264">
-<ul class="org-ul">
-<li><code>pacman -Ss “paquete”</code>  Busca un paquete.</li>
-<li><code>pacman -Si “paquete”</code>  Muestra información detallada de un paquete.</li>
-<li><code>pacman -Sg “grupo”</code>  Lista los paquetes que pertenecen a un grupo.</li>
-<li><code>pacman -Qs “paquete”</code>  Busca un paquete YA instalado.</li>
-<li><code>pacman -Qi “paquete”</code>  Muestra información detallada de un paquete YA instalado.</li>
-<li><code>pacman -Qdt</code>  Muestra paquetes huerfanos.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orge762241" class="outline-4">
-<h4 id="orge762241">Eliminar paquetes</h4>
-<div class="outline-text-4" id="text-orge762241">
-<ul class="org-ul">
-<li><code>pacman -R “paquete”</code>  Borra paquete sin sus dependencias.</li>
-<li><code>pacman -Rs “paquete”</code>  Borra paquete y sus dependencias no utilizadas.</li>
-</ul>
-
-
+<div id="outline-container-org9ef4d55" class="outline-3">
+<h3 id="org9ef4d55">Habilitar código embebido html y php</h3>
+<div class="outline-text-3" id="text-org9ef4d55">
 <p>
-Fuente: sobrebits.com
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org139a1b8" class="outline-3">
-<h3 id="org139a1b8">Aplicaciones Imprescindibles</h3>
-<div class="outline-text-3" id="text-org139a1b8">
-<p>
-Navegador Chrome
+Para poder ver código embebido en html en nuestra dokuwiki, como vídeos de Youtube,etc&#x2026;  accederemos a traves de la cuenta de administrador a:
 </p>
 
 <p>
-<code>yaourt -S google-chrome</code>
+Administrar -&gt; Parámetros de Configuración
 </p>
 
-<p>
-Editor de video
-</p>
 
-<p>
-<code>sudo pacman -S openshot</code>
-</p>
-
-<p>
-Notas de Nextcloud
-</p>
-
-<p>
-<code>yaourt -S qownnotes</code>
-</p>
-
-<p>
-Descarga videos de youtube
-</p>
-
-<p>
-<code>sudo pacman -S clipgrab</code>
-</p>
-
-<p>
-Hacer capturas de pantalla
-</p>
-
-<p>
-<code>yaourt -S shutter</code>
-</p>
-
-<p>
-Convertir audios de m4a a MP3
-</p>
-
-<p>
-<code>sudo pacman -S soundconverter</code>
-</p>
-
-<p>
-Editor de Fotografía
-</p>
-
-<p>
-<code>sudo pacman -S gimp</code>
-</p>
-
-<p>
-Instalar Inkscape
-</p>
-
-<p>
-<code>sudo pacman -S inkscape</code>
-</p>
-
-<p>
-Transmission
-</p>
-
-<p>
-<code>sudo pacman -S transmission-gtk</code>
-</p>
-
-<p>
-Skype
-</p>
-
-<p>
-<code>sudo pacman -S skype</code>
-</p>
 
 <br>
 <p>
-Publicado por Angel el lunes 21 enero del 2019  
+Publicado por Angel el miércoles 06 febrero del 2019  
 </p>
 <br><br>
 <p>
 También te puede interesar:
 </p>
 
+<ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
+</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
 </div>

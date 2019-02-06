@@ -13,6 +13,33 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instalando una Dokuwiki en 4 pasos</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html</link>
+    <description>Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html&gt;Instalando una Dokuwiki en 4 pasos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 06 Feb 2019 15:15 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html</guid>
+   </item>
+   <item>
     <title>Instalar Docker en Raspberry Pi con Raspbian</title>
     <link>https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html</link>
     <description>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este... 
