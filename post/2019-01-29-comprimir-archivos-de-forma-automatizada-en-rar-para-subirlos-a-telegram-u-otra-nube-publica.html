@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org15397bd" class="outline-2">
-<h2 id="org15397bd">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</h2>
-<div class="outline-text-2" id="text-org15397bd">
+<div id="outline-container-orgc935b92" class="outline-2">
+<h2 id="orgc935b92">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</h2>
+<div class="outline-text-2" id="text-orgc935b92">
 <p>
 Telegram nos proporciona una nube ilimitada&#x2026; pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos. Después desde Telegram Desktop los podremos subir sin problemas. Tengo constancia de gente que ha subido archivos de hasta 2Gb, pero en este artículo, ya que no hay limitación en el número de archivos a subir, vamos a limitar a 1,4Gb el tamaño. Este artículo no solo vale para Telegram, Box.com también tiene limitación a 50mb, así que cambiando el número del comando, podrás dividir el archivo al tamaño que desees.
 </p>
@@ -283,9 +283,9 @@ El Objetivo de este artículo, no solo es el aprender a trocear estos, sino tamb
 </p>
 </div>
 
-<div id="outline-container-orgc8b5b80" class="outline-3">
-<h3 id="orgc8b5b80">Instalando rar</h3>
-<div class="outline-text-3" id="text-orgc8b5b80">
+<div id="outline-container-org7ec7058" class="outline-3">
+<h3 id="org7ec7058">Instalando rar</h3>
+<div class="outline-text-3" id="text-org7ec7058">
 <p>
 Para poder crear archivos rar, necesitamos instalar rar:
 </p>
@@ -306,9 +306,9 @@ unrar nos permitirá descomprimir los archivos, así que también lo instalaremo
 </div>
 
 
-<div id="outline-container-orgac2288d" class="outline-3">
-<h3 id="orgac2288d">Comprimir archivos que estén dentro de una carpeta</h3>
-<div class="outline-text-3" id="text-orgac2288d">
+<div id="outline-container-org8ce9fa2" class="outline-3">
+<h3 id="org8ce9fa2">Comprimir archivos que estén dentro de una carpeta</h3>
+<div class="outline-text-3" id="text-org8ce9fa2">
 <p>
 Nos situaremos en la carpeta que contenga los archivos superiores a 1.4Gb y ejecutaremos este comando:
 </p>
@@ -322,9 +322,9 @@ Como resultado, tendremos archivos con un tamaño máximo de 1.4Gb, con el nombr
 </div>
 
 
-<div id="outline-container-orgdc829af" class="outline-3">
-<h3 id="orgdc829af">Comprimir archivos que estén dentro de subcarpetas</h3>
-<div class="outline-text-3" id="text-orgdc829af">
+<div id="outline-container-org08f29ae" class="outline-3">
+<h3 id="org08f29ae">Comprimir archivos que estén dentro de subcarpetas</h3>
+<div class="outline-text-3" id="text-org08f29ae">
 <p>
 En este caso, vamos a comprimir archivos ubicados en subcarpetas y que su tamaño también superen los 1,4Gb. Nos situaremos en la carpeta raiz de estas subcarpetas y ejecutaremos el comando:
 </p>
@@ -337,9 +337,9 @@ Del mismo modo que en el caso anterior, tendremos los archivos troceados, renomb
 </div>
 </div>
 
-<div id="outline-container-org584acdb" class="outline-3">
-<h3 id="org584acdb">Reconstruir el archivo original</h3>
-<div class="outline-text-3" id="text-org584acdb">
+<div id="outline-container-org988921b" class="outline-3">
+<h3 id="org988921b">Reconstruir el archivo original</h3>
+<div class="outline-text-3" id="text-org988921b">
 <p>
 Teniendo todos los archivos que previamente habíamos troceado, ahora vamos a transformarlo en el archivo original. Para ello, tenemos que tener instalado <b>unrar</b> como comenté al principio y tanto desde la interfaz gráfica, como la terminal, necesitamos que todos los archivos estén en la misma carpeta. Nos situaremos dentro de esta, descomprimiremos el número 1 y unrar se encargará de ir uniendo los trozos y devolvernos el archivo original.
 </p>
