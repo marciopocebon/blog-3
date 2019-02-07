@@ -1,0 +1,5 @@
+// sincronizar solo archivos .org, .sh y carpeta org.
+!org
+!*org
+!*sh
+*

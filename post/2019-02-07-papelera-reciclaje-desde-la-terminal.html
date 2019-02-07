@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</title>
+<title>Papelera Reciclaje desde la Terminal</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos"
+<meta name="description" content="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal."
  />
-<meta name="keywords" content="telegram" />
+<meta name="keywords" content="terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,96 +271,185 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org15397bd" class="outline-2">
-<h2 id="org15397bd">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</h2>
-<div class="outline-text-2" id="text-org15397bd">
-<p>
-Telegram nos proporciona una nube ilimitada&#x2026; pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos. Después desde Telegram Desktop los podremos subir sin problemas. Tengo constancia de gente que ha subido archivos de hasta 2Gb, pero en este artículo, ya que no hay limitación en el número de archivos a subir, vamos a limitar a 1,4Gb el tamaño. Este artículo no solo vale para Telegram, Box.com también tiene limitación a 50mb, así que cambiando el número del comando, podrás dividir el archivo al tamaño que desees.
-</p>
+<div id="outline-container-orgfef6117" class="outline-2">
+<h2 id="orgfef6117">Papelera Reciclaje desde la Terminal</h2>
+<div class="outline-text-2" id="text-orgfef6117">
 
-<p>
-El Objetivo de este artículo, no solo es el aprender a trocear estos, sino también, como a mi me gusta, automatizar esta tarea. Así que en la primera parte, trocearemos archivos que están dentro de una carpeta y en la segunda, trocearemos archivos que están dentro de subcarpetas.
+<div class="figure">
+<p><img src="../images-blog/papelera.jpg" alt="papelera.jpg" />
 </p>
 </div>
 
-<div id="outline-container-orgc8b5b80" class="outline-3">
-<h3 id="orgc8b5b80">Instalando rar</h3>
-<div class="outline-text-3" id="text-orgc8b5b80">
+
+
 <p>
-Para poder crear archivos rar, necesitamos instalar rar:
+Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer <b>rm</b> y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.
+</p>
+</div>
+<div id="outline-container-orgf022637" class="outline-3">
+<h3 id="orgf022637">¿Donde están los archivos de mi Papelera?</h3>
+<div class="outline-text-3" id="text-orgf022637">
+<p>
+Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es:
 </p>
 
 <p>
-<code>sudo apt install rar</code>
-</p>
-
-
-<p>
-unrar nos permitirá descomprimir los archivos, así que también lo instalaremos
-</p>
-
-<p>
-<code>sudo apt install unrar</code>
+<code>~/.local/share/Trash/files</code>
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-orgac2288d" class="outline-3">
-<h3 id="orgac2288d">Comprimir archivos que estén dentro de una carpeta</h3>
-<div class="outline-text-3" id="text-orgac2288d">
+<div id="outline-container-org037e28c" class="outline-3">
+<h3 id="org037e28c">Instalando trash-cli</h3>
+<div class="outline-text-3" id="text-org037e28c">
 <p>
-Nos situaremos en la carpeta que contenga los archivos superiores a 1.4Gb y ejecutaremos este comando:
+La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales:
 </p>
-<pre class="example">
-for directorio in *; do rar a -va1400m "${directorio%/}.rar" -r "$directorio" ; done
-</pre>
+
 <p>
-Como resultado, tendremos archivos con un tamaño máximo de 1.4Gb, con el nombre del archivo original y numerados.
+<code>sudo apt install trash-cli</code>
 </p>
 </div>
 </div>
 
+<div id="outline-container-orgcf21103" class="outline-3">
+<h3 id="orgcf21103">Tabla de comandos</h3>
+<div class="outline-text-3" id="text-orgcf21103">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<div id="outline-container-orgdc829af" class="outline-3">
-<h3 id="orgdc829af">Comprimir archivos que estén dentro de subcarpetas</h3>
-<div class="outline-text-3" id="text-orgdc829af">
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">trash-put</td>
+<td class="org-left">Enviar archivos a la Papelera</td>
+</tr>
+
+<tr>
+<td class="org-left">trash-empty</td>
+<td class="org-left">Vaciar la papelera</td>
+</tr>
+
+<tr>
+<td class="org-left">trash-list</td>
+<td class="org-left">Listar archivos que hay en la papelera</td>
+</tr>
+
+<tr>
+<td class="org-left">trash-restore</td>
+<td class="org-left">Restaura un archivo de la papelera</td>
+</tr>
+
+<tr>
+<td class="org-left">trash-rm</td>
+<td class="org-left">Elimina archivos individuales de la papelera</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgb5918f1" class="outline-3">
+<h3 id="orgb5918f1">Buscar un Archivo en la Papelera</h3>
+<div class="outline-text-3" id="text-orgb5918f1">
 <p>
-En este caso, vamos a comprimir archivos ubicados en subcarpetas y que su tamaño también superen los 1,4Gb. Nos situaremos en la carpeta raiz de estas subcarpetas y ejecutaremos el comando:
+Si combinamos trash-cli con grep, podremos buscar archivos y carpetas que hay en nuestra papelera, mediante el nombre
 </p>
-<pre class="example">
-for directorio in */; do rar a -va1400m "${directorio%/}.rar" -r "$directorio" ; done
-</pre>
+
 <p>
-Del mismo modo que en el caso anterior, tendremos los archivos troceados, renombrados y numerados, en la carpeta que estamos situados.
+<code>trash-list | grep foo</code>
+</p>
+
+
+<p>
+También podriamos jugar con nuestro comandos favoritos, como conocer cuantos archivos y carpetas tenemos:
+</p>
+
+<p>
+<code>trash-list | wc -l</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org584acdb" class="outline-3">
-<h3 id="org584acdb">Reconstruir el archivo original</h3>
-<div class="outline-text-3" id="text-org584acdb">
+<div id="outline-container-org513843c" class="outline-3">
+<h3 id="org513843c">Eliminar solo los archivos que coincidan con un patrón:</h3>
+<div class="outline-text-3" id="text-org513843c">
 <p>
-Teniendo todos los archivos que previamente habíamos troceado, ahora vamos a transformarlo en el archivo original. Para ello, tenemos que tener instalado <b>unrar</b> como comenté al principio y tanto desde la interfaz gráfica, como la terminal, necesitamos que todos los archivos estén en la misma carpeta. Nos situaremos dentro de esta, descomprimiremos el número 1 y unrar se encargará de ir uniendo los trozos y devolvernos el archivo original.
+Aquí, por ejemplo, eliminaremos todos los archivos con extensión .txt
 </p>
 
 <p>
-<code>unrar x archivo.rar</code>
+<code>trash-rm \ *.txt</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf462d52" class="outline-3">
+<h3 id="orgf462d52">Eliminar en función de los dias</h3>
+<div class="outline-text-3" id="text-orgf462d52">
+<p>
+Eliminar los archivos enviados a la papelera los últimos 10 dias.
 </p>
 
 <p>
-<code>unrar x archivo.rar /ruta_donde_enviar_el_archivo</code> 
+<code>trash-empty 10</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cadf32" class="outline-3">
+<h3 id="org4cadf32">¿Puedo alias rm a trash-put?</h3>
+<div class="outline-text-3" id="text-org4cadf32">
+<p>
+Si no me acuerdo de lo que hice ayer, menos me voy a acordar de esta magnífica aplicación. Así que para no borrar de una forma drástica mis archivos o carpetas y hacer uso de esta aplicación, he sustituido mediante el archivo de configuración <b>.bashrc</b>, que cuando ejecute el comando <b>rm</b>, en realidad ejecute el comando <b>trash-put</b> para que lo envie a la papelera.
 </p>
 
 <p>
-Espero que os haya gustado este artículo y a darle caña a la terminal
+Para hacer esto, vamos ha hacer uso de los alias:
+</p>
+
+<p>
+Con tu editor de texto favorito en terminal, en este caso utilizaremos nano, añadiremos al final esta línea:
+</p>
+
+<p>
+<code>nano ~/.bashrc</code>
+</p>
+
+<p>
+<code>alias rm = 'trash-put ; echo "Archivo movido a la papelera"'</code>
+</p>
+
+<p>
+Ahora cada vez que hagamos un <b>rm</b>, enviará los archivos o carpetas a la papelera y además, nos mostrará ese mensaje para recordarlo.
 </p>
 
 
+<p>
+Otra opción, sería el borrar los archivos mediante cron, programando periódicamente el borrado cada x días
+</p>
+</div>
+</div>
+<div id="outline-container-org528f149" class="outline-3">
+<h3 id="org528f149">Conclusión</h3>
+<div class="outline-text-3" id="text-org528f149">
+<p>
+Como veis, gracias a esta aplicación y a nuestro ingenio con la terminal, podemos automatizar y tener mas controlados nuestros archivos. 
+</p>
 
+<p>
+Disfrutar de la terminal 😜
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://github.com/andreafrancia/trash-cli">Repositorio</a></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el martes 29 enero del 2019  
+Publicado por Angel el jueves 07 febrero del 2019  
 </p>
 <br><br>
 <p>
