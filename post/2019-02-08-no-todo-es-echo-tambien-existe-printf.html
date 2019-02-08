@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</title>
+<title>No todo es echo. También existe printf</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos"
+<meta name="description" content="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf."
  />
-<meta name="keywords" content="telegram" />
+<meta name="keywords" content="terminal" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,95 +271,488 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org9a39ebb" class="outline-2">
-<h2 id="org9a39ebb">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</h2>
-<div class="outline-text-2" id="text-org9a39ebb">
+<div id="outline-container-org9a6a2c9" class="outline-2">
+<h2 id="org9a6a2c9">No todo es echo. También existe printf</h2>
+<div class="outline-text-2" id="text-org9a6a2c9">
 <p>
-Telegram nos proporciona una nube ilimitada&#x2026; pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos. Después desde Telegram Desktop los podremos subir sin problemas. Tengo constancia de gente que ha subido archivos de hasta 2Gb, pero en este artículo, ya que no hay limitación en el número de archivos a subir, vamos a limitar a 1,4Gb el tamaño. Este artículo no solo vale para Telegram, Box.com también tiene limitación a 50mb, así que cambiando el número del comando, podrás dividir el archivo al tamaño que desees.
-</p>
-
-<p>
-El Objetivo de este artículo, no solo es el aprender a trocear estos, sino también, como a mi me gusta, automatizar esta tarea. Así que en la primera parte, trocearemos archivos que están dentro de una carpeta y en la segunda, trocearemos archivos que están dentro de subcarpetas.
+Cuando hacemos scritps en bash, habitualmente utilizamos <b>echo</b> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc&#x2026; para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.
 </p>
 </div>
 
-<div id="outline-container-org219b4bc" class="outline-3">
-<h3 id="org219b4bc">Instalando rar</h3>
-<div class="outline-text-3" id="text-org219b4bc">
+<div id="outline-container-orgde27c6a" class="outline-3">
+<h3 id="orgde27c6a">Iniciandonos con printf</h3>
+<div class="outline-text-3" id="text-orgde27c6a">
 <p>
-Para poder crear archivos rar, necesitamos instalar rar:
-</p>
-
-<p>
-<code>sudo apt install rar</code>
+printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:
 </p>
 
 
-<p>
-unrar nos permitirá descomprimir los archivos, así que también lo instalaremos
-</p>
-
-<p>
-<code>sudo apt install unrar</code>
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgca60319" class="outline-3">
-<h3 id="orgca60319">Comprimir archivos que estén dentro de una carpeta</h3>
-<div class="outline-text-3" id="text-orgca60319">
-<p>
-Nos situaremos en la carpeta que contenga los archivos superiores a 1.4Gb y ejecutaremos este comando:
-</p>
 <pre class="example">
-for directorio in *; do rar a -va1400m "${directorio%/}.rar" -r "$directorio" ; done
+$ printf "Hola Mundo"
+Hola Mundo
 </pre>
-<p>
-Como resultado, tendremos archivos con un tamaño máximo de 1.4Gb, con el nombre del archivo original y numerados.
-</p>
 </div>
 </div>
-
-
-<div id="outline-container-org5cc0106" class="outline-3">
-<h3 id="org5cc0106">Comprimir archivos que estén dentro de subcarpetas</h3>
-<div class="outline-text-3" id="text-org5cc0106">
+<div id="outline-container-orgac0dbca" class="outline-3">
+<h3 id="orgac0dbca">Salto de línea</h3>
+<div class="outline-text-3" id="text-orgac0dbca">
 <p>
-En este caso, vamos a comprimir archivos ubicados en subcarpetas y que su tamaño también superen los 1,4Gb. Nos situaremos en la carpeta raiz de estas subcarpetas y ejecutaremos el comando:
+Del mismo modo que <b>echo</b>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:
 </p>
+
+
 <pre class="example">
-for directorio in */; do rar a -va1400m "${directorio%/}.rar" -r "$directorio" ; done
+$ printf "%s\n" "Hola Mundo"
+Hola Mundo
 </pre>
+
+
+<pre class="example">
+$ printf "Hola \nMundo"
+Hola
+Mundo
+</pre>
+
+
+
+<pre class="example">
+$ printf "%s\n" "Hola" "Mundo"
+Hola
+Mundo
+</pre>
+
+
+
+<pre class="example">
+$ printf "%*s\n" $(tput cols) "Hola Mundo!"
+Hola
+Mundo
+!
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org98caf34" class="outline-3">
+<h3 id="org98caf34">Imprimir al final de la línea</h3>
+<div class="outline-text-3" id="text-org98caf34">
 <p>
-Del mismo modo que en el caso anterior, tendremos los archivos troceados, renombrados y numerados, en la carpeta que estamos situados.
+Ahora vamos a desplazar la línea al final del margen derecho:
+</p>
+
+
+<pre class="example">
+$ printf "%*s\n" $(tput cols) "Hola Mundo!"
+
+				 Hola Mundo!
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orga0a5c73" class="outline-3">
+<h3 id="orga0a5c73">Llamada de Fechas, host, rutas</h3>
+<div class="outline-text-3" id="text-orga0a5c73">
+<p>
+Podemos llamar diferentes formatos de fecha, host, rutas,&#x2026;
+</p>
+
+
+<pre class="example">
+$ printf 'Esta es la semana %(%U/%Y)T.\n' -1
+Esta es la semana 05/2019.
+</pre>
+
+<p>
+Mostrando la fecha y host:
+</p>
+
+
+<pre class="example">
+$ printf "%s:%s\n" "$(date)" "$(hostname)"
+vie feb  8 22:16:26 CET 2019:angel
+</pre>
+
+
+<p>
+Ruta de mi carpeta home:
+</p>
+
+
+<pre class="example">
+$ printf "La ruta de mi home es %s.\n" $HOME
+La ruta de mi home es /home/angel.
+</pre>
+
+<p>
+Añadiendo el nombre con el que nos hemos logeado en la sesión:
+</p>
+
+
+<pre class="example">
+$ printf "Hola, Soy %s.\n" $LOGNAME
+Hola, Soy angel.
+</pre>
+
+
+<p>
+Fecha y hora:
+</p>
+
+
+<pre class="example">
+$ printf "%(%m-%d-%Y %H:%M:%S)T\n" $(date +%s)
+02-08-2019 21:10:35
+</pre>
+
+
+<p>
+Tabla con el código del formato de fecha:
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Código de Formato</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">%%</td>
+<td class="org-left">un% literal</td>
+</tr>
+
+<tr>
+<td class="org-left">%a</td>
+<td class="org-left">el nombre abreviado del día de la semana de locale (por ejemplo, Lun)</td>
+</tr>
+
+<tr>
+<td class="org-left">%A</td>
+<td class="org-left">el nombre completo del día laborable de la localidad (por ejemplo, domingo)</td>
+</tr>
+
+<tr>
+<td class="org-left">%b</td>
+<td class="org-left">el nombre abreviado del mes de la localidad (por ejemplo, enero)</td>
+</tr>
+
+<tr>
+<td class="org-left">%B</td>
+<td class="org-left">el nombre completo del mes del local (por ejemplo, enero)</td>
+</tr>
+
+<tr>
+<td class="org-left">%c</td>
+<td class="org-left">Fecha y hora del local (por ejemplo, jue 3 de marzo 23:05:25 2005)</td>
+</tr>
+
+<tr>
+<td class="org-left">%C</td>
+<td class="org-left">siglo; como% Y, excepto omitir los últimos dos dígitos (por ejemplo, 20)</td>
+</tr>
+
+<tr>
+<td class="org-left">%d</td>
+<td class="org-left">día del mes (por ejemplo, 01)</td>
+</tr>
+
+<tr>
+<td class="org-left">%D</td>
+<td class="org-left">fecha; igual que% m /% d /% y</td>
+</tr>
+
+<tr>
+<td class="org-left">%e</td>
+<td class="org-left">día del mes, espacio acolchado; igual que% _d</td>
+</tr>
+
+<tr>
+<td class="org-left">%F</td>
+<td class="org-left">fecha completa igual que% Y-% m-% d</td>
+</tr>
+
+<tr>
+<td class="org-left">%g</td>
+<td class="org-left">los dos últimos dígitos del año del número de semana ISO (ver% G)</td>
+</tr>
+
+<tr>
+<td class="org-left">%G</td>
+<td class="org-left">año del número de semana ISO (ver% V); Normalmente útil solo con% V</td>
+</tr>
+
+<tr>
+<td class="org-left">%h</td>
+<td class="org-left">igual que% b</td>
+</tr>
+
+<tr>
+<td class="org-left">%H</td>
+<td class="org-left">hora (00..23)</td>
+</tr>
+
+<tr>
+<td class="org-left">%I</td>
+<td class="org-left">hora (01..12)</td>
+</tr>
+
+<tr>
+<td class="org-left">%j</td>
+<td class="org-left">día del año (001..366)</td>
+</tr>
+
+<tr>
+<td class="org-left">%k</td>
+<td class="org-left">hora, espacio rellenado (0..23); igual que% _H</td>
+</tr>
+
+<tr>
+<td class="org-left">%l</td>
+<td class="org-left">hora, espacio acolchado (1..12); igual que% _I</td>
+</tr>
+
+<tr>
+<td class="org-left">%m</td>
+<td class="org-left">mes (01..12)</td>
+</tr>
+
+<tr>
+<td class="org-left">%M</td>
+<td class="org-left">minuto (00..59)</td>
+</tr>
+
+<tr>
+<td class="org-left">%n</td>
+<td class="org-left">una nueva linea</td>
+</tr>
+
+<tr>
+<td class="org-left">%N</td>
+<td class="org-left">nanosegundos (000000000..999999999)</td>
+</tr>
+
+<tr>
+<td class="org-left">%p</td>
+<td class="org-left">el equivalente local de AM o PM; en blanco si no se conoce</td>
+</tr>
+
+<tr>
+<td class="org-left">%P</td>
+<td class="org-left">como% p, pero minúscula</td>
+</tr>
+
+<tr>
+<td class="org-left">%q</td>
+<td class="org-left">trimestre del año (1..4)</td>
+</tr>
+
+<tr>
+<td class="org-left">%r</td>
+<td class="org-left">el reloj de 12 horas del local (por ejemplo, 11:11:04 PM)</td>
+</tr>
+
+<tr>
+<td class="org-left">%R</td>
+<td class="org-left">Hora y minuto de 24 horas; igual que% H:% M</td>
+</tr>
+
+<tr>
+<td class="org-left">%s</td>
+<td class="org-left">segundos desde 1970-01-01 00:00:00 UTC</td>
+</tr>
+
+<tr>
+<td class="org-left">%S</td>
+<td class="org-left">segundo (00..60)</td>
+</tr>
+
+<tr>
+<td class="org-left">%t</td>
+<td class="org-left">una pestaña</td>
+</tr>
+
+<tr>
+<td class="org-left">%T</td>
+<td class="org-left">hora; igual que% H:% M:% S</td>
+</tr>
+
+<tr>
+<td class="org-left">%u</td>
+<td class="org-left">día de la semana (1..7); 1 es lunes</td>
+</tr>
+
+<tr>
+<td class="org-left">%U</td>
+<td class="org-left">Número de la semana del año, con el domingo como primer día de la semana (00..53)</td>
+</tr>
+
+<tr>
+<td class="org-left">%V</td>
+<td class="org-left">Número de semana ISO, con el lunes como primer día de la semana (01..53)</td>
+</tr>
+
+<tr>
+<td class="org-left">%w</td>
+<td class="org-left">día de la semana (0..6); 0 es domingo</td>
+</tr>
+
+<tr>
+<td class="org-left">%W</td>
+<td class="org-left">Número de la semana del año, con el lunes como primer día de la semana (00..53)</td>
+</tr>
+
+<tr>
+<td class="org-left">%x</td>
+<td class="org-left">Representación de la fecha de la localidad (por ejemplo, 31/12/99)</td>
+</tr>
+
+<tr>
+<td class="org-left">%X</td>
+<td class="org-left">Representación del tiempo del local (por ejemplo, 23:13:48)</td>
+</tr>
+
+<tr>
+<td class="org-left">%y</td>
+<td class="org-left">los dos últimos dígitos del año (00..99)</td>
+</tr>
+
+<tr>
+<td class="org-left">%Y</td>
+<td class="org-left">año</td>
+</tr>
+
+<tr>
+<td class="org-left">%z</td>
+<td class="org-left">+ hhmm zona horaria numérica (por ejemplo, -0400)</td>
+</tr>
+
+<tr>
+<td class="org-left">%:z</td>
+<td class="org-left">+ hh: mm zona horaria numérica (por ejemplo, -04: 00)</td>
+</tr>
+
+<tr>
+<td class="org-left">%::z</td>
+<td class="org-left">+ hh: mm: ss zona horaria numérica (por ejemplo, -04: 00: 00)</td>
+</tr>
+
+<tr>
+<td class="org-left">%:::z</td>
+<td class="org-left">zona horaria numérica con: a la precisión necesaria (por ejemplo, -04, +05: 30)</td>
+</tr>
+
+<tr>
+<td class="org-left">%Z</td>
+<td class="org-left">abreviatura alfabética de la zona horaria (por ejemplo, EDT)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+<div id="outline-container-org75066c9" class="outline-3">
+<h3 id="org75066c9">Editar texto</h3>
+<div class="outline-text-3" id="text-org75066c9">
+<p>
+Cortar Texto:
+</p>
+
+
+<pre class="example">
+$ printf "%.*s" 12 "Muestra solo las cinco primeras letras"
+Muestra solo
+</pre>
+
+
+
+
+<pre class="example">
+$ printf "Me llamo \"%s\".\nEs un placer conocerte." "Angel"
+Me llamo "Angel".
+Es un placer conocerte.
+</pre>
+
+
+<p>
+Indentado:
+</p>
+
+<pre class="example">
+$ printf "%*s\n" 25 "Hola Mundo"
+
+	       Hola Mundo
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgca0bfc7" class="outline-3">
+<h3 id="orgca0bfc7">Números</h3>
+<div class="outline-text-3" id="text-orgca0bfc7">
+<pre class="example">
+$ printf "2 + 2 son %d\n" $((2+2))
+2 + 2 son 4
+</pre>
+
+
+
+<pre class="example">
+$ printf "Aquí en solo %d pondremos estos %d valores.\n\ndoble salto de línea" 1 2
+
+Aquí en solo 1 pondremos estos 2 valores.
+
+doble salto de línea
+</pre>
+
+
+<p>
+Creando 2 columnas:
+</p>
+
+
+<pre class="example">
+$ printf "%-10d %-10d\n" 1 500 2 550
+
+1          500       
+2          550
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgad03968" class="outline-3">
+<h3 id="orgad03968">Conclusión</h3>
+<div class="outline-text-3" id="text-orgad03968">
+<p>
+Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <b>date</b> y <b>echo</b>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7062cb7" class="outline-3">
-<h3 id="org7062cb7">Reconstruir el archivo original</h3>
-<div class="outline-text-3" id="text-org7062cb7">
-<p>
-Teniendo todos los archivos que previamente habíamos troceado, ahora vamos a transformarlo en el archivo original. Para ello, tenemos que tener instalado <b>unrar</b> como comenté al principio y tanto desde la interfaz gráfica, como la terminal, necesitamos que todos los archivos estén en la misma carpeta. Nos situaremos dentro de esta, descomprimiremos el número 1 y unrar se encargará de ir uniendo los trozos y devolvernos el archivo original.
-</p>
-
-<p>
-<code>unrar x archivo.rar</code>
-</p>
-
-<p>
-<code>unrar x archivo.rar /ruta_donde_enviar_el_archivo</code> 
-</p>
-
-<p>
-Espero que os haya gustado este artículo y a darle caña a la terminal
-</p>
-
-
+<div id="outline-container-org41832fe" class="outline-3">
+<h3 id="org41832fe">Fuentes</h3>
+<div class="outline-text-3" id="text-org41832fe">
+<ul class="org-ul">
+<li><a href="https://www.computerhope.com/unix/uprintf.htm">https://www.computerhope.com/unix/uprintf.htm</a></li>
+<li><a href="https://wiki.bash-hackers.org/commands/builtin/printf">https://wiki.bash-hackers.org/commands/builtin/printf</a></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/">https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/</a></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el martes 29 enero del 2019  
+Publicado por Angel el viernes 08 febrero del 2019  
 </p>
 <br><br>
 <p>
