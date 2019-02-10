@@ -271,17 +271,17 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgfb1b609" class="outline-2">
-<h2 id="orgfb1b609">No todo es echo. También existe printf</h2>
-<div class="outline-text-2" id="text-orgfb1b609">
+<div id="outline-container-orgf36665c" class="outline-2">
+<h2 id="orgf36665c">No todo es echo. También existe printf</h2>
+<div class="outline-text-2" id="text-orgf36665c">
 <p>
 Cuando hacemos scritps en bash, habitualmente utilizamos <b>echo</b> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc&#x2026; para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.
 </p>
 </div>
 
-<div id="outline-container-orgdfe8edd" class="outline-3">
-<h3 id="orgdfe8edd">Iniciandonos con printf</h3>
-<div class="outline-text-3" id="text-orgdfe8edd">
+<div id="outline-container-org3569c37" class="outline-3">
+<h3 id="org3569c37">Iniciandonos con printf</h3>
+<div class="outline-text-3" id="text-org3569c37">
 <p>
 printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:
 </p>
@@ -293,9 +293,9 @@ Hola Mundo
 </pre>
 </div>
 </div>
-<div id="outline-container-org2cb4633" class="outline-3">
-<h3 id="org2cb4633">Salto de línea</h3>
-<div class="outline-text-3" id="text-org2cb4633">
+<div id="outline-container-orgf65efe6" class="outline-3">
+<h3 id="orgf65efe6">Salto de línea</h3>
+<div class="outline-text-3" id="text-orgf65efe6">
 <p>
 Del mismo modo que <b>echo</b>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:
 </p>
@@ -332,9 +332,9 @@ Mundo
 </div>
 </div>
 
-<div id="outline-container-org711c39e" class="outline-3">
-<h3 id="org711c39e">Imprimir al final de la línea</h3>
-<div class="outline-text-3" id="text-org711c39e">
+<div id="outline-container-orgcc93241" class="outline-3">
+<h3 id="orgcc93241">Imprimir al final de la línea</h3>
+<div class="outline-text-3" id="text-orgcc93241">
 <p>
 Ahora vamos a desplazar la línea al final del margen derecho:
 </p>
@@ -349,9 +349,9 @@ $ printf "%*s\n" $(tput cols) "Hola Mundo!"
 </div>
 
 
-<div id="outline-container-org8dd88c9" class="outline-3">
-<h3 id="org8dd88c9">Llamada de Fechas, host, rutas</h3>
-<div class="outline-text-3" id="text-org8dd88c9">
+<div id="outline-container-orgebc5c92" class="outline-3">
+<h3 id="orgebc5c92">Llamada de Fechas, host, rutas</h3>
+<div class="outline-text-3" id="text-orgebc5c92">
 <p>
 Podemos llamar diferentes formatos de fecha, host, rutas,&#x2026;
 </p>
@@ -664,9 +664,9 @@ Tabla con el código del formato de fecha:
 
 
 
-<div id="outline-container-org25529dc" class="outline-3">
-<h3 id="org25529dc">Editar texto</h3>
-<div class="outline-text-3" id="text-org25529dc">
+<div id="outline-container-orgc8c8ec8" class="outline-3">
+<h3 id="orgc8c8ec8">Editar texto</h3>
+<div class="outline-text-3" id="text-orgc8c8ec8">
 <p>
 Cortar Texto:
 </p>
@@ -699,9 +699,9 @@ $ printf "%*s\n" 25 "Hola Mundo"
 </div>
 </div>
 
-<div id="outline-container-org7bce42a" class="outline-3">
-<h3 id="org7bce42a">Números</h3>
-<div class="outline-text-3" id="text-org7bce42a">
+<div id="outline-container-org95ceed7" class="outline-3">
+<h3 id="org95ceed7">Números</h3>
+<div class="outline-text-3" id="text-org95ceed7">
 <pre class="example">
 $ printf "2 + 2 son %d\n" $((2+2))
 2 + 2 son 4
@@ -733,18 +733,18 @@ $ printf "%-10d %-10d\n" 1 500 2 550
 </div>
 
 
-<div id="outline-container-org1137b40" class="outline-3">
-<h3 id="org1137b40">Conclusión</h3>
-<div class="outline-text-3" id="text-org1137b40">
+<div id="outline-container-orgd9689be" class="outline-3">
+<h3 id="orgd9689be">Conclusión</h3>
+<div class="outline-text-3" id="text-orgd9689be">
 <p>
 Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <b>date</b> y <b>echo</b>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5f9b179" class="outline-3">
-<h3 id="org5f9b179">Fuentes</h3>
-<div class="outline-text-3" id="text-org5f9b179">
+<div id="outline-container-orgcee2b9c" class="outline-3">
+<h3 id="orgcee2b9c">Fuentes</h3>
+<div class="outline-text-3" id="text-orgcee2b9c">
 <ul class="org-ul">
 <li><a href="https://www.computerhope.com/unix/uprintf.htm">https://www.computerhope.com/unix/uprintf.htm</a></li>
 <li><a href="https://wiki.bash-hackers.org/commands/builtin/printf">https://wiki.bash-hackers.org/commands/builtin/printf</a></li>
