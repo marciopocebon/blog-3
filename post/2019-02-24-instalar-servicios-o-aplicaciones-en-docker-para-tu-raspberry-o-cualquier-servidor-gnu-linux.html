@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
+<title>Instalar servicios o aplicaciones en Docker para tu Raspberry o cualquier servidor GNU/Linux</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor."
+<meta name="description" content="El objetivo sería crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Habremos creado un servidor, con una versión &quot;virtualizada&quot; de un sistema operativo diferente al anfitrión, por ejemplo instalar el servicio en un ubuntu 19.04, con una Raspberry con sistema operativo Raspbian"
  />
-<meta name="keywords" content="servidor, raspberry" />
+<meta name="keywords" content="docker" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,176 +271,231 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org1a99fc9" class="outline-2">
-<h2 id="org1a99fc9">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h2>
-<div class="outline-text-2" id="text-org1a99fc9">
-<p>
-Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
-</p>
-
-<p>
-Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.
-</p>
-
-<p>
-Características:
-</p>
-
-<ul class="org-ul">
-<li>Mensajería</li>
-<li>Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,…</li>
-<li>Llamadas</li>
-<li>Video Llamadas</li>
-<li>Doble Cifrados</li>
-<li>Varios Clientes y totalmente multiplataforma</li>
-</ul>
-</div>
-
-<div id="outline-container-orgbcbe60c" class="outline-3">
-<h3 id="orgbcbe60c">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h3>
-<div class="outline-text-3" id="text-orgbcbe60c">
-<pre class="example">
-sudo apt-get install build-essential python2.7-dev libffi-dev \
-		     python-pip python-setuptools sqlite3 \
-		     libssl-dev python-virtualenv libjpeg-dev
-sudo pip install --upgrade pip
-sudo pip install --upgrade ndg-httpsclient
-sudo pip install --upgrade virtualenv
-</pre>
-
-<p>
-Este segunda comando ten paciencia, se crearan los certificados, etc … y <b>tardará mucho tiempo, probablemente una hora</b>, recomiendo detener servicios
-</p>
-
-<pre class="example">
-virtualenv -p python2.7 ~/.synapse
-source ~/.synapse/bin/activate
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install https://github.com/matrix-org/synapse/tarball/master
-</pre>
-
-<p>
-Instala también el modulo para synapse.app.
-</p>
-
-<p>
-<code>pip install (--upgrade) synapseclient</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge66c280" class="outline-3">
-<h3 id="orge66c280">CONFIGURAR SYNAPSE</h3>
-<div class="outline-text-3" id="text-orge66c280">
-<p>
-Recuerda sustituir el nombre del servidor <b>my.domain.name</b>
-En –report-stats= tienes que seleccionar <b>yes o no</b>.
-</p>
-
-<p>
-<code>cd ~/.synapse</code>
-</p>
-
-<pre class="example">
-python2.7 -B -m synapse.app.homeserver \
-    --server-name=my.domain.name \
-    --config-path=homeserver.yaml \
-    --generate-config \
-    --report-stats=[yes|no]
-</pre>
-</div>
-</div>
-
-
-<div id="outline-container-orgd3c1abd" class="outline-3">
-<h3 id="orgd3c1abd">INICIAR SERVIDOR</h3>
-<div class="outline-text-3" id="text-orgd3c1abd">
-<ol class="org-ol">
-<li>Nos situamos en la carpeta de <b>synapse</b></li>
-</ol>
-
-<p>
-<code>cd ~/.synapse</code>
-</p>
-
-<ol class="org-ol">
-<li>Iniciar el servidor</li>
-</ol>
-
-<p>
-<code>source ./bin/activate ; synctl start</code>
-</p>
-
-<p>
-La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <b>no te recomiendo que la uses</b>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.
-<b>Detener el servicio, si lo deseamos:</b>
-</p>
-
-<p>
-<code>source ./bin/activate ; synctl stop</code>
-</p>
-
-<p>
-CREAR USUARIOS
-</p>
-
-<p>
-Iniciamos el servidor y situándonos dentro del directorio <b>.synapse</b>
-</p>
-
-<p>
-<code>cd ~/.synapse</code>
-</p>
-
-<p>
-Ejecutaremos el siguiente comando:
-</p>
-
-<p>
-<code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code>
-</p>
-
-<p>
-Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.
-</p>
-</div>
-</div>
-<div id="outline-container-org0b02dd5" class="outline-3">
-<h3 id="org0b02dd5">UTILIZAR EL CLIENTE RIOT</h3>
-<div class="outline-text-3" id="text-org0b02dd5">
+<div id="outline-container-orgc775fd5" class="outline-2">
+<h2 id="orgc775fd5">Instalar servicios o aplicaciones en Docker para tu Raspberry o cualquier servidor GNU/Linux</h2>
+<div class="outline-text-2" id="text-orgc775fd5">
 
 <div class="figure">
-<p><img src="../images-blog/riot.png" alt="riot.png" />
+<p><img src="../images-blog/docker.png" alt="docker.png" />
 </p>
 </div>
 
-
-<ol class="org-ol">
-<li>Pondermos en nombre de usuario y contraseña</li>
-<li>Habilitamos opciones de servidor propietarias</li>
-<li>En servidor, ponemos <a href="https://ip:8448">https://ip:8448</a></li>
-</ol>
 <p>
-ENCONTRARSE LOS USUARIOS
+El objetivo sería crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Habremos creado un servidor, con una versión <b>"virtualizada"</b> de un sistema operativo diferente al anfitrión, por ejemplo instalar el servicio en un <b>ubuntu 19.04</b>, con una Raspberry con sistema operativo <b>Raspbian</b>.
 </p>
-
-<ol class="org-ol">
-<li>Creamos una sala</li>
-<li>En configuración de la sala, en <b>acceso a la Sala</b> y seleccionamos:</li>
-</ol>
-
+</div>
+<div id="outline-container-org13397de" class="outline-3">
+<h3 id="org13397de">Instalación</h3>
+<div class="outline-text-3" id="text-org13397de">
 <p>
-“Los que saben el enlace de la sala, incluso huespedes”
+Vamos a instalar Docker desde los repositorios oficiales:
 </p>
 
 <p>
-3 )Ahora en <b>Avanzado</b>, compartimos al otro usuario <b>La identificación interna de esta Sala</b>
+<code>sudo apt install docker</code>
 </p>
 
+<p>
+También lo tenemos disponible en la paquetería snap, así que a dia de hoy, es muy sencilla su instalación.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbe88ed" class="outline-3">
+<h3 id="orgfbe88ed">Crear el grupo docker, para no tener que poner siempre sudo</h3>
+<div class="outline-text-3" id="text-orgfbe88ed">
+<p>
+Para no tener que utilizar Docker como usuario root y así evitar el tener que poner siempre <b>sudo</b>, crearemos el grupo docker y añadiremos los usuarios.
+</p>
+<pre class="example">
+sudo groupadd docker
+sudo usermod -aG docker $USER
+</pre>
+<p>
+También es muy útil a nivel de seguridad deshabilitar el usuario root, para iniciar y detener servicios con la sesión del propio usuario o mediante el cron este, programar el encendido y apagado de los contenedores. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0b3cc2" class="outline-3">
+<h3 id="orgb0b3cc2">Creando un contendedor con Ubuntu en su ultima versión</h3>
+<div class="outline-text-3" id="text-orgb0b3cc2">
+<p>
+Creando el nuevo contenedor con la última versión de Ubuntu para Raspberry o cualquier arquitectura de procesador y entrando directamente a este contenedor una vez creado:
+</p>
+
+<p>
+<code>docker run -t -i ubuntu:latest /bin/bash</code>
+</p>
+
+<p>
+Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:
+</p>
+
+<p>
+<code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code>
+</p>
+
+
+<p>
+Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-D</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <b>Ctrl+p+q</b>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgfe4ad5d" class="outline-3">
+<h3 id="orgfe4ad5d">Listar todos los Contenedores de nuestro servidor</h3>
+<div class="outline-text-3" id="text-orgfe4ad5d">
+<p>
+Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:
+</p>
+
+<p>
+<code>docker ps -a</code>
+</p>
+
+<p>
+No confundir con ver todos los contenedores que están corriendo ahora mismo en nuestro servidor, que lo haríamos así:
+</p>
+
+<p>
+<code>docker ps</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8b688e" class="outline-3">
+<h3 id="orga8b688e">Iniciar o detener un contenedor</h3>
+<div class="outline-text-3" id="text-orga8b688e">
+<p>
+Super sencillo, con docker <b>start/stop</b>:
+</p>
+
+<p>
+<code>docker start nombre_del_contenedor</code>
+</p>
+
+<p>
+<code>docker stop nombre_del_contenedor</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27d2733" class="outline-3">
+<h3 id="org27d2733">Entrar dentro del Docker vía terminal</h3>
+<div class="outline-text-3" id="text-org27d2733">
+<p>
+Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar:
+<code>docker exec -i -t nombre_del_contenedor /bin/bash</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ce03df" class="outline-3">
+<h3 id="org5ce03df">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h3>
+<div class="outline-text-3" id="text-org5ce03df">
+<p>
+Voy a explicar, con el servicio garbera de ejemplo, como descargar la imagen, crear el contenedor e iniciarlo con una única línea de terminal. 
+</p>
+
+<p>
+<code>docker run -t -i --name gerbera -p 1900:1900 -p 49152:49152 -v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root arm32v7/ubuntu:latest /bin/bash</code>
+</p>
+
+<p>
+Vamos a entenderlo:
+</p>
+<ul class="org-ul">
+<li>Poner un nombre al contenedor que se creará <code>--name gerbera</code> El nombre será gerbera</li>
+<li>Crea imagen con la ultima versión de ubuntu con arquitectura para raspberry: <code>arm32v7/ubuntu:latest</code>. Si fuera para cualquier arquitectura y que se instale el más adecuado:  <code>ubuntu:latest</code></li>
+<li>Que el contenedor creado, tenga abiertos los puertos 1900 y 49152 <code>-p 1900:1900 -p 49152:49152</code></li>
+<li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
+</ul>
+
+<p>
+Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, iniciaremos el servicio:
+</p>
+
+<p>
+<code>service gerbera start</code>
+</p>
+
+<p>
+<b>Recuerda sustituir "usuario", por tu usuario, no hagas un copia y pega</b> 😜
+</p>
+</div>
+</div>
+<div id="outline-container-orgf2512d3" class="outline-3">
+<h3 id="orgf2512d3">Borrar un contenedor</h3>
+<div class="outline-text-3" id="text-orgf2512d3">
+<p>
+Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc&#x2026; que ya no vamos a utilizar:
+</p>
+
+<p>
+Detenemos el contentedor:
+<code>docker stop nombre_del_contenedor</code>
+</p>
+
+<p>
+Borramos el contendedor:
+</p>
+
+<p>
+<code>docker rm nombre_del_contenedor</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc872317" class="outline-3">
+<h3 id="orgc872317">Listar y borrar imagenes</h3>
+<div class="outline-text-3" id="text-orgc872317">
+<p>
+Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:
+</p>
+
+<p>
+Listar todas las imágenes:
+</p>
+
+<p>
+<code>docker images</code>
+</p>
+
+<p>
+Borrar la imagen (rm"i" de imágen, para recordar):
+</p>
+
+<p>
+<code>docker rmi nombre_de_la_imagen</code>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1e5f966" class="outline-3">
+<h3 id="org1e5f966">Renombrar Contenedor</h3>
+<div class="outline-text-3" id="text-org1e5f966">
+<p>
+En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:
+</p>
+
+<p>
+<code>docker rename nombre_actual nombre_nuevo</code> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf32ced" class="outline-3">
+<h3 id="orgaf32ced">Conclusiones</h3>
+<div class="outline-text-3" id="text-orgaf32ced">
+<p>
+Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian. 
+</p>
 <br>
 <p>
-Publicado por Angel el domingo 20 enero del 2019  
+Publicado por Angel el domingo 24 febrero del 2019  
 </p>
 <br><br>
 <p>
@@ -448,7 +503,9 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html">Instalar Docker en Raspberry Pi con Raspbian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
