@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org7de3b68" class="outline-2">
-<h2 id="org7de3b68">minidlna</h2>
-<div class="outline-text-2" id="text-org7de3b68">
+<div id="outline-container-orgd184fce" class="outline-2">
+<h2 id="orgd184fce">minidlna</h2>
+<div class="outline-text-2" id="text-orgd184fce">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-orgc6a42e8" class="outline-3">
-<h3 id="orgc6a42e8">Instalación</h3>
-<div class="outline-text-3" id="text-orgc6a42e8">
+<div id="outline-container-orgd37d876" class="outline-3">
+<h3 id="orgd37d876">Instalación</h3>
+<div class="outline-text-3" id="text-orgd37d876">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge483e4f" class="outline-3">
-<h3 id="orge483e4f">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orge483e4f">
+<div id="outline-container-orgb46c6ec" class="outline-3">
+<h3 id="orgb46c6ec">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgb46c6ec">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -321,9 +321,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-org2c76aa9" class="outline-3">
-<h3 id="org2c76aa9">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org2c76aa9">
+<div id="outline-container-orgb165d55" class="outline-3">
+<h3 id="orgb165d55">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orgb165d55">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -334,9 +334,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-orgf18d0da" class="outline-3">
-<h3 id="orgf18d0da">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgf18d0da">
+<div id="outline-container-org4341f27" class="outline-3">
+<h3 id="org4341f27">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org4341f27">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -347,9 +347,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org9409a2b" class="outline-3">
-<h3 id="org9409a2b">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org9409a2b">
+<div id="outline-container-org26b24fa" class="outline-3">
+<h3 id="org26b24fa">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org26b24fa">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -372,11 +372,19 @@ o
 </div>
 </div>
 
-<div id="outline-container-org7330a67" class="outline-3">
-<h3 id="org7330a67">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org7330a67">
+<div id="outline-container-org555eb8b" class="outline-3">
+<h3 id="org555eb8b">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-org555eb8b">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
+</p>
+
+<p>
+<code>sudo minidlnad -R ; sudo service minidlna restart</code>
+</p>
+
+<p>
+o sino, podemos hacer:
 </p>
 
 <p>
@@ -389,9 +397,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org23653fe" class="outline-3">
-<h3 id="org23653fe">Puertos</h3>
-<div class="outline-text-3" id="text-org23653fe">
+<div id="outline-container-orge418aec" class="outline-3">
+<h3 id="orge418aec">Puertos</h3>
+<div class="outline-text-3" id="text-orge418aec">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
