@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kde Connect en Emacs</title>
+<title>Simplenote en Emacs</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla"
+<meta name="description" content="Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa."
  />
-<meta name="keywords" content="emacs,sincronización,kdeconnect" />
+<meta name="keywords" content="orgmode,emacs" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,50 +271,122 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org89d19c2" class="outline-2">
-<h2 id="org89d19c2">Kde Connect en Emacs</h2>
-<div class="outline-text-2" id="text-org89d19c2">
-<p>
-Por culpa del <a href="https://www.atareao.es/podcast/integrando-android-con-ubuntu/">Podcast de atareao.es</a>, he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla:
+<div id="outline-container-orgaf3d04e" class="outline-2">
+<h2 id="orgaf3d04e">Simplenote en Emacs</h2>
+<div class="outline-text-2" id="text-orgaf3d04e">
+
+<div class="figure">
+<p><img src="../images-blog/simplenote.png" alt="simplenote.png" />
 </p>
 </div>
 
-<div id="outline-container-org71e8507" class="outline-3">
-<h3 id="org71e8507">Instalación</h3>
-<div class="outline-text-3" id="text-org71e8507">
-<p>
-Teniendo los repositorios de Melpa:
-</p>
-
-<ol class="org-ol">
-<li>Instalación: <b>M-x package-install RET kdeconnect</b></li>
-<li>Listamos los dispositivos de nuestra red local: <b>M-x kdeconnect-list-devices</b></li>
-<li>Buscamos los búfer anteriores para copiar los id de nuestros dispositivos (C-x Izquierda)</li>
-<li>Introducimos el id de nuestro dispositivo: <b>M-x kdeconnect-select-active-device RET id</b></li>
-<li>Hacemos un ping para comprobar que se ha conectado correctamente: <b>M-x kdeconnect-ping</b></li>
-</ol>
 
 <p>
-YA ESTA!!!
+Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS&#x2026; Y lo mejor de todo, podemos utilizarla en Emacs con el paquete <b>simplenote2</b>, disponible en los repositorios de Melpa.
 </p>
 
 <p>
-<b>Ahora si copiamos un texto en el portapapeles de nuestro Emacs, podremos pegarlo en el otro dispositivo gracias a Kde Connect.</b>
+Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, <b>voy a habilitar el modo org y tener sincronizado mis archivos orgmode</b>.
 </p>
 
 <p>
-Vamos a enviar un texto desde Emacs al otro dispositivo <b>M-x kdeconnect-ping-msg RET Texto</b>
+El paquete <b>simplenote2</b>, crea una carpeta oculta en la raíz de nuestro Home, llamada <b>.simplenote2</b>. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC.
 </p>
 
 <p>
-Os dejo el resto de funciones para que juguéis y el repositorio donde está toda la información:
+Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya tenemos aplicación de notas desde nuestra terminal.
+</p>
+
+<p>
+Recuerda que una de las virtudes de Simplenote, es compartir nuestras notas o documentos orgmode, tener un control de versiones y colaborar en equipo editando simultaneamente estas, varios usuarios.
+</p>
+
+<p>
+Te recomiendo escuchar el Podcast donde hablo de todo esto.
+</p>
+</div>
+<div id="outline-container-orgc3500e1" class="outline-3">
+<h3 id="orgc3500e1">Instalación</h3>
+<div class="outline-text-3" id="text-orgc3500e1">
+<p>
+Instalaremos desde Melpa:
+</p>
+
+<p>
+<code>M-x package-install RET simplenote2 RET</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgd95c509" class="outline-3">
+<h3 id="orgd95c509">Configuración</h3>
+<div class="outline-text-3" id="text-orgd95c509">
+<p>
+Añadiremos en nuestro archivo de configuración, ya sea <b>.emacs</b> o <b>init.el</b>, los siguientes requisitos:
+</p>
+<pre class="example">
+(require 'simplenote2)
+(setq simplenote2-email "email@ejemplo.com")
+(setq simplenote2-password "tu_contraseña")
+(simplenote2-setup)
+</pre>
+
+<p>
+Para acceder a la pantalla principal de Simplenote mediante un atajo (C-c C-s), he añadido el siguiente código:
+</p>
+
+<p>
+<code>(global-set-key (kbd "C-c C-s") 'simplenote2-browse)</code>
+</p>
+
+
+<p>
+Estas líneas son opcionales. Permiten crear mediante atajos: tags, así como empujar o descargar la nota que estamos editando en ese momento. 
+</p>
+<pre class="example">
+(add-hook 'simplenote2-note-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c C-t") 'simplenote2-add-tag)
+	    (local-set-key (kbd "C-c C-c") 'simplenote2-push-buffer)
+	    (local-set-key (kbd "C-c C-d") 'simplenote2-pull-buffer)))
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgb0ed142" class="outline-3">
+<h3 id="orgb0ed142">Utilizando Simplenote</h3>
+<div class="outline-text-3" id="text-orgb0ed142">
+<p>
+Para acceder a la pantalla principal de Simplenote sin el atajo antes descrito, introduciremos el comando: 
+</p>
+
+<p>
+<code>M-x simplenote2-browse</code>
+</p>
+
+<p>
+La primera vez que accedas, estará sin contenido, ejecuta en la parte superior <b>[Sync with server]</b>, para que descargue tus notas del servidor a la aplicación. Si no añadiste tu correo y contraseña, Simplenote te preguntará por ellas para que lo introduzcas.
+</p>
+
+
+<p>
+A la parte derecha de cada nota, nos aparece <b>[Delete]</b>. Si pulsamos para borrar y después pulsamos <b>[Sync with server]</b> o sincronizamos pulsando la letra <b>g</b> (En el siguiente apartado, aparecen todos estos atajo), actualizará todas las notas y borrará la que habíamos seleccionado, enviándola a la papelera.
+</p>
+
+
+<p>
+Como ves, la interfaz es muy intuitiva, podemos crear nuevas notas, editar o eliminar notas existentes&#x2026; 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd56f8df" class="outline-3">
-<h3 id="orgd56f8df">Resto de Funciones disponibles</h3>
-<div class="outline-text-3" id="text-orgd56f8df">
+<div id="outline-container-org754af24" class="outline-3">
+<h3 id="org754af24">Atajos</h3>
+<div class="outline-text-3" id="text-org754af24">
+<p>
+Estando <b>dentro de la ventana de Simplenote en Emacs</b>, podremos utilizar los siguientes atajos:
+</p>
+
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -325,65 +397,149 @@ Os dejo el resto de funciones para que juguéis y el repositorio donde está tod
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Función</th>
-<th scope="col" class="org-left">Descripción</th>
+<th scope="col" class="org-left">Tecla</th>
+<th scope="col" class="org-left">Acción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">kdeconnect-get-active-device</td>
-<td class="org-left">Mostrar el dispositivo activo</td>
+<td class="org-left">g</td>
+<td class="org-left">sincronizar con el servidor (igual que M-x simplenote2-sync-notes)</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-list-devices</td>
-<td class="org-left">Muestra todos los dispositivos visibles, incluso los no disponibles.</td>
+<td class="org-left">a</td>
+<td class="org-left">crear una nueva nota</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-ping</td>
-<td class="org-left">Enviar una notificación al dispositivo activo.</td>
+<td class="org-left">Enter</td>
+<td class="org-left">nota abierta sobre la linea actual</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-ping-msg</td>
-<td class="org-left">Envía una notificación con un mensaje personalizado al dispositivo activo</td>
+<td class="org-left">d</td>
+<td class="org-left">marca nota en la línea actual para eliminar</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-refresh</td>
-<td class="org-left">Escanee la red y actualice las conexiones disponibles</td>
+<td class="org-left">u</td>
+<td class="org-left">desmarque la nota en la línea actual para eliminar</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-ring</td>
-<td class="org-left">Hacer que suene el dispositivo activo (útil para encontrarlo)</td>
+<td class="org-left">t</td>
+<td class="org-left">establecer etiquetas para el filtrado (igual que M-x simplenote2-filter-note-by-tag)</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-select-active-device</td>
-<td class="org-left">Seleccione el dispositivo activo de kdeconnect-devices</td>
+<td class="org-left">'^'</td>
+<td class="org-left">alternar las condiciones de filtrado de etiquetas entre "AND" y "OR"</td>
 </tr>
 
 <tr>
-<td class="org-left">kdeconnect-enviar-archivo</td>
-<td class="org-left">Enviar el archivo seleccionado al dispositivo activo</td>
-</tr>
-
-<tr>
-<td class="org-left">kdeconnect-enviar-sms</td>
-<td class="org-left">Enviar un SMS al destino especificado</td>
+<td class="org-left">'/'</td>
+<td class="org-left">establecer regexp para el filtrado</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 
+<div id="outline-container-org53393dd" class="outline-3">
+<h3 id="org53393dd">Enviando todo a Simplenote</h3>
+<div class="outline-text-3" id="text-org53393dd">
 <p>
-<a href="https://github.com/carldotac/kdeconnect.el">Repositorio en GitHub</a>
+Si estás en cualquier buffer, fuera de Simplenote, creando una nota o escribiendo cualquier texto, si ejecutamos el siguiente comando, este bufer será enviado en forma de nota a Simplenote.
 </p>
 
+<p>
+<code>M-x simplenote2-create-note-from-buffer</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org922c01c" class="outline-3">
+<h3 id="org922c01c">Sincronizando las modificaciones</h3>
+<div class="outline-text-3" id="text-org922c01c">
+<p>
+Tal como hacemos en git, podemos empujar la nota actual que estamos editando al servidor o descargarla:
+</p>
+<ul class="org-ul">
+<li>Empujar nota al servidor: <code>M-x simplenote2-push-buffer</code></li>
+<li>Descargar la nota del servidor. Cuando la nota se modifique localmente, preguntará si la envía al servidor. Si la respuesta es afirmativa, este comando actúa como <code>M-x simplenote2-push-buffer</code>: <code>M-x simplenote2-pull-buffer</code></li>
+</ul>
+
+<p>
+Para salir, utilizaremos <code>C-u M-x</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgc555a7f" class="outline-3">
+<h3 id="orgc555a7f">Etiquetas</h3>
+<div class="outline-text-3" id="text-orgc555a7f">
+<p>
+Simplenote utiliza etiquetas para poder clasificar y posteriormente filtrarlas medieante <code>M-x simplenote2-filter-notes-by-tag</code>. Este comando, preguntará el nombre de la etiqueta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org734f5d8" class="outline-3">
+<h3 id="org734f5d8">Creando atajo preestablecido</h3>
+<div class="outline-text-3" id="text-org734f5d8">
+<p>
+En Nuestro archivo de configuración <b>.emacs</b> o <b>init.el</b>, podemos añadir un filtro preestablecido con un atajo de teclado. Ejemplo:
+</p>
+
+<p>
+<code>(setq simplenote2-filter-note-tag-list '("tag1" "tag2" "tag3"))</code>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org43bedf4" class="outline-3">
+<h3 id="org43bedf4">Añadir etiquetas o atributos</h3>
+<div class="outline-text-3" id="text-org43bedf4">
+<p>
+Puede establecer etiquetas o atributos para nuevas notas de forma predeterminada utilizando la variable de personalización <code>simplenote2-create-note-hook</code>
+</p>
+
+<pre class="example">
+(add-hook 'simplenote2-create-note-hook
+	  (lambda ()
+	    (simplenote2-set-markdown)
+	    (simplenote2-add-tag "tag1")))
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga45f55b" class="outline-3">
+<h3 id="orga45f55b">Anclar Notas En la parte superior</h3>
+<div class="outline-text-3" id="text-orga45f55b">
+<p>
+Para anclar en la parte superior las notas que deseemos, estando dentro de esta nota ejecutaremos el comando: 
+</p>
+
+<p>
+<code>M-x simplenote2-set-pinned</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cb1026" class="outline-3">
+<h3 id="org9cb1026">Conclusión</h3>
+<div class="outline-text-3" id="text-org9cb1026">
+<p>
+Una herramienta fantástica para aquellos que necesitan una aplicación de notas que podemos compartir, trabajar en equipo, tener un control de versiones&#x2026; Y lo mejor de todo, en texto plano, markdown y en Emacs, habilitando el modo org, orgmode.
+</p>
+
+<p>
+Mas Información en el repositorio de simplenote2: <a href="https://github.com/alpha22jp/simplenote2.el">https://github.com/alpha22jp/simplenote2.el</a>
+</p>
 <br>
 <p>
-Publicado por Angel el lunes 31 diciembre del 2018  
+Publicado por Angel el domingo 10 marzo del 2019  
 </p>
 <br><br>
 <p>
