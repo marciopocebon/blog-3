@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</title>
+<title>Crea un Bot de Telegram con Bash y una sola línea de Terminal</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian"
+<meta name="description" content="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc"
  />
-<meta name="keywords" content="docker" />
+<meta name="keywords" content="bot, telegram," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,240 +271,267 @@ for the JavaScript code in this tag.
 <div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org111d845" class="outline-2">
-<h2 id="org111d845">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h2>
-<div class="outline-text-2" id="text-org111d845">
+<div id="outline-container-org0deda6d" class="outline-2">
+<h2 id="org0deda6d">Crea un Bot de Telegram con Bash y una sola línea de Terminal</h2>
+<div class="outline-text-2" id="text-org0deda6d">
 
 <div class="figure">
-<p><img src="../images-blog/docker.png" alt="docker.png" />
+<p><img src="../images-blog/telegram.jpg" alt="telegram.jpg" />
 </p>
 </div>
 
 <p>
-El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un <b>Ubuntu 18.04</b> en una Raspberry con sistema operativo <b>Raspbian</b>.
+Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc&#x2026; si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc&#x2026; 
 </p>
 
 <p>
-De esta manera, podremos acceder a los repositorios de Ubuntu en su última versión, con paquetes totalmente actualizados utilizando Raspbian.
+Si, pero&#x2026; ¿Que nos puede notificar?.
 </p>
 
 <p>
-Parece muy complejo, pero es muy sencillo.
-</p>
-</div>
-<div id="outline-container-org3e62077" class="outline-3">
-<h3 id="org3e62077">Instalación</h3>
-<div class="outline-text-3" id="text-org3e62077">
-<p>
-Vamos a instalar Docker desde los repositorios oficiales:
-</p>
-
-<p>
-<code>sudo apt install docker</code>
-</p>
-
-<p>
-También lo tenemos disponible en la paquetería snap, así que a dia de hoy, es muy sencilla su instalación.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org21de6a9" class="outline-3">
-<h3 id="org21de6a9">Crear el grupo docker, para no tener que poner siempre sudo</h3>
-<div class="outline-text-3" id="text-org21de6a9">
-<p>
-Para no tener que utilizar Docker como usuario root y así evitar el tener que poner siempre <b>sudo</b>, crearemos el grupo docker y añadiremos los usuarios.
-</p>
-<pre class="example">
-sudo groupadd docker
-sudo usermod -aG docker $USER
-</pre>
-<p>
-También es muy útil a nivel de seguridad deshabilitar el usuario root, para iniciar y detener servicios con la sesión del propio usuario o mediante el cron este, programar el encendido y apagado de los contenedores. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org98ea6f4" class="outline-3">
-<h3 id="org98ea6f4">Creando un contendedor con Ubuntu en su ultima versión</h3>
-<div class="outline-text-3" id="text-org98ea6f4">
-<p>
-Creando el nuevo contenedor con la última versión de Ubuntu para Raspberry o cualquier arquitectura de procesador y entrando directamente a este contenedor una vez creado:
-</p>
-
-<p>
-<code>docker run -t -i ubuntu:latest /bin/bash</code>
-</p>
-
-<p>
-Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:
-</p>
-
-<p>
-<code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code>
-</p>
-
-<p>
-La versión <b>"latest"</b>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.
-</p>
-
-<p>
-Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-d</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <code>Ctrl+p+q</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org9804bc0" class="outline-3">
-<h3 id="org9804bc0">Listar todos los Contenedores de nuestro servidor</h3>
-<div class="outline-text-3" id="text-org9804bc0">
-<p>
-Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:
-</p>
-
-<p>
-<code>docker ps -a</code>
-</p>
-
-<p>
-No confundir con ver todos los contenedores que están corriendo ahora mismo en nuestro servidor, que lo haríamos así:
-</p>
-
-<p>
-<code>docker ps</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgeb17afd" class="outline-3">
-<h3 id="orgeb17afd">Iniciar o detener un contenedor</h3>
-<div class="outline-text-3" id="text-orgeb17afd">
-<p>
-Super sencillo, con docker <b>start/stop</b>:
-</p>
-
-<p>
-<code>docker start nombre_del_contenedor</code>
-</p>
-
-<p>
-<code>docker stop nombre_del_contenedor</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgebf22f4" class="outline-3">
-<h3 id="orgebf22f4">Entrar dentro del Docker vía terminal</h3>
-<div class="outline-text-3" id="text-orgebf22f4">
-<p>
-Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar:
-<code>docker exec -i -t nombre_del_contenedor /bin/bash</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org06bf4e6" class="outline-3">
-<h3 id="org06bf4e6">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h3>
-<div class="outline-text-3" id="text-org06bf4e6">
-<p>
-Voy a explicar, con el servicio garbera de ejemplo, como descargar la imagen, crear el contenedor e iniciarlo con una única línea de terminal. 
-</p>
-
-<p>
-<code>docker run -t -i --name gerbera -p 1900:1900 -p 49152:49152 -v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root arm32v7/ubuntu:latest /bin/bash</code>
-</p>
-
-<p>
-Vamos a entenderlo:
+Voy a mostraros algunos ejemplos que yo utilizo:
 </p>
 <ul class="org-ul">
-<li>Poner un nombre al contenedor que se creará <code>--name gerbera</code> El nombre será gerbera</li>
-<li>Crea imagen con la ultima versión de ubuntu con arquitectura para raspberry: <code>arm32v7/ubuntu:latest</code>. Si fuera para cualquier arquitectura y que se instale el más adecuado:  <code>ubuntu:latest</code></li>
-<li>Que el contenedor creado, tenga abiertos los puertos 1900 y 49152 <code>-p 1900:1900 -p 49152:49152</code></li>
-<li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
+<li>Notificación al iniciar un servidor</li>
+<li>Notificación cuando alguien se conecta vía SSH, mostrándome la IP del dispositivo que se conecta</li>
+<li>Cuando ha finalizado la ejecución de un script. Por ejemplo una sicronización con rsync, copia de seguridad&#x2026;</li>
 </ul>
 
 <p>
-Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, instalaremos e iniciaremos el servicio:
+Gracias a cron, podemos programar mensajes a determinados momentos del día para que nos notifique:
+</p>
+<ul class="org-ul">
+<li>Consumo de Ram</li>
+<li>Temperatura de la Raspberry</li>
+<li>IP pública de mi red</li>
+<li>Mis tareas pendientes en mi OrgMode</li>
+</ul>
+
+<p>
+Estos son tan solo unos ejemplos que yo utilizo, pero con un bot de Telegram, puedes hacer tanto como imagines.
 </p>
 
 <p>
-<b>Recuerda sustituir "usuario", por tu usuario, no hagas un copia y pega</b> 😜
-</p>
-</div>
-</div>
-<div id="outline-container-orgc78b8c1" class="outline-3">
-<h3 id="orgc78b8c1">Borrar un contenedor</h3>
-<div class="outline-text-3" id="text-orgc78b8c1">
-<p>
-Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc&#x2026; que ya no vamos a utilizar:
+Incluso mi Router con OpenWrt, va enviándome mensajes, jejeje   
 </p>
 
 <p>
-Detenemos el contentedor:
-</p>
-
-<p>
-<code>docker stop nombre_del_contenedor</code>
-</p>
-
-<p>
-Borramos el contendedor:
-</p>
-
-<p>
-<code>docker rm nombre_del_contenedor</code>
+Durante mucho tiempo he estado utilizando Bots desarrollados en Python, pero en este Post voy a explicaros como hacerlo desde de Bash que es muchísimos más sencillo. De momento vamos a enviar mensajes de Texto.
 </p>
 </div>
-</div>
 
-<div id="outline-container-org5a27bb0" class="outline-3">
-<h3 id="org5a27bb0">Listar y borrar imagenes</h3>
-<div class="outline-text-3" id="text-org5a27bb0">
+<div id="outline-container-org0fb883f" class="outline-3">
+<h3 id="org0fb883f">Primer paso para crear un Bot</h3>
+<div class="outline-text-3" id="text-org0fb883f">
 <p>
-Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:
+Voy a explicar en sencillos pasos como crear un Bot con <a href="https://t.me/BotFather">@BotFather</a>, que es el padre de todos los Bots, creado por Telegram con el fin de facilitar la creación de estos:
+</p>
+
+<ul class="org-ul">
+<li>Clicamos este enlace <a href="https://t.me/BotFather">@BotFather</a> e iniciamos el Bot.</li>
+
+<li>Seleccionamos o escribimos <b>/newbot</b>. Nos preguntará: ¿Que nombre quieres dar a tu bot?. Escribimos un nombre.</li>
+
+<li>El Bot nos respone ahora: ¿Que nick quieres usar para este bot?, recuerda que el nick debe de acabar en bot o _bot.
+ejem: @nick_bot, @nickbot,&#x2026;</li>
+
+<li>@BotFather ya nos ha creado el bot!!!. Ahora ya tenemos nuestro numero de Token para poder utilizar nuestro bot.</li>
+</ul>
+
+
+<p>
+Si escribimos en @BotFather: <b>/setuserpic</b>, podremos elegir una foto para nuestro bot. Hay muchas mas opciones como añadir una descripción y demas, pero eso ya os lo dejo a vosotros&#x2026;
+</p>
+
+
+<p>
+Cada usuario en Telegram tenemos un identificador, <b>ID</b>. Podemos saber el nuestro iniciando este bot  <a href="https://t.me/userinfobot">@userinfobot</a>.
 </p>
 
 <p>
-Listar todas las imágenes:
-</p>
-
-<p>
-<code>docker images</code>
-</p>
-
-<p>
-Borrar la imagen (rm"i" de imágen, para recordar):
-</p>
-
-<p>
-<code>docker rmi nombre_de_la_imagen</code>
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgd98d5e0" class="outline-3">
-<h3 id="orgd98d5e0">Renombrar Contenedor</h3>
-<div class="outline-text-3" id="text-orgd98d5e0">
-<p>
-En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:
-</p>
-
-<p>
-<code>docker rename nombre_actual nombre_nuevo</code> 
+Si queremos añadir el Bot en un Grupo o Canal, para que envíe mensajes o haga cualquier función, tendremos que averiguar el <b>ID</b> de ese Grupo o Canal. Para ello reenvía un mensaje desde el Canal/Grupo al Bot  <a href="https://t.me/ChannelIdBot">@ChannelIdBot</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd196c77" class="outline-3">
-<h3 id="orgd196c77">Conclusiones</h3>
-<div class="outline-text-3" id="text-orgd196c77">
+
+<div id="outline-container-org091035f" class="outline-3">
+<h3 id="org091035f">Vamos a crear nuestro Bot</h3>
+<div class="outline-text-3" id="text-org091035f">
 <p>
-Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian. 
+Lo primero que haremos, es confirmar que realmente podemos enviar mensajes con nuestro bot desde la terminal.
+</p>
+
+<p>
+Creamos el script:
+<code>nano mi_bot_telegram.sh</code>
+</p>
+
+<p>
+Una vez abierto nano, vamos a copiar el contenido añadiendo el <b>TOKEN</b> del bot y nuestro <b>ID</b>.
+</p>
+<pre class="example">
+#!/bin/bash
+
+TOKEN="escribe tu token aquí"
+ID="escribe tu id aquí"
+MENSAJE="Esto es un Mensaje de Prueba"
+URL="https://api.telegram.org/bot$TOKEN/sendMessage"
+
+curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE"
+</pre>
+<p>
+Ahora daremos permisos de ejecución:
+</p>
+
+<p>
+<code>sudo chmod +x mi_bot_telegram.sh</code>
+</p>
+
+<p>
+Vamos a ejecutarlo:
+</p>
+
+<p>
+<code>sh mi_bot_telegram.sh</code>
+</p>
+
+<p>
+FUNCIONA!!!!!!!!
+</p>
+
+<p>
+Si hemos escrito correctamente tanto el <b>TOKEN</b> como el número de nuestro <b>ID</b>, habremos recibido un mensaje en el chat del bot que hayamos creado con el contenido: <b>Esto es un Mensaje de Prueba</b>
+</p>
+
+<p>
+Si somos un poco mas atrevidos o conocemos mejor bash, te abras dado cuenta que no era necesario hacer un script y podemos enviar el mensaje desde una única línea de Terminal. Sustituye añade el valor de las variables en la última línea del script así:
+</p>
+<pre class="example">
+curl -s -X POST https://api.telegram.org/bot"30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4"/sendMessage -d chat_id="57384545" -d text="Esto es un Mensaje de Prueba"
+</pre>
+<p>
+Como puedes ver, he puesto unos valores inventados de muestra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97472f1" class="outline-3">
+<h3 id="org97472f1">Muestra la Ip de la máquina que se conecta por SSH</h3>
+<div class="outline-text-3" id="text-org97472f1">
+<p>
+Si utilizas Bash, sabes que cada vez que te conectas por ssh o inicias una nueva sesión en tu terminal, Bash lee el archivo <b>.bashrc</b>. En él, al final de este archivo de configuración, añadiremos la línea de nuestro Bot y dentro del mensaje de texto, en lugar de un mensaje escribiremos:
+</p>
+
+<p>
+<code>$(echo $SSH_CLIENT | awk '{ print $1}')</code>
+</p>
+
+
+<p>
+Quedaría de la siguiente manera:
+</p>
+<pre class="example">
+curl -s -X POST https://api.telegram.org/bot"30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4"/sendMessage -d chat_id="57384545" -d text="Se acaba de contecta por ssh con la IP $(echo $SSH_CLIENT | awk '{ print $1}')"
+</pre>
+<p>
+Si quieres probar que realmente funciona desde tu terminal, escribe en ella:
+</p>
+
+<p>
+<code>echo $SSH_CLIENT | awk '{ print $1}'</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7fd964" class="outline-3">
+<h3 id="orga7fd964">Ip Pública</h3>
+<div class="outline-text-3" id="text-orga7fd964">
+<p>
+Vamos a conocer la IP pública y conectarnos directamente con nuestra Raspberry:
+</p>
+
+<p>
+<code>curl ifconfig.co</code>
+</p>
+
+<p>
+Como en el caso anterior, sustituiremos el texto plano por esto:
+</p>
+
+<p>
+<code>$(curl ifconfig.co)</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8a3d6a" class="outline-3">
+<h3 id="orga8a3d6a">Temperatura de tu Raspberry</h3>
+<div class="outline-text-3" id="text-orga8a3d6a">
+<p>
+Con este comando, tendré controlada la temperatura de mi raspberry y además, quedará guardado el historial en el chat del Bot:
+</p>
+
+<p>
+<code>/opt/vc/bin/vcgencmd measure_temp</code>
+</p>
+
+<p>
+Sustituye el texto del Bot por:
+</p>
+
+<p>
+<code>$(/opt/vc/bin/vcgencmd measure_temp)</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafae433" class="outline-3">
+<h3 id="orgafae433">Al Iniciar mi servidor</h3>
+<div class="outline-text-3" id="text-orgafae433">
+<p>
+He creado una carpeta llamada "scripts" en el "Home" del usuario. Allí he creado el script del Bot llamado <b>inicio.sh</b>, con un mesaje de texto tipo:
+</p>
+
+<p>
+<b>Se ha iniciado mi Raspberry</b>
+</p>
+
+<p>
+Para que esto funciones, vamos a escribir en cron, que cada vez que inicie nuestro servidor, PC, raspberry,&#x2026; Nos envíe el mensaje:
+</p>
+
+<p>
+Escribe en la Terminal:
+</p>
+
+<p>
+<code>crontab -e</code>
+</p>
+
+<p>
+Y en la primera línea, escribiremos lo siguiente:
+</p>
+
+<p>
+<code>@reboot ( sleep 100 ; sh $HOME/scripts/inicio.sh )</code>
+</p>
+
+<p>
+Esto significa que tras 100 segundos después del  inicio de nuestro servidor, pc, raspberry,&#x2026; ejecutará el script <b>inicio.sh</b>, de manera que nos enviará el texto que pusimos en el script "<b>Se ha iniciado mi Raspberry</b>".
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08234a6" class="outline-3">
+<h3 id="org08234a6">Conclusión</h3>
+<div class="outline-text-3" id="text-org08234a6">
+<p>
+Espero que te haya gustado este Post y Podcast. Ahora te toca a ti experimentar y juguetear con tu Bot de Telegram. Comenta tu experiencia en el Grupo de uGeek en Telegram.
 </p>
 <br>
 <p>
-Publicado por Angel el domingo 24 febrero del 2019  
+Publicado por Angel el jueves 14 marzo del 2019  
 </p>
 <br><br>
 <p>
@@ -512,9 +539,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html">Instalar Docker en Raspberry Pi con Raspbian</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb| para subirlos a Telegram u otra nube pública</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
