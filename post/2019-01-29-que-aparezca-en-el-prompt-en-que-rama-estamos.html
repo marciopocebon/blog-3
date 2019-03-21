@@ -268,21 +268,21 @@ for the JavaScript code in this tag.
 <div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
+
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org3521f21" class="outline-2">
-<h2 id="org3521f21">Que aparezca en el Prompt en que rama estamos</h2>
-<div class="outline-text-2" id="text-org3521f21">
+<div id="outline-container-org8f90a42" class="outline-2">
+<h2 id="org8f90a42">Que aparezca en el Prompt en que rama estamos</h2>
+<div class="outline-text-2" id="text-org8f90a42">
 <p>
 Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.  
 Es cierto que con un <b>git status</b>, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos:
 </p>
 </div>
 
-<div id="outline-container-org83c2149" class="outline-3">
-<h3 id="org83c2149">Descargando .git-prompt.sh</h3>
-<div class="outline-text-3" id="text-org83c2149">
+<div id="outline-container-orgae4c6f1" class="outline-3">
+<h3 id="orgae4c6f1">Descargando .git-prompt.sh</h3>
+<div class="outline-text-3" id="text-orgae4c6f1">
 <p>
 Descargamos con wget .git-prompt.sh:
 </p>
@@ -293,9 +293,9 @@ Descargamos con wget .git-prompt.sh:
 </div>
 </div>
 
-<div id="outline-container-org9dd23d8" class="outline-3">
-<h3 id="org9dd23d8">Editamos ~/.bashrc</h3>
-<div class="outline-text-3" id="text-org9dd23d8">
+<div id="outline-container-org68a457f" class="outline-3">
+<h3 id="org68a457f">Editamos ~/.bashrc</h3>
+<div class="outline-text-3" id="text-org68a457f">
 <p>
 Vamos al archivo de configuración de bash <b>~/.bashrc</b> para editarlo con emacs:
 </p>
@@ -314,17 +314,17 @@ PS1="\n[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;33m\]\u\[\033[32m\]$ \
 </div>
 </div>
 
-<div id="outline-container-org00f69f7" class="outline-3">
-<h3 id="org00f69f7">Personalizando</h3>
-<div class="outline-text-3" id="text-org00f69f7">
+<div id="outline-container-orgea04bbc" class="outline-3">
+<h3 id="orgea04bbc">Personalizando</h3>
+<div class="outline-text-3" id="text-orgea04bbc">
 <p>
 Aquí te dejo esta tabla, por si quieres personalizar a tu gusto un poco mas el prompt:
 </p>
 </div>
 
-<div id="outline-container-org15a6354" class="outline-4">
-<h4 id="org15a6354">Texto</h4>
-<div class="outline-text-4" id="text-org15a6354">
+<div id="outline-container-orgf64fb8e" class="outline-4">
+<h4 id="orgf64fb8e">Texto</h4>
+<div class="outline-text-4" id="text-orgf64fb8e">
 <pre class="example">
 Usuario, nombre de host y su color de visualización = \u@\h \[\033[32m\]               
 Directorio de trabajo actual y su color de visualización = \w\[\033[33m\]                  
@@ -333,9 +333,9 @@ Nombre de rama de git y su color de visualización = \$(parse_git_branch)\[\033[
 </div>
 </div>
 
-<div id="outline-container-orgfe7119c" class="outline-4">
-<h4 id="orgfe7119c">Colores</h4>
-<div class="outline-text-4" id="text-orgfe7119c">
+<div id="outline-container-org7c14225" class="outline-4">
+<h4 id="org7c14225">Colores</h4>
+<div class="outline-text-4" id="text-org7c14225">
 <pre class="example">
 Rojo = \[\033[0;31m\]  
 Amarillo = \[\033[0;33m\]  

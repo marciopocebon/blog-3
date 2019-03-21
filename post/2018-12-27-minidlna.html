@@ -268,12 +268,12 @@ for the JavaScript code in this tag.
 <div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
+
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org7ed9aba" class="outline-2">
-<h2 id="org7ed9aba">minidlna</h2>
-<div class="outline-text-2" id="text-org7ed9aba">
+<div id="outline-container-org012ef57" class="outline-2">
+<h2 id="org012ef57">minidlna</h2>
+<div class="outline-text-2" id="text-org012ef57">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org1edf2db" class="outline-3">
-<h3 id="org1edf2db">Instalación</h3>
-<div class="outline-text-3" id="text-org1edf2db">
+<div id="outline-container-org628e90e" class="outline-3">
+<h3 id="org628e90e">Instalación</h3>
+<div class="outline-text-3" id="text-org628e90e">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8ae7548" class="outline-3">
-<h3 id="org8ae7548">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-org8ae7548">
+<div id="outline-container-orgdb58863" class="outline-3">
+<h3 id="orgdb58863">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgdb58863">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -321,9 +321,9 @@ Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la
 </div>
 </div>
 
-<div id="outline-container-org8b9369a" class="outline-3">
-<h3 id="org8b9369a">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org8b9369a">
+<div id="outline-container-orge0f742c" class="outline-3">
+<h3 id="orge0f742c">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orge0f742c">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -334,9 +334,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-orgfb47063" class="outline-3">
-<h3 id="orgfb47063">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgfb47063">
+<div id="outline-container-org43b3872" class="outline-3">
+<h3 id="org43b3872">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-org43b3872">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -347,9 +347,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org1266ebe" class="outline-3">
-<h3 id="org1266ebe">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org1266ebe">
+<div id="outline-container-org953b002" class="outline-3">
+<h3 id="org953b002">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org953b002">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -372,9 +372,9 @@ o
 </div>
 </div>
 
-<div id="outline-container-org7018696" class="outline-3">
-<h3 id="org7018696">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org7018696">
+<div id="outline-container-orgb707cc1" class="outline-3">
+<h3 id="orgb707cc1">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-orgb707cc1">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -397,9 +397,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </div>
 </div>
 
-<div id="outline-container-org23e0611" class="outline-3">
-<h3 id="org23e0611">Puertos</h3>
-<div class="outline-text-3" id="text-org23e0611">
+<div id="outline-container-orgac44ac0" class="outline-3">
+<h3 id="orgac44ac0">Puertos</h3>
+<div class="outline-text-3" id="text-orgac44ac0">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -418,6 +418,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
@@ -427,7 +428,6 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>

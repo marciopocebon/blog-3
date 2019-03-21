@@ -268,37 +268,37 @@ for the JavaScript code in this tag.
 <div id="name"><a href="https://ugeek.github.io/blog"><tt>Blog de Tecnología</tt></div></a>
 <div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-<div id="ugeek"><a href="https://ugeek.github.io" title="uGeek"><tt>uGeek</tt></a></div>
+
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5e44102" class="outline-2">
-<h2 id="org5e44102">Instalar Docker en Raspberry Pi con Raspbian</h2>
-<div class="outline-text-2" id="text-org5e44102">
+<div id="outline-container-orga0e28ab" class="outline-2">
+<h2 id="orga0e28ab">Instalar Docker en Raspberry Pi con Raspbian</h2>
+<div class="outline-text-2" id="text-orga0e28ab">
 <p>
 En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.
 </p>
 </div>
-<div id="outline-container-orgfa25389" class="outline-3">
-<h3 id="orgfa25389">Instala primero algunos paquetes que necesitamos</h3>
-<div class="outline-text-3" id="text-orgfa25389">
+<div id="outline-container-org2a3e9fb" class="outline-3">
+<h3 id="org2a3e9fb">Instala primero algunos paquetes que necesitamos</h3>
+<div class="outline-text-3" id="text-org2a3e9fb">
 <p>
 <code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9ef6035" class="outline-3">
-<h3 id="org9ef6035">Obtener la clave de firma Docker para paquetes</h3>
-<div class="outline-text-3" id="text-org9ef6035">
+<div id="outline-container-orgde595c2" class="outline-3">
+<h3 id="orgde595c2">Obtener la clave de firma Docker para paquetes</h3>
+<div class="outline-text-3" id="text-orgde595c2">
 <p>
 <code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org02d7ec0" class="outline-3">
-<h3 id="org02d7ec0">Añadimos los repositorios oficiales</h3>
-<div class="outline-text-3" id="text-org02d7ec0">
+<div id="outline-container-org6b007d4" class="outline-3">
+<h3 id="org6b007d4">Añadimos los repositorios oficiales</h3>
+<div class="outline-text-3" id="text-org6b007d4">
 <pre class="example">
 sudo echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
      $(lsb_release -cs) stable" | \
@@ -306,18 +306,18 @@ sudo echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-releas
 </pre>
 </div>
 </div>
-<div id="outline-container-orga9d9749" class="outline-3">
-<h3 id="orga9d9749">Instalamos Docker</h3>
-<div class="outline-text-3" id="text-orga9d9749">
+<div id="outline-container-org9e6a720" class="outline-3">
+<h3 id="org9e6a720">Instalamos Docker</h3>
+<div class="outline-text-3" id="text-org9e6a720">
 <pre class="example">
 sudo apt update
 sudo apt install docker-ce
 </pre>
 </div>
 </div>
-<div id="outline-container-org7fbff04" class="outline-3">
-<h3 id="org7fbff04">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h3>
-<div class="outline-text-3" id="text-org7fbff04">
+<div id="outline-container-orgf5da671" class="outline-3">
+<h3 id="orgf5da671">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h3>
+<div class="outline-text-3" id="text-orgf5da671">
 <pre class="example">
 sudo systemctl enable docker
 sudo systemctl start docker
@@ -325,9 +325,9 @@ sudo systemctl start docker
 </div>
 </div>
 
-<div id="outline-container-org592c5d3" class="outline-3">
-<h3 id="org592c5d3">Crear el grupo Docker, para no tener que poner sudo</h3>
-<div class="outline-text-3" id="text-org592c5d3">
+<div id="outline-container-orgd7bf197" class="outline-3">
+<h3 id="orgd7bf197">Crear el grupo Docker, para no tener que poner sudo</h3>
+<div class="outline-text-3" id="text-orgd7bf197">
 <pre class="example">
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -337,9 +337,9 @@ Salir de la terminal y volver a entrar
 </p>
 </div>
 </div>
-<div id="outline-container-orgf49b31e" class="outline-3">
-<h3 id="orgf49b31e">Instalar Portainer</h3>
-<div class="outline-text-3" id="text-orgf49b31e">
+<div id="outline-container-orga31840c" class="outline-3">
+<h3 id="orga31840c">Instalar Portainer</h3>
+<div class="outline-text-3" id="text-orga31840c">
 <p>
 <code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code>
 </p>
@@ -353,6 +353,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html">Instalar Docker en Raspberry Pi con Raspbian</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>

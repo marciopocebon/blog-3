@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lee Super rápido en Emacs con Spray</title>
+<title>Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo."
+<meta name="description" content="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución"
  />
-<meta name="keywords" content="melpa," />
+<meta name="keywords" content="servidor,web" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,111 +271,92 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org89ed345" class="outline-2">
-<h2 id="org89ed345">Lee Super rápido en Emacs con Spray</h2>
-<div class="outline-text-2" id="text-org89ed345">
+<div id="outline-container-org3c90b2e" class="outline-2">
+<h2 id="org3c90b2e">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h2>
+<div class="outline-text-2" id="text-org3c90b2e">
+<p>
+Si quieres montar un servidor web en un pispás y no complicarte la vida, el <a href="https://hub.docker.com/_/nginx">Docker oficial de Nginx</a> es una buenísima solución.
+Hay tres motivos por los cuales instalar este Docker: 
+</p>
+<ul class="org-ul">
+<li>Versión oficial a la última</li>
+<li>Solo una línea de Terminal</li>
+<li>Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x)</li>
+</ul>
+
+
 
 <div class="figure">
-<p><img src="../images-blog/spray.gif" alt="spray.gif" />
+<p><img src="../images-blog/nginx.png" alt="nginx.png" />
 </p>
 </div>
 
 <p>
-No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.
+También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte.
+En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio.
+</p>
+
+
+<p>
+Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal <code>-p 90:80</code>.
 </p>
 </div>
-<div id="outline-container-orgc6b03c9" class="outline-3">
-<h3 id="orgc6b03c9">Instalación</h3>
-<div class="outline-text-3" id="text-orgc6b03c9">
+
+<div id="outline-container-org37b875b" class="outline-3">
+<h3 id="org37b875b">Montando el Docker oficial de Nginx para arquitectura 64bits</h3>
+<div class="outline-text-3" id="text-org37b875b">
 <p>
-Instalaremos desde los repositorios de Melpa:
+Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El tamaño de la Imagen es de 109MB.
+Vamos a instalarlo y probar: La carpeta <b>$HOME/docker/nginx</b>, será la raiz del servidor web.
 </p>
 
 <p>
-<code>M-x package-install RET spray</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5471614" class="outline-3">
-<h3 id="org5471614">Atajo de Teclado</h3>
-<div class="outline-text-3" id="text-org5471614">
-<p>
-La verdad es que si utilizamos un atajo instantáneo, tal como recomienda su desarrollador, aunque a priori pueda parecer una tontería, es un paquete que puede ser muy interesante tener instalado. El desarrollador recomienda utilizar la tecla <b>F6</b> para hacer uso de <b>spray</b>, aunque como sabes, puedes utilizar cualquier otro atajo si este ya lo tienes ocupado.
-</p>
-
-<p>
-Para añadir este atajo, tenemos que añadir a nuestro archivo de configuración de emacs, ya sea el archivo <b>.emacs</b> o <b>init.el</b>, la siguiente línea:
-</p>
-
-<p>
-<code>(global-set-key (kbd "&lt;f6&gt;") 'spray-mode)</code> 
+<code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org27f41c6" class="outline-3">
-<h3 id="org27f41c6">Modo de uso</h3>
-<div class="outline-text-3" id="text-org27f41c6">
+
+<div id="outline-container-org783b206" class="outline-3">
+<h3 id="org783b206">Docker oficial de Nginx, arquitectura 64bits. Alpine Linux</h3>
+<div class="outline-text-3" id="text-org783b206">
 <p>
-La verdad es que es muy fácil de utilizar. Simplemente tenemos que situarnos el la parte del texto que deseamos leer y pulsar la tecla <b>F6</b>. Para salir de <b>spray</b>, pulsaremos nuevamente la tecla <b>F6</b>.
+Ahora vamos a Instalar el mismo Docker oficial, pero partiendo de un Alpine Linux. Tan solo 16.1MB de Imagen!!!
+La carpeta <b>$HOME/docker/nginx</b>, será la raiz del servidor web.
 </p>
 
 <p>
-Algunos atajos mas:
+<code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro amd64/nginx:alpine</code>
 </p>
+</div>
+</div>
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">spray-start/stop (SPC)</td>
-<td class="org-left">pausar o reanudar la fumigación</td>
-</tr>
-
-<tr>
-<td class="org-left">spray-backward-word (h, &lt;left&gt;)</td>
-<td class="org-left">hacer una pausa y volver a la última palabra</td>
-</tr>
-
-<tr>
-<td class="org-left">spray-forward-word (l, &lt;right&gt;)</td>
-<td class="org-left">inversa de spray-backward-word</td>
-</tr>
-
-<tr>
-<td class="org-left">spray-faster (F)</td>
-<td class="org-left">aumenta la velocidad</td>
-</tr>
-
-<tr>
-<td class="org-left">spray-slower (s)</td>
-<td class="org-left">disminuye la velocidad</td>
-</tr>
-
-<tr>
-<td class="org-left">spray-quit (q, &lt;return&gt;)</td>
-<td class="org-left">dejar spray-mode</td>
-</tr>
-</tbody>
-</table>
+<div id="outline-container-org2265994" class="outline-3">
+<h3 id="org2265994">Docker oficial de Nginx en Raspberry</h3>
+<div class="outline-text-3" id="text-org2265994">
+<p>
+Me he emocionado tanto instalando Nginx desde un Alpine Linux, que ahora quiero hacer lo propio en mi Raspberry. Tamaño de la Imagen de 13,4 Mb en mi Raspberry.
+</p>
 
 <p>
-Hay muchas mas opciones como cambiar la posición de spray en la pantalla, así como cambiar los colores. Si quieres entrar mas en profundidad, te recomiendo visitar el <a href="https://gitlab.com/iankelling/spray">repositorio del desarrollador.</a>
+Como veis, he utilizado el mismo comando que el apartado anterior. La carpeta <b>$HOME/docker/nginx</b>, será la raiz del servidor web.
 </p>
 
-<ul class="org-ul">
-<li><a href="https://gitlab.com/iankelling/spray">Repositorio</a></li>
-</ul>
+<p>
+<code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf02f50" class="outline-3">
+<h3 id="orgaf02f50">Conclusión</h3>
+<div class="outline-text-3" id="text-orgaf02f50">
+<p>
+Estoy comenzando a tener Dockerdependencia y es que es inevitable. Poder montar tantos servidores web como quiera con un puerto diferente y con la última versión&#x2026; Como dice el anuncio, no tiene precio, jejeje
+</p>
 <br>
 <p>
-Publicado por Angel el domingo 27 enero del 2019  
+Publicado por Angel el lunes 25 marzo del 2019  
 </p>
 <br><br>
 <p>
@@ -383,13 +364,10 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración| un Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html">Instalar Docker en Raspberry Pi con Raspbian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
