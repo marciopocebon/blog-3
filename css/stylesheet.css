@@ -1,9 +1,9 @@
  /* Letras centrales de uGeek */
 
-#uugeek {
+#ugeek {
   position: absolute;
   font-size: 2.00em;
-  top: 1.25em; }
+  top: 1.30em; }
 
 @media all and (min-width: 1000px){
     #ugeek { left: 42%; } }
