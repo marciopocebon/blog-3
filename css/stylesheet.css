@@ -128,7 +128,6 @@ h3 {
 	font-weight: normal;
 	font-size: 30px;
 	font-family: Arial;
-	text-transform: lowercase;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
 }
@@ -137,7 +136,6 @@ h4 {
 	font-weight: normal;
 	font-size: 25px;
 	font-family: Arial;
-	text-transform: lowercase;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
 }
@@ -146,7 +144,6 @@ h5 {
 	font-weight: normal;
 	font-size: 20px;
 	font-family: Arial;
-	text-transform: lowercase;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
 }
@@ -155,7 +152,6 @@ h6 {
 	font-weight: normal;
 	font-size: 18px;
 	font-family: Arial;
-	text-transform: lowercase;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
 }
