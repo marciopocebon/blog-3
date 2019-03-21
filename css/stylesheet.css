@@ -1,6 +1,6 @@
  /* Letras centrales de uGeek */
 
-#ugeek {
+#uugeek {
   position: absolute;
   font-size: 2.00em;
   top: 1.25em; }
@@ -51,9 +51,8 @@ body {
  /* Artículos Podcast Tags */
 
 #menu {
-
   position: absolute;
-  font-size: 1.425em;
+  font-size: 1.325em;
   top: 7.525em; }
 
 @media all and (min-width: 1000px){
