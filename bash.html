@@ -3,13 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<!-- 2019-03-28 jue 20:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Instalando una Dokuwiki en 4 pasos</title>
+<title>Bash</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2."
+<meta name="author" content="Angel" />
+<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
  />
-<meta name="keywords" content="raspberry" />
+<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,40 +183,8 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<link rel=canonical href=https://ugeek.github.io />
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
-<meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<meta name=twitter:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta name=twitter:title content=uGeek. Blog de Tecnología />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortlink href=https://ugeek.github.io/ />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<div id="logo"><a href="https://ugeek.github.io"><img src="__icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -264,141 +234,46 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<h1 class="title">Bash</h1>
+<div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2cfadec">1. Variables</a></li>
+</ul>
+</div>
+</div>
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="__icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="__icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="__icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="__icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="__icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgce0dbff" class="outline-2">
-<h2 id="orgce0dbff">Instalando una Dokuwiki en 4 pasos</h2>
-<div class="outline-text-2" id="text-orgce0dbff">
 
-<div class="figure">
-<p><img src="../images-blog/dokuwiki.png" alt="dokuwiki.png" />
-</p>
-</div>
-
-
-<p>
-Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts.
-En este post os explico como instalar Dokuwiki en tan solo 4 pasos. Doy por hecho que tienes instalado apache2.
-</p>
-
-<p>
-<code>sudo apt install apache2</code>
-</p>
-
-<p>
-Lo bueno que tiene dokuwiki, es que no tenemos que instalar base de datos y todas nuestras entradas están en formato texto plano.
-</p>
-</div>
-<div id="outline-container-org172e509" class="outline-3">
-<h3 id="org172e509">Descargando Dokuwiki</h3>
-<div class="outline-text-3" id="text-org172e509">
-<p>
-Hay Versiones estables y no estables. Descargamos con wget, por ejemplo, la versión estable copiando el link de la ruta desde la web de <a href="https://www.dokuwiki.org/dokuwiki">DokuWiki</a>.
-</p>
-
-<p>
-Nos situamos en  <code>/var/www/html/</code>, raiz de nuestro servidor web y descargamos ahí el archivo comprimido con <b>wget</b>:
-</p>
-
-<p>
-Si no tenemos permisos, podremos descargarlo utilizando <b>sudo</b>. Posteriormente, para descomprimir la carpeta, también tendremos que usarlo. <code>sudo wget ...</code>, <code>sudo tar ...</code>, <code>sudo mv ...</code>
-</p>
-
-<p>
-<code>wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge6ff86f" class="outline-3">
-<h3 id="orge6ff86f">Descomprimamos</h3>
-<div class="outline-text-3" id="text-orge6ff86f">
-<p>
-Descomprimimos el archivo descargado. Si no es este el nombre, utiliza el nombre del archivo.
-</p>
-
-<p>
-<code>tar -xzvf dokuwiki-stable.tgz</code>
-</p>
-
-<p>
-Renombra la carpeta con el nombre que desees, yo en mi caso, le podré <b>dokuwiki</b>:
-</p>
-
-<p>
-<code>mv dokuwiki-stable/ dokuwiki/</code>
-</p>
-
-<p>
-Ahora vamos a dar permisos de visualización y edición desde el navegador
-</p>
-
-<p>
-<code>sudo chown -R www-data:www-data /var/www/html/dokuwiki</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org1bc54ad" class="outline-3">
-<h3 id="org1bc54ad">Dando el último paso</h3>
-<div class="outline-text-3" id="text-org1bc54ad">
-<p>
-Accedemos desde el navegador web, a la ip de nuestro servidor y la siguiente ruta:
-<a href="http://ip/dokuwiki/install.php">http://ip/dokuwiki/install.php</a>
-</p>
-
-<p>
-Rellenamos los datos de administrador y pulsamos al final para que se inicie la instalación.
-</p>
-
-<p>
-Elimina el archivo <b>install.php</b>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org2f99284" class="outline-3">
-<h3 id="org2f99284">Habilitar código embebido html y php</h3>
-<div class="outline-text-3" id="text-org2f99284">
-<p>
-Para poder ver código embebido en html en nuestra dokuwiki, como vídeos de Youtube,etc&#x2026;  accederemos a traves de la cuenta de administrador a:
-</p>
-
-<p>
-Administrar -&gt; Parámetros de Configuración
-</p>
-
-
-<br>
-<p>
-Publicado por Angel el miércoles 06 febrero del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html">Instalando una Dokuwiki en 4 pasos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<div id="outline-container-org2cfadec" class="outline-2">
+<h2 id="org2cfadec"><span class="section-number-2">1</span> Variables</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+$PWD      # directorio de trabajo actual        
+$OLDPWD   # directorio de trabajo anterior      
+$PPID     # identificador del proceso padre     
+$HOSTNAME # nombre del ordenador                
+$USER     # nombre del usuario                  
+$HOME     # directorio del usuario              
+$PATH     # rutas búsqueda de comandos          
+$LANG     # idioma para los mensajes            
+$FUNCNAME # nombre función en ejecución         
+$LINENO   # número de línea actual (del script) 
+$RANDOM   # número aleatorio                    
+</pre>
 </div>
 </div>
 </div>
+<div id="postamble" class="status">
+<p class="author">Autor: Angel</p>
+<p class="date">Created: 2019-03-28 jue 20:47</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

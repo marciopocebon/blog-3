@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org9c14f92" class="outline-2">
-<h2 id="org9c14f92">minidlna</h2>
-<div class="outline-text-2" id="text-org9c14f92">
+<div id="outline-container-orgfa6b784" class="outline-2">
+<h2 id="orgfa6b784">minidlna</h2>
+<div class="outline-text-2" id="text-orgfa6b784">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org328490a" class="outline-3">
-<h3 id="org328490a">Instalación</h3>
-<div class="outline-text-3" id="text-org328490a">
+<div id="outline-container-org35a5b2c" class="outline-3">
+<h3 id="org35a5b2c">Instalación</h3>
+<div class="outline-text-3" id="text-org35a5b2c">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb7c698e" class="outline-3">
-<h3 id="orgb7c698e">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orgb7c698e">
+<div id="outline-container-orgdae0f44" class="outline-3">
+<h3 id="orgdae0f44">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-orgdae0f44">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -329,9 +329,9 @@ media_dir=A,/media/Musica
 </div>
 </div>
 
-<div id="outline-container-orgf376d7f" class="outline-3">
-<h3 id="orgf376d7f">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-orgf376d7f">
+<div id="outline-container-org76bae63" class="outline-3">
+<h3 id="org76bae63">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-org76bae63">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -342,9 +342,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-org3a13572" class="outline-3">
-<h3 id="org3a13572">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-org3a13572">
+<div id="outline-container-orgfd1d22b" class="outline-3">
+<h3 id="orgfd1d22b">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-orgfd1d22b">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -355,9 +355,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org256f765" class="outline-3">
-<h3 id="org256f765">Añadir nuevo contenido Multimedia</h3>
-<div class="outline-text-3" id="text-org256f765">
+<div id="outline-container-orgad02f8b" class="outline-3">
+<h3 id="orgad02f8b">Añadir nuevo contenido Multimedia</h3>
+<div class="outline-text-3" id="text-orgad02f8b">
 <p>
 Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:
 </p>
@@ -367,9 +367,9 @@ inotify=yes
 </pre>
 </div>
 </div>
-<div id="outline-container-org0502023" class="outline-3">
-<h3 id="org0502023">Crear nueva base de datos</h3>
-<div class="outline-text-3" id="text-org0502023">
+<div id="outline-container-org24cf19c" class="outline-3">
+<h3 id="org24cf19c">Crear nueva base de datos</h3>
+<div class="outline-text-3" id="text-org24cf19c">
 <p>
 Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:
 </p>
@@ -401,9 +401,9 @@ Como has podido ver en este paso anterior, la base de datos así como las portad
 </div>
 </div>
 
-<div id="outline-container-org2aee0d0" class="outline-3">
-<h3 id="org2aee0d0">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org2aee0d0">
+<div id="outline-container-org6c726a7" class="outline-3">
+<h3 id="org6c726a7">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org6c726a7">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -436,9 +436,9 @@ o
 
 
 
-<div id="outline-container-orgc956302" class="outline-3">
-<h3 id="orgc956302">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-orgc956302">
+<div id="outline-container-org4d19b1c" class="outline-3">
+<h3 id="org4d19b1c">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-org4d19b1c">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -460,9 +460,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </p>
 </div>
 </div>
-<div id="outline-container-org4e3e3f1" class="outline-3">
-<h3 id="org4e3e3f1">Puertos</h3>
-<div class="outline-text-3" id="text-org4e3e3f1">
+<div id="outline-container-org851626e" class="outline-3">
+<h3 id="org851626e">Puertos</h3>
+<div class="outline-text-3" id="text-org851626e">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
