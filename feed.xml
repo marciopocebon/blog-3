@@ -13,6 +13,33 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Enviando Imágenes, audios, archivos... con mi bot de Telegram en Bash</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-26-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-en-bash.html</link>
+    <description>Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-26-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-en-bash.html&gt;Enviando Imágenes, audios, archivos... con mi bot de Telegram en Bash&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 26 Mar 2019 17:30 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-03-26-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-en-bash.html</guid>
+   </item>
+   <item>
     <title>Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</title>
     <link>https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html</link>
     <description>Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución... 
