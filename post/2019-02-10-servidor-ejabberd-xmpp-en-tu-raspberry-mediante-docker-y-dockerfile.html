@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgcae1e2b" class="outline-2">
-<h2 id="orgcae1e2b">Servidor Jabber/XMPP en tu Raspberry mediante Docker y Dockerfile</h2>
-<div class="outline-text-2" id="text-orgcae1e2b">
+<div id="outline-container-orgfd1f664" class="outline-2">
+<h2 id="orgfd1f664">Servidor Jabber/XMPP en tu Raspberry mediante Docker y Dockerfile</h2>
+<div class="outline-text-2" id="text-orgfd1f664">
 
 <div class="figure">
 <p><img src="../images-blog/ejabberd.png" alt="ejabberd.png" />
@@ -299,9 +299,9 @@ En próximos posts explicaré como hacer Dockers partiendo de una distro que tan
 </p>
 </div>
 
-<div id="outline-container-org7821cea" class="outline-3">
-<h3 id="org7821cea">Dockerfile</h3>
-<div class="outline-text-3" id="text-org7821cea">
+<div id="outline-container-org85f9d48" class="outline-3">
+<h3 id="org85f9d48">Dockerfile</h3>
+<div class="outline-text-3" id="text-org85f9d48">
 <p>
 Crea con tu editor texto favorito, un archivo sin extensión llamado <b>Dockerfile</b> y dentro copiar este contenido.
 </p>
@@ -339,9 +339,9 @@ CMD ["bash"]
 </div>
 
 
-<div id="outline-container-org0da036e" class="outline-3">
-<h3 id="org0da036e">Creando la Imagen</h3>
-<div class="outline-text-3" id="text-org0da036e">
+<div id="outline-container-org41fb4ec" class="outline-3">
+<h3 id="org41fb4ec">Creando la Imagen</h3>
+<div class="outline-text-3" id="text-org41fb4ec">
 <p>
 Nos situaremos en la carpeta donde está el archivo <b>Dockerfile</b> y ejecutaremos el siguiente comando:
 </p>
@@ -352,9 +352,9 @@ Nos situaremos en la carpeta donde está el archivo <b>Dockerfile</b> y ejecutar
 </div>
 </div>
 
-<div id="outline-container-org26080e6" class="outline-3">
-<h3 id="org26080e6">Veamos si se ha creado la imagen</h3>
-<div class="outline-text-3" id="text-org26080e6">
+<div id="outline-container-org183c0b5" class="outline-3">
+<h3 id="org183c0b5">Veamos si se ha creado la imagen</h3>
+<div class="outline-text-3" id="text-org183c0b5">
 <p>
 Con este comando veremos todas las imágenes que tenemos en el servidor. La última, corresponderá la imagen que hemos creado:
 </p>
@@ -373,9 +373,9 @@ ejabberd_imagen           dockerfile          983bc10a3e5b        47 seconds ago
 </div>
 </div>
 
-<div id="outline-container-org16eeab7" class="outline-3">
-<h3 id="org16eeab7">Creando del Contenedor</h3>
-<div class="outline-text-3" id="text-org16eeab7">
+<div id="outline-container-org17a2fdf" class="outline-3">
+<h3 id="org17a2fdf">Creando del Contenedor</h3>
+<div class="outline-text-3" id="text-org17a2fdf">
 <p>
 Ya tenemos nuestra imagen, ahora vamos a crear el contenedor.
 A la imagen la nombramos <b>ejabberd_imagen</b> y al contenedor, lo pondremos el nombre de <b>ejabberd</b>
@@ -398,9 +398,9 @@ En la carpeta <code>/home/$USUARIO/docker/ejabberd_config</code>, encontraremos 
 </p>
 </div>
 </div>
-<div id="outline-container-org2bb5a12" class="outline-3">
-<h3 id="org2bb5a12">Entrar en el Docker</h3>
-<div class="outline-text-3" id="text-org2bb5a12">
+<div id="outline-container-org1d2af14" class="outline-3">
+<h3 id="org1d2af14">Entrar en el Docker</h3>
+<div class="outline-text-3" id="text-org1d2af14">
 <p>
 Ahora vamos a entrar al interior del Docker. Una vez dentro de este, estaremos en una versión de debian, con todo lo justo para que funcione nuestro servidor y para que sea del mínimo tamaño.
 </p>
@@ -414,9 +414,9 @@ ejabberd es el nombre que habíamos dado a nuestro contenedor.
 </p>
 </div>
 </div>
-<div id="outline-container-org74fd1cc" class="outline-3">
-<h3 id="org74fd1cc">Vamos a configurar nuestro servidor</h3>
-<div class="outline-text-3" id="text-org74fd1cc">
+<div id="outline-container-org79df8d1" class="outline-3">
+<h3 id="org79df8d1">Vamos a configurar nuestro servidor</h3>
+<div class="outline-text-3" id="text-org79df8d1">
 <p>
 Una vez dentro, mediante este comando, daremos nombre al servidor, nombre de administrador y contraseña del mismo.
 </p>
@@ -448,9 +448,9 @@ Es posible que de error. Si es así, pararemos el servidor y lo volveremos a ini
 </div>
 
 
-<div id="outline-container-org80cb088" class="outline-3">
-<h3 id="org80cb088">Configurando el servidor</h3>
-<div class="outline-text-3" id="text-org80cb088">
+<div id="outline-container-orgec416bd" class="outline-3">
+<h3 id="orgec416bd">Configurando el servidor</h3>
+<div class="outline-text-3" id="text-orgec416bd">
 <p>
 Ahora nos conectamos a <code>https://ip:5280/admin</code>, que es la web de administración del servicio. Nos pedirá para acceder el nombre del servidor y usuario del administrador, que hemos puesto en el paso anterior.
 </p>
@@ -466,9 +466,9 @@ Archivo de configuración está en: <code>/etc/ejabberd/ejabberd.yml</code>
 </div>
 </div>
 
-<div id="outline-container-orga7025e4" class="outline-3">
-<h3 id="orga7025e4">Añadir usuarios</h3>
-<div class="outline-text-3" id="text-orga7025e4">
+<div id="outline-container-orge970b0d" class="outline-3">
+<h3 id="orge970b0d">Añadir usuarios</h3>
+<div class="outline-text-3" id="text-orge970b0d">
 <p>
 Para añadir usuarios desde la interfaz de administración web, seleccionaremos en el menú <b>Dominios Virtuales</b> -&gt; <b>Dominio</b> -&gt; <b>Usuarios</b>.
 Ahí, añadiremos nuestros usuarios y sus contraseñas. Esto sería en el caso que únicamente el administrador del servidor, sea el único que permita el registro de usuarios, tal como viene por defecto. También podríamos hacer que cada usuario que quiera, pueda registrarse.
@@ -477,9 +477,9 @@ Ahí, añadiremos nuestros usuarios y sus contraseñas. Esto sería en el caso q
 </div>
 
 
-<div id="outline-container-org2900182" class="outline-3">
-<h3 id="org2900182">Aumentar la velocidad de transferencia de archivos. TRAFFIC SHAPERS</h3>
-<div class="outline-text-3" id="text-org2900182">
+<div id="outline-container-org806e5c6" class="outline-3">
+<h3 id="org806e5c6">Aumentar la velocidad de transferencia de archivos. TRAFFIC SHAPERS</h3>
+<div class="outline-text-3" id="text-org806e5c6">
 <p>
 Ejabberd/xmpp, no está diseñado para transferir archivos, aún así, notarás que la transferencia de archivos es muy lenta y es debido a que el archivo de configuración tiene limitación en la transferencia por defecto, por si el número de usuarios que van a utilizar el servidor es muy grande. También tiene limitado el tamaño máximo de archivo a compartir. Desmarca mediante <b>#</b> o personaliza a tu gusto los parametros en <b>ejabberd.yml</b>, Recuerda que puedes acceder desde fuera del contenedor, gracias al volumen que creamos al crear el mismo.
 </p>
@@ -510,9 +510,9 @@ Podemos personalizar absolutamente nuestro servidor desde este archivo, pero es 
 </div>
 
 
-<div id="outline-container-orgc5917b4" class="outline-3">
-<h3 id="orgc5917b4">Web ejabberd</h3>
-<div class="outline-text-3" id="text-orgc5917b4">
+<div id="outline-container-org6f16f8c" class="outline-3">
+<h3 id="org6f16f8c">Web ejabberd</h3>
+<div class="outline-text-3" id="text-org6f16f8c">
 <ul class="org-ul">
 <li><a href="https://www.ejabberd.im/">https://www.ejabberd.im/</a></li>
 </ul>

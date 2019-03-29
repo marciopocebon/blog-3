@@ -13,6 +13,33 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Veracrypt en Ubuntu y tu Raspberry por Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html</link>
+    <description>Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar parte del contenido almacenado en tu Raspberry... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html&gt;Veracrypt en Ubuntu y tu Raspberry por Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 29 Mar 2019 21:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html</guid>
+   </item>
+   <item>
     <title>Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</title>
     <link>https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html</link>
     <description>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!... 

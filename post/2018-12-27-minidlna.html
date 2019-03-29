@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgfa6b784" class="outline-2">
-<h2 id="orgfa6b784">minidlna</h2>
-<div class="outline-text-2" id="text-orgfa6b784">
+<div id="outline-container-orgd076a96" class="outline-2">
+<h2 id="orgd076a96">minidlna</h2>
+<div class="outline-text-2" id="text-orgd076a96">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -285,18 +285,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org35a5b2c" class="outline-3">
-<h3 id="org35a5b2c">Instalación</h3>
-<div class="outline-text-3" id="text-org35a5b2c">
+<div id="outline-container-org7c61f99" class="outline-3">
+<h3 id="org7c61f99">Instalación</h3>
+<div class="outline-text-3" id="text-org7c61f99">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdae0f44" class="outline-3">
-<h3 id="orgdae0f44">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-orgdae0f44">
+<div id="outline-container-org7fe10e5" class="outline-3">
+<h3 id="org7fe10e5">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-org7fe10e5">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -329,9 +329,9 @@ media_dir=A,/media/Musica
 </div>
 </div>
 
-<div id="outline-container-org76bae63" class="outline-3">
-<h3 id="org76bae63">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org76bae63">
+<div id="outline-container-orgc8190ee" class="outline-3">
+<h3 id="orgc8190ee">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orgc8190ee">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -342,9 +342,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-orgfd1d22b" class="outline-3">
-<h3 id="orgfd1d22b">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgfd1d22b">
+<div id="outline-container-orgbe370f0" class="outline-3">
+<h3 id="orgbe370f0">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-orgbe370f0">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -355,9 +355,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-orgad02f8b" class="outline-3">
-<h3 id="orgad02f8b">Añadir nuevo contenido Multimedia</h3>
-<div class="outline-text-3" id="text-orgad02f8b">
+<div id="outline-container-org75f1f86" class="outline-3">
+<h3 id="org75f1f86">Añadir nuevo contenido Multimedia</h3>
+<div class="outline-text-3" id="text-org75f1f86">
 <p>
 Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:
 </p>
@@ -367,9 +367,9 @@ inotify=yes
 </pre>
 </div>
 </div>
-<div id="outline-container-org24cf19c" class="outline-3">
-<h3 id="org24cf19c">Crear nueva base de datos</h3>
-<div class="outline-text-3" id="text-org24cf19c">
+<div id="outline-container-org373a4ba" class="outline-3">
+<h3 id="org373a4ba">Crear nueva base de datos</h3>
+<div class="outline-text-3" id="text-org373a4ba">
 <p>
 Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:
 </p>
@@ -401,9 +401,9 @@ Como has podido ver en este paso anterior, la base de datos así como las portad
 </div>
 </div>
 
-<div id="outline-container-org6c726a7" class="outline-3">
-<h3 id="org6c726a7">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-org6c726a7">
+<div id="outline-container-org6cd2c3e" class="outline-3">
+<h3 id="org6cd2c3e">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-org6cd2c3e">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -436,9 +436,9 @@ o
 
 
 
-<div id="outline-container-org4d19b1c" class="outline-3">
-<h3 id="org4d19b1c">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-org4d19b1c">
+<div id="outline-container-org17fd330" class="outline-3">
+<h3 id="org17fd330">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-org17fd330">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -460,9 +460,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </p>
 </div>
 </div>
-<div id="outline-container-org851626e" class="outline-3">
-<h3 id="org851626e">Puertos</h3>
-<div class="outline-text-3" id="text-org851626e">
+<div id="outline-container-org316296b" class="outline-3">
+<h3 id="org316296b">Puertos</h3>
+<div class="outline-text-3" id="text-org316296b">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -481,6 +481,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx| con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
@@ -490,7 +491,6 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
