@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgafd96ff" class="outline-2">
-<h2 id="orgafd96ff">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
-<div class="outline-text-2" id="text-orgafd96ff">
+<div id="outline-container-orga81bfee" class="outline-2">
+<h2 id="orga81bfee">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
+<div class="outline-text-2" id="text-orga81bfee">
 
 <div class="figure">
 <p><img src="../images-blog/veracrypt.png" alt="veracrypt.png" />
@@ -309,9 +309,9 @@ En este Post os voy a explicar como hacerlo desde la terminal, pero si os result
 </p>
 </div>
 
-<div id="outline-container-org5f9a7c8" class="outline-3">
-<h3 id="org5f9a7c8">Instalación en Ubuntu</h3>
-<div class="outline-text-3" id="text-org5f9a7c8">
+<div id="outline-container-org2c201ce" class="outline-3">
+<h3 id="org2c201ce">Instalación en Ubuntu</h3>
+<div class="outline-text-3" id="text-org2c201ce">
 <p>
 En Ubuntu lo instalaríamos mediante PPA:
 </p>
@@ -325,9 +325,9 @@ sudo apt install veracrypt
 </ul>
 </div>
 </div>
-<div id="outline-container-org56b7d0f" class="outline-3">
-<h3 id="org56b7d0f">Instalación en Raspberry</h3>
-<div class="outline-text-3" id="text-org56b7d0f">
+<div id="outline-container-orgf63de73" class="outline-3">
+<h3 id="orgf63de73">Instalación en Raspberry</h3>
+<div class="outline-text-3" id="text-orgf63de73">
 <p>
 Instalamos las siguientes dependencias:
 </p>
@@ -376,9 +376,9 @@ Ahora seguiremos los pasos que nos pedirá el programa:
 </div>
 </div>
 
-<div id="outline-container-org05ecb2e" class="outline-3">
-<h3 id="org05ecb2e">Desinstalar</h3>
-<div class="outline-text-3" id="text-org05ecb2e">
+<div id="outline-container-org1118d6d" class="outline-3">
+<h3 id="org1118d6d">Desinstalar</h3>
+<div class="outline-text-3" id="text-org1118d6d">
 <p>
 Para desinstalar:
 </p>
@@ -387,9 +387,9 @@ rm -r veracryptfiles
 </pre>
 </div>
 </div>
-<div id="outline-container-org4a543c1" class="outline-3">
-<h3 id="org4a543c1">Crear un Volumen</h3>
-<div class="outline-text-3" id="text-org4a543c1">
+<div id="outline-container-org8c05456" class="outline-3">
+<h3 id="org8c05456">Crear un Volumen</h3>
+<div class="outline-text-3" id="text-org8c05456">
 <p>
 Primero crearemos una carpeta donde queremos montar el volumen. Por ejemplo:
 </p>
@@ -423,9 +423,9 @@ Ahora veracrypt nos preguntará:
 </div>
 </div>
 
-<div id="outline-container-org53fe28f" class="outline-3">
-<h3 id="org53fe28f">Montar Volumen</h3>
-<div class="outline-text-3" id="text-org53fe28f">
+<div id="outline-container-org4288f2b" class="outline-3">
+<h3 id="org4288f2b">Montar Volumen</h3>
+<div class="outline-text-3" id="text-org4288f2b">
 <p>
 Para montar un volumen ya creado, como la mayoría de cifrados en GNU/Linux, el comando sería:
 </p>
@@ -458,9 +458,9 @@ veracrypt $HOME/archivo_cifrado /media/veracrypt --pim=0 --keyfiles= --protect-h
 </div>
 </div>
 
-<div id="outline-container-orgdb3151f" class="outline-3">
-<h3 id="orgdb3151f">Desmontar la unidad</h3>
-<div class="outline-text-3" id="text-orgdb3151f">
+<div id="outline-container-org3db8378" class="outline-3">
+<h3 id="org3db8378">Desmontar la unidad</h3>
+<div class="outline-text-3" id="text-org3db8378">
 <p>
 Para desmontar todas las unidades montadas con veracrypt:
 </p>
@@ -474,9 +474,9 @@ Para desmontar todas las unidades montadas con veracrypt:
 </p>
 </div>
 </div>
-<div id="outline-container-orgff23fa3" class="outline-3">
-<h3 id="orgff23fa3">Alias puede ser una Buena Idea</h3>
-<div class="outline-text-3" id="text-orgff23fa3">
+<div id="outline-container-orgda56b39" class="outline-3">
+<h3 id="orgda56b39">Alias puede ser una Buena Idea</h3>
+<div class="outline-text-3" id="text-orgda56b39">
 <p>
 Alias puede ser una buena idea si no queremos recordar la ruta de las carpetas:
 </p>
@@ -500,17 +500,17 @@ printf "\nalias veracrypt_d=\"veracrypt -d $HOME/veracrypt"" &gt;&gt; .bashrc
 </div>
 
 
-<div id="outline-container-org76d7a9f" class="outline-3">
-<h3 id="org76d7a9f">Conclusión</h3>
-<div class="outline-text-3" id="text-org76d7a9f">
+<div id="outline-container-orgc40d78a" class="outline-3">
+<h3 id="orgc40d78a">Conclusión</h3>
+<div class="outline-text-3" id="text-orgc40d78a">
 <p>
 El punto positivo de Veracrypt, es que al ser un único archivo no hay grabes problemas de sincronización, el punto negativo, es que si el archivo es muy grande, no es muy aconsejable hacer sincronizaciones cifradas con nuestro movil, ya que podriamos consumir nuestra tarifa de datos.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfe9181c" class="outline-3">
-<h3 id="orgfe9181c">Fuentes</h3>
-<div class="outline-text-3" id="text-orgfe9181c">
+<div id="outline-container-orgec16bbb" class="outline-3">
+<h3 id="orgec16bbb">Fuentes</h3>
+<div class="outline-text-3" id="text-orgec16bbb">
 <ul class="org-ul">
 <li><a href="https://www.veracrypt.fr/en/Downloads.html">https://www.veracrypt.fr/en/Downloads.html</a></li>
 <li><a href="https://www.veracrypt.fr/en/Command%20Line%20Usage.html">https://www.veracrypt.fr/en/Command Line Usage.html</a></li>

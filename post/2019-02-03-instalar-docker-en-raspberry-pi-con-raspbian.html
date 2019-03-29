@@ -271,34 +271,34 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgdfd1528" class="outline-2">
-<h2 id="orgdfd1528">Instalar Docker en Raspberry Pi con Raspbian</h2>
-<div class="outline-text-2" id="text-orgdfd1528">
+<div id="outline-container-orgcf1a51a" class="outline-2">
+<h2 id="orgcf1a51a">Instalar Docker en Raspberry Pi con Raspbian</h2>
+<div class="outline-text-2" id="text-orgcf1a51a">
 <p>
 En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.
 </p>
 </div>
-<div id="outline-container-orgb0fea4c" class="outline-3">
-<h3 id="orgb0fea4c">Instala primero algunos paquetes que necesitamos</h3>
-<div class="outline-text-3" id="text-orgb0fea4c">
+<div id="outline-container-org7655504" class="outline-3">
+<h3 id="org7655504">Instala primero algunos paquetes que necesitamos</h3>
+<div class="outline-text-3" id="text-org7655504">
 <p>
 <code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9026afa" class="outline-3">
-<h3 id="org9026afa">Obtener la clave de firma Docker para paquetes</h3>
-<div class="outline-text-3" id="text-org9026afa">
+<div id="outline-container-org157cf7a" class="outline-3">
+<h3 id="org157cf7a">Obtener la clave de firma Docker para paquetes</h3>
+<div class="outline-text-3" id="text-org157cf7a">
 <p>
 <code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgce14b82" class="outline-3">
-<h3 id="orgce14b82">Añadimos los repositorios oficiales</h3>
-<div class="outline-text-3" id="text-orgce14b82">
+<div id="outline-container-org3636dcd" class="outline-3">
+<h3 id="org3636dcd">Añadimos los repositorios oficiales</h3>
+<div class="outline-text-3" id="text-org3636dcd">
 <pre class="example">
 sudo echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
      $(lsb_release -cs) stable" | \
@@ -306,18 +306,18 @@ sudo echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-releas
 </pre>
 </div>
 </div>
-<div id="outline-container-org9d4b8c9" class="outline-3">
-<h3 id="org9d4b8c9">Instalamos Docker</h3>
-<div class="outline-text-3" id="text-org9d4b8c9">
+<div id="outline-container-org033e29c" class="outline-3">
+<h3 id="org033e29c">Instalamos Docker</h3>
+<div class="outline-text-3" id="text-org033e29c">
 <pre class="example">
 sudo apt update
 sudo apt install docker-ce
 </pre>
 </div>
 </div>
-<div id="outline-container-orge7d7674" class="outline-3">
-<h3 id="orge7d7674">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h3>
-<div class="outline-text-3" id="text-orge7d7674">
+<div id="outline-container-org34a4330" class="outline-3">
+<h3 id="org34a4330">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h3>
+<div class="outline-text-3" id="text-org34a4330">
 <pre class="example">
 sudo systemctl enable docker
 sudo systemctl start docker
@@ -325,9 +325,9 @@ sudo systemctl start docker
 </div>
 </div>
 
-<div id="outline-container-orgfca2569" class="outline-3">
-<h3 id="orgfca2569">Crear el grupo Docker, para no tener que poner sudo</h3>
-<div class="outline-text-3" id="text-orgfca2569">
+<div id="outline-container-orgc212b3b" class="outline-3">
+<h3 id="orgc212b3b">Crear el grupo Docker, para no tener que poner sudo</h3>
+<div class="outline-text-3" id="text-orgc212b3b">
 <pre class="example">
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -337,9 +337,9 @@ Salir de la terminal y volver a entrar
 </p>
 </div>
 </div>
-<div id="outline-container-org6d2d615" class="outline-3">
-<h3 id="org6d2d615">Instalar Portainer</h3>
-<div class="outline-text-3" id="text-org6d2d615">
+<div id="outline-container-orgada86ea" class="outline-3">
+<h3 id="orgada86ea">Instalar Portainer</h3>
+<div class="outline-text-3" id="text-orgada86ea">
 <p>
 <code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code>
 </p>

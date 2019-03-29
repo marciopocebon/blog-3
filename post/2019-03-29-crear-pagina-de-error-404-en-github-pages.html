@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+<title>Crear página de error 404 en GitHub Pages</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Voy a explicar en este post, como generar el Feed del podcast de forma automática."
+<meta name="description" content="Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog, muchos de los artículos antiguos han cambiado ruta de la dirección web en el servidor y si llegas a ellas, quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404"
  />
-<meta name="keywords" content="servidor, jekyll,rss" />
+<meta name="keywords" content="git,github" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -271,137 +271,33 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org56b5e39" class="outline-2">
-<h2 id="org56b5e39">Crear el Feed para el podcast en tu Blog con Jekyll</h2>
-<div class="outline-text-2" id="text-org56b5e39">
-<p>
-Voy a explicar en este post, como generar el Feed del podcast de forma automática.
+<div id="outline-container-org5d9af06" class="outline-2">
+<h2 id="org5d9af06">Crear página de error 404 en GitHub Pages</h2>
+<div class="outline-text-2" id="text-org5d9af06">
+
+<div class="figure">
+<p><img src="../images-blog/404.png" alt="404.png" />
 </p>
 </div>
 
-<div id="outline-container-orgefb544c" class="outline-3">
-<h3 id="orgefb544c">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-orgefb544c">
-<pre class="example">
----
-layout: null
----
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;rss version="2.0"
-xmlns:content="http://purl.org/rss/1.0/modules/content/"
-xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:atom="http://www.w3.org/2005/Atom"
-xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
-&gt;
+<p>
+Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog, muchos de los artículos antiguos han cambiado la ruta de dirección web en el servidor y si llegas a ellas, quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404 y que tras 3 segundos,tal como expliqué <a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">en este Post</a>, redireccionará con el Index del blog. Pero&#x2026; 
+</p>
 
-&lt;channel&gt;
-&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
-&lt;atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /&gt;
-&lt;link&gt;{{ site.url }}&lt;/link&gt;
-&lt;description&gt;{{ site.podcast_description }}&lt;/description&gt;
-&lt;lastBuildDate&gt;{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/lastBuildDate&gt;
-&lt;language&gt;es-es&lt;/language&gt;
-&lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
-&lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt;
-&lt;generator&gt;http://jekyllrb.com&lt;/generator&gt;
-&lt;itunes:summary&gt;{{ site.podcast_summary }}&lt;/itunes:summary&gt;
-&lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
-&lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
-&lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
-&lt;itunes:owner&gt;
-&lt;itunes:name&gt;{{ site.podcast_owner }}&lt;/itunes:name&gt;
-&lt;itunes:email&gt;{{ site.podcast_email }}&lt;/itunes:email&gt;
-&lt;/itunes:owner&gt;
-&lt;managingEditor&gt;{{ site.podcast_email }} ({{ site.podcast_owner }})&lt;/managingEditor&gt;
-&lt;itunes:subtitle&gt;{{ site.podcast_subtitle }}&lt;/itunes:subtitle&gt;
-&lt;image&gt;
-&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
-&lt;url&gt;{{ site.url }}{{ site.podcast_album_art }}&lt;/url&gt;
-&lt;link&gt;{{ site.url }}&lt;/link&gt;
-&lt;/image&gt;
-&lt;itunes:category text="{{ site.podcast_category }}"&gt;
-&lt;itunes:category text="{{ site.podcast_subcategory_one }}" /&gt;
-&lt;itunes:category text="{{ site.podcast_subcategory_two }}" /&gt;
-&lt;/itunes:category&gt;
-{% for ep in site.categories.podcast %}
-  &lt;item&gt;
-    &lt;title&gt;{{ ep.title }}&lt;/title&gt;
-    &lt;link&gt;{{ site.url }}{{ ep.url }}&lt;/link&gt;
-    &lt;comments&gt;{{ site.url }}{{ ep.url }}#comments&lt;/comments&gt;
-    &lt;pubDate&gt;{{ ep.date | date: "%a, %d %b %Y %T %z" }}&lt;/pubDate&gt;
-    &lt;dc:creator&gt;&lt;![CDATA[{{ site.author | cdata_escape }}]]&gt;&lt;/dc:creator&gt;
-{% for category in ep.categories %}
-    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
-{% endfor %}
-{% for category in ep.tags %}
-    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
-{% endfor %}
-    &lt;guid isPermaLink="{% if ep.podcast_guid %}false{% else %}true{% endif %}"&gt;{{ site.url }}{% if ep.podcast_guid %}/{{ ep.podcast_guid }}{% else %}{{ ep.url }}{% endif %}&lt;/guid&gt;
-    &lt;description&gt;
-	&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;
-    &lt;/description&gt;
-    &lt;content:encoded&gt;
-	&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;
-    &lt;/content:encoded&gt;
+<p>
+¿Como se hace una página de error 404 en GitHub Pages?
+</p>
 
-    &lt;enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" /&gt;
-    &lt;itunes:subtitle&gt;&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:subtitle&gt;
-    &lt;itunes:summary&gt;&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:summary&gt;
-    &lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
-    &lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
-    &lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
-    &lt;itunes:duration&gt;{{ ep.podcast_duration }}&lt;/itunes:duration&gt;
-  &lt;/item&gt;
-{% endfor %}
-&lt;/channel&gt;
-&lt;/rss&gt;
-</pre>
-</div>
-</div>
+<p>
+Súper Fácil!!!!
+</p>
 
-<div id="outline-container-org832a691" class="outline-3">
-<h3 id="org832a691">Añadimos en el archivo _config.yml, el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-org832a691">
-<pre class="example">
-# Podcast Feed Settings
-podcast_url: https://ugeek.github.io
-podcast_album_art: https://ugeek.github.io/img/ugeek.png
-podcast_title: uGeek
-podcast_owner: Angel
-podcast_email: ugeekpodcast@gmail.com
-podcast_category: Technology
-podcast_subcategory_one: Linux
-podcast_subcategory_two: Gadgets
-podcast_explicit: "no"
-podcast_author: Angel
-podcast_description: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
-podcast_summary: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
-podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
-</pre>
-</div>
-</div>
-<div id="outline-container-org74274c4" class="outline-3">
-<h3 id="org74274c4">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h3>
-<div class="outline-text-3" id="text-org74274c4">
-<pre class="example">
----
-layout: post
-title: "046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"
-date: 2017-04-21
-categories: podcast
-image: img/ugeek.png
-podcast_link: https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3
-tags: [syncthing, resilio, dukto, sincronización carpetas, podcast]
-comments: true
----
-</pre>
-
+<p>
+Tan simple como crear una página <b>.html</b> en la raiz del repositorio y nombrarla como <b>404.html</b>. Cada vez que alguien acceda a una página que esa no exista, GitHub Pages redirigirá el tráfico hacia esta página <b>404.html</b>.
+</p>
 <br>
 <p>
-Publicado por Angel el lunes 21 enero del 2019  
+Publicado por Angel el viernes 29 marzo del 2019  
 </p>
 <br><br>
 <p>
@@ -409,10 +305,15 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx| con una sola línea de Terminal (Docker)</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos| Webs| Grupos| Tutoriales&#x2026; Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
 </div>
 </div>
 </div>

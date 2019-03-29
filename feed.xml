@@ -40,6 +40,33 @@
     <guid>https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html</guid>
    </item>
    <item>
+    <title>Crear página de error 404 en GitHub Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html</link>
+    <description>Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog, muchos de los artículos antiguos han cambiado ruta de la dirección web en el servidor y si llegas a ellas, quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html&gt;Crear página de error 404 en GitHub Pages&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 29 Mar 2019 22:30 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html</guid>
+   </item>
+   <item>
     <title>Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</title>
     <link>https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html</link>
     <description>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!... 
