@@ -268,18 +268,18 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org53e611c" class="outline-2">
-<h2 id="org53e611c">Crear listas m3u para minidlna o vlc</h2>
-<div class="outline-text-2" id="text-org53e611c">
+<div id="outline-container-org89d6fcb" class="outline-2">
+<h2 id="org89d6fcb">Crear listas m3u para minidlna o vlc</h2>
+<div class="outline-text-2" id="text-org89d6fcb">
 <p>
 Un archivo <b>.m3u</b>, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc.
 Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidlna.html">minidlna</a>, te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.
 </p>
 </div>
 
-<div id="outline-container-org7cf0f3f" class="outline-3">
-<h3 id="org7cf0f3f">Crear lista para minidlna</h3>
-<div class="outline-text-3" id="text-org7cf0f3f">
+<div id="outline-container-org7c31f42" class="outline-3">
+<h3 id="org7c31f42">Crear lista para minidlna</h3>
+<div class="outline-text-3" id="text-org7c31f42">
 <ul class="org-ul">
 <li>Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.</li>
 <li>No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.</li>
@@ -287,9 +287,9 @@ Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidln
 </div>
 </div>
 
-<div id="outline-container-org140f84a" class="outline-3">
-<h3 id="org140f84a">Lista dentro de un directorio</h3>
-<div class="outline-text-3" id="text-org140f84a">
+<div id="outline-container-org52f52e8" class="outline-3">
+<h3 id="org52f52e8">Lista dentro de un directorio</h3>
+<div class="outline-text-3" id="text-org52f52e8">
 <ol class="org-ol">
 <li>Nos situamos en el directorio:</li>
 </ol>
@@ -298,9 +298,9 @@ Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidln
 </p>
 </div>
 
-<div id="outline-container-org59d9276" class="outline-4">
-<h4 id="org59d9276">Explicación del comando de listado</h4>
-<div class="outline-text-4" id="text-org59d9276">
+<div id="outline-container-org012e5cf" class="outline-4">
+<h4 id="org012e5cf">Explicación del comando de listado</h4>
+<div class="outline-text-4" id="text-org012e5cf">
 <ul class="org-ul">
 <li>ls -&gt; lista archivos dentro de la carpeta</li>
 <li>-1 -&gt; mostrar un archivo por línea</li>
@@ -313,18 +313,18 @@ Después, podríamos ordenar el listado de diferente maneras, por ejemplo con co
 </div>
 </div>
 
-<div id="outline-container-org8686040" class="outline-3">
-<h3 id="org8686040">Lista recursiva entrando dentro de subcarpetas</h3>
-<div class="outline-text-3" id="text-org8686040">
+<div id="outline-container-org6374e68" class="outline-3">
+<h3 id="org6374e68">Lista recursiva entrando dentro de subcarpetas</h3>
+<div class="outline-text-3" id="text-org6374e68">
 <p>
 <code>ls -1 -R | grep .mp3 &gt; lista.m3u</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8f5c966" class="outline-3">
-<h3 id="org8f5c966">Reproducir la lista desde nuestra terminal con vlc</h3>
-<div class="outline-text-3" id="text-org8f5c966">
+<div id="outline-container-orgc693a61" class="outline-3">
+<h3 id="orgc693a61">Reproducir la lista desde nuestra terminal con vlc</h3>
+<div class="outline-text-3" id="text-orgc693a61">
 <p>
 <code>vlc lista.m3u</code>
 </p>
