@@ -207,7 +207,6 @@ gtag('config', 'UA-131560140-1');
 <meta name=twitter:title content=uGeek. Blog de Tecnología />
 <meta name=twitter:site content=@ugeekpodcast />
 <meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortlink href=https://ugeek.github.io/ />
 <link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
@@ -271,9 +270,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orga81bfee" class="outline-2">
-<h2 id="orga81bfee">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
-<div class="outline-text-2" id="text-orga81bfee">
+<div id="outline-container-org91059fd" class="outline-2">
+<h2 id="org91059fd">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
+<div class="outline-text-2" id="text-org91059fd">
 
 <div class="figure">
 <p><img src="../images-blog/veracrypt.png" alt="veracrypt.png" />
@@ -309,9 +308,9 @@ En este Post os voy a explicar como hacerlo desde la terminal, pero si os result
 </p>
 </div>
 
-<div id="outline-container-org2c201ce" class="outline-3">
-<h3 id="org2c201ce">Instalación en Ubuntu</h3>
-<div class="outline-text-3" id="text-org2c201ce">
+<div id="outline-container-org93f5860" class="outline-3">
+<h3 id="org93f5860">Instalación en Ubuntu</h3>
+<div class="outline-text-3" id="text-org93f5860">
 <p>
 En Ubuntu lo instalaríamos mediante PPA:
 </p>
@@ -325,9 +324,9 @@ sudo apt install veracrypt
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf63de73" class="outline-3">
-<h3 id="orgf63de73">Instalación en Raspberry</h3>
-<div class="outline-text-3" id="text-orgf63de73">
+<div id="outline-container-org47cc000" class="outline-3">
+<h3 id="org47cc000">Instalación en Raspberry</h3>
+<div class="outline-text-3" id="text-org47cc000">
 <p>
 Instalamos las siguientes dependencias:
 </p>
@@ -376,9 +375,9 @@ Ahora seguiremos los pasos que nos pedirá el programa:
 </div>
 </div>
 
-<div id="outline-container-org1118d6d" class="outline-3">
-<h3 id="org1118d6d">Desinstalar</h3>
-<div class="outline-text-3" id="text-org1118d6d">
+<div id="outline-container-org432b314" class="outline-3">
+<h3 id="org432b314">Desinstalar</h3>
+<div class="outline-text-3" id="text-org432b314">
 <p>
 Para desinstalar:
 </p>
@@ -387,9 +386,9 @@ rm -r veracryptfiles
 </pre>
 </div>
 </div>
-<div id="outline-container-org8c05456" class="outline-3">
-<h3 id="org8c05456">Crear un Volumen</h3>
-<div class="outline-text-3" id="text-org8c05456">
+<div id="outline-container-orgac20af2" class="outline-3">
+<h3 id="orgac20af2">Crear un Volumen</h3>
+<div class="outline-text-3" id="text-orgac20af2">
 <p>
 Primero crearemos una carpeta donde queremos montar el volumen. Por ejemplo:
 </p>
@@ -423,9 +422,9 @@ Ahora veracrypt nos preguntará:
 </div>
 </div>
 
-<div id="outline-container-org4288f2b" class="outline-3">
-<h3 id="org4288f2b">Montar Volumen</h3>
-<div class="outline-text-3" id="text-org4288f2b">
+<div id="outline-container-org88b0e2c" class="outline-3">
+<h3 id="org88b0e2c">Montar Volumen</h3>
+<div class="outline-text-3" id="text-org88b0e2c">
 <p>
 Para montar un volumen ya creado, como la mayoría de cifrados en GNU/Linux, el comando sería:
 </p>
@@ -458,9 +457,9 @@ veracrypt $HOME/archivo_cifrado /media/veracrypt --pim=0 --keyfiles= --protect-h
 </div>
 </div>
 
-<div id="outline-container-org3db8378" class="outline-3">
-<h3 id="org3db8378">Desmontar la unidad</h3>
-<div class="outline-text-3" id="text-org3db8378">
+<div id="outline-container-org1ef1e3c" class="outline-3">
+<h3 id="org1ef1e3c">Desmontar la unidad</h3>
+<div class="outline-text-3" id="text-org1ef1e3c">
 <p>
 Para desmontar todas las unidades montadas con veracrypt:
 </p>
@@ -474,9 +473,9 @@ Para desmontar todas las unidades montadas con veracrypt:
 </p>
 </div>
 </div>
-<div id="outline-container-orgda56b39" class="outline-3">
-<h3 id="orgda56b39">Alias puede ser una Buena Idea</h3>
-<div class="outline-text-3" id="text-orgda56b39">
+<div id="outline-container-orgf0420b1" class="outline-3">
+<h3 id="orgf0420b1">Alias puede ser una Buena Idea</h3>
+<div class="outline-text-3" id="text-orgf0420b1">
 <p>
 Alias puede ser una buena idea si no queremos recordar la ruta de las carpetas:
 </p>
@@ -500,17 +499,17 @@ printf "\nalias veracrypt_d=\"veracrypt -d $HOME/veracrypt"" &gt;&gt; .bashrc
 </div>
 
 
-<div id="outline-container-orgc40d78a" class="outline-3">
-<h3 id="orgc40d78a">Conclusión</h3>
-<div class="outline-text-3" id="text-orgc40d78a">
+<div id="outline-container-org7a62882" class="outline-3">
+<h3 id="org7a62882">Conclusión</h3>
+<div class="outline-text-3" id="text-org7a62882">
 <p>
 El punto positivo de Veracrypt, es que al ser un único archivo no hay grabes problemas de sincronización, el punto negativo, es que si el archivo es muy grande, no es muy aconsejable hacer sincronizaciones cifradas con nuestro movil, ya que podriamos consumir nuestra tarifa de datos.
 </p>
 </div>
 </div>
-<div id="outline-container-orgec16bbb" class="outline-3">
-<h3 id="orgec16bbb">Fuentes</h3>
-<div class="outline-text-3" id="text-orgec16bbb">
+<div id="outline-container-org0fa0599" class="outline-3">
+<h3 id="org0fa0599">Fuentes</h3>
+<div class="outline-text-3" id="text-org0fa0599">
 <ul class="org-ul">
 <li><a href="https://www.veracrypt.fr/en/Downloads.html">https://www.veracrypt.fr/en/Downloads.html</a></li>
 <li><a href="https://www.veracrypt.fr/en/Command%20Line%20Usage.html">https://www.veracrypt.fr/en/Command Line Usage.html</a></li>
