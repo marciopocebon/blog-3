@@ -268,9 +268,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org50798b2" class="outline-2">
-<h2 id="org50798b2">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de terminal</h2>
-<div class="outline-text-2" id="text-org50798b2">
+<div id="outline-container-org3cfcff6" class="outline-2">
+<h2 id="org3cfcff6">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de terminal</h2>
+<div class="outline-text-2" id="text-org3cfcff6">
 <p>
 El duelo está a un nivel muy alto y sabia que enfrentarme a Lorenzo, no iba a ser tarea fácil. La pasión que ambos tenemos por la creación de Bots en  Telegram, va ha hacer que este duelo nos haga asentar muchísimo mas nuestros conocimientos.
 </p>
@@ -287,9 +287,9 @@ En el Post anterior vimos como enviar archivos de texto plano a través del Bot,
 </p>
 </div>
 
-<div id="outline-container-org46fe4e7" class="outline-3">
-<h3 id="org46fe4e7">Recuento de las últimas publicaciones sobre bots de Telegram (el duelo)</h3>
-<div class="outline-text-3" id="text-org46fe4e7">
+<div id="outline-container-org4ee425c" class="outline-3">
+<h3 id="org4ee425c">Recuento de las últimas publicaciones sobre bots de Telegram (el duelo)</h3>
+<div class="outline-text-3" id="text-org4ee425c">
 <p>
 Estos son los Post de <a href="https://www.atareao.es/">atareao.es</a> y míos sobre los bots de Telegram:
 </p>
@@ -304,9 +304,9 @@ Ahora que ya estamos al día, vamos al tema:
 </p>
 </div>
 </div>
-<div id="outline-container-orga805ec6" class="outline-3">
-<h3 id="orga805ec6">Enviar Mensajes de Texto (Repaso)</h3>
-<div class="outline-text-3" id="text-orga805ec6">
+<div id="outline-container-org8c2ae18" class="outline-3">
+<h3 id="org8c2ae18">Enviar Mensajes de Texto (Repaso)</h3>
+<div class="outline-text-3" id="text-org8c2ae18">
 <p>
 Nos quedamos aquí, en enviar mensajes de texto plano. Si no sabes como crear tu bot o has llegado aquí y no sabes como empezar, te remito al anterior Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, antes que nos adentramos mas a fondo.
 </p>
@@ -324,9 +324,9 @@ curl -s -X POST https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendMessage -d chat_
 </pre>
 </div>
 </div>
-<div id="outline-container-orgdd3314e" class="outline-3">
-<h3 id="orgdd3314e">Enviar una imagen</h3>
-<div class="outline-text-3" id="text-orgdd3314e">
+<div id="outline-container-orgde41337" class="outline-3">
+<h3 id="orgde41337">Enviar una imagen</h3>
+<div class="outline-text-3" id="text-orgde41337">
 <p>
 Para enviar imágenes con nuestro Bot, tendremos que especificar la ruta completa del archivo así como el Token e ID:
 </p>
@@ -343,9 +343,9 @@ curl -X  POST "https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendPhoto" -F chat_id
 </ul>
 </div>
 </div>
-<div id="outline-container-org5467259" class="outline-3">
-<h3 id="org5467259">Enviar una imagen que esté en Internet</h3>
-<div class="outline-text-3" id="text-org5467259">
+<div id="outline-container-org52e1621" class="outline-3">
+<h3 id="org52e1621">Enviar una imagen que esté en Internet</h3>
+<div class="outline-text-3" id="text-org52e1621">
 <p>
 También podemos enviar imágenes que esten en internet. Del mismo modo, tenemos que especificar la ruta donde esté esta. Atención que cambia un poco la línea, ya no tiene el <b>@</b> ante la ruta:
 </p>
@@ -359,9 +359,9 @@ curl -X  POST "https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendPhoto" -F chat_id
 </pre>
 </div>
 </div>
-<div id="outline-container-org43acdd7" class="outline-3">
-<h3 id="org43acdd7">Adjuntar texto junto a la Imágen</h3>
-<div class="outline-text-3" id="text-org43acdd7">
+<div id="outline-container-org015cdd7" class="outline-3">
+<h3 id="org015cdd7">Adjuntar texto junto a la Imágen</h3>
+<div class="outline-text-3" id="text-org015cdd7">
 <p>
 Habrás visto que hay imágenes que llevan adjunto un texto en la parte inferior. Para hacer esto, tendremos que adjuntar un nuevo tag a nuestra línea:
 </p>
@@ -379,9 +379,9 @@ curl -X  POST "https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendPhoto" -F chat_id
 </ul>
 </div>
 </div>
-<div id="outline-container-org6251397" class="outline-3">
-<h3 id="org6251397">Enviar archivos</h3>
-<div class="outline-text-3" id="text-org6251397">
+<div id="outline-container-org51488fe" class="outline-3">
+<h3 id="org51488fe">Enviar archivos</h3>
+<div class="outline-text-3" id="text-org51488fe">
 <p>
 Para enviar archivos, la línea es muy similar a la de enviar imágenes, solo que en este caso utilizaremos <b>/sendDocument</b>. También como con las imágenes, especificaremos la ruta completa:
 </p>
@@ -398,9 +398,9 @@ curl -X  POST "https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendDocument" -F chat
 </div>
 </div>
 
-<div id="outline-container-org1fe0c6f" class="outline-3">
-<h3 id="org1fe0c6f">Adjuntar texto junto al archivo</h3>
-<div class="outline-text-3" id="text-org1fe0c6f">
+<div id="outline-container-org462774b" class="outline-3">
+<h3 id="org462774b">Adjuntar texto junto al archivo</h3>
+<div class="outline-text-3" id="text-org462774b">
 <p>
 Para adjunta texto junto a la archivo:
 </p>
@@ -418,9 +418,9 @@ curl -X  POST "https://api.telegram.org/bot"&lt;TOKEN&gt;"/sendDocument" -F chat
 </ul>
 </div>
 </div>
-<div id="outline-container-org4227d77" class="outline-3">
-<h3 id="org4227d77">Conclusión</h3>
-<div class="outline-text-3" id="text-org4227d77">
+<div id="outline-container-org76dee50" class="outline-3">
+<h3 id="org76dee50">Conclusión</h3>
+<div class="outline-text-3" id="text-org76dee50">
 <p>
 Con todo esto y un poco de imaginación, ahora podemos ampliar mucho más las posibilidades de automatización. Espero que os haya gustado el Post y a disfrutar con los Bots
 </p>

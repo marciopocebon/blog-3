@@ -268,9 +268,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org495f963" class="outline-2">
-<h2 id="org495f963">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
-<div class="outline-text-2" id="text-org495f963">
+<div id="outline-container-orgc3eac87" class="outline-2">
+<h2 id="orgc3eac87">Veracrypt en Ubuntu y tu Raspberry por Terminal</h2>
+<div class="outline-text-2" id="text-orgc3eac87">
 
 <div class="figure">
 <p><img src="../images-blog/veracrypt.png" alt="veracrypt.png" />
@@ -306,9 +306,9 @@ En este Post os voy a explicar como hacerlo desde la terminal, pero si os result
 </p>
 </div>
 
-<div id="outline-container-orgb4d27d9" class="outline-3">
-<h3 id="orgb4d27d9">Instalación en Ubuntu</h3>
-<div class="outline-text-3" id="text-orgb4d27d9">
+<div id="outline-container-orgca49e6d" class="outline-3">
+<h3 id="orgca49e6d">Instalación en Ubuntu</h3>
+<div class="outline-text-3" id="text-orgca49e6d">
 <p>
 En Ubuntu lo instalaríamos mediante PPA:
 </p>
@@ -322,9 +322,9 @@ sudo apt install veracrypt
 </ul>
 </div>
 </div>
-<div id="outline-container-org14183aa" class="outline-3">
-<h3 id="org14183aa">Instalación en Raspberry</h3>
-<div class="outline-text-3" id="text-org14183aa">
+<div id="outline-container-orge3a48b3" class="outline-3">
+<h3 id="orge3a48b3">Instalación en Raspberry</h3>
+<div class="outline-text-3" id="text-orge3a48b3">
 <p>
 Instalamos las siguientes dependencias:
 </p>
@@ -373,9 +373,9 @@ Ahora seguiremos los pasos que nos pedirá el programa:
 </div>
 </div>
 
-<div id="outline-container-org7ac3583" class="outline-3">
-<h3 id="org7ac3583">Desinstalar</h3>
-<div class="outline-text-3" id="text-org7ac3583">
+<div id="outline-container-org4b5a755" class="outline-3">
+<h3 id="org4b5a755">Desinstalar</h3>
+<div class="outline-text-3" id="text-org4b5a755">
 <p>
 Para desinstalar:
 </p>
@@ -384,9 +384,9 @@ rm -r veracryptfiles
 </pre>
 </div>
 </div>
-<div id="outline-container-org2b2b7bf" class="outline-3">
-<h3 id="org2b2b7bf">Crear un Volumen</h3>
-<div class="outline-text-3" id="text-org2b2b7bf">
+<div id="outline-container-org5109a9a" class="outline-3">
+<h3 id="org5109a9a">Crear un Volumen</h3>
+<div class="outline-text-3" id="text-org5109a9a">
 <p>
 Primero crearemos una carpeta donde queremos montar el volumen. Por ejemplo:
 </p>
@@ -420,9 +420,9 @@ Ahora veracrypt nos preguntará:
 </div>
 </div>
 
-<div id="outline-container-orgeb1b176" class="outline-3">
-<h3 id="orgeb1b176">Montar Volumen</h3>
-<div class="outline-text-3" id="text-orgeb1b176">
+<div id="outline-container-org98b801b" class="outline-3">
+<h3 id="org98b801b">Montar Volumen</h3>
+<div class="outline-text-3" id="text-org98b801b">
 <p>
 Para montar un volumen ya creado, como la mayoría de cifrados en GNU/Linux, el comando sería:
 </p>
@@ -455,9 +455,9 @@ veracrypt $HOME/archivo_cifrado /media/veracrypt --pim=0 --keyfiles= --protect-h
 </div>
 </div>
 
-<div id="outline-container-orga95c3cf" class="outline-3">
-<h3 id="orga95c3cf">Desmontar la unidad</h3>
-<div class="outline-text-3" id="text-orga95c3cf">
+<div id="outline-container-org11c551e" class="outline-3">
+<h3 id="org11c551e">Desmontar la unidad</h3>
+<div class="outline-text-3" id="text-org11c551e">
 <p>
 Para desmontar todas las unidades montadas con veracrypt:
 </p>
@@ -471,9 +471,9 @@ Para desmontar todas las unidades montadas con veracrypt:
 </p>
 </div>
 </div>
-<div id="outline-container-orgecfa53f" class="outline-3">
-<h3 id="orgecfa53f">Alias puede ser una Buena Idea</h3>
-<div class="outline-text-3" id="text-orgecfa53f">
+<div id="outline-container-orgf5697b9" class="outline-3">
+<h3 id="orgf5697b9">Alias puede ser una Buena Idea</h3>
+<div class="outline-text-3" id="text-orgf5697b9">
 <p>
 Alias puede ser una buena idea si no queremos recordar la ruta de las carpetas:
 </p>
@@ -497,17 +497,17 @@ printf "\nalias veracrypt_d=\"veracrypt -d $HOME/veracrypt"" &gt;&gt; .bashrc
 </div>
 
 
-<div id="outline-container-org8b4c0ff" class="outline-3">
-<h3 id="org8b4c0ff">Conclusión</h3>
-<div class="outline-text-3" id="text-org8b4c0ff">
+<div id="outline-container-orgdf4ac6f" class="outline-3">
+<h3 id="orgdf4ac6f">Conclusión</h3>
+<div class="outline-text-3" id="text-orgdf4ac6f">
 <p>
 El punto positivo de Veracrypt, es que al ser un único archivo no hay graves problemas de sincronización, el punto negativo, es que si el archivo es muy grande, no es muy aconsejable hacer sincronizaciones cifradas con nuestro movil, ya que podriamos consumir nuestra tarifa de datos.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfa43880" class="outline-3">
-<h3 id="orgfa43880">Fuentes</h3>
-<div class="outline-text-3" id="text-orgfa43880">
+<div id="outline-container-orgdc16b59" class="outline-3">
+<h3 id="orgdc16b59">Fuentes</h3>
+<div class="outline-text-3" id="text-orgdc16b59">
 <ul class="org-ul">
 <li><a href="https://www.veracrypt.fr/en/Downloads.html">https://www.veracrypt.fr/en/Downloads.html</a></li>
 <li><a href="https://www.veracrypt.fr/en/Command%20Line%20Usage.html">https://www.veracrypt.fr/en/Command Line Usage.html</a></li>
@@ -523,6 +523,7 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
