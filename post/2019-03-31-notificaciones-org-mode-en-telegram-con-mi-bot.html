@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Con Emacs también podemos editar Markdown</title>
+<title>Notificaciones Org Mode en Telegram con mi Bot</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?"
+<meta name="description" content="En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear"
  />
-<meta name="keywords" content="emacs, orgmode, markdown, melpa" />
+<meta name="keywords" content="orgmode,telegram,raspberry" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -268,64 +268,85 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org83df141" class="outline-2">
-<h2 id="org83df141">Con Emacs, también podemos editar Markdown</h2>
-<div class="outline-text-2" id="text-org83df141">
-<p>
-He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?.
-Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra.
-Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo.
-Resaltado de Sintaxis
-</p>
+<div id="outline-container-orge26bdfe" class="outline-2">
+<h2 id="orge26bdfe">Notificaciones Org Mode en Telegram con mi Bot</h2>
+<div class="outline-text-2" id="text-orge26bdfe">
 
-<p>
-Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en <a href="https://melpa.org/">Melpa</a>, <a href="https://github.com/jrblevin/markdown-mode">markdown-mode</a>.
+<div class="figure">
+<p><img src="../images-blog/telegram2org.png" alt="telegram2org.png" />
 </p>
 </div>
 
-<div id="outline-container-orgf866da2" class="outline-3">
-<h3 id="orgf866da2">Instalación</h3>
-<div class="outline-text-3" id="text-orgf866da2">
+
 <p>
-<code>M-x package-install RET markdown-mode RET</code>
+En artículos anteriores, así como en el Podcast, os he explicado <a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">como enviar notificaciones de texto, imágenes y archivos</a>, a través de un Bot en Telegram que podemos crear.
+</p>
+
+<p>
+Si utilizas orgmode, todo.txt o cualquier otro archivo de texto plano para gestionar tus tareas, imagino que el poder enviar mensajes de texto para recibirlos en tu movil o PC y tener un sistema basado en Unix como Linux, te habrá abierto un mundo de posibilidades.
+</p>
+
+<p>
+En el artículo de hoy voy a explicaros un ejemplo de como recibir todas las tareas pendientes que tengo en mi archivo orgmode, que están en estado TODO. Recordar que yo he utilizado este ejemplo, pero vosotros podéis hacer lo propio con los estados <b>WAIT</b>, <b>DONE</b>,&#x2026; así como las prioridades <b>#A</b>, <b>#B</b>, etc&#x2026; Simplemente tenéis que adaptar la línea de terminal a vuestra necesidad.
+</p>
+
+<p>
+Voy a explicarlo y veréis que es súper sencillo.
+</p>
+</div>
+
+<div id="outline-container-org8b26f49" class="outline-3">
+<h3 id="org8b26f49">Filtrar los estados <b>TODO</b></h3>
+<div class="outline-text-3" id="text-org8b26f49">
+<p>
+Para mostrar todas las líneas que tengan estado TODO, vamos a utilizar el comando <b>grep</b>. Yo en mi caso, una vez se visualice las líneas en Telegram, no quiero que aparezca ni el asterisco, ni la palabra <b>TODO</b>, así que utilizaré el comando <b>sed</b> para sustituir el texto: <code>*</code>, por <code>-</code>
+</p>
+
+<p>
+<code>grep TODO agenda.org | sed -e 's/*/-/g'</code>
+</p>
+
+<p>
+Como es posible que no me fije en la fecha del chat, para comprobar a que día pertenece la notificación, voy a añadir la fecha del día de hoy en la notificación:
+</p>
+
+<p>
+<code>date +'%A %d de %B del %Y' -&gt; será del tipo: domingo 31 de marzo del 2019</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc702513" class="outline-3">
-<h3 id="orgc702513">Previsualización del documento</h3>
-<div class="outline-text-3" id="text-orgc702513">
+<div id="outline-container-org19b7bac" class="outline-3">
+<h3 id="org19b7bac">Enviando la notificación</h3>
+<div class="outline-text-3" id="text-org19b7bac">
 <p>
-Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd.
+Ya lo tenemos todo. Así que vamos con la línea de terminal. Recordar que tenemos que añadir a esta línea el &lt;TOKEN&gt; y nuestro &lt;ID&gt;:
+</p>
+
+<pre class="example">
+curl -X "POST" "https://api.telegram.org/bot&lt;TOKEN&gt;/sendMessage" -d chat_id=&lt;ID&gt; -d text="$(echo -e "Tareas Pendientes: $(date +'%A %d de %B del %Y')\n" ; grep TODO agenda.org | sed -e 's/*/-/g') "
+</pre>
+
+<p>
+Esta línea podemos programarla mediante <b>cron</b> a un día y hora determinada.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9be4e1f" class="outline-3">
+<h3 id="org9be4e1f">Conclusión</h3>
+<div class="outline-text-3" id="text-org9be4e1f">
+<p>
+Este es un pequeño ejemplo de todas las posibilidades que tenemos combinando la terminal, con servicios como Telegram que nos permite utilizar su api para recibir notificaciones. 
 </p>
 
 <p>
-Instalación:
-</p>
-
-<p>
-<code>M-x package-install RET flymd RET</code>
-</p>
-
-<p>
-Ahora si queremos previsualizar el documento, solo tenemos que introducir en Emacs:
-</p>
-
-<p>
-<code>M-x flymd-flyit</code>
-</p>
-
-<p>
-Esto, nos lanzará un archivo temporal y abrirá nuestro navegador web, para previsualizar el documento.
-</p>
-
-<p>
-Por defecto se refresca en tiempo real y que podemos deshabilitar
+También demostrar que el utilizar orgmode, no solo no es una limitación, sino que nos permite personalizar y ampliar muchísimo mas las posibilidades de gestión de nuestras tareas y notas.
 </p>
 
 <br>
 <p>
-Publicado por Angel el jueves 03 enero del 2019  
+Publicado por Angel el domingo 31 marzo del 2019  
 </p>
 <br><br>
 <p>
