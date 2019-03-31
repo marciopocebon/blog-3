@@ -268,17 +268,17 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgc36e1df" class="outline-2">
-<h2 id="orgc36e1df">No todo es echo. También existe printf</h2>
-<div class="outline-text-2" id="text-orgc36e1df">
+<div id="outline-container-org2b4acdb" class="outline-2">
+<h2 id="org2b4acdb">No todo es echo. También existe printf</h2>
+<div class="outline-text-2" id="text-org2b4acdb">
 <p>
 Cuando hacemos scritps en bash, habitualmente utilizamos <b>echo</b> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc&#x2026; para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.
 </p>
 </div>
 
-<div id="outline-container-orgae9cc53" class="outline-3">
-<h3 id="orgae9cc53">Iniciandonos con printf</h3>
-<div class="outline-text-3" id="text-orgae9cc53">
+<div id="outline-container-org890b861" class="outline-3">
+<h3 id="org890b861">Iniciandonos con printf</h3>
+<div class="outline-text-3" id="text-org890b861">
 <p>
 printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:
 </p>
@@ -290,9 +290,9 @@ Hola Mundo
 </pre>
 </div>
 </div>
-<div id="outline-container-org2f7f5ff" class="outline-3">
-<h3 id="org2f7f5ff">Salto de línea</h3>
-<div class="outline-text-3" id="text-org2f7f5ff">
+<div id="outline-container-orgc8bfea2" class="outline-3">
+<h3 id="orgc8bfea2">Salto de línea</h3>
+<div class="outline-text-3" id="text-orgc8bfea2">
 <p>
 Del mismo modo que <b>echo</b>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:
 </p>
@@ -329,9 +329,9 @@ Mundo
 </div>
 </div>
 
-<div id="outline-container-org69f1ace" class="outline-3">
-<h3 id="org69f1ace">Imprimir al final de la línea</h3>
-<div class="outline-text-3" id="text-org69f1ace">
+<div id="outline-container-org9296210" class="outline-3">
+<h3 id="org9296210">Imprimir al final de la línea</h3>
+<div class="outline-text-3" id="text-org9296210">
 <p>
 Ahora vamos a desplazar la línea al final del margen derecho:
 </p>
@@ -346,9 +346,9 @@ $ printf "%*s\n" $(tput cols) "Hola Mundo!"
 </div>
 
 
-<div id="outline-container-org5fa95f2" class="outline-3">
-<h3 id="org5fa95f2">Llamada de Fechas, host, rutas</h3>
-<div class="outline-text-3" id="text-org5fa95f2">
+<div id="outline-container-orgba08425" class="outline-3">
+<h3 id="orgba08425">Llamada de Fechas, host, rutas</h3>
+<div class="outline-text-3" id="text-orgba08425">
 <p>
 Podemos llamar diferentes formatos de fecha, host, rutas,&#x2026;
 </p>
@@ -661,9 +661,9 @@ Tabla con el código del formato de fecha:
 
 
 
-<div id="outline-container-org4c8793b" class="outline-3">
-<h3 id="org4c8793b">Editar texto</h3>
-<div class="outline-text-3" id="text-org4c8793b">
+<div id="outline-container-org43afbc9" class="outline-3">
+<h3 id="org43afbc9">Editar texto</h3>
+<div class="outline-text-3" id="text-org43afbc9">
 <p>
 Cortar Texto:
 </p>
@@ -696,9 +696,9 @@ $ printf "%*s\n" 25 "Hola Mundo"
 </div>
 </div>
 
-<div id="outline-container-orgfd1d1ef" class="outline-3">
-<h3 id="orgfd1d1ef">Números</h3>
-<div class="outline-text-3" id="text-orgfd1d1ef">
+<div id="outline-container-orgd78b605" class="outline-3">
+<h3 id="orgd78b605">Números</h3>
+<div class="outline-text-3" id="text-orgd78b605">
 <pre class="example">
 $ printf "2 + 2 son %d\n" $((2+2))
 2 + 2 son 4
@@ -730,18 +730,18 @@ $ printf "%-10d %-10d\n" 1 500 2 550
 </div>
 
 
-<div id="outline-container-org70efa3a" class="outline-3">
-<h3 id="org70efa3a">Conclusión</h3>
-<div class="outline-text-3" id="text-org70efa3a">
+<div id="outline-container-org3e854bf" class="outline-3">
+<h3 id="org3e854bf">Conclusión</h3>
+<div class="outline-text-3" id="text-org3e854bf">
 <p>
 Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <b>date</b> y <b>echo</b>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org577c42d" class="outline-3">
-<h3 id="org577c42d">Fuentes</h3>
-<div class="outline-text-3" id="text-org577c42d">
+<div id="outline-container-orgdeec4df" class="outline-3">
+<h3 id="orgdeec4df">Fuentes</h3>
+<div class="outline-text-3" id="text-orgdeec4df">
 <ul class="org-ul">
 <li><a href="https://www.computerhope.com/unix/uprintf.htm">https://www.computerhope.com/unix/uprintf.htm</a></li>
 <li><a href="https://wiki.bash-hackers.org/commands/builtin/printf">https://wiki.bash-hackers.org/commands/builtin/printf</a></li>
@@ -762,7 +762,7 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb| para subirlos a Telegram u otra nube pública</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>

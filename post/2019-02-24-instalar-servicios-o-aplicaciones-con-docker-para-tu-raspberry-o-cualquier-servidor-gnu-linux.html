@@ -268,9 +268,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org852992c" class="outline-2">
-<h2 id="org852992c">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h2>
-<div class="outline-text-2" id="text-org852992c">
+<div id="outline-container-org804dd8e" class="outline-2">
+<h2 id="org804dd8e">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h2>
+<div class="outline-text-2" id="text-org804dd8e">
 
 <div class="figure">
 <p><img src="../images-blog/docker.png" alt="docker.png" />
@@ -289,9 +289,9 @@ De esta manera, podremos acceder a los repositorios de Ubuntu en su última vers
 Parece muy complejo, pero es muy sencillo.
 </p>
 </div>
-<div id="outline-container-orgb6769b4" class="outline-3">
-<h3 id="orgb6769b4">Instalación</h3>
-<div class="outline-text-3" id="text-orgb6769b4">
+<div id="outline-container-orgd2ae657" class="outline-3">
+<h3 id="orgd2ae657">Instalación</h3>
+<div class="outline-text-3" id="text-orgd2ae657">
 <p>
 Vamos a instalar Docker desde los repositorios oficiales:
 </p>
@@ -306,9 +306,9 @@ También lo tenemos disponible en la paquetería snap, así que a dia de hoy, es
 </div>
 </div>
 
-<div id="outline-container-org3c48508" class="outline-3">
-<h3 id="org3c48508">Crear el grupo docker, para no tener que poner siempre sudo</h3>
-<div class="outline-text-3" id="text-org3c48508">
+<div id="outline-container-org452bb15" class="outline-3">
+<h3 id="org452bb15">Crear el grupo docker, para no tener que poner siempre sudo</h3>
+<div class="outline-text-3" id="text-org452bb15">
 <p>
 Para no tener que utilizar Docker como usuario root y así evitar el tener que poner siempre <b>sudo</b>, crearemos el grupo docker y añadiremos los usuarios.
 </p>
@@ -322,9 +322,9 @@ También es muy útil a nivel de seguridad deshabilitar el usuario root, para in
 </div>
 </div>
 
-<div id="outline-container-org9dcf54b" class="outline-3">
-<h3 id="org9dcf54b">Creando un contendedor con Ubuntu en su ultima versión</h3>
-<div class="outline-text-3" id="text-org9dcf54b">
+<div id="outline-container-org5423db5" class="outline-3">
+<h3 id="org5423db5">Creando un contendedor con Ubuntu en su ultima versión</h3>
+<div class="outline-text-3" id="text-org5423db5">
 <p>
 Creando el nuevo contenedor con la última versión de Ubuntu para Raspberry o cualquier arquitectura de procesador y entrando directamente a este contenedor una vez creado:
 </p>
@@ -351,9 +351,9 @@ Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit<
 </div>
 </div>
 
-<div id="outline-container-orgf183847" class="outline-3">
-<h3 id="orgf183847">Listar todos los Contenedores de nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgf183847">
+<div id="outline-container-org9e93d08" class="outline-3">
+<h3 id="org9e93d08">Listar todos los Contenedores de nuestro servidor</h3>
+<div class="outline-text-3" id="text-org9e93d08">
 <p>
 Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:
 </p>
@@ -372,9 +372,9 @@ No confundir con ver todos los contenedores que están corriendo ahora mismo en 
 </div>
 </div>
 
-<div id="outline-container-org9604387" class="outline-3">
-<h3 id="org9604387">Iniciar o detener un contenedor</h3>
-<div class="outline-text-3" id="text-org9604387">
+<div id="outline-container-org52fdff0" class="outline-3">
+<h3 id="org52fdff0">Iniciar o detener un contenedor</h3>
+<div class="outline-text-3" id="text-org52fdff0">
 <p>
 Super sencillo, con docker <b>start/stop</b>:
 </p>
@@ -389,9 +389,9 @@ Super sencillo, con docker <b>start/stop</b>:
 </div>
 </div>
 
-<div id="outline-container-orgba4f342" class="outline-3">
-<h3 id="orgba4f342">Entrar dentro del Docker vía terminal</h3>
-<div class="outline-text-3" id="text-orgba4f342">
+<div id="outline-container-org64ef857" class="outline-3">
+<h3 id="org64ef857">Entrar dentro del Docker vía terminal</h3>
+<div class="outline-text-3" id="text-org64ef857">
 <p>
 Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar:
 <code>docker exec -i -t nombre_del_contenedor /bin/bash</code>
@@ -399,9 +399,9 @@ Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar:
 </div>
 </div>
 
-<div id="outline-container-org0c3e18e" class="outline-3">
-<h3 id="org0c3e18e">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h3>
-<div class="outline-text-3" id="text-org0c3e18e">
+<div id="outline-container-org58db879" class="outline-3">
+<h3 id="org58db879">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h3>
+<div class="outline-text-3" id="text-org58db879">
 <p>
 Voy a explicar, con el servicio garbera de ejemplo, como descargar la imagen, crear el contenedor e iniciarlo con una única línea de terminal. 
 </p>
@@ -429,9 +429,9 @@ Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos co
 </p>
 </div>
 </div>
-<div id="outline-container-orgbb14cd2" class="outline-3">
-<h3 id="orgbb14cd2">Borrar un contenedor</h3>
-<div class="outline-text-3" id="text-orgbb14cd2">
+<div id="outline-container-orgd6af4ec" class="outline-3">
+<h3 id="orgd6af4ec">Borrar un contenedor</h3>
+<div class="outline-text-3" id="text-orgd6af4ec">
 <p>
 Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc&#x2026; que ya no vamos a utilizar:
 </p>
@@ -454,9 +454,9 @@ Borramos el contendedor:
 </div>
 </div>
 
-<div id="outline-container-org8159693" class="outline-3">
-<h3 id="org8159693">Listar y borrar imagenes</h3>
-<div class="outline-text-3" id="text-org8159693">
+<div id="outline-container-orga8f5e48" class="outline-3">
+<h3 id="orga8f5e48">Listar y borrar imagenes</h3>
+<div class="outline-text-3" id="text-orga8f5e48">
 <p>
 Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:
 </p>
@@ -480,9 +480,9 @@ Borrar la imagen (rm"i" de imágen, para recordar):
 </div>
 
 
-<div id="outline-container-org984bfcc" class="outline-3">
-<h3 id="org984bfcc">Renombrar Contenedor</h3>
-<div class="outline-text-3" id="text-org984bfcc">
+<div id="outline-container-orgcfb7c31" class="outline-3">
+<h3 id="orgcfb7c31">Renombrar Contenedor</h3>
+<div class="outline-text-3" id="text-orgcfb7c31">
 <p>
 En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:
 </p>
@@ -493,9 +493,9 @@ En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:
 </div>
 </div>
 
-<div id="outline-container-org63faa65" class="outline-3">
-<h3 id="org63faa65">Conclusiones</h3>
-<div class="outline-text-3" id="text-org63faa65">
+<div id="outline-container-org1326080" class="outline-3">
+<h3 id="org1326080">Conclusiones</h3>
+<div class="outline-text-3" id="text-org1326080">
 <p>
 Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian. 
 </p>

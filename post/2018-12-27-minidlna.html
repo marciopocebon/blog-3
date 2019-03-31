@@ -268,9 +268,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orga4237e2" class="outline-2">
-<h2 id="orga4237e2">minidlna</h2>
-<div class="outline-text-2" id="text-orga4237e2">
+<div id="outline-container-orgba4db63" class="outline-2">
+<h2 id="orgba4db63">minidlna</h2>
+<div class="outline-text-2" id="text-orgba4db63">
 <p>
 DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.
 </p>
@@ -282,18 +282,18 @@ DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplem
 </div>
 </div>
 
-<div id="outline-container-org2b5c36f" class="outline-3">
-<h3 id="org2b5c36f">Instalación</h3>
-<div class="outline-text-3" id="text-org2b5c36f">
+<div id="outline-container-orgfe9516a" class="outline-3">
+<h3 id="orgfe9516a">Instalación</h3>
+<div class="outline-text-3" id="text-orgfe9516a">
 <p>
 <code>sudo apt install minidlna</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org863c812" class="outline-3">
-<h3 id="org863c812">Archivo de configuración del servicio</h3>
-<div class="outline-text-3" id="text-org863c812">
+<div id="outline-container-org9a90511" class="outline-3">
+<h3 id="org9a90511">Archivo de configuración del servicio</h3>
+<div class="outline-text-3" id="text-org9a90511">
 <p>
 <code>sudo nano /etc/minidlna.conf</code>
 </p>
@@ -326,9 +326,9 @@ media_dir=A,/media/Musica
 </div>
 </div>
 
-<div id="outline-container-org3471ef6" class="outline-3">
-<h3 id="org3471ef6">Descubrir el servidor en nuestra Red</h3>
-<div class="outline-text-3" id="text-org3471ef6">
+<div id="outline-container-orgdd0090d" class="outline-3">
+<h3 id="orgdd0090d">Descubrir el servidor en nuestra Red</h3>
+<div class="outline-text-3" id="text-orgdd0090d">
 <p>
 Quitaremos la "#" delante de inotify y pondremos <b>yes</b>.
 </p>
@@ -339,9 +339,9 @@ inotify=yes
 </div>
 </div>
 
-<div id="outline-container-orgfd90002" class="outline-3">
-<h3 id="orgfd90002">Poner nombre a nuestro servidor</h3>
-<div class="outline-text-3" id="text-orgfd90002">
+<div id="outline-container-orga4da341" class="outline-3">
+<h3 id="orga4da341">Poner nombre a nuestro servidor</h3>
+<div class="outline-text-3" id="text-orga4da341">
 <p>
 Aquí podremos poner nombre a nuestro servidor:
 </p>
@@ -352,9 +352,9 @@ friendly_name=Mi Servidor DLNA
 </div>
 </div>
 
-<div id="outline-container-org81c5f21" class="outline-3">
-<h3 id="org81c5f21">Añadir nuevo contenido Multimedia</h3>
-<div class="outline-text-3" id="text-org81c5f21">
+<div id="outline-container-org979c5ff" class="outline-3">
+<h3 id="org979c5ff">Añadir nuevo contenido Multimedia</h3>
+<div class="outline-text-3" id="text-org979c5ff">
 <p>
 Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:
 </p>
@@ -364,9 +364,9 @@ inotify=yes
 </pre>
 </div>
 </div>
-<div id="outline-container-orga136bc7" class="outline-3">
-<h3 id="orga136bc7">Crear nueva base de datos</h3>
-<div class="outline-text-3" id="text-orga136bc7">
+<div id="outline-container-orged7db89" class="outline-3">
+<h3 id="orged7db89">Crear nueva base de datos</h3>
+<div class="outline-text-3" id="text-orged7db89">
 <p>
 Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:
 </p>
@@ -398,9 +398,9 @@ Como has podido ver en este paso anterior, la base de datos así como las portad
 </div>
 </div>
 
-<div id="outline-container-orgf9aeafd" class="outline-3">
-<h3 id="orgf9aeafd">Iniciar, Detener, Restaurar servicio</h3>
-<div class="outline-text-3" id="text-orgf9aeafd">
+<div id="outline-container-orgc675c6f" class="outline-3">
+<h3 id="orgc675c6f">Iniciar, Detener, Restaurar servicio</h3>
+<div class="outline-text-3" id="text-orgc675c6f">
 <p>
 <code>exec /usr/sbin/service minidlna start</code>
 </p>
@@ -433,9 +433,9 @@ o
 
 
 
-<div id="outline-container-orgeb8da7e" class="outline-3">
-<h3 id="orgeb8da7e">Forzar el reescaneado</h3>
-<div class="outline-text-3" id="text-orgeb8da7e">
+<div id="outline-container-org45f6a91" class="outline-3">
+<h3 id="org45f6a91">Forzar el reescaneado</h3>
+<div class="outline-text-3" id="text-org45f6a91">
 <p>
 Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:
 </p>
@@ -457,9 +457,9 @@ Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través d
 </p>
 </div>
 </div>
-<div id="outline-container-orgf20e392" class="outline-3">
-<h3 id="orgf20e392">Puertos</h3>
-<div class="outline-text-3" id="text-orgf20e392">
+<div id="outline-container-orgf907a03" class="outline-3">
+<h3 id="orgf907a03">Puertos</h3>
+<div class="outline-text-3" id="text-orgf907a03">
 <p>
 En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:
 </p>
@@ -479,7 +479,7 @@ También te puede interesar:
 
 <ul class="org-ul">
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx| con una sola línea de Terminal (Docker)</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
