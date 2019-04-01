@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Artículos. uGeek Blog</title>
+<title>Calculando con mi terminal</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Etiquetas de uGeek Blog"
+<meta name="description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="bash,unix" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,9 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<meta name="google-site-verification" content="ENnOaWTA9BlPz40VgoCRCpIlCgS4weW2KXOP9oqftpg" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -213,6 +210,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -264,116 +263,281 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
-<div id="outline-container-org005a1b3" class="outline-2">
-<h2 id="org005a1b3">50 Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org005a1b3">
+
+<div id="outline-container-org39876a8" class="outline-2">
+<h2 id="org39876a8">Calculando con mi terminal</h2>
+<div class="outline-text-2" id="text-org39876a8">
+<p>
+Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <b>expr</b> (evalúa los argumentos como una expresión) y <b>calc</b> (Calculadora de precisión arbitraria).
+</p>
+
+<p>
+<b>Expr</b> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <b>calc</b>. Y os preguntareis: ¿Porque utilizar dos comandos? <b>expr</b> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <b>calc</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../images-blog/expr.jpg" alt="expr.jpg" />
+</p>
+</div>
+
+
+<p>
+Otro método de hacer cálculos sería con <b>bc</b>, pero lo dejo para otro Post porque <b>expr</b> y <b>calc</b> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.
+</p>
+
+
+<p>
+Con <b>expr</b> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:
+</p>
+
+<p>
+<code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code>
+</p>
+</div>
+
+<div id="outline-container-org93512aa" class="outline-3">
+<h3 id="org93512aa">Suma</h3>
+<div class="outline-text-3" id="text-org93512aa">
+<p>
+Hay que dejar un espacio en blanco entre los números y símbolo de <b>+</b>.
+</p>
+
+<p>
+<code>expr 8 + 4</code>
+</p>
+
+<p>
+Suma con números negativos:
+</p>
+
+<p>
+<code>expr -30 + 47</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0192a23" class="outline-3">
+<h3 id="org0192a23">Resta</h3>
+<div class="outline-text-3" id="text-org0192a23">
+<p>
+<code>expr 8 - 4</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b4bfe5" class="outline-3">
+<h3 id="org4b4bfe5">Multiplicación</h3>
+<div class="outline-text-3" id="text-org4b4bfe5">
+<p>
+Lleva la contrabarra <b>\</b> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:
+</p>
+
+<p>
+<code>expr 8 \* 4</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7102eb6" class="outline-3">
+<h3 id="org7102eb6">División</h3>
+<div class="outline-text-3" id="text-org7102eb6">
+<p>
+<code>expr 8 / 4</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c03ce4" class="outline-3">
+<h3 id="org1c03ce4">Porcentaje</h3>
+<div class="outline-text-3" id="text-org1c03ce4">
+<p>
+<code>expr 10 % 100</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c58a51" class="outline-3">
+<h3 id="org3c58a51">Comparaciones</h3>
+<div class="outline-text-3" id="text-org3c58a51">
+<p>
+Otra cosa que nos permite <b>expr</b> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <b>1</b>, si es falsa <b>0</b>.
+Aquí también hay símbolos que llevan la contrabarra <b>\</b> para escapar.
+</p>
+<pre class="example">
+expr 10 =   7   # Igual
+expr 10 !=  7   # No es igual
+expr 10 \&gt;  7   # Mayor que
+expr 10 \&lt;  7   # Menor que
+expr 10 \&lt;= 7   # Menor o igual
+expr 10 \&gt;= 7   # Mayor o igual
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org9650eea" class="outline-3">
+<h3 id="org9650eea">Contando el número de letras</h3>
+<div class="outline-text-3" id="text-org9650eea">
+<p>
+También podemos contar el número de letras que hay en una frase:
+</p>
+
+<p>
+<code>expr length "hola mundo"</code>
+</p>
+
+<p>
+O en un archivo de texto plano:
+</p>
+
+<p>
+<code>expr length "$(cat mis_notas.txt)"</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8a65f9" class="outline-3">
+<h3 id="orga8a65f9">Manual</h3>
+<div class="outline-text-3" id="text-orga8a65f9">
+<p>
+Hay muchas mas opciones. Lee en manual para conocerlas:
+</p>
+
+<p>
+<code>man expr</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6063641" class="outline-3">
+<h3 id="org6063641">Instalación de Calc</h3>
+<div class="outline-text-3" id="text-org6063641">
+<p>
+Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:
+</p>
+
+<p>
+<code>sudo apt install apcalc</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org3c36419" class="outline-3">
+<h3 id="org3c36419">Suma</h3>
+<div class="outline-text-3" id="text-org3c36419">
+<p>
+Suma con decimales:
+</p>
+<pre class="example">
+calc 12.5 + 21.4
+	33.9
+</pre>
+<p>
+Aquí ya podemos sumar números negativos. Al poner el signo negativo, tiene que ir entre paréntesis.
+</p>
+<pre class="example">
+calc '(-30 + 47)'
+	17
+</pre>
+</div>
+</div>
+<div id="outline-container-org1ac0e46" class="outline-3">
+<h3 id="org1ac0e46">Dos números negativos</h3>
+<div class="outline-text-3" id="text-org1ac0e46">
+<pre class="example">
+calc '(-30 - 47)'
+	-77
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8466265" class="outline-3">
+<h3 id="org8466265">Multiplicación</h3>
+<div class="outline-text-3" id="text-org8466265">
+<p>
+En el caso de la multiplicación, <b>calc</b> no necesita <b>\</b> de escape:
+</p>
+<pre class="example">
+calc 30*2
+	60
+</pre>
+<pre class="example">
+calc '(-2 * 10)'
+	-20
+</pre>
+<pre class="example">
+calc 30\*2
+	60
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgfbcc313" class="outline-3">
+<h3 id="orgfbcc313">División</h3>
+<div class="outline-text-3" id="text-orgfbcc313">
+<pre class="example">
+calc 200/10
+	20
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga2f742d" class="outline-3">
+<h3 id="orga2f742d">Porcentaje</h3>
+<div class="outline-text-3" id="text-orga2f742d">
+<pre class="example">
+calc 10%100
+	10
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgd3b80dc" class="outline-3">
+<h3 id="orgd3b80dc">Manual</h3>
+<div class="outline-text-3" id="text-orgd3b80dc">
+<p>
+Hay muchas mas en manual:
+</p>
+
+<p>
+<code>man calc</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb342f0" class="outline-3">
+<h3 id="orgcb342f0">Conclusión</h3>
+<div class="outline-text-3" id="text-orgcb342f0">
+<p>
+Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,&#x2026; y muchas más cosas
+Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.
+</p>
+<br>
+<p>
+Publicado por Angel el lunes 01 abril del 2019  
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <ul class="org-ul">
-<li><i>2019-04-1</i> - <a href="https://ugeek.github.io/blog/post/2019-04-1-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
-
-<li><i>2019-03-31</i> - <a href="https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html">Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
-
-<li><i>2019-03-31</i> - <a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-
-<li><i>2019-03-29</i> - <a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
-
-<li><i>2019-03-29</i> - <a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
-
-<li><i>2019-03-28</i> - <a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
-
-<li><i>2019-03-25</i> - <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
-
-<li><i>2019-03-15</i> - <a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</a></li>
-
-<li><i>2019-03-14</i> - <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
-
-<li><i>2019-03-10</i> - <a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
-
-<li><i>2019-02-24</i> - <a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
-
-<li><i>2019-02-16</i> - <a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
-
-<li><i>2019-02-10</i> - <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
-
-<li><i>2019-02-08</i> - <a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
-
-<li><i>2019-02-08</i> - <a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
-
-<li><i>2019-02-07</i> - <a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
-
-<li><i>2019-02-06</i> - <a href="https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html">Instalando una Dokuwiki en 4 pasos</a></li>
-
-<li><i>2019-02-03</i> - <a href="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html">Instalar Docker en Raspberry Pi con Raspbian</a></li>
-
-<li><i>2019-02-01</i> - <a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
-
-<li><i>2019-02-01</i> - <a href="https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</a></li>
-
-<li><i>2019-01-31</i> - <a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
-
-<li><i>2019-01-29</i> - <a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
-
-<li><i>2019-01-29</i> - <a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
-
-<li><i>2019-01-28</i> - <a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
-
-<li><i>2019-01-28</i> - <a href="https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html">Crear ramas con Git</a></li>
-
-<li><i>2019-01-27</i> - <a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
-
-<li><i>2019-01-26</i> - <a href="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html">Castero. Podcatcher ligero para Terminal</a></li>
-
-<li><i>2019-01-24</i> - <a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html">Utilizando Git con la Terminal. GitHub</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
-
-<li><i>2019-01-21</i> - <a href="https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html">Antergos. Comandos para terminal y derivadas de Arch Linux</a></li>
-
-<li><i>2019-01-20</i> - <a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-
-<li><i>2019-01-17</i> - <a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
-
-<li><i>2019-01-12</i> - <a href="https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html">Ignorar archivos que no queremos que suban a Git</a></li>
-
-<li><i>2019-01-08</i> - <a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
-
-<li><i>2019-01-06</i> - <a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
-
-<li><i>2019-01-05</i> - <a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
-
-<li><i>2019-01-04</i> - <a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
-
-<li><i>2019-01-03</i> - <a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
-
-<li><i>2019-01-03</i> - <a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
-
-<li><i>2019-01-03</i> - <a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
-
-<li><i>2019-01-02</i> - <a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect en Ubuntu&#x2026;</a></li>
-
-<li><i>2019-01-02</i> - <a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
-
-<li><i>2018-12-31</i> - <a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
-
-<li><i>2018-12-30</i> - <a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
-
-<li><i>2018-12-29</i> - <a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
-
-<li><i>2018-12-28</i> - <a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
-
-<li><i>2018-12-28</i> - <a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
-
-<li><i>2018-12-27</i> - <a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
-
-<li><i>2018-12-27</i> - <a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
 </ul>
-
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
