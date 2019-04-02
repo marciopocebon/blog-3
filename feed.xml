@@ -13,33 +13,6 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
-    <title>Calculando con mi terminal</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-0g1-calculando-con-mi-terminal.html</link>
-    <description>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-0g1-calculando-con-mi-terminal.html&gt;Calculando con mi terminal&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate> 20:40 +0100</pubDate>
-    <guid>https://ugeek.github.io/blog/post/2019-04-0g1-calculando-con-mi-terminal.html</guid>
-   </item>
-   <item>
     <title>Exportando bonito a html mi OrgMode y creando web estática</title>
     <link>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</link>
     <description>Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad ... 
@@ -65,6 +38,33 @@
 </description>
     <pubDate>Tue, 02 Apr 2019 19:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</guid>
+   </item>
+   <item>
+    <title>Calculando con mi terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html</link>
+    <description>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html&gt;Calculando con mi terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 01 Apr 2019 20:40 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html</guid>
    </item>
    <item>
     <title>Tomb. Mis secretos son una Tumba. Crifrar Archivos</title>
