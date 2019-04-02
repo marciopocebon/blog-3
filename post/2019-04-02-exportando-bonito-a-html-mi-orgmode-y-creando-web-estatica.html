@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Redirigir el tráfico de una página web a otra</title>
+<title>Exportando bonito a html mi OrgMode y creando web estática</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Hay veces que queremos redirigir el tráfico de una página a otra..."
+<meta name="description" content="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad"
  />
-<meta name="keywords" content="html,servidor" />
+<meta name="keywords" content="html,github,gitlab" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -210,8 +210,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
-<div id="logo"><a href="https://ugeek.github.io"><img src="__icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -263,32 +263,143 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="__icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="__icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="__icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="__icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="__icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org12dea5b" class="outline-2">
-<h2 id="org12dea5b">Redirigir el tráfico de una página web a otra</h2>
-<div class="outline-text-2" id="text-org12dea5b">
+<div id="outline-container-orgcda79f0" class="outline-2">
+<h2 id="orgcda79f0">Exportando bonito a html mi OrgMode y creando web estática</h2>
+<div class="outline-text-2" id="text-orgcda79f0">
 <p>
-Hay veces que queremos redirigir el tráfico de una página a otra. Un modo muy rápido y sencillo, sería crear un archivo .html con el siguiente código. En este ejemplo, el tiempo de espera hasta redirigir es de <b>3 segundos</b>. Podemos personalizarlo al tiempo de deseemos. 
+Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de <a href="https://melpa.org/">Melpa</a> desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. 
 </p>
+
+<p>
+Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web.
+</p>
+
+
+<div class="figure">
+<p><img src="../images-blog/ox-twbs.png" alt="ox-twbs.png" />
+</p>
+</div>
+
+
+<p>
+En la configuración, adjunto un ejemplo de como tener tus archivos orgmode en una carpeta y exportar los html a otra. Esto es interesante porque podríamos apuntar a esa carpeta como raíz de un servidor web, por ejemplo siguiendo el post del <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Docker de Nginx</a>, haciendo accesible estas notas en formato web en nuestra red Local o via Internet.
+</p>
+
+<p>
+Otra posibilidad sería publicarlo en las GitHub o GitLab Pages.
+</p>
+</div>
+
+<div id="outline-container-org209a0e3" class="outline-3">
+<h3 id="org209a0e3">Instalación</h3>
+<div class="outline-text-3" id="text-org209a0e3">
+<p>
+<code>M-x package-install [RET] ox-twbs [RET]</code>
+</p>
+
+<p>
+Para exportar el archivo que estamos editando de orgmode a html con este paquete, ejecutaremos el siguiente comando en emacs:
+</p>
+
+<p>
+<code>M-x org-twbs-export-to-html</code>
+</p>
+
+<p>
+El archivo html resultante, estará en la misma carpeta donde está el archivo orgmode.
+</p>
+</div>
+</div>
+<div id="outline-container-org3f0973b" class="outline-3">
+<h3 id="org3f0973b">Configuración</h3>
+<div class="outline-text-3" id="text-org3f0973b">
+<p>
+Vamos a ver como exportar los html a otra carpeta que no sea la misma donde está el archivo orgmode. Copiaremos en nuestro archivo de configuración de emacs <b>init.el</b> o <b>.emacs</b>:
+</p>
+
 <pre class="example">
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Redirigir al navegador a otra URL&lt;/title&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="3;URL=https://ugeek.gitlab.io"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-Esta página te redigirá en 3 segundos a https://ugeek.gitlab.io/
-&lt;/body&gt;
-&lt;/html&gt; 
+(setq org-publish-project-alist
+      '(("org-notes"
+	 :base-directory "~/org/"
+	 :publishing-directory "~/public_html/"
+	 :publishing-function org-twbs-publish-to-html
+	 :with-sub-superscript nil
+	 )))
 </pre>
 
+
+<p>
+En este archivo de configuración, utilizaremos las carpetas <b>~/org/</b> y <b>~/public_html/</b>. Los archivos orgmode los guardaremos en la carpeta  <b>~/org/</b> y cuando ejecutemos el comando dentro de emacs: <code>M-x org-publish-all</code> , será exportado en formato .html a la carpeta <b>~/public_html/</b>.
+</p>
+
+<p>
+Previamente, crearemos las carpetas desde nuestra terminal:
+</p>
+
+<p>
+<code>mkdir -p carpeta ~/org ~/public_html</code>
+</p>
+
+<p>
+Podemos personalizar la carpeta que deseemos, modificando la ruta de las carpetas en el archivo de configuración.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac77ddf" class="outline-3">
+<h3 id="orgac77ddf">Sin tabla de contenido o índice, autor&#x2026;</h3>
+<div class="outline-text-3" id="text-orgac77ddf">
+<p>
+Si no queremos que aparezca tabla de contenido o índice, ni a pie de página el autor, fecha&#x2026;  añadiremos al inicio de nuestro OrgMode:
+</p>
+
+
+<div class="figure">
+<p><img src="../images-blog/ox-twbs2.png" alt="ox-twbs2.png" />
+</p>
+</div>
+
+<pre class="example">
+#+OPTIONS: html-postamble:nil toc:nil
+</pre>
+</div>
+</div>
+<div id="outline-container-org1fbfdf0" class="outline-3">
+<h3 id="org1fbfdf0">Cajetilla de código de color</h3>
+<div class="outline-text-3" id="text-org1fbfdf0">
+<p>
+Si queremos que salga la cajetilla de código de color negro, en el archivo orgmode añadiremos la siguiente línea. Como todo, es personalizable cambiando el color al que tu desees.
+</p>
+<pre class="example">
+#+HTML_HEAD_EXTRA: &lt;style&gt;pre { font-size: 13px; background-color: #000; color: #bbb; }&lt;/style&gt;
+</pre>
+</div>
+</div>
+<div id="outline-container-orge059620" class="outline-3">
+<h3 id="orge059620">Conclusión</h3>
+<div class="outline-text-3" id="text-orge059620">
+<p>
+En el repositorio de GitHub de <a href="https://github.com/marsmining/ox-twbs">ox-twbs</a> encontraras más información de este paquete. Encuentro que es un modo muy sencillo de tomar tus notas y acceder a ellas para consultar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1bcee23" class="outline-3">
+<h3 id="org1bcee23">Fuentes</h3>
+<div class="outline-text-3" id="text-org1bcee23">
+<ul class="org-ul">
+<li>Fuente del paquete: <a href="https://github.com/marsmining/ox-twbs">https://github.com/marsmining/ox-twbs</a></li>
+<li><a href="http://clubctrl.com/org/prog/howto.html">http://clubctrl.com/org/prog/howto.html</a></li>
+<li><a href="http://clubctrl.com/org/prog/source.html">http://clubctrl.com/org/prog/source.html</a></li>
+</ul>
 <br>
 <p>
-Publicado por Angel el sábado 29 diciembre del 2018  y <b>actualizado</b> el sábado 19 enero del 2019
+Publicado por Angel el martes 02 abril del 2019 
 </p>
 <br><br>
 <p>
@@ -296,10 +407,18 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
