@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uGeek Blog</title>
+<title>Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek"
+<meta name="description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil"
  />
-<meta name="keywords" content="GNU, linux, Raspberry, android, domótica" />
+<meta name="keywords" content="servidor," />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -181,8 +181,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<div id="logo"><a href="https://ugeek.github.io"><img src="icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
 <script>
@@ -212,7 +210,8 @@ gtag('config', 'UA-131560140-1');
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
-<meta name="google-site-verification" content="ENnOaWTA9BlPz40VgoCRCpIlCgS4weW2KXOP9oqftpg" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -264,38 +263,121 @@ for the JavaScript code in this tag.
 <div id="content">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
 <div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
+<div id="outline-container-org0d687d8" class="outline-2">
+<h2 id="org0d687d8">Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</h2>
+<div class="outline-text-2" id="text-org0d687d8">
 <p>
-Bienvenido al Blog del Podcast de <b><b>uGeek</b></b>. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el <a href="https://ugeek.github.io">Podcast</a>. En la sección <a href="https://ugeek.github.io/tags.html">Tags</a>, encontraras todos los Artículos y Podcast, clasificados por temáticas.
+Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry&#x2026; y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜,  te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,&#x2026;  tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.
 </p>
 
-<div id="outline-container-org1b5e952" class="outline-2">
-<h2 id="org1b5e952">Últimos Artículos Publicados</h2>
-<div class="outline-text-2" id="text-org1b5e952">
+
+<div class="figure">
+<p><img src="../images-blog/sshfs.png" alt="sshfs.png" />
+</p>
+</div>
+
+<p>
+Esto nos lo va a permitir SSHFS, teniendo en la máquina remota un servidor SSH montado.
+</p>
+
+<p>
+SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil. Para ello tenemos que seguir los siguientes pásos:
+</p>
 <ul class="org-ul">
-<li><i>2019-04-04</i> - <a href="https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html">Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</a></li>
-
-<li><i>2019-04-02</i> - <a href="https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html">Exportando bonito a html mi OrgMode y creando web estática</a></li>
-
-<li><i>2019-04-01</i> - <a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
-
-<li><i>2019-03-31</i> - <a href="https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html">Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
-
-<li><i>2019-03-31</i> - <a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+<li>Instalaremos sshfs</li>
+<li>Crear una <b>carpeta vacía</b>, donde montaremos la carpeta remota</li>
+<li>Mediante una línea de terminal montaremos y desmontaremos la carpeta cuando lo deseemos</li>
 </ul>
 </div>
+<div id="outline-container-orge5403cf" class="outline-3">
+<h3 id="orge5403cf">Instalación en la máquina local</h3>
+<div class="outline-text-3" id="text-orge5403cf">
+<p>
+SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:
+</p>
+
+<p>
+<code>sudo apt install sshfs</code>
+</p>
+</div>
 </div>
 
+<div id="outline-container-orge7674b9" class="outline-3">
+<h3 id="orge7674b9">Creando la carpeta de montaje</h3>
+<div class="outline-text-3" id="text-orge7674b9">
+<p>
+En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: <b>~/carpeta_montaje</b>
+</p>
 
-<div id="outline-container-orgfc54018" class="outline-2">
-<h2 id="orgfc54018">Enviando Imágenes, audios, archivos… con mi bot de Telegram y Categorías Telegram. </h2>
-<div class="outline-text-2" id="text-orgfc54018">
-<audio controls=''><source src=https://anchor.fm/s/106db04/podcast/play/2770641/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2019-2-28%2FEnviando-Im-genes--audios--arc-873dfdb47c8ba.m4a />Tu navegador no soporta reproductor de Podcast.</audio>'
+<p>
+<code>mkdir -p ~/carpeta_montaje</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org175f16e" class="outline-3">
+<h3 id="org175f16e">Montar carpeta</h3>
+<div class="outline-text-3" id="text-org175f16e">
+<p>
+Vamos a montar la <b>carpeta del servidor</b> que deseemos montar el local, en mi caso la carpeta llamada <b>carpeta_del_servidor</b>, en la carpeta de mi portátil que he creado llamada <b>carpeta_montaje</b>. 
+</p>
+
+<p>
+Sustituye <b>usuario@192.168.1.100</b>, por el usuario e IP del servidor que te vas a conectar.
+</p>
+
+<p>
+Ahora vamos a conectarnos con:
+</p>
+
+<p>
+<code>sshfs usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code>
+</p>
+
+<p>
+En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos conectaríamos así:
+</p>
+
+<p>
+<code>sshfs -p 5555 usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeefe61a" class="outline-3">
+<h3 id="orgeefe61a">Desmontar</h3>
+<div class="outline-text-3" id="text-orgeefe61a">
+<p>
+Para desmontar la carpeta, introduciremos en la terminal <b>fusermount -u</b> seguido de la carpeta de montaje:
+</p>
+
+<p>
+<code>fusermount -u ~/carpeta_montaje</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3a084b" class="outline-3">
+<h3 id="orgb3a084b">Conclusión</h3>
+<div class="outline-text-3" id="text-orgb3a084b">
+<p>
+Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.
+</p>
+<br>
+<p>
+Publicado por Angel el jueves 04 abril del 2019 
+</p>
+<br><br>
+<p>
+También te puede interesar:
+</p>
+
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+</div>
 </div>
 </div>
 </div>
