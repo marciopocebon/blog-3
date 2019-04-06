@@ -13,6 +13,33 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Montando una carpeta con todos mis servidores dlna</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html</link>
+    <description>Vamos a montar en una carpeta de nuestro PC, todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html&gt;Montando una carpeta con todos mis servidores dlna&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 05 Apr 2019 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html</guid>
+   </item>
+   <item>
     <title>Montando carpetas del servidor, Raspberry,... en tu escritorio</title>
     <link>https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</link>
     <description>SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil ... 
