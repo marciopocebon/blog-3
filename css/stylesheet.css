@@ -1,3 +1,4 @@
+ /* adaptar la imagen a la anchura de la pantalla */
 img {
   max-width: 100%;
 }
