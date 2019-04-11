@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Atajos de Terminal</title>
+<title>Controla tu Raspberry, Servidor o PC desde Telegram</title>
 <meta name="generator" content="Org mode" />
-<meta name="description" content="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil"
+<meta name="description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram"
  />
-<meta name="keywords" content="servidor" />
+<meta name="keywords" content="domotica" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -268,167 +268,85 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org40aaa6c" class="outline-2">
-<h2 id="org40aaa6c">Atajos de Terminal</h2>
-<div class="outline-text-2" id="text-org40aaa6c">
+<div id="outline-container-org14414f7" class="outline-2">
+<h2 id="org14414f7">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
+<div class="outline-text-2" id="text-org14414f7">
 <p>
-Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil. 
+Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.
 </p>
 
 
 <div class="figure">
-<p><img src="../images-blog/atajos.jpg" alt="atajos.jpg" />
+<p><img src="../images-blog/tocar_movil.jpg" alt="tocar_movil.jpg" />
 </p>
 </div>
 
 
 <p>
-El truco para aprenderlos es leer todo lo que podemos hacer con atajos y cuando lo necesites, lee aquí el atajo y ejecutalo. En muy poco espacio de tiempo, estoy seguro que lo tendrás integrado y totalmente aprendido. 
+Con este Bot no solo podrás conocer la temperatura, IP pública, &#x2026; Tal como te expliqué en el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, sino que también podrás interactuar con él, iniciando o deteniendo servicios, mediante el GPIO podrás conectar luces, motores de persianas, puertas&#x2026; ejecutar comandos que ejecutarías en la terminal, actualizar tu servidor&#x2026; En definitiva, para todo aquello que dé tu imaginación. 
 </p>
 
 <p>
-Aprenderse los atajos de teclado para no utilizar el ratón, es de las cosas mas productivas que puedes hacer y no solo por el tiempo perdido en utilizar el ratón, sino que también influye en la fluidez a la hora de desarrollar aquello con lo que estás trabajando. 
+Lo mejor de todo, es que nos conectaremos a través de la API de Telegram, de modo que no necesitaremos utilizar ningún servicio tipo VPN. Nuestro Bot de Telegram, puede convertirse en un mando a distancia, teniendo el control total de todo lo que suceda en tu casa y lo mejor de todo, sin tener conocimientos de programación. Vamos a utilizar nuevamente Bash, como lenguaje de programación y añadiendo cuatro parámetros, vas a comenzar a controlarlo todo.  
 </p>
 
 <p>
-No hay nada que te pare!!!
-</p>
-
-<p>
-Comentaros que parte de estos comandos, son también compatibles con Emacs. Así que aprendemos por partida doble.
-</p>
-
-<p>
-Los he agrupado según mi uso. Quizás lo que para mi es importante, para ti no lo es, pero aquí los tienes: 
+He hecho un Fork de BaTBot en su última versión modificada por eliafino y lo he traducido al Castellano para el fácil comprensión.
+BaTBot en la versión 1.4.3.4 lo encontrarás en mi <a href="https://github.com/uGeek/BaTbot">Repositorio en GitHub</a>.
 </p>
 </div>
 
-<div id="outline-container-orgc4012e3" class="outline-3">
-<h3 id="orgc4012e3">Importantes</h3>
-<div class="outline-text-3" id="text-orgc4012e3">
-<ul class="org-ul">
-<li><b>Ctrl+a</b>: lleva el cursor al inicio de la línea</li>
-<li><b>Ctrl+e</b>: lleva el cursor al final de la línea</li>
-<li><b>Ctrl+k</b>: borra desde el cursor hasta el final de la línea</li>
-<li><b>Ctrl+u</b>: borra desde el cursor hasta el inicio de la línea</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgc99d5cd" class="outline-3">
-<h3 id="orgc99d5cd">Importantes en el uso</h3>
-<div class="outline-text-3" id="text-orgc99d5cd">
-<ul class="org-ul">
-<li><b>Ctrl+l</b>: limpia la terminal</li>
-<li><b>Ctrl+c</b>: termina el proceso que se esté ejecutando</li>
-<li><b>Ctrl+z</b>: deja en segundo plano el proceso, para volver al proceso, introduce <b>fg</b></li>
-<li><b>Ctrl+r</b>: búsqueda de comandos usados anteriormente, escribiendo el inicio del comando</li>
-<li><b>Tab</b>: autocompleta comandos, rutas, directorios, archivos&#x2026;</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgdde68a8" class="outline-3">
-<h3 id="orgdde68a8">Menos importantes en el uso</h3>
-<div class="outline-text-3" id="text-orgdde68a8">
-<ul class="org-ul">
-<li><b>Ctrl+p</b>: último comando introducido</li>
-<li><b>Ctrl+d</b>: sale de la terminal</li>
-<li><b>Alt+.</b>:  escribe los últimos comandos a continuación de donde estemos</li>
-<li><b>Ctrl+g</b>: Anular lo que estemos haciendo</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org40a3311" class="outline-3">
-<h3 id="org40a3311">Intercambiar posiciones</h3>
-<div class="outline-text-3" id="text-org40a3311">
-<ul class="org-ul">
-<li><b>Ctrl+t</b>: intercambia la posición de los dos caracteres anteriores al cursor</li>
-<li><b>Alt+t</b>: intercambia la posición de las dos palabras anteriores al cursor</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgb945d49" class="outline-3">
-<h3 id="orgb945d49">Mover cursor</h3>
-<div class="outline-text-3" id="text-orgb945d49">
-<ul class="org-ul">
-<li><b>Alt+f</b>:  salta a la siguiente palabra</li>
-<li><b>Alt+b</b>:  salta a la anterior palabra</li>
-<li><b>Ctrl+xx</b>: salta entre la posición actual y el inicio de la línea y viceversa</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org6b23d74" class="outline-3">
-<h3 id="org6b23d74">Mas atajos de borrar</h3>
-<div class="outline-text-3" id="text-org6b23d74">
-<ul class="org-ul">
-<li><b>Ctrl+w</b>: borra la palabra anterior al cursor</li>
-<li><b>Alt+d</b>: borra la palabra siguiente al cursor</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org8c88acd" class="outline-3">
-<h3 id="org8c88acd">Copiar y Pegar</h3>
-<div class="outline-text-3" id="text-org8c88acd">
-<ul class="org-ul">
-<li><b>Ctrl+Shift+v</b>: pegar el texto del portapapeles en la terminal</li>
-<li><b>Ctrl+Shift+c</b>: seleccionando el texto de la terminal, copiamos al portapapeles</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-org4862917" class="outline-3">
-<h3 id="org4862917">Abrir terminal</h3>
-<div class="outline-text-3" id="text-org4862917">
-<ul class="org-ul">
-<li><b>Ctrl+Alt+t</b>: La mayor parte de las terminales</li>
-<li><b>F12</b>: Si utilizas Guake</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org75f93c1" class="outline-2">
-<h2 id="org75f93c1">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
-<div class="outline-text-2" id="text-org75f93c1">
+<div id="outline-container-org1db0de5" class="outline-3">
+<h3 id="org1db0de5">Instalación</h3>
+<div class="outline-text-3" id="text-org1db0de5">
 <p>
-Voy a explicarte como ejecutar un bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram.
-</p>
-
-<p>
-Con este Bot podrás no solo conocer la temperatura, IP pública,
-</p>
-</div>
-<div id="outline-container-orgdabf9eb" class="outline-3">
-<h3 id="orgdabf9eb">Descargando el repositorio</h3>
-<div class="outline-text-3" id="text-orgdabf9eb">
-<p>
-Voy a clonar el repositorio en la carpeta de usuario.
+Lo primero que vamos ha hacer es descargar BaTbot y clonar el repositorio, por ejemplo, en la carpeta de usuario de nuestra distro:
 </p>
 <pre class="example">
 cd                                             # Esto nos llevará a la carpeta de usuario
 git clone https://github.com/uGeek/BaTbot.git  # Clonamos el repositorio
 cd ~/BaTbot/bin/                               # Accedemos a la carpeta ~/BaTbot/bin
 </pre>
-</div>
-</div>
-<div id="outline-container-orgf6de690" class="outline-3">
-<h3 id="orgf6de690">Configurando BaTbot</h3>
-<div class="outline-text-3" id="text-orgf6de690">
 <p>
-Ahora vamos configurar el bot. Para ello, vamos a añadir las siguientes variables:
+Dentro de la carpeta <b>bin</b>, encontraremos el script del bot llamado <b>batbot</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org032652a" class="outline-3">
+<h3 id="org032652a">Configurando BaTbot</h3>
+<div class="outline-text-3" id="text-org032652a">
+<p>
+Vamos a editar el archivo <b>batbot</b> y añadir las variables necesarias:
+</p>
+
+<pre class="example">
+nano ~/BaTbot/bin/batbot
+</pre>
+
+<p>
+La configuración va a ser muy simple. Necesitamos añadir las siguientes variables en el script:
 </p>
 <ul class="org-ul">
 <li>TELEGRAMTOKEN= &lt;TOKEN&gt;</li>
 <li>PERSONALID= &lt;ID DEL USUARIO MAESTRO O MÁXIMO ADMINISTRADOR&gt;</li>
-<li>BATBOTUSR= &lt; RUTA DE LA CARPETA *.batbot &gt;</li>
+<li>BATBOTUSR= &lt; RUTA DE LA CARPETA .batbot &gt;</li>
 </ul>
 
 <p>
-Aquí tienes un ejemplo, con parámetros inventados, de como quedaría:
+El TOKEN si recordáis, lo obteníamos a través de  <a href="https://t.me/BotFather">@BotFather</a> y el ID, mediante el Bot <a href="https://t.me/ChannelIdBot">@ChannelIdBot</a>.
+</p>
+
+<p>
+Si no recuerdas bien los pasos, te invito a leer el Post  <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, donde explico los pasos con mas detalle.
+</p>
+
+<p>
+La ruta de la carpeta <b>.batbot</b>, hay que ponerla completa. Dentro de esta carpeta está la lista de usuarios que tendrán permisos para utilizar nuestro Bot.
+</p>
+
+<p>
+Aquí tienes un ejemplo, con parámetros inventados, como quedaría:
 </p>
 <pre class="example">
 # Ingrese el token BOT devuelto por BotFather                                                                                               
@@ -441,7 +359,7 @@ PERSONALID="68690969"
 BATBOTUSR="$HOME/BaTbot/.batbot"
 </pre>
 <p>
-Por defecto, BaTbot revisará cada 5 segundos si hay un nuevo mensaje. Esta opción podemos personalizarla.
+Por defecto, BaTbot revisará cada 5 segundos si hay un nuevo mensaje. Esta opción la podemos personalizar poniendo el tiempo en segundos que deseemos:
 </p>
 <pre class="example">
 # revisar nuevos mensajes cada X segundos:                                                                                                  
@@ -449,11 +367,11 @@ CHECKNEWMSG=5
 </pre>
 </div>
 </div>
-<div id="outline-container-org942627d" class="outline-3">
-<h3 id="org942627d">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
-<div class="outline-text-3" id="text-org942627d">
+<div id="outline-container-orge8ed558" class="outline-3">
+<h3 id="orge8ed558">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
+<div class="outline-text-3" id="text-orge8ed558">
 <p>
-Ahora vamos a añadir nuestro ID de usuario, al listado de usuarios que tiene permisos para utilizar el Bot. Para ello, accederemos al archivo <b>allowed_users</b> :
+Ahora vamos a añadir nuestro ID de usuario, al listado de usuarios que tienen permisos para utilizar el Bot. Para ello, accederemos al archivo <b>allowed_users</b> :
 </p>
 <pre class="example">
 nano ~/BaTbot/.batbot/allowed_users
@@ -461,34 +379,45 @@ nano ~/BaTbot/.batbot/allowed_users
 <p>
 Borraremos los números de ID que vienen de ejemplo y añadiremos nuestro ID o todos aquellos ID que tendrán permiso para poder utilizar el Bot.
 </p>
-</div>
-</div>
 
-<div id="outline-container-orga093b93" class="outline-3">
-<h3 id="orga093b93">Ejecutar el Bot</h3>
-<div class="outline-text-3" id="text-orga093b93">
 <p>
-No situaremos dentro de la carpeta <b>bin</b> y ejecutaremos <b>./batbot</b>
+Recuerda que si no ponemos nuestro ID en esta lista, no podremos interactuar con nuestro Bot.
+</p>
+</div>
+</div>
+<div id="outline-container-org971e9ec" class="outline-3">
+<h3 id="org971e9ec">Ejecutar el Bot</h3>
+<div class="outline-text-3" id="text-org971e9ec">
+<p>
+Ahora volveremos a la carpeta <b>bin</b> y ejecutaremos <b>./batbot</b>
 </p>
 <pre class="example">
 cd ~/BaTbot/bin/
 ./batbot
 </pre>
 <p>
-En la terminal podremos ver todos los mensajes que recibe el Bot y que usuarios lo envían.
+Ya puedes enviar mensajes al Bot. Escribe el comando <b>/menu</b>, para que te muestre el menú.
+</p>
+
+<p>
+En la terminal podremos ver todos los mensajes que recibe el Bot en tiempo real y que usuarios lo envían.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3d1831d" class="outline-3">
-<h3 id="org3d1831d">Configurar un menú y añadir comandos</h3>
-<div class="outline-text-3" id="text-org3d1831d">
+<div id="outline-container-orgf351617" class="outline-3">
+<h3 id="orgf351617">Configurar un menú y añadir comandos</h3>
+<div class="outline-text-3" id="text-orgf351617">
 <p>
-Esta parte del script, es donde podremos añadir comandos para que ejecute nuestro Bot. 
+Esta parte del script, es donde podremos añadir comandos para que los ejecute nuestro Bot. 
 </p>
 
 <p>
-Aquí hay algunos de ejemplo, pero si no los vas a utilizar, elimínalos de la lista. Deja solo aquellos comandos que utilizaras. Para recordar los comandos, crea el comando <b>/menu</b> y añade todos los comandos disponibles.
+Aquí hay algunos de ejemplo, pero si no los vas a utilizar, elimínalos de la lista. Deja solo aquellos comandos que utilizaras. 
+</p>
+
+<p>
+Para recordar los comandos, crea el comando llamado por ejemplo <b>/menu</b> y añade todos los comandos disponibles.
 </p>
 
 <p>
@@ -508,15 +437,11 @@ declare -A botcommands=(
 	["/run (.*)"]="exec @R1"
 	["/docker_nginx_start"]="docker stop nginx"
 	["/docker_nginx_stop"]="docker start nginx"
-	["/menu"]="echo -e Bienvenido a Mi Bot\n/myid \n/myuser \n/uptime \n/run \n/ping \n\nDockers:\n/docker_nginx_start \n/docker_nginx_\
-stop \n\n\n/menu"
-
-
-)
+	["/menu"]="echo -e Bienvenido a Mi Bot\n/myid \n/myuser \n/uptime \n/run \n/ping \n\nDockers:\n/docker_nginx_start \n/docker_nginx_stop \n\n\n/menu")
 </pre>
 
 <p>
-En el chat del Bot, si ejecutamos el comando <b>/menu</b>, el bot nos contestaría:
+En el chat del Bot, si ejecutamos el comando <b>/menu</b>, nos contestará:
 </p>
 
 <pre class="example">
@@ -534,13 +459,18 @@ Dockers:
 
 /menu
 </pre>
-</div>
-</div>
-<div id="outline-container-orga35aff3" class="outline-3">
-<h3 id="orga35aff3">Comandos simples</h3>
-<div class="outline-text-3" id="text-orga35aff3">
+
 <p>
-El Bot no solo reconoce comandos simples como:
+Si envías el comando <b>/run</b>, sería lo mismo que si estuvieras escribiendo en tu terminal
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08a8371" class="outline-3">
+<h3 id="org08a8371">Comandos simples</h3>
+<div class="outline-text-3" id="text-org08a8371">
+<p>
+Podemos ejecutar comandos simples como por ejemplo:
 </p>
 
 <ul class="org-ul">
@@ -556,22 +486,23 @@ El Bot no solo reconoce comandos simples como:
 ["/uptime"]="/usr/bin/uptime"
 </pre>
 <ul class="org-ul">
-<li>¿Espacio en disco libre a través de Telegram?</li>
+<li>¿Queres conocer el espacio en disco libre a través de Telegram?</li>
 </ul>
 <pre class="example">
 ["/disks"]="/bin/df -h"
 </pre>
+
 <ul class="org-ul">
-<li>Ejecutar script externo:</li>
+<li>Ejecutar script un externo:</li>
 </ul>
 <pre class="example">
 ["/auth ([a-zA-Z0-9]+)"]="/usr/local/bin/auth.sh @R1"
 </pre>
 </div>
 </div>
-<div id="outline-container-org19acf14" class="outline-3">
-<h3 id="org19acf14">Variables:</h3>
-<div class="outline-text-3" id="text-org19acf14">
+<div id="outline-container-orgc0964c0" class="outline-3">
+<h3 id="orgc0964c0">Variables:</h3>
+<div class="outline-text-3" id="text-orgc0964c0">
 <p>
 Puedes usar variables! por ejemplo:
 </p>
@@ -581,9 +512,9 @@ Puedes usar variables! por ejemplo:
 </div>
 </div>
 
-<div id="outline-container-org223a35c" class="outline-3">
-<h3 id="org223a35c">Lista de Varibales</h3>
-<div class="outline-text-3" id="text-org223a35c">
+<div id="outline-container-org612255b" class="outline-3">
+<h3 id="org612255b">Lista de Varibales</h3>
+<div class="outline-text-3" id="text-org612255b">
 <ul class="org-ul">
 <li>@USERID 	  (int) ID del usuario que envió el comando activado</li>
 <li>@USERNAME 	(string) Nombre de usuario de usuario en Telegram</li>
@@ -606,9 +537,9 @@ Regex group extract
 </div>
 </div>
 
-<div id="outline-container-org7dcf5f2" class="outline-3">
-<h3 id="org7dcf5f2">Comando con expresiones regulares</h3>
-<div class="outline-text-3" id="text-org7dcf5f2">
+<div id="outline-container-orgafd7864" class="outline-3">
+<h3 id="orgafd7864">Comando con expresiones regulares</h3>
+<div class="outline-text-3" id="text-orgafd7864">
 <p>
 También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234". Todos los argumentos pueden ser expresiones regulares, por ejemplo:
 </p>
@@ -624,15 +555,11 @@ También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234".
 </div>
 </div>
 
-<div id="outline-container-org7565d31" class="outline-3">
-<h3 id="org7565d31">Enviar mensaje</h3>
-<div class="outline-text-3" id="text-org7565d31">
+<div id="outline-container-org580cdc0" class="outline-3">
+<h3 id="org580cdc0">Enviar mensaje</h3>
+<div class="outline-text-3" id="text-org580cdc0">
 <p>
-Cuando BaTbot se está ejecutando, puede enviar un mensaje utilizando el ID del usuario.
-</p>
-
-<p>
-Usando el comando <b>.msg</b> directamente en la consola. 
+Cuando BaTbot se está ejecutando, puedes enviar un mensaje utilizando el ID del usuario, usando el comando <b>.msg</b> directamente en la consola. 
 </p>
 <pre class="example">
 .msg &lt;ID&gt; &lt;MENSAJE&gt;
@@ -642,26 +569,24 @@ Por ejemplo:
 </p>
 <pre class="example">
 [chat 110440209, from  110440209] &lt;theMiddle - Andrea Menin&gt; hi bot :)
-.msg 110440209 hey!!!
+.msg 110440209 No utilices más mi Bot!!!
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org7f11786" class="outline-3">
-<h3 id="org7f11786">Conclusiones</h3>
-<div class="outline-text-3" id="text-org7f11786">
+<div id="outline-container-orga9faef2" class="outline-3">
+<h3 id="orga9faef2">Conclusiones</h3>
+<div class="outline-text-3" id="text-orga9faef2">
 <p>
-Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc&#x2026; La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, con estas opciones lo cumple perfectamente. 
+Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc&#x2026; La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente. 
 </p>
 
 <p>
-Si quieres hacer pruebas, la carpeta que hay en el repositorio <b>.batbot</b>, donde esta el archivo <b>allowed_users</b>, tendría que estar en al carpeta <code>$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos los archivos de este bot en la misma carpeta.
+Si quieres hacer pruebas, la carpeta que hay en el repositorio <b>.batbot</b>, donde esta el archivo <b>allowed_users</b>, tendría que estar en al carpeta <code>$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos las carpetas en el mismo lugar.
 </p>
-
-
 <br>
 <p>
-Publicado por Angel el sábado 06 abril del 2019 
+Publicado por Angel el jueves 11 abril del 2019 
 </p>
 <br><br>
 <p>
@@ -669,16 +594,10 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
