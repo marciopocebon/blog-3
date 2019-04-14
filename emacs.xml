@@ -15,260 +15,70 @@
    <item>
     <title>Exportando bonito a html mi OrgMode y creando web estática</title>
     <link>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</link>
-    <description>Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad ... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html&gt;Exportando bonito a html mi OrgMode y creando web estática&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad </description>
     <pubDate>Tue, 02 Apr 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</guid>
    </item>
    <item>
     <title>Notificaciones Org Mode en Telegram con mi Bot</title>
     <link>https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html</link>
-    <description>En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html&gt;Notificaciones Org Mode en Telegram con mi Bot&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear</description>
     <pubDate>Sun, 31 Mar 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html</guid>
    </item>
    <item>
     <title>Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode</title>
     <link>https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html</link>
-    <description>Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html&gt;Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode</description>
     <pubDate>Fri, 15 Mar 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html</guid>
    </item>
    <item>
     <title>Simplenote en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html</link>
-    <description>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html&gt;Simplenote en Emacs&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa.</description>
     <pubDate>Sun, 10 Mar 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html</guid>
    </item>
    <item>
     <title>2 Archivos de configuración, un Emacs</title>
     <link>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</link>
-    <description>Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html&gt;2 Archivos de configuración, un Emacs&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones</description>
     <pubDate>Fri, 08 Feb 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</guid>
    </item>
    <item>
     <title>OrgMode: Buscar solo en las Cabeceras</title>
     <link>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</link>
-    <description>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados</description>
     <pubDate>Fri, 01 Feb 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</guid>
    </item>
    <item>
     <title>Lee Super rápido en Emacs con Spray</title>
     <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
-    <description>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.</description>
     <pubDate>Sun, 27 Jan 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</guid>
    </item>
    <item>
     <title>Con Emacs también podemos editar Markdown</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
-    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html&gt;Con Emacs también podemos editar Markdown&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?</description>
     <pubDate>Thu, 03 Jan 2019 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</guid>
    </item>
    <item>
     <title>Kde Connect en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
-    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html&gt;Kde Connect en Emacs&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla</description>
     <pubDate>Mon, 31 Dec 2018 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</guid>
    </item>
    <item>
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
-    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html&gt;Convertir de Markdown a Org Mode gracias a Pandoc&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
+    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc</description>
     <pubDate>Fri, 28 Dec 2018 18:00 +0100</pubDate>
     <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid>
    </item>

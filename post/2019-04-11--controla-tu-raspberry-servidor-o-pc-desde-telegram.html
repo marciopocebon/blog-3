@@ -212,6 +212,9 @@ gtag('config', 'UA-131560140-1');
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<meta name="twitter:title" content=" Controla tu Raspberry, Servidor o PC desde Telegram" />
+<meta name="twitter:description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+<meta name="twitter:image" content="" />
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -268,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org14414f7" class="outline-2">
-<h2 id="org14414f7">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
-<div class="outline-text-2" id="text-org14414f7">
+<div id="outline-container-org11dfbb3" class="outline-2">
+<h2 id="org11dfbb3">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
+<div class="outline-text-2" id="text-org11dfbb3">
 <p>
 Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.
 </p>
@@ -296,9 +299,9 @@ BaTBot en la versión 1.4.3.4 lo encontrarás en mi <a href="https://github.com/
 </p>
 </div>
 
-<div id="outline-container-org1db0de5" class="outline-3">
-<h3 id="org1db0de5">Instalación</h3>
-<div class="outline-text-3" id="text-org1db0de5">
+<div id="outline-container-orga8dc6f1" class="outline-3">
+<h3 id="orga8dc6f1">Instalación</h3>
+<div class="outline-text-3" id="text-orga8dc6f1">
 <p>
 Lo primero que vamos ha hacer es descargar BaTbot y clonar el repositorio, por ejemplo, en la carpeta de usuario de nuestra distro:
 </p>
@@ -313,9 +316,9 @@ Dentro de la carpeta <b>bin</b>, encontraremos el script del bot llamado <b>batb
 </div>
 </div>
 
-<div id="outline-container-org032652a" class="outline-3">
-<h3 id="org032652a">Configurando BaTbot</h3>
-<div class="outline-text-3" id="text-org032652a">
+<div id="outline-container-org3724a83" class="outline-3">
+<h3 id="org3724a83">Configurando BaTbot</h3>
+<div class="outline-text-3" id="text-org3724a83">
 <p>
 Vamos a editar el archivo <b>batbot</b> y añadir las variables necesarias:
 </p>
@@ -367,9 +370,9 @@ CHECKNEWMSG=5
 </pre>
 </div>
 </div>
-<div id="outline-container-orge8ed558" class="outline-3">
-<h3 id="orge8ed558">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
-<div class="outline-text-3" id="text-orge8ed558">
+<div id="outline-container-org3252a66" class="outline-3">
+<h3 id="org3252a66">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
+<div class="outline-text-3" id="text-org3252a66">
 <p>
 Ahora vamos a añadir nuestro ID de usuario, al listado de usuarios que tienen permisos para utilizar el Bot. Para ello, accederemos al archivo <b>allowed_users</b> :
 </p>
@@ -385,9 +388,9 @@ Recuerda que si no ponemos nuestro ID en esta lista, no podremos interactuar con
 </p>
 </div>
 </div>
-<div id="outline-container-org971e9ec" class="outline-3">
-<h3 id="org971e9ec">Ejecutar el Bot</h3>
-<div class="outline-text-3" id="text-org971e9ec">
+<div id="outline-container-org14bf27a" class="outline-3">
+<h3 id="org14bf27a">Ejecutar el Bot</h3>
+<div class="outline-text-3" id="text-org14bf27a">
 <p>
 Ahora volveremos a la carpeta <b>bin</b> y ejecutaremos <b>./batbot</b>
 </p>
@@ -405,9 +408,9 @@ En la terminal podremos ver todos los mensajes que recibe el Bot en tiempo real 
 </div>
 </div>
 
-<div id="outline-container-orgf351617" class="outline-3">
-<h3 id="orgf351617">Configurar un menú y añadir comandos</h3>
-<div class="outline-text-3" id="text-orgf351617">
+<div id="outline-container-orgf45780b" class="outline-3">
+<h3 id="orgf45780b">Configurar un menú y añadir comandos</h3>
+<div class="outline-text-3" id="text-orgf45780b">
 <p>
 Esta parte del script, es donde podremos añadir comandos para que los ejecute nuestro Bot. 
 </p>
@@ -466,9 +469,9 @@ Si envías el comando <b>/run</b>, sería lo mismo que si estuvieras escribiendo
 </div>
 </div>
 
-<div id="outline-container-org08a8371" class="outline-3">
-<h3 id="org08a8371">Comandos simples</h3>
-<div class="outline-text-3" id="text-org08a8371">
+<div id="outline-container-org34ec938" class="outline-3">
+<h3 id="org34ec938">Comandos simples</h3>
+<div class="outline-text-3" id="text-org34ec938">
 <p>
 Podemos ejecutar comandos simples como por ejemplo:
 </p>
@@ -500,9 +503,9 @@ Podemos ejecutar comandos simples como por ejemplo:
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc0964c0" class="outline-3">
-<h3 id="orgc0964c0">Variables:</h3>
-<div class="outline-text-3" id="text-orgc0964c0">
+<div id="outline-container-org4d2de60" class="outline-3">
+<h3 id="org4d2de60">Variables:</h3>
+<div class="outline-text-3" id="text-org4d2de60">
 <p>
 Puedes usar variables! por ejemplo:
 </p>
@@ -512,9 +515,9 @@ Puedes usar variables! por ejemplo:
 </div>
 </div>
 
-<div id="outline-container-org612255b" class="outline-3">
-<h3 id="org612255b">Lista de Varibales</h3>
-<div class="outline-text-3" id="text-org612255b">
+<div id="outline-container-org7f76d83" class="outline-3">
+<h3 id="org7f76d83">Lista de Varibales</h3>
+<div class="outline-text-3" id="text-org7f76d83">
 <ul class="org-ul">
 <li>@USERID 	  (int) ID del usuario que envió el comando activado</li>
 <li>@USERNAME 	(string) Nombre de usuario de usuario en Telegram</li>
@@ -537,9 +540,9 @@ Regex group extract
 </div>
 </div>
 
-<div id="outline-container-orgafd7864" class="outline-3">
-<h3 id="orgafd7864">Comando con expresiones regulares</h3>
-<div class="outline-text-3" id="text-orgafd7864">
+<div id="outline-container-orgdc971ef" class="outline-3">
+<h3 id="orgdc971ef">Comando con expresiones regulares</h3>
+<div class="outline-text-3" id="text-orgdc971ef">
 <p>
 También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234". Todos los argumentos pueden ser expresiones regulares, por ejemplo:
 </p>
@@ -555,9 +558,9 @@ También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234".
 </div>
 </div>
 
-<div id="outline-container-org580cdc0" class="outline-3">
-<h3 id="org580cdc0">Enviar mensaje</h3>
-<div class="outline-text-3" id="text-org580cdc0">
+<div id="outline-container-org1c95e3a" class="outline-3">
+<h3 id="org1c95e3a">Enviar mensaje</h3>
+<div class="outline-text-3" id="text-org1c95e3a">
 <p>
 Cuando BaTbot se está ejecutando, puedes enviar un mensaje utilizando el ID del usuario, usando el comando <b>.msg</b> directamente en la consola. 
 </p>
@@ -574,9 +577,9 @@ Por ejemplo:
 </div>
 </div>
 
-<div id="outline-container-orga9faef2" class="outline-3">
-<h3 id="orga9faef2">Conclusiones</h3>
-<div class="outline-text-3" id="text-orga9faef2">
+<div id="outline-container-org0965d79" class="outline-3">
+<h3 id="org0965d79">Conclusiones</h3>
+<div class="outline-text-3" id="text-org0965d79">
 <p>
 Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc&#x2026; La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente. 
 </p>
