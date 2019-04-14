@@ -192,19 +192,13 @@ gtag('config', 'UA-131560140-1');
 <meta property=og:type content=website />
 <meta property=og:locale content=es_ES />
 <meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
 <meta name=twitter:site content=@ugeekpodcast />
 <meta name=twitter:card content=summary_large_image />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta property="og:image" content="" />
 <meta name="description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
-<link rel="canonical" href="https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content=" Montando carpetas del servidor, Raspberry,... en tu escritorio" />
 <meta property="og:description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
@@ -269,9 +263,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org19e55c0" class="outline-2">
-<h2 id="org19e55c0">Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</h2>
-<div class="outline-text-2" id="text-org19e55c0">
+<div id="outline-container-orgae08453" class="outline-2">
+<h2 id="orgae08453">Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</h2>
+<div class="outline-text-2" id="text-orgae08453">
 <p>
 Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry&#x2026; y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜,  te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,&#x2026;  tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.
 </p>
@@ -295,9 +289,9 @@ SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nu
 <li>Mediante una línea de terminal montaremos y desmontaremos la carpeta cuando lo deseemos</li>
 </ul>
 </div>
-<div id="outline-container-org6bcadf7" class="outline-3">
-<h3 id="org6bcadf7">Instalación en la máquina local</h3>
-<div class="outline-text-3" id="text-org6bcadf7">
+<div id="outline-container-orgcc69344" class="outline-3">
+<h3 id="orgcc69344">Instalación en la máquina local</h3>
+<div class="outline-text-3" id="text-orgcc69344">
 <p>
 SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:
 </p>
@@ -308,9 +302,9 @@ SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo in
 </div>
 </div>
 
-<div id="outline-container-orgcf416de" class="outline-3">
-<h3 id="orgcf416de">Creando la carpeta de montaje</h3>
-<div class="outline-text-3" id="text-orgcf416de">
+<div id="outline-container-orgfd4e7f7" class="outline-3">
+<h3 id="orgfd4e7f7">Creando la carpeta de montaje</h3>
+<div class="outline-text-3" id="text-orgfd4e7f7">
 <p>
 En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: <b>~/carpeta_montaje</b>
 </p>
@@ -321,9 +315,9 @@ En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: <
 </div>
 </div>
 
-<div id="outline-container-org3d2673e" class="outline-3">
-<h3 id="org3d2673e">Montar carpeta</h3>
-<div class="outline-text-3" id="text-org3d2673e">
+<div id="outline-container-org2e4eecc" class="outline-3">
+<h3 id="org2e4eecc">Montar carpeta</h3>
+<div class="outline-text-3" id="text-org2e4eecc">
 <p>
 Vamos a montar la <b>carpeta del servidor</b> que deseemos montar el local, en mi caso la carpeta llamada <b>carpeta_del_servidor</b>, en la carpeta de mi portátil que he creado llamada <b>carpeta_montaje</b>. 
 </p>
@@ -350,9 +344,9 @@ En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos c
 </div>
 </div>
 
-<div id="outline-container-org8b4c320" class="outline-3">
-<h3 id="org8b4c320">Desmontar</h3>
-<div class="outline-text-3" id="text-org8b4c320">
+<div id="outline-container-orgd8925f2" class="outline-3">
+<h3 id="orgd8925f2">Desmontar</h3>
+<div class="outline-text-3" id="text-orgd8925f2">
 <p>
 Para desmontar la carpeta, introduciremos en la terminal <b>fusermount -u</b> seguido de la carpeta de montaje:
 </p>
@@ -362,9 +356,9 @@ Para desmontar la carpeta, introduciremos en la terminal <b>fusermount -u</b> se
 </p>
 </div>
 </div>
-<div id="outline-container-orgd2439af" class="outline-3">
-<h3 id="orgd2439af">Conclusión</h3>
-<div class="outline-text-3" id="text-orgd2439af">
+<div id="outline-container-org617f461" class="outline-3">
+<h3 id="org617f461">Conclusión</h3>
+<div class="outline-text-3" id="text-org617f461">
 <p>
 Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.
 </p>

@@ -192,19 +192,13 @@ gtag('config', 'UA-131560140-1');
 <meta property=og:type content=website />
 <meta property=og:locale content=es_ES />
 <meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
 <meta name=twitter:site content=@ugeekpodcast />
 <meta name=twitter:card content=summary_large_image />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
 <link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta property="og:image" content="" />
 <meta name="description" content="En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear" />
-<link rel="canonical" href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Notificaciones Org Mode en Telegram con mi Bot" />
 <meta property="og:description" content="En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear" />
@@ -269,9 +263,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgfc2075c" class="outline-2">
-<h2 id="orgfc2075c">Notificaciones Org Mode en Telegram con mi Bot</h2>
-<div class="outline-text-2" id="text-orgfc2075c">
+<div id="outline-container-orgac4fd48" class="outline-2">
+<h2 id="orgac4fd48">Notificaciones Org Mode en Telegram con mi Bot</h2>
+<div class="outline-text-2" id="text-orgac4fd48">
 
 <div class="figure">
 <p><img src="../images-blog/telegram2org.png" alt="telegram2org.png" />
@@ -296,9 +290,9 @@ Voy a explicarlo y veréis que es súper sencillo.
 </p>
 </div>
 
-<div id="outline-container-orgae77d85" class="outline-3">
-<h3 id="orgae77d85">Filtrar los estados <b>TODO</b></h3>
-<div class="outline-text-3" id="text-orgae77d85">
+<div id="outline-container-org4db91d8" class="outline-3">
+<h3 id="org4db91d8">Filtrar los estados <b>TODO</b></h3>
+<div class="outline-text-3" id="text-org4db91d8">
 <p>
 Para mostrar todas las líneas que tengan estado TODO, vamos a utilizar el comando <b>grep</b>. Yo en mi caso, una vez se visualice las líneas en Telegram, no quiero que aparezca ni el asterisco, ni la palabra <b>TODO</b>, así que utilizaré el comando <b>sed</b> para sustituir el texto: <code>*</code>, por <code>-</code>
 </p>
@@ -317,9 +311,9 @@ Como es posible que no me fije en la fecha del chat, para comprobar a que día p
 </div>
 </div>
 
-<div id="outline-container-org807ea2e" class="outline-3">
-<h3 id="org807ea2e">Enviando la notificación</h3>
-<div class="outline-text-3" id="text-org807ea2e">
+<div id="outline-container-orgc605aba" class="outline-3">
+<h3 id="orgc605aba">Enviando la notificación</h3>
+<div class="outline-text-3" id="text-orgc605aba">
 <p>
 Ya lo tenemos todo. Así que vamos con la línea de terminal. Recordar que tenemos que añadir a esta línea el &lt;TOKEN&gt; y nuestro &lt;ID&gt;:
 </p>
@@ -334,9 +328,9 @@ Esta línea podemos programarla mediante <b>cron</b> a un día y hora determinad
 </div>
 </div>
 
-<div id="outline-container-org9c60cd7" class="outline-3">
-<h3 id="org9c60cd7">Conclusión</h3>
-<div class="outline-text-3" id="text-org9c60cd7">
+<div id="outline-container-org492a695" class="outline-3">
+<h3 id="org492a695">Conclusión</h3>
+<div class="outline-text-3" id="text-org492a695">
 <p>
 Este es un pequeño ejemplo de todas las posibilidades que tenemos combinando la terminal, con servicios como Telegram que nos permite utilizar su api para recibir notificaciones. 
 </p>
