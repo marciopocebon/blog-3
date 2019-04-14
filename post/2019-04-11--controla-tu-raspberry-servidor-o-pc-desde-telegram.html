@@ -189,22 +189,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date())
 gtag('config', 'UA-131560140-1');
 </script>
-<link rel=canonical href=https://ugeek.github.io />
 <meta property=og:type content=website />
 <meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
 <meta name=author content=Angel. uGeek />
 <meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
 <meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
 <meta property=og:image:width content=640 />
 <meta property=og:image:height content=366 />
 <meta name=twitter:site content=@ugeekpodcast />
 <meta name=twitter:card content=summary_large_image />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
@@ -212,6 +205,13 @@ gtag('config', 'UA-131560140-1');
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<meta name="description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+<link rel="canonical" href="https://ugeek.github.io/blog/post/2019-04-11--controla-tu-raspberry-servidor-o-pc-desde-telegram.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" Controla tu Raspberry, Servidor o PC desde Telegram" />
+<meta property="og:description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-11--controla-tu-raspberry-servidor-o-pc-desde-telegram.html" />
 <meta name="twitter:title" content=" Controla tu Raspberry, Servidor o PC desde Telegram" />
 <meta name="twitter:description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg" />
@@ -271,9 +271,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org2de22eb" class="outline-2">
-<h2 id="org2de22eb">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
-<div class="outline-text-2" id="text-org2de22eb">
+<div id="outline-container-orgf9f94f5" class="outline-2">
+<h2 id="orgf9f94f5">Controla tu Raspberry, Servidor o PC desde Telegram</h2>
+<div class="outline-text-2" id="text-orgf9f94f5">
 <p>
 Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.
 </p>
@@ -299,9 +299,9 @@ BaTBot en la versión 1.4.3.4 lo encontrarás en mi <a href="https://github.com/
 </p>
 </div>
 
-<div id="outline-container-org593f1ab" class="outline-3">
-<h3 id="org593f1ab">Instalación</h3>
-<div class="outline-text-3" id="text-org593f1ab">
+<div id="outline-container-org6f6a944" class="outline-3">
+<h3 id="org6f6a944">Instalación</h3>
+<div class="outline-text-3" id="text-org6f6a944">
 <p>
 Lo primero que vamos ha hacer es descargar BaTbot y clonar el repositorio, por ejemplo, en la carpeta de usuario de nuestra distro:
 </p>
@@ -316,9 +316,9 @@ Dentro de la carpeta <b>bin</b>, encontraremos el script del bot llamado <b>batb
 </div>
 </div>
 
-<div id="outline-container-org6554e02" class="outline-3">
-<h3 id="org6554e02">Configurando BaTbot</h3>
-<div class="outline-text-3" id="text-org6554e02">
+<div id="outline-container-orgdb46ac6" class="outline-3">
+<h3 id="orgdb46ac6">Configurando BaTbot</h3>
+<div class="outline-text-3" id="text-orgdb46ac6">
 <p>
 Vamos a editar el archivo <b>batbot</b> y añadir las variables necesarias:
 </p>
@@ -370,9 +370,9 @@ CHECKNEWMSG=5
 </pre>
 </div>
 </div>
-<div id="outline-container-org23570a4" class="outline-3">
-<h3 id="org23570a4">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
-<div class="outline-text-3" id="text-org23570a4">
+<div id="outline-container-org85d1023" class="outline-3">
+<h3 id="org85d1023">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h3>
+<div class="outline-text-3" id="text-org85d1023">
 <p>
 Ahora vamos a añadir nuestro ID de usuario, al listado de usuarios que tienen permisos para utilizar el Bot. Para ello, accederemos al archivo <b>allowed_users</b> :
 </p>
@@ -388,9 +388,9 @@ Recuerda que si no ponemos nuestro ID en esta lista, no podremos interactuar con
 </p>
 </div>
 </div>
-<div id="outline-container-org0fbf7b6" class="outline-3">
-<h3 id="org0fbf7b6">Ejecutar el Bot</h3>
-<div class="outline-text-3" id="text-org0fbf7b6">
+<div id="outline-container-orgce5cf08" class="outline-3">
+<h3 id="orgce5cf08">Ejecutar el Bot</h3>
+<div class="outline-text-3" id="text-orgce5cf08">
 <p>
 Ahora volveremos a la carpeta <b>bin</b> y ejecutaremos <b>./batbot</b>
 </p>
@@ -408,9 +408,9 @@ En la terminal podremos ver todos los mensajes que recibe el Bot en tiempo real 
 </div>
 </div>
 
-<div id="outline-container-orga6aa309" class="outline-3">
-<h3 id="orga6aa309">Configurar un menú y añadir comandos</h3>
-<div class="outline-text-3" id="text-orga6aa309">
+<div id="outline-container-org92e8287" class="outline-3">
+<h3 id="org92e8287">Configurar un menú y añadir comandos</h3>
+<div class="outline-text-3" id="text-org92e8287">
 <p>
 Esta parte del script, es donde podremos añadir comandos para que los ejecute nuestro Bot. 
 </p>
@@ -469,9 +469,9 @@ Si envías el comando <b>/run</b>, sería lo mismo que si estuvieras escribiendo
 </div>
 </div>
 
-<div id="outline-container-org1d579c0" class="outline-3">
-<h3 id="org1d579c0">Comandos simples</h3>
-<div class="outline-text-3" id="text-org1d579c0">
+<div id="outline-container-orgd74d908" class="outline-3">
+<h3 id="orgd74d908">Comandos simples</h3>
+<div class="outline-text-3" id="text-orgd74d908">
 <p>
 Podemos ejecutar comandos simples como por ejemplo:
 </p>
@@ -503,9 +503,9 @@ Podemos ejecutar comandos simples como por ejemplo:
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc23bd73" class="outline-3">
-<h3 id="orgc23bd73">Variables:</h3>
-<div class="outline-text-3" id="text-orgc23bd73">
+<div id="outline-container-org205ae2d" class="outline-3">
+<h3 id="org205ae2d">Variables:</h3>
+<div class="outline-text-3" id="text-org205ae2d">
 <p>
 Puedes usar variables! por ejemplo:
 </p>
@@ -515,9 +515,9 @@ Puedes usar variables! por ejemplo:
 </div>
 </div>
 
-<div id="outline-container-org4ae1774" class="outline-3">
-<h3 id="org4ae1774">Lista de Varibales</h3>
-<div class="outline-text-3" id="text-org4ae1774">
+<div id="outline-container-orgb777c33" class="outline-3">
+<h3 id="orgb777c33">Lista de Varibales</h3>
+<div class="outline-text-3" id="text-orgb777c33">
 <ul class="org-ul">
 <li>@USERID 	  (int) ID del usuario que envió el comando activado</li>
 <li>@USERNAME 	(string) Nombre de usuario de usuario en Telegram</li>
@@ -540,9 +540,9 @@ Regex group extract
 </div>
 </div>
 
-<div id="outline-container-orgf24e65b" class="outline-3">
-<h3 id="orgf24e65b">Comando con expresiones regulares</h3>
-<div class="outline-text-3" id="text-orgf24e65b">
+<div id="outline-container-org5cd2fc4" class="outline-3">
+<h3 id="org5cd2fc4">Comando con expresiones regulares</h3>
+<div class="outline-text-3" id="text-org5cd2fc4">
 <p>
 También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234". Todos los argumentos pueden ser expresiones regulares, por ejemplo:
 </p>
@@ -558,9 +558,9 @@ También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234".
 </div>
 </div>
 
-<div id="outline-container-orga96e34f" class="outline-3">
-<h3 id="orga96e34f">Enviar mensaje</h3>
-<div class="outline-text-3" id="text-orga96e34f">
+<div id="outline-container-org9661937" class="outline-3">
+<h3 id="org9661937">Enviar mensaje</h3>
+<div class="outline-text-3" id="text-org9661937">
 <p>
 Cuando BaTbot se está ejecutando, puedes enviar un mensaje utilizando el ID del usuario, usando el comando <b>.msg</b> directamente en la consola. 
 </p>
@@ -577,9 +577,9 @@ Por ejemplo:
 </div>
 </div>
 
-<div id="outline-container-orgab890cf" class="outline-3">
-<h3 id="orgab890cf">Conclusiones</h3>
-<div class="outline-text-3" id="text-orgab890cf">
+<div id="outline-container-org3515c16" class="outline-3">
+<h3 id="org3515c16">Conclusiones</h3>
+<div class="outline-text-3" id="text-org3515c16">
 <p>
 Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc&#x2026; La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente. 
 </p>
