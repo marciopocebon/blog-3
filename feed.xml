@@ -1556,9 +1556,9 @@ Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos mu
     <category>emacs</category>
     <category>sincronización</category>
     <category>kdeconnect</category>
-    <media:thumbnail url=""/>
+    <media:thumbnail url="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg"/>
     <description>
-&lt;img src= alt=Kde Connect en Emacs&gt;
+&lt;img src=https://ugeek.github.io/blog/images-blog/tocar_movil.jpg alt=Kde Connect en Emacs&gt;
 
 Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla... 
 
