@@ -189,22 +189,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date())
 gtag('config', 'UA-131560140-1');
 </script>
-<link rel=canonical href=https://ugeek.github.io />
 <meta property=og:type content=website />
 <meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
 <meta name=author content=Angel. uGeek />
 <meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
 <meta name=twitter:site content=@ugeekpodcast />
 <meta name=twitter:card content=summary_large_image />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
 <link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
 <link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
@@ -212,6 +202,17 @@ gtag('config', 'UA-131560140-1');
 <link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<meta property="og:image" content="" />
+<meta name="description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+<link rel="canonical" href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Calculando con mi terminal" />
+<meta property="og:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html" />
+<meta name="twitter:title" content="Calculando con mi terminal" />
+<meta name="twitter:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+<meta name="twitter:image" content="" />
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -268,9 +269,9 @@ for the JavaScript code in this tag.
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgf8f649e" class="outline-2">
-<h2 id="orgf8f649e">Calculando con mi terminal</h2>
-<div class="outline-text-2" id="text-orgf8f649e">
+<div id="outline-container-orgdf2bc03" class="outline-2">
+<h2 id="orgdf2bc03">Calculando con mi terminal</h2>
+<div class="outline-text-2" id="text-orgdf2bc03">
 <p>
 Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <b>expr</b> (evalúa los argumentos como una expresión) y <b>calc</b> (Calculadora de precisión arbitraria).
 </p>
@@ -300,9 +301,9 @@ Con <b>expr</b> vamos a ejecutar operaciones aritméticas o de comparación. Vam
 </p>
 </div>
 
-<div id="outline-container-org60d3a05" class="outline-3">
-<h3 id="org60d3a05">Suma</h3>
-<div class="outline-text-3" id="text-org60d3a05">
+<div id="outline-container-org66130d4" class="outline-3">
+<h3 id="org66130d4">Suma</h3>
+<div class="outline-text-3" id="text-org66130d4">
 <p>
 Hay que dejar un espacio en blanco entre los números y símbolo de <b>+</b>.
 </p>
@@ -321,18 +322,18 @@ Suma con números negativos:
 </div>
 </div>
 
-<div id="outline-container-orgc7a8e7d" class="outline-3">
-<h3 id="orgc7a8e7d">Resta</h3>
-<div class="outline-text-3" id="text-orgc7a8e7d">
+<div id="outline-container-org65887e9" class="outline-3">
+<h3 id="org65887e9">Resta</h3>
+<div class="outline-text-3" id="text-org65887e9">
 <p>
 <code>expr 8 - 4</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3bedb5a" class="outline-3">
-<h3 id="org3bedb5a">Multiplicación</h3>
-<div class="outline-text-3" id="text-org3bedb5a">
+<div id="outline-container-org9a6f641" class="outline-3">
+<h3 id="org9a6f641">Multiplicación</h3>
+<div class="outline-text-3" id="text-org9a6f641">
 <p>
 Lleva la contrabarra <b>\</b> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:
 </p>
@@ -343,27 +344,27 @@ Lleva la contrabarra <b>\</b> para escapar del asterísco. Es la única excepci�
 </div>
 </div>
 
-<div id="outline-container-orgc57949e" class="outline-3">
-<h3 id="orgc57949e">División</h3>
-<div class="outline-text-3" id="text-orgc57949e">
+<div id="outline-container-orgeec7931" class="outline-3">
+<h3 id="orgeec7931">División</h3>
+<div class="outline-text-3" id="text-orgeec7931">
 <p>
 <code>expr 8 / 4</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4936cb9" class="outline-3">
-<h3 id="org4936cb9">Porcentaje</h3>
-<div class="outline-text-3" id="text-org4936cb9">
+<div id="outline-container-org49ca804" class="outline-3">
+<h3 id="org49ca804">Porcentaje</h3>
+<div class="outline-text-3" id="text-org49ca804">
 <p>
 <code>expr 10 % 100</code>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfc332d6" class="outline-3">
-<h3 id="orgfc332d6">Comparaciones</h3>
-<div class="outline-text-3" id="text-orgfc332d6">
+<div id="outline-container-org62d581a" class="outline-3">
+<h3 id="org62d581a">Comparaciones</h3>
+<div class="outline-text-3" id="text-org62d581a">
 <p>
 Otra cosa que nos permite <b>expr</b> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <b>1</b>, si es falsa <b>0</b>.
 Aquí también hay símbolos que llevan la contrabarra <b>\</b> para escapar.
@@ -379,9 +380,9 @@ expr 10 \&gt;= 7   # Mayor o igual
 </div>
 </div>
 
-<div id="outline-container-orgce5bb65" class="outline-3">
-<h3 id="orgce5bb65">Contando el número de letras</h3>
-<div class="outline-text-3" id="text-orgce5bb65">
+<div id="outline-container-org81886e4" class="outline-3">
+<h3 id="org81886e4">Contando el número de letras</h3>
+<div class="outline-text-3" id="text-org81886e4">
 <p>
 También podemos contar el número de letras que hay en una frase:
 </p>
@@ -400,9 +401,9 @@ O en un archivo de texto plano:
 </div>
 </div>
 
-<div id="outline-container-orgea73b03" class="outline-3">
-<h3 id="orgea73b03">Manual</h3>
-<div class="outline-text-3" id="text-orgea73b03">
+<div id="outline-container-org8624f3d" class="outline-3">
+<h3 id="org8624f3d">Manual</h3>
+<div class="outline-text-3" id="text-org8624f3d">
 <p>
 Hay muchas mas opciones. Lee en manual para conocerlas:
 </p>
@@ -413,9 +414,9 @@ Hay muchas mas opciones. Lee en manual para conocerlas:
 </div>
 </div>
 
-<div id="outline-container-org6760d6e" class="outline-3">
-<h3 id="org6760d6e">Instalación de Calc</h3>
-<div class="outline-text-3" id="text-org6760d6e">
+<div id="outline-container-orged68222" class="outline-3">
+<h3 id="orged68222">Instalación de Calc</h3>
+<div class="outline-text-3" id="text-orged68222">
 <p>
 Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:
 </p>
@@ -425,9 +426,9 @@ Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:
 </p>
 </div>
 </div>
-<div id="outline-container-org5708d12" class="outline-3">
-<h3 id="org5708d12">Suma</h3>
-<div class="outline-text-3" id="text-org5708d12">
+<div id="outline-container-orgd7704d4" class="outline-3">
+<h3 id="orgd7704d4">Suma</h3>
+<div class="outline-text-3" id="text-orgd7704d4">
 <p>
 Suma con decimales:
 </p>
@@ -444,9 +445,9 @@ calc '(-30 + 47)'
 </pre>
 </div>
 </div>
-<div id="outline-container-org67c99b0" class="outline-3">
-<h3 id="org67c99b0">Dos números negativos</h3>
-<div class="outline-text-3" id="text-org67c99b0">
+<div id="outline-container-orge5c53e5" class="outline-3">
+<h3 id="orge5c53e5">Dos números negativos</h3>
+<div class="outline-text-3" id="text-orge5c53e5">
 <pre class="example">
 calc '(-30 - 47)'
 	-77
@@ -454,9 +455,9 @@ calc '(-30 - 47)'
 </div>
 </div>
 
-<div id="outline-container-org4245ba2" class="outline-3">
-<h3 id="org4245ba2">Multiplicación</h3>
-<div class="outline-text-3" id="text-org4245ba2">
+<div id="outline-container-org091fbc7" class="outline-3">
+<h3 id="org091fbc7">Multiplicación</h3>
+<div class="outline-text-3" id="text-org091fbc7">
 <p>
 En el caso de la multiplicación, <b>calc</b> no necesita <b>\</b> de escape:
 </p>
@@ -475,9 +476,9 @@ calc 30\*2
 </div>
 </div>
 
-<div id="outline-container-orgce0782b" class="outline-3">
-<h3 id="orgce0782b">División</h3>
-<div class="outline-text-3" id="text-orgce0782b">
+<div id="outline-container-orgefb0f97" class="outline-3">
+<h3 id="orgefb0f97">División</h3>
+<div class="outline-text-3" id="text-orgefb0f97">
 <pre class="example">
 calc 200/10
 	20
@@ -485,9 +486,9 @@ calc 200/10
 </div>
 </div>
 
-<div id="outline-container-orgf5eeca5" class="outline-3">
-<h3 id="orgf5eeca5">Porcentaje</h3>
-<div class="outline-text-3" id="text-orgf5eeca5">
+<div id="outline-container-orga61c8d8" class="outline-3">
+<h3 id="orga61c8d8">Porcentaje</h3>
+<div class="outline-text-3" id="text-orga61c8d8">
 <pre class="example">
 calc 10%100
 	10
@@ -495,9 +496,9 @@ calc 10%100
 </div>
 </div>
 
-<div id="outline-container-org6390da2" class="outline-3">
-<h3 id="org6390da2">Manual</h3>
-<div class="outline-text-3" id="text-org6390da2">
+<div id="outline-container-orgf8c7079" class="outline-3">
+<h3 id="orgf8c7079">Manual</h3>
+<div class="outline-text-3" id="text-orgf8c7079">
 <p>
 Hay muchas mas en manual:
 </p>
@@ -508,9 +509,9 @@ Hay muchas mas en manual:
 </div>
 </div>
 
-<div id="outline-container-org63e8f56" class="outline-3">
-<h3 id="org63e8f56">Conclusión</h3>
-<div class="outline-text-3" id="text-org63e8f56">
+<div id="outline-container-org4608e6d" class="outline-3">
+<h3 id="org4608e6d">Conclusión</h3>
+<div class="outline-text-3" id="text-org4608e6d">
 <p>
 Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,&#x2026; y muchas más cosas
 Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.
@@ -525,6 +526,8 @@ También te puede interesar:
 </p>
 
 <ul class="org-ul">
+<li><a href="https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
@@ -533,8 +536,6 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
 </div>
