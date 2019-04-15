@@ -49,7 +49,7 @@ INDEX=$(echo "Bienvenido al Blog del Podcast de *uGeek*. Aquí encontraras tutor
 
 
 HEAD_PAGE=$(echo '
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+<link href="'http://fonts.googleapis.com/css?family=Lato'" rel="'stylesheet'" type="'text/css'"/>
 
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
 
@@ -69,7 +69,7 @@ HEAD_PAGE=$(echo '
 
 
 HEAD_PAGE_POST=$(echo '
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
 
 <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
 
