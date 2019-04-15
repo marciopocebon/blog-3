@@ -24,7 +24,6 @@
 
 BROWSER="firefox"
 
-
 # <meta property="og:site_name" content="uGeek. Blog de Tecnología"/>
 #<link rel="shortlink' href='https://ugeek.github.io/" />
 #<link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
@@ -38,11 +37,10 @@ BROWSER="firefox"
 #<link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 ################################################################################
 # GOOGLE ANALITYCS & META TAG
-GOOGLE_ANALITYCS=$(echo '
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" />    
-')
+GOOGLE_ANALITYCS=$(echo  '
+#+HTML_HEAD: <meta name="twitter:site" content="@ugeekpodcast" />
+#+HTML_HEAD: <meta name="twitter:card" content="summary_large_image" />
+#+HTML_HEAD: <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> ')
 
 
 ################################################################################
@@ -104,7 +102,7 @@ PIE_WEB=$(echo '<p style="text-align: center;"><a href="http://creativecommons.o
 ################################################################################
 # RSS
 LOGO_FEED="https://ugeek.github.io/ugeek.png"
-
+IMAGE="https://ugeek.github.io/icon/ugeek.png"
     
 ################################################################################
 if [ $1 = "-h" ]
@@ -183,7 +181,7 @@ LAST_LINE=$(($TWO_LINE - 1))
 
 CATEGORY=$(cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' | grep ":CATEGORY:"  | cut -d " " -f2)
 cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' >> org/$CATEGORY.org
-#echo "$GOOGLE_ANALITYCS" > temp_post.org
+echo "$GOOGLE_ANALITYCS" > temp_post.org
 #sed -n "5,20 p" $1 >> temp_post.org
 cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' > temp_post.org
 
@@ -248,36 +246,29 @@ cat temp_post.org >> $FILE.org
 
 
 
-echo '#+HTML_HEAD: <meta name="description" content="'$FILE_DESCRIPTION'" />' >> $FILE.org
-#echo '#+HTML_HEAD: <link rel="canonical" href="'$LINK'/post/'$FILE'.html" />'  >> $FILE.org
-
-echo '#+HTML_HEAD: <meta property="og:type" content="article" /> '  >> $FILE.org
-echo '#+HTML_HEAD: <meta property="og:title" content="'$FILE_TITLE'" />'  >> $FILE.org
-echo '#+HTML_HEAD: <meta property="og:description" content="'$FILE_DESCRIPTION'" />' >> $FILE.org
-echo '#+HTML_HEAD: <meta property="og:image" content="'$FILE_IMAGE'" />' >> $FILE.org
-echo '#+HTML_HEAD: <meta property="og:url" content="'$LINK'/post/'$FILE'.html" />'  >> $FILE.org
-
-
-echo '#+HTML_HEAD: <meta name="twitter:title" content="'$FILE_TITLE'" />'  >> $FILE.org
-echo '#+HTML_HEAD: <meta name="twitter:description" content="'$FILE_DESCRIPTION'" />' >> $FILE.org
-echo '#+HTML_HEAD: <meta name="twitter:image" content="'$FILE_IMAGE'" />' >> $FILE.org
-
-
-
-
-
-
-
-
-
-
 echo '<head>
 <title>'$FILE_TITLE'. '$TITLE'</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-'$GOOGLE_ANALITYCS'
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<meta name="author" content="'$AUTHOR'">
+<meta name="description" content="'$FILE_DESCRIPTION'" />
+
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="'$FILE_TITLE'" />
+<meta property="og:description" content="'$FILE_DESCRIPTION'" />
+<meta property="og:image" content="'$FILE_IMAGE'" />
+<meta property="og:url" content="'$LINK'/post/'$FILE'.html" />
+
+<meta name="twitter:title" content="'$FILE_TITLE'" />
+<meta name="twitter:description" content="'$FILE_DESCRIPTION'" />
+<meta name="twitter:image" content="'$FILE_IMAGE'" />
+
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -482,7 +473,7 @@ echo "  </channel>
 echo "Generando Página Home"
 cat posts.csv | head -n5 > posts_home.csv
 #sed -n "1,20 p" $1 > index.org
-#echo "$GOOGLE_ANALITYCS" >> index.org
+echo "$GOOGLE_ANALITYCS" >> index.org
 echo " " >> index.org
 echo "$INDEX" >> index.org
 echo " " >> index.org
@@ -513,7 +504,22 @@ echo '<head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-'$GOOGLE_ANALITYCS'
+
+
+<meta name="author" content="'$AUTHOR'">
+<meta name="description" content="'$DESCRIPTION'" />
+ 
+<meta property="og:title" content="'$TITLE'" />
+<meta property="og:description" content="'$DESCRIPTION'" />
+<meta property="og:image" content="'$IMAGE'" />
+<meta property="og:url" content="'$LINK'index.html" />
+
+<meta name="twitter:title" content="'$TITLE'" />
+<meta name="twitter:description" content="'$DESCRIPTION'" />
+<meta name="twitter:image" content="'$IMAGE'" />
+
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -545,7 +551,7 @@ echo "Generando Lista de Artículos"
 #sed -n "4,20 p" $1 >> list.org
 
 
-#echo "$GOOGLE_ANALITYCS" > list.org
+echo "$GOOGLE_ANALITYCS" > list.org
 echo "* $NUM_POSTS Artículos Publicados" >> list.org
 #echo " " >> list.org
 while read LINEA; do 
@@ -573,7 +579,20 @@ echo '<head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-'$GOOGLE_ANALITYCS'
+
+<meta name="author" content="'$AUTHOR'">
+<meta name="description" content="'$DESCRIPTION'" />
+ 
+<meta property="og:title" content="'$TITLE'" />
+<meta property="og:description" content="'$DESCRIPTION'" />
+<meta property="og:image" content="'$IMAGE'" />
+<meta property="og:url" content="'$LINK'index.html" />
+
+<meta name="twitter:title" content="'$TITLE'" />
+<meta name="twitter:description" content="'$DESCRIPTION'" />
+<meta name="twitter:image" content="'$IMAGE'" />
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -602,7 +621,7 @@ echo "Generando Clasificación por Tags"
 #echo "#+LINK: $LINK/tag.html" >> tag.org
 #echo "#+DESCRIPTION: Etiquetas de $TITLE" >> tag.org
 #sed -n "4,20 p" $1 >> tag.org
-#echo "$GOOGLE_ANALITYCS" > tag.org
+echo "$GOOGLE_ANALITYCS" > tag.org
 echo "* Etiquetas" >> tag.org
 echo " " >> tag.org
 
@@ -642,7 +661,20 @@ echo '<head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-'$GOOGLE_ANALITYCS'
+
+
+<meta name="author" content="'$AUTHOR'">
+<meta name="description" content="'$DESCRIPTION'" />
+ 
+<meta property="og:title" content="'$TITLE'" />
+<meta property="og:description" content="'$DESCRIPTION'" />
+<meta property="og:image" content="'$IMAGE'" />
+<meta property="og:url" content="'$LINK'index.html" />
+
+<meta name="twitter:title" content="'$TITLE'" />
+<meta name="twitter:description" content="'$DESCRIPTION'" />
+<meta name="twitter:image" content="'$IMAGE'" />
+
 </head>
 
 <br><br><br><br><br><br><br><br><br><br>
