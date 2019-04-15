@@ -610,7 +610,7 @@
     <title>No todo es echo. También existe printf</title>
     <link>https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="No todo es echo. También existe printf"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="No todo es echo. También existe printf"&gt;
 &lt;br&gt;&lt;p&gt;Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html&gt;No todo es echo. También existe printf&lt;/a&gt;
 
@@ -643,7 +643,7 @@
     <title>2 Archivos de configuración, un Emacs</title>
     <link>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="2 Archivos de configuración, un Emacs"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="2 Archivos de configuración, un Emacs"&gt;
 &lt;br&gt;&lt;p&gt;Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html&gt;2 Archivos de configuración, un Emacs&lt;/a&gt;
 
@@ -742,7 +742,7 @@
     <title>Instalar Docker en Raspberry Pi con Raspbian</title>
     <link>https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Instalar Docker en Raspberry Pi con Raspbian"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Instalar Docker en Raspberry Pi con Raspbian"&gt;
 &lt;br&gt;&lt;p&gt;En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html&gt;Instalar Docker en Raspberry Pi con Raspbian&lt;/a&gt;
 
@@ -775,7 +775,7 @@
     <title>OrgMode: Buscar solo en las Cabeceras</title>
     <link>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="OrgMode: Buscar solo en las Cabeceras"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="OrgMode: Buscar solo en las Cabeceras"&gt;
 &lt;br&gt;&lt;p&gt;Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
 
@@ -808,7 +808,7 @@
     <title>Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</title>
     <link>https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi"&gt;
 &lt;br&gt;&lt;p&gt;En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html&gt;Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi&lt;/a&gt;
 
@@ -841,7 +841,7 @@
     <title>Crear Alias</title>
     <link>https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear Alias"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear Alias"&gt;
 &lt;br&gt;&lt;p&gt;Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html&gt;Crear Alias&lt;/a&gt;
 
@@ -874,7 +874,7 @@
     <title>Que aparezca en el Prompt en que rama estamos</title>
     <link>https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Que aparezca en el Prompt en que rama estamos"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Que aparezca en el Prompt en que rama estamos"&gt;
 &lt;br&gt;&lt;p&gt;Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html&gt;Que aparezca en el Prompt en que rama estamos&lt;/a&gt;
 
@@ -907,7 +907,7 @@
     <title>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</title>
     <link>https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública"&gt;
 &lt;br&gt;&lt;p&gt;Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html&gt;Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública&lt;/a&gt;
 
@@ -940,7 +940,7 @@
     <title>Navegar por el Historial de comandos en Bash</title>
     <link>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Navegar por el Historial de comandos en Bash"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegar por el Historial de comandos en Bash"&gt;
 &lt;br&gt;&lt;p&gt;Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html&gt;Navegar por el Historial de comandos en Bash&lt;/a&gt;
 
@@ -973,7 +973,7 @@
     <title>Crear ramas con Git</title>
     <link>https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear ramas con Git"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear ramas con Git"&gt;
 &lt;br&gt;&lt;p&gt;Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html&gt;Crear ramas con Git&lt;/a&gt;
 
@@ -1006,7 +1006,7 @@
     <title>Lee Super rápido en Emacs con Spray</title>
     <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Lee Super rápido en Emacs con Spray"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Lee Super rápido en Emacs con Spray"&gt;
 &lt;br&gt;&lt;p&gt;No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
 
@@ -1072,7 +1072,7 @@
     <title>Paquetes Snap</title>
     <link>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Paquetes Snap"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Paquetes Snap"&gt;
 &lt;br&gt;&lt;p&gt;Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html&gt;Paquetes Snap&lt;/a&gt;
 
@@ -1105,7 +1105,7 @@
     <title>Utilizando Git con la Terminal. GitHub</title>
     <link>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Utilizando Git con la Terminal. GitHub"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Utilizando Git con la Terminal. GitHub"&gt;
 &lt;br&gt;&lt;p&gt;Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html&gt;Utilizando Git con la Terminal. GitHub&lt;/a&gt;
 
@@ -1138,7 +1138,7 @@
     <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
     <link>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear el Feed para el podcast en tu Blog con Jekyll"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear el Feed para el podcast en tu Blog con Jekyll"&gt;
 &lt;br&gt;&lt;p&gt;Voy a explicar en este post, como generar el Feed del podcast de forma automática.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html&gt;Crear el Feed para el podcast en tu Blog con Jekyll&lt;/a&gt;
 
@@ -1171,7 +1171,7 @@
     <title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
     <link>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Antergos. Comandos para terminal y derivadas de Arch Linux"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Antergos. Comandos para terminal y derivadas de Arch Linux"&gt;
 &lt;br&gt;&lt;p&gt;Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Antergos. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
 
@@ -1204,7 +1204,7 @@
     <title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
     <link>https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Servidor de Mensajería Matrix para Raspberry. Cliente Riot"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Servidor de Mensajería Matrix para Raspberry. Cliente Riot"&gt;
 &lt;br&gt;&lt;p&gt;Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html&gt;Servidor de Mensajería Matrix para Raspberry. Cliente Riot&lt;/a&gt;
 
@@ -1237,7 +1237,7 @@
     <title>GPG. Cifrado de archivos simétrico</title>
     <link>https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="GPG. Cifrado de archivos simétrico"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="GPG. Cifrado de archivos simétrico"&gt;
 &lt;br&gt;&lt;p&gt;En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html&gt;GPG. Cifrado de archivos simétrico&lt;/a&gt;
 
@@ -1270,7 +1270,7 @@
     <title>Ignorar archivos que no queremos que suban a Git</title>
     <link>https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Ignorar archivos que no queremos que suban a Git"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Ignorar archivos que no queremos que suban a Git"&gt;
 &lt;br&gt;&lt;p&gt;Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html&gt;Ignorar archivos que no queremos que suban a Git&lt;/a&gt;
 
@@ -1303,7 +1303,7 @@
     <title>Crear un Blog en GitHub. GitHub Pages</title>
     <link>https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear un Blog en GitHub. GitHub Pages"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear un Blog en GitHub. GitHub Pages"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html&gt;Crear un Blog en GitHub. GitHub Pages&lt;/a&gt;
 
@@ -1336,7 +1336,7 @@
     <title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
     <link>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="NextcloudPi. Nextcloud en Raspbian con Docker"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="NextcloudPi. Nextcloud en Raspbian con Docker"&gt;
 &lt;br&gt;&lt;p&gt;Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html&gt;NextcloudPi. Nextcloud en Raspbian con Docker&lt;/a&gt;
 
@@ -1369,7 +1369,7 @@
     <title>Elimina archivos duplicados con fduples</title>
     <link>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Elimina archivos duplicados con fduples"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Elimina archivos duplicados con fduples"&gt;
 &lt;br&gt;&lt;p&gt;fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html&gt;Elimina archivos duplicados con fduples&lt;/a&gt;
 
@@ -1402,7 +1402,7 @@
     <title>Crear un Blog en GitLab. GitLab Pages</title>
     <link>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear un Blog en GitLab. GitLab Pages"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear un Blog en GitLab. GitLab Pages"&gt;
 &lt;br&gt;&lt;p&gt;Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html&gt;Crear un Blog en GitLab. GitLab Pages&lt;/a&gt;
 
@@ -1435,7 +1435,7 @@
     <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Visualiza tus Notas Markdown Versión Web con MkDocs"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Visualiza tus Notas Markdown Versión Web con MkDocs"&gt;
 &lt;br&gt;&lt;p&gt;Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html&gt;Visualiza tus Notas Markdown Versión Web con MkDocs&lt;/a&gt;
 
@@ -1468,7 +1468,7 @@
     <title>El poder de la terminal y el scripting</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="El poder de la terminal y el scripting"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="El poder de la terminal y el scripting"&gt;
 &lt;br&gt;&lt;p&gt;Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html&gt;El poder de la terminal y el scripting&lt;/a&gt;
 
@@ -1501,7 +1501,7 @@
     <title>Con Emacs también podemos editar Markdown</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Con Emacs también podemos editar Markdown"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Con Emacs también podemos editar Markdown"&gt;
 &lt;br&gt;&lt;p&gt;He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html&gt;Con Emacs también podemos editar Markdown&lt;/a&gt;
 
@@ -1534,7 +1534,7 @@
     <title>Kde Connect en Ubuntu...</title>
     <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Kde Connect en Ubuntu..."&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect en Ubuntu..."&gt;
 &lt;br&gt;&lt;p&gt;He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect en Ubuntu...&lt;/a&gt;
 
@@ -1567,7 +1567,7 @@
     <title>Crear listas m3u para minidlna o vlc</title>
     <link>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Crear listas m3u para minidlna o vlc"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear listas m3u para minidlna o vlc"&gt;
 &lt;br&gt;&lt;p&gt;Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html&gt;Crear listas m3u para minidlna o vlc&lt;/a&gt;
 
@@ -1600,7 +1600,7 @@
     <title>Kde Connect en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Kde Connect en Emacs"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect en Emacs"&gt;
 &lt;br&gt;&lt;p&gt;Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html&gt;Kde Connect en Emacs&lt;/a&gt;
 
@@ -1633,7 +1633,7 @@
     <title>Eliminar comentarios de nuestros script</title>
     <link>https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Eliminar comentarios de nuestros script"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Eliminar comentarios de nuestros script"&gt;
 &lt;br&gt;&lt;p&gt;Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html&gt;Eliminar comentarios de nuestros script&lt;/a&gt;
 
@@ -1666,7 +1666,7 @@
     <title>Redirigir el tráfico de una página web a otra</title>
     <link>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Redirigir el tráfico de una página web a otra"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Redirigir el tráfico de una página web a otra"&gt;
 &lt;br&gt;&lt;p&gt;Hay veces que queremos redirigir el tráfico de una página a otra...... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html&gt;Redirigir el tráfico de una página web a otra&lt;/a&gt;
 
@@ -1699,7 +1699,7 @@
     <title>Descargar todos los episodios de un Podcast con wget</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Descargar todos los episodios de un Podcast con wget"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Descargar todos los episodios de un Podcast con wget"&gt;
 &lt;br&gt;&lt;p&gt;Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html&gt;Descargar todos los episodios de un Podcast con wget&lt;/a&gt;
 
@@ -1732,7 +1732,7 @@
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Convertir de Markdown a Org Mode gracias a Pandoc"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Convertir de Markdown a Org Mode gracias a Pandoc"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html&gt;Convertir de Markdown a Org Mode gracias a Pandoc&lt;/a&gt;
 
@@ -1798,7 +1798,7 @@
     <title>Eliminar líneas en Blanco con sed</title>
     <link>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Eliminar líneas en Blanco con sed"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Eliminar líneas en Blanco con sed"&gt;
 &lt;br&gt;&lt;p&gt;Como podemos eliminar líneas en Blanco... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html&gt;Eliminar líneas en Blanco con sed&lt;/a&gt;
 

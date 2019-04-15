@@ -26,19 +26,11 @@ BROWSER="firefox"
 TWITTER="@ugeekpodcast"
 
 
-
-# <meta property="og:site_name" content="uGeek. Blog de Tecnología"/>
 #<link rel="shortlink' href='https://ugeek.github.io/" />
-#<link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-#<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-#<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-#<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" />
+
 #<meta property="og:type" content="website" />
-#<meta property="og:locale" content="es_ES" />
-#<meta name="author" content="Angel. uGeek" />
-#<div id="logo"><a href="https://ugeek.github.io"><img src="__icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-#<link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-################################################################################
+
+
 
 
 
@@ -254,6 +246,15 @@ echo '<head>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 
+<link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
 <meta name="twitter:site" content="'$TWITTER'" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="'$LINK'/feed/" />
@@ -262,6 +263,8 @@ echo '<head>
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$FILE_DESCRIPTION'" />
 
+
+<meta property="og:site_name" content="'$TITLE'"/>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content="'$FILE_TITLE'" />
 <meta property="og:description" content="'$FILE_DESCRIPTION'" />
@@ -515,10 +518,12 @@ echo '<head>
 <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="'$LINK'/feed/" />
 
 
-
+<meta name="robots" content="index, follow">
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$DESCRIPTION'" />
- 
+
+
+<meta property="og:site_name" content="'$TITLE'"/> 
 <meta property="og:title" content="'$TITLE'" />
 <meta property="og:description" content="'$DESCRIPTION'" />
 <meta property="og:image" content="'$IMAGE'" />
@@ -595,10 +600,12 @@ echo '<head>
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="'$LINK'/feed/" />
 
-
+<meta name="robots" content="index, follow">
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$DESCRIPTION'" />
- 
+
+
+<meta property="og:site_name" content="'$TITLE'"/> 
 <meta property="og:title" content="'$TITLE'" />
 <meta property="og:description" content="'$DESCRIPTION'" />
 <meta property="og:image" content="'$IMAGE'" />
@@ -683,10 +690,12 @@ echo '<head>
 <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="'$LINK'/feed/" />
 
 
-
+<meta name="robots" content="index, follow">
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$DESCRIPTION'" />
  
+
+<meta property="og:site_name" content="'$TITLE'"/>
 <meta property="og:title" content="'$TITLE'" />
 <meta property="og:description" content="'$DESCRIPTION'" />
 <meta property="og:image" content="'$IMAGE'" />

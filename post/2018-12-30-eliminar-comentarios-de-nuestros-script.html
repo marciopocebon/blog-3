@@ -6,6 +6,15 @@
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 
+<link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
 <meta name="twitter:site" content="@ugeekpodcast" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
@@ -14,15 +23,17 @@
 <meta name="author" content="Angel">
 <meta name="description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..." />
 
+
+<meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content=" Eliminar comentarios de nuestros script" />
 <meta property="og:description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/./icon/ugeek-256x256.png" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html" />
 
 <meta name="twitter:title" content=" Eliminar comentarios de nuestros script" />
 <meta name="twitter:description" content="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/./icon/ugeek-256x256.png" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 
@@ -32,7 +43,7 @@
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="eliminar-comentarios-de-nuestros-script-1" title="Eliminar comentarios de nuestros script" data-export_file_name="eliminar-comentarios-de-nuestros-script" data-description="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..." data-export_date="2018-12-30 18:00" data-category="unix" data-tag="bash, grep, sed, unix" data-image="./icon/ugeek-256x256.png">Eliminar comentarios de nuestros script</h1>
+<h1 id="eliminar-comentarios-de-nuestros-script-1" title="Eliminar comentarios de nuestros script" data-export_file_name="eliminar-comentarios-de-nuestros-script" data-description="Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas..." data-export_date="2018-12-30 18:00" data-category="unix" data-tag="bash, grep, sed, unix" data-image="./images-blog/ugeek.png">Eliminar comentarios de nuestros script</h1>
 <p>Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , <strong>bash</strong>, va a ser tan sencillo como hacer uso de nuestro querido <strong>grep</strong>:</p>
 <p><code>cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code></p>
 <p>Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos <strong>sed</strong>::</p>
