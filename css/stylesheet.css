@@ -1,9 +1,12 @@
- /* adaptar la imagen a la anchura de la pantalla */
+
+/* adaptar la imagen a la anchura de la pantalla */
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
- /* Letras centrales de uGeek */
+
+
+/* Letras centrales de uGeek */
 
 #ugeek {
   position: absolute;
@@ -17,7 +20,7 @@ img {
 
 body {
     font-family: "Lato";
-    font-size: 18px; , Lato; }
+    font-size: 19px; , Lato; }
 
 @media all and (min-width: 1000px){
     body {
@@ -57,7 +60,7 @@ body {
 
 #menu {
   position: absolute;
-  font-size: 1.325em;
+  font-size: 1.200em;
   top: 7.525em; }
 
 @media all and (min-width: 1000px){
@@ -113,25 +116,27 @@ body {
 
 
 h1 {
-	color: #6c2eb9;
+	color: #3c1b66;
+        
 	font-weight: normal;
-	font-size: 40px;
+	font-size:   32px;
 	font-family: Arial;
 	text-transform: uppercase;
+	border-bottom-style: solid;
+        border-bottom-color: lightgray;
 }
 h2 {
-	color: #3c1b66;
+	color: #6c2eb9;
 	font-weight: normal;
 	font-size: 30px;
 	font-family: Arial;
-	text-transform: uppercase;
 	border-bottom-style: solid;
         border-bottom-color: lightgray;
 }
 h3 {
 	color: #443963;
 	font-weight: normal;
-	font-size: 30px;
+	font-size: 25px;
 	font-family: Arial;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
@@ -139,7 +144,7 @@ h3 {
 h4 {
 	color: #4f4866;
 	font-weight: normal;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: Arial;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
@@ -147,7 +152,7 @@ h4 {
 h5 {
 	color: #656172;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 18px;
 	font-family: Arial;
 	border-bottom-style: solid;
 	border-bottom-color: lightgray;
@@ -169,7 +174,7 @@ a:hover {
   text-decoration: underline; }
 
 .img-link a {
-  color: white; }
+    color: white; }
 
 blockquote {
   border-left: 1px solid gray;
@@ -187,12 +192,14 @@ blockquote {
 
 code {
     background-color: #f3e8fb;
-    border: 1px solid #a8a9ba;
+    border: 0px solid #a8a9ba;
     color: #000000;
     font-family: monospace;
     /* font-size: 0.93em; */
-    margin: 25px 1px;
+    margin: 25px 0px;
     padding: 0px 2px; }
+
+
 
 
 pre {
@@ -208,9 +215,77 @@ pre {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+table th {
+    font:bold 15px Arial;
+    background-color:#a4a5a5;
+    text-indent: 10px;
+    color : black;
+}
+
+
+
+table {
+    width:70%;
+    font:normal 15px Verdana;
+    text-align:center;
+    border-collapse:collapse;
+}
+
+
+
+/*table.negative td[negative^="-"] {color:red;}
+ td.negative { color : red; } */
+
+
 table, th, td {
     border: 1px solid black;
     margin: auto;
-    
+ }
+
+
+
+
+
+/* Una fila de cada color */
+
+tr:nth-child(odd) {
+   
+    background-color:#f2f2f2;
+	
 }
+	
+tr:nth-child(even) {
+	
+    background-color:#d9dcde;
+	
+}
+
+/* Cambiar de color al  pasar el ratón por las filas */
+
+tr:hover {
+background-color: #abb9b0;
+}
+
+
+
+
+
+
+
+
+
+
 

@@ -1,409 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title>Exportando bonito a html mi OrgMode y creando web estática. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Exportando bonito a html mi OrgMode y creando web estática</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad"
- />
-<meta name="keywords" content="html,github,gitlab" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta name=author content=Angel. uGeek />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta name="description" content="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad " />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Exportando bonito a html mi OrgMode y creando web estática" />
-<meta property="og:description" content="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad " />
-<meta property="og:image" content="" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html" />
-<meta name="twitter:title" content="Exportando bonito a html mi OrgMode y creando web estática" />
-<meta name="twitter:description" content="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad " />
-<meta name="twitter:image" content="" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org74464e2" class="outline-2">
-<h2 id="org74464e2">Exportando bonito a html mi OrgMode y creando web estática</h2>
-<div class="outline-text-2" id="text-org74464e2">
-<p>
-Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de <a href="https://melpa.org/">Melpa</a> desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. 
-</p>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<p>
-Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web.
-</p>
-
-
-<div class="figure">
-<p><img src="../images-blog/ox-twbs.png" alt="ox-twbs.png" />
-</p>
-</div>
-
-
-<p>
-En la configuración, adjunto un ejemplo de como tener tus archivos orgmode en una carpeta y exportar los html a otra. Esto es interesante porque podríamos apuntar a esa carpeta como raíz de un servidor web, por ejemplo siguiendo el post del <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Docker de Nginx</a>, haciendo accesible estas notas en formato web en nuestra red Local o via Internet.
-</p>
-
-<p>
-Otra posibilidad sería publicarlo en las GitHub o GitLab Pages.
-</p>
-</div>
-
-<div id="outline-container-orga76a15d" class="outline-3">
-<h3 id="orga76a15d">Instalación</h3>
-<div class="outline-text-3" id="text-orga76a15d">
-<p>
-<code>M-x package-install [RET] ox-twbs [RET]</code>
-</p>
-
-<p>
-Para exportar el archivo que estamos editando de orgmode a html con este paquete, ejecutaremos el siguiente comando en emacs:
-</p>
-
-<p>
-<code>M-x org-twbs-export-to-html</code>
-</p>
-
-<p>
-El archivo html resultante, estará en la misma carpeta donde está el archivo orgmode.
-</p>
-</div>
-</div>
-<div id="outline-container-org77e8f9a" class="outline-3">
-<h3 id="org77e8f9a">Configuración</h3>
-<div class="outline-text-3" id="text-org77e8f9a">
-<p>
-Vamos a ver como exportar los html a otra carpeta que no sea la misma donde está el archivo orgmode. Copiaremos en nuestro archivo de configuración de emacs <b>init.el</b> o <b>.emacs</b>:
-</p>
-
-<pre class="example">
-(setq org-publish-project-alist
-      '(("org-notes"
-	 :base-directory "~/org/"
-	 :publishing-directory "~/public_html/"
-	 :publishing-function org-twbs-publish-to-html
-	 :with-sub-superscript nil
-	 )))
-</pre>
-
-
-<p>
-En este archivo de configuración, utilizaremos las carpetas <b>~/org/</b> y <b>~/public_html/</b>. Los archivos orgmode los guardaremos en la carpeta  <b>~/org/</b> y cuando ejecutemos el comando dentro de emacs: <code>M-x org-publish-all</code> , será exportado en formato .html a la carpeta <b>~/public_html/</b>.
-</p>
-
-<p>
-Previamente, crearemos las carpetas desde nuestra terminal:
-</p>
-
-<p>
-<code>mkdir -p carpeta ~/org ~/public_html</code>
-</p>
-
-<p>
-Podemos personalizar la carpeta que deseemos, modificando la ruta de las carpetas en el archivo de configuración.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb2d612e" class="outline-3">
-<h3 id="orgb2d612e">Sin tabla de contenido o índice, autor&#x2026;</h3>
-<div class="outline-text-3" id="text-orgb2d612e">
-<p>
-Si no queremos que aparezca tabla de contenido o índice, ni a pie de página el autor, fecha&#x2026;  añadiremos al inicio de nuestro OrgMode:
-</p>
-
-
-<div class="figure">
-<p><img src="../images-blog/ox-twbs2.png" alt="ox-twbs2.png" />
-</p>
-</div>
-
-<pre class="example">
-#+OPTIONS: html-postamble:nil toc:nil
-</pre>
-</div>
-</div>
-<div id="outline-container-orge56d07d" class="outline-3">
-<h3 id="orge56d07d">Cajetilla de código de color</h3>
-<div class="outline-text-3" id="text-orge56d07d">
-<p>
-Si queremos que salga la cajetilla de código de color negro, en el archivo orgmode añadiremos la siguiente línea. Como todo, es personalizable cambiando el color al que tu desees.
-</p>
-<pre class="example">
-#+HTML_HEAD_EXTRA: &lt;style&gt;pre { font-size: 13px; background-color: #000; color: #bbb; }&lt;/style&gt;
-</pre>
-</div>
-</div>
-<div id="outline-container-org7de2a29" class="outline-3">
-<h3 id="org7de2a29">Conclusión</h3>
-<div class="outline-text-3" id="text-org7de2a29">
-<p>
-En el repositorio de GitHub de <a href="https://github.com/marsmining/ox-twbs">ox-twbs</a> encontraras más información de este paquete. Encuentro que es un modo muy sencillo de tomar tus notas y acceder a ellas para consultar.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org25dd841" class="outline-3">
-<h3 id="org25dd841">Fuentes</h3>
-<div class="outline-text-3" id="text-org25dd841">
-<ul class="org-ul">
+<h1 id="exportando-bonito-a-html-mi-orgmode-y-creando-web-estática-1" title="Exportando bonito a html mi OrgMode y creando web estática" data-export_file_name="Exportando bonito a html mi OrgMode y creando web estatica" data-description="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad" data-export_date="2019-04-02 19:00" data-category="emacs" data-tag="html,github,gitlab" data-image="./images-blog/ox-twbs.png">Exportando bonito a html mi OrgMode y creando web estática</h1>
+<p>Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de <a href="https://melpa.org/">Melpa</a> desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad.</p>
+<p>Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web.</p>
+<p><img src="../images-blog/ox-twbs.png" /></p>
+<p>En la configuración, adjunto un ejemplo de como tener tus archivos orgmode en una carpeta y exportar los html a otra. Esto es interesante porque podríamos apuntar a esa carpeta como raíz de un servidor web, por ejemplo siguiendo el post del <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Docker de Nginx</a>, haciendo accesible estas notas en formato web en nuestra red Local o via Internet.</p>
+<p>Otra posibilidad sería publicarlo en las GitHub o GitLab Pages.</p>
+<h2 id="instalación">Instalación</h2>
+<p><code>M-x package-install [RET] ox-twbs [RET]</code></p>
+<p>Para exportar el archivo que estamos editando de orgmode a html con este paquete, ejecutaremos el siguiente comando en emacs:</p>
+<p><code>M-x org-twbs-export-to-html</code></p>
+<p>El archivo html resultante, estará en la misma carpeta donde está el archivo orgmode.</p>
+<h2 id="configuración">Configuración</h2>
+<p>Vamos a ver como exportar los html a otra carpeta que no sea la misma donde está el archivo orgmode. Copiaremos en nuestro archivo de configuración de emacs <strong>init.el</strong> o <strong>.emacs</strong>:</p>
+<pre><code>(setq org-publish-project-alist
+      &#39;((&quot;org-notes&quot;
+         :base-directory &quot;~/org/&quot;
+         :publishing-directory &quot;~/public_html/&quot;
+         :publishing-function org-twbs-publish-to-html
+         :with-sub-superscript nil
+         )))
+</code></pre>
+<p>En este archivo de configuración, utilizaremos las carpetas <strong>~/org/</strong> y <strong>~/public<sub>html</sub>/</strong>. Los archivos orgmode los guardaremos en la carpeta <strong>~/org/</strong> y cuando ejecutemos el comando dentro de emacs: <code>M-x org-publish-all</code> , será exportado en formato .html a la carpeta <strong>~/public<sub>html</sub>/</strong>.</p>
+<p>Previamente, crearemos las carpetas desde nuestra terminal:</p>
+<p><code>mkdir -p carpeta ~/org ~/public_html</code></p>
+<p>Podemos personalizar la carpeta que deseemos, modificando la ruta de las carpetas en el archivo de configuración.</p>
+<h2 id="sin-tabla-de-contenido-o-índice-autor">Sin tabla de contenido o índice, autor…</h2>
+<p>Si no queremos que aparezca tabla de contenido o índice, ni a pie de página el autor, fecha… añadiremos al inicio de nuestro OrgMode:</p>
+<p><img src="../images-blog/ox-twbs2.png" /></p>
+<pre><code>#+OPTIONS: html-postamble:nil toc:nil
+</code></pre>
+<h2 id="cajetilla-de-código-de-color">Cajetilla de código de color</h2>
+<p>Si queremos que salga la cajetilla de código de color negro, en el archivo orgmode añadiremos la siguiente línea. Como todo, es personalizable cambiando el color al que tu desees.</p>
+<pre><code>#+HTML_HEAD_EXTRA: &lt;style&gt;pre { font-size: 13px; background-color: #000; color: #bbb; }&lt;/style&gt;
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>En el repositorio de GitHub de <a href="https://github.com/marsmining/ox-twbs">ox-twbs</a> encontraras más información de este paquete. Encuentro que es un modo muy sencillo de tomar tus notas y acceder a ellas para consultar.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
 <li>Fuente del paquete: <a href="https://github.com/marsmining/ox-twbs">https://github.com/marsmining/ox-twbs</a></li>
 <li><a href="http://clubctrl.com/org/prog/howto.html">http://clubctrl.com/org/prog/howto.html</a></li>
 <li><a href="http://clubctrl.com/org/prog/source.html">http://clubctrl.com/org/prog/source.html</a></li>
 </ul>
 <br>
-<p>
-Publicado por Angel el martes 02 abril del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el martes 02 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales… Todo sobre Emacs y OrgMode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
@@ -412,10 +68,4 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

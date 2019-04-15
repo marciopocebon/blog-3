@@ -1,305 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title> Crear el Feed para el podcast en tu Blog con Jekyll. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Voy a explicar en este post, como generar el Feed del podcast de forma automática."
- />
-<meta name="keywords" content="servidor, jekyll,rss" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<link rel=canonical href=https://ugeek.github.io />
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
-<meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org49aa24f" class="outline-2">
-<h2 id="org49aa24f">Crear el Feed para el podcast en tu Blog con Jekyll</h2>
-<div class="outline-text-2" id="text-org49aa24f">
-<p>
-Voy a explicar en este post, como generar el Feed del podcast de forma automática.
-</p>
-</div>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<div id="outline-container-orge42725f" class="outline-3">
-<h3 id="orge42725f">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-orge42725f">
-<pre class="example">
----
+<h1 id="crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll-1" title="Crear el Feed para el podcast en tu Blog con Jekyll" data-export_file_name="Crear el Feed para el podcast en tu Blog con Jekyll" data-description="Voy a explicar en este post, como generar el Feed del podcast de forma automática." data-export_date="2019-01-21 16:16" data-category="jekyll" data-tag="servidor, jekyll,rss" data-image="./icon/ugeek.png">Crear el Feed para el podcast en tu Blog con Jekyll</h1>
+<p>Voy a explicar en este post, como generar el Feed del podcast de forma automática.</p>
+<h2 id="creamos-un-archivo-podcast.xml-en-la-raiz-con-el-siguiente-contenido">Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h2>
+<pre><code>---
 layout: null
 ---
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;rss version="2.0"
-xmlns:content="http://purl.org/rss/1.0/modules/content/"
-xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:atom="http://www.w3.org/2005/Atom"
-xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rss version=&quot;2.0&quot;
+xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot;
+xmlns:wfw=&quot;http://wellformedweb.org/CommentAPI/&quot;
+xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;
+xmlns:sy=&quot;http://purl.org/rss/1.0/modules/syndication/&quot;
+xmlns:slash=&quot;http://purl.org/rss/1.0/modules/slash/&quot;
+xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;
+xmlns:rawvoice=&quot;http://www.rawvoice.com/rawvoiceRssModule/&quot;
 &gt;
 
 &lt;channel&gt;
 &lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
-&lt;atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /&gt;
+&lt;atom:link href=&quot;{{ site.url }}/feed/podcast&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot; /&gt;
 &lt;link&gt;{{ site.url }}&lt;/link&gt;
 &lt;description&gt;{{ site.podcast_description }}&lt;/description&gt;
-&lt;lastBuildDate&gt;{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/lastBuildDate&gt;
+&lt;lastBuildDate&gt;{{ site.time | date: &quot;%a, %d %b %Y %H:%M:%S %z&quot; }}&lt;/lastBuildDate&gt;
 &lt;language&gt;es-es&lt;/language&gt;
 &lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
 &lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt;
@@ -307,7 +41,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 &lt;itunes:summary&gt;{{ site.podcast_summary }}&lt;/itunes:summary&gt;
 &lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
 &lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
-&lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+&lt;itunes:image href=&quot;{{ site.url }}{{ site.podcast_album_art }}&quot; /&gt;
 &lt;itunes:owner&gt;
 &lt;itunes:name&gt;{{ site.podcast_owner }}&lt;/itunes:name&gt;
 &lt;itunes:email&gt;{{ site.podcast_email }}&lt;/itunes:email&gt;
@@ -319,16 +53,16 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 &lt;url&gt;{{ site.url }}{{ site.podcast_album_art }}&lt;/url&gt;
 &lt;link&gt;{{ site.url }}&lt;/link&gt;
 &lt;/image&gt;
-&lt;itunes:category text="{{ site.podcast_category }}"&gt;
-&lt;itunes:category text="{{ site.podcast_subcategory_one }}" /&gt;
-&lt;itunes:category text="{{ site.podcast_subcategory_two }}" /&gt;
+&lt;itunes:category text=&quot;{{ site.podcast_category }}&quot;&gt;
+&lt;itunes:category text=&quot;{{ site.podcast_subcategory_one }}&quot; /&gt;
+&lt;itunes:category text=&quot;{{ site.podcast_subcategory_two }}&quot; /&gt;
 &lt;/itunes:category&gt;
 {% for ep in site.categories.podcast %}
   &lt;item&gt;
     &lt;title&gt;{{ ep.title }}&lt;/title&gt;
     &lt;link&gt;{{ site.url }}{{ ep.url }}&lt;/link&gt;
     &lt;comments&gt;{{ site.url }}{{ ep.url }}#comments&lt;/comments&gt;
-    &lt;pubDate&gt;{{ ep.date | date: "%a, %d %b %Y %T %z" }}&lt;/pubDate&gt;
+    &lt;pubDate&gt;{{ ep.date | date: &quot;%a, %d %b %Y %T %z&quot; }}&lt;/pubDate&gt;
     &lt;dc:creator&gt;&lt;![CDATA[{{ site.author | cdata_escape }}]]&gt;&lt;/dc:creator&gt;
 {% for category in ep.categories %}
     &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
@@ -336,34 +70,28 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 {% for category in ep.tags %}
     &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
 {% endfor %}
-    &lt;guid isPermaLink="{% if ep.podcast_guid %}false{% else %}true{% endif %}"&gt;{{ site.url }}{% if ep.podcast_guid %}/{{ ep.podcast_guid }}{% else %}{{ ep.url }}{% endif %}&lt;/guid&gt;
+    &lt;guid isPermaLink=&quot;{% if ep.podcast_guid %}false{% else %}true{% endif %}&quot;&gt;{{ site.url }}{% if ep.podcast_guid %}/{{ ep.podcast_guid }}{% else %}{{ ep.url }}{% endif %}&lt;/guid&gt;
     &lt;description&gt;
-	&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;
+        &lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;
     &lt;/description&gt;
     &lt;content:encoded&gt;
-	&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;
+        &lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;
     &lt;/content:encoded&gt;
 
-    &lt;enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" /&gt;
+    &lt;enclosure url=&quot;{{ ep.podcast_link }}&quot; length=&quot;{{ ep.podcast_length }}&quot; type=&quot;audio/mpeg&quot; /&gt;
     &lt;itunes:subtitle&gt;&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:subtitle&gt;
     &lt;itunes:summary&gt;&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:summary&gt;
     &lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
-    &lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+    &lt;itunes:image href=&quot;{{ site.url }}{{ site.podcast_album_art }}&quot; /&gt;
     &lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
     &lt;itunes:duration&gt;{{ ep.podcast_duration }}&lt;/itunes:duration&gt;
   &lt;/item&gt;
 {% endfor %}
 &lt;/channel&gt;
 &lt;/rss&gt;
-</pre>
-</div>
-</div>
-
-<div id="outline-container-orgdbc79d3" class="outline-3">
-<h3 id="orgdbc79d3">Añadimos en el archivo _config.yml, el siguiente contenido:</h3>
-<div class="outline-text-3" id="text-orgdbc79d3">
-<pre class="example">
-# Podcast Feed Settings
+</code></pre>
+<h2 id="añadimos-en-el-archivo-config.yml-el-siguiente-contenido">Añadimos en el archivo <sub>config</sub>.yml, el siguiente contenido:</h2>
+<pre><code># Podcast Feed Settings
 podcast_url: https://ugeek.github.io
 podcast_album_art: https://ugeek.github.io/img/ugeek.png
 podcast_title: uGeek
@@ -372,21 +100,16 @@ podcast_email: ugeekpodcast@gmail.com
 podcast_category: Technology
 podcast_subcategory_one: Linux
 podcast_subcategory_two: Gadgets
-podcast_explicit: "no"
+podcast_explicit: &quot;no&quot;
 podcast_author: Angel
 podcast_description: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
 podcast_summary: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
 podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
-</pre>
-</div>
-</div>
-<div id="outline-container-org8fda78f" class="outline-3">
-<h3 id="org8fda78f">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h3>
-<div class="outline-text-3" id="text-org8fda78f">
-<pre class="example">
----
+</code></pre>
+<h2 id="por-último-añadiremos-en-cada-post-que-es-un-podcast-el-link-del-mp3-imagen-tags-etc">Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h2>
+<pre><code>---
 layout: post
-title: "046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"
+title: &quot;046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto&quot;
 date: 2017-04-21
 categories: podcast
 image: img/ugeek.png
@@ -394,24 +117,12 @@ podcast_link: https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/
 tags: [syncthing, resilio, dukto, sincronización carpetas, podcast]
 comments: true
 ---
-</pre>
-
+</code></pre>
 <br>
-<p>
-Publicado por Angel el lunes 21 enero del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el lunes 21 enero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

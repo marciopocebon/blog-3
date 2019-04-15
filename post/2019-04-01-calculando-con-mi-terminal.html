@@ -1,529 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title>Calculando con mi terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Calculando con mi terminal</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos"
- />
-<meta name="keywords" content="bash,unix" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta name=author content=Angel. uGeek />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta name="description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Calculando con mi terminal" />
-<meta property="og:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
-<meta property="og:image" content="" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html" />
-<meta name="twitter:title" content="Calculando con mi terminal" />
-<meta name="twitter:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
-<meta name="twitter:image" content="" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org627f5d4" class="outline-2">
-<h2 id="org627f5d4">Calculando con mi terminal</h2>
-<div class="outline-text-2" id="text-org627f5d4">
-<p>
-Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <b>expr</b> (evalúa los argumentos como una expresión) y <b>calc</b> (Calculadora de precisión arbitraria).
-</p>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<p>
-<b>Expr</b> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <b>calc</b>. Y os preguntareis: ¿Porque utilizar dos comandos? <b>expr</b> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <b>calc</b>.
-</p>
-
-
-<div class="figure">
-<p><img src="../images-blog/expr.jpg" alt="expr.jpg" />
-</p>
-</div>
-
-
-<p>
-Otro método de hacer cálculos sería con <b>bc</b>, pero lo dejo para otro Post porque <b>expr</b> y <b>calc</b> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.
-</p>
-
-
-<p>
-Con <b>expr</b> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:
-</p>
-
-<p>
-<code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code>
-</p>
-</div>
-
-<div id="outline-container-orga6cf356" class="outline-3">
-<h3 id="orga6cf356">Suma</h3>
-<div class="outline-text-3" id="text-orga6cf356">
-<p>
-Hay que dejar un espacio en blanco entre los números y símbolo de <b>+</b>.
-</p>
-
-<p>
-<code>expr 8 + 4</code>
-</p>
-
-<p>
-Suma con números negativos:
-</p>
-
-<p>
-<code>expr -30 + 47</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4ec8afe" class="outline-3">
-<h3 id="org4ec8afe">Resta</h3>
-<div class="outline-text-3" id="text-org4ec8afe">
-<p>
-<code>expr 8 - 4</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgcb403c4" class="outline-3">
-<h3 id="orgcb403c4">Multiplicación</h3>
-<div class="outline-text-3" id="text-orgcb403c4">
-<p>
-Lleva la contrabarra <b>\</b> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:
-</p>
-
-<p>
-<code>expr 8 \* 4</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org361f42e" class="outline-3">
-<h3 id="org361f42e">División</h3>
-<div class="outline-text-3" id="text-org361f42e">
-<p>
-<code>expr 8 / 4</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb29a316" class="outline-3">
-<h3 id="orgb29a316">Porcentaje</h3>
-<div class="outline-text-3" id="text-orgb29a316">
-<p>
-<code>expr 10 % 100</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org87dc7ca" class="outline-3">
-<h3 id="org87dc7ca">Comparaciones</h3>
-<div class="outline-text-3" id="text-org87dc7ca">
-<p>
-Otra cosa que nos permite <b>expr</b> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <b>1</b>, si es falsa <b>0</b>.
-Aquí también hay símbolos que llevan la contrabarra <b>\</b> para escapar.
-</p>
-<pre class="example">
-expr 10 =   7   # Igual
+<h1 id="calculando-con-mi-terminal-1" title="Calculando con mi terminal" data-export_file_name="Calculando con mi terminal" data-description="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" data-export_date="2019-04-01 20:40" data-category="terminal" data-tag="bash,unix" data-image="./images-blog/expr.jpg">Calculando con mi terminal</h1>
+<p>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <strong>expr</strong> (evalúa los argumentos como una expresión) y <strong>calc</strong> (Calculadora de precisión arbitraria).</p>
+<p><img src="../images-blog/expr.jpg" /></p>
+<p><strong>Expr</strong> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <strong>calc</strong>. Y os preguntareis: ¿Porque utilizar dos comandos? <strong>expr</strong> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <strong>calc</strong>.</p>
+<p>Otro método de hacer cálculos sería con <strong>bc</strong>, pero lo dejo para otro Post porque <strong>expr</strong> y <strong>calc</strong> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.</p>
+<p>Con <strong>expr</strong> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:</p>
+<p><code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code></p>
+<h2 id="suma">Suma</h2>
+<p>Hay que dejar un espacio en blanco entre los números y símbolo de <strong>+</strong>.</p>
+<p><code>expr 8 + 4</code></p>
+<p>Suma con números negativos:</p>
+<p><code>expr -30 + 47</code></p>
+<h2 id="resta">Resta</h2>
+<p><code>expr 8 - 4</code></p>
+<h2 id="multiplicación">Multiplicación</h2>
+<p>Lleva la contrabarra <strong>\</strong> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
+<p><code>expr 8 \* 4</code></p>
+<h2 id="división">División</h2>
+<p><code>expr 8 / 4</code></p>
+<h2 id="porcentaje">Porcentaje</h2>
+<p><code>expr 10 % 100</code></p>
+<h2 id="comparaciones">Comparaciones</h2>
+<p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>. Aquí también hay símbolos que llevan la contrabarra <strong>\</strong> para escapar.</p>
+<pre><code>expr 10 =   7   # Igual
 expr 10 !=  7   # No es igual
 expr 10 \&gt;  7   # Mayor que
 expr 10 \&lt;  7   # Menor que
 expr 10 \&lt;= 7   # Menor o igual
 expr 10 \&gt;= 7   # Mayor o igual
-</pre>
-</div>
-</div>
-
-<div id="outline-container-org243b425" class="outline-3">
-<h3 id="org243b425">Contando el número de letras</h3>
-<div class="outline-text-3" id="text-org243b425">
-<p>
-También podemos contar el número de letras que hay en una frase:
-</p>
-
-<p>
-<code>expr length "hola mundo"</code>
-</p>
-
-<p>
-O en un archivo de texto plano:
-</p>
-
-<p>
-<code>expr length "$(cat mis_notas.txt)"</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf5821f9" class="outline-3">
-<h3 id="orgf5821f9">Manual</h3>
-<div class="outline-text-3" id="text-orgf5821f9">
-<p>
-Hay muchas mas opciones. Lee en manual para conocerlas:
-</p>
-
-<p>
-<code>man expr</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org59afd1e" class="outline-3">
-<h3 id="org59afd1e">Instalación de Calc</h3>
-<div class="outline-text-3" id="text-org59afd1e">
-<p>
-Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:
-</p>
-
-<p>
-<code>sudo apt install apcalc</code>
-</p>
-</div>
-</div>
-<div id="outline-container-org4199504" class="outline-3">
-<h3 id="org4199504">Suma</h3>
-<div class="outline-text-3" id="text-org4199504">
-<p>
-Suma con decimales:
-</p>
-<pre class="example">
-calc 12.5 + 21.4
-	33.9
-</pre>
-<p>
-Aquí ya podemos sumar números negativos. Al poner el signo negativo, tiene que ir entre paréntesis.
-</p>
-<pre class="example">
-calc '(-30 + 47)'
-	17
-</pre>
-</div>
-</div>
-<div id="outline-container-orged67a6a" class="outline-3">
-<h3 id="orged67a6a">Dos números negativos</h3>
-<div class="outline-text-3" id="text-orged67a6a">
-<pre class="example">
-calc '(-30 - 47)'
-	-77
-</pre>
-</div>
-</div>
-
-<div id="outline-container-org54c41ea" class="outline-3">
-<h3 id="org54c41ea">Multiplicación</h3>
-<div class="outline-text-3" id="text-org54c41ea">
-<p>
-En el caso de la multiplicación, <b>calc</b> no necesita <b>\</b> de escape:
-</p>
-<pre class="example">
-calc 30*2
-	60
-</pre>
-<pre class="example">
-calc '(-2 * 10)'
-	-20
-</pre>
-<pre class="example">
-calc 30\*2
-	60
-</pre>
-</div>
-</div>
-
-<div id="outline-container-orgec23f1e" class="outline-3">
-<h3 id="orgec23f1e">División</h3>
-<div class="outline-text-3" id="text-orgec23f1e">
-<pre class="example">
-calc 200/10
-	20
-</pre>
-</div>
-</div>
-
-<div id="outline-container-org5cdc094" class="outline-3">
-<h3 id="org5cdc094">Porcentaje</h3>
-<div class="outline-text-3" id="text-org5cdc094">
-<pre class="example">
-calc 10%100
-	10
-</pre>
-</div>
-</div>
-
-<div id="outline-container-org9f64f57" class="outline-3">
-<h3 id="org9f64f57">Manual</h3>
-<div class="outline-text-3" id="text-org9f64f57">
-<p>
-Hay muchas mas en manual:
-</p>
-
-<p>
-<code>man calc</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6ed473c" class="outline-3">
-<h3 id="org6ed473c">Conclusión</h3>
-<div class="outline-text-3" id="text-org6ed473c">
-<p>
-Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,&#x2026; y muchas más cosas
-Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.
-</p>
+</code></pre>
+<h2 id="contando-el-número-de-letras">Contando el número de letras</h2>
+<p>También podemos contar el número de letras que hay en una frase:</p>
+<p><code>expr length "hola mundo"</code></p>
+<p>O en un archivo de texto plano:</p>
+<p><code>expr length "$(cat mis_notas.txt)"</code></p>
+<h2 id="manual">Manual</h2>
+<p>Hay muchas mas opciones. Lee en manual para conocerlas:</p>
+<p><code>man expr</code></p>
+<h2 id="instalación-de-calc">Instalación de Calc</h2>
+<p>Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:</p>
+<p><code>sudo apt install apcalc</code></p>
+<h2 id="suma-1">Suma</h2>
+<p>Suma con decimales:</p>
+<pre><code>calc 12.5 + 21.4
+    33.9
+</code></pre>
+<p>Aquí ya podemos sumar números negativos. Al poner el signo negativo, tiene que ir entre paréntesis.</p>
+<pre><code>calc &#39;(-30 + 47)&#39;
+    17
+</code></pre>
+<h2 id="dos-números-negativos">Dos números negativos</h2>
+<pre><code>calc &#39;(-30 - 47)&#39;
+    -77
+</code></pre>
+<h2 id="multiplicación-1">Multiplicación</h2>
+<p>En el caso de la multiplicación, <strong>calc</strong> no necesita <strong>\</strong> de escape:</p>
+<pre><code>calc 30*2
+    60
+</code></pre>
+<pre><code>calc &#39;(-2 * 10)&#39;
+    -20
+</code></pre>
+<pre><code>calc 30\*2
+    60
+</code></pre>
+<h2 id="división-1">División</h2>
+<pre><code>calc 200/10
+    20
+</code></pre>
+<h2 id="porcentaje-1">Porcentaje</h2>
+<pre><code>calc 10%100
+    10
+</code></pre>
+<h2 id="manual-1">Manual</h2>
+<p>Hay muchas mas en manual:</p>
+<p><code>man calc</code></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,… y muchas más cosas Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
 <br>
-<p>
-Publicado por Angel el lunes 01 abril del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el lunes 01 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
@@ -531,10 +105,4 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

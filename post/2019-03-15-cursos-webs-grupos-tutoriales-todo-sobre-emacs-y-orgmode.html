@@ -1,348 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title> Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Actualizado: Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode"
- />
-<meta name="keywords" content="emacs,orgmode," />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<link rel=canonical href=https://ugeek.github.io />
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
-<meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org5463293" class="outline-2">
-<h2 id="org5463293">Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</h2>
-<div class="outline-text-2" id="text-org5463293">
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<div class="figure">
-<p><img src="../images-blog/emacs.png" alt="emacs.png" width="250px" height="250px" />  
-</p>
-</div>
-
-
-<p>
-Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode. Como una imagen vale mas que mil palabras, la <a href="https://www.emacswiki.org/emacs?interface=es">EmacsWiki</a> me ha llevado al repositorio en GitHub de <a href="https://github.com/farliz/emacs-academia/blob/master/contenido.md">farliz/emacs-academia</a>, donde están estos enlaces que te llevan a un magnífico Curso en Vídeo y en Castellano, donde ver un poco como funciona Emacs. 
-</p>
-
-<p>
-La verdad es que ahora no tienes escusas para aprender Emacs!!!
-</p>
-
-<p>
-En la parte final del curso, adjunta una serie de comandos para descargarlos en Local. Yo los he reagrupado en un script.
-</p>
-
-<p>
-He añadido unas conferencias de Medialab-Prado, un vídeo que resume muy bien OrgMode y una lista de vídeos de <a href="https://www.youtube.com/user/koenighaunstetten">Rainer König</a> sobre OrgMode en Inglés pero muy sencillos de seguir.
-</p>
-
-<p>
-En la Parte final, añadido una serie de PDF's con comandos y documentación.
-</p>
-
-<p>
-Es una información muy interesante, así que agradeciendo el magnífico trabajo de todas las fuentes, he añadido el contenido en la web para no perderlo de vista. 
-</p>
-</div>
-
-
-<div id="outline-container-orgc254aff" class="outline-3">
-<h3 id="orgc254aff">Webs, Canales y Grupos de Telegram, Reddit</h3>
-<div class="outline-text-3" id="text-orgc254aff">
-<p>
-<span class="underline">Webs</span>
-</p>
-<ul class="org-ul">
+<h1 id="cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode" title="Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode" data-export_file_name="Cursos Webs Grupos Tutoriales Todo sobre Emacs y OrgMode" data-description="Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode" data-export_date="2019-03-15 23:00 2019-03-16" data-category="emacs" data-tag="emacs,orgmode" data-image="./images-blog/emacs.png">Cursos, Webs, Grupos, Tutoriales… Todo sobre Emacs y OrgMode</h1>
+<p><img src="../images-blog/emacs.png" /></p>
+<p>Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode. Como una imagen vale mas que mil palabras, la <a href="https://www.emacswiki.org/emacs?interface=es">EmacsWiki</a> me ha llevado al repositorio en GitHub de <a href="https://github.com/farliz/emacs-academia/blob/master/contenido.md">farliz/emacs-academia</a>, donde están estos enlaces que te llevan a un magnífico Curso en Vídeo y en Castellano, donde ver un poco como funciona Emacs.</p>
+<p>La verdad es que ahora no tienes escusas para aprender Emacs!!!</p>
+<p>En la parte final del curso, adjunta una serie de comandos para descargarlos en Local. Yo los he reagrupado en un script.</p>
+<p>He añadido unas conferencias de Medialab-Prado, un vídeo que resume muy bien OrgMode y una lista de vídeos de <a href="https://www.youtube.com/user/koenighaunstetten">Rainer König</a> sobre OrgMode en Inglés pero muy sencillos de seguir.</p>
+<p>En la Parte final, añadido una serie de PDF's con comandos y documentación.</p>
+<p>Es una información muy interesante, así que agradeciendo el magnífico trabajo de todas las fuentes, he añadido el contenido en la web para no perderlo de vista.</p>
+<h2 id="webs-canales-y-grupos-de-telegram-reddit">Webs, Canales y Grupos de Telegram, Reddit</h2>
+<p><span class="underline">Webs</span></p>
+<ul>
 <li><a href="http://planet.emacs-es.org">Planet Emacses</a></li>
 <li><a href="http://planet.emacslife.com/">Planet Emacs Life (Inglés)</a></li>
 <li><a href="http://sachachua.com/blog/">Blog de Sachachua (Inglés)</a></li>
 </ul>
-
-<p>
-<span class="underline">Telegram</span>
-</p>
-<ul class="org-ul">
+<p><span class="underline">Telegram</span></p>
+<ul>
 <li><a href="https://t.me/emacs_es">Grupo Emacs</a></li>
 <li><a href="https://t.me/Org_Mode">Canal Orgmode</a></li>
 </ul>
-
-<p>
-<span class="underline">Reddit</span>
-</p>
-<ul class="org-ul">
+<p><span class="underline">Reddit</span></p>
+<ul>
 <li><a href="https://www.reddit.com/r/emacs">Emacs</a></li>
 <li><a href="https://www.reddit.com/r/planetemacs/">Planet Emacs</a></li>
 <li><a href="https://www.reddit.com/r/orgmode/">OrgMode</a></li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-orgdc6c29d" class="outline-3">
-<h3 id="orgdc6c29d">Vídeos</h3>
-<div class="outline-text-3" id="text-orgdc6c29d">
-<p>
-<span class="underline">Parte 1: Emacs Básico</span>
-</p>
-
-<ol class="org-ol">
+<h2 id="vídeos">Vídeos</h2>
+<p><span class="underline">Parte 1: Emacs Básico</span></p>
+<ol>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8787/emacs1.webm">Introducción</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8807/emacs2.webm">Buffers 1</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8808/emacs3.webm">Primeros comandos 1</a></li>
@@ -351,13 +48,12 @@ Es una información muy interesante, así que agradeciendo el magnífico trabajo
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8813/emacs6.webm">Mini buffer / configuración de emacs</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8814/emacs7.webm">init.el / configuración de Emacs</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8815/emacs8.webm">Mas configuración</a></li>
-<li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8816/emacs9.webm">Linea de modo</a>
-
-<ul class="org-ul">
-<li><a href="https://www.dropbox.com/s/xmflteig5j77hf4/suelo.txt?dl=0">suelo.txt</a></li>
-</ul></li>
 </ol>
-<ol class="org-ol">
+<p>9. <a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8816/emacs9.webm">Linea de modo</a></p>
+<ul>
+<li><a href="https://www.dropbox.com/s/xmflteig5j77hf4/suelo.txt?dl=0">suelo.txt</a></li>
+</ul>
+<ol>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8817/emacs10.webm">Buscar palabras en un texto</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8818/emacs11.webm">Buscar y reemplazar</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8819/emacs12.webm">Importante</a></li>
@@ -371,149 +67,71 @@ Es una información muy interesante, así que agradeciendo el magnífico trabajo
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8827/emacs20.webm">Modos menores / auto-fill-mode</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8828/emacs21.webm">solarized-theme / Opcional</a></li>
 </ol>
-
-<p>
-Al finalizar esta sección, estarán en capacidad de seguir y entender la siguiente guía. <a href="http://therandymon.com/papers/emacs-for-writers.pdf">Emacs for writers</a>
-</p>
-
-<p>
-<span class="underline">Parte 2</span>
-</p>
-
-<ol class="org-ol">
+<p>Al finalizar esta sección, estarán en capacidad de seguir y entender la siguiente guía. <a href="http://therandymon.com/papers/emacs-for-writers.pdf">Emacs for writers</a></p>
+<p><span class="underline">Parte 2</span></p>
+<ol>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8829/emacs22.webm">Corrección ortográfica 1</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8830/emacs23.webm">Corrección ortográfica 2</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8831/emacs24.webm">BibTeX</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8833/emacs25.webm">AucTeX y RefTeX instalación</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8834/zotero.webm">Zotero</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8836/emacs26.webm">LaTeX demo</a>
-<ul class="org-ul">
+<ul>
 <li><a href="https://www.dropbox.com/s/0ibsirx4a65eq17/tutorial.zip?dl=0">Archivo</a></li>
 </ul></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8841/emacs26.webm">Movimientos esenciales II</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8842/emacs27.webm">Evaluar código LISP C-x C-e</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8885/emacs28.webm">Configuración Final</a></li>
 </ol>
-<ol class="org-ol">
+<ol>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8911/emacs29.webm">Edición del texto</a></li>
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8915/emacs30.webm">Edición de texto II</a></li>
-<li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8916/emacs31.webm">Formato I</a>
-
-<ul class="org-ul">
+<li><p><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8916/emacs31.webm">Formato I</a></p>
+<ul>
 <li>Corrección: En este video cuando digo C-h, quiero decir M-h</li>
 </ul></li>
-
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8917/emacs32.webm">Markdown</a></li>
-<li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8919/emacs33.webm">ConTeX</a>
-
-<ul class="org-ul">
+<li><p><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/8919/emacs33.webm">ConTeX</a></p>
+<ul>
 <li><a href="https://cloud.openmailbox.org/index.php/s/iFRESi5QDkT6SXJ">PDF</a></li>
 </ul></li>
-
 <li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13066/helm-bibtex.medium.webm">Helm-bibtex</a></li>
-<li><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/11660/emacs-pdf.medium.webm">export-to-pdf</a></li>
+<li><p><a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/11660/emacs-pdf.medium.webm">export-to-pdf</a></p></li>
 </ol>
-
-<p>
-<span class="underline">Curso Básico de ConTeXt</span>
-</p>
-
-<p>
-1.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13173/context_1.webm">Instalación</a>
-</p>
-
-<p>
-2.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13174/context-presentacion.webm">Presentación</a>
-</p>
-
-<p>
-3.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13175/context-extra1.webm">simpleslides</a>
-</p>
-
-<p>
-4.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13176/context-ayuda.webm">Manual de ConTeXt</a>
-</p>
-
-<p>
-<span class="underline">Descargar todos los Vídeos</span>
-</p>
-
-<p>
-Para descargar todos los videos pueden ejecutar las siguientes lineas en una terminal.
-</p>
-
-<ol class="org-ol">
-<li>mkdir emacs-videos &amp;&amp; cd emacs-videos</li>
-
-<li>wget <a href="https://github.com/farliz/emacs-academia/blob/master/contenido.md">https://github.com/farliz/emacs-academia/blob/master/contenido.md</a></li>
-
-<li>grep -Eo '(http|https)://.+webm' contenido.md &gt; videos.txt</li>
-
-<li>wget -i videos.txt</li>
+<p><span class="underline">Curso Básico de ConTeXt</span></p>
+<p>1.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13173/context_1.webm">Instalación</a></p>
+<p>2.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13174/context-presentacion.webm">Presentación</a></p>
+<p>3.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13175/context-extra1.webm">simpleslides</a></p>
+<p>4.<a href="https://b2aeaa58a57a200320db-8b65b95250e902c437b256b5abf3eac7.ssl.cf5.rackcdn.com/media_entries/13176/context-ayuda.webm">Manual de ConTeXt</a></p>
+<p><span class="underline">Descargar todos los Vídeos</span></p>
+<p>Para descargar todos los videos pueden ejecutar las siguientes lineas en una terminal.</p>
+<ol>
+<li><p>mkdir emacs-videos &amp;&amp; cd emacs-videos</p></li>
+<li><p>wget <a href="https://github.com/farliz/emacs-academia/blob/master/contenido.md"><a href="https://github.com/farliz/emacs-academia/blob/master/contenido.md">https://github.com/farliz/emacs-academia/blob/master/contenido.md</a></a></p></li>
+<li><p>grep -Eo '(http|https)://.+webm' contenido.md &gt; videos.txt</p></li>
+<li><p>wget -i videos.txt</p></li>
 </ol>
-
-<p>
-Canal en Goblinrefuge
-</p>
-
-<p>
-<a href="https://goblinrefuge.com/mediagoblin/u/farliz/">https://goblinrefuge.com</a>
-</p>
-
-<p>
-<span class="underline">Script para descargar los Vídeos</span>
-</p>
-
-<pre class="example">
-#/bin/bash/
+<p>Canal en Goblinrefuge</p>
+<p><a href="https://goblinrefuge.com/mediagoblin/u/farliz/"><a href="https://goblinrefuge.com">https://goblinrefuge.com</a></a></p>
+<p><span class="underline">Script para descargar los Vídeos</span></p>
+<pre><code>#/bin/bash/
 mkdir emacs-videos &amp;&amp; cd emacs-videos
 wget https://github.com/farliz/emacs-academia/blob/master/contenido.md
-grep -Eo '(http|https)://.+webm' contenido.md &gt; videos.txt
+grep -Eo &#39;(http|https)://.+webm&#39; contenido.md &gt; videos.txt
 wget -i videos.txt   
-</pre>
-</div>
-</div>
-<div id="outline-container-org643538a" class="outline-3">
-<h3 id="org643538a">Vídeos, listas y conferencia sobre Orgmode</h3>
-<div class="outline-text-3" id="text-org643538a">
-
-<div class="figure">
-<p><img src="../images-blog/orgmode.png" alt="orgmode.png" width="250px" height="250px" />  
-</p>
-</div>
-
-
-<p>
-<span class="underline">Mi primera configuración Emacs con elisp y orgmode</span>
-</p>
-
+</code></pre>
+<h2 id="vídeos-listas-y-conferencia-sobre-orgmode">Vídeos, listas y conferencia sobre Orgmode</h2>
+<p><img src="../images-blog/orgmode.png" width="250" height="250" /></p>
+<p><span class="underline">Mi primera configuración Emacs con elisp y orgmode</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bnu-ZGpRly4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>
-<span class="underline">"Organiza tu vida" Emacs y Org-mode Madrid 2017 Medialab-Prado</span>
-</p>
-
+<p><span class="underline">"Organiza tu vida" Emacs y Org-mode Madrid 2017 Medialab-Prado</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QBPTNz3Qqqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>
-<span class="underline">"Organiza tu vida" Emacs y Org-mode Madrid 2017 Medialab-Prado</span>
-</p>
-
+<p><span class="underline">"Organiza tu vida" Emacs y Org-mode Madrid 2017 Medialab-Prado</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bzZ09dAbLEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>
-<span class="underline">OrgMode tutorial</span>
-</p>
-
+<p><span class="underline">OrgMode tutorial</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sQS06Qjnkcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
-
-
-<div id="outline-container-orgf379b7e" class="outline-3">
-<h3 id="orgf379b7e">Manuales</h3>
-<div class="outline-text-3" id="text-orgf379b7e">
-<ul class="org-ul">
+<h2 id="manuales">Manuales</h2>
+<ul>
 <li><a href="http://www.davidam.com/docu/orgguide.es.html">Guía sobre OrgMode</a></li>
 <li><a href="https://orgmode.org/worg/orgguide/orgguide.es.pdf">Manual en PDF de OrgMode</a></li>
 <li><a href="https://orgmode.org/orgguide.pdf">Manual en Inglés. Última versión OrgMode</a></li>
@@ -523,22 +141,13 @@ wget -i videos.txt
 <li><a href="http://di002.edv.uniovi.es/~labra/cursos/latex04/cursoLaTeX.pdf">Presentación Emacs y Latex</a></li>
 <li><a href="https://blyx.com/public/docs/programacion/Emacs.pdf">Plantilla Emacs</a></li>
 </ul>
-
-
-
-
 <br>
-<p>
-Publicado por Angel el viernes 15 marzo del 2019  y <b>actualizado</b> el sábado 16 marzo del 2019
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el viernes 15 marzo del 2019 y <strong>actualizado</strong> el sábado 16 marzo del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales&#x2026; Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales… Todo sobre Emacs y OrgMode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
@@ -547,10 +156,4 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

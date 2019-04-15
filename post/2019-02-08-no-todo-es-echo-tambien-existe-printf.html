@@ -1,762 +1,306 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title> No todo es echo. También existe printf. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>No todo es echo. También existe printf</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf."
- />
-<meta name="keywords" content="terminal" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<link rel=canonical href=https://ugeek.github.io />
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta property=og:title content=Blog de uGeek />
-<meta name=author content=Angel. uGeek />
-<meta property=og:site_name content=uGeek. Blog de Tecnología/>
-<meta property=og:description content=uGeek. Blog y Podcast de Tecnología sobre GNU/Linux, Android, Domotica,... />
-<meta property=og:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<meta property=og:image content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:secure_url content=https://ugeek.github.io/ugeek.jpg />
-<meta property=og:image:width content=640 />
-<meta property=og:image:height content=366 />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:image content=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=shortcut icon href=https://ugeek.github.io/icon/ugeek-256x256.png type=image/x-icon />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=32x32 />
-<link rel=icon href=https://ugeek.github.io/icon/ugeek-256x256.png sizes=192x192 />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgb1576cb" class="outline-2">
-<h2 id="orgb1576cb">No todo es echo. También existe printf</h2>
-<div class="outline-text-2" id="text-orgb1576cb">
-<p>
-Cuando hacemos scritps en bash, habitualmente utilizamos <b>echo</b> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc&#x2026; para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.
-</p>
-</div>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<div id="outline-container-org4c47fab" class="outline-3">
-<h3 id="org4c47fab">Iniciandonos con printf</h3>
-<div class="outline-text-3" id="text-org4c47fab">
-<p>
-printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:
-</p>
-
-
-<pre class="example">
-$ printf "Hola Mundo"
+<h1 id="no-todo-es-echo.-también-existe-printf-1" title="No todo es echo. También existe printf" data-export_file_name="No todo es echo Tambien existe printf" data-description="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." data-export_date="2019-02-08 22:15" data-category="bash" data-tag="terminal" data-image="./icon/ugeek.png">No todo es echo. También existe printf</h1>
+<p>Cuando hacemos scritps en bash, habitualmente utilizamos <strong>echo</strong> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc… para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.</p>
+<h2 id="iniciandonos-con-printf">Iniciandonos con printf</h2>
+<p>printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:</p>
+<pre><code>$ printf &quot;Hola Mundo&quot;
 Hola Mundo
-</pre>
-</div>
-</div>
-<div id="outline-container-org1a608df" class="outline-3">
-<h3 id="org1a608df">Salto de línea</h3>
-<div class="outline-text-3" id="text-org1a608df">
-<p>
-Del mismo modo que <b>echo</b>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:
-</p>
-
-
-<pre class="example">
-$ printf "%s\n" "Hola Mundo"
+</code></pre>
+<h2 id="salto-de-línea">Salto de línea</h2>
+<p>Del mismo modo que <strong>echo</strong>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:</p>
+<pre><code>$ printf &quot;%s\n&quot; &quot;Hola Mundo&quot;
 Hola Mundo
-</pre>
-
-
-<pre class="example">
-$ printf "Hola \nMundo"
+</code></pre>
+<pre><code>$ printf &quot;Hola \nMundo&quot;
 Hola
 Mundo
-</pre>
-
-
-
-<pre class="example">
-$ printf "%s\n" "Hola" "Mundo"
+</code></pre>
+<pre><code>$ printf &quot;%s\n&quot; &quot;Hola&quot; &quot;Mundo&quot;
 Hola
 Mundo
-</pre>
-
-
-
-<pre class="example">
-$ printf "%*s\n" $(tput cols) "Hola Mundo!"
+</code></pre>
+<pre><code>$ printf &quot;%*s\n&quot; $(tput cols) &quot;Hola Mundo!&quot;
 Hola
 Mundo
 !
-</pre>
-</div>
-</div>
+</code></pre>
+<h2 id="imprimir-al-final-de-la-línea">Imprimir al final de la línea</h2>
+<p>Ahora vamos a desplazar la línea al final del margen derecho:</p>
+<pre><code>$ printf &quot;%*s\n&quot; $(tput cols) &quot;Hola Mundo!&quot;
 
-<div id="outline-container-orgca90f10" class="outline-3">
-<h3 id="orgca90f10">Imprimir al final de la línea</h3>
-<div class="outline-text-3" id="text-orgca90f10">
-<p>
-Ahora vamos a desplazar la línea al final del margen derecho:
-</p>
-
-
-<pre class="example">
-$ printf "%*s\n" $(tput cols) "Hola Mundo!"
-
-				 Hola Mundo!
-</pre>
-</div>
-</div>
-
-
-<div id="outline-container-org23eee54" class="outline-3">
-<h3 id="org23eee54">Llamada de Fechas, host, rutas</h3>
-<div class="outline-text-3" id="text-org23eee54">
-<p>
-Podemos llamar diferentes formatos de fecha, host, rutas,&#x2026;
-</p>
-
-
-<pre class="example">
-$ printf 'Esta es la semana %(%U/%Y)T.\n' -1
+                                 Hola Mundo!
+</code></pre>
+<h2 id="llamada-de-fechas-host-rutas">Llamada de Fechas, host, rutas</h2>
+<p>Podemos llamar diferentes formatos de fecha, host, rutas,…</p>
+<pre><code>$ printf &#39;Esta es la semana %(%U/%Y)T.\n&#39; -1
 Esta es la semana 05/2019.
-</pre>
-
-<p>
-Mostrando la fecha y host:
-</p>
-
-
-<pre class="example">
-$ printf "%s:%s\n" "$(date)" "$(hostname)"
+</code></pre>
+<p>Mostrando la fecha y host:</p>
+<pre><code>$ printf &quot;%s:%s\n&quot; &quot;$(date)&quot; &quot;$(hostname)&quot;
 vie feb  8 22:16:26 CET 2019:angel
-</pre>
-
-
-<p>
-Ruta de mi carpeta home:
-</p>
-
-
-<pre class="example">
-$ printf "La ruta de mi home es %s.\n" $HOME
+</code></pre>
+<p>Ruta de mi carpeta home:</p>
+<pre><code>$ printf &quot;La ruta de mi home es %s.\n&quot; $HOME
 La ruta de mi home es /home/angel.
-</pre>
-
-<p>
-Añadiendo el nombre con el que nos hemos logeado en la sesión:
-</p>
-
-
-<pre class="example">
-$ printf "Hola, Soy %s.\n" $LOGNAME
+</code></pre>
+<p>Añadiendo el nombre con el que nos hemos logeado en la sesión:</p>
+<pre><code>$ printf &quot;Hola, Soy %s.\n&quot; $LOGNAME
 Hola, Soy angel.
-</pre>
-
-
-<p>
-Fecha y hora:
-</p>
-
-
-<pre class="example">
-$ printf "%(%m-%d-%Y %H:%M:%S)T\n" $(date +%s)
+</code></pre>
+<p>Fecha y hora:</p>
+<pre><code>$ printf &quot;%(%m-%d-%Y %H:%M:%S)T\n&quot; $(date +%s)
 02-08-2019 21:10:35
-</pre>
-
-
-<p>
-Tabla con el código del formato de fecha:
-</p>
-
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
+</code></pre>
+<p>Tabla con el código del formato de fecha:</p>
+<table>
 <thead>
-<tr>
-<th scope="col" class="org-left">Código de Formato</th>
-<th scope="col" class="org-left">Descripción</th>
+<tr class="header">
+<th>Código de Formato</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="org-left">%%</td>
-<td class="org-left">un% literal</td>
+<tr class="odd">
+<td>%%</td>
+<td>un% literal</td>
 </tr>
-
-<tr>
-<td class="org-left">%a</td>
-<td class="org-left">el nombre abreviado del día de la semana de locale (por ejemplo, Lun)</td>
+<tr class="even">
+<td>%a</td>
+<td>el nombre abreviado del día de la semana de locale (por ejemplo, Lun)</td>
 </tr>
-
-<tr>
-<td class="org-left">%A</td>
-<td class="org-left">el nombre completo del día laborable de la localidad (por ejemplo, domingo)</td>
+<tr class="odd">
+<td>%A</td>
+<td>el nombre completo del día laborable de la localidad (por ejemplo, domingo)</td>
 </tr>
-
-<tr>
-<td class="org-left">%b</td>
-<td class="org-left">el nombre abreviado del mes de la localidad (por ejemplo, enero)</td>
+<tr class="even">
+<td>%b</td>
+<td>el nombre abreviado del mes de la localidad (por ejemplo, enero)</td>
 </tr>
-
-<tr>
-<td class="org-left">%B</td>
-<td class="org-left">el nombre completo del mes del local (por ejemplo, enero)</td>
+<tr class="odd">
+<td>%B</td>
+<td>el nombre completo del mes del local (por ejemplo, enero)</td>
 </tr>
-
-<tr>
-<td class="org-left">%c</td>
-<td class="org-left">Fecha y hora del local (por ejemplo, jue 3 de marzo 23:05:25 2005)</td>
+<tr class="even">
+<td>%c</td>
+<td>Fecha y hora del local (por ejemplo, jue 3 de marzo 23:05:25 2005)</td>
 </tr>
-
-<tr>
-<td class="org-left">%C</td>
-<td class="org-left">siglo; como% Y, excepto omitir los últimos dos dígitos (por ejemplo, 20)</td>
+<tr class="odd">
+<td>%C</td>
+<td>siglo; como% Y, excepto omitir los últimos dos dígitos (por ejemplo, 20)</td>
 </tr>
-
-<tr>
-<td class="org-left">%d</td>
-<td class="org-left">día del mes (por ejemplo, 01)</td>
+<tr class="even">
+<td>%d</td>
+<td>día del mes (por ejemplo, 01)</td>
 </tr>
-
-<tr>
-<td class="org-left">%D</td>
-<td class="org-left">fecha; igual que% m /% d /% y</td>
+<tr class="odd">
+<td>%D</td>
+<td>fecha; igual que% m /% d /% y</td>
 </tr>
-
-<tr>
-<td class="org-left">%e</td>
-<td class="org-left">día del mes, espacio acolchado; igual que% _d</td>
+<tr class="even">
+<td>%e</td>
+<td>día del mes, espacio acolchado; igual que% <sub>d</sub></td>
 </tr>
-
-<tr>
-<td class="org-left">%F</td>
-<td class="org-left">fecha completa igual que% Y-% m-% d</td>
+<tr class="odd">
+<td>%F</td>
+<td>fecha completa igual que% Y-% m-% d</td>
 </tr>
-
-<tr>
-<td class="org-left">%g</td>
-<td class="org-left">los dos últimos dígitos del año del número de semana ISO (ver% G)</td>
+<tr class="even">
+<td>%g</td>
+<td>los dos últimos dígitos del año del número de semana ISO (ver% G)</td>
 </tr>
-
-<tr>
-<td class="org-left">%G</td>
-<td class="org-left">año del número de semana ISO (ver% V); Normalmente útil solo con% V</td>
+<tr class="odd">
+<td>%G</td>
+<td>año del número de semana ISO (ver% V); Normalmente útil solo con% V</td>
 </tr>
-
-<tr>
-<td class="org-left">%h</td>
-<td class="org-left">igual que% b</td>
+<tr class="even">
+<td>%h</td>
+<td>igual que% b</td>
 </tr>
-
-<tr>
-<td class="org-left">%H</td>
-<td class="org-left">hora (00..23)</td>
+<tr class="odd">
+<td>%H</td>
+<td>hora (00..23)</td>
 </tr>
-
-<tr>
-<td class="org-left">%I</td>
-<td class="org-left">hora (01..12)</td>
+<tr class="even">
+<td>%I</td>
+<td>hora (01..12)</td>
 </tr>
-
-<tr>
-<td class="org-left">%j</td>
-<td class="org-left">día del año (001..366)</td>
+<tr class="odd">
+<td>%j</td>
+<td>día del año (001..366)</td>
 </tr>
-
-<tr>
-<td class="org-left">%k</td>
-<td class="org-left">hora, espacio rellenado (0..23); igual que% _H</td>
+<tr class="even">
+<td>%k</td>
+<td>hora, espacio rellenado (0..23); igual que% <sub>H</sub></td>
 </tr>
-
-<tr>
-<td class="org-left">%l</td>
-<td class="org-left">hora, espacio acolchado (1..12); igual que% _I</td>
+<tr class="odd">
+<td>%l</td>
+<td>hora, espacio acolchado (1..12); igual que% <sub>I</sub></td>
 </tr>
-
-<tr>
-<td class="org-left">%m</td>
-<td class="org-left">mes (01..12)</td>
+<tr class="even">
+<td>%m</td>
+<td>mes (01..12)</td>
 </tr>
-
-<tr>
-<td class="org-left">%M</td>
-<td class="org-left">minuto (00..59)</td>
+<tr class="odd">
+<td>%M</td>
+<td>minuto (00..59)</td>
 </tr>
-
-<tr>
-<td class="org-left">%n</td>
-<td class="org-left">una nueva linea</td>
+<tr class="even">
+<td>%n</td>
+<td>una nueva linea</td>
 </tr>
-
-<tr>
-<td class="org-left">%N</td>
-<td class="org-left">nanosegundos (000000000..999999999)</td>
+<tr class="odd">
+<td>%N</td>
+<td>nanosegundos (000000000..999999999)</td>
 </tr>
-
-<tr>
-<td class="org-left">%p</td>
-<td class="org-left">el equivalente local de AM o PM; en blanco si no se conoce</td>
+<tr class="even">
+<td>%p</td>
+<td>el equivalente local de AM o PM; en blanco si no se conoce</td>
 </tr>
-
-<tr>
-<td class="org-left">%P</td>
-<td class="org-left">como% p, pero minúscula</td>
+<tr class="odd">
+<td>%P</td>
+<td>como% p, pero minúscula</td>
 </tr>
-
-<tr>
-<td class="org-left">%q</td>
-<td class="org-left">trimestre del año (1..4)</td>
+<tr class="even">
+<td>%q</td>
+<td>trimestre del año (1..4)</td>
 </tr>
-
-<tr>
-<td class="org-left">%r</td>
-<td class="org-left">el reloj de 12 horas del local (por ejemplo, 11:11:04 PM)</td>
+<tr class="odd">
+<td>%r</td>
+<td>el reloj de 12 horas del local (por ejemplo, 11:11:04 PM)</td>
 </tr>
-
-<tr>
-<td class="org-left">%R</td>
-<td class="org-left">Hora y minuto de 24 horas; igual que% H:% M</td>
+<tr class="even">
+<td>%R</td>
+<td>Hora y minuto de 24 horas; igual que% H:% M</td>
 </tr>
-
-<tr>
-<td class="org-left">%s</td>
-<td class="org-left">segundos desde 1970-01-01 00:00:00 UTC</td>
+<tr class="odd">
+<td>%s</td>
+<td>segundos desde 1970-01-01 00:00:00 UTC</td>
 </tr>
-
-<tr>
-<td class="org-left">%S</td>
-<td class="org-left">segundo (00..60)</td>
+<tr class="even">
+<td>%S</td>
+<td>segundo (00..60)</td>
 </tr>
-
-<tr>
-<td class="org-left">%t</td>
-<td class="org-left">una pestaña</td>
+<tr class="odd">
+<td>%t</td>
+<td>una pestaña</td>
 </tr>
-
-<tr>
-<td class="org-left">%T</td>
-<td class="org-left">hora; igual que% H:% M:% S</td>
+<tr class="even">
+<td>%T</td>
+<td>hora; igual que% H:% M:% S</td>
 </tr>
-
-<tr>
-<td class="org-left">%u</td>
-<td class="org-left">día de la semana (1..7); 1 es lunes</td>
+<tr class="odd">
+<td>%u</td>
+<td>día de la semana (1..7); 1 es lunes</td>
 </tr>
-
-<tr>
-<td class="org-left">%U</td>
-<td class="org-left">Número de la semana del año, con el domingo como primer día de la semana (00..53)</td>
+<tr class="even">
+<td>%U</td>
+<td>Número de la semana del año, con el domingo como primer día de la semana (00..53)</td>
 </tr>
-
-<tr>
-<td class="org-left">%V</td>
-<td class="org-left">Número de semana ISO, con el lunes como primer día de la semana (01..53)</td>
+<tr class="odd">
+<td>%V</td>
+<td>Número de semana ISO, con el lunes como primer día de la semana (01..53)</td>
 </tr>
-
-<tr>
-<td class="org-left">%w</td>
-<td class="org-left">día de la semana (0..6); 0 es domingo</td>
+<tr class="even">
+<td>%w</td>
+<td>día de la semana (0..6); 0 es domingo</td>
 </tr>
-
-<tr>
-<td class="org-left">%W</td>
-<td class="org-left">Número de la semana del año, con el lunes como primer día de la semana (00..53)</td>
+<tr class="odd">
+<td>%W</td>
+<td>Número de la semana del año, con el lunes como primer día de la semana (00..53)</td>
 </tr>
-
-<tr>
-<td class="org-left">%x</td>
-<td class="org-left">Representación de la fecha de la localidad (por ejemplo, 31/12/99)</td>
+<tr class="even">
+<td>%x</td>
+<td>Representación de la fecha de la localidad (por ejemplo, 31/12/99)</td>
 </tr>
-
-<tr>
-<td class="org-left">%X</td>
-<td class="org-left">Representación del tiempo del local (por ejemplo, 23:13:48)</td>
+<tr class="odd">
+<td>%X</td>
+<td>Representación del tiempo del local (por ejemplo, 23:13:48)</td>
 </tr>
-
-<tr>
-<td class="org-left">%y</td>
-<td class="org-left">los dos últimos dígitos del año (00..99)</td>
+<tr class="even">
+<td>%y</td>
+<td>los dos últimos dígitos del año (00..99)</td>
 </tr>
-
-<tr>
-<td class="org-left">%Y</td>
-<td class="org-left">año</td>
+<tr class="odd">
+<td>%Y</td>
+<td>año</td>
 </tr>
-
-<tr>
-<td class="org-left">%z</td>
-<td class="org-left">+ hhmm zona horaria numérica (por ejemplo, -0400)</td>
+<tr class="even">
+<td>%z</td>
+<td>+ hhmm zona horaria numérica (por ejemplo, -0400)</td>
 </tr>
-
-<tr>
-<td class="org-left">%:z</td>
-<td class="org-left">+ hh: mm zona horaria numérica (por ejemplo, -04: 00)</td>
+<tr class="odd">
+<td>%:z</td>
+<td>+ hh: mm zona horaria numérica (por ejemplo, -04: 00)</td>
 </tr>
-
-<tr>
-<td class="org-left">%::z</td>
-<td class="org-left">+ hh: mm: ss zona horaria numérica (por ejemplo, -04: 00: 00)</td>
+<tr class="even">
+<td>%::z</td>
+<td>+ hh: mm: ss zona horaria numérica (por ejemplo, -04: 00: 00)</td>
 </tr>
-
-<tr>
-<td class="org-left">%:::z</td>
-<td class="org-left">zona horaria numérica con: a la precisión necesaria (por ejemplo, -04, +05: 30)</td>
+<tr class="odd">
+<td>%:::z</td>
+<td>zona horaria numérica con: a la precisión necesaria (por ejemplo, -04, +05: 30)</td>
 </tr>
-
-<tr>
-<td class="org-left">%Z</td>
-<td class="org-left">abreviatura alfabética de la zona horaria (por ejemplo, EDT)</td>
+<tr class="even">
+<td>%Z</td>
+<td>abreviatura alfabética de la zona horaria (por ejemplo, EDT)</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-
-
-
-
-
-
-<div id="outline-container-org0b5fe0e" class="outline-3">
-<h3 id="org0b5fe0e">Editar texto</h3>
-<div class="outline-text-3" id="text-org0b5fe0e">
-<p>
-Cortar Texto:
-</p>
-
-
-<pre class="example">
-$ printf "%.*s" 12 "Muestra solo las cinco primeras letras"
+<h2 id="editar-texto">Editar texto</h2>
+<p>Cortar Texto:</p>
+<pre><code>$ printf &quot;%.*s&quot; 12 &quot;Muestra solo las cinco primeras letras&quot;
 Muestra solo
-</pre>
-
-
-
-
-<pre class="example">
-$ printf "Me llamo \"%s\".\nEs un placer conocerte." "Angel"
-Me llamo "Angel".
+</code></pre>
+<pre><code>$ printf &quot;Me llamo \&quot;%s\&quot;.\nEs un placer conocerte.&quot; &quot;Angel&quot;
+Me llamo &quot;Angel&quot;.
 Es un placer conocerte.
-</pre>
+</code></pre>
+<p>Indentado:</p>
+<pre><code>$ printf &quot;%*s\n&quot; 25 &quot;Hola Mundo&quot;
 
-
-<p>
-Indentado:
-</p>
-
-<pre class="example">
-$ printf "%*s\n" 25 "Hola Mundo"
-
-	       Hola Mundo
-</pre>
-</div>
-</div>
-
-<div id="outline-container-orgd611375" class="outline-3">
-<h3 id="orgd611375">Números</h3>
-<div class="outline-text-3" id="text-orgd611375">
-<pre class="example">
-$ printf "2 + 2 son %d\n" $((2+2))
+               Hola Mundo
+</code></pre>
+<h2 id="números">Números</h2>
+<pre><code>$ printf &quot;2 + 2 son %d\n&quot; $((2+2))
 2 + 2 son 4
-</pre>
-
-
-
-<pre class="example">
-$ printf "Aquí en solo %d pondremos estos %d valores.\n\ndoble salto de línea" 1 2
+</code></pre>
+<pre><code>$ printf &quot;Aquí en solo %d pondremos estos %d valores.\n\ndoble salto de línea&quot; 1 2
 
 Aquí en solo 1 pondremos estos 2 valores.
 
 doble salto de línea
-</pre>
-
-
-<p>
-Creando 2 columnas:
-</p>
-
-
-<pre class="example">
-$ printf "%-10d %-10d\n" 1 500 2 550
+</code></pre>
+<p>Creando 2 columnas:</p>
+<pre><code>$ printf &quot;%-10d %-10d\n&quot; 1 500 2 550
 
 1          500       
 2          550
-</pre>
-</div>
-</div>
-
-
-<div id="outline-container-org8e7e487" class="outline-3">
-<h3 id="org8e7e487">Conclusión</h3>
-<div class="outline-text-3" id="text-org8e7e487">
-<p>
-Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <b>date</b> y <b>echo</b>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf337aff" class="outline-3">
-<h3 id="orgf337aff">Fuentes</h3>
-<div class="outline-text-3" id="text-orgf337aff">
-<ul class="org-ul">
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <strong>date</strong> y <strong>echo</strong>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
 <li><a href="https://www.computerhope.com/unix/uprintf.htm">https://www.computerhope.com/unix/uprintf.htm</a></li>
 <li><a href="https://wiki.bash-hackers.org/commands/builtin/printf">https://wiki.bash-hackers.org/commands/builtin/printf</a></li>
 <li><a href="https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/">https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/</a></li>
 </ul>
 <br>
-<p>
-Publicado por Angel el viernes 08 febrero del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el viernes 08 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
@@ -768,10 +312,4 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,402 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title> Atajos de Terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Atajos de Terminal</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil"
- />
-<meta name="keywords" content="servidor" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta name=author content=Angel. uGeek />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta name="description" content="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content=" Atajos de Terminal" />
-<meta property="og:description" content="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil" />
-<meta property="og:image" content="" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-06--atajos-de-terminal.html" />
-<meta name="twitter:title" content=" Atajos de Terminal" />
-<meta name="twitter:description" content="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil" />
-<meta name="twitter:image" content="" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-org0e66cbf" class="outline-2">
-<h2 id="org0e66cbf">Atajos de Terminal</h2>
-<div class="outline-text-2" id="text-org0e66cbf">
-<p>
-Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil. 
-</p>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-
-<div class="figure">
-<p><img src="../images-blog/atajos.jpg" alt="atajos.jpg" />
-</p>
-</div>
-
-
-<p>
-El truco para aprenderlos es leer todo lo que podemos hacer con atajos y cuando lo necesites, lee aquí el atajo y ejecutalo. En muy poco espacio de tiempo, estoy seguro que lo tendrás integrado y totalmente aprendido. 
-</p>
-
-<p>
-Aprenderse los atajos de teclado para no utilizar el ratón, es de las cosas mas productivas que puedes hacer y no solo por el tiempo perdido en utilizar el ratón, sino que también influye en la fluidez a la hora de desarrollar aquello con lo que estás trabajando. 
-</p>
-
-<p>
-No hay nada que te pare!!!
-</p>
-
-<p>
-Comentaros que parte de estos comandos, son también compatibles con Emacs. Así que aprendemos por partida doble.
-</p>
-
-<p>
-Los he agrupado según mi uso. Quizás lo que para mi es importante, para ti no lo es, pero aquí los tienes: 
-</p>
-</div>
-
-<div id="outline-container-orgacce18a" class="outline-3">
-<h3 id="orgacce18a">Importantes</h3>
-<div class="outline-text-3" id="text-orgacce18a">
-<ul class="org-ul">
-<li><b>Ctrl+a</b>: lleva el cursor al inicio de la línea</li>
-<li><b>Ctrl+e</b>: lleva el cursor al final de la línea</li>
-<li><b>Ctrl+k</b>: borra desde el cursor hasta el final de la línea</li>
-<li><b>Ctrl+u</b>: borra desde el cursor hasta el inicio de la línea</li>
+<h1 id="atajos-de-terminal-1" title="Atajos de Terminal" data-export_file_name="Atajos de Terminal" data-description="Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil" data-export_date="2019-04-06 0:40" data-category="terminal" data-tag="servidor" data-image="./images-blog/atajos.jpg">Atajos de Terminal</h1>
+<p>Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil.</p>
+<p><img src="../images-blog/atajos.jpg" /></p>
+<p>El truco para aprenderlos es leer todo lo que podemos hacer con atajos y cuando lo necesites, lee aquí el atajo y ejecutalo. En muy poco espacio de tiempo, estoy seguro que lo tendrás integrado y totalmente aprendido.</p>
+<p>Aprenderse los atajos de teclado para no utilizar el ratón, es de las cosas mas productivas que puedes hacer y no solo por el tiempo perdido en utilizar el ratón, sino que también influye en la fluidez a la hora de desarrollar aquello con lo que estás trabajando.</p>
+<p>No hay nada que te pare!!!</p>
+<p>Comentaros que parte de estos comandos, son también compatibles con Emacs. Así que aprendemos por partida doble.</p>
+<p>Los he agrupado según mi uso. Quizás lo que para mi es importante, para ti no lo es, pero aquí los tienes:</p>
+<h2 id="importantes">Importantes</h2>
+<ul>
+<li><strong>Ctrl+a</strong>: lleva el cursor al inicio de la línea</li>
+<li><strong>Ctrl+e</strong>: lleva el cursor al final de la línea</li>
+<li><strong>Ctrl+k</strong>: borra desde el cursor hasta el final de la línea</li>
+<li><strong>Ctrl+u</strong>: borra desde el cursor hasta el inicio de la línea</li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-org2e75f8b" class="outline-3">
-<h3 id="org2e75f8b">Importantes en el uso</h3>
-<div class="outline-text-3" id="text-org2e75f8b">
-<ul class="org-ul">
-<li><b>Ctrl+l</b>: limpia la terminal</li>
-<li><b>Ctrl+c</b>: termina el proceso que se esté ejecutando</li>
-<li><b>Ctrl+z</b>: deja en segundo plano el proceso, para volver al proceso, introduce <b>fg</b></li>
-<li><b>Ctrl+r</b>: búsqueda de comandos usados anteriormente, escribiendo el inicio del comando</li>
-<li><b>Tab</b>: autocompleta comandos, rutas, directorios, archivos&#x2026;</li>
+<h2 id="importantes-en-el-uso">Importantes en el uso</h2>
+<ul>
+<li><strong>Ctrl+l</strong>: limpia la terminal</li>
+<li><strong>Ctrl+c</strong>: termina el proceso que se esté ejecutando</li>
+<li><strong>Ctrl+z</strong>: deja en segundo plano el proceso, para volver al proceso, introduce <strong>fg</strong></li>
+<li><strong>Ctrl+r</strong>: búsqueda de comandos usados anteriormente, escribiendo el inicio del comando</li>
+<li><strong>Tab</strong>: autocompleta comandos, rutas, directorios, archivos…</li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-org1a1ee30" class="outline-3">
-<h3 id="org1a1ee30">Menos importantes en el uso</h3>
-<div class="outline-text-3" id="text-org1a1ee30">
-<ul class="org-ul">
-<li><b>Ctrl+p</b>: último comando introducido</li>
-<li><b>Ctrl+d</b>: sale de la terminal</li>
-<li><b>Alt+.</b>:  escribe los últimos comandos a continuación de donde estemos</li>
-<li><b>Ctrl+g</b>: Anular lo que estemos haciendo</li>
+<h2 id="menos-importantes-en-el-uso">Menos importantes en el uso</h2>
+<ul>
+<li><strong>Ctrl+p</strong>: último comando introducido</li>
+<li><strong>Ctrl+d</strong>: sale de la terminal</li>
+<li><strong>Alt+.</strong>: escribe los últimos comandos a continuación de donde estemos</li>
+<li><strong>Ctrl+g</strong>: Anular lo que estemos haciendo</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org715bb26" class="outline-3">
-<h3 id="org715bb26">Intercambiar posiciones</h3>
-<div class="outline-text-3" id="text-org715bb26">
-<ul class="org-ul">
-<li><b>Ctrl+t</b>: intercambia la posición de los dos caracteres anteriores al cursor</li>
-<li><b>Alt+t</b>: intercambia la posición de las dos palabras anteriores al cursor</li>
+<h2 id="intercambiar-posiciones">Intercambiar posiciones</h2>
+<ul>
+<li><strong>Ctrl+t</strong>: intercambia la posición de los dos caracteres anteriores al cursor</li>
+<li><strong>Alt+t</strong>: intercambia la posición de las dos palabras anteriores al cursor</li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-orgf62f4da" class="outline-3">
-<h3 id="orgf62f4da">Mover cursor</h3>
-<div class="outline-text-3" id="text-orgf62f4da">
-<ul class="org-ul">
-<li><b>Alt+f</b>:  salta a la siguiente palabra</li>
-<li><b>Alt+b</b>:  salta a la anterior palabra</li>
-<li><b>Ctrl+xx</b>: salta entre la posición actual y el inicio de la línea y viceversa</li>
+<h2 id="mover-cursor">Mover cursor</h2>
+<ul>
+<li><strong>Alt+f</strong>: salta a la siguiente palabra</li>
+<li><strong>Alt+b</strong>: salta a la anterior palabra</li>
+<li><strong>Ctrl+xx</strong>: salta entre la posición actual y el inicio de la línea y viceversa</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org34ae2b1" class="outline-3">
-<h3 id="org34ae2b1">Mas atajos de borrar</h3>
-<div class="outline-text-3" id="text-org34ae2b1">
-<ul class="org-ul">
-<li><b>Ctrl+w</b>: borra la palabra anterior al cursor</li>
-<li><b>Alt+d</b>: borra la palabra siguiente al cursor</li>
+<h2 id="mas-atajos-de-borrar">Mas atajos de borrar</h2>
+<ul>
+<li><strong>Ctrl+w</strong>: borra la palabra anterior al cursor</li>
+<li><strong>Alt+d</strong>: borra la palabra siguiente al cursor</li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-orgc7c08c1" class="outline-3">
-<h3 id="orgc7c08c1">Copiar y Pegar</h3>
-<div class="outline-text-3" id="text-orgc7c08c1">
-<ul class="org-ul">
-<li><b>Ctrl+Shift+v</b>: pegar el texto del portapapeles en la terminal</li>
-<li><b>Ctrl+Shift+c</b>: seleccionando el texto de la terminal, copiamos al portapapeles</li>
+<h2 id="copiar-y-pegar">Copiar y Pegar</h2>
+<ul>
+<li><strong>Ctrl+Shift+v</strong>: pegar el texto del portapapeles en la terminal</li>
+<li><strong>Ctrl+Shift+c</strong>: seleccionando el texto de la terminal, copiamos al portapapeles</li>
 </ul>
-</div>
-</div>
-
-
-<div id="outline-container-org5b07da6" class="outline-3">
-<h3 id="org5b07da6">Abrir terminal</h3>
-<div class="outline-text-3" id="text-org5b07da6">
-<ul class="org-ul">
-<li><b>Ctrl+Alt+t</b>: La mayor parte de las terminales</li>
-<li><b>F12</b>: Si utilizas Guake</li>
+<h2 id="abrir-terminal">Abrir terminal</h2>
+<ul>
+<li><strong>Ctrl+Alt+t</strong>: La mayor parte de las terminales</li>
+<li><strong>F12</strong>: Si utilizas Guake</li>
 </ul>
-
 <br>
-<p>
-Publicado por Angel el sábado 06 abril del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<ul class="org-ul">
+<p>Publicado por Angel el sábado 06 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos&#x2026; con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
@@ -404,10 +83,4 @@ También te puede interesar:
 <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

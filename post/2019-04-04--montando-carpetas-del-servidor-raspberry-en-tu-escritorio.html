@@ -1,380 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
+<title> Montando carpetas del servidor, Raspberry,... en tu escritorio. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</title>
-<meta name="generator" content="Org mode" />
-<meta name="description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil"
- />
-<meta name="keywords" content="servidor," />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date())
-gtag('config', 'UA-131560140-1');
-</script>
-<meta property=og:type content=website />
-<meta property=og:locale content=es_ES />
-<meta name=author content=Angel. uGeek />
-<meta name=twitter:site content=@ugeekpodcast />
-<meta name=twitter:card content=summary_large_image />
-<link rel=apple-touch-icon-precomposed href=https://ugeek.github.io/icon/ugeek-256x256.png />
-<link rel=alternate type=application/rss+xml title=uGeek. Blog de Tecnología href=https://ugeek.github.io/feed/ />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-<meta name="description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
-<meta property="og:type" content="article" />
-<meta property="og:title" content=" Montando carpetas del servidor, Raspberry,... en tu escritorio" />
-<meta property="og:description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
-<meta property="og:image" content="" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html" />
-<meta name="twitter:title" content=" Montando carpetas del servidor, Raspberry,... en tu escritorio" />
-<meta name="twitter:description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
-<meta name="twitter:image" content="" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+ <meta property="og:type" content="website" /> <meta property="og:locale" content="es_ES" /> <meta name="author" content="Angel. uGeek" /> <meta property="og:site_name" content="uGeek. Blog de Tecnología"/> <meta name="twitter:site" content="@ugeekpodcast" /> <meta name="twitter:card" content="summary_large_image" /> <link rel="shortlink href=https://ugeek.github.io/" /> <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" /> <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" /> <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" /> <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/feed/" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="..css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
 </head>
-<body>
-<div id="content">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
-<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
-<div id="icon"><a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
-<div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<div id="outline-container-orgae08453" class="outline-2">
-<h2 id="orgae08453">Montando carpetas del servidor, Raspberry,&#x2026; en tu escritorio</h2>
-<div class="outline-text-2" id="text-orgae08453">
-<p>
-Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry&#x2026; y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜,  te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,&#x2026;  tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.
-</p>
+ <link href=http://fonts.googleapis.com/css?family=Lato rel=stylesheet type=text/css/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-
-<div class="figure">
-<p><img src="../images-blog/sshfs.png" alt="sshfs.png" />
-</p>
-</div>
-
-<p>
-Esto nos lo va a permitir SSHFS, teniendo en la máquina remota un servidor SSH montado.
-</p>
-
-<p>
-SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil. Para ello tenemos que seguir los siguientes pásos:
-</p>
-<ul class="org-ul">
+<h1 id="montando-carpetas-del-servidor-raspberry-en-tu-escritorio-1" title="Montando carpetas del servidor, Raspberry,... en tu escritorio" data-export_file_name="Montando carpetas del servidor Raspberry en tu escritorio" data-description="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil" data-export_date="2019-04-04 18:40" data-category="ssh" data-tag="servidor" data-image="./images-blog/sshfs.png">Montando carpetas del servidor, Raspberry,… en tu escritorio</h1>
+<p>Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry… y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜, te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,… tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.</p>
+<p><img src="../images-blog/sshfs.png" /></p>
+<p>Esto nos lo va a permitir SSHFS, teniendo en la máquina remota un servidor SSH montado.</p>
+<p>SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil. Para ello tenemos que seguir los siguientes pásos:</p>
+<ul>
 <li>Instalaremos sshfs</li>
-<li>Crear una <b>carpeta vacía</b>, donde montaremos la carpeta remota</li>
+<li>Crear una <strong>carpeta vacía</strong>, donde montaremos la carpeta remota</li>
 <li>Mediante una línea de terminal montaremos y desmontaremos la carpeta cuando lo deseemos</li>
 </ul>
-</div>
-<div id="outline-container-orgcc69344" class="outline-3">
-<h3 id="orgcc69344">Instalación en la máquina local</h3>
-<div class="outline-text-3" id="text-orgcc69344">
-<p>
-SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:
-</p>
-
-<p>
-<code>sudo apt install sshfs</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgfd4e7f7" class="outline-3">
-<h3 id="orgfd4e7f7">Creando la carpeta de montaje</h3>
-<div class="outline-text-3" id="text-orgfd4e7f7">
-<p>
-En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: <b>~/carpeta_montaje</b>
-</p>
-
-<p>
-<code>mkdir -p ~/carpeta_montaje</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org2e4eecc" class="outline-3">
-<h3 id="org2e4eecc">Montar carpeta</h3>
-<div class="outline-text-3" id="text-org2e4eecc">
-<p>
-Vamos a montar la <b>carpeta del servidor</b> que deseemos montar el local, en mi caso la carpeta llamada <b>carpeta_del_servidor</b>, en la carpeta de mi portátil que he creado llamada <b>carpeta_montaje</b>. 
-</p>
-
-<p>
-Sustituye <b>usuario@192.168.1.100</b>, por el usuario e IP del servidor que te vas a conectar.
-</p>
-
-<p>
-Ahora vamos a conectarnos con:
-</p>
-
-<p>
-<code>sshfs usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code>
-</p>
-
-<p>
-En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos conectaríamos así:
-</p>
-
-<p>
-<code>sshfs -p 5555 usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd8925f2" class="outline-3">
-<h3 id="orgd8925f2">Desmontar</h3>
-<div class="outline-text-3" id="text-orgd8925f2">
-<p>
-Para desmontar la carpeta, introduciremos en la terminal <b>fusermount -u</b> seguido de la carpeta de montaje:
-</p>
-
-<p>
-<code>fusermount -u ~/carpeta_montaje</code>
-</p>
-</div>
-</div>
-<div id="outline-container-org617f461" class="outline-3">
-<h3 id="org617f461">Conclusión</h3>
-<div class="outline-text-3" id="text-org617f461">
-<p>
-Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.
-</p>
+<h2 id="instalación-en-la-máquina-local">Instalación en la máquina local</h2>
+<p>SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:</p>
+<p><code>sudo apt install sshfs</code></p>
+<h2 id="creando-la-carpeta-de-montaje">Creando la carpeta de montaje</h2>
+<p>En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: <strong>~/carpeta<sub>montaje</sub></strong></p>
+<p><code>mkdir -p ~/carpeta_montaje</code></p>
+<h2 id="montar-carpeta">Montar carpeta</h2>
+<p>Vamos a montar la <strong>carpeta del servidor</strong> que deseemos montar el local, en mi caso la carpeta llamada <strong>carpeta<sub>delservidor</sub></strong>, en la carpeta de mi portátil que he creado llamada <strong>carpeta<sub>montaje</sub></strong>.</p>
+<p>Sustituye <strong>usuario@192.168.1.100</strong>, por el usuario e IP del servidor que te vas a conectar.</p>
+<p>Ahora vamos a conectarnos con:</p>
+<p><code>sshfs usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
+<p>En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos conectaríamos así:</p>
+<p><code>sshfs -p 5555 usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
+<h2 id="desmontar">Desmontar</h2>
+<p>Para desmontar la carpeta, introduciremos en la terminal <strong>fusermount -u</strong> seguido de la carpeta de montaje:</p>
+<p><code>fusermount -u ~/carpeta_montaje</code></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.</p>
 <br>
-<p>
-Publicado por Angel el jueves 04 abril del 2019  
-</p>
-<br><br>
-<p>
-También te puede interesar:
-</p>
-
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><br><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+<p>Publicado por Angel el jueves 04 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
