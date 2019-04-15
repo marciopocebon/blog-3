@@ -148,7 +148,7 @@
     <title>2 Archivos de configuración, un Emacs</title>
     <link>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="2 Archivos de configuración, un Emacs"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="2 Archivos de configuración, un Emacs"&gt;
 &lt;br&gt;&lt;p&gt;Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html&gt;2 Archivos de configuración, un Emacs&lt;/a&gt;
 
@@ -181,7 +181,7 @@
     <title>OrgMode: Buscar solo en las Cabeceras</title>
     <link>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="OrgMode: Buscar solo en las Cabeceras"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="OrgMode: Buscar solo en las Cabeceras"&gt;
 &lt;br&gt;&lt;p&gt;Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
 
@@ -214,7 +214,7 @@
     <title>Lee Super rápido en Emacs con Spray</title>
     <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="Lee Super rápido en Emacs con Spray"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Lee Super rápido en Emacs con Spray"&gt;
 &lt;br&gt;&lt;p&gt;No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
 
@@ -247,7 +247,7 @@
     <title>Con Emacs también podemos editar Markdown</title>
     <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="Con Emacs también podemos editar Markdown"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Con Emacs también podemos editar Markdown"&gt;
 &lt;br&gt;&lt;p&gt;He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html&gt;Con Emacs también podemos editar Markdown&lt;/a&gt;
 
@@ -280,7 +280,7 @@
     <title>Kde Connect en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="Kde Connect en Emacs"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Kde Connect en Emacs"&gt;
 &lt;br&gt;&lt;p&gt;Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html&gt;Kde Connect en Emacs&lt;/a&gt;
 
@@ -313,7 +313,7 @@
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/icon/ugeek.png" alt="Convertir de Markdown a Org Mode gracias a Pandoc"&gt;
+&lt;img src="https://ugeek.github.io/blog/icon/ugeek-256x256.png" alt="Convertir de Markdown a Org Mode gracias a Pandoc"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html&gt;Convertir de Markdown a Org Mode gracias a Pandoc&lt;/a&gt;
 
