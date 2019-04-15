@@ -270,7 +270,7 @@ echo '<head>
 
 <meta name="twitter:title" content="'$FILE_TITLE'" />
 <meta name="twitter:description" content="'$FILE_DESCRIPTION'" />
-<meta name="twitter:image" content="'$FILE_IMAGE'" />
+<meta name="twitter:image" content="'$LINK'/images-blog/'$FILE_IMAGE'" />
 
 
 
