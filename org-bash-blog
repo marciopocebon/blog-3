@@ -230,7 +230,7 @@ done < category_temp_post.csv
 FILE_TITLE=$(grep ":TITLE:" temp_post.org | cut -d " " -f2- | sed 's/|/,/g')
 FILE_NAME=$(grep ":EXPORT_FILE_NAME:" temp_post.org | cut -d " " -f2- |awk '{print tolower($0)}' |  sed 's/ /-/g')
 FILE_DATE=$(grep ":EXPORT_DATE:" temp_post.org | cut -d " " -f2)
-FILE_IMAGE="$(grep ':IMAGE:' temp_post.org  | cut -d " " -f2 | sed "s|^./|$LINK/|")"
+FILE_IMAGE=$(grep ":IMAGE:" temp_post.org  | cut -d " " -f2- | sed 's|./images-blog/||g' | sed 's/ //g' )
 FILE=$(echo "$FILE_DATE-$FILE_NAME")
 FILE_DESCRIPTION=$(grep ":DESCRIPTION:" temp_post.org | cut -d " " -f2-)
 DESCRIPTION_P=$(echo $FILE_DESCRIPTION | sed 's/|/,/g')
@@ -265,7 +265,7 @@ echo '<head>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content="'$FILE_TITLE'" />
 <meta property="og:description" content="'$FILE_DESCRIPTION'" />
-<meta property="og:image" content="'$FILE_IMAGE'" />
+<meta property="og:image" content="'$LINK'/images-blog/'$FILE_IMAGE'" />
 <meta property="og:url" content="'$LINK'/post/'$FILE'.html" />
 
 <meta name="twitter:title" content="'$FILE_TITLE'" />
