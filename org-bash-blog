@@ -22,24 +22,19 @@
 #
 
 
-BROWSER="firefox"
-TWITTER="@ugeekpodcast"
+# BROWSER
+BROWSER="firefox"         # Browser to open page
+TWITTER="@ugeekpodcast"   # nick twitter
+LANGUAGE="es_ES"          
+GOOGLE_ANALITYCS="UA-131560140-1"
 
+# RSS
+LOGO_FEED="https://ugeek.github.io/ugeek.png"
+ICON="https://ugeek.github.io/icon/ugeek-256x256.png"
+IMAGE="https://ugeek.github.io/icon/ugeek.png"
+LANGUAGE_RSS="es"
 
-#<link rel="shortlink' href='https://ugeek.github.io/" />
-
-#<meta property="og:type" content="website" />
-
-
-
-
-
-
-################################################################################
-# MAIN CONTENT. INDEX PAGE
-INDEX=$(echo "Bienvenido al Blog del Podcast de *uGeek*. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el [[https://ugeek.github.io][Podcast]]. En la sección [[https://ugeek.github.io/tags.html][Tags]], encontraras todos los Artículos y Podcast, clasificados por temáticas.")
-
-
+# HEAD PAGE INDEX, LIST, TAG
 HEAD_PAGE=$(echo '
 <link href="'http://fonts.googleapis.com/css?family=Lato'" rel="'stylesheet'" type="'text/css'"/>
 
@@ -58,8 +53,7 @@ HEAD_PAGE=$(echo '
 <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;
 <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>')
 
-
-
+# HEAD POST PAGE
 HEAD_PAGE_POST=$(echo '
 <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
 
@@ -78,25 +72,21 @@ HEAD_PAGE_POST=$(echo '
 <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;
 <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>')
 
-#######
+# MAIN CONTENT. INDEX PAGE
+INDEX=$(echo "Bienvenido al Blog del Podcast de *uGeek*. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el [[https://ugeek.github.io][Podcast]]. En la sección [[https://ugeek.github.io/tags.html][Tags]], encontraras todos los Artículos y Podcast, clasificados por temáticas.")
+
+# MAIN CONTENT. INDEX PAGE
 ULTIMO_TITULO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/ugeek" | grep '<title>' | head -3 | tail -1 | sed 's/<title>/ /g' | sed 's/<\/title>/ /g')
 ULTIMO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '<enclosure url="[^"]*' | grep -o '[^"]*$' | head -1)
+
 # MAIN CONTENT NEXT. INDEX PAGE
 INDEX_NEXT=$(echo "
 * $ULTIMO_TITULO_PODCAST
-#+HTML: <audio controls=''><source src="$ULTIMO_PODCAST" />Tu navegador no soporta reproductor de Podcast.</audio>'
-")
-################################################################################
+#+HTML: <audio controls=''><source src="$ULTIMO_PODCAST" />Tu navegador no soporta reproductor de Podcast.</audio>")
+
 # FOOTER WEB. ALL PAGES
 PIE_WEB=$(echo '<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>')
 
-
-################################################################################
-# RSS
-LOGO_FEED="https://ugeek.github.io/ugeek.png"
-IMAGE="https://ugeek.github.io/icon/ugeek.png"
-    
-################################################################################
 if [ $1 = "-h" ]
 then
 echo "
@@ -108,17 +98,15 @@ Modo de empleo:     ./org-bash-blog [ARCHIVO ORG-MODE]
        Comando                      Significado
        ./org-bash-blog -h           Ayuda
        ./org-bash-blog -b           Construir carpetas
+       ./org-bash-blog -p           Construir blog podcast
+
 
 "
 else  
-
 if [ $1 = "-b" ]
 then
 mkdir -p icon css org post images-blog
 else  
-
-    
-################################################################################
 TITLE=$(grep "#+TITLE:" $1 | cut -d " " -f2-)
 LINK=$(grep "#+LINK:" $1 | cut -d " " -f2-)
 DESCRIPTION=$(grep "#+DESCRIPTION:" $1 | cut -d " " -f2-)
@@ -130,13 +118,7 @@ grep ":EXPORT_DATE:"  $1 | cut -d " " -f2 > date-
 grep ":EXPORT_DATE:"  $1 | cut -d " " -f3 > hour
 grep ":CATEGORY:"  $1 | cut -d " " -f2- > category
 grep ":TAG:" $1 | cut -d " " -f2- | tr -d ' ' | sed "s|$|,,,,,,,,,|" | cut -d, -f -10 > tag
-#
 grep ":IMAGE:" $1 | cut -d " " -f2- | tr -d ' ' > image
-
-
-
-
-
 cat date- |  tr -d '-' > date
 paste -d, date title link description date- category tag hour image > postsID.csv
 cat postsID.csv | sort -r | cut -d, -f2- > posts.csv
@@ -164,23 +146,19 @@ LINES_BLOG=$(cat $1  | wc -l)
 cat $1  | wc -l >> TODO.txt
 echo "Hay $NUM_POSTS Artículos y $LINES_BLOG líneas en $1"
 echo "Se va a publicar $(grep -n "^* TODO" $1 | wc -l) Artículos"
-
 rm org/*.org
 ONE_LINE=$(cat TODO.txt | head -1)
 sed -i '1d' TODO.txt
 while read TWO_LINE; do
 LAST_LINE=$(($TWO_LINE - 1))
-
 CATEGORY=$(cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' | grep ":CATEGORY:"  | cut -d " " -f2)
 cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' >> org/$CATEGORY.org
-echo "$GOOGLE_ANALITYCS" > temp_post.org
+#echo "$GOOGLE_ANALITYCS" > temp_post.org
 #sed -n "5,20 p" $1 >> temp_post.org
 cat $1 | sed -n  "$ONE_LINE,$LAST_LINE"p | sed 's/* TODO/*/g' > temp_post.org
-
 ONE_LINE=$(echo $TWO_LINE)
 PUB=$(expr $PUB + 1)
 echo "Publicando Artículo Nº $PUB     $(grep ":TITLE:" temp_post.org | cut -d " " -f2-)"
-
 FILE_DATE=$(grep ":EXPORT_DATE:" temp_post.org | cut -d " " -f2)
 DATE_MOD=$(grep ":EXPORT_DATE:" temp_post.org | cut -d " " -f4)
 if [ -n "$DATE_MOD" ];
@@ -188,11 +166,9 @@ then
     echo "               ***** Artículo Modificado *****"
     UPDATE=$(echo " y *actualizado* el $(date -d"$DATE_MOD" +'%A %d %B del %Y')")
 fi
-
 echo "#+HTML: <br>" >> temp_post.org
 echo "Publicado por $AUTHOR el $(date -d"$FILE_DATE" +'%A %d %B del %Y') $UPDATE" >> temp_post.org
 UPDATE=$(echo " ")
-    
 echo "#+HTML: <br><br> " >> temp_post.org
 echo "También te puede interesar:
  "  >> temp_post.org
@@ -204,20 +180,7 @@ while read LINEA; do
 OTHERSTITLE=$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g')
 OTHERSLINKS=$(echo $LINEA | cut -d, -f2)
 OTHERSDATE=$(echo  $LINEA | cut -d, -f4)
-
-
-
-# Esta era la buena ->>> echo '#+html:<li><a href="'$LINK'/post/'$OTHERSDATE-$OTHERSLINKS'.html">'$OTHERSTITLE'</a></li>'   >> temp_post.org
-
 echo "- [[$LINK/post/$OTHERSDATE-$OTHERSLINKS.html][$OTHERSTITLE]]" >> temp_post.org
-
-#echo '#+HTML:<li><a href="$LINK/post/$OTHERSDATE-$OTHERSLINKS.html">$OTHERSTITLE</a></li>'  >> temp_post.org
-#echo "- [[$LINK/post/$OTHERSDATE-$OTHERSLINKS.html][$OTHERSTITLE]]" >> temp_post.org
-
-
-
-
-
 done < category_temp_post.csv
 FILE_TITLE=$(grep ":TITLE:" temp_post.org | cut -d " " -f2- | sed 's/|/,/g')
 FILE_NAME=$(grep ":EXPORT_FILE_NAME:" temp_post.org | cut -d " " -f2- |awk '{print tolower($0)}' |  sed 's/ /-/g')
@@ -232,12 +195,6 @@ TAG=$(echo $FILE_TAG | sed 's/|/,/g')
 sed -i "1i #+KEYWORDS: $TAG" temp_post.org
 echo "#+TITLE: $FILE_TITLE" > $FILE.org
 cat temp_post.org >> $FILE.org
-
-
-
-
-
-
 echo '<head>
 <title>'$FILE_TITLE'. '$TITLE'</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -246,11 +203,11 @@ echo '<head>
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="'$LINK'/feed.xml" title="uGeek - Blog de Tecnología">
 
-<link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png" />
-<meta property="og:locale" content="es_ES" />
+<link rel="shortcut icon" href="'$LINK$ICON'" type="image/x-icon" />
+<link rel="icon" href="'$LINK$ICON'" sizes="32x32" />
+<link rel="icon" href="'$LINK$ICON'" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="'$LINK$ICON'" />
+<meta property="og:locale" content="'$LANGUAGE'" />
 
 
 
@@ -276,6 +233,15 @@ echo '<head>
 <meta name="twitter:image" content="'$LINK'/images-blog/'$FILE_IMAGE'" />
 
 
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id='$GOOGLE_ANALITYCS'"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("'"js"'", new Date())
+gtag("'"config"'", "'$GOOGLE_ANALITYCS'");
+</script>
 
 </head>
 
@@ -283,19 +249,9 @@ echo '<head>
 
 '$HEAD_PAGE_POST'
 ' >   $FILE.html
-
-
-
 cat $FILE.org | pandoc --from org --to html5 >> $FILE.html
-
-
-
 ORG=$(echo '<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p>')
-
-
 echo $ORG $PIE_WEB  >> $FILE.html
-
-
 rm $FILE.org
 sed -i 's|src="./images-blog/|src="../images-blog/|g' $FILE.html
 sed -i 's|__icon/|../icon/|g' $FILE.html
@@ -306,8 +262,6 @@ sed -i 's|href="tag.html"|./href="../tag.html"|g' $FILE.html
 mv $FILE.html post/$FILE.html
 done < TODO.txt
 rm TODO.txt
-
-
 echo '<html>
 <html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex">
 <title>org-bash-blog. Index</title>
@@ -319,18 +273,8 @@ echo '<html>
 <h5>'$(find . -type f | grep .html | wc -l)' archivos .html</h5>
 <h5>' > org-bash-blog.html
 find . -type f | grep .html | sed -r 's/(.*)/\<a href="\1" target="_blank" rel="noopener">\1\<\/a\><br>/' | sort -r >> org-bash-blog.html
-
-
 $BROWSER org-bash-blog.html 
 $BROWSER "post/$FILE.html" 
-
-
-
-
-
-
-
-
 clear
 echo "Generando Feed"
 TODAY=$(date +'%A %d de %B del %Y')
@@ -345,7 +289,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>
        <title>'$TITLE'</title>
        <link>'$LINK'</link>
     </image>
-    <language>es</language>
+    <language>'$LANGUAGE_RSS'</language>
     <atom:link href="'$LINK'/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>'> feed.xml
 while read LINEA; do 
@@ -367,7 +311,6 @@ echo "   <item>" >> feed.xml
 echo "    <title>$TITLE_F</title>" >> feed.xml
 echo "    <link>$LINK/post/$DATE-$LINK_P.html</link>" >> feed.xml
 echo "    <description>" >> feed.xml
-
 echo '&lt;img src="'$IMAGE_POST'" alt="'$TITLE_F'"&gt;'   >> feed.xml
 echo "&lt;br&gt;&lt;p&gt;$DESC... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href="$LINK/post/$DATE-$LINK_P.html"&gt;$TITLE_F&lt;/a&gt;
@@ -390,10 +333,7 @@ echo "&lt;br&gt;&lt;p&gt;$DESC...
 &lt;a href="http://feeds.feedburner.com/ugeek"&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>" >> feed.xml
-
-
 echo "    <pubDate>$DATEPUB</pubDate>" >> feed.xml
-#echo '    <dc:creator>'$AUTHOR'</dc:creator>'  >> feed.xml
 echo '    <category>'$CATEGORY_POST'</category>'  >> feed.xml
 echo '    <category>'$CATEGORY_POST1'</category>'  >> feed.xml
 echo '    <category>'$CATEGORY_POST2'</category>'  >> feed.xml
@@ -403,8 +343,6 @@ echo "    <guid>$LINK/post/$DATE-$LINK_P.html</guid>
 done < posts.csv
 echo "  </channel>
 </rss>" >> feed.xml
-
-
 echo "Generando Feed por Categoría"
 WORD="emacs"
 awk '/,emacs,/ { print }' posts.csv > emacs.csv
@@ -419,10 +357,9 @@ echo '<?xml version="1.0" encoding="utf-8"?>
        <title>'$TITLE'</title>
        <link>'$LINK'</link>
     </image>
-    <language>es</language>
+    <language>'$LANGUAGE_RSS'</language>
     <atom:link href="'$LINK'/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>'> $WORD.xml
-
 while read LINEA; do 
 TITLE_F="$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g')"
 LINK_P="$(echo $LINEA | cut -d, -f2)"
@@ -442,7 +379,6 @@ echo "   <item>" >> $WORD.xml
 echo "    <title>$TITLE_F</title>" >> $WORD.xml
 echo "    <link>$LINK/post/$DATE-$LINK_P.html</link>" >> $WORD.xml
 echo "    <description>" >> $WORD.xml
-
 echo '&lt;img src="'$IMAGE_POST'" alt="'$TITLE_F'"&gt;'   >> $WORD.xml
 echo "&lt;br&gt;&lt;p&gt;$DESC... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href="$LINK/post/$DATE-$LINK_P.html"&gt;$TITLE_F&lt;/a&gt;
@@ -465,10 +401,7 @@ echo "&lt;br&gt;&lt;p&gt;$DESC...
 &lt;a href="http://feeds.feedburner.com/ugeek"&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>" >> $WORD.xml
-
-
 echo "    <pubDate>$DATEPUB</pubDate>" >> $WORD.xml
-#echo '    <dc:creator>'$AUTHOR'</dc:creator>'  >> $WORD.xml
 echo '    <category>'$CATEGORY_POST'</category>'  >> $WORD.xml
 echo '    <category>'$CATEGORY_POST1'</category>'  >> $WORD.xml
 echo '    <category>'$CATEGORY_POST2'</category>'  >> $WORD.xml
@@ -480,8 +413,7 @@ echo "  </channel>
 </rss>" >> $WORD.xml
 echo "Generando Página Home"
 cat posts.csv | head -n5 > posts_home.csv
-#sed -n "1,20 p" $1 > index.org
-echo "$GOOGLE_ANALITYCS" >> index.org
+#echo "$GOOGLE_ANALITYCS" >> index.org
 echo " " >> index.org
 echo "$INDEX" >> index.org
 echo " " >> index.org
@@ -491,22 +423,9 @@ while read LINEA; do
 TPOST=$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g')
 UPOST=$(echo $LINEA | cut -d, -f2)
 DPOST=$(echo $LINEA | cut -d, -f4)
-
-
-
 echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> index.org
-
-#echo '#+html:<li><i>'$DPOST' - </i><a href="'$LINK'/post/'$DPOST-$UPOST'.html">'$TPOST'</a></li>'   >> index.org
-
-echo " " >> index.org
 done < posts_home.csv
 echo "$INDEX_NEXT" >> index.org
-#echo "$ORG $PIE_WEB"  >> index.org
-
-
-
-
-
 echo '<head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -521,6 +440,12 @@ echo '<head>
 <meta name="robots" content="index, follow">
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$DESCRIPTION'" />
+
+<link rel="shortcut icon" href="'$LINK$ICON'" type="image/x-icon" />
+<link rel="icon" href="'$LINK$ICON'" sizes="32x32" />
+<link rel="icon" href="'$LINK$ICON'" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="'$LINK$ICON'" />
+<meta property="og:locale" content="'$LANGUAGE'" />
 
 
 <meta property="og:site_name" content="'$TITLE'"/> 
@@ -540,55 +465,20 @@ echo '<head>
 <br><br><br><br><br><br><br><br><br><br>
 '$HEAD_PAGE'
 '> index.html
-
-
-
 cat index.org | pandoc --from org --to html5 >> index.html
-
-
 echo $ORG $PIE_WEB  >> index.html
-
-
-
-
-#emacs index.org --batch -f org-html-export-to-html --kill
 sed -i 's|__icon/|icon/|g' index.html
 sed -i 's|__css/|css/|g' index.html
 rm index.org posts_home.csv
-
-
-
-
 echo "Generando Lista de Artículos"
-#echo "#+TITLE: Artículos. $TITLE" > list.org
-#echo "#+LINK: $LINK/list.html" >> list.org
-#echo "#+DESCRIPTION: Etiquetas de $TITLE" >> list.org
-#sed -n "4,20 p" $1 >> list.org
-
-
-echo "$GOOGLE_ANALITYCS" > list.org
+#echo "$GOOGLE_ANALITYCS" > list.org
 echo "* $NUM_POSTS Artículos Publicados" >> list.org
-#echo " " >> list.org
 while read LINEA; do 
 TPOST=$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g')
 UPOST=$(echo $LINEA | cut -d, -f2)
 DPOST=$(echo $LINEA | cut -d, -f4)
-
-#echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> list.org
-
-#echo '#+html: <li><i>'$DPOST' - </i><a href="'$LINK'/post/'$DPOST-$UPOST'.html">'$TPOST'</a></li>'   >> list.org
-
 echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> list.org
-
-#echo '<li><i>'$DPOST' - </i><a href="'$LINK'/post/'$DPOST-$UPOST'.html">'$TPOST'</a></li>'   >> list.html
-
-#echo " " >> list.org
 done < posts.csv 
-#echo "$ORG $PIE_WEB"  >> list.org
-
-
-
-
 echo '<head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -603,6 +493,12 @@ echo '<head>
 <meta name="robots" content="index, follow">
 <meta name="author" content="'$AUTHOR'">
 <meta name="description" content="'$DESCRIPTION'" />
+
+<link rel="shortcut icon" href="'$LINK$ICON'" type="image/x-icon" />
+<link rel="icon" href="'$LINK$ICON'" sizes="32x32" />
+<link rel="icon" href="'$LINK$ICON'" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="'$LINK$ICON'" />
+<meta property="og:locale" content="'$LANGUAGE'" />
 
 
 <meta property="og:site_name" content="'$TITLE'"/> 
@@ -621,64 +517,28 @@ echo '<head>
 <br><br><br><br><br><br><br><br><br><br>
 
 '$HEAD_PAGE'
-
 ' > list.html
-
 cat list.org | pandoc --from org --to html5 >> list.html
-
-
 echo $ORG $PIE_WEB  >> list.html
-
-
-
-
-#emacs list.org --batch -f org-html-export-to-html --kill
 sed -i 's|__icon/|icon/|g' list.html
 sed -i 's|__css/|css/|g' list.html
 rm list.org
-
-
-
 echo "Generando Clasificación por Tags"
-#echo "#+TITLE: Tags. $TITLE" > tag.org
-#echo "#+LINK: $LINK/tag.html" >> tag.org
-#echo "#+DESCRIPTION: Etiquetas de $TITLE" >> tag.org
-#sed -n "4,20 p" $1 >> tag.org
-echo "$GOOGLE_ANALITYCS" > tag.org
+#echo "$GOOGLE_ANALITYCS" > tag.org
 echo "* Etiquetas" >> tag.org
 echo " " >> tag.org
-
 while read TAG; do 
 grep -i "$TAG" posts.csv > temp_tag.csv
 echo "** $TAG" >> tag.org
 NUM_TAGS=$(cat tag.csv | wc -l)
-
 while read LINEA; do 
 TPOST=$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g' )
 UPOST=$(echo $LINEA | cut -d, -f2)
 DPOST=$(echo $LINEA | cut -d, -f4)
-
 echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> tag.org
-#echo '<li><i>'$DPOST' - </i><a href="'$LINK'/post/'$DPOST-$UPOST'.html">'$TPOST'</a></li>'   >>  tag.html
-
-
-#echo '#+html:<li><i>'$DPOST' - </i><a href="'$LINK'/post/'$DPOST-$UPOST'.html">'$TPOST'</a></li>'   >>  tag.org
-
-
-
-
-
 done < temp_tag.csv
 done < tag.csv 
-
 rm temp_tag.csv
-
-#echo "$ORG $PIE_WEB" >> tag.org
-
-
-
-
-
 echo '<head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -695,6 +555,13 @@ echo '<head>
 <meta name="description" content="'$DESCRIPTION'" />
  
 
+<link rel="shortcut icon" href="'$LINK$ICON'" type="image/x-icon" />
+<link rel="icon" href="'$LINK$ICON'" sizes="32x32" />
+<link rel="icon" href="'$LINK$ICON'" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="'$LINK$ICON'" />
+<meta property="og:locale" content="'$LANGUAGE'" />
+
+
 <meta property="og:site_name" content="'$TITLE'"/>
 <meta property="og:title" content="'$TITLE'" />
 <meta property="og:description" content="'$DESCRIPTION'" />
@@ -710,18 +577,9 @@ echo '<head>
 <br><br><br><br><br><br><br><br><br><br>
 
 '$HEAD_PAGE'
-
 ' > tag.html
-
 cat tag.org | pandoc --from org --to html5 >> tag.html
-
-
 echo $ORG $PIE_WEB  >> tag.html
-
-
-#emacs tag.org --batch -f org-html-export-to-html --kill
-
-
 sed -i 's|__icon/|icon/|g' tag.html
 sed -i 's|__css/|css/|g' tag.html
 rm tag.org category_temp_post.csv cat_temp.csv
