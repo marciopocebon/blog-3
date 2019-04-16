@@ -92,14 +92,19 @@ then
 echo "
 
 Modo de empleo:     ./org-bash-blog [ARCHIVO ORG-MODE] 
-                    ./org-bash-blog -p [ARCHIVO ORG-MODE PODCAST] 
-
 
        Comando                      Significado
        ./org-bash-blog -h           Ayuda
        ./org-bash-blog -b           Construir carpetas
-       ./org-bash-blog -p           Construir blog podcast
+       ./org-bash-blog -n           Nuevo Post
+       ./org-bash-blog -f           Crear Nuevo Org-Mode
 
+
+
+Ejemplos:
+
+./org-bash-blog -n [ARCHIVO ORG-MODE] 'Título del Artículo'
+./org-bash-blog -f [ARCHIVO ORG-MODE] 
 
 "
 else  
@@ -107,6 +112,36 @@ if [ $1 = "-b" ]
 then
 mkdir -p icon css org post images-blog
 else  
+if [ $1 = "-n" ]
+then
+echo "Creada Nueva Entrada"
+DIA=$(date +"%Y-%m-%d %H:%M")
+echo '* TODO '$3'                                                                                                        
+:PROPERTIES:                                                                                                                               
+:TITLE: '$3'                                                                                                             
+:EXPORT_FILE_NAME: '$3'                                                                                                  
+:DESCRIPTION:                                                                                                   
+:EXPORT_DATE: '$DIA'                                                                                                                      
+:CATEGORY:                                                                                                                        
+:TAG:                                                                                                                                 
+:IMAGE:                                                                                          
+:END:                      
+' >> $2
+else  
+if [ $1 = "-f" ]
+then
+echo "    
+#+TITLE:                                                                                                                     
+#+LINK: 
+#+DESCRIPTION: 
+#+KEYWORDS:  
+#+AUTHOR:
+
+ " > $2
+else  
+
+
+    
 TITLE=$(grep "#+TITLE:" $1 | cut -d " " -f2-)
 LINK=$(grep "#+LINK:" $1 | cut -d " " -f2-)
 DESCRIPTION=$(grep "#+DESCRIPTION:" $1 | cut -d " " -f2-)
@@ -234,13 +269,14 @@ echo '<head>
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id='$GOOGLE_ANALITYCS'"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag("'"js"'", new Date())
-gtag("'"config"'", "'$GOOGLE_ANALITYCS'");
+gtag("'js'", new Date())
+gtag("'config'", "'$GOOGLE_ANALITYCS'");
 </script>
 
 </head>
@@ -427,6 +463,7 @@ echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> index.org
 done < posts_home.csv
 echo "$INDEX_NEXT" >> index.org
 echo '<head>
+<title>'$TITLE'</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -458,6 +495,14 @@ echo '<head>
 <meta name="twitter:description" content="'$DESCRIPTION'" />
 <meta name="twitter:image" content="'$IMAGE'" />
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id='$GOOGLE_ANALITYCS'"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("'js'", new Date())
+gtag("'config'", "'$GOOGLE_ANALITYCS'");
+</script>
 
 
 </head>
@@ -471,7 +516,6 @@ sed -i 's|__icon/|icon/|g' index.html
 sed -i 's|__css/|css/|g' index.html
 rm index.org posts_home.csv
 echo "Generando Lista de Artículos"
-#echo "$GOOGLE_ANALITYCS" > list.org
 echo "* $NUM_POSTS Artículos Publicados" >> list.org
 while read LINEA; do 
 TPOST=$(echo $LINEA | cut -d, -f1 | sed 's/|/,/g')
@@ -480,6 +524,7 @@ DPOST=$(echo $LINEA | cut -d, -f4)
 echo "- /$DPOST/ - [[$LINK/post/$DPOST-$UPOST.html][$TPOST]] " >> list.org
 done < posts.csv 
 echo '<head>
+<title>Artículos. '$TITLE'</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -510,6 +555,15 @@ echo '<head>
 <meta name="twitter:title" content="'$TITLE'" />
 <meta name="twitter:description" content="'$DESCRIPTION'" />
 <meta name="twitter:image" content="'$IMAGE'" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id='$GOOGLE_ANALITYCS'"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("'js'", new Date())
+gtag("'config'", "'$GOOGLE_ANALITYCS'");
+</script>
 
 
 </head>
@@ -524,7 +578,6 @@ sed -i 's|__icon/|icon/|g' list.html
 sed -i 's|__css/|css/|g' list.html
 rm list.org
 echo "Generando Clasificación por Tags"
-#echo "$GOOGLE_ANALITYCS" > tag.org
 echo "* Etiquetas" >> tag.org
 echo " " >> tag.org
 while read TAG; do 
@@ -540,6 +593,7 @@ done < temp_tag.csv
 done < tag.csv 
 rm temp_tag.csv
 echo '<head>
+<title>Etiquetas. '$TITLE'</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="./icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -572,6 +626,16 @@ echo '<head>
 <meta name="twitter:description" content="'$DESCRIPTION'" />
 <meta name="twitter:image" content="'$IMAGE'" />
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id='$GOOGLE_ANALITYCS'"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("'js'", new Date())
+gtag("'config'", "'$GOOGLE_ANALITYCS'");
+</script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -593,5 +657,7 @@ rm tag.csv tags.csv tag temp_post.org
 rm category.csv hour
 rm title link description category date date-  
 sed -i '$d' $1
+fi
+fi
 fi
 fi
