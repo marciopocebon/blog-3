@@ -521,7 +521,7 @@ gtag("'config'", "'$GOOGLE_ANALITYCS'");
 
 </head>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 '$HEAD_PAGE'
 '> index.html
 cat index.org | pandoc --from org --to html5 >> index.html
