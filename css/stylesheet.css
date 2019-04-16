@@ -1,9 +1,8 @@
-
 /* adaptar la imagen a la anchura de la pantalla */
 img {
     max-width: 100%;
-}
 
+}
 
 
 /* Letras centrales de uGeek */
@@ -81,10 +80,6 @@ body {
     #name { right: 1em; } }
 
 
-#icon {
-  position: absolute;
-  font-size: 0.8625em;
-  top: 6.125em; }
 
 @media all and (min-width: 1000px){
     #icon { right: 10%; } }
@@ -287,5 +282,8 @@ background-color: #abb9b0;
 
 
 
-
+#icon {
+  position: absolute;
+  font-size: 0.8625em;
+  top: 6.125em; }
 
