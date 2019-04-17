@@ -1,5 +1,5 @@
 <head>
-<title> Crear ramas con Git. uGeek Blog </title>
+<title>Crear archivos .gitkeep de forma recursiva mediante un script . uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
+<meta name="description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear ramas con Git" />
-<meta property="og:description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html" />
+<meta property="og:title" content="Crear archivos .gitkeep de forma recursiva mediante un script " />
+<meta property="og:description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script-------.html" />
 
-<meta name="twitter:title" content=" Crear ramas con Git" />
-<meta name="twitter:description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Crear archivos .gitkeep de forma recursiva mediante un script " />
+<meta name="twitter:description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,29 +53,19 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="crear-ramas-con-git-1" title="Crear ramas con Git" data-export_file_name="Crear ramas con Git" data-description="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" data-export_date="2019-01-28 21:15" data-category="git" data-tag="git" data-image="./images-blog/ugeek.png">Crear ramas con Git</h1>
-<p>Todos los repositorios de <strong>git</strong>, tienen la rama <strong>master</strong> (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio <strong>master</strong>.</p>
+<h1 id="crear-archivos-.gitkeep-de-forma-recursiva-mediante-un-script-1" title="Crear archivos .gitkeep de forma recursiva mediante un script" data-export_file_name="Crear archivos gitkeep de forma recursiva mediante un script" data-description="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." data-export_date="2019-04-17 08:00" data-category="git" data-tag="github, gitlab" data-image="./images-blog/git.png">Crear archivos .gitkeep de forma recursiva mediante un script</h1>
+<p>Es muy probable que si has llegado has aquí, sea porque no sabes que es un archivo <strong>.gitkeep</strong>, o has comenzado tu proyecto en git, lleno de carpetas vacías y ahora no sabes como subirlas a git.</p>
 <p><img src="../images-blog/git.png" /></p>
-<h2 id="crear-rama">Crear rama</h2>
-<p>Para crear una rama, utilizaremos el comando <strong>git branch</strong>. Vamos a crear una rama que llamaremos <strong>test</strong></p>
-<p><code>git branch test</code></p>
-<h2 id="cambiar-de-rama">Cambiar de rama</h2>
-<p>Ahora tenemos una nueva rama, la rama <strong>test</strong>. Para acceder a ella, utilizaremos el comando <strong>git checkout</strong></p>
-<p><code>git chekcout test</code></p>
-<p>Si hemos introducido este comando, ya no estaremos en la rama <strong>master</strong> , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada.</p>
-<p>Antes de volver nuevamente a la rama <strong>master</strong>, tenemos que hacer un <strong>git push</strong> y poner al día la rama <strong>test</strong>.</p>
-<p>Para volver a la rama <strong>master</strong>:</p>
-<p><code>git checkout master</code></p>
-<p>Ya estamos de nuevo en la rama <strong>master</strong></p>
-<h2 id="borrar-una-rama">Borrar una rama</h2>
-<p>Si ya hemos acabado con la rama <strong>test</strong> y queremos eliminarla en el repositorio local, utilizaremos el comando <strong>git branch -d</strong></p>
-<p><code>git branch -d test</code></p>
-<p>Para forzar el borrado en caso de algún error:</p>
-<p><code>git branch -D test</code></p>
-<p>Para eliminar el repositorio remosto <strong>git push origin :</strong></p>
-<p><code>git push origin :test</code></p>
+<p>Los archivos <strong>.gitkeep</strong>, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.</p>
+<p>Git no es capaz de gestionar carpetas vacías, así que una solución es crear un archivo vacío dentro de estas, sin contenido para que no ocupe espacio.</p>
+<p>Aunque no consta en la documentación de git, muchos desarrolladores han adoptado este nombre como norma.</p>
+<p>Pero… ¿Si has comenzado tu proyecto y no has creado ningún archivo dentro?, ¿Como recordar todas las carpetas vacías?.</p>
+<p>No te preocupes.</p>
+<p>Con esta línea de terminal, <strong>situándonos en la raíz de nuestro repositorio</strong> y gracias al comando <strong>find</strong>, todas aquellas carpetas que estén vacías, incluirá un archivo llamado .gitkeep</p>
+<pre><code>find . -type d -empty -not -path &quot;./.git/*&quot; -exec touch {}/.gitkeep \;
+</code></pre>
 <br>
-<p>Publicado por Angel el lunes 28 enero del 2019</p>
+<p>Publicado por Angel el miércoles 17 abril del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
