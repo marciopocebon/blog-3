@@ -16,8 +16,8 @@
     <title>Utilizando Git desde otra carpeta</title>
     <link>https://ugeek.github.io/blog/post/2019-04-17-utilizando-git-desde-otra-carpeta.html</link>
     <description>
-&lt;img src=":IMAGE:" alt="Utilizando Git desde otra carpeta"&gt;
-&lt;br&gt;&lt;p&gt;:DESCRIPTION:... 
+&lt;img src="#:IMAGE:" alt="Utilizando Git desde otra carpeta"&gt;
+&lt;br&gt;&lt;p&gt;#:DESCRIPTION:... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-utilizando-git-desde-otra-carpeta.html&gt;Utilizando Git desde otra carpeta&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -39,8 +39,8 @@
 
 </description>
     <pubDate>Wed, 17 Apr 2019 13:47 +0100</pubDate>
-    <category>:CATEGORY:</category>
-    <category>:TAG:</category>
+    <category>#:CATEGORY:</category>
+    <category>#:TAG:</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-04-17-utilizando-git-desde-otra-carpeta.html</guid>
