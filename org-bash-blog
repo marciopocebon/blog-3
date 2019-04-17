@@ -36,6 +36,7 @@ ARTICULOS_WEB=$(echo "*** Últimos Podcasts
 
 # BROWSER
 BROWSER="firefox"         # Browser to open page
+EMACS="emacs"
 TWITTER="@ugeekpodcast"   # nick twitter
 LANGUAGE="es_ES"          
 GOOGLE_ANALITYCS="UA-131560140-1"
@@ -132,25 +133,26 @@ if [ $1 = "-n" ]
 then
 echo "Creada Nueva Entrada"
 DIA=$(date +"%Y-%m-%d %H:%M")
-echo '* TODO '$3'                                                                                                        
-:PROPERTIES:                                                                                                                               
-:TITLE: '$3'                                                                                                             
-:EXPORT_FILE_NAME: '$3'                                                                                                  
-:DESCRIPTION:                                                                                                   
-:EXPORT_DATE: '$DIA'                                                                                                                      
-:CATEGORY:                                                                                                                        
-:TAG:                                                                                                                                 
-:IMAGE:                                                                                          
-:END:                      
+echo '* TODO '$3'
+:PROPERTIES:
+:TITLE: '$3'
+:EXPORT_FILE_NAME: '$3'
+:DESCRIPTION:
+:EXPORT_DATE: '$DIA'
+:CATEGORY:
+:TAG:
+:IMAGE:
+:END:
 ' >> $2
+$EMACS $2
 else  
 if [ $1 = "-f" ]
 then
-echo "    
-#+TITLE:                                                                                                                     
-#+LINK: 
-#+DESCRIPTION: 
-#+KEYWORDS:  
+echo "
+#+TITLE:
+#+LINK:
+#+DESCRIPTION:
+#+KEYWORDS:
 #+AUTHOR:
 
  " > $2
