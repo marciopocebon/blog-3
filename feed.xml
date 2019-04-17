@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Crear archivos .gitkeep de forma recursiva mediante un script </title>
-    <link>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script-------.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/git.png" alt="Crear archivos .gitkeep de forma recursiva mediante un script "&gt;
 &lt;br&gt;&lt;p&gt;Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script-------.html&gt;Crear archivos .gitkeep de forma recursiva mediante un script &lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html&gt;Crear archivos .gitkeep de forma recursiva mediante un script &lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -43,7 +43,7 @@
     <category>github</category>
     <category>gitlab</category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script-------.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</guid>
    </item>
    <item>
     <title>Controla tu Raspberry, Servidor o PC desde Telegram</title>
