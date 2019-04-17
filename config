@@ -1,2 +1,2 @@
 source ~/org/blog/config
-git add ~/org/. ; git commit -m "update" ; git push
+#git add ~/org/. ; git commit -m "update" ; git push
