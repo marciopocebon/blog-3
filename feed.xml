@@ -13,12 +13,12 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
-    <title>Crear archivos .gitkeep de forma recursiva mediante un script </title>
-    <link>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</link>
+    <title>Estando a la Última en tu Raspberry con Debian Testing</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/git.png" alt="Crear archivos .gitkeep de forma recursiva mediante un script "&gt;
-&lt;br&gt;&lt;p&gt;Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html&gt;Crear archivos .gitkeep de forma recursiva mediante un script &lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/debian.jpg" alt="Estando a la Última en tu Raspberry con Debian Testing"&gt;
+&lt;br&gt;&lt;p&gt;muestro un pequeño ejemplo de como montar un Docker con Debian Testing, una versión de Debian donde encontraremos paquetes más actualizados que la versión actual de Raspbian, que es una versión muchisímo más estable... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html&gt;Estando a la Última en tu Raspberry con Debian Testing&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,20 +38,53 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 17 Apr 2019 08:00 +0100</pubDate>
-    <category>git</category>
-    <category>github</category>
-    <category>gitlab</category>
+    <pubDate>Sun, 21 Apr 2019  +0100</pubDate>
+    <category>docker</category>
+    <category>docker</category>
+    <category>debian</category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html</guid>
    </item>
    <item>
     <title>Cambiando estados de forma masiva en mis Org Mode</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/todo.jpg" alt="Cambiando estados de forma masiva en mis Org Mode"&gt;
+&lt;img src="[[./images-blog/todo.jpg]]" alt="Cambiando estados de forma masiva en mis Org Mode"&gt;
 &lt;br&gt;&lt;p&gt;Si tu blog comienza a ser muy grande y tienes centenares de tareas en tu Org Mode en estado *TODO*, es muy probable que quieras desmarcar este estado... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html&gt;Cambiando estados de forma masiva en mis Org Mode&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html&gt;Cambiando estados de forma masiva en mis Org Mode&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 17 Apr 2019 13:22 +0100</pubDate>
+    <category>emacs</category>
+    <category>orgmode</category>
+    <category>bash</category>
+    <category>sed</category>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</guid>
+   </item>
+   <item>
+    <title>Crear archivos .gitkeep de forma recursiva mediante un script</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/git.png" alt="Crear archivos .gitkeep de forma recursiva mediante un script"&gt;
+&lt;br&gt;&lt;p&gt;Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html&gt;Crear archivos .gitkeep de forma recursiva mediante un script&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -72,19 +105,19 @@
 
 </description>
     <pubDate>Wed, 17 Apr 2019 09:33 +0100</pubDate>
-    <category>emacs</category>
-    <category>orgmode</category>
-    <category>bash</category>
-    <category>sed</category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html</guid>
+    <category>git</category>
+    <category>github</category>
+    <category>gitlab</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</guid>
    </item>
    <item>
     <title>Controla tu Raspberry, Servidor o PC desde Telegram</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-11--controla-tu-raspberry-servidor-o-pc-desde-telegram.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg" alt="Controla tu Raspberry, Servidor o PC desde Telegram"&gt;
 &lt;br&gt;&lt;p&gt;Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-11--controla-tu-raspberry-servidor-o-pc-desde-telegram.html&gt;Controla tu Raspberry, Servidor o PC desde Telegram&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html&gt;Controla tu Raspberry, Servidor o PC desde Telegram&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -104,20 +137,20 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 11 Apr 2019 17:45 +0100</pubDate>
+    <pubDate>Thu, 11 Apr 2019 08:00 +0100</pubDate>
     <category>telegram</category>
     <category>domotica</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-11--controla-tu-raspberry-servidor-o-pc-desde-telegram.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html</guid>
    </item>
    <item>
     <title>Atajos de Terminal</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-06--atajos-de-terminal.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/atajos.jpg" alt="Atajos de Terminal"&gt;
 &lt;br&gt;&lt;p&gt;Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-06--atajos-de-terminal.html&gt;Atajos de Terminal&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html&gt;Atajos de Terminal&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -137,20 +170,20 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 06 Apr 2019 0:40 +0100</pubDate>
+    <pubDate>Sat, 06 Apr 2019 17:45 +0100</pubDate>
     <category>terminal</category>
     <category>servidor</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-06--atajos-de-terminal.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html</guid>
    </item>
    <item>
     <title>Montando una carpeta con todos mis servidores dlna</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/dlna.png" alt="Montando una carpeta con todos mis servidores dlna"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a montar en una carpeta de nuestro PC, todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC ... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html&gt;Montando una carpeta con todos mis servidores dlna&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html&gt;Montando una carpeta con todos mis servidores dlna&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -170,20 +203,20 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 05 Apr 2019 18:00 +0100</pubDate>
+    <pubDate>Fri, 05 Apr 2019 0:40 +0100</pubDate>
     <category>dlna</category>
     <category>servidor</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-05--montando-una-carpeta-con-todos-mis-servidores-dlna.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html</guid>
    </item>
    <item>
     <title>Montando carpetas del servidor, Raspberry,... en tu escritorio</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/sshfs.png" alt="Montando carpetas del servidor, Raspberry,... en tu escritorio"&gt;
 &lt;br&gt;&lt;p&gt;SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil ... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html&gt;Montando carpetas del servidor, Raspberry,... en tu escritorio&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html&gt;Montando carpetas del servidor, Raspberry,... en tu escritorio&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -203,12 +236,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 04 Apr 2019 18:40 +0100</pubDate>
+    <pubDate>Thu, 04 Apr 2019 18:00 +0100</pubDate>
     <category>ssh</category>
     <category>servidor</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-04--montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</guid>
    </item>
    <item>
     <title>Exportando bonito a html mi OrgMode y creando web estática</title>
@@ -236,7 +269,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 02 Apr 2019 19:00 +0100</pubDate>
+    <pubDate>Tue, 02 Apr 2019 18:40 +0100</pubDate>
     <category>emacs</category>
     <category>html</category>
     <category>github</category>
@@ -269,45 +302,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 01 Apr 2019 20:40 +0100</pubDate>
+    <pubDate>Mon, 01 Apr 2019 19:00 +0100</pubDate>
     <category>terminal</category>
     <category>bash</category>
     <category>unix</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html</guid>
-   </item>
-   <item>
-    <title>Tomb. Mis secretos son una Tumba. Crifrar Archivos</title>
-    <link>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/tomb.png" alt="Tomb. Mis secretos son una Tumba. Crifrar Archivos"&gt;
-&lt;br&gt;&lt;p&gt;Hoy toca el turno de Tomb. Un script para cifrar archivos muy pero que muy interesante... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html&gt;Tomb. Mis secretos son una Tumba. Crifrar Archivos&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Sun, 31 Mar 2019 23:00 +0100</pubDate>
-    <category>cifrado</category>
-    <category>raspberry</category>
-    <category>servidor</category>
-    <category>cifrado</category>
-    <guid>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</guid>
    </item>
    <item>
     <title>Notificaciones Org Mode en Telegram con mi Bot</title>
@@ -335,12 +335,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 31 Mar 2019 10:30 +0100</pubDate>
+    <pubDate>Sun, 31 Mar 2019 23:00 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>telegram</category>
     <category>raspberry</category>
     <guid>https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html</guid>
+   </item>
+   <item>
+    <title>Tomb. Mis secretos son una Tumba. Crifrar Archivos</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/tomb.png" alt="Tomb. Mis secretos son una Tumba. Crifrar Archivos"&gt;
+&lt;br&gt;&lt;p&gt;Hoy toca el turno de Tomb. Un script para cifrar archivos muy pero que muy interesante... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html&gt;Tomb. Mis secretos son una Tumba. Crifrar Archivos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 31 Mar 2019 20:40 +0100</pubDate>
+    <category>cifrado</category>
+    <category>raspberry</category>
+    <category>servidor</category>
+    <category>cifrado</category>
+    <guid>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</guid>
    </item>
    <item>
     <title>Veracrypt en Ubuntu y tu Raspberry por Terminal</title>
@@ -368,7 +401,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 29 Mar 2019 21:00 +0100</pubDate>
+    <pubDate>Fri, 29 Mar 2019 22:30 +0100</pubDate>
     <category>cifrado</category>
     <category>servidor</category>
     <category>raspberry</category>
@@ -401,7 +434,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 29 Mar 2019 22:30 +0100</pubDate>
+    <pubDate>Fri, 29 Mar 2019 10:30 +0100</pubDate>
     <category>web</category>
     <category>git</category>
     <category>github</category>
@@ -434,7 +467,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 28 Mar 2019 16:25 +0100</pubDate>
+    <pubDate>Thu, 28 Mar 2019 21:00 +0100</pubDate>
     <category>telegram</category>
     <category>bot</category>
     <category></category>
@@ -467,7 +500,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 25 Mar 2019 21:10 +0100</pubDate>
+    <pubDate>Mon, 25 Mar 2019 16:25 +0100</pubDate>
     <category>docker</category>
     <category>servidor</category>
     <category>web</category>
@@ -500,7 +533,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 15 Mar 2019 23:00 +0100</pubDate>
+    <pubDate>Fri, 15 Mar 2019 21:10 +0100</pubDate>
     <category>emacs</category>
     <category>emacs</category>
     <category>orgmode</category>
@@ -533,7 +566,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 14 Mar 2019 21:30 +0100</pubDate>
+    <pubDate>Thu, 14 Mar 2019 23:00 +0100</pubDate>
     <category>telegram</category>
     <category>bot</category>
     <category>telegram</category>
@@ -566,7 +599,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 10 Mar 2019 17:15 +0100</pubDate>
+    <pubDate>Sun, 10 Mar 2019 21:30 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>emacs</category>
@@ -599,7 +632,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 24 Feb 2019 17:30 +0100</pubDate>
+    <pubDate>Sun, 24 Feb 2019 17:15 +0100</pubDate>
     <category>docker</category>
     <category>docker</category>
     <category></category>
@@ -632,7 +665,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 16 Feb 2019 20:30 +0100</pubDate>
+    <pubDate>Sat, 16 Feb 2019 17:30 +0100</pubDate>
     <category>servidor</category>
     <category>dlna</category>
     <category></category>
@@ -665,7 +698,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 10 Feb 2019 22:25 +0100</pubDate>
+    <pubDate>Sun, 10 Feb 2019 20:30 +0100</pubDate>
     <category>docker</category>
     <category>debian</category>
     <category>alpinelinux</category>
@@ -698,7 +731,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 08 Feb 2019 22:15 +0100</pubDate>
+    <pubDate>Fri, 08 Feb 2019 23:15 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
@@ -731,7 +764,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 08 Feb 2019 23:15 +0100</pubDate>
+    <pubDate>Fri, 08 Feb 2019 22:25 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category></category>
@@ -764,7 +797,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 07 Feb 2019 17:15 +0100</pubDate>
+    <pubDate>Thu, 07 Feb 2019 22:15 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
@@ -797,7 +830,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 06 Feb 2019 15:15 +0100</pubDate>
+    <pubDate>Wed, 06 Feb 2019 17:15 +0100</pubDate>
     <category>servidor</category>
     <category>raspberry</category>
     <category></category>
@@ -830,7 +863,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 03 Feb 2019 19:45 +0100</pubDate>
+    <pubDate>Sun, 03 Feb 2019 15:15 +0100</pubDate>
     <category>docker</category>
     <category>raspberry</category>
     <category>raspbian</category>
@@ -863,7 +896,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 01 Feb 2019 21:45 +0100</pubDate>
+    <pubDate>Fri, 01 Feb 2019 23:45 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category></category>
@@ -896,7 +929,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 01 Feb 2019 23:45 +0100</pubDate>
+    <pubDate>Fri, 01 Feb 2019 19:45 +0100</pubDate>
     <category>raspberry</category>
     <category>raspberry</category>
     <category></category>
@@ -929,7 +962,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 31 Jan 2019 21:15 +0100</pubDate>
+    <pubDate>Thu, 31 Jan 2019 21:45 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
@@ -962,7 +995,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 29 Jan 2019 16:15 +0100</pubDate>
+    <pubDate>Tue, 29 Jan 2019 22:15 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
@@ -995,45 +1028,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 29 Jan 2019 22:15 +0100</pubDate>
+    <pubDate>Tue, 29 Jan 2019 21:15 +0100</pubDate>
     <category>bash</category>
     <category>telegram</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html</guid>
-   </item>
-   <item>
-    <title>Navegar por el Historial de comandos en Bash</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegar por el Historial de comandos en Bash"&gt;
-&lt;br&gt;&lt;p&gt;Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html&gt;Navegar por el Historial de comandos en Bash&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Mon, 28 Jan 2019 22:15 +0100</pubDate>
-    <category>bash</category>
-    <category>terminal</category>
-    <category></category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</guid>
    </item>
    <item>
     <title>Crear ramas con Git</title>
@@ -1061,12 +1061,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 28 Jan 2019 21:15 +0100</pubDate>
+    <pubDate>Mon, 28 Jan 2019 22:15 +0100</pubDate>
     <category>git</category>
     <category>git</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html</guid>
+   </item>
+   <item>
+    <title>Navegar por el Historial de comandos en Bash</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegar por el Historial de comandos en Bash"&gt;
+&lt;br&gt;&lt;p&gt;Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html&gt;Navegar por el Historial de comandos en Bash&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 28 Jan 2019 16:15 +0100</pubDate>
+    <category>bash</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</guid>
    </item>
    <item>
     <title>Lee Super rápido en Emacs con Spray</title>
@@ -1094,7 +1127,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 27 Jan 2019 19:15 +0100</pubDate>
+    <pubDate>Sun, 27 Jan 2019 21:15 +0100</pubDate>
     <category>emacs</category>
     <category>melpa</category>
     <category></category>
@@ -1127,7 +1160,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 26 Jan 2019 14:00 +0100</pubDate>
+    <pubDate>Sat, 26 Jan 2019 19:15 +0100</pubDate>
     <category>terminal</category>
     <category>podcast</category>
     <category></category>
@@ -1160,12 +1193,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 24 Jan 2019 21:30 +0100</pubDate>
+    <pubDate>Thu, 24 Jan 2019 14:00 +0100</pubDate>
     <category>snap</category>
     <category>paquetes</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</guid>
+   </item>
+   <item>
+    <title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Antergos. Comandos para terminal y derivadas de Arch Linux"&gt;
+&lt;br&gt;&lt;p&gt;Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Antergos. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 21 Jan 2019 21:30 +0100</pubDate>
+    <category>arch'</category>
+    <category>antergos</category>
+    <category>comandos</category>
+    <category>terminal</category>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</guid>
    </item>
    <item>
     <title>Utilizando Git con la Terminal. GitHub</title>
@@ -1193,7 +1259,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 21 Jan 2019 15:16 +0100</pubDate>
+    <pubDate>Mon, 21 Jan 2019 18:30 +0100</pubDate>
     <category>git</category>
     <category>terminal</category>
     <category>github</category>
@@ -1226,45 +1292,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 21 Jan 2019 16:16 +0100</pubDate>
+    <pubDate>Mon, 21 Jan 2019 15:16 +0100</pubDate>
     <category>jekyll</category>
     <category>servidor</category>
     <category>jekyll</category>
     <category>rss</category>
     <guid>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</guid>
-   </item>
-   <item>
-    <title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Antergos. Comandos para terminal y derivadas de Arch Linux"&gt;
-&lt;br&gt;&lt;p&gt;Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Antergos. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Mon, 21 Jan 2019 18:30 +0100</pubDate>
-    <category>arch'</category>
-    <category>antergos</category>
-    <category>comandos</category>
-    <category>terminal</category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</guid>
    </item>
    <item>
     <title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
@@ -1292,7 +1325,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 20 Jan 2019 19:26 +0100</pubDate>
+    <pubDate>Sun, 20 Jan 2019 16:16 +0100</pubDate>
     <category>mensajeria</category>
     <category>servidor</category>
     <category>raspberry</category>
@@ -1325,7 +1358,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 17 Jan 2019 21:20 +0100</pubDate>
+    <pubDate>Thu, 17 Jan 2019 19:26 +0100</pubDate>
     <category>seguridad</category>
     <category>gpg</category>
     <category>nube</category>
@@ -1358,7 +1391,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 12 Jan 2019 21:00 +0100</pubDate>
+    <pubDate>Sat, 12 Jan 2019 21:20 +0100</pubDate>
     <category>git</category>
     <category>git</category>
     <category></category>
@@ -1391,7 +1424,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 08 Jan 2019 17:14 +0100</pubDate>
+    <pubDate>Tue, 08 Jan 2019 21:00 +0100</pubDate>
     <category>git</category>
     <category>git</category>
     <category>servidor</category>
@@ -1424,7 +1457,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 06 Jan 2019 14:33 +0100</pubDate>
+    <pubDate>Sun, 06 Jan 2019 17:14 +0100</pubDate>
     <category>servidor</category>
     <category>docker</category>
     <category>nextcloud</category>
@@ -1457,7 +1490,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 05 Jan 2019 11:39 +0100</pubDate>
+    <pubDate>Sat, 05 Jan 2019 14:33 +0100</pubDate>
     <category>terminal</category>
     <category>bash</category>
     <category>unix</category>
@@ -1490,78 +1523,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 04 Jan 2019 14:36 +0100</pubDate>
+    <pubDate>Fri, 04 Jan 2019 11:39 +0100</pubDate>
     <category>git</category>
     <category>gitlab</category>
     <category>servidor</category>
     <category>blog</category>
     <guid>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</guid>
-   </item>
-   <item>
-    <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Visualiza tus Notas Markdown Versión Web con MkDocs"&gt;
-&lt;br&gt;&lt;p&gt;Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html&gt;Visualiza tus Notas Markdown Versión Web con MkDocs&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Thu, 03 Jan 2019 12:05 +0100</pubDate>
-    <category>servidor</category>
-    <category>servidor</category>
-    <category>raspberry</category>
-    <category>markdown</category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</guid>
-   </item>
-   <item>
-    <title>El poder de la terminal y el scripting</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="El poder de la terminal y el scripting"&gt;
-&lt;br&gt;&lt;p&gt;Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html&gt;El poder de la terminal y el scripting&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Thu, 03 Jan 2019  +0100</pubDate>
-    <category>unix</category>
-    <category>bash</category>
-    <category>terminal</category>
-    <category>scrits</category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</guid>
    </item>
    <item>
     <title>Con Emacs también podemos editar Markdown</title>
@@ -1597,12 +1564,12 @@
     <guid>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</guid>
    </item>
    <item>
-    <title>Kde Connect en Ubuntu...</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
+    <title>El poder de la terminal y el scripting</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect en Ubuntu..."&gt;
-&lt;br&gt;&lt;p&gt;He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect en Ubuntu...&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="El poder de la terminal y el scripting"&gt;
+&lt;br&gt;&lt;p&gt;Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html&gt;El poder de la terminal y el scripting&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -1622,12 +1589,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 02 Jan 2019 18:00 +0100</pubDate>
-    <category>bash</category>
+    <pubDate>Thu, 03 Jan 2019 14:36 +0100</pubDate>
+    <category>unix</category>
     <category>bash</category>
     <category>terminal</category>
-    <category>i3</category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</guid>
+    <category>scrits</category>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</guid>
+   </item>
+   <item>
+    <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Visualiza tus Notas Markdown Versión Web con MkDocs"&gt;
+&lt;br&gt;&lt;p&gt;Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html&gt;Visualiza tus Notas Markdown Versión Web con MkDocs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 03 Jan 2019 12:05 +0100</pubDate>
+    <category>servidor</category>
+    <category>servidor</category>
+    <category>raspberry</category>
+    <category>markdown</category>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</guid>
    </item>
    <item>
     <title>Crear listas m3u para minidlna o vlc</title>
@@ -1661,6 +1661,39 @@
     <category>grep</category>
     <category>ls</category>
     <guid>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</guid>
+   </item>
+   <item>
+    <title>Kde Connect en Ubuntu...</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect en Ubuntu..."&gt;
+&lt;br&gt;&lt;p&gt;He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect en Ubuntu...&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 02 Jan 2019 18:00 +0100</pubDate>
+    <category>bash</category>
+    <category>bash</category>
+    <category>terminal</category>
+    <category>i3</category>
+    <guid>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</guid>
    </item>
    <item>
     <title>Kde Connect en Emacs</title>
@@ -1762,39 +1795,6 @@
     <guid>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</guid>
    </item>
    <item>
-    <title>Descargar todos los episodios de un Podcast con wget</title>
-    <link>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Descargar todos los episodios de un Podcast con wget"&gt;
-&lt;br&gt;&lt;p&gt;Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html&gt;Descargar todos los episodios de un Podcast con wget&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Fri, 28 Dec 2018 10:00 +0100</pubDate>
-    <category>terminal</category>
-    <category>bash</category>
-    <category>podcast</category>
-    <category>unix</category>
-    <guid>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</guid>
-   </item>
-   <item>
     <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
     <description>
@@ -1826,6 +1826,39 @@
     <category>pandoc</category>
     <category>orgmode</category>
     <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid>
+   </item>
+   <item>
+    <title>Descargar todos los episodios de un Podcast con wget</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Descargar todos los episodios de un Podcast con wget"&gt;
+&lt;br&gt;&lt;p&gt;Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html&gt;Descargar todos los episodios de un Podcast con wget&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 28 Dec 2018 10:00 +0100</pubDate>
+    <category>terminal</category>
+    <category>bash</category>
+    <category>podcast</category>
+    <category>unix</category>
+    <guid>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</guid>
    </item>
    <item>
     <title>minidlna</title>

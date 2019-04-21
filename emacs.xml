@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Cambiando estados de forma masiva en mis Org Mode</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/todo.jpg" alt="Cambiando estados de forma masiva en mis Org Mode"&gt;
+&lt;img src="[[./images-blog/todo.jpg]]" alt="Cambiando estados de forma masiva en mis Org Mode"&gt;
 &lt;br&gt;&lt;p&gt;Si tu blog comienza a ser muy grande y tienes centenares de tareas en tu Org Mode en estado *TODO*, es muy probable que quieras desmarcar este estado... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html&gt;Cambiando estados de forma masiva en mis Org Mode&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html&gt;Cambiando estados de forma masiva en mis Org Mode&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 17 Apr 2019 09:33 +0100</pubDate>
+    <pubDate>Wed, 17 Apr 2019 13:22 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>bash</category>
     <category>sed</category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-17--cambiando-estados-de-forma-masiva-en-mis-org-mode.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</guid>
    </item>
    <item>
     <title>Exportando bonito a html mi OrgMode y creando web estática</title>
@@ -71,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 02 Apr 2019 19:00 +0100</pubDate>
+    <pubDate>Tue, 02 Apr 2019 18:40 +0100</pubDate>
     <category>emacs</category>
     <category>html</category>
     <category>github</category>
@@ -104,7 +104,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 31 Mar 2019 10:30 +0100</pubDate>
+    <pubDate>Sun, 31 Mar 2019 23:00 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>telegram</category>
@@ -137,7 +137,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 15 Mar 2019 23:00 +0100</pubDate>
+    <pubDate>Fri, 15 Mar 2019 21:10 +0100</pubDate>
     <category>emacs</category>
     <category>emacs</category>
     <category>orgmode</category>
@@ -170,7 +170,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 10 Mar 2019 17:15 +0100</pubDate>
+    <pubDate>Sun, 10 Mar 2019 21:30 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>emacs</category>
@@ -203,7 +203,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 08 Feb 2019 23:15 +0100</pubDate>
+    <pubDate>Fri, 08 Feb 2019 22:25 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category></category>
@@ -236,7 +236,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 01 Feb 2019 21:45 +0100</pubDate>
+    <pubDate>Fri, 01 Feb 2019 23:45 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category></category>
@@ -269,7 +269,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 27 Jan 2019 19:15 +0100</pubDate>
+    <pubDate>Sun, 27 Jan 2019 21:15 +0100</pubDate>
     <category>emacs</category>
     <category>melpa</category>
     <category></category>
