@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Estando a la Última en tu Raspberry con Debian Testing</title>
-    <link>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/debian.jpg" alt="Estando a la Última en tu Raspberry con Debian Testing"&gt;
 &lt;br&gt;&lt;p&gt;muestro un pequeño ejemplo de como montar un Docker con Debian Testing, una versión de Debian donde encontraremos paquetes más actualizados que la versión actual de Raspbian, que es una versión muchisímo más estable... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html&gt;Estando a la Última en tu Raspberry con Debian Testing&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html&gt;Estando a la Última en tu Raspberry con Debian Testing&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -43,7 +43,7 @@
     <category>docker</category>
     <category>debian</category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-Última-en-tu-raspberry-con-debian-testing.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html</guid>
    </item>
    <item>
     <title>Cambiando estados de forma masiva en mis Org Mode</title>
