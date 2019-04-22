@@ -63,15 +63,24 @@ gtag("config", "UA-131560140-1");
 <thead></thead>
 
 
-<tr>
-<td>sed 's/cadena1/cadena2/g'</td>
-<td>Reemplaza cadena1 por cadena2</td>
-</tr>
-<tr>
-<td>sed 's/\t/,/g'</td>
-<td>Convertir tsv a csv</td>
-</tr>
-<tr>
-<td>sed -n '10,20p;20q'</td>
-<td>Listar de la linea 10 a la 20</td>
-</tr>
+<tr><th>sed 's/cadena1/cadena2/g'	                       </th><th> Reemplaza cadena1 por cadena2</th></tr>
+<tr><td>sed 's|cadena1|cadena2|g'	                       </td><td> Reemplaza cadena1 por cadena2</td></tr>
+<tr><td>sed 's/\t/,/g'                                   </td><td> Convertir tsv a csv</td></tr>
+<tr><td>sed -n '10,20p;20q'	                             </td><td> Ver de la linea 10 a la 20</td></tr>
+<tr><td>sed -n 12,50p program.org                        </td><td> Ver de la linea 12 a la 50</td></tr>
+<tr><td>cat archivo.html | sed -n 3p                     </td><td> Ver línea 3</td></tr>
+<tr><td>sed '$d' archivo.txt                             </td><td> Eliminar última línea</td></tr>
+<tr><td>sed '3d' mi_fichero.txt                          </td><td> Eliminar linea 3</td></tr>
+<tr><td>sed '7,9d' mi_fichero.txt                        </td><td> Eliminar entre lineas 7 y </td></tr>
+<tr><td>echo "uno dos" |  sed 's/ //g'                   </td><td> Eliminar espacios en blanco</td></tr>
+<tr><td>sed 's/[ \t]*$//'	                               </td><td> Eliminar espacios blancos, finales de cada lineas</td></tr>
+<tr><td>sed -e 's/^.//' -e 's/.$//'                      </td><td> Eliminar primer y ultimo caracter</td></tr>
+<tr><td>cat archivo | sed '/^ *$/d' > nuevo_archivo      </td><td> Eliminar líneas en blanco</td></tr>
+<tr><td>sed '/TODO/d' mi_fichero.txt                     </td><td> Eliminar línea contenido la cadena "TODO"</td></tr>
+<tr><td>sed '/^$/d' mi_fichero.txt                       </td><td> Eliminación de todas las líneas vacías</td></tr>
+<tr><td>sed '/./!d' mi_fichero.txt                       </td><td> Eliminación de todas las líneas vacías</td></tr>
+<tr><td>sed '/^ *#/d; /^ *$/d'	                         </td><td> Eliminar comentarios de script y lineas en blanco</td></tr>
+<tr><td>sed -e 's/<[^>]*>//g' foo.html                   </td><td> Convertir html2txt</td></tr>
+<tr><td>cat archivo.html | sed  's/<[^>]*>//g'           </td><td> Convertir html2txt  </td></tr>
+
+</table>
