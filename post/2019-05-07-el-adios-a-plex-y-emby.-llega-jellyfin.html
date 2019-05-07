@@ -72,7 +72,7 @@ gtag("config", "UA-131560140-1");
 <pre><code>docker run -d --name jellyfin --restart=unless-stopped --network=host -v $HOME/docker/jellyfin/config:/config -v /media:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:latest
 </code></pre>
 <p>Si tienes un cliente de Emby y quieres hacer uso del servidor de Jellyfin, la última versión compatible con clientes Emby es la 10.2.2. Eso sí, esta versión no incluirá las mejoras que van apareciendo en las actualizaciones.</p>
-<pre><code>docker run -d --name jellyfin --restart=unless-stopped --network=host -v $HOME/docker/jellyfin/:/config -v /mnt/plex/Multimedia:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:10.2.2
+<pre><code>docker run -d --name jellyfin --restart=unless-stopped --network=host -v $HOME/docker/jellyfin/config:/config -v /media:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:10.2.2
 </code></pre>
 <h2 id="enlaces">Enlaces</h2>
 <ul>
@@ -85,7 +85,7 @@ gtag("config", "UA-131560140-1");
 <h2 id="conclusión">Conclusión</h2>
 <p>Hace dos meses y medio que tengo Jellyfin corriendo en mi Raspberry y dos versiones más de Jellyfin en mi Ubuntu Server. La verdad es que estoy encantado con el servicio y cada dos semanas, aparecen mejoras importantes.</p>
 <p>Jellyfin está destinado a ser uno de los grandes servicios de Software Libre como Nextcloud o Syncthing.</p>
-<p>Os recomiendo darle una probadita porque os sorprenderá.</p>
+<p>Os recomiendo darle una probada porque os sorprenderá.</p>
 <br>
 <p>Publicado por Angel el martes 07 mayo del 2019</p>
 <br><br> 
