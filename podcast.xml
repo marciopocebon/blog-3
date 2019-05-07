@@ -1,0 +1,1648 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" version="2.0">
+  <channel>
+    <title>uGeek Blog </title>
+    <link>https://ugeek.github.io/blog</link>
+    <description>Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek</description>
+    <image>
+       <url>https://ugeek.github.io/blog/https://ugeek.github.io/ugeek.png</url>
+       <title>uGeek Blog </title>
+       <link>https://ugeek.github.io/blog</link>
+    </image>
+    <language>es-es</language>
+    <copyright></copyright>
+    <atom:link href="https://ugeek.github.io/blog/podcast.xml" rel="self" type="application/rss+xml"/>
+    <itunes:summary></itunes:summary>
+   <itunes:owner>
+    <itunes:name></itunes:name>
+    <itunes:email></itunes:email>
+   </itunes:owner>
+    <itunes:explicit></itunes:explicit>
+    <itunes:keywords></itunes:keywords>
+    <itunes:image href=""/>
+    <rawvoice:location></rawvoice:location>
+    <rawvoice:frequency></rawvoice:frequency>
+    <itunes:category text=""/>
+    <pubDate>Tue, 07 May 2019 19:44 +0100</pubDate>
+    <generator>org-bash-podcast static site generator (https://github.com/ugeek/org-bash-podcast)</generator>
+   <item>
+    <title>El Adiós a Plex y Emby. Llega Jellyfin</title>
+    <link>https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html</link>
+    <pubDate>Tue, 07 May 2019 13:22 +0100</pubDate>
+    <description>Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html&gt;El Adiós a Plex y Emby. Llega Jellyfin&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html</guid> 
+          <itunes:summary>Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar</itunes:summary>
+          <itunes:image href="jellifin.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</title>
+    <link>https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html</link>
+    <pubDate>Wed, 01 May 2019 13:22 +0100</pubDate>
+    <description>Estaba escribiendo en un repositorio de GitHub en el archivo README.org, el resumen de un vídeo de un curso en Python buenísimo que he visto en YouTube. La intención era el poner la imagen del vídeo y debajo escribir un poco el resumen de este, para cuando quisiera acceder a un determinado tema, asociarlo al vídeo y clicar sobre esta imagen para que me lleve a YouTube
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html&gt;youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html</guid> 
+          <itunes:summary>Estaba escribiendo en un repositorio de GitHub en el archivo README.org, el resumen de un vídeo de un curso en Python buenísimo que he visto en YouTube. La intención era el poner la imagen del vídeo y debajo escribir un poco el resumen de este, para cuando quisiera acceder a un determinado tema, asociarlo al vídeo y clicar sobre esta imagen para que me lleve a YouTube</itunes:summary>
+          <itunes:image href="./images-blog/bash.jpg"/>  
+          <itunes:keywords>gitlab,markdown,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Estando a la Última en tu Raspberry con Debian Testing</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html</link>
+    <pubDate>Sun, 21 Apr 2019 13:22 +0100</pubDate>
+    <description>muestro un pequeño ejemplo de como montar un Docker con Debian Testing, una versión de Debian donde encontraremos paquetes más actualizados que la versión actual de Raspbian, que es una versión muchisímo más estable
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html&gt;Estando a la Última en tu Raspberry con Debian Testing&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html</guid> 
+          <itunes:summary>muestro un pequeño ejemplo de como montar un Docker con Debian Testing, una versión de Debian donde encontraremos paquetes más actualizados que la versión actual de Raspbian, que es una versión muchisímo más estable</itunes:summary>
+          <itunes:image href="./images-blog/debian.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear archivos .gitkeep de forma recursiva mediante un script </title>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</link>
+    <pubDate>Wed, 17 Apr 2019 13:22 +0100</pubDate>
+    <description>Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html&gt;Crear archivos .gitkeep de forma recursiva mediante un script &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</guid> 
+          <itunes:summary>Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.</itunes:summary>
+          <itunes:image href="./images-blog/git.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Cambiando estados de forma masiva en mis Org Mode</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</link>
+    <pubDate>Wed, 17 Apr 2019 13:22 +0100</pubDate>
+    <description>Si tu blog comienza a ser muy grande y tienes centenares de tareas en tu Org Mode en estado *TODO*, es muy probable que quieras desmarcar este estado
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html&gt;Cambiando estados de forma masiva en mis Org Mode&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html</guid> 
+          <itunes:summary>Si tu blog comienza a ser muy grande y tienes centenares de tareas en tu Org Mode en estado *TODO*, es muy probable que quieras desmarcar este estado</itunes:summary>
+          <itunes:image href="[[./images-blog/todo.jpg]]"/>  
+          <itunes:keywords>sed,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Controla tu Raspberry, Servidor o PC desde Telegram</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html</link>
+    <pubDate>Thu, 11 Apr 2019 13:22 +0100</pubDate>
+    <description>Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html&gt;Controla tu Raspberry, Servidor o PC desde Telegram&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html</guid> 
+          <itunes:summary>Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram</itunes:summary>
+          <itunes:image href="./images-blog/tocar_movil.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Atajos de Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html</link>
+    <pubDate>Sat, 06 Apr 2019 13:22 +0100</pubDate>
+    <description>Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html&gt;Atajos de Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html</guid> 
+          <itunes:summary>Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal, es algo verdaderamente muy útil</itunes:summary>
+          <itunes:image href="./images-blog/atajos.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Montando una carpeta con todos mis servidores dlna</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html</link>
+    <pubDate>Fri, 05 Apr 2019 13:22 +0100</pubDate>
+    <description>Vamos a montar en una carpeta de nuestro PC, todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html&gt;Montando una carpeta con todos mis servidores dlna&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html</guid> 
+          <itunes:summary>Vamos a montar en una carpeta de nuestro PC, todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC </itunes:summary>
+          <itunes:image href="./images-blog/dlna.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Montando carpetas del servidor, Raspberry,... en tu escritorio</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</link>
+    <pubDate>Thu, 04 Apr 2019 13:22 +0100</pubDate>
+    <description>SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html&gt;Montando carpetas del servidor, Raspberry,... en tu escritorio&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html</guid> 
+          <itunes:summary>SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil </itunes:summary>
+          <itunes:image href="./images-blog/sshfs.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Exportando bonito a html mi OrgMode y creando web estática</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</link>
+    <pubDate>Tue, 02 Apr 2019 13:22 +0100</pubDate>
+    <description>Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html&gt;Exportando bonito a html mi OrgMode y creando web estática&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html</guid> 
+          <itunes:summary>Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad </itunes:summary>
+          <itunes:image href="./images-blog/ox-twbs.png"/>  
+          <itunes:keywords>gitlab,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Calculando con mi terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html</link>
+    <pubDate>Mon, 01 Apr 2019 13:22 +0100</pubDate>
+    <description>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html&gt;Calculando con mi terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html</guid> 
+          <itunes:summary>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos</itunes:summary>
+          <itunes:image href="./images-blog/expr.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Tomb. Mis secretos son una Tumba. Crifrar Archivos</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</link>
+    <pubDate>Sun, 31 Mar 2019 13:22 +0100</pubDate>
+    <description>Hoy toca el turno de Tomb. Un script para cifrar archivos muy pero que muy interesante
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html&gt;Tomb. Mis secretos son una Tumba. Crifrar Archivos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html</guid> 
+          <itunes:summary>Hoy toca el turno de Tomb. Un script para cifrar archivos muy pero que muy interesante</itunes:summary>
+          <itunes:image href="./images-blog/tomb.png"/>  
+          <itunes:keywords>cifrado,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Notificaciones Org Mode en Telegram con mi Bot</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html</link>
+    <pubDate>Sun, 31 Mar 2019 13:22 +0100</pubDate>
+    <description>En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html&gt;Notificaciones Org Mode en Telegram con mi Bot&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html</guid> 
+          <itunes:summary>En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear</itunes:summary>
+          <itunes:image href="./images-blog/telegram2org.png"/>  
+          <itunes:keywords>raspberry,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Veracrypt en Ubuntu y tu Raspberry por Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html</link>
+    <pubDate>Fri, 29 Mar 2019 13:22 +0100</pubDate>
+    <description>Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar parte del contenido almacenado en tu Raspberry
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html&gt;Veracrypt en Ubuntu y tu Raspberry por Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html</guid> 
+          <itunes:summary>Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar parte del contenido almacenado en tu Raspberry</itunes:summary>
+          <itunes:image href="./images-blog/veracrypt.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear página de error 404 en GitHub Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html</link>
+    <pubDate>Fri, 29 Mar 2019 13:22 +0100</pubDate>
+    <description>Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog, muchos de los artículos antiguos han cambiado ruta de la dirección web en el servidor y si llegas a ellas, quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html&gt;Crear página de error 404 en GitHub Pages&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html</guid> 
+          <itunes:summary>Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog, muchos de los artículos antiguos han cambiado ruta de la dirección web en el servidor y si llegas a ellas, quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404</itunes:summary>
+          <itunes:image href="./images-blog/404.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html</link>
+    <pubDate>Thu, 28 Mar 2019 13:22 +0100</pubDate>
+    <description>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html&gt;Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html</guid> 
+          <itunes:summary>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!</itunes:summary>
+          <itunes:image href="./images-blog/botfather.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html</link>
+    <pubDate>Mon, 25 Mar 2019 13:22 +0100</pubDate>
+    <description>Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html&gt;Monta un servidor web Nginx, con una sola línea de Terminal (Docker)&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html</guid> 
+          <itunes:summary>Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución</itunes:summary>
+          <itunes:image href="./images-blog/nginx.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html</link>
+    <pubDate>Fri, 15 Mar 2019 13:22 +0100</pubDate>
+    <description>Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html&gt;Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html</guid> 
+          <itunes:summary>Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode</itunes:summary>
+          <itunes:image href="./images-blog/emacs.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crea un Bot de Telegram con Bash y una sola línea de Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html</link>
+    <pubDate>Thu, 14 Mar 2019 13:22 +0100</pubDate>
+    <description>Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html&gt;Crea un Bot de Telegram con Bash y una sola línea de Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html</guid> 
+          <itunes:summary>Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc</itunes:summary>
+          <itunes:image href="./images-blog/telegram.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Simplenote en Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html</link>
+    <pubDate>Sun, 10 Mar 2019 13:22 +0100</pubDate>
+    <description>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html&gt;Simplenote en Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html</guid> 
+          <itunes:summary>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa.</itunes:summary>
+          <itunes:image href="./images-blog/simplenote.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html</link>
+    <pubDate>Sun, 24 Feb 2019 13:22 +0100</pubDate>
+    <description>El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html&gt;Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html</guid> 
+          <itunes:summary>El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian</itunes:summary>
+          <itunes:image href="./images-blog/docker.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Cliente dlna para tu escritorio</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html</link>
+    <pubDate>Sat, 16 Feb 2019 13:22 +0100</pubDate>
+    <description>Ya os expliqué como crear tu servidor dlna en raspberry o servidor Linux y como crear listas en m3u para el servidor, ahora tocaría el poder utilizar un cliente dlna en tu escritorio. Tenemos muchas aplicaciones para movil, smart TV,... pero, ¿Para escritorio?, no tendría sentido el montar un servidor multimedia solo para movil, tabletas y Tv. La verdad, es que escasean para escritorio, pero gracias a aplicaciones como Rhythmbox y sus plugins, podemos utilizar dlna de un modo muy sencillo. Aquí os explico como hacerlo
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html&gt;Cliente dlna para tu escritorio&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html</guid> 
+          <itunes:summary>Ya os expliqué como crear tu servidor dlna en raspberry o servidor Linux y como crear listas en m3u para el servidor, ahora tocaría el poder utilizar un cliente dlna en tu escritorio. Tenemos muchas aplicaciones para movil, smart TV,... pero, ¿Para escritorio?, no tendría sentido el montar un servidor multimedia solo para movil, tabletas y Tv. La verdad, es que escasean para escritorio, pero gracias a aplicaciones como Rhythmbox y sus plugins, podemos utilizar dlna de un modo muy sencillo. Aquí os explico como hacerlo</itunes:summary>
+          <itunes:image href="./images-blog/rhythmbox.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html</link>
+    <pubDate>Sun, 10 Feb 2019 13:22 +0100</pubDate>
+    <description>En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html&gt;Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html</guid> 
+          <itunes:summary>En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso</itunes:summary>
+          <itunes:image href="./images-blog/ejabberd.png"/>  
+          <itunes:keywords>mensajeria,docker,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>No todo es echo. También existe printf</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html</link>
+    <pubDate>Fri, 08 Feb 2019 13:22 +0100</pubDate>
+    <description>Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html&gt;No todo es echo. También existe printf&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html</guid> 
+          <itunes:summary>Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>2 Archivos de configuración, un Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</link>
+    <pubDate>Fri, 08 Feb 2019 13:22 +0100</pubDate>
+    <description>Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html&gt;2 Archivos de configuración, un Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html</guid> 
+          <itunes:summary>Como sabéis, podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones, pero cuando utilizo la versión vía terminal, quiero que sea ligera y muy rápida, pero sin perder cierta personalización como el acceso a los archivos .org, resaltar la sintaxis, corrector ortográfico... Para la interfaz gráfica, dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento, pero con la totalidad de servicios disponibles como elfeed, temas, etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs, para las dos versiones</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Papelera Reciclaje desde la Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html</link>
+    <pubDate>Thu, 07 Feb 2019 13:22 +0100</pubDate>
+    <description>Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html&gt;Papelera Reciclaje desde la Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html</guid> 
+          <itunes:summary>Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.</itunes:summary>
+          <itunes:image href="./images-blog/papelera.jpg"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Instalando una Dokuwiki en 4 pasos</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html</link>
+    <pubDate>Wed, 06 Feb 2019 13:22 +0100</pubDate>
+    <description>Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html&gt;Instalando una Dokuwiki en 4 pasos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html</guid> 
+          <itunes:summary>Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2.</itunes:summary>
+          <itunes:image href="./images-blog/dokuwiki.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Instalar Docker en Raspberry Pi con Raspbian</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html</link>
+    <pubDate>Sun, 03 Feb 2019 13:22 +0100</pubDate>
+    <description>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html&gt;Instalar Docker en Raspberry Pi con Raspbian&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html</guid> 
+          <itunes:summary>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>OrgMode: Buscar solo en las Cabeceras</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</link>
+    <pubDate>Fri, 01 Feb 2019 13:22 +0100</pubDate>
+    <description>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html&gt;OrgMode: Buscar solo en las Cabeceras&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html</guid> 
+          <itunes:summary>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</title>
+    <link>https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html</link>
+    <pubDate>Fri, 01 Feb 2019 13:22 +0100</pubDate>
+    <description>En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html&gt;Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html</guid> 
+          <itunes:summary>En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear Alias</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html</link>
+    <pubDate>Thu, 31 Jan 2019 13:22 +0100</pubDate>
+    <description>Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html&gt;Crear Alias&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html</guid> 
+          <itunes:summary>Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Que aparezca en el Prompt en que rama estamos</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html</link>
+    <pubDate>Tue, 29 Jan 2019 13:22 +0100</pubDate>
+    <description>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html&gt;Que aparezca en el Prompt en que rama estamos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html</guid> 
+          <itunes:summary>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html</link>
+    <pubDate>Tue, 29 Jan 2019 13:22 +0100</pubDate>
+    <description>Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html&gt;Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html</guid> 
+          <itunes:summary>Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Navegar por el Historial de comandos en Bash</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</link>
+    <pubDate>Mon, 28 Jan 2019 13:22 +0100</pubDate>
+    <description>Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html&gt;Navegar por el Historial de comandos en Bash&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html</guid> 
+          <itunes:summary>Hace unas semanas, en el blog de Linuxito, vi este truquillo para navegar por el historial de comandos de nuestra terminal, utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente, os recomiendo visitar el blog de Linuxito</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear ramas con Git</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html</link>
+    <pubDate>Mon, 28 Jan 2019 13:22 +0100</pubDate>
+    <description>Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html&gt;Crear ramas con Git&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html</guid> 
+          <itunes:summary>Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Lee Super rápido en Emacs con Spray</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</link>
+    <pubDate>Sun, 27 Jan 2019 13:22 +0100</pubDate>
+    <description>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html&gt;Lee Super rápido en Emacs con Spray&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html</guid> 
+          <itunes:summary>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Castero. Podcatcher ligero para Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</link>
+    <pubDate>Sat, 26 Jan 2019 13:22 +0100</pubDate>
+    <description>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html&gt;Castero. Podcatcher ligero para Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</guid> 
+          <itunes:summary>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.</itunes:summary>
+          <itunes:image href="./images-blog/castero.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Paquetes Snap</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</link>
+    <pubDate>Thu, 24 Jan 2019 13:22 +0100</pubDate>
+    <description>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html&gt;Paquetes Snap&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</guid> 
+          <itunes:summary>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. </itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Utilizando Git con la Terminal. GitHub</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</link>
+    <pubDate>Mon, 21 Jan 2019 13:22 +0100</pubDate>
+    <description>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html&gt;Utilizando Git con la Terminal. GitHub&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-utilizando-git-con-la-terminal-github.html</guid> 
+          <itunes:summary>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</link>
+    <pubDate>Mon, 21 Jan 2019 13:22 +0100</pubDate>
+    <description>Voy a explicar en este post, como generar el Feed del podcast de forma automática.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html&gt;Crear el Feed para el podcast en tu Blog con Jekyll&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</guid> 
+          <itunes:summary>Voy a explicar en este post, como generar el Feed del podcast de forma automática.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>rss,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
+    <pubDate>Mon, 21 Jan 2019 13:22 +0100</pubDate>
+    <description>Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Antergos. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</guid> 
+          <itunes:summary>Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>terminal,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html</link>
+    <pubDate>Sun, 20 Jan 2019 13:22 +0100</pubDate>
+    <description>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html&gt;Servidor de Mensajería Matrix para Raspberry. Cliente Riot&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html</guid> 
+          <itunes:summary>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>GPG. Cifrado de archivos simétrico</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</link>
+    <pubDate>Thu, 17 Jan 2019 13:22 +0100</pubDate>
+    <description>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html&gt;GPG. Cifrado de archivos simétrico&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</guid> 
+          <itunes:summary>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>servidor,raspberry,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Ignorar archivos que no queremos que suban a Git</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html</link>
+    <pubDate>Sat, 12 Jan 2019 13:22 +0100</pubDate>
+    <description>Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html&gt;Ignorar archivos que no queremos que suban a Git&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html</guid> 
+          <itunes:summary>Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear un Blog en GitHub. GitHub Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html</link>
+    <pubDate>Tue, 08 Jan 2019 13:22 +0100</pubDate>
+    <description>Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html&gt;Crear un Blog en GitHub. GitHub Pages&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html</guid> 
+          <itunes:summary>Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>blog,html,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>NextcloudPi. Nextcloud en Raspbian con Docker</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</link>
+    <pubDate>Sun, 06 Jan 2019 13:22 +0100</pubDate>
+    <description>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html&gt;NextcloudPi. Nextcloud en Raspbian con Docker&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html</guid> 
+          <itunes:summary>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Elimina archivos duplicados con fduples</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</link>
+    <pubDate>Sat, 05 Jan 2019 13:22 +0100</pubDate>
+    <description>fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html&gt;Elimina archivos duplicados con fduples&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html</guid> 
+          <itunes:summary>fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>terminal,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear un Blog en GitLab. GitLab Pages</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</link>
+    <pubDate>Fri, 04 Jan 2019 13:22 +0100</pubDate>
+    <description>Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html&gt;Crear un Blog en GitLab. GitLab Pages&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html</guid> 
+          <itunes:summary>Crear un blog en GitLab no es una mala decisión, teniendo en cuenta que nos proporciona un hosting totalmente gratuito, a través de las GitLabPages y sin límite de espacio ni tráfico.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>blog,html,git,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Visualiza tus Notas Markdown Versión Web con MkDocs</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</link>
+    <pubDate>Thu, 03 Jan 2019 13:22 +0100</pubDate>
+    <description>Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html&gt;Visualiza tus Notas Markdown Versión Web con MkDocs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html</guid> 
+          <itunes:summary>Voy a explicaros como instalar MkDocs, levantar un servidor y poder ver todas vuestras nota en una interfaz web.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>markdown,notas,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>El poder de la terminal y el scripting</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</link>
+    <pubDate>Thu, 03 Jan 2019 13:22 +0100</pubDate>
+    <description>Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html&gt;El poder de la terminal y el scripting&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html</guid> 
+          <itunes:summary>Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas, Linux Center</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>scrits,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Con Emacs también podemos editar Markdown</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</link>
+    <pubDate>Thu, 03 Jan 2019 13:22 +0100</pubDate>
+    <description>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html&gt;Con Emacs también podemos editar Markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html</guid> 
+          <itunes:summary>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>markdown,melpa,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Kde Connect en Ubuntu...</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
+    <pubDate>Wed, 02 Jan 2019 13:22 +0100</pubDate>
+    <description>He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect en Ubuntu...&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</guid> 
+          <itunes:summary>He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>i3,kdeconnect,ubuntu,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Crear listas m3u para minidlna o vlc</title>
+    <link>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</link>
+    <pubDate>Wed, 02 Jan 2019 13:22 +0100</pubDate>
+    <description>Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html&gt;Crear listas m3u para minidlna o vlc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</guid> 
+          <itunes:summary>Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>ls,unix,servidor,minidlna,multimedia</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Kde Connect en Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</link>
+    <pubDate>Mon, 31 Dec 2018 13:22 +0100</pubDate>
+    <description>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html&gt;Kde Connect en Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html</guid> 
+          <itunes:summary>Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]], he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast, existe la posibilidad de utilizarla con Emacs y como podéis imaginar, no me he podido resistir a probarla. Os explico como utilizarla</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>kdeconnect,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Eliminar comentarios de nuestros script</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html</link>
+    <pubDate>Sun, 30 Dec 2018 13:22 +0100</pubDate>
+    <description>Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html&gt;Eliminar comentarios de nuestros script&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html</guid> 
+          <itunes:summary>Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>sed,unix,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Redirigir el tráfico de una página web a otra</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</link>
+    <pubDate>Sat, 29 Dec 2018 13:22 +0100</pubDate>
+    <description>Hay veces que queremos redirigir el tráfico de una página a otra...
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html&gt;Redirigir el tráfico de una página web a otra&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html</guid> 
+          <itunes:summary>Hay veces que queremos redirigir el tráfico de una página a otra...</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>,,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Descargar todos los episodios de un Podcast con wget</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</link>
+    <pubDate>Fri, 28 Dec 2018 13:22 +0100</pubDate>
+    <description>Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html&gt;Descargar todos los episodios de un Podcast con wget&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html</guid> 
+          <itunes:summary>Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>unix,terminal,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Convertir de Markdown a Org Mode gracias a Pandoc</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</link>
+    <pubDate>Fri, 28 Dec 2018 13:22 +0100</pubDate>
+    <description>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html&gt;Convertir de Markdown a Org Mode gracias a Pandoc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html</guid> 
+          <itunes:summary>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>orgmode,markdown,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>minidlna</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-27-minidlna.html</link>
+    <pubDate>Thu, 27 Dec 2018 13:22 +0100</pubDate>
+    <description>DLNA es un servidor multimedia
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-27-minidlna.html&gt;minidlna&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-27-minidlna.html</guid> 
+          <itunes:summary>DLNA es un servidor multimedia</itunes:summary>
+          <itunes:image href="./images-blog/dlna.png"/>  
+          <itunes:keywords>minidlna,multimedia,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+   <item>
+    <title>Eliminar líneas en Blanco con sed</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</link>
+    <pubDate>Thu, 27 Dec 2018 13:22 +0100</pubDate>
+    <description>Como podemos eliminar líneas en Blanco
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html&gt;Eliminar líneas en Blanco con sed&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <enclosure url=""/>
+    <guid>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</guid> 
+          <itunes:summary>Como podemos eliminar líneas en Blanco</itunes:summary>
+          <itunes:image href="./images-blog/ugeek.png"/>  
+          <itunes:keywords>terminal,sed,,,</itunes:keywords>
+          <itunes:explicit></itunes:explicit>
+   </item>
+  </channel>
+</rss>
