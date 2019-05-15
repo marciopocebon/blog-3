@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="el-adiós-a-plex-y-emby.-llega-jellyfin-1" title="El Adiós a Plex y Emby. Llega Jellyfin" data-export_file_name="El Adios a Plex y Emby. Llega Jellyfin" data-description="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" data-export_date="2019-05-07 20:00" data-category="servidor" data-tag="ubuntu, raspberry" data-image="jellifin.png">El Adiós a Plex y Emby. Llega Jellyfin</h1>
+<h1 id="el-adiós-a-plex-y-emby.-llega-jellyfin-1" title="El Adiós a Plex y Emby. Llega Jellyfin" data-export_file_name="El Adios a Plex y Emby. Llega Jellyfin" data-description="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" data-export_date="2019-05-07 20:00" data-category="servidor" data-tag="ubuntu, raspberry" data-image="./images-blog/jellifin.png">El Adiós a Plex y Emby. Llega Jellyfin</h1>
 <p>Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin.</p>
 <center>
 <p><img src="../images-blog/jellifin.png" /></p>
@@ -71,9 +71,14 @@ gtag("config", "UA-131560140-1");
 <p>Para tener la última versión del servidor Jellyfin, utilizaremos la siguiente líneas:</p>
 <pre><code>docker run -d --name jellyfin --restart=unless-stopped --network=host -v $HOME/docker/jellyfin/config:/config -v /media:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:latest
 </code></pre>
+<p>Si queremos exponer el Jellyfin a la red mediante un Proxy Inverso, para acceder sin VPN, sería conveniente abrir solamente el puerto <strong>8096</strong>. Lo haríamos del siguiente modo:</p>
+<pre><code>docker run -d --name jellyfin --restart=unless-stopped -p 8096:8096 -v $HOME/docker/jellyfin/config:/config -v /media:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:latest
+</code></pre>
 <p>Si tienes un cliente de Emby y quieres hacer uso del servidor de Jellyfin, la última versión compatible con clientes Emby es la 10.2.2. Eso sí, esta versión no incluirá las mejoras que van apareciendo en las actualizaciones.</p>
 <pre><code>docker run -d --name jellyfin --restart=unless-stopped --network=host -v $HOME/docker/jellyfin/config:/config -v /media:/media -e UID=1000 -e GID=100 jellyfin/jellyfin:10.2.2
 </code></pre>
+<h2 id="accediendo-al-servicio">Accediendo al servicio</h2>
+<p>Para acceder al servicio, escribiremos en nuestro navegador: <a href="http://ip:8096">http://ip:8096</a></p>
 <h2 id="enlaces">Enlaces</h2>
 <ul>
 <li><a href="https://jellyfin.github.io/">Web de Jellyfin</a></li>
@@ -91,6 +96,7 @@ gtag("config", "UA-131560140-1");
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
@@ -100,6 +106,5 @@ gtag("config", "UA-131560140-1");
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

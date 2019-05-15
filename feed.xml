@@ -13,10 +13,43 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Accediendo a todos mis servicios desde cualquier lugar sin VPN</title>
+    <link>https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/mountain-man.jpg" alt="Accediendo a todos mis servicios desde cualquier lugar sin VPN"&gt;
+&lt;br&gt;&lt;p&gt;Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html&gt;Accediendo a todos mis servicios desde cualquier lugar sin VPN&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 15 May 2019  +0100</pubDate>
+    <category>servidor</category>
+    <category>nginx</category>
+    <category>raspberry</category>
+    <category>raspbian</category>
+    <guid>https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</guid>
+   </item>
+   <item>
     <title>El Adiós a Plex y Emby. Llega Jellyfin</title>
     <link>https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html</link>
     <description>
-&lt;img src="jellifin.png" alt="El Adiós a Plex y Emby. Llega Jellyfin"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/jellifin.png" alt="El Adiós a Plex y Emby. Llega Jellyfin"&gt;
 &lt;br&gt;&lt;p&gt;Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html&gt;El Adiós a Plex y Emby. Llega Jellyfin&lt;/a&gt;
 
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 07 May 2019  +0100</pubDate>
+    <pubDate>Tue, 07 May 2019 20:30 +0100</pubDate>
     <category>servidor</category>
     <category>ubuntu</category>
     <category>raspberry</category>
