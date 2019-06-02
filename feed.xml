@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Descargando videos de Internet</title>
-    <link>https://ugeek.github.io/blog/post/2019-05-23-descargando-videos-de-internet.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="Descargando videos de Internet"&gt;
 &lt;br&gt;&lt;p&gt;En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-05-23-descargando-videos-de-internet.html&gt;Descargando videos de Internet&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html&gt;Descargando videos de Internet&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 23 May 2019  +0100</pubDate>
+    <pubDate>Sun, 02 Jun 2019  +0100</pubDate>
     <category>aplicación</category>
     <category>terminal</category>
     <category>youtube</category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-05-23-descargando-videos-de-internet.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html</guid>
    </item>
    <item>
     <title>Accediendo a todos mis servicios desde cualquier lugar sin VPN</title>
@@ -71,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 15 May 2019 20:30 +0100</pubDate>
+    <pubDate>Wed, 15 May 2019 18:25 +0100</pubDate>
     <category>servidor</category>
     <category>nginx</category>
     <category>raspberry</category>
