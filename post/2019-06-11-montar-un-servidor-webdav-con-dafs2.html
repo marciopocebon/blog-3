@@ -1,5 +1,5 @@
 <head>
-<title> minidlna. uGeek Blog </title>
+<title> Montar un servidor webdav con dafs2. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="DLNA es un servidor multimedia" />
+<meta name="description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" minidlna" />
-<meta property="og:description" content="DLNA es un servidor multimedia" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html" />
+<meta property="og:title" content=" Montar un servidor webdav con dafs2" />
+<meta property="og:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html" />
 
-<meta name="twitter:title" content=" minidlna" />
-<meta name="twitter:description" content="DLNA es un servidor multimedia" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
+<meta name="twitter:title" content=" Montar un servidor webdav con dafs2" />
+<meta name="twitter:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,73 +53,33 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="minidlna-1" title="minidlna" data-export_file_name="minidlna" data-description="DLNA es un servidor multimedia" data-export_date="2018-12-27 21:00 2019-02-24 2019-03-24" data-category="servidor" data-tag="servidor,raspberry,minidlna,multimedia" data-image="./images-blog/dlna.png">minidlna</h1>
-<p>DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.</p>
+<h1 id="montar-un-servidor-webdav-con-dafs2-1" title="Montar un servidor webdav con dafs2" data-export_file_name="Montar un servidor webdav con dafs2" data-description="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" data-export_date="2019-06-11 20:20" data-category="servidor" data-tag="webdav,raspberry" data-image="./images-blog/dav.png">Montar un servidor webdav con dafs2</h1>
+<p>En próximos Podcast y Posts, os hablaré de como montar un servidor con webdav, para sincronizar nuestros archivos.</p>
 <center>
-<p><img src="../images-blog/dlna.png" /></p>
+<p><img src="../images-blog/dav.png" /></p>
 </center>
+<p>Ahora de momento, vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex… en una carpeta local. Para ello vamos a utilizar dafs2.</p>
 <h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install minidlna</code></p>
-<h2 id="archivo-de-configuración-del-servicio">Archivo de configuración del servicio</h2>
-<p><code>sudo nano /etc/minidlna.conf</code></p>
-<p>Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:</p>
-<pre><code>media_dir=V,/media/Peliculas
-media_dir=P,/media/Fotos
-media_dir=A,/media/Musica
+<p>La instalación la haremos desde los repositorios:</p>
+<p><code>sudo apt-get install davfs2</code></p>
+<p>Seleccionanos <strong>YES</strong>, indicando que cualquiera que no sea usuario root, pueda montar una unidad.</p>
+<p>Creamos una carpeta, por ejemplo la llamaremos webdav, para montar después nuestro servidor.</p>
+<p><code>mkdir -p ~/webdav</code></p>
+<p>Reconfigurar davfs2:</p>
+<p><code>sudo dpkg-reconfigure davfs2</code></p>
+<h2 id="montar">Montar</h2>
+<p>Vamos a montar nuestra servidor webdav en la carpeta local llamada webdav.</p>
+<p><code>sudo mount.davfs https://&lt;URL&gt;/ ~/webdav</code></p>
+<p>también podemos utilizar:</p>
+<pre><code>sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
 </code></pre>
-<p>Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:</p>
-<p><code>media_dir=PV,/media/Peliculas_y_ Fotos</code></p>
-<p>Si tenemos nuestros archivos multimedia en dos o más carpetas, podemos especificarlo así:</p>
-<pre><code>media_dir=A,~/Música
-media_dir=A,/media/Musica
+<h2 id="desmontar">Desmontar</h2>
+<pre><code>sudo fusermount -u ~/webdav
 </code></pre>
-<h2 id="descubrir-el-servidor-en-nuestra-red">Descubrir el servidor en nuestra Red</h2>
-<p>Quitaremos la "#" delante de inotify y pondremos <strong>yes</strong>.</p>
-<pre><code># Automatic discovery of new files in the media_dir directory. 
-inotify=yes
-</code></pre>
-<h2 id="poner-nombre-a-nuestro-servidor">Poner nombre a nuestro servidor</h2>
-<p>Aquí podremos poner nombre a nuestro servidor:</p>
-<pre><code># Name that the DLNA server presents to clients.
-friendly_name=Mi Servidor DLNA
-</code></pre>
-<h2 id="añadir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia</h2>
-<p>Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:</p>
-<pre><code># Automatic discovery of new files in the media_dir directory.
-inotify=yes
-</code></pre>
-<h2 id="crear-nueva-base-de-datos">Crear nueva base de datos</h2>
-<p>Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:</p>
-<p>Borraremos la base de datos:</p>
-<p><code>sudo rm -f /var/cache/minidlna/files.db</code></p>
-<p>Reiniciaremos el servidor</p>
-<p><code>sudo service minidlna restart</code></p>
-<p>Como has podido ver en este paso anterior, la base de datos así como las portadas de los archivos multimedia, están defecto en la carpeta <strong>/var/cache/minidlna</strong>. Pero en el archivo de configuración, podemos cambiar la ruta. Para ello desmarcaremos la almohadilla y especificaremos la ruta deseada.</p>
-<pre><code># Path to the directory that should hold the database and album art cache.                                                                  
-#db_dir=/var/cache/minidlna  
-</code></pre>
-<h2 id="iniciar-detener-restaurar-servicio">Iniciar, Detener, Restaurar servicio</h2>
-<p><code>exec /usr/sbin/service minidlna start</code></p>
-<p>o</p>
-<p><code>sudo systemctl start minidlna.service</code></p>
-<p>o</p>
-<p><code>sudo service minidlna start</code></p>
-<p><code>sudo service minidlna stop</code></p>
-<p><code>sudo service minidlna restart</code></p>
-<h2 id="forzar-el-reescaneado">Forzar el reescaneado</h2>
-<p>Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:</p>
-<p><code>sudo minidlnad -R ; sudo service minidlna restart</code></p>
-<p>o sino, podemos hacer:</p>
-<p><code>sudo service minidlna force-reload</code></p>
-<p>Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través de nuestro servidor DLNA.</p>
-<h2 id="puertos">Puertos</h2>
-<p>En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:</p>
-<ul>
-<li>TCP = 8200</li>
-<li>UDP = 1900</li>
-</ul>
+<h2 id="conclusión">Conclusión</h2>
+<p>En pocos pasos, podemos acceder a la totalidad de los archivos del servidor webdav y sincronizarlos con todos nuestros dispositivos.</p>
 <br>
-<p>Publicado por Angel el jueves 27 diciembre del 2018 y <strong>actualizado</strong> el domingo 24 febrero del 2019</p>
+<p>Publicado por Angel el martes 11 junio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
