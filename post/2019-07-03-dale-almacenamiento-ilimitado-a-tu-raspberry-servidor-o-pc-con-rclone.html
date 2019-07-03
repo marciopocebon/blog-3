@@ -257,7 +257,7 @@ Choose a number from below, or type in your own value
 <p>Para automontar nuestra nube en una carpeta local, podemos hacerlo de diferentes formas. Vamos a utilizar cron ya que me parece el método más sencillo.</p>
 <p><code>sudo crontab -e</code></p>
 <p>Escribimos en cron, por ejemplo en mi caso:</p>
-<pre><code>@reboot ( rclone mount --config &quot;/home/&lt;tu_usuario&gt;/.config/rclone/rclone.conf&quot; drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos )
+<pre><code>@reboot ( rclone mount --config &quot;/home/&lt;tu_usuario&gt;/.config/rclone/rclone.conf&quot; drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos &amp; )
 </code></pre>
 <p>Reiniciamos.</p>
 <p><strong>Es muy importante especificar la ruta del archivo de configuración, ya que si no lo hacemos, como estamos ejecutando el comando como root, el archivo no lo buscará en el $HOME del usuario, sino que en el $HOME de root</strong></p>
