@@ -1,0 +1,293 @@
+<head>
+<title>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" />
+<meta property="og:description" content="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/youtube.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html" />
+
+<meta name="twitter:title" content="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" />
+<meta name="twitter:description" content="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/youtube.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+
+<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/youtube.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
+<p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,…).</p>
+<center>
+<p><img src="../images-blog/rclone.png" /></p>
+</center>
+<p>Gracias a esta conectividad, podremos hacer copias o sincronizaciones de nuestras carpetas o archivos. Además, combinando Rclone con cron, podremos programar estas copias o sincronizaciones.</p>
+<p>Rclone también permite copiar y sincronizar carpetas en local, por SSH, SFTP, WebDav, etc…</p>
+<p>Otros dos puntos fuertes de Rclone, es la posibilidad de montar la nube pública en una carpeta en Local, permitiendonos acceder a todo el contenido de esta nube, como si estuviera en local. El otro punto fuerte, es la posibilidad de cifrar todo el contenido que guardemos en la nube pública.</p>
+<h2 id="instalación">Instalación</h2>
+<h3 id="instalación-repositorios">Instalación repositorios</h3>
+<p>Rclone está en los repositorios oficiales, así que su instalación es muy simple:</p>
+<p><code>sudo apt install rclone</code></p>
+<h3 id="instalación-a-la-última-recomendable">Instalación a la última (Recomendable)</h3>
+<p>Como sabeis, las api de muchas nubes públicas van cambiando periodicamente, así que quizas sería muy insteresante instalar la última versión. Para ello descargaremos el paquete de la arquiectura de nuestro procesador y los instalaremos así:</p>
+<ul>
+<li><a href="https://rclone.org/downloads/">Descargalo desde aquí</a></li>
+</ul>
+<p><code>sudo dpkg -i &lt;PAQUETE_DESCARGADOR&gt;</code></p>
+<h3 id="rclone-snap">rclone snap</h3>
+<p>Mucho mas desactualizado. También podemos instalar rclone desde snap</p>
+<p><code>sudo snap install rclone</code></p>
+<h3 id="rclonebrowser">RcloneBrowser</h3>
+<p>Aunque el uso de rclone es muy sencillo, es probable que quieras utilizar interfaz gráfica para gestionar tus nubes:</p>
+<p>En <strong>Ubuntu 19.04</strong>, podemos instalarlo desde los repositorios de oficiales:</p>
+<p><code>sudo apt install rclone-browser</code></p>
+<p>Instalación por PPA:</p>
+<pre><code>sudo add-apt-repository ppa:mmozeiko/rclone-browser
+sudo apt-get update
+sudo apt install rclone-browser
+</code></pre>
+<h2 id="acceder-a-una-nube">Acceder a una Nube</h2>
+<p>Rclone dispone de un listado amplio de nubes públicas.</p>
+<p>Para utilizar una cuenta en rclone, teclearemos en nuestra terminal:</p>
+<p><code>rclone config</code></p>
+<p>Ahora, entre las opciones, introduciremos <strong>n</strong>, para crear una nueva cuenta en Rclone:</p>
+<pre><code>e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt; n
+</code></pre>
+<p>Nos pedirá que le <strong>pongamos un nombre</strong></p>
+<p><code>name&gt; drive</code></p>
+<p>Y ahora nos saldrá el gran listado de nubes públicas:</p>
+<pre><code>Type of storage to configure.
+Enter a string value. Press Enter for the default (&quot;&quot;).
+Choose a number from below, or type in your own value
+ 1 / A stackable unification remote, which can appear to merge the contents of several remotes
+   \ &quot;union&quot;
+ 2 / Alias for a existing remote
+   \ &quot;alias&quot;
+ 3 / Amazon Drive
+   \ &quot;amazon cloud drive&quot;
+ 4 / Amazon S3 Compliant Storage Providers (AWS, Ceph, Dreamhost, IBM COS, Minio)
+   \ &quot;s3&quot;
+ 5 / Backblaze B2
+   \ &quot;b2&quot;
+ 6 / Box
+   \ &quot;box&quot;
+ 7 / Cache a remote
+   \ &quot;cache&quot;
+ 8 / Dropbox
+   \ &quot;dropbox&quot;
+ 9 / Encrypt/Decrypt a remote
+   \ &quot;crypt&quot;
+10 / FTP Connection
+   \ &quot;ftp&quot;
+11 / Google Cloud Storage (this is not Google Drive)
+   \ &quot;google cloud storage&quot;
+12 / Google Drive
+   \ &quot;drive&quot;
+13 / Hubic
+   \ &quot;hubic&quot;
+14 / JottaCloud
+   \ &quot;jottacloud&quot;
+15 / Local Disk
+   \ &quot;local&quot;
+16 / Mega
+   \ &quot;mega&quot;
+17 / Microsoft Azure Blob Storage
+   \ &quot;azureblob&quot;
+18 / Microsoft OneDrive
+   \ &quot;onedrive&quot;
+19 / OpenDrive
+   \ &quot;opendrive&quot;
+20 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+   \ &quot;swift&quot;
+21 / Pcloud
+   \ &quot;pcloud&quot;
+22 / QingCloud Object Storage
+   \ &quot;qingstor&quot;
+23 / SSH/SFTP Connection
+   \ &quot;sftp&quot;
+24 / Webdav
+   \ &quot;webdav&quot;
+25 / Yandex Disk
+   \ &quot;yandex&quot;
+26 / http Connection
+   \ &quot;http&quot;
+</code></pre>
+<p>Introducimos el número de la nube o cifrado y seguimos con el proceso…</p>
+<p>El resto de pasos, está en un Ingles simple e intuitivo. Si no entiendes Ingles, te recomiendo Google Translate.</p>
+<h2 id="autorizar-la-cuenta-sin-tener-interfaz-gráfica">Autorizar la cuenta sin tener interfaz gráfica</h2>
+<p>Uno de los problemas que podemos encontrar, es que para autorizar la cuenta de una nube pública, rclone nos pedirá el conectarnos a una url desde nuestro navegador, en el dispositivo en local y autorizar a rclone acceder a esta cuenta.</p>
+<p>La verdad es que si no tienes interfaz gráfica, esto puede ser un serio problema, ya que no puedes utilizar un navegador como Firefox, Chrome, etc…</p>
+<p>Los navegadores de texto para terminal, no todos son compatibles, así que solucioné el problema instalando un navegador como <strong>uzbl</strong> y accediendo a él remotamente desde un PC de un modo virtualizado:</p>
+<h3 id="instalamos-uzbl">Instalamos uzbl</h3>
+<p><code>sudo apt install uzbl</code></p>
+<h3 id="acceder-al-navegador-remotamene">Acceder al navegador remotamene</h3>
+<p>Desde otro dispositivo, como puede ser un PC, nos conectaremos por SSH y abriremos el navegador:</p>
+<p><code>ssh -X -p 22 angel@192.168.1.100 uzbl</code></p>
+<p><em>sustituye el usuario e IP</em></p>
+<p>Ahora introducimos la url que nos de rclone en la terminal, pulsando la tecla <strong>o</strong></p>
+<p>Ya podemos autorizar a rclone!!!</p>
+<h3 id="método-sencillo-desde-tu-pc-o-portátil">Método sencillo desde tu PC o Portátil</h3>
+<p>El método más sencillo, sería instalar rclone en tu PC o Portátil, conectarte a tus nubes desde él y copiar el archivo completo o la parte perteneciente a la nube que te interesa, en el configuración de rclone de tu raspberry o servidor sin interfaz gráfica.</p>
+<p>El archivo de configuración, te recuerdo que está en: $HOME/.config/rclone/rclone.conf</p>
+<h2 id="iniciando-rclone">Iniciando Rclone</h2>
+<p>Si has llegado hasta aquí, ya has vinculado con una de tus nubes a Rclone. Vamos a comprobar que todo funciona correctamente haciendo un <strong>ls</strong>.</p>
+<p>Para utilizar una de las nubes, escribiremos el nombre que hemos otorgado a la unidad, seguido de dos puntos.</p>
+<p>Ejem:</p>
+<p>A mi cuenta de Google Drive, le he puesto el nombre <strong>drive</strong>.</p>
+<p><code>drive:</code></p>
+<p>Si quiero acceder a una carpeta dentro de la nube. Por ejemplo, mi carpeta /Podcast/ugeek, lo representariamos así:</p>
+<p><code>drive:podcast/ugeek</code></p>
+<p><code>drive:podcast</code></p>
+<h3 id="hacer-un-ls">Hacer un ls</h3>
+<p>Ver un listado de todos los archivos en la unidad:</p>
+<p><code>rclone ls unidad_creada:carpeta</code></p>
+<p>Ver un listado, únicamente de las carpetas de la unidad con su fecha de creación:</p>
+<p><code>rclone lsd unidad_creada:carpeta</code> -&gt; ls de carpetas</p>
+<p>Ver un listado, únicamente de las carpetas de la unidad:</p>
+<p><code>rclone lsf unidad_creada:carpeta</code></p>
+<h3 id="crear-un-nuevo-directorio">Crear un nuevo directorio</h3>
+<p>Para crear un directorio nuevo, igual que lo hacemos habitualmente en la terminal, utilizaremos <strong>mkdir</strong>.</p>
+<p>Ejemplo:</p>
+<p><code>rclone mkdir drive:fotos/viaje</code></p>
+<h2 id="copiar-de-un-nube-a-otra">Copiar de un nube a otra</h2>
+<p>Es probable que queramos hacer una copia de nuestra fotos guardadas en Google Drive, en Dropbox. Para ello utilizariamos:</p>
+<p><code>rclone copy drive:fotos/verano/ dropbox:fotos/verano</code></p>
+<h2 id="ver-el-proceso-de-copiado-o-sincronización">Ver el proceso de copiado o sincronización</h2>
+<p>Una de las cosas que me ponen nervioso, es que cuando ejecutas un comando, la terminal se queda con ese comando introducido y no sucede nada. No sabes si se está copiando o sincronizando bien.</p>
+<p>Si al final de la línea añadimos <strong>-v</strong>, veremos en nuestra terminal todo el proceso de copia o sincronización. Irá apareciendo toda la información del proceso archivo a archivo.</p>
+<p><code>rclone copy drive:fotos/verano/ dropbox:fotos/verano -v</code></p>
+<h2 id="archivo-de-configuración">Archivo de configuración</h2>
+<p>El archivo de configuración de rclone, está en la ruta: <code>$HOME/.config/rclone/rclone.conf</code></p>
+<p>Este archivo si lo llevamos a otro servidor o PC, podremos copiar todas las nubes con sus contraseñas en el otro dispositivo.</p>
+<p><strong>Esto es genial, porque es muy cómodo y a la vez peligroso. Cuidado donde dejas este archivo</strong></p>
+<h3 id="especificando-donde-está-el-archivo-de-configuración">Especificando donde está el archivo de configuración</h3>
+<p>Con <strong>–config</strong>, podemos especificar otra ruta del archivo de configuración de rclone.</p>
+<p>Imagina que tengo mi archivo de configuración dentro de la carpeta <strong>rclone</strong> en el home del usuario, lo haríamos así:</p>
+<pre><code>rclone sync --config &quot;/home/angel/rclone/rclone.conf&quot; drive:fotos/verano/ dropbox:fotos/verano -v
+</code></pre>
+<h2 id="copiar-o-sincronizar">Copiar o Sincronizar</h2>
+<p>Con Rclone podemos hacer tanto copias como sincronizaciones. La sincronización, es algo parecido a <strong>rsync</strong>, ideal backups.</p>
+<p>La sincronización solo copiará o borrará aquellos archivos modificados entre el origen y destino.</p>
+<p>Recuerda que el origen puede ser tanto la carpeta local, como la carpeta en la nube y viceversa.</p>
+<h3 id="copiar">Copiar</h3>
+<p>Ejemplo de copia en rclone:</p>
+<p><strong>rclone copy origen destino</strong></p>
+<p>Copiamos los archivos de <strong>Google Drive</strong>, a mi carpeta <strong>fotos</strong> en local:</p>
+<p><code>rclone copy drive:fotos/verano/ /home/angel/fotos/</code></p>
+<h3 id="sincronizar">Sincronizar</h3>
+<p>Ejemplo de sincronización en rclone:</p>
+<p><strong>rclone sync origen destino</strong></p>
+<p>Syncronizamos mis nuevas <strong>fotos</strong> del verano, a la carpeta de <strong>Google Drive</strong> <code>/fotos/verano</code></p>
+<p><code>rclone sync /home/angel/fotos drive:fotos/verano/</code></p>
+<h2 id="cifrar-una-carpeta">Cifrar una Carpeta</h2>
+<p>Para crear una carpeta cifrada, utilizaremos el mismo proceso que para vincular rclone a una nube pública:</p>
+<ul>
+<li><code>rclone config</code></li>
+<li>Nombre que utilizaremos en rclone, para sincronizar o copiar esa carpeta cifrada</li>
+<li>Seleccionamos:</li>
+</ul>
+<pre><code>9 / Encrypt/Decrypt a remote
+  \ &quot;crypt&quot;
+</code></pre>
+<p>En la versión de rclone <strong>1.47</strong>, aparece en el número nueve. Esto puede variar según la versión.</p>
+<p>Mi carpeta cifrada, será una carpeta que crearé en la raíz de Google Drive, que llamaré "Mis Fotos".</p>
+<p>Se da por hecho que has seguido la primera parte del tutorial, donde me he conectado a mi cuenta de Google Drive, creando una unidad con rclone llamada <strong>drive</strong>, y dentro de esta unidad, ahora voy a crear una carpeta llamada <strong>Mis Fotos</strong>.</p>
+<p>De este modo, dentro de Google Drive tendré mis fotos cifradas.</p>
+<pre><code>remote&gt; drive:Mis_Fotos
+</code></pre>
+<p>No voy a detallar todos los pasos, pero los siguientes son:</p>
+<ul>
+<li>Te preguntará si quieres que los archivos permanezcan ocultos para Google Drive, utilicen el nombre original del archivo (aun estando cifrados) o utilice un nombre complejo compuesto de números y letras.</li>
+<li>Añadir una o dos contraseñas para cifrar los archivos:</li>
+</ul>
+<p>Es opcional el añadir la contraseña, yo prefiero ponerla.</p>
+<p><strong>Recuerda que conservando el archivo de configuración, esta carpeta cifrada podrás montarla en otro dispositivo con rclone</strong></p>
+<h2 id="montardesmontar-unidad-como-si-fuera-un-disco-duro">Montar/Desmontar unidad como si fuera un disco duro</h2>
+<p>Vamos a montar la nube pública en nuestro servidor, como si fuera una unidad de disco duro. Para ello, necesitamos instalar Fuse si no lo tenemos instalado.</p>
+<h3 id="instalar-fuse">Instalar Fuse</h3>
+<p><code>sudo apt-get install fuse</code></p>
+<h3 id="montar">Montar</h3>
+<p><code>rclone mount &lt;nube&gt; &lt;carpeta_local&gt;</code></p>
+<p><code>sudo rclone mount drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos</code></p>
+<h2 id="automontar-al-iniciar-el-sistema-operativo">Automontar al iniciar el sistema operativo</h2>
+<p>Para automontar nuestra nube en una carpeta local, podemos hacerlo de diferentes formas. Vamos a utilizar cron ya que me parece el método más sencillo.</p>
+<p><code>sudo crontab -e</code></p>
+<p>Escribimos en cron, por ejemplo en mi caso:</p>
+<pre><code>@reboot ( rclone mount --config &quot;/home/&lt;tu_usuario&gt;/.config/rclone/rclone.conf&quot; drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos )
+</code></pre>
+<p>Reiniciamos.</p>
+<p><strong>Es muy importante especificar la ruta del archivo de configuración, ya que si no lo hacemos, como estamos ejecutando el comando como root, el archivo no lo buscará en el $HOME del usuario, sino que en el $HOME de root</strong></p>
+<h2 id="rclone-en-android">Rclone en Android</h2>
+<p>Acceder a una carpeta cifrada con rclone desde tu dispositovo Android, no es un problema. Disponemos de dos aplicaciones en el Google Play. Aquí te dejo la primera desde Google Play y la segunda, un repositorio en GitHub donde puedes descargar el apk:</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=pl.sviete.dom.rcloneexplorer">AIS synchro</a></li>
+<li><a href="https://github.com/kaczmarkiewiczp/rcloneExplorer/releases">rcloneExplorer</a></li>
+</ul>
+<p>Solo puedes instar una de estas dos aplicaciones. Las dos a la vez, no es posible, la segunda que instales te dará error.</p>
+<h3 id="uso-de-rclone-en-android">Uso de Rclone en Android</h3>
+<p>Tan sencillo como importar el archivo de configuración <strong>rclone.conf</strong>, o crear una carpeta llamada <strong>rclone</strong> en la raíz de la memoria interna de tu teléfono y dejar dentro de esta, el archivo de configuración <strong>rclone.conf</strong>.</p>
+<p>Cuando abras la aplicación, saldrán todas tus nubes. Podrás subir y bajar archivos, así como ver contenido multimedia en streaming.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Rclone es una herramienta alucinante. Nos permite utilizar un gran número de nubes públicas, privadas, hacer sincronizaciones o copias entre nubes, local-nube o nube-local, montar nubes en una carpeta local,… y gracias a rclone Browser o la versión de Android, utilizar una interfaz gráfica sencilla y consumir contenido multimedia en straming. ¿Que más se puede pedir?</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://rclone.org">Rclone</a></li>
+<li><a href="https://martins.ninja/RcloneBrowser/">Rclone Browser</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 03 julio del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html">Castero. Podcatcher ligero para Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
