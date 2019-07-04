@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/youtube.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
+<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25 2019-07-04" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/youtube.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
 <p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,…).</p>
 <center>
 <p><img src="../images-blog/rclone.png" /></p>
@@ -83,6 +83,8 @@ gtag("config", "UA-131560140-1");
 sudo apt-get update
 sudo apt install rclone-browser
 </code></pre>
+<h3 id="fork-de-rclonebrowser">Fork de RcloneBrowser</h3>
+<p>Como el proyecto rclone-browser está desactualizado hace más de 2 años, podemos encontrar también un <a href="https://github.com/noabody/RcloneBrowser">Fork en GitHub de noabody</a>.</p>
 <h2 id="acceder-a-una-nube">Acceder a una Nube</h2>
 <p>Rclone dispone de un listado amplio de nubes públicas.</p>
 <p>Para utilizar una cuenta en rclone, teclearemos en nuestra terminal:</p>
@@ -271,6 +273,18 @@ Choose a number from below, or type in your own value
 <h3 id="uso-de-rclone-en-android">Uso de Rclone en Android</h3>
 <p>Tan sencillo como importar el archivo de configuración <strong>rclone.conf</strong>, o crear una carpeta llamada <strong>rclone</strong> en la raíz de la memoria interna de tu teléfono y dejar dentro de esta, el archivo de configuración <strong>rclone.conf</strong>.</p>
 <p>Cuando abras la aplicación, saldrán todas tus nubes. Podrás subir y bajar archivos, así como ver contenido multimedia en streaming.</p>
+<h2 id="rclone-browser-por-docker">Rclone-Browser por Docker</h2>
+<p>También podemos montar el docker de Rclone-Browser, en una versión totalmente actualizada gracias al proyecto de Romancin. El docker podemos <a href="https://hub.docker.com/r/romancin/rclonebrowser">descargarlo desde DockerHub</a> para arquitectura amd64 y acceder a Rclone-Browser mediante un navegador web por el puerto 5800 o VNC en el puerto 5900:</p>
+<pre><code>docker run -d --name=rclonebrowser \
+    -v $HOME/docker/rclonebrowser/config:/config \
+    -v $HOME/docker/rclonebrowser/media:/media \
+    -e GROUP_ID=0 -e USER_ID=0 \
+    -e TZ=Europe/Madrid \
+    -p 5800:5800 \
+    -p 5900:5900 \
+     romancin/rclonebrowser:latest
+</code></pre>
+<p>El archivo de configuración de rclone lo dejaremos en la carpeta <strong>config</strong> y los archivos, carpetas… que copiaremos o sincronizaremos, estarán en la carpeta <strong>media</strong>.</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Rclone es una herramienta alucinante. Nos permite utilizar un gran número de nubes públicas, privadas, hacer sincronizaciones o copias entre nubes, local-nube o nube-local, montar nubes en una carpeta local,… y gracias a rclone Browser o la versión de Android, utilizar una interfaz gráfica sencilla y consumir contenido multimedia en straming. ¿Que más se puede pedir?</p>
 <h2 id="fuentes">Fuentes</h2>
@@ -279,7 +293,7 @@ Choose a number from below, or type in your own value
 <li><a href="https://martins.ninja/RcloneBrowser/">Rclone Browser</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 03 julio del 2019</p>
+<p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el jueves 04 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
