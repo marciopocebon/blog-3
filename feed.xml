@@ -13,10 +13,43 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instalando Syncthing por reposistorios</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/syncthing.png" alt="Instalando Syncthing por reposistorios"&gt;
+&lt;br&gt;&lt;p&gt;Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html&gt;Instalando Syncthing por reposistorios&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 04 Jul 2019  +0100</pubDate>
+    <category>aplicacion</category>
+    <category>terminal</category>
+    <category>syncthing</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html</guid>
+   </item>
+   <item>
     <title>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</title>
     <link>https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone"&gt;
 &lt;br&gt;&lt;p&gt;Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html&gt;Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone&lt;/a&gt;
 
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 03 Jul 2019  +0100</pubDate>
+    <pubDate>Wed, 03 Jul 2019 22:25 +0100</pubDate>
     <category>aplicacion</category>
     <category>terminal</category>
     <category></category>

@@ -1,5 +1,5 @@
 <head>
-<title> Descargar todos los episodios de un Podcast con wget. uGeek Blog </title>
+<title>Instalando Syncthing por reposistorios. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
+<meta property="og:title" content="Instalando Syncthing por reposistorios" />
+<meta property="og:description" content="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/syncthing.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html" />
 
-<meta name="twitter:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Instalando Syncthing por reposistorios" />
+<meta name="twitter:description" content="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/syncthing.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,29 +53,43 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<h1 id="instalando-syncthing-por-reposistorios-1" title="Instalando Syncthing por reposistorios" data-export_file_name="Instalando Syncthing por reposistorios" data-description="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" data-export_date="2019-07-04 22:25" data-category="aplicacion" data-tag="terminal,syncthing" data-image="./images-blog/syncthing.png">Instalando Syncthing por reposistorios</h1>
+<p>Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian…</p>
+<center>
+<p><img src="../images-blog/syncthing.png" /></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>Ubuntu, Raspbian o derivadas de debian</p>
+<p><code>sudo apt install syncthing</code></p>
+<h2 id="iniciando-syncthing">Iniciando Syncthing</h2>
+<p>Ahora ya podemos lanzar la aplicación</p>
+<p><code>syncthing</code></p>
+<p>Se abrirá nuestro navegador automáticamente o lo abriremos nosotros, y para acceder a la interfaz web escribiremos localhost:8384</p>
+<p>Para que Syncthing se inicie cada vez que arranquemos el sistema operativo, escribimos en la terminal:</p>
+<pre><code>sudo systemctl enable syncthing@pi.service
+sudo systemctl start syncthing@pi.service
+systemctl status syncthing@pi.service
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<p>En el caso de la Raspberry, si tu usuario es <strong>pi</strong>, pondremos pi. Si has cambiado el usuario, pon tu usuario.</p>
+<h2 id="raspbian-lite">Raspbian Lite</h2>
+<p>Lo primero que debemos hacer, si queremos acceder desde otro dispositivo a la interfaz web de Syncthing, dentro de nuestra red local, es editar un archivo de configuración mediante SSH. Introduciremos esta línea en la Terminal y añadiremos la ip de nuestra Raspberry Pi, en lugar de 127.0.0.1.</p>
+<p>sudo nano ~/.config/syncthing/config.xml</p>
+<p>Cambiamos aquí la ip por <strong>0.0.0.0:8384</strong></p>
+<pre><code>&lt;gui enabled=&quot;true&quot; tls=&quot;false&quot;&gt;
+    &lt;address&gt;127.0.0.1:8384&lt;/address&gt;
+&lt;/gui&gt;
 </code></pre>
-<p>A disfrutar con la magia de la terminal…</p>
 <br>
-<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<p>Publicado por Angel el jueves 04 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html">Descargando videos de Internet</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html">Castero. Podcatcher ligero para Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
