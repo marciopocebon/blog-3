@@ -1,5 +1,5 @@
 <head>
-<title> Eliminar líneas en Blanco con sed. uGeek Blog </title>
+<title>Renombrando archivos masivamente. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Como podemos eliminar líneas en Blanco" />
+<meta name="description" content="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Eliminar líneas en Blanco con sed" />
-<meta property="og:description" content="Como podemos eliminar líneas en Blanco" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html" />
+<meta property="og:title" content="Renombrando archivos masivamente" />
+<meta property="og:description" content="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/unix.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html" />
 
-<meta name="twitter:title" content=" Eliminar líneas en Blanco con sed" />
-<meta name="twitter:description" content="Como podemos eliminar líneas en Blanco" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Renombrando archivos masivamente" />
+<meta name="twitter:description" content="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/unix.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,14 +53,18 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="eliminar-líneas-en-blanco-con-sed-1" title="Eliminar líneas en Blanco con sed" data-export_file_name="eliminar-lineas-en-blanco" data-description="Como podemos eliminar líneas en Blanco" data-export_date="2018-12-27 13:22" data-category="unix" data-tag="bash,unix,terminal,sed" data-image="./images-blog/ugeek.png">Eliminar líneas en Blanco con sed</h1>
-<p>Para eliminar líneas en Blanco de un archivo de texto, podriamos utilizar <strong>sed</strong>.</p>
+<h1 id="renombrando-archivos-masivamente-1" title="Renombrando archivos masivamente" data-export_file_name="Renombrando archivos masivamente" data-description="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" data-export_date="2019-07-06 23:30" data-category="unix" data-tag="terminal,sed,bash" data-image="./images-blog/unix.png">Renombrando archivos masivamente</h1>
+<p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por "_".</p>
 <center>
-<p><img src="../images-blog/sed.png" /></p>
+<p><img src="../images-blog/unix.png" /></p>
 </center>
-<p><code>cat archivo | sed '/^ *$/d' &gt; nuevo_archivo</code></p>
+<p>Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp":</p>
+<pre><code>for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed &#39;s/Supertramp//g&#39;`; mv &quot;$FILE&quot; $NUEVOFICHERO; done
+</code></pre>
+<p>con <strong>for</strong> listamos todos los archivos <strong>.mp3</strong>, añadimos el nombre del archivo a la variable <strong>NUEVOFICHERO</strong>, con <strong>sed</strong> lo renombramos y finalmente con <strong>mv</strong> movemos el nombre antiguo al nombre renombrado.</p>
+<p>Resumiendo y si no te interesa el funcionamiento, sustituye la extensión <strong>.mp3</strong> y la palabra <strong>Supertramp</strong>, por la extensión o palabra que quieras renombrar.</p>
 <br>
-<p>Publicado por Angel el jueves 27 diciembre del 2018</p>
+<p>Publicado por Angel el sábado 06 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

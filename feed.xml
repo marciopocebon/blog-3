@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Instalando Syncthing por reposistorios</title>
-    <link>https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/syncthing.png" alt="Instalando Syncthing por reposistorios"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html&gt;Instalando Syncthing por reposistorios&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html&gt;Instalando Syncthing por reposistorios&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 04 Jul 2019  +0100</pubDate>
+    <pubDate>Sat, 06 Jul 2019 23:30 +0100</pubDate>
     <category>aplicacion</category>
     <category>terminal</category>
     <category>syncthing</category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2019-07-04-instalando-syncthing-por-reposistorios.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html</guid>
+   </item>
+   <item>
+    <title>Renombrando archivos masivamente</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/unix.png" alt="Renombrando archivos masivamente"&gt;
+&lt;br&gt;&lt;p&gt;Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html&gt;Renombrando archivos masivamente&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 06 Jul 2019  +0100</pubDate>
+    <category>unix</category>
+    <category>terminal</category>
+    <category>sed</category>
+    <category>bash</category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html</guid>
    </item>
    <item>
     <title>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</title>
