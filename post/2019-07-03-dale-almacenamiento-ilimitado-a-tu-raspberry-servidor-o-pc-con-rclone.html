@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25 2019-07-04" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
+<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25 2019-07-08" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
 <p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,…).</p>
 <center>
 <p><img src="../images-blog/rclone.png" /></p>
@@ -250,19 +250,99 @@ Choose a number from below, or type in your own value
 <p><strong>Recuerda que conservando el archivo de configuración, esta carpeta cifrada podrás montarla en otro dispositivo con rclone</strong></p>
 <h2 id="montardesmontar-unidad-como-si-fuera-un-disco-duro">Montar/Desmontar unidad como si fuera un disco duro</h2>
 <p>Vamos a montar la nube pública en nuestro servidor, como si fuera una unidad de disco duro. Para ello, necesitamos instalar Fuse si no lo tenemos instalado.</p>
-<h3 id="instalar-fuse">Instalar Fuse</h3>
+<h3 id="instalar-fuser">Instalar Fuser</h3>
 <p><code>sudo apt-get install fuse</code></p>
+<h3 id="descomenta-allow-others">Descomenta –allow-others</h3>
+<p>Descomentar la línea <strong>–allow-others</strong></p>
+<p><code>sudo nano /etc/fuse.conf</code></p>
+<p>Para permitir a usuarios no root, montar unidades</p>
+<pre><code># Allow non-root users to specify the allow_other or allow_root mount options.
+--allow-others
+</code></pre>
+<p><strong>Reinicia</strong></p>
 <h3 id="montar">Montar</h3>
 <p><code>rclone mount &lt;nube&gt; &lt;carpeta_local&gt;</code></p>
 <p><code>sudo rclone mount drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos</code></p>
+<p>Podemos utilizar los siguiente flags:</p>
+<p><code>--allow-other</code> -&gt; Permitir otros usuarios se conecten <code>--read-only</code> -&gt; Acceso solo de lectura <code>--vfs-cache-mode full -v</code> -&gt; Con esto activas el caché de lectura y escritura y ves los logs. Se comporta muchísimo más estable. Cuando escribes un fichero primero lo sube a la caché y después a la nube, pero durante el proceso el archivo estará bloqueado. Hay que tener paciencia. No sirve para usarlo como almacenamiento normal pero es muy cómodo para enviar archivos en bloque.</p>
+<p>Ejemplo:</p>
+<p><code>sudo rclone mount drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos =--allow-other =--read-only</code></p>
 <h2 id="automontar-al-iniciar-el-sistema-operativo">Automontar al iniciar el sistema operativo</h2>
 <p>Para automontar nuestra nube en una carpeta local, podemos hacerlo de diferentes formas. Vamos a utilizar cron ya que me parece el método más sencillo.</p>
 <p><code>sudo crontab -e</code></p>
 <p>Escribimos en cron, por ejemplo en mi caso:</p>
-<pre><code>@reboot ( rclone mount --config &quot;/home/&lt;tu_usuario&gt;/.config/rclone/rclone.conf&quot; drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos &amp; )
+<pre><code>@reboot ( rclone mount --config &quot;/home/&lt;tu_usuario&gt;/.config/rclone/rclone.conf&quot; drive:Mis_Fotos /home/&lt;tu_usuario&gt;/Mis_Fotos --allow-other &amp; )
 </code></pre>
 <p>Reiniciamos.</p>
 <p><strong>Es muy importante especificar la ruta del archivo de configuración, ya que si no lo hacemos, como estamos ejecutando el comando como root, el archivo no lo buscará en el $HOME del usuario, sino que en el $HOME de root</strong></p>
+<h2 id="montar-varias-nubes-con-rclone-y-systemd">Montar varias nubes con Rclone y SystemD</h2>
+<p>Germán Martín me mostró como gestiona rclone como si fuera un servicio gracias a SystemD.</p>
+<p>Esto es muy bueno!!!.</p>
+<p>Mediante una llamada de terminal, el mismo servicio vale para todas las nubes.</p>
+<p>Ejemplo:</p>
+<p><code>sudo service rclone-mount@Dropbox_gmag11 start</code></p>
+<p>El directorio <code>/cloud/Dropbox_gmag11/</code> debe existir así como el remoto <code>Dropbox_gmag11</code> en la configuración de RClone en el usuario rclone.</p>
+<h3 id="script-para-montar-y-desmontar-todas-las-nubes">Script para montar y desmontar todas las nubes</h3>
+<p>Ha hecho un pequeño script llamado rclone-mount.sh</p>
+<pre><code>echo $1
+sudo systemctl $1 rclone-mount@Dropbox_gmag11
+sudo systemctl $1 rclone-mount@Dropbox_gmag11hm
+sudo systemctl $1 rclone-mount@GDrive_gmag11
+</code></pre>
+<ol>
+<li><p>Para montar hace todas las nubes</p>
+<p><code>rclone-mount start</code></p></li>
+<li><p>Para desmontar todas las nubes</p>
+<p><code>rclone-mount stop</code></p>
+<p><strong>Super Ingenioso!!!</strong></p></li>
+</ol>
+<h3 id="servicio">Servicio</h3>
+<pre><code># Rclone mount on boot
+# Copy file to: /lib/systemd/system
+# You need to create a remote on RClone and a folder on your disk, both with same name &lt;rclone-remote&gt;
+# This example uses /cloud/ folder as origin to mount all remotes, change it to your needs
+# This example use a linux user named rclone. Create it or adapt it to your needs. Rclone will get config from that user&#39;s home folder
+# Register new service by typing:
+# sudo systemctl daemon-reload
+# Do the next one for every remote you want to load on boot
+# sudo systemctl enable rclone-mount@&lt;rclone-remote&gt;.service
+# systemctl start rclone-mount@&lt;rclone-remote&gt;.service
+# Usage:
+# To unmount drive use
+# systemctl stop rclone-mount@&lt;rclone-remote&gt;.service
+# To mount use:
+# systemctl start rclone-mount@&lt;rclone-remote&gt;.service
+# To disable mount on boot use:
+# systemctl disable rclone-mount@&lt;rclone-remote&gt;.service
+
+
+[Unit]
+Description=rclone FUSE mount for %i
+Documentation=http://rclone.org/docs/
+After=network-online.target externo.mount
+# Mount point in my system is on a USB drive, don&#39;t ask why :))), that&#39;s why I have to wait for it to get mounted
+Requires=externo.mount
+
+[Service]
+#Type=forking
+# This example use a linux user named rclone. Create it or adapt it to your needs. Rclone will get config from that user&#39;s home folder
+User=rclone
+Group=rclone
+# This example uses /cloud/ folder as origin to mount all remotes, change it to your needs
+ExecStart=/usr/bin/rclone mount %i: /cloud/%i --vfs-cache-mode full -v --allow-other
+ExecStop=/bin/fusermount -uz /cloud/%i
+
+[Install]
+#Wants=network-online.target
+#Alias=rclone-rs
+#RequiredBy=
+WantedBy=multi-user.target
+</code></pre>
+<p>Con el parámetro –vfs-cache-mode full que va en la llamada a rclone se comporta muchísimo más estable. Cuando escribes un fichero primero lo sube a la caché y después a la nube, pero durante el proceso el archivo estará bloqueado.</p>
+<p>Hay que tener paciencia. No sirve para usarlo como almacenamiento normal pero es muy cómodo para enviar archivos en bloque –allow-other permite acceder al almacenamiento al resto de usuarios, incluido www-data</p>
+<ul>
+<li><a href="https://gist.github.com/gmag11/dc139ffd6a8ca8b622e98ca6422f8d79">Fuente</a></li>
+</ul>
 <h2 id="rclone-en-android">Rclone en Android</h2>
 <p>Acceder a una carpeta cifrada con rclone desde tu dispositovo Android, no es un problema. Disponemos de dos aplicaciones en el Google Play. Aquí te dejo la primera desde Google Play y la segunda, un repositorio en GitHub donde puedes descargar el apk:</p>
 <ul>
@@ -292,8 +372,9 @@ Choose a number from below, or type in your own value
 <li><a href="https://rclone.org">Rclone</a></li>
 <li><a href="https://martins.ninja/RcloneBrowser/">Rclone Browser</a></li>
 </ul>
+<p>Gracias a todos los usuarios del Grupo de uGeek por recopilar más información, como Rapejim, Germán Martín,…</p>
 <br>
-<p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el jueves 04 julio del 2019</p>
+<p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el lunes 08 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
