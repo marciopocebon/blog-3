@@ -1,5 +1,5 @@
 <head>
-<title> Descargar todos los episodios de un Podcast con wget. uGeek Blog </title>
+<title>Habilitando la accesibilidad como usuario root via ssh en debian. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root, tienes que configurar un archivo." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
+<meta property="og:title" content="Habilitando la accesibilidad como usuario root via ssh en debian" />
+<meta property="og:description" content="Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root, tienes que configurar un archivo." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/debian.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-08-habilitando-la-accesibilidad-como-usuario-root-via-ssh-en-debian.html" />
 
-<meta name="twitter:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Habilitando la accesibilidad como usuario root via ssh en debian" />
+<meta name="twitter:description" content="Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root, tienes que configurar un archivo." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/debian.jpg" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,29 +53,35 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<h1 id="habilitando-la-accesibilidad-como-usuario-root-via-ssh-en-debian-1" title="Habilitando la accesibilidad como usuario root via ssh en debian" data-export_file_name="Habilitando la accesibilidad como usuario root via ssh en debian" data-description="Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root, tienes que configurar un archivo." data-export_date="2019-07-08 21:00" data-category="debian" data-tag="terminal,ssh" data-image="./images-blog/debian.jpg">Habilitando la accesibilidad como usuario root via ssh en debian</h1>
+<p>Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root, tienes que configurar un archivo.</p>
+<center>
+<p><img src="../images-blog/debian.jpg" /></p>
+</center>
+<h2 id="configurando-el-archivo-de-configuración-de-ssh-para-habilitar-root">Configurando el archivo de configuración de ssh, para habilitar root</h2>
+<p>Editamos el archivo sshd<sub>config</sub>, por ejemplo con nano:</p>
+<pre><code>nano /etc/ssh/sshd_config
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<p>Cambiamos el valor de <strong>PermitRootLogin</strong> a <strong>yes</strong>:</p>
+<pre><code>#PermitRootLogin without-password
+PermitRootLogin yes
 </code></pre>
-<p>A disfrutar con la magia de la terminal…</p>
+<h2 id="reiniciamos-el-servidor">Reiniciamos el servidor</h2>
+<p>Ahora solo queda reiniciar el servidor, para que podamos acceder vía ssh desde cualquier terminal:</p>
+<pre><code>/etc/init.d/ssh restart
+</code></pre>
+<p>Ya podemos acceder como root via ssh, por ejemplo:</p>
+<p><code>ssh root@192.168.1.100</code></p>
+<p>Recuerda sustituir la ip por la ip de tu servidor</p>
 <br>
-<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<p>Publicado por Angel el lunes 08 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-habilitando-la-accesibilidad-como-usuario-root-via-ssh-en-debian.html">Habilitando la accesibilidad como usuario root via ssh en debian</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html">Instalando Syncthing por reposistorios</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html">Renombrando archivos masivamente</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html">Descargando videos de Internet</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html">Estando a la Última en tu Raspberry con Debian Testing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
