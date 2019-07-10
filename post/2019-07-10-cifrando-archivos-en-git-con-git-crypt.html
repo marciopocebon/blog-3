@@ -1,5 +1,5 @@
 <head>
-<title> Crear ramas con Git. uGeek Blog </title>
+<title>Cifrando archivos en git con GIT-CRYPT. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
+<meta name="description" content="Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear ramas con Git" />
-<meta property="og:description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-28-crear-ramas-con-git.html" />
+<meta property="og:title" content="Cifrando archivos en git con GIT-CRYPT" />
+<meta property="og:description" content="Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html" />
 
-<meta name="twitter:title" content=" Crear ramas con Git" />
-<meta name="twitter:description" content="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Cifrando archivos en git con GIT-CRYPT" />
+<meta name="twitter:description" content="Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,31 +53,38 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="crear-ramas-con-git-1" title="Crear ramas con Git" data-export_file_name="Crear ramas con Git" data-description="Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master" data-export_date="2019-01-28 21:15" data-category="git" data-tag="git" data-image="./images-blog/ugeek.png">Crear ramas con Git</h1>
-<p>Todos los repositorios de <strong>git</strong>, tienen la rama <strong>master</strong> (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio <strong>master</strong>.</p>
+<h1 id="cifrando-archivos-en-git-con-git-crypt-1" title="Cifrando archivos en git con GIT-CRYPT" data-export_file_name="Cifrando archivos en git con GIT-CRYPT" data-description="Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git" data-export_date="2019-07-10 21:15" data-category="git" data-tag="terminal,ssh" data-image="./images-blog/git.png">Cifrando archivos en git con GIT-CRYPT</h1>
 <center>
 <p><img src="../images-blog/git.png" /></p>
 </center>
-<h2 id="crear-rama">Crear rama</h2>
-<p>Para crear una rama, utilizaremos el comando <strong>git branch</strong>. Vamos a crear una rama que llamaremos <strong>test</strong></p>
-<p><code>git branch test</code></p>
-<h2 id="cambiar-de-rama">Cambiar de rama</h2>
-<p>Ahora tenemos una nueva rama, la rama <strong>test</strong>. Para acceder a ella, utilizaremos el comando <strong>git checkout</strong></p>
-<p><code>git chekcout test</code></p>
-<p>Si hemos introducido este comando, ya no estaremos en la rama <strong>master</strong> , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada.</p>
-<p>Antes de volver nuevamente a la rama <strong>master</strong>, tenemos que hacer un <strong>git push</strong> y poner al día la rama <strong>test</strong>.</p>
-<p>Para volver a la rama <strong>master</strong>:</p>
-<p><code>git checkout master</code></p>
-<p>Ya estamos de nuevo en la rama <strong>master</strong></p>
-<h2 id="borrar-una-rama">Borrar una rama</h2>
-<p>Si ya hemos acabado con la rama <strong>test</strong> y queremos eliminarla en el repositorio local, utilizaremos el comando <strong>git branch -d</strong></p>
-<p><code>git branch -d test</code></p>
-<p>Para forzar el borrado en caso de algún error:</p>
-<p><code>git branch -D test</code></p>
-<p>Para eliminar el repositorio remosto <strong>git push origin :</strong></p>
-<p><code>git push origin :test</code></p>
+<p>Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del <a href="https://www.atareao.es/como/cifrado-de-repositorios-git/">atareao.es</a>, esta joya. Voy a explicar con mis palabras como utilizarlo.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros.</p>
+<p><code>sudo apt install git-crypt</code></p>
+<h2 id="creamos-repositorio-cifrado">Creamos repositorio cifrado</h2>
+<p>El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal:</p>
+<p><code>git-crypt init</code></p>
+<h2 id="creamos-un-archivo-.gitattributes">Creamos un archivo .gitattributes</h2>
+<p>Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo:</p>
+<p><code>nano .gitattributes</code></p>
+<p>Indicamos que se cifren, por ejemplo, los archivos .html y .org</p>
+<pre><code>*.html filter=git-crypt diff=git-crypt`
+*.org filter=git-crypt diff=git-crypt
+</code></pre>
+<p>Ahora cada vez que hagamos un commit, los archivos .html y .org, subirán cifrados.</p>
+<h2 id="contraseña-con-clave-simétrica">Contraseña con clave simétrica</h2>
+<p>Vamos utilizar de contraseña un archivo llave, que será este la contraseña para desbloquear el cifrado en otra máquina.</p>
+<h3 id="generando-llave">Generando Llave</h3>
+<p>Para generar el cifrado, voy a utilizar de archivo a modo de contraseña. Le pondré <strong>key</strong>, pero podría ponerle cualquier nombre, como el nombre del repositorio</p>
+<p><code>git-crypt export-key ~/carpeta/key</code></p>
+<h3 id="desbloquear-el-cifrado-mediante-el-archivo-llave">Desbloquear el cifrado mediante el archivo llave:</h3>
+<p>Ahora en mi PC de sobremesa, he clonado mi repositorio pero todos los archivos .html y .org están cifrados. Para descifrarlos necesito el <strong>key</strong> y por supuesto, <strong>instalar git-crypt</strong> en este PC:</p>
+<p><code>git-crypt unlock ~/carpeta/key</code></p>
+<p>Ya puedo ver el contenido!!!!</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Simplemente alucinante!!!. Súper útil para cifrar aquellos archivos que queremos utilizarlos con git, pero que en un repositorio público no queremos que sean visibles.</p>
 <br>
-<p>Publicado por Angel el lunes 28 enero del 2019</p>
+<p>Publicado por Angel el miércoles 10 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
