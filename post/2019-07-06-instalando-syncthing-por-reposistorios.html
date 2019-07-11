@@ -53,14 +53,31 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="instalando-syncthing-por-reposistorios-1" title="Instalando Syncthing por reposistorios" data-export_file_name="Instalando Syncthing por reposistorios" data-description="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" data-export_date="2019-07-06 22:25" data-category="aplicacion" data-tag="terminal,syncthing" data-image="./images-blog/syncthing.png">Instalando Syncthing por reposistorios</h1>
+<h1 id="instalando-syncthing-por-reposistorios-y-ppa" title="Instalando Syncthing por reposistorios" data-export_file_name="Instalando Syncthing por reposistorios" data-description="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" data-export_date="2019-07-06 22:25" data-category="aplicacion" data-tag="terminal,syncthing" data-image="./images-blog/syncthing.png">Instalando Syncthing por reposistorios y PPA</h1>
 <p>Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian…</p>
 <center>
 <p><img src="../images-blog/syncthing.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
+<h2 id="instalación-por-repositorios">Instalación por repositorios</h2>
 <p>Ubuntu, Raspbian o derivadas de debian</p>
 <p><code>sudo apt install syncthing</code></p>
+<h2 id="syncthing-a-la-ultima-por-ppa">Syncthing a la ultima por PPA</h2>
+<h3 id="instalando-la-última-versión-estable">Instalando la última versión estable</h3>
+<p>El canal estable se actualiza generalmente cada primer martes del mes.</p>
+<p>Instalamos el paquete apt-transport-https y las claves PGP:</p>
+<pre><code>sudo apt install apt-transport-https
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+</code></pre>
+<p>Ahora vamos a añadir el repositorio estable:</p>
+<p><code>echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list</code></p>
+<p>Ahora actualizamos repositorios e instalamos:</p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install syncthing</code></p>
+<h3 id="instalar-versión-candidate">Instalar versión candidate</h3>
+<p>El canal candidate, generalmente se actualiza cada segundo martes del mes. Estos salen tres semanas antes a la versión estable.</p>
+<p>Es igual al proceso anterior, pero en lugar de añadir el repositorio estable, añadiremos el repositorio candidate:</p>
+<pre><code>echo &quot;deb https://apt.syncthing.net/ syncthing candidate&quot; | sudo tee /etc/apt/sources.list.d/syncthing.list
+</code></pre>
 <h2 id="iniciando-syncthing">Iniciando Syncthing</h2>
 <p>Ahora ya podemos lanzar la aplicación</p>
 <p><code>syncthing</code></p>
