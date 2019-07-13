@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Añadir cajetilla de código en orgmode como antes</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/orgmode.png" alt="Añadir cajetilla de código en orgmode como antes"&gt;
+&lt;br&gt;&lt;p&gt;A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html&gt;Añadir cajetilla de código en orgmode como antes&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 13 Jul 2019  +0100</pubDate>
+    <category>emacs</category>
+    <category>orgmode</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html</guid>
+   </item>
+   <item>
     <title>Cifrando archivos en git con GIT-CRYPT</title>
     <link>https://ugeek.github.io/blog/post/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 10 Jul 2019  +0100</pubDate>
+    <pubDate>Wed, 10 Jul 2019 16:30 +0100</pubDate>
     <category>git</category>
     <category>terminal</category>
     <category>ssh</category>
