@@ -3,7 +3,5 @@
 *.csv
 #*
 *.txt
-org-bash-blog
 org-bash-blog.html
-config
 program/
