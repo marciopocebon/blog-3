@@ -53,13 +53,13 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone-1" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" data-export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" data-description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" data-export_date="2019-07-03 20:25 2019-07-08" data-category="aplicacion" data-tag="terminal" data-image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</h1>
-<p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,…).</p>
+<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc...-con-rclone" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" export_date="2019-07-03 20:25 2019-07-08" category="aplicacion" tag="terminal" image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</h1>
+<p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,...).</p>
 <center>
 <p><img src="../images-blog/rclone.png" /></p>
 </center>
 <p>Gracias a esta conectividad, podremos hacer copias o sincronizaciones de nuestras carpetas o archivos. Además, combinando Rclone con cron, podremos programar estas copias o sincronizaciones.</p>
-<p>Rclone también permite copiar y sincronizar carpetas en local, por SSH, SFTP, WebDav, etc…</p>
+<p>Rclone también permite copiar y sincronizar carpetas en local, por SSH, SFTP, WebDav, etc...</p>
 <p>Otros dos puntos fuertes de Rclone, es la posibilidad de montar la nube pública en una carpeta en Local, permitiendonos acceder a todo el contenido de esta nube, como si estuviera en local. El otro punto fuerte, es la posibilidad de cifrar todo el contenido que guardemos en la nube pública.</p>
 <h2 id="instalación">Instalación</h2>
 <h3 id="instalación-repositorios">Instalación repositorios</h3>
@@ -70,7 +70,7 @@ gtag("config", "UA-131560140-1");
 <ul>
 <li><a href="https://rclone.org/downloads/">Descargalo desde aquí</a></li>
 </ul>
-<p><code>sudo dpkg -i &lt;PAQUETE_DESCARGADOR&gt;</code></p>
+<p>=sudo dpkg -i &lt;PAQUETE<sub>DESCARGADOR</sub>&gt;=</p>
 <h3 id="rclone-snap">rclone snap</h3>
 <p>Mucho mas desactualizado. También podemos instalar rclone desde snap</p>
 <p><code>sudo snap install rclone</code></p>
@@ -158,11 +158,11 @@ Choose a number from below, or type in your own value
 26 / http Connection
    \ &quot;http&quot;
 </code></pre>
-<p>Introducimos el número de la nube o cifrado y seguimos con el proceso…</p>
+<p>Introducimos el número de la nube o cifrado y seguimos con el proceso...</p>
 <p>El resto de pasos, está en un Ingles simple e intuitivo. Si no entiendes Ingles, te recomiendo Google Translate.</p>
 <h2 id="autorizar-la-cuenta-sin-tener-interfaz-gráfica">Autorizar la cuenta sin tener interfaz gráfica</h2>
 <p>Uno de los problemas que podemos encontrar, es que para autorizar la cuenta de una nube pública, rclone nos pedirá el conectarnos a una url desde nuestro navegador, en el dispositivo en local y autorizar a rclone acceder a esta cuenta.</p>
-<p>La verdad es que si no tienes interfaz gráfica, esto puede ser un serio problema, ya que no puedes utilizar un navegador como Firefox, Chrome, etc…</p>
+<p>La verdad es que si no tienes interfaz gráfica, esto puede ser un serio problema, ya que no puedes utilizar un navegador como Firefox, Chrome, etc...</p>
 <p>Los navegadores de texto para terminal, no todos son compatibles, así que solucioné el problema instalando un navegador como <strong>uzbl</strong> y accediendo a él remotamente desde un PC de un modo virtualizado:</p>
 <h3 id="instalamos-uzbl">Instalamos uzbl</h3>
 <p><code>sudo apt install uzbl</code></p>
@@ -207,7 +207,7 @@ Choose a number from below, or type in your own value
 <p>Este archivo si lo llevamos a otro servidor o PC, podremos copiar todas las nubes con sus contraseñas en el otro dispositivo.</p>
 <p><strong>Esto es genial, porque es muy cómodo y a la vez peligroso. Cuidado donde dejas este archivo</strong></p>
 <h3 id="especificando-donde-está-el-archivo-de-configuración">Especificando donde está el archivo de configuración</h3>
-<p>Con <strong>–config</strong>, podemos especificar otra ruta del archivo de configuración de rclone.</p>
+<p>Con <strong>--config</strong>, podemos especificar otra ruta del archivo de configuración de rclone.</p>
 <p>Imagina que tengo mi archivo de configuración dentro de la carpeta <strong>rclone</strong> en el home del usuario, lo haríamos así:</p>
 <pre><code>rclone sync --config &quot;/home/angel/rclone/rclone.conf&quot; drive:fotos/verano/ dropbox:fotos/verano -v
 </code></pre>
@@ -236,7 +236,7 @@ Choose a number from below, or type in your own value
   \ &quot;crypt&quot;
 </code></pre>
 <p>En la versión de rclone <strong>1.47</strong>, aparece en el número nueve. Esto puede variar según la versión.</p>
-<p>Mi carpeta cifrada, será una carpeta que crearé en la raíz de Google Drive, que llamaré "Mis Fotos".</p>
+<p>Mi carpeta cifrada, será una carpeta que crearé en la raíz de Google Drive, que llamaré &quot;Mis Fotos&quot;.</p>
 <p>Se da por hecho que has seguido la primera parte del tutorial, donde me he conectado a mi cuenta de Google Drive, creando una unidad con rclone llamada <strong>drive</strong>, y dentro de esta unidad, ahora voy a crear una carpeta llamada <strong>Mis Fotos</strong>.</p>
 <p>De este modo, dentro de Google Drive tendré mis fotos cifradas.</p>
 <pre><code>remote&gt; drive:Mis_Fotos
@@ -252,8 +252,8 @@ Choose a number from below, or type in your own value
 <p>Vamos a montar la nube pública en nuestro servidor, como si fuera una unidad de disco duro. Para ello, necesitamos instalar Fuse si no lo tenemos instalado.</p>
 <h3 id="instalar-fuser">Instalar Fuser</h3>
 <p><code>sudo apt-get install fuse</code></p>
-<h3 id="descomenta-allow-others">Descomenta –allow-others</h3>
-<p>Descomentar la línea <strong>–allow-others</strong></p>
+<h3 id="descomenta---allow-others">Descomenta --allow-others</h3>
+<p>Descomentar la línea <strong>--allow-others</strong></p>
 <p><code>sudo nano /etc/fuse.conf</code></p>
 <p>Para permitir a usuarios no root, montar unidades</p>
 <pre><code># Allow non-root users to specify the allow_other or allow_root mount options.
@@ -338,8 +338,8 @@ ExecStop=/bin/fusermount -uz /cloud/%i
 #RequiredBy=
 WantedBy=multi-user.target
 </code></pre>
-<p>Con el parámetro –vfs-cache-mode full que va en la llamada a rclone se comporta muchísimo más estable. Cuando escribes un fichero primero lo sube a la caché y después a la nube, pero durante el proceso el archivo estará bloqueado.</p>
-<p>Hay que tener paciencia. No sirve para usarlo como almacenamiento normal pero es muy cómodo para enviar archivos en bloque –allow-other permite acceder al almacenamiento al resto de usuarios, incluido www-data</p>
+<p>Con el parámetro --vfs-cache-mode full que va en la llamada a rclone se comporta muchísimo más estable. Cuando escribes un fichero primero lo sube a la caché y después a la nube, pero durante el proceso el archivo estará bloqueado.</p>
+<p>Hay que tener paciencia. No sirve para usarlo como almacenamiento normal pero es muy cómodo para enviar archivos en bloque --allow-other permite acceder al almacenamiento al resto de usuarios, incluido www-data</p>
 <ul>
 <li><a href="https://gist.github.com/gmag11/dc139ffd6a8ca8b622e98ca6422f8d79">Fuente</a></li>
 </ul>
@@ -364,21 +364,21 @@ WantedBy=multi-user.target
     -p 5900:5900 \
      romancin/rclonebrowser:latest
 </code></pre>
-<p>El archivo de configuración de rclone lo dejaremos en la carpeta <strong>config</strong> y los archivos, carpetas… que copiaremos o sincronizaremos, estarán en la carpeta <strong>media</strong>.</p>
+<p>El archivo de configuración de rclone lo dejaremos en la carpeta <strong>config</strong> y los archivos, carpetas... que copiaremos o sincronizaremos, estarán en la carpeta <strong>media</strong>.</p>
 <h2 id="conclusión">Conclusión</h2>
-<p>Rclone es una herramienta alucinante. Nos permite utilizar un gran número de nubes públicas, privadas, hacer sincronizaciones o copias entre nubes, local-nube o nube-local, montar nubes en una carpeta local,… y gracias a rclone Browser o la versión de Android, utilizar una interfaz gráfica sencilla y consumir contenido multimedia en straming. ¿Que más se puede pedir?</p>
+<p>Rclone es una herramienta alucinante. Nos permite utilizar un gran número de nubes públicas, privadas, hacer sincronizaciones o copias entre nubes, local-nube o nube-local, montar nubes en una carpeta local,... y gracias a rclone Browser o la versión de Android, utilizar una interfaz gráfica sencilla y consumir contenido multimedia en straming. ¿Que más se puede pedir?</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://rclone.org">Rclone</a></li>
 <li><a href="https://martins.ninja/RcloneBrowser/">Rclone Browser</a></li>
 </ul>
-<p>Gracias a todos los usuarios del Grupo de uGeek por recopilar más información, como Rapejim, Germán Martín,…</p>
+<p>Gracias a todos los usuarios del Grupo de uGeek por recopilar más información, como Rapejim, Germán Martín,...</p>
 <br>
 <p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el lunes 08 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>

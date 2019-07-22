@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="youtube2org.-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown-1" title="youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown" data-export_file_name="youtube2org Añadir la Imagen de un Vídeo de YouTube en un OrgMode o Markdown" data-description="Estaba escribiendo en un repositorio de GitHub en el archivo README.org, el resumen de un vídeo de un curso en Python buenísimo que he visto en YouTube. La intención era el poner la imagen del vídeo y debajo escribir un poco el resumen de este, para cuando quisiera acceder a un determinado tema, asociarlo al vídeo y clicar sobre esta imagen para que me lleve a YouTube" data-export_date="2019-05-01 18:55" data-category="emacs" data-tag="orgmode,github,gitlab,markdown" data-image="./images-blog/bash.jpg">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</h1>
+<h1 id="youtube2org.-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown" title="youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown" export_file_name="youtube2org Añadir la Imagen de un Vídeo de YouTube en un OrgMode o Markdown" description="Estaba escribiendo en un repositorio de GitHub en el archivo README.org, el resumen de un vídeo de un curso en Python buenísimo que he visto en YouTube. La intención era el poner la imagen del vídeo y debajo escribir un poco el resumen de este, para cuando quisiera acceder a un determinado tema, asociarlo al vídeo y clicar sobre esta imagen para que me lleve a YouTube" export_date="2019-05-01 18:55" category="emacs" tag="orgmode,github,gitlab,markdown" image="./images-blog/bash.jpg">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</h1>
 <center>
 <p><a href="https://www.youtube.com/watch?v=NxYITudzHlc"><img src="http://img.youtube.com/vi/NxYITudzHlc/0.jpg" /></a></p>
 </center>
@@ -65,40 +65,40 @@ gtag("config", "UA-131560140-1");
 <h2 id="instalación">Instalación</h2>
 <p>A mi personalmente, me gusta instalarlo en el propio sistema operativo, así cuando lo necesite, este donde este en mi disco duro, con tan solo escribir youtube2org podré extraer la imagen.</p>
 <p>Copiamos el script del repositorio de GitHub a nuestro PC:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> wget -O /usr/bin/youtube2org https://raw.githubusercontent.com/uGeek/youtube2org/master/youtube2org</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> wget -O /usr/bin/youtube2org https://raw.githubusercontent.com/uGeek/youtube2org/master/youtube2org</code></pre></div>
 <p>Damos permisos de ejecución</p>
 <pre><code>sudo chmod +x /usr/bin/youtube2org
 </code></pre>
 <h2 id="youtube-a-orgmode">YouTube a orgmode:</h2>
 <p>Para generar la imagen con el link, tan solo tenemos es escribir en nuestra terminal <strong>youtube2org + url del video de YouTube</strong>.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">youtube2org</span> https://www.youtube.com/watch?v=NxYITudzHlc </a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">youtube2org</span> https://www.youtube.com/watch?v=NxYITudzHlc </code></pre></div>
 <p>El resultado que nos devolverá es este:</p>
 <pre class="orgmode"><code>[[https://www.youtube.com/watch?v=NxYITudzHlc][http://img.youtube.com/vi/NxYITudzHlc/0.jpg]]
 </code></pre>
 <p>Ya lo tenemos!!!, ahora tan solo lo copiaremos en nuestro orgmode.</p>
 <h2 id="youtube-a-markdown">YouTube a Markdown:</h2>
 <p>Como os decía, ya puestos, ¿Porqué no hacerlo también para Markdown?. El comando es el mismo que el anterior, solo que en este caso, añadiremos el tag <strong>-m</strong> para decile que queremos el link para Markdown:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">youtube2org</span> -m https://www.youtube.com/watch?v=NxYITudzHlc </a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">youtube2org</span> -m https://www.youtube.com/watch?v=NxYITudzHlc </code></pre></div>
 <p>La terminal nos devolverá el enlace:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">[![]<span class="kw">(</span><span class="ex">http</span>://img.youtube.com/vi/NxYITudzHlc/0.jpg<span class="kw">)</span>]<span class="kw">(</span><span class="ex">https</span>://www.youtube.com/watch?v=NxYITudzHlc <span class="st">&quot;&quot;</span><span class="kw">)</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">[![]<span class="kw">(</span><span class="ex">http</span>://img.youtube.com/vi/NxYITudzHlc/0.jpg<span class="kw">)</span>]<span class="kw">(</span><span class="ex">https</span>://www.youtube.com/watch?v=NxYITudzHlc <span class="st">&quot;&quot;</span><span class="kw">)</span></code></pre></div>
 <h2 id="conclusión">Conclusión</h2>
 <p>Como podéis ver, con tan solo dos líneas de bash, hemos resuelto el problema. Espero que os haya gustado mucho y disfrutar dando un mejor acabado a vuestros documentos.</p>
-<p>Repositorio en GitHub: - <a href="https://github.com/uGeek/youtube2org">https://github.com/uGeek/youtube2org</a></p>
+<p>Repositorio en GitHub: - <a href="https://github.com/uGeek/youtube2org" class="uri">https://github.com/uGeek/youtube2org</a></p>
 <br>
 <p>Publicado por Angel el miércoles 01 mayo del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html">Añadir cajetilla de código en orgmode como antes</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html">Cambiando estados de forma masiva en mis Org Mode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html">Exportando bonito a html mi OrgMode y creando web estática</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales… Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

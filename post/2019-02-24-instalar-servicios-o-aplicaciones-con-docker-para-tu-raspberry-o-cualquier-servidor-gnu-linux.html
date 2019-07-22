@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnulinux-1" title="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" data-export_file_name="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU-Linux" data-description="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" data-export_date="2019-02-24 17:30" data-category="docker" data-tag="docker" data-image="./images-blog/docker.png">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h1>
+<h1 id="instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnulinux" title="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" export_file_name="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU-Linux" description="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" export_date="2019-02-24 17:30" category="docker" tag="docker" image="./images-blog/docker.png">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h1>
 <center>
 <p><img src="../images-blog/docker.png" /></p>
 </center>
@@ -75,7 +75,7 @@ sudo usermod -aG docker $USER
 <p><code>docker run -t -i ubuntu:latest /bin/bash</code></p>
 <p>Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:</p>
 <p><code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code></p>
-<p>La versión <strong>"latest"</strong>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
+<p>La versión *&quot;latest&quot;*, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
 <p>Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-d</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <code>Ctrl+p+q</code></p>
 <h2 id="listar-todos-los-contenedores-de-nuestro-servidor">Listar todos los Contenedores de nuestro servidor</h2>
 <p>Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:</p>
@@ -99,9 +99,9 @@ sudo usermod -aG docker $USER
 <li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
 </ul>
 <p>Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, instalaremos e iniciaremos el servicio:</p>
-<p><strong>Recuerda sustituir "usuario", por tu usuario, no hagas un copia y pega</strong> 😜</p>
+<p><strong>Recuerda sustituir &quot;usuario&quot;, por tu usuario, no hagas un copia y pega</strong> 😜</p>
 <h2 id="borrar-un-contenedor">Borrar un contenedor</h2>
-<p>Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc… que ya no vamos a utilizar:</p>
+<p>Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc... que ya no vamos a utilizar:</p>
 <p>Detenemos el contentedor:</p>
 <p><code>docker stop nombre_del_contenedor</code></p>
 <p>Borramos el contendedor:</p>
@@ -110,7 +110,7 @@ sudo usermod -aG docker $USER
 <p>Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:</p>
 <p>Listar todas las imágenes:</p>
 <p><code>docker images</code></p>
-<p>Borrar la imagen (rm"i" de imágen, para recordar):</p>
+<p>Borrar la imagen (rm&quot;i&quot; de imágen, para recordar):</p>
 <p><code>docker rmi nombre_de_la_imagen</code></p>
 <h2 id="renombrar-contenedor">Renombrar Contenedor</h2>
 <p>En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:</p>

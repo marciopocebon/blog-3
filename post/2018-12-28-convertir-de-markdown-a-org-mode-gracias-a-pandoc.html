@@ -53,14 +53,14 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc-1" title="Convertir de Markdown a Org Mode gracias a Pandoc" data-export_file_name="Convertir-de-markdown-a-org-Mode-gracias-a-pandoc" data-description="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" data-export_date="2018-12-28 18:05" data-category="emacs" data-tag="emacs,pandoc,orgmode,markdown" data-image="./images-blog/ugeek.png">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
+<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc" title="Convertir de Markdown a Org Mode gracias a Pandoc" export_file_name="Convertir-de-markdown-a-org-Mode-gracias-a-pandoc" description="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" export_date="2018-12-28 18:05" category="emacs" tag="emacs,pandoc,orgmode,markdown" image="./images-blog/ugeek.png">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
 <p>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:</p>
 <p><code>sudo apt install pandoc</code></p>
 <p>Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.</p>
 <ol>
 <li>Markdown a Org Mode. Ejecutamos este comando en la terminal.</li>
 </ol>
-<p><code>pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md</code></p>
+<p>=pandoc -f markdown -t org -o nuevo<sub>archivo</sub>.org archivo<sub>aconvertir</sub>.md=</p>
 <ol>
 <li>Muchos archivos Markdown a un único Org Mode.</li>
 </ol>
@@ -72,15 +72,15 @@ gtag("config", "UA-131560140-1");
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html">Añadir cajetilla de código en orgmode como antes</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html">Cambiando estados de forma masiva en mis Org Mode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html">Exportando bonito a html mi OrgMode y creando web estática</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales… Todo sobre Emacs y OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-15-cursos-webs-grupos-tutoriales-todo-sobre-emacs-y-orgmode.html">Actualizado: Cursos, Webs, Grupos, Tutoriales... Todo sobre Emacs y OrgMode</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html">2 Archivos de configuración, un Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html">OrgMode: Buscar solo en las Cabeceras</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html">Lee Super rápido en Emacs con Spray</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

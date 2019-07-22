@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="kde-connect-en-ubuntu-debian-lubuntu-mint-y-derivadas" title="Kde Connect en Ubuntu..." data-export_file_name="kdeconnect-en-ubuntu" data-description="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" data-export_date="2019-01-02 18:00" data-category="bash" data-tag="bash, terminal, i3, kdeconnect, ubuntu" data-image="./images-blog/ugeek.png">Kde Connect en Ubuntu, Debian, Lubuntu, Mint… y derivadas</h1>
+<h1 id="kde-connect-en-ubuntu-debian-lubuntu-mint...-y-derivadas" title="Kde Connect en Ubuntu..." export_file_name="kdeconnect-en-ubuntu" description="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" export_date="2019-01-02 18:00" category="bash" tag="bash, terminal, i3, kdeconnect, ubuntu" image="./images-blog/ugeek.png">Kde Connect en Ubuntu, Debian, Lubuntu, Mint... y derivadas</h1>
 <p>He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.</p>
 <p>Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.</p>
 <p>Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.</p>
@@ -61,7 +61,7 @@ gtag("config", "UA-131560140-1");
 <ol>
 <li>Instalamos en nuestro Ubuntu</li>
 </ol>
-<p><code>sudo apt install kdeconnect</code></p>
+<p>=sudo apt install kdeconnect=</p>
 <p>Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil. Instala esto:</p>
 <pre><code>sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
 sudo apt update
@@ -73,7 +73,7 @@ sudo apt install kdeconnect indicator-kdeconnect
 <li><p>Vamos ha hacer el emparejamiento desde la Terminal. El comando <strong>kdeconnect-cli - -help</strong> nos mostrará todos los comandos disponibles.</p></li>
 <li><p>Vamos a listar dispositivos disponibles en nuestra red local desde la terminal</p></li>
 </ol>
-<p><code>kdeconnect-cli -l</code></p>
+<p>=kdeconnect-cli -l=</p>
 <p>La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:</p>
 <pre><code>angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
         - Xiami A1: 35826fca13f58Gsu (reachable)
@@ -82,7 +82,7 @@ sudo apt install kdeconnect indicator-kdeconnect
 <ol>
 <li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
 </ol>
-<p><code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code></p>
+<p>=kdeconnect-cli -d 35826fca13f58Gsu --pair=</p>
 <ol>
 <li><p>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</p></li>
 <li><p>Ya está condectado Kde Connect!!!</p></li>

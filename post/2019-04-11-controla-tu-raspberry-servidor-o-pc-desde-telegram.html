@@ -53,12 +53,12 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="controla-tu-raspberry-servidor-o-pc-desde-telegram-1" title="Controla tu Raspberry, Servidor o PC desde Telegram" data-export_file_name="Controla tu Raspberry Servidor o PC desde Telegram" data-description="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" data-export_date="2019-04-11 17:45" data-category="telegram" data-tag="domotica" data-image="./images-blog/tocar_movil.jpg">Controla tu Raspberry, Servidor o PC desde Telegram</h1>
+<h1 id="controla-tu-raspberry-servidor-o-pc-desde-telegram" title="Controla tu Raspberry, Servidor o PC desde Telegram" export_file_name="Controla tu Raspberry Servidor o PC desde Telegram" description="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" export_date="2019-04-11 17:45" category="telegram" tag="domotica" image="./images-blog/tocar_movil.jpg">Controla tu Raspberry, Servidor o PC desde Telegram</h1>
 <p>Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.</p>
 <center>
 <p><img src="../images-blog/tocar_movil.jpg" /></p>
 </center>
-<p>Con este Bot no solo podrás conocer la temperatura, IP pública, … Tal como te expliqué en el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, sino que también podrás interactuar con él, iniciando o deteniendo servicios, mediante el GPIO podrás conectar luces, motores de persianas, puertas… ejecutar comandos que ejecutarías en la terminal, actualizar tu servidor… En definitiva, para todo aquello que dé tu imaginación.</p>
+<p>Con este Bot no solo podrás conocer la temperatura, IP pública, ... Tal como te expliqué en el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, sino que también podrás interactuar con él, iniciando o deteniendo servicios, mediante el GPIO podrás conectar luces, motores de persianas, puertas... ejecutar comandos que ejecutarías en la terminal, actualizar tu servidor... En definitiva, para todo aquello que dé tu imaginación.</p>
 <p>Lo mejor de todo, es que nos conectaremos a través de la API de Telegram, de modo que no necesitaremos utilizar ningún servicio tipo VPN. Nuestro Bot de Telegram, puede convertirse en un mando a distancia, teniendo el control total de todo lo que suceda en tu casa y lo mejor de todo, sin tener conocimientos de programación. Vamos a utilizar nuevamente Bash, como lenguaje de programación y añadiendo cuatro parámetros, vas a comenzar a controlarlo todo.</p>
 <p>He hecho un Fork de BaTBot en su última versión modificada por eliafino y lo he traducido al Castellano para el fácil comprensión. BaTBot en la versión 1.4.3.4 lo encontrarás en mi <a href="https://github.com/uGeek/BaTbot">Repositorio en GitHub</a>.</p>
 <h2 id="instalación">Instalación</h2>
@@ -187,7 +187,7 @@ Dockers:
 <li><span class="citation" data-cites="R3">@R3</span> Contenido del tercero grupo (.*)</li>
 </ul>
 <h2 id="comando-con-expresiones-regulares">Comando con expresiones regulares</h2>
-<p>También puedes configurar un comando con argumentos, por ejemplo: "/ping 1234". Todos los argumentos pueden ser expresiones regulares, por ejemplo:</p>
+<p>También puedes configurar un comando con argumentos, por ejemplo: &quot;/ping 1234&quot;. Todos los argumentos pueden ser expresiones regulares, por ejemplo:</p>
 <pre><code>[&quot;/ping ([0-9]+)&quot;]=&quot;echo Pong: @R1&quot;
 
 [&quot;/blacklist ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)&quot;]=&quot;/sbin/iptables -A INPUT -s @R1 -j DROP&quot;
@@ -205,7 +205,7 @@ Dockers:
 .msg 110440209 No utilices más mi Bot!!!
 </code></pre>
 <h2 id="conclusiones">Conclusiones</h2>
-<p>Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc… La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente.</p>
+<p>Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc... La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente.</p>
 <p>Si quieres hacer pruebas, la carpeta que hay en el repositorio <strong>.batbot</strong>, donde esta el archivo <strong>allowed<sub>users</sub></strong>, tendría que estar en al carpeta <code>$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos las carpetas en el mismo lugar.</p>
 <br>
 <p>Publicado por Angel el jueves 11 abril del 2019</p>
@@ -213,7 +213,7 @@ Dockers:
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
 </ul>

@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="utilizando-git-con-la-terminal.-github-1" title="Utilizando Git con la Terminal. GitHub" data-export_file_name="Utilizando Git con la Terminal GitHub" data-description="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal" data-export_date="2019-01-21 15:16" data-category="git" data-tag="terminal,github" data-image="./images-blog/ugeek.png">Utilizando Git con la Terminal. GitHub</h1>
+<h1 id="utilizando-git-con-la-terminal.-github" title="Utilizando Git con la Terminal. GitHub" export_file_name="Utilizando Git con la Terminal GitHub" description="Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal" export_date="2019-01-21 15:16" category="git" tag="terminal,github" image="./images-blog/ugeek.png">Utilizando Git con la Terminal. GitHub</h1>
 <p>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.</p>
 <h2 id="instalando-git">Instalando Git</h2>
 <p><code>sudo apt install git</code></p>
@@ -74,8 +74,8 @@ gtag("config", "UA-131560140-1");
 <p><code>ssh -T git@github.com</code></p>
 <h2 id="iniciando-cuenta-con-github">Iniciando cuenta con GitHub</h2>
 <p>Solo la primera vez, especificamos nuestro correo y nombre de usuario:</p>
-<p><code>git config --global user.email "tucorreo@gmail.com"</code></p>
-<p><code>git config --global user.name "Tu Nombre"</code></p>
+<p>=git config --global user.email &quot;tucorreo@gmail.com&quot;=</p>
+<p>=git config --global user.name &quot;Tu Nombre&quot;=</p>
 <p>Para ver el archivo de configuración:</p>
 <p><code>cat ~/.gitconfig</code></p>
 <h2 id="clonar-repositorio-en-local">Clonar Repositorio en local</h2>
@@ -90,7 +90,7 @@ gtag("config", "UA-131560140-1");
 <li>Ver estado desde el último cambio <code>git status</code></li>
 <li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
 <li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
-<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
+<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos =git commit -m &quot;nuevo post&quot;=</li>
 <li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
 </ul>
 <p>Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberíamos verificar o descargar el contenido remoto de GitHub a local.</p>
@@ -101,7 +101,7 @@ gtag("config", "UA-131560140-1");
 <p>Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <strong>subir</strong> y <strong>bajar</strong>, los archivos de una carpeta al repositorio remoto.</p>
 <p>Todo se resume en:</p>
 <p>Subir</p>
-<p><code>git add . ; git commit -m "comentario" ; git push</code></p>
+<p><code>git add . ; git commit -m &quot;comentario&quot; ; git push</code></p>
 <p>Bajar</p>
 <p><code>git pull</code></p>
 <br>

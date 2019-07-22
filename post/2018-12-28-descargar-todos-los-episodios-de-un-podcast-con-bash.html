@@ -53,15 +53,15 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
+<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget" title="Descargar todos los episodios de un Podcast con wget" export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." export_date="2018-12-28 10:00" category="terminal" tag="bash,podcast,unix,terminal" image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
 <p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
+<p>Tan simple como escribir esta única línea sustituyendo *&quot;FEED&quot;*, por el Feed del Podcast que desees descargar.</p>
 <pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
 </code></pre>
 <p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
 <pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
 </code></pre>
-<p>A disfrutar con la magia de la terminal…</p>
+<p>A disfrutar con la magia de la terminal...</p>
 <br>
 <p>Publicado por Angel el viernes 28 diciembre del 2018</p>
 <br><br> 
@@ -72,7 +72,7 @@ gtag("config", "UA-131560140-1");
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-habilitando-la-accesibilidad-como-usuario-root-via-ssh-en-debian.html">Habilitando la accesibilidad como usuario root via ssh en debian</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html">Instalando Syncthing por reposistorios</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html">Renombrando archivos masivamente</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html">Descargando videos de Internet</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
