@@ -1,5 +1,5 @@
 <head>
-<title> Castero. Podcatcher ligero para Terminal. uGeek Blog </title>
+<title>Instalar Oh My ZSH. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
+<meta name="description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Castero. Podcatcher ligero para Terminal" />
-<meta property="og:description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/castero.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html" />
+<meta property="og:title" content="Instalar Oh My ZSH" />
+<meta property="og:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html" />
 
-<meta name="twitter:title" content=" Castero. Podcatcher ligero para Terminal" />
-<meta name="twitter:description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/castero.png" />
+<meta name="twitter:title" content="Instalar Oh My ZSH" />
+<meta name="twitter:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,54 +53,57 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="castero.-podcatcher-ligero-para-terminal" title="Castero. Podcatcher  ligero para Terminal" export_file_name="Castero Podcatcher ligero para Terminal" description="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." export_date="2019-01-26 14:00" category="terminal" tag="podcast," image="./images-blog/castero.png">Castero. Podcatcher ligero para Terminal</h1>
-<p>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, <a href="https://github.com/xgi/castero">Castero</a> nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.</p>
+<h1 id="instalar-oh-my-zsh" title="Instalar Oh My ZSH" export_file_name="Instalar Oh My ZSH" description="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" export_date="2019-07-22 21:20" category="terminal" tag="bash" image="./images-blog/omzsh.png">Instalar Oh My ZSH</h1>
+<p>Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal, así como en caso de utilizar git, conocer en que rama estamos. Voy a instalar un tema muy conocido, <strong>agnoster</strong>.</p>
 <center>
-<p><img src="../images-blog/castero.png" /></p>
+<p><img src="../images-blog/omzsh.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
-<p>Si no tenemos los módulos de python pip: <code>sudo apt install python3-pip</code></p>
-<p>Instalación de castero:</p>
-<p><code>sudo pip3 install castero</code></p>
-<p>Para poder escuchar los podcast, requiere de aplicaciones externas como vlc versión 2.2.3 o superior o mpv con libmpv</p>
-<h2 id="iniciando-castero">Iniciando Castero</h2>
-<p>Tan simple como escribir en tu terminal</p>
-<p><code>caster</code></p>
-<p>Se abrirá una pantalla dividida en 3 partes:</p>
-<ul>
-<li>Feed: Los podcast que estamos suscritos a través de su Feed</li>
-<li>Episodies: Los episodios disponibles para ser escuchados</li>
-<li>Metadata: La información del episodio seleccionado</li>
-</ul>
-<h2 id="uso">Uso</h2>
-<p>La verdad es que es muy sencillo de utilizar. No iremos desplazando por las columnas de la pantalla con los cursores de izquierda, derecha, arriba, abajo.</p>
-<p>Para salir, como la mayoría de las app's de ternimal <strong>q</strong>.</p>
-<p>Para añadir el Feed deseado <strong>a</strong>...</p>
-<pre><code>Comandos
-    h - pantalla de ayuda
-    q - salir del cliente
-    a - añadir un feed
-    d - eliminar el feed seleccionado
-    r - recargar / actualizar feeds
-    s - guardar el episodio para la reproducción sin conexión
-    flechas - navegar por los menús
-    página arriba / abajo - menús de desplazamiento
-    entrar - reproducir el feed / episodio seleccionado
-    espacio - agregar el feed / episodio seleccionado a la cola
-    c - borrar la cola
-    n - ir al siguiente episodio en la cola
-    i - Invertir el orden del menú
-    p o k - pausa / reproducir el episodio actual
-    f o l - buscar hacia adelante
-    b o j - buscar hacia atrás
+<p>Mediante este Post, vamos a aprender a instalarlo, de un modo muy sencillo.</p>
+<h2 id="instalando-zsh-y-git-core">Instalando ZSH y git-core</h2>
+<p>Instalando desde los repositorios:</p>
+<p><code>sudo apt install zsh git-core</code></p>
+<h2 id="descargando-oh-my-zsh-y-ejecutarlo">Descargando Oh My ZSH y ejecutarlo</h2>
+<p>Llegó la hora de Instalar Oh My Zsh</p>
+<p><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh</code></p>
+<h2 id="cambiar-la-shell-a-zsh">Cambiar la shell a ZSH</h2>
+<p>Vamos a cambiar nuestra Shell actual a zsh:</p>
+<p><code>chsh -s `which zsh`</code></p>
+<p>Ahora, para que surja efecto, será necesario <strong>reiniciar la terminal</strong>. Si no funciona, quizás sea necesario reiniciar el Sistema Operativo.</p>
+<p>Si no nos convence Zsh u otra shell, volveremos a bash así:</p>
+<p><code>chsh -s `which bash`</code></p>
+<h2 id="que-shells-hay-disponibles-en-nuestro-sistema">Que Shells hay disponibles en nuestro sistema</h2>
+<p>Para saber las shells tenemos instaladas en nuestro sistema:</p>
+<p><code>cat /etc/shells</code></p>
+<h2 id="saber-nuestra-shell-actual">Saber nuestra shell actual</h2>
+<p><code>echo $SHELL</code></p>
+<p>Si tenemos zsh, nos devolverá:</p>
+<p><code>/usr/bin/zsh</code></p>
+<h2 id="instalando-las-fuentes-powerline-para-zsh">Instalando las Fuentes Powerline para ZSH</h2>
+<p>Si en tu terminal no aparecen correctamente los símbolos, es necesario instalar:</p>
+<p><code>sudo apt install fonts-powerline</code></p>
+<h2 id="temas">Temas</h2>
+<p>Voy a cambiar el tema <strong>robbyrussell</strong> e instalar el tema agnoster:</p>
+<p><code>nano ~/.zshrc</code></p>
+<p>Sustituye:</p>
+<pre><code># ZSH_THEME=&quot;robbyrussell&quot;
+ZSH_THEME=&quot;agnoster&quot;
 </code></pre>
-<h2 id="archivos-de-configuración">Archivos de configuración</h2>
-<p>El archivo de configuración se encuentra en {HOME}/.config/castero/ después de que el cliente se haya ejecutado al menos una vez. La información de los Podcast está en {HOME}/.local/share/castero/feeds , pero este archivo no se puede editar de forma manual.</p>
+<h2 id="buscar-en-el-historial">Buscar en el historial</h2>
+<p>En la raíz del directorio $HOME, crearemos el archivo oculto <strong>.inputrc</strong>. Utilizaremos por ejemplo <strong>nano</strong>, para crear el archivo.</p>
+<p><code>nano .inputrc</code></p>
+<p>Una vez abierto, copiaremos en el siguiente contenido:</p>
+<pre><code>## Flecha Arriba
+&quot;\e[A&quot;:history-search-backward
+## Flecha Abajo
+&quot;\e[B&quot;:history-search-forward
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://github.com/xgi/castero">Repositorio de Castero</a></li>
+<li><a href="https://ohmyz.sh/" class="uri">https://ohmyz.sh/</a></li>
+<li><a href="http://zshwiki.org/" class="uri">http://zshwiki.org/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el sábado 26 enero del 2019</p>
+<p>Publicado por Angel el lunes 22 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
