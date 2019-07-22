@@ -26,11 +26,15 @@ sudo apt install fonts-powerline
 
 # Temas
 #Voy a cambiar el tema *robbyrussell* e instalar el tema agnoster:
+clear
 echo 'Copia el tema agnoster y sustituyelo
 
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 '
+sleep 10
+
+
 nano ~/.zshrc
 
 
