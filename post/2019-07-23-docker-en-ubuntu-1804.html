@@ -1,5 +1,5 @@
 <head>
-<title>Compartiendo tus Dockers. uGeek Blog </title>
+<title>Docker en Ubuntu 18.04. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
+<meta name="description" content="Vamos a instalar docker en Ubuntu 18.04" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Compartiendo tus Dockers" />
-<meta property="og:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html" />
+<meta property="og:title" content="Docker en Ubuntu 18.04" />
+<meta property="og:description" content="Vamos a instalar docker en Ubuntu 18.04" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html" />
 
-<meta name="twitter:title" content="Compartiendo tus Dockers" />
-<meta name="twitter:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
+<meta name="twitter:title" content="Docker en Ubuntu 18.04" />
+<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 18.04" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,37 +53,45 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="compartiendo-tus-dockers" title="Compartiendo tus Dockers" export_file_name="Compartiendo tus Dockers" description="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" export_date="2019-06-12 20:20" category="docker" tag="raspberry, servidor" image="./images-blog/dockerhub.png">Compartiendo tus Dockers</h1>
-<p>Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad.</p>
+<h1 id="docker-en-ubuntu-18.04" title="Docker en Ubuntu 18.04" export_file_name="Docker en Ubuntu 1804" description="Vamos a instalar docker en Ubuntu 18.04" export_date="2019-07-23 18:30" category="docker" tag="terminal,ubuntu" image="./images-blog/docker.png">Docker en Ubuntu 18.04</h1>
+<p>Vamos a instalar docker en Ubuntu 18.04:</p>
 <center>
-<p><img src="../images-blog/dockerhub.png" /></p>
+<p><img src="../images-blog/docker.png" /></p>
 </center>
-<p>Ya os expliqué un ejemplo de <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura.</p>
-<p>Voy a explicarte como renombrar y subir esta imagen al DockerHub</p>
-<h2 id="iniciando-en-la-terminal">Iniciando en la terminal</h2>
-<p>Dando por hecho que ya has creado tu cuenta en <a href="https://hub.docker.com">DockerHub</a>, vamos a logearnos en nuestra terminal:</p>
-<p><code>docker login</code></p>
-<p>La terminal nos preguntará por nuestro usuario y contraseña.</p>
-<h2 id="nombre-de-la-imagen">Nombre de la imagen</h2>
-<p>El nombre de la imagen tiene esta estructura:</p>
-<p><strong>&lt;USUARIO&gt;/&lt;REPOSITORIO&gt;:&lt;ETIQUETA&gt;</strong></p>
-<p>Ejemplo:</p>
-<p><code>ugeek/ejabberd:arm</code></p>
-<p>Una vez tengamos la imagen creada siguiendo el Post <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>, vamos a renombrarla siguiendo la estructura.</p>
-<h2 id="cambiar-nombre-de-la-imagen">Cambiar nombre de la imagen</h2>
-<p>Vamos a ver las imágenes:</p>
-<p><code>docker image</code></p>
-<p>Imagina que he creado un docker de webdav, para arquitectura arm. En el comando anterior, he tomado buena nota del número de la imagen <strong>&lt;IMAGE&gt;</strong>, para añadirlo en el siguiente comando.</p>
-<p><code>docker tag &lt;IMAGE&gt; ugeek/webdav:arm</code></p>
-<p>Si lo deseamos, ahora podemos borrar la imagen antigua.</p>
-<p><code>docker rmi &lt;IMAGE&gt;</code></p>
-<h2 id="subir-imagen">Subir imagen</h2>
-<p>Igual que hariamos con <strong>git</strong>, vamos ha hacer un docker push para subir mi nueva imagen.</p>
-<p><code>docker push ugeek/webdav:arm</code></p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Esto era una cosa que no había hecho por pereza y la verdad es que funciona super bien. Ahora gracias a la copia de mis dockers en DockerHub, tengo un backup disponible para montarlo en cualquier máquina y lo puedo compartir. Te animo a probar y crear tus dockers.</p>
+<h2 id="requisitos-previos">Requisitos Previos</h2>
+<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<h2 id="clave-gpg">Clave GPG</h2>
+<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+<h2 id="repositorio">Repositorio</h2>
+<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
+<p>=sudo add-apt-repository &quot;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" class="uri">https://download.docker.com/linux/ubuntu</a> bionic stable&quot;=</p>
+<p>Actualizamos:</p>
+<p><code>sudo apt update</code></p>
+<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
+<p><code>apt-cache policy docker-ce</code></p>
+<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
+<pre><code>apt -y install docker-ce docker-compose
+</code></pre>
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>systemctl enable docker
+systemctl start docker
+</code></pre>
+<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code>docker -v</code></p>
+<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<p>Creamos el grupo docker:</p>
+<pre><code>groupadd docker
+</code></pre>
+<p>Añadimos al usuario:</p>
+<pre><code>usermod -aG docker $USER
+</code></pre>
+<h2 id="instalando-portainer">Instalando Portainer</h2>
+<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
+<pre><code>docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</code></pre>
 <br>
-<p>Publicado por Angel el miércoles 12 junio del 2019</p>
+<p>Publicado por Angel el martes 23 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

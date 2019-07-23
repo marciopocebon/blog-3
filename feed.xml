@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker en Ubuntu 18.04</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Docker en Ubuntu 18.04"&gt;
+&lt;br&gt;&lt;p&gt;Vamos a instalar docker en Ubuntu 18.04... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html&gt;Docker en Ubuntu 18.04&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 23 Jul 2019 18:30 +0100</pubDate>
+    <category>docker</category>
+    <category>terminal</category>
+    <category>ubuntu</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html</guid>
+   </item>
+   <item>
     <title>Plugin zsh-autosuggestions. Autocompletado en la terminal</title>
     <link>https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html</link>
     <description>
