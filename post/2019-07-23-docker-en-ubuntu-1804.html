@@ -65,7 +65,8 @@ gtag("config", "UA-131560140-1");
 <p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
 <h2 id="repositorio">Repositorio</h2>
 <p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
-<p>=sudo add-apt-repository &quot;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu" class="uri">https://download.docker.com/linux/ubuntu</a> bionic stable&quot;=</p>
+<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;
+</code></pre>
 <p>Actualizamos:</p>
 <p><code>sudo apt update</code></p>
 <p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
