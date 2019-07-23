@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Plugin zsh-autosuggestions. Autocompletado en la terminal</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/omzsh.png" alt="Plugin zsh-autosuggestions. Autocompletado en la terminal"&gt;
+&lt;br&gt;&lt;p&gt;Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html&gt;Plugin zsh-autosuggestions. Autocompletado en la terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 23 Jul 2019 18:00 +0100</pubDate>
+    <category>terminal</category>
+    <category>bash</category>
+    <category>zsh</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html</guid>
+   </item>
+   <item>
     <title>Instalar Oh My ZSH</title>
     <link>https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html</link>
     <description>
@@ -41,7 +74,7 @@
     <pubDate>Mon, 22 Jul 2019 21:20 +0100</pubDate>
     <category>terminal</category>
     <category>bash</category>
-    <category></category>
+    <category>zsh</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html</guid>
    </item>

@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="instalar-oh-my-zsh" title="Instalar Oh My ZSH" export_file_name="Instalar Oh My ZSH" description="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" export_date="2019-07-22 21:20" category="terminal" tag="bash" image="./images-blog/omzsh.png">Instalar Oh My ZSH</h1>
+<h1 id="instalar-oh-my-zsh" title="Instalar Oh My ZSH" export_file_name="Instalar Oh My ZSH" description="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" export_date="2019-07-22 21:20 2019-07-23" category="terminal" tag="bash,zsh" image="./images-blog/omzsh.png">Instalar Oh My ZSH</h1>
 <p>Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal, así como en caso de utilizar git, conocer en que rama estamos. Voy a instalar un tema muy conocido, <strong>agnoster</strong>.</p>
 <center>
 <p><img src="../images-blog/omzsh.png" /></p>
@@ -65,6 +65,9 @@ gtag("config", "UA-131560140-1");
 <h2 id="descargando-oh-my-zsh-y-ejecutarlo">Descargando Oh My ZSH y ejecutarlo</h2>
 <p>Llegó la hora de Instalar Oh My Zsh</p>
 <p><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh</code></p>
+<h2 id="desinstalar-oh-my-zsh">Desinstalar Oh My ZSH</h2>
+<p>Si no te ha gustado oh my zsh, desinstalarlo es tan sencillo como ejecutar en la terminal:</p>
+<p><code>uninstall_oh_my_zsh</code></p>
 <h2 id="cambiar-la-shell-a-zsh">Cambiar la shell a ZSH</h2>
 <p>Vamos a cambiar nuestra Shell actual a zsh:</p>
 <p><code>chsh -s `which zsh`</code></p>
@@ -97,16 +100,20 @@ ZSH_THEME=&quot;agnoster&quot;
 ## Flecha Abajo
 &quot;\e[B&quot;:history-search-forward
 </code></pre>
+<h2 id="instalarlo-todo-automatizado-desde-un-script">Instalarlo todo automatizado desde un script</h2>
+<p>He creado este script para que la instalación sea muchísimo más rápida:</p>
+<p><code>wget https://raw.githubusercontent.com/uGeek/blog/master/scripts/ohmyzsh ; bash  ohmyzsh ; rm ohmyzsh</code></p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://ohmyz.sh/" class="uri">https://ohmyz.sh/</a></li>
 <li><a href="http://zshwiki.org/" class="uri">http://zshwiki.org/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el lunes 22 julio del 2019</p>
+<p>Publicado por Angel el lunes 22 julio del 2019 y <strong>actualizado</strong> el martes 23 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html">Instalar Oh My ZSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-docker-en-debian-buster.html">Docker en debian Buster</a></li>
@@ -116,6 +123,5 @@ ZSH_THEME=&quot;agnoster&quot;
 <li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html">Descargando videos de Internet</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
