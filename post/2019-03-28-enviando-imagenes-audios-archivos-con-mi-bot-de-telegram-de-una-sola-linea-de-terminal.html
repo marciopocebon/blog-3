@@ -82,11 +82,10 @@ gtag("config", "UA-131560140-1");
 <ul>
 <li>TOKEN</li>
 <li>ID</li>
-<li><p>RUTA DE NUESTRA IMÁGEN ( Tipo: &quot;~/Imágenes/mifoto.jpg&quot;)</p>
-#+BEGIN<sub>SRC</sub></li>
+<li>RUTA DE NUESTRA IMÁGEN ( Tipo: &quot;~/Imágenes/mifoto.jpg&quot;)</li>
 </ul>
-<p>curl -X POST &quot;<a href="https://api.telegram.org/bot" class="uri">https://api.telegram.org/bot</a>&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat<sub>id</sub>=&quot;&lt;ID&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;</p>
-<p>#+END<sub>SRC</sub></p>
+<pre><code>curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;
+</code></pre>
 <h2 id="enviar-una-imagen-que-esté-en-internet">Enviar una imagen que esté en Internet</h2>
 <p>También podemos enviar imágenes que esten en internet. Del mismo modo, tenemos que especificar la ruta donde esté esta. Atención que cambia un poco la línea, ya no tiene el *<span class="citation" data-cites="*">@*</span> ante la ruta:</p>
 <ul>
@@ -102,32 +101,29 @@ gtag("config", "UA-131560140-1");
 <li>TOKEN</li>
 <li>ID</li>
 <li>RUTA DE NUESTRA IMÁGEN</li>
-<li><p>TEXTO JUNTO IMAGEN</p>
-#+BEGIN<sub>SRC</sub></li>
+<li>TEXTO JUNTO IMAGEN</li>
 </ul>
-<p>curl -X POST &quot;<a href="https://api.telegram.org/bot" class="uri">https://api.telegram.org/bot</a>&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat<sub>id</sub>=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;</p>
-<p>#+END<sub>SRC</sub></p>
+<pre><code>curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;
+</code></pre>
 <h2 id="enviar-archivos">Enviar archivos</h2>
 <p>Para enviar archivos, la línea es muy similar a la de enviar imágenes, solo que en este caso utilizaremos <strong>/sendDocument</strong>. También como con las imágenes, especificaremos la ruta completa:</p>
 <ul>
 <li>TOKEN</li>
 <li>ID</li>
-<li><p>RUTA DEL ARCHIVO</p>
-#+BEGIN<sub>SRC</sub></li>
+<li>RUTA DEL ARCHIVO</li>
 </ul>
-<p>curl -X POST &quot;<a href="https://api.telegram.org/bot" class="uri">https://api.telegram.org/bot</a>&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat<sub>id</sub>=&quot;&lt;ID&gt;&quot; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;</p>
-<p>#+END<sub>SRC</sub></p>
+<pre><code>curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
+</code></pre>
 <h2 id="adjuntar-texto-junto-al-archivo">Adjuntar texto junto al archivo</h2>
 <p>Para adjunta texto junto a la archivo:</p>
 <ul>
 <li>TOKEN</li>
 <li>ID</li>
 <li>RUTA DEL ARCHIVO</li>
-<li><p>TEXTO JUNTO IMAGEN</p>
-#+BEGIN<sub>SRC</sub></li>
+<li>TEXTO JUNTO IMAGEN</li>
 </ul>
-<p>curl -X POST &quot;<a href="https://api.telegram.org/bot" class="uri">https://api.telegram.org/bot</a>&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat<sub>id</sub>=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;</p>
-<p>#+END<sub>SRC</sub></p>
+<pre><code>curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
+</code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Con todo esto y un poco de imaginación, ahora podemos ampliar mucho más las posibilidades de automatización. Espero que os haya gustado el Post y a disfrutar con los Bots</p>
 <br>

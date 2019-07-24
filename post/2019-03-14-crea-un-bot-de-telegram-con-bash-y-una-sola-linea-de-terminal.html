@@ -111,7 +111,8 @@ curl -s -X POST $URL -d chat_id=$ID -d text=&quot;$MENSAJE&quot;
 <p>Como puedes ver, he puesto unos valores inventados de muestra.</p>
 <h2 id="muestra-la-ip-de-la-máquina-que-se-conecta-por-ssh">Muestra la Ip de la máquina que se conecta por SSH</h2>
 <p>Si utilizas Bash, sabes que cada vez que te conectas por ssh o inicias una nueva sesión en tu terminal, Bash lee el archivo <strong>.bashrc</strong>. En él, al final de este archivo de configuración, añadiremos la línea de nuestro Bot y dentro del mensaje de texto, en lugar de un mensaje escribiremos:</p>
-<p><code>$(echo $SSH_CLIENT | awk '{ print $1}')</code></p>
+<pre><code>$(echo $SSH_CLIENT | awk &#39;{ print $1}&#39;)
+</code></pre>
 <p>Quedaría de la siguiente manera:</p>
 <pre><code>curl -s -X POST https://api.telegram.org/bot&quot;30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4&quot;/sendMessage -d chat_id=&quot;57384545&quot; -d text=&quot;Se acaba de contecta por ssh con la IP $(echo $SSH_CLIENT | awk &#39;{ print $1}&#39;)&quot;
 </code></pre>
@@ -124,9 +125,11 @@ curl -s -X POST $URL -d chat_id=$ID -d text=&quot;$MENSAJE&quot;
 <p><code>$(curl ifconfig.co)</code></p>
 <h2 id="temperatura-de-tu-raspberry">Temperatura de tu Raspberry</h2>
 <p>Con este comando, tendré controlada la temperatura de mi raspberry y además, quedará guardado el historial en el chat del Bot:</p>
-<p><code>/opt/vc/bin/vcgencmd measure_temp</code></p>
+<pre><code>/opt/vc/bin/vcgencmd measure_temp
+</code></pre>
 <p>Sustituye el texto del Bot por:</p>
-<p><code>$(/opt/vc/bin/vcgencmd measure_temp)</code></p>
+<pre><code>$(/opt/vc/bin/vcgencmd measure_temp)
+</code></pre>
 <h2 id="al-iniciar-mi-servidor">Al Iniciar mi servidor</h2>
 <p>He creado una carpeta llamada &quot;scripts&quot; en el &quot;Home&quot; del usuario. Allí he creado el script del Bot llamado <strong>inicio.sh</strong>, con un mesaje de texto tipo:</p>
 <p><strong>Se ha iniciado mi Raspberry</strong></p>

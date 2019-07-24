@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc...-con-rclone" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" export_date="2019-07-03 20:25 2019-07-08" category="aplicacion" tag="terminal" image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</h1>
+<h1 id="dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc...-con-rclone" title="Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone" export_file_name="Dale Almacenamiento ilimitado a tu Raspberry Servidor o PC con Rclone" description="Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor con Linux o PC,  a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon" export_date="2019-07-03 20:25 2019-07-24" category="aplicacion" tag="terminal" image="./images-blog/rclone.png">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</h1>
 <p>Rclone es una aplicación de Software Libre, que nos permite conectar nuestra Raspberry, Servidor o PC, a las más conocidas nubes públicas (Dropbox, Google Drive, OneDrive, Mega, Hubic, PCloud, Box, Nextcloud, Owncloud, Amazon,...).</p>
 <center>
 <p><img src="../images-blog/rclone.png" /></p>
@@ -70,7 +70,8 @@ gtag("config", "UA-131560140-1");
 <ul>
 <li><a href="https://rclone.org/downloads/">Descargalo desde aquí</a></li>
 </ul>
-<p>=sudo dpkg -i &lt;PAQUETE<sub>DESCARGADOR</sub>&gt;=</p>
+<pre><code>sudo dpkg -i &lt;PAQUETE_DESCARGADOR&gt;
+</code></pre>
 <h3 id="rclone-snap">rclone snap</h3>
 <p>Mucho mas desactualizado. También podemos instalar rclone desde snap</p>
 <p><code>sudo snap install rclone</code></p>
@@ -248,6 +249,38 @@ Choose a number from below, or type in your own value
 </ul>
 <p>Es opcional el añadir la contraseña, yo prefiero ponerla.</p>
 <p><strong>Recuerda que conservando el archivo de configuración, esta carpeta cifrada podrás montarla en otro dispositivo con rclone</strong></p>
+<h2 id="acceso-a-rclone-mediante-contraseña">Acceso a rclone mediante contraseña</h2>
+<p>Si tu Pc lo compartes con otras personas, quizás te interese el cifrar el archivo <strong>rclone.conf</strong>, para que nadie copie este archivo de configuración y pueda acceder a tus nubes.</p>
+<p>Para ello haremos lo siguiente:</p>
+<p><code>rclone config</code></p>
+<p>Y seleccionaremos la opción:</p>
+<p><code>s) Set configuration password</code></p>
+<p>Nos informará que nuestro archivo de configuración no está cifrado y si deseamos cifrarlo. Cuando digamos que si, nos pedirá que introduzcamos la contraseña 2 veces, para confirmar que no nos hemos equivocado.</p>
+<p><strong>Ahora cada vez que utilicemos rclone, nos pedirá la contraseña!!!</strong></p>
+<h2 id="sincronizaciones-automatizadas-si-rclone-tiene-contraseña">Sincronizaciones automatizadas si rclone tiene contraseña</h2>
+<h3 id="utilizar-rclone-poniendo-la-contraseña-en-la-misma-línea">Utilizar rclone, poniendo la contraseña en la misma línea</h3>
+<p>Con RCLONE<sub>CONFIGPASS</sub>=&quot;contraseña&quot;, delante de comando, no nos pedirá la contraseña:</p>
+<pre><code>RCLONE_CONFIG_PASS=&quot;contraseña&quot; rclone copy drive:fotos/verano/ /home/angel/fotos/
+</code></pre>
+<p>Esto en realidad, en entornos confiables puede ser una solución, a mi personalmente me gusta hacerlo así:</p>
+<h3 id="desbloqueo-de-la-contraseña-en-scripts-programados">Desbloqueo de la contraseña en scripts programados</h3>
+<p>Vamos a crear un script, que al iniciarlo, nos pedirá la contraseña:</p>
+<p><code>nano script.sh</code></p>
+<pre><code>#!/bin/echo Source this file don&#39;t run it
+read -s RCLONE_CONFIG_PASS
+export RCLONE_CONFIG_PASS
+</code></pre>
+<p>Damos permisos de ejecución:</p>
+<p><code>sudo chmod +x script.sh</code></p>
+<p>Iniciamos el script:</p>
+<p><code>./script.sh</code></p>
+<p>Ahora, el script nos pedirá que introduzcamos la contraseña.</p>
+<p>Si creamos un script <strong>automatizado</strong> y no queremos que nos pida esta la contraseña, ya que este script probablemente se ejecute en segundo plano mediante cron, utilizaremos al final de la línea del comando <strong>rclone</strong> :</p>
+<pre><code>--ask-password=false
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>rclone lsd drive: --ask-password=false
+</code></pre>
 <h2 id="montardesmontar-unidad-como-si-fuera-un-disco-duro">Montar/Desmontar unidad como si fuera un disco duro</h2>
 <p>Vamos a montar la nube pública en nuestro servidor, como si fuera una unidad de disco duro. Para ello, necesitamos instalar Fuse si no lo tenemos instalado.</p>
 <h3 id="instalar-fuser">Instalar Fuser</h3>
@@ -374,7 +407,7 @@ WantedBy=multi-user.target
 </ul>
 <p>Gracias a todos los usuarios del Grupo de uGeek por recopilar más información, como Rapejim, Germán Martín,...</p>
 <br>
-<p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el lunes 08 julio del 2019</p>
+<p>Publicado por Angel el miércoles 03 julio del 2019 y <strong>actualizado</strong> el miércoles 24 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

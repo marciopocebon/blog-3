@@ -63,7 +63,8 @@ gtag("config", "UA-131560140-1");
 <p>Voy a explicarlo y veréis que es súper sencillo.</p>
 <h2 id="filtrar-los-estados-todo">Filtrar los estados <strong>TODO</strong></h2>
 <p>Para mostrar todas las líneas que tengan estado TODO, vamos a utilizar el comando <strong>grep</strong>. Yo en mi caso, una vez se visualice las líneas en Telegram, no quiero que aparezca ni el asterisco, ni la palabra <strong>TODO</strong>, así que utilizaré el comando <strong>sed</strong> para sustituir el texto: <code>*</code>, por <code>-</code></p>
-<p>=grep TODO agenda.org | sed -e 's/*/-/g'=</p>
+<pre><code>grep TODO agenda.org | sed -e &#39;s/*/-/g&#39;
+</code></pre>
 <p>Como es posible que no me fije en la fecha del chat, para comprobar a que día pertenece la notificación, voy a añadir la fecha del día de hoy en la notificación:</p>
 <p><code>date +'%A %d de %B del %Y' -&gt; será del tipo: domingo 31 de marzo del 2019</code></p>
 <h2 id="enviando-la-notificación">Enviando la notificación</h2>
