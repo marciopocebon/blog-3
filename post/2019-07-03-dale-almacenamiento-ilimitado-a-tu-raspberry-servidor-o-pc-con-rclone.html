@@ -228,6 +228,9 @@ Choose a number from below, or type in your own value
 </code></pre>
 <p>Si en una carpeta cifrada, tenemos varias carpetas de gran tamaño y queremos mover una de estas a la raíz de la nube, tenemos que copiar el nombre de la carpeta cifrado, del tipo (vgaq89yqhg34gbhvai7g9q479) y moverlo a una nueva carpeta que crearemos en la raíz. Dentro podremos el archivo original cifrado.</p>
 <p>En el archivo <strong>rclone.conf</strong>, copiaremos todos los datos de esa carpeta cifrada, modificando el nombre de esta nueva carpeta y la nueva ruta en la nube. Como puedes observar, ahora tendremos 2 carpetas cifradas, con la misma contraseña de cifrado.</p>
+<h3 id="vaciar-la-papelera-si-es-posible">Vaciar la papelera si es posible</h3>
+<pre><code>rclone cleanup drive:
+</code></pre>
 <h3 id="resto-de-comandos">Resto de Comandos</h3>
 <p>Para conocer los comandos disponibles, lanza la ayuda:</p>
 <p><code>rclone -h</code></p>
