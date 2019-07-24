@@ -176,7 +176,7 @@ Choose a number from below, or type in your own value
 <h3 id="método-sencillo-desde-tu-pc-o-portátil">Método sencillo desde tu PC o Portátil</h3>
 <p>El método más sencillo, sería instalar rclone en tu PC o Portátil, conectarte a tus nubes desde él y copiar el archivo completo o la parte perteneciente a la nube que te interesa, en el configuración de rclone de tu raspberry o servidor sin interfaz gráfica.</p>
 <p>El archivo de configuración, te recuerdo que está en: $HOME/.config/rclone/rclone.conf</p>
-<h2 id="iniciando-rclone">Iniciando Rclone</h2>
+<h2 id="iniciando-rclone-y-comandos-básicos">Iniciando Rclone y comandos básicos</h2>
 <p>Si has llegado hasta aquí, ya has vinculado con una de tus nubes a Rclone. Vamos a comprobar que todo funciona correctamente haciendo un <strong>ls</strong>.</p>
 <p>Para utilizar una de las nubes, escribiremos el nombre que hemos otorgado a la unidad, seguido de dos puntos.</p>
 <p>Ejem:</p>
@@ -185,6 +185,10 @@ Choose a number from below, or type in your own value
 <p>Si quiero acceder a una carpeta dentro de la nube. Por ejemplo, mi carpeta /Podcast/ugeek, lo representariamos así:</p>
 <p><code>drive:podcast/ugeek</code></p>
 <p><code>drive:podcast</code></p>
+<h3 id="listar-todas-la-nubes-disponibles">Listar todas la nubes disponibles</h3>
+<p>Para listar todas las nubes que hemos añadido a rclone, utilizaremos el siguiente comando:</p>
+<pre><code>rclone listremotes
+</code></pre>
 <h3 id="hacer-un-ls">Hacer un ls</h3>
 <p>Ver un listado de todos los archivos en la unidad:</p>
 <p><code>rclone ls unidad_creada:carpeta</code></p>
@@ -192,6 +196,16 @@ Choose a number from below, or type in your own value
 <p><code>rclone lsd unidad_creada:carpeta</code> -&gt; ls de carpetas</p>
 <p>Ver un listado, únicamente de las carpetas de la unidad:</p>
 <p><code>rclone lsf unidad_creada:carpeta</code></p>
+<h3 id="hacer-un-tree-para-ver-toda-la-estructura-de-directorios-y-archivos">Hacer un tree, para ver toda la estructura de directorios y archivos</h3>
+<p>Hacer un tree de todas las carpetas y archivos</p>
+<pre><code>rclone tree unidad_creada: 
+</code></pre>
+<p>Hacer un tree, para conocer la estructura <strong>únicamente de las carpetas</strong>.</p>
+<pre><code>rclone tree --dirs-only unidad_creada:
+</code></pre>
+<h3 id="leer-archivos-en-remoto">Leer archivos en remoto</h3>
+<p>Leer remotamente un archivo de la nube:</p>
+<p><code>rclone cat unidad_creada:archivo.txt</code></p>
 <h3 id="crear-un-nuevo-directorio">Crear un nuevo directorio</h3>
 <p>Para crear un directorio nuevo, igual que lo hacemos habitualmente en la terminal, utilizaremos <strong>mkdir</strong>.</p>
 <p>Ejemplo:</p>
@@ -249,6 +263,15 @@ Choose a number from below, or type in your own value
 </ul>
 <p>Es opcional el añadir la contraseña, yo prefiero ponerla.</p>
 <p><strong>Recuerda que conservando el archivo de configuración, esta carpeta cifrada podrás montarla en otro dispositivo con rclone</strong></p>
+<h2 id="dejando-ver-el-nombre-del-archivo">Dejando ver el nombre del archivo</h2>
+<p>Mediante <strong>cryptdecode</strong> y --reverse, podemos hacer visible el nombre del archivo o no en una carpeta cifrada.</p>
+<p>Ejemplo:</p>
+<pre><code># El nombre del archivo barcelona.jpg, será cifrado
+rclone cryptdecode drive:Mis_Fotos barcelona.jpg --reverse
+
+# Descifrar el nombre del archivo jgr8904ihjvgqa8hjiuhgvvb6uw
+rclone cryptdecode drive:Mis_Fotos jgr8904ihjvgqa8hjiuhgvvb6uw
+</code></pre>
 <h2 id="acceso-a-rclone-mediante-contraseña">Acceso a rclone mediante contraseña</h2>
 <p>Si tu Pc lo compartes con otras personas, quizás te interese el cifrar el archivo <strong>rclone.conf</strong>, para que nadie copie este archivo de configuración y pueda acceder a tus nubes.</p>
 <p>Para ello haremos lo siguiente:</p>
