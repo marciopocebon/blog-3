@@ -189,6 +189,9 @@ Choose a number from below, or type in your own value
 <p>Para listar todas las nubes que hemos añadido a rclone, utilizaremos el siguiente comando:</p>
 <pre><code>rclone listremotes
 </code></pre>
+<h3 id="ver-el-tamaño-de-las-carpetas">Ver el tamaño de las carpetas</h3>
+<pre><code>rclone size drive:Carpeta
+</code></pre>
 <h3 id="hacer-un-ls">Hacer un ls</h3>
 <p>Ver un listado de todos los archivos en la unidad:</p>
 <p><code>rclone ls unidad_creada:carpeta</code></p>
@@ -201,7 +204,13 @@ Choose a number from below, or type in your own value
 <pre><code>rclone tree unidad_creada: 
 </code></pre>
 <p>Hacer un tree, para conocer la estructura <strong>únicamente de las carpetas</strong>.</p>
+<pre><code>rclone tree unidad_creada: -d
+</code></pre>
 <pre><code>rclone tree --dirs-only unidad_creada:
+</code></pre>
+<h3 id="conocer-el-tamaño-de-los-directorios-con-ncdu">Conocer el tamaño de los directorios con ncdu</h3>
+<p>ncdu es una herramienta que muestra todas las carpetas que tienes en tu disco duro y las ordena por tamaño. Haz lo propio con rclone mediante este comando:</p>
+<pre><code>rclone ncdu unidad_creada:
 </code></pre>
 <h3 id="leer-archivos-en-remoto">Leer archivos en remoto</h3>
 <p>Leer remotamente un archivo de la nube:</p>
@@ -210,6 +219,15 @@ Choose a number from below, or type in your own value
 <p>Para crear un directorio nuevo, igual que lo hacemos habitualmente en la terminal, utilizaremos <strong>mkdir</strong>.</p>
 <p>Ejemplo:</p>
 <p><code>rclone mkdir drive:fotos/viaje</code></p>
+<h3 id="mover-archivos-o-directorios">Mover archivos o Directorios</h3>
+<pre><code>rclone moveto &lt;origen&gt; &lt;destino&gt;
+</code></pre>
+<p>Ejemplo:</p>
+<p>Podemos utilizar -P para ver el proceso:</p>
+<pre><code>rclone moveto drive:Mis_Fotos drive:Mis_Archivos/Mis_Fotos -P
+</code></pre>
+<p>Si en una carpeta cifrada, tenemos varias carpetas de gran tamaño y queremos mover una de estas a la raíz de la nube, tenemos que copiar el nombre de la carpeta cifrado, del tipo (vgaq89yqhg34gbhvai7g9q479) y moverlo a una nueva carpeta que crearemos en la raíz. Dentro podremos el archivo original cifrado.</p>
+<p>En el archivo <strong>rclone.conf</strong>, copiaremos todos los datos de esa carpeta cifrada, modificando el nombre de esta nueva carpeta y la nueva ruta en la nube. Como puedes observar, ahora tendremos 2 carpetas cifradas, con la misma contraseña de cifrado.</p>
 <h2 id="copiar-de-un-nube-a-otra">Copiar de un nube a otra</h2>
 <p>Es probable que queramos hacer una copia de nuestra fotos guardadas en Google Drive, en Dropbox. Para ello utilizariamos:</p>
 <p><code>rclone copy drive:fotos/verano/ dropbox:fotos/verano</code></p>
@@ -263,15 +281,6 @@ Choose a number from below, or type in your own value
 </ul>
 <p>Es opcional el añadir la contraseña, yo prefiero ponerla.</p>
 <p><strong>Recuerda que conservando el archivo de configuración, esta carpeta cifrada podrás montarla en otro dispositivo con rclone</strong></p>
-<h2 id="dejando-ver-el-nombre-del-archivo">Dejando ver el nombre del archivo</h2>
-<p>Mediante <strong>cryptdecode</strong> y --reverse, podemos hacer visible el nombre del archivo o no en una carpeta cifrada.</p>
-<p>Ejemplo:</p>
-<pre><code># El nombre del archivo barcelona.jpg, será cifrado
-rclone cryptdecode drive:Mis_Fotos barcelona.jpg --reverse
-
-# Descifrar el nombre del archivo jgr8904ihjvgqa8hjiuhgvvb6uw
-rclone cryptdecode drive:Mis_Fotos jgr8904ihjvgqa8hjiuhgvvb6uw
-</code></pre>
 <h2 id="acceso-a-rclone-mediante-contraseña">Acceso a rclone mediante contraseña</h2>
 <p>Si tu Pc lo compartes con otras personas, quizás te interese el cifrar el archivo <strong>rclone.conf</strong>, para que nadie copie este archivo de configuración y pueda acceder a tus nubes.</p>
 <p>Para ello haremos lo siguiente:</p>
