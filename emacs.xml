@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Exportando tu Notas de Google Keep a Org Mode o Markdown</title>
+    <link>https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/keep.png" alt="Exportando tu Notas de Google Keep a Org Mode o Markdown"&gt;
+&lt;br&gt;&lt;p&gt;Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil, en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html&gt;Exportando tu Notas de Google Keep a Org Mode o Markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 26 Jul 2019 22:00 +0100</pubDate>
+    <category>emacs</category>
+    <category>notas</category>
+    <category>orgmode</category>
+    <category>markdown</category>
+    <guid>https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html</guid>
+   </item>
+   <item>
     <title>Emacs 26.2 en Ubuntu</title>
     <link>https://ugeek.github.io/blog/post/2019-07-22-emacs-26-2-en-ubuntu.html</link>
     <description>
