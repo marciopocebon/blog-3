@@ -1,5 +1,5 @@
 <head>
-<title>Compartiendo tus Dockers. uGeek Blog </title>
+<title>Actualización automática de tus dockers. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
+<meta name="description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Compartiendo tus Dockers" />
-<meta property="og:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html" />
+<meta property="og:title" content="Actualización automática de tus dockers" />
+<meta property="og:description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html" />
 
-<meta name="twitter:title" content="Compartiendo tus Dockers" />
-<meta name="twitter:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
+<meta name="twitter:title" content="Actualización automática de tus dockers" />
+<meta name="twitter:description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,37 +53,22 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="compartiendo-tus-dockers" title="Compartiendo tus Dockers" export_file_name="Compartiendo tus Dockers" description="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" export_date="2019-06-12 20:20" category="docker" tag="raspberry, servidor" image="./images-blog/dockerhub.png">Compartiendo tus Dockers</h1>
-<p>Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad.</p>
-<center>
-<p><img src="../images-blog/dockerhub.png" /></p>
-</center>
-<p>Ya os expliqué un ejemplo de <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura.</p>
-<p>Voy a explicarte como renombrar y subir esta imagen al DockerHub</p>
-<h2 id="iniciando-en-la-terminal">Iniciando en la terminal</h2>
-<p>Dando por hecho que ya has creado tu cuenta en <a href="https://hub.docker.com">DockerHub</a>, vamos a logearnos en nuestra terminal:</p>
-<p><code>docker login</code></p>
-<p>La terminal nos preguntará por nuestro usuario y contraseña.</p>
-<h2 id="nombre-de-la-imagen">Nombre de la imagen</h2>
-<p>El nombre de la imagen tiene esta estructura:</p>
-<p><strong>&lt;USUARIO&gt;/&lt;REPOSITORIO&gt;:&lt;ETIQUETA&gt;</strong></p>
-<p>Ejemplo:</p>
-<p><code>ugeek/ejabberd:arm</code></p>
-<p>Una vez tengamos la imagen creada siguiendo el Post <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>, vamos a renombrarla siguiendo la estructura.</p>
-<h2 id="cambiar-nombre-de-la-imagen">Cambiar nombre de la imagen</h2>
-<p>Vamos a ver las imágenes:</p>
-<p><code>docker image</code></p>
-<p>Imagina que he creado un docker de webdav, para arquitectura arm. En el comando anterior, he tomado buena nota del número de la imagen <strong>&lt;IMAGE&gt;</strong>, para añadirlo en el siguiente comando.</p>
-<p><code>docker tag &lt;IMAGE&gt; ugeek/webdav:arm</code></p>
-<p>Si lo deseamos, ahora podemos borrar la imagen antigua.</p>
-<p><code>docker rmi &lt;IMAGE&gt;</code></p>
-<h2 id="subir-imagen">Subir imagen</h2>
-<p>Igual que hariamos con <strong>git</strong>, vamos ha hacer un docker push para subir mi nueva imagen.</p>
-<p><code>docker push ugeek/webdav:arm</code></p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Esto era una cosa que no había hecho por pereza y la verdad es que funciona super bien. Ahora gracias a la copia de mis dockers en DockerHub, tengo un backup disponible para montarlo en cualquier máquina y lo puedo compartir. Te animo a probar y crear tus dockers.</p>
+<h1 id="actualización-automática-de-tus-dockers" title="Actualización automática de tus dockers" export_file_name="Actualización automática de tus dockers" description="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" export_date="2019-07-26 20:30" category="docker" tag="terminal,ubuntu,raspberry" image="./images-blog/docker.png">Actualización automática de tus dockers</h1>
+<p>Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si la Watchtower detecta que una imagen ha cambiado, se reiniciará automáticamente el contenedor utilizando la nueva imagen.</p>
+<p>Watchtower desplegará su nueva imagen, parará su contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implementó inicialmente.</p>
+<h2 id="en-tu-servidor-con-amd64">En tu servidor con amd64</h2>
+<pre><code>docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower
+</code></pre>
+<h2 id="tu-raspberry-pi-o-placa-con-arquitectura-arm">Tu Raspberry Pi o placa con arquitectura ARM</h2>
+<pre><code>docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower:armhf-latest
+</code></pre>
+<h2 id="fuente">Fuente</h2>
+<ul>
+<li><a href="https://github.com/containrrr/watchtowre" class="uri">https://github.com/containrrr/watchtowre</a></li>
+<li><a href="https://hub.docker.com/r/v2tec/watchtower/" class="uri">https://hub.docker.com/r/v2tec/watchtower/</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el miércoles 12 junio del 2019</p>
+<p>Publicado por Angel el viernes 26 julio del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
