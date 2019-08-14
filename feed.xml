@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instala la última versión de Pandoc</title>
+    <link>https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Instala la última versión de Pandoc"&gt;
+&lt;br&gt;&lt;p&gt;Si en tu PC como yo, tienes una versión antigua como Ubuntu 18.04, te darás cuenta que la versión de Pandoc esta muy desactualizada... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html&gt;Instala la última versión de Pandoc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 14 Aug 2019 23:00 +0100</pubDate>
+    <category>pandoc</category>
+    <category>notas</category>
+    <category>orgmode</category>
+    <category>markdown</category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html</guid>
+   </item>
+   <item>
     <title>Exportando tu Notas de Google Keep a Org Mode o Markdown</title>
     <link>https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html</link>
     <description>
