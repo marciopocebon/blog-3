@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="calculando-con-mi-terminal" title="Calculando con mi terminal" export_file_name="Calculando con mi terminal" description="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" export_date="2019-04-01 20:40" category="terminal" tag="bash,unix" image="./images-blog/expr.jpg">Calculando con mi terminal</h1>
+<h1 id="calculando-con-mi-terminal-1" title="Calculando con mi terminal" data-export_file_name="Calculando con mi terminal" data-description="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" data-export_date="2019-04-01 20:40" data-category="terminal" data-tag="bash,unix" data-image="./images-blog/expr.jpg">Calculando con mi terminal</h1>
 <p>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <strong>expr</strong> (evalúa los argumentos como una expresión) y <strong>calc</strong> (Calculadora de precisión arbitraria).</p>
 <center>
 <p><img src="../images-blog/expr.jpg" /></p>
@@ -70,14 +70,14 @@ gtag("config", "UA-131560140-1");
 <h2 id="resta">Resta</h2>
 <p><code>expr 8 - 4</code></p>
 <h2 id="multiplicación">Multiplicación</h2>
-<p>Lleva la contrabarra * para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
+<p>Lleva la contrabarra <strong>\</strong> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
 <p><code>expr 8 \* 4</code></p>
 <h2 id="división">División</h2>
 <p><code>expr 8 / 4</code></p>
 <h2 id="porcentaje">Porcentaje</h2>
 <p><code>expr 10 % 100</code></p>
 <h2 id="comparaciones">Comparaciones</h2>
-<p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>. Aquí también hay símbolos que llevan la contrabarra * para escapar.</p>
+<p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>. Aquí también hay símbolos que llevan la contrabarra <strong>\</strong> para escapar.</p>
 <pre><code>expr 10 =   7   # Igual
 expr 10 !=  7   # No es igual
 expr 10 \&gt;  7   # Mayor que
@@ -87,9 +87,9 @@ expr 10 \&gt;= 7   # Mayor o igual
 </code></pre>
 <h2 id="contando-el-número-de-letras">Contando el número de letras</h2>
 <p>También podemos contar el número de letras que hay en una frase:</p>
-<p>=expr length &quot;hola mundo&quot;=</p>
+<p><code>expr length &quot;hola mundo&quot;</code></p>
 <p>O en un archivo de texto plano:</p>
-<p>=expr length &quot;$(cat mis<sub>notas</sub>.txt)&quot;=</p>
+<p><code>expr length &quot;$(cat mis_notas.txt)&quot;</code></p>
 <h2 id="manual">Manual</h2>
 <p>Hay muchas mas opciones. Lee en manual para conocerlas:</p>
 <p><code>man expr</code></p>
@@ -110,7 +110,7 @@ expr 10 \&gt;= 7   # Mayor o igual
     -77
 </code></pre>
 <h2 id="multiplicación-1">Multiplicación</h2>
-<p>En el caso de la multiplicación, <strong>calc</strong> no necesita * de escape:</p>
+<p>En el caso de la multiplicación, <strong>calc</strong> no necesita <strong>\</strong> de escape:</p>
 <pre><code>calc 30*2
     60
 </code></pre>
@@ -132,9 +132,9 @@ expr 10 \&gt;= 7   # Mayor o igual
 <p>Hay muchas mas en manual:</p>
 <p><code>man calc</code></p>
 <h2 id="conclusión">Conclusión</h2>
-<p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,... y muchas más cosas Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
+<p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,… y muchas más cosas Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
 <br>
-<p>Publicado por Angel el lunes 01 abril del 2019</p>
+<p>Publicado por Angel el Monday 01 April del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
@@ -147,6 +147,6 @@ expr 10 \&gt;= 7   # Mayor o igual
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-habilitando-la-accesibilidad-como-usuario-root-via-ssh-en-debian.html">Habilitando la accesibilidad como usuario root via ssh en debian</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html">Instalando Syncthing por reposistorios</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html">Renombrando archivos masivamente</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

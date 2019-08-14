@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="crear-archivos-.gitkeep-de-forma-recursiva-mediante-un-script" title="Crear archivos .gitkeep de forma recursiva mediante un script" export_file_name="Crear archivos gitkeep de forma recursiva mediante un script" description="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." export_date="2019-04-17 08:00" category="git" tag="github, gitlab" image="./images-blog/git.png">Crear archivos .gitkeep de forma recursiva mediante un script</h1>
+<h1 id="crear-archivos-.gitkeep-de-forma-recursiva-mediante-un-script-1" title="Crear archivos .gitkeep de forma recursiva mediante un script" data-export_file_name="Crear archivos gitkeep de forma recursiva mediante un script" data-description="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." data-export_date="2019-04-17 08:00" data-category="git" data-tag="github, gitlab" data-image="./images-blog/git.png">Crear archivos .gitkeep de forma recursiva mediante un script</h1>
 <p>Es muy probable que si has llegado has aquí, sea porque no sabes que es un archivo <strong>.gitkeep</strong>, o has comenzado tu proyecto en git, lleno de carpetas vacías y ahora no sabes como subirlas a git.</p>
 <center>
 <p><img src="../images-blog/git.png" /></p>
@@ -61,13 +61,13 @@ gtag("config", "UA-131560140-1");
 <p>Los archivos <strong>.gitkeep</strong>, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.</p>
 <p>Git no es capaz de gestionar carpetas vacías, así que una solución es crear un archivo vacío dentro de estas, sin contenido para que no ocupe espacio.</p>
 <p>Aunque no consta en la documentación de git, muchos desarrolladores han adoptado este nombre como norma.</p>
-<p>Pero... ¿Si has comenzado tu proyecto y no has creado ningún archivo dentro?, ¿Como recordar todas las carpetas vacías?.</p>
+<p>Pero… ¿Si has comenzado tu proyecto y no has creado ningún archivo dentro?, ¿Como recordar todas las carpetas vacías?.</p>
 <p>No te preocupes.</p>
 <p>Con esta línea de terminal, <strong>situándonos en la raíz de nuestro repositorio</strong> y gracias al comando <strong>find</strong>, todas aquellas carpetas que estén vacías, incluirá un archivo llamado .gitkeep</p>
 <pre><code>find . -type d -empty -not -path &quot;./.git/*&quot; -exec touch {}/.gitkeep \;
 </code></pre>
 <br>
-<p>Publicado por Angel el miércoles 17 abril del 2019</p>
+<p>Publicado por Angel el Wednesday 17 April del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
