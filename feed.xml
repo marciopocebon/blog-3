@@ -38,7 +38,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 15 Aug 2019 12:30 +0100</pubDate>
+    <pubDate>Thu, 15 Aug 2019 13:10 +0100</pubDate>
     <category>bash</category>
     <category>ubuntu</category>
     <category>debian</category>
@@ -46,12 +46,12 @@
     <guid>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</guid>
    </item>
    <item>
-    <title>Cambiando el Idioma en Debian, Ubuntu, Raspbian...</title>
-    <link>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</link>
+    <title>CryFS. Cifrando el contenido de tu carpeta</title>
+    <link>https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cambiando el Idioma en Debian, Ubuntu, Raspbian..."&gt;
-&lt;br&gt;&lt;p&gt;Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html&gt;Cambiando el Idioma en Debian, Ubuntu, Raspbian...&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="CryFS. Cifrando el contenido de tu carpeta"&gt;
+&lt;br&gt;&lt;p&gt;CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html&gt;CryFS. Cifrando el contenido de tu carpeta&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -72,11 +72,11 @@
 
 </description>
     <pubDate>Thu, 15 Aug 2019  +0100</pubDate>
+    <category>cifrado</category>
     <category>bash</category>
-    <category>ubuntu</category>
-    <category>debian</category>
-    <category>raspbian</category>
-    <guid>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</guid>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html</guid>
    </item>
    <item>
     <title>Instala la última versión de Pandoc</title>
