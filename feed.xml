@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>CryFS. Cifrando el contenido de tu carpeta</title>
+    <link>https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="CryFS. Cifrando el contenido de tu carpeta"&gt;
+&lt;br&gt;&lt;p&gt;CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html&gt;CryFS. Cifrando el contenido de tu carpeta&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 15 Aug 2019 14:12 +0100</pubDate>
+    <category>cifrado</category>
+    <category>bash</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html</guid>
+   </item>
+   <item>
     <title>Cambiando el Idioma en Debian, Ubuntu, Raspbian...</title>
     <link>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</link>
     <description>
