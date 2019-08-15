@@ -13,6 +13,72 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cambiando el Idioma en Debian, Ubuntu, Raspbian...</title>
+    <link>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cambiando el Idioma en Debian, Ubuntu, Raspbian..."&gt;
+&lt;br&gt;&lt;p&gt;Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html&gt;Cambiando el Idioma en Debian, Ubuntu, Raspbian...&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 15 Aug 2019 11:00 +0100</pubDate>
+    <category>bash</category>
+    <category>ubuntu</category>
+    <category>debian</category>
+    <category>raspbian</category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</guid>
+   </item>
+   <item>
+    <title>Cambiando el Idioma en Debian, Ubuntu, Raspbian...</title>
+    <link>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cambiando el Idioma en Debian, Ubuntu, Raspbian..."&gt;
+&lt;br&gt;&lt;p&gt;Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html&gt;Cambiando el Idioma en Debian, Ubuntu, Raspbian...&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 15 Aug 2019  +0100</pubDate>
+    <category>bash</category>
+    <category>ubuntu</category>
+    <category>debian</category>
+    <category>raspbian</category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html</guid>
+   </item>
+   <item>
     <title>Instala la última versión de Pandoc</title>
     <link>https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html</link>
     <description>
@@ -236,7 +302,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 22 Jul 2019  +0100</pubDate>
+    <pubDate>Mon, 22 Jul 2019 11:43 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category></category>
