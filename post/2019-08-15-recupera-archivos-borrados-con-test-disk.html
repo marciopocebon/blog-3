@@ -1,5 +1,5 @@
 <head>
-<title> Que aparezca en el Prompt en que rama estamos. uGeek Blog </title>
+<title>Recupera archivos borrados con Test Disk. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
+<meta name="description" content=":DESCRIPTION:" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Que aparezca en el Prompt en que rama estamos" />
-<meta property="og:description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html" />
+<meta property="og:title" content="Recupera archivos borrados con Test Disk" />
+<meta property="og:description" content=":DESCRIPTION:" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html" />
 
-<meta name="twitter:title" content=" Que aparezca en el Prompt en que rama estamos" />
-<meta name="twitter:description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Recupera archivos borrados con Test Disk" />
+<meta name="twitter:description" content=":DESCRIPTION:" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,33 +53,33 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="que-aparezca-en-el-prompt-en-que-rama-estamos-1" title="Que aparezca en el Prompt en que rama estamos" data-export_file_name="Que aparezca en el Prompt en que rama estamos" data-description="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" data-export_date="2019-01-29 16:15" data-category="bash" data-tag="terminal" data-image="./images-blog/ugeek.png">Que aparezca en el Prompt en que rama estamos</h1>
-<p>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás. Es cierto que con un <strong>git status</strong>, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos:</p>
-<h2 id="descargando-.git-prompt.sh">Descargando .git-prompt.sh</h2>
-<p>Descargamos con wget .git-prompt.sh:</p>
-<p><code>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh</code></p>
-<h2 id="editamos-.bashrc">Editamos ~/.bashrc</h2>
-<p>Vamos al archivo de configuración de bash <strong>~/.bashrc</strong> para editarlo con emacs:</p>
-<p><code>emacs ~/.bashrc</code></p>
-<p>Y añadimos el siguiente código:</p>
-<pre><code>source ~/.git-prompt.sh
-PS1=&quot;\n[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;33m\]\u\[\033[32m\]$ \[\033[0m\]&quot;
-</code></pre>
-<h2 id="personalizando">Personalizando</h2>
-<p>Aquí te dejo esta tabla, por si quieres personalizar a tu gusto un poco mas el prompt:</p>
-<h3 id="texto">Texto</h3>
-<pre><code>Usuario, nombre de host y su color de visualización = \u@\h \[\033[32m\]               
-Directorio de trabajo actual y su color de visualización = \w\[\033[33m\]                  
-Nombre de rama de git y su color de visualización = \$(parse_git_branch)\[\033[00m\] 
-</code></pre>
-<h3 id="colores">Colores</h3>
-<pre><code>Rojo = \[\033[0;31m\]  
-Amarillo = \[\033[0;33m\]  
-Verde = \[\033[0;32m\]&quot; 
-Sin color = \[\033[0m\]&quot;    
-</code></pre>
+<h1 id="recupera-archivos-borrados-con-test-disk-1" title="Recupera archivos borrados con Test Disk" data-export_file_name="Recupera archivos borrados con Test Disk" data-description="" data-export_date="2019-08-15 22:00" data-category="bash" data-tag="bash" data-image="./images-blog/testdisk.png">Recupera archivos borrados con Test Disk</h1>
+<p>Si has borrado por error un archivo en tu terminal, no temas, quizás estas a tiempo de recuperarlo. Voy a explicarte un método muy sencillo de hacerlo con TestDisk</p>
+<center height="250" width="250"> 
+<p>./images-blog/testdisk.png</p>
+</center
+<h2 id="instalación">Instalación</h2>
+<p><code>sudo apt install testdisk</code></p>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>Le daremos a: <code>&gt;[ Create ] Create a new log file</code></p>
+<p>Ahora nos mostrará todas las unidades que tenemos en nuestro sistema. Seleccionaremos la unidad desde la que queremos recuperar los datos.</p>
+<p>Pulsaremos esta opción: <code>&gt;[None   ] Non partitioned media</code></p>
+<p>Ahora le daremos a la opción avanzada: <code>&gt;[ Advanced ] Filesystem Utils</code></p>
+<p><strong>En la parte inferior</strong>, seleccionaremos <code>[  List  ]</code></p>
+<p>Ahora navegaremos por nuestro disco. En color rojo saldrán los archivos borrados.</p>
+<h2 id="recuperar-archivo">Recuperar archivo</h2>
+<p>Para recuperar un archivo, nos situaremos encima del archivo rojo y seleccionaremos la letra <strong>C</strong>.</p>
+<p>Ahora TestDisk nos preguntará donde queremos guardar el archivo, volvemos a pulsar la tecla <strong>C</strong> y…</p>
+<p>YA ESTÁ RECUPERADO!!!</p>
+<h2 id="salir-o-ir-hacia-atras">Salir o ir hacia atras</h2>
+<p>Tan sencillo como pulsar la tecla <strong>q</strong>.</p>
+<h1 id="org-bash-blog-previsualizar-posts">Org-Bash-Blog: Previsualizar Posts</h1>
+<h2 id="crea-archivo-de-config">Crea archivo de config</h2>
+<p>Tendremos que ejecutar org-bash-blog desde el directorio <strong>program</strong>, así que tenemos que hacer una copia del archivo <strong>config</strong> en nuestra carpeta.</p>
+<h2 id="previsualizar">Previsualizar</h2>
+<p><code>org-bash-blog -w program.org</code></p>
 <br>
-<p>Publicado por Angel el martes 29 enero del 2019</p>
+<p>Publicado por Angel el jueves 15 agosto del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
