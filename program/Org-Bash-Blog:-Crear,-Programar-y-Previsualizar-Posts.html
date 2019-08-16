@@ -1,4 +1,38 @@
 <head> <title>$TITLEPROGRAM</title> <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><br><br><br><br><br><br><br><br><br>
 <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
-
+<h1 id="org-bash-blog-crear-programar-y-previsualizar-posts" title="Org-Bash-Blog: Crear, Programar y Previsualizar Posts" data-export_file_name="Org-Bash-Blog: Crear, Programar y Previsualizar Posts" data-description="" data-export_date="2019-08-16 13:45" data-category="org-bash-blog" data-tag="ssh, terminal" data-image=""><span class="todo TODO">TODO</span> Org-Bash-Blog: Crear, Programar y Previsualizar Posts</h1>
+<h2 id="accediendo-a-org-bash-podcast-desde-todas-las-carpeta">Accediendo a Org-Bash-Podcast desde todas las carpeta</h2>
+<p>Primero crearemos un alias de nuestro script Org-Bash-Podcast, para que sea accesible desde todos los lugares de nuestro sistema. Ademas no tendremos que utilizar comando como:</p>
+<ul>
+<li>bash org-bash-blog</li>
+<li>./org-bash-blog</li>
+<li>sh org-bash-blog</li>
+</ul>
+<p>…</p>
+<p>Con este método, estemos donde estemos. escribiendo <strong>org-bash-blog</strong>, se ejecutará el script en el lugar donde estemos de nuestro sistema.</p>
+<h3 id="configurando">Configurando</h3>
+<p>Si utilizamos Bash:</p>
+<pre><code>nano .bashrc
+</code></pre>
+<p>Si utilizamos Zsh:</p>
+<pre><code>nano .zshrc
+</code></pre>
+<p>Y añadiremos el alias para que estemos donde estemos, cada vez que escribamos <strong>org-bash-blog</strong>, ejecute el script.</p>
+<pre><code># Alias de org-bash-blog
+alias org-bash-blog=&#39;/home/git/blog/org-bash-blog&#39;
+</code></pre>
+<p>Ahora cerramos la terminal y abrimos otra sesión para que tenga efecto.</p>
+<h2 id="carpetas">Carpetas</h2>
+<p>Todos los archivos que vamos a tratar en este Post, se mueven entre las carpetas <strong>program</strong> y <strong>.temp</strong>.</p>
+<h3 id="temp">.temp</h3>
+<p>Carpeta oculta de archivos temporales.</p>
+<h3 id="program">program</h3>
+<p>Dentro de la carpeta <strong>program</strong>, crearemos el archivo <strong>program.org</strong>.</p>
+<pre><code>touch program.org
+</code></pre>
+<p>o simplemente, situándonos dentro de la carpeta, ejecutaremos:</p>
+<pre><code>emacs program.org
+</code></pre>
+<h3 id="copiar-el-archivo-config">Copiar el archivo config</h3>
+<p>Dentro de la carpeta *program</p>
 <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

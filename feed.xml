@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 16 Aug 2019  +0100</pubDate>
+    <pubDate>Fri, 16 Aug 2019 18:10 +0100</pubDate>
     <category>emacs</category>
     <category>orgmode</category>
     <category>raspbian</category>
     <category>org-bash-blog</category>
     <guid>https://ugeek.github.io/blog/post/2019-08-16-corrector-ortagráfico-para-emacs-en-raspbian.html</guid>
+   </item>
+   <item>
+    <title>Org-Bash-Blog: Crear, Programar y Previsualizar Posts</title>
+    <link>https://ugeek.github.io/blog/post/:DESCRIPTION:-org-bash-blog:-crear.html</link>
+    <description>
+&lt;img src="" alt="Org-Bash-Blog: Crear, Programar y Previsualizar Posts"&gt;
+&lt;br&gt;&lt;p&gt;-programar-y-previsualizar-posts... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/:DESCRIPTION:-org-bash-blog:-crear.html&gt;Org-Bash-Blog: Crear, Programar y Previsualizar Posts&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>  +0100</pubDate>
+    <category>2019-08-16</category>
+    <category>org-bash-blog</category>
+    <category>ssh</category>
+    <category>terminal</category>
+    <guid>https://ugeek.github.io/blog/post/:DESCRIPTION:-org-bash-blog:-crear.html</guid>
    </item>
    <item>
     <title>CryFS. Cifrando el contenido de tu carpeta</title>
