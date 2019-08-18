@@ -2,6 +2,6 @@
 config filter=git-crypt diff=git-crypt
 org-bash-blog filter=git-crypt diff=git-crypt
 program/ filter=git-crypt diff=git-crypt
-program/*.html filter=git-crypt diff=git-crypt
+
 
 
