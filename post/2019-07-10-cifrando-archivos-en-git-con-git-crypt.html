@@ -67,10 +67,11 @@ gtag("config", "UA-131560140-1");
 <h2 id="creamos-un-archivo-.gitattributes">Creamos un archivo .gitattributes</h2>
 <p>Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo:</p>
 <p><code>nano .gitattributes</code></p>
-<p>Indicamos que se cifren, por ejemplo, los archivos .html y .org</p>
+<p>Indicamos que se cifren, por ejemplo, los archivos .html, .org, directorio:secretdir/**<sub>secreto</sub> y archivo, con cualquier extensión o palabra que le preceda.</p>
 <pre><code>*.html filter=git-crypt diff=git-crypt`
 *.org filter=git-crypt diff=git-crypt
-carpeta/** filter=git-crypt diff=git-crypt
+directorio_secreto/** filter=git-crypt diff=git-crypt
+*archivo* filter=git-crypt diff=git-crypt
 </code></pre>
 <p>Ahora cada vez que hagamos un commit, los archivos .html y .org, subirán cifrados.</p>
 <h2 id="contraseña-con-clave-simétrica">Contraseña con clave simétrica</h2>
