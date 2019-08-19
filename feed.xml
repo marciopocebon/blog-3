@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</title>
-    <link>https://ugeek.github.io/blog/post/Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración-configuración-y-diferencias-entre-bashrc.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html</link>
     <description>
-&lt;img src="" alt="Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh"&gt;
-&lt;br&gt;&lt;p&gt;-bash-profile... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración-configuración-y-diferencias-entre-bashrc.html&gt;Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.jpg" alt="Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh"&gt;
+&lt;br&gt;&lt;p&gt;Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html&gt;Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>  +0100</pubDate>
-    <category>2019-08-19</category>
+    <pubDate>Mon, 19 Aug 2019  +0100</pubDate>
     <category>bash</category>
     <category>ssh</category>
     <category>terminal</category>
-    <guid>https://ugeek.github.io/blog/post/Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración-configuración-y-diferencias-entre-bashrc.html</guid>
+    <category>zsh</category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html</guid>
    </item>
    <item>
     <title>Actualiza el Firmware de tu Raspberry</title>
