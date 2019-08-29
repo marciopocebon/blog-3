@@ -1,0 +1,28 @@
+<head> <title>$TITLEPROGRAM</title> <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+<h1 id="rclone.-gui-experimental" title="Rclone. GUI (experimental)" data-export_file_name="Rclone. GUI (experimental)" data-description="" data-export_date="2019-08-27 21:42" data-category="" data-tag="" data-image="">Rclone. GUI (experimental)</h1>
+<h2 id="lanzar-la-gui">Lanzar la Gui</h2>
+<pre><code>rclone rcd --rc-web-gui
+</code></pre>
+<p>Ejecutar con el usuario y contraseña. En este caso, ambos son <strong>gui</strong>.</p>
+<pre><code>rclone rcd --rc-web-gui --rc-user gui --rc-pass gui
+</code></pre>
+<p>Actualizar la Api:</p>
+<pre><code>rclone rcd --rc-web-gui --rc-user gui  --rc-pass gui  --rc-web-gui-update
+</code></pre>
+<p>Al lanzar la GUI, sucede lo siguiente:</p>
+<ul>
+<li>Rclone se inicia pero solo ejecuta la API de control remoto (&quot;rc&quot;).</li>
+<li>La API está vinculada a localhost con un nombre de usuario y contraseña generados automáticamente.</li>
+<li>Si falta el paquete de API, rclone lo descargará.</li>
+<li>rclone comenzará a servir los archivos del paquete API a través del mismo puerto que la API</li>
+<li>rclone abrirá el navegador con un login<sub>tokenpara</sub> que pueda iniciar sesión directamente.</li>
+</ul>
+<h2 id="usando-la-gui">Usando la GUI</h2>
+<p>Una vez que se abre la GUI, verás el panel que tiene una descripción general.</p>
+<p>En el lado izquierdo verá una serie de botones de vista en los que puede hacer clic:</p>
+<p>Panel de control: descripción general principal Configuraciones: examine y cree nuevas configuraciones Explorer: vea, descargue y cargue archivos en los sistemas de almacenamiento en la nube Backend: vea o modifique la configuración del backend Cerrar sesión</p>
+<h2 id="explorer">Explorer</h2>
+<p>Ponemos el nombre de la nube que registramos en Rclone y podremos acceder a un navegador de archivos.</p>
+<p>Pulsando <strong>Side by side</strong>, podremos explorar por varias nubes.</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

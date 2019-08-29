@@ -1,0 +1,132 @@
+<head> <title>$TITLEPROGRAM</title> <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://open.spotify.com/show/1pZRMO6ClMS2jCktwF3I8H" alt="rss"><img src="../icon/spotify.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+<h1 id="linea-de-tiempo" title="Linea de Tiempo" data-export_file_name="Linea de Tiempo" data-description="" data-export_date="2019-08-27 21:42" data-category="" data-tag="" data-image="">Linea de Tiempo</h1>
+<h2 id="org-mode-con-línea-de-tiempo">Org Mode con línea de tiempo</h2>
+<p>Una de las cosas que me declaro Fan, son la líneas de tiempo. El css desarrollado por <a href="https://github.com/elisescu">elisescu</a>, nos permite exportar nuestro archivo orgmode a una página html con una línea de tiempo. Vamos a probar crear la nuestra línea de Tiempo.</p>
+<h3 id="orgmode-de-muestra">OrgMode de muestra</h3>
+<p>Crea un archivo .org y copia el siguiente contenido</p>
+<pre><code>#+OPTIONS: p:nil prop:nil f:nil d:t num:nil toc:nil html-style:nil
+
+# Timeline styling css inclusion
+#+HTML_HEAD: &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;timeline.css&quot; /&gt;
+
+# Insertar a CSS class on a headline, with &lt;C-X-p&gt; HTML_CONTAINER_CLASS
+# Exportar con &lt;C-c C-e h h&gt;, or &lt;M-x&gt; org-html-export-to-html
+
+* Encabezado de la línea de tiempo
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: timeline-head
+  :END:
+Ejemplo de página html con la línea de tiempo
+
+* Linea de Tiempo
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: timeline-container
+  :END:
+** 2019-08-28 Miercoles
+*** Creando Post de Línea de Tiempo
+Hoy he comenzado a crear el Post
+
+[[./imagen.png]]
+
+** 2019-03-29 Jueves
+*** Publicando el Podcast
+Podcast de Docker
+** 2019-04-30 Viernes
+*** Publicación de Otro Post
+Preparando otro post y podcast para la publiciación
+</code></pre>
+<h3 id="crear-archivo-css">Crear archivo css</h3>
+<p>El archivo css, es el que da el estilo linea de tiempo cuando hacemos la exportación de nuestro archivo. Le llamaremos <strong>timeline.css</strong> y copiaremos el siguiente contenido:</p>
+<pre><code>@import url(&quot;https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700&quot;);
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: &#39;Oswald&#39;, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+
+}
+
+ul &gt; li, p {
+    font-family: &#39;Roboto&#39;, sans-serif;
+    font-size: 1rem;
+}
+
+ul &gt; li {
+    font-size: 1rem;
+
+}
+
+.timeline-container {
+    max-width: 1024px;
+    width: 60%;
+    padding-left: 4px;
+    /* margin: 0 auto; */
+}
+
+.timeline-container .outline-3 {
+    padding: 3em 2em 2em;
+    position: relative;
+    color: rgba(0, 0, 0, 0.7);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+.timeline-container .outline-3 p {
+    font-size: 1rem;
+}
+
+/* #org7bd6ea1 &gt; span &gt; span */
+/* #org0d003e5 &gt; span:nth-child(1) &gt; span:nth-child(1) */
+/* html body div#content div#outline-container-orgb327e62.outline-2.timeline-container div#outline-container-org25a5b0a.outline-3.timeline-item div#outline-container-org0d003e5.outline-4 h4#org0d003e5 span.timestamp-wrapper span.timestamp */
+
+.timeline-container .outline-3 h3 {
+    /* content: attr(date-is); */
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    top: 0.2em;
+    display: block;
+    font-family: &#39;Roboto&#39;, sans-serif;
+    font-weight: 700;
+    font-size: .785rem;
+}
+
+.timeline-container .outline-3::before {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -8px;
+    border-radius: 10px;
+    content: &#39; &#39;;
+    border: 2px solid rgba(0.4, 0.4, 0.4, 1);
+    background: white; /*rgba(0.8, 0.8, 0.8, 1);*/
+}
+
+.timeline-container .outline-3:last-child {
+    -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+    border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+}
+
+/* Postable - where the author, date, etc is */
+#postamble {
+    visibility: hidden;
+}
+</code></pre>
+<h3 id="exportar-a-html">Exportar a html</h3>
+<p>Ahora exportaremos a <strong>.html</strong> nuestro archivo <strong>.org</strong> y teniendo el archivo <strong>.css</strong> en la misma carpeta que el archivo <strong>.html</strong>,</p>
+<h3 id="fuente">Fuente</h3>
+<ul>
+<li><a href="https://github.com/elisescu/org-timeline" class="uri">https://github.com/elisescu/org-timeline</a></li>
+</ul>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
