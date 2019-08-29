@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</title>
-    <link>https://ugeek.github.io/blog/post/-volúmenes-y-redes-de-tus-dockers-con-prune-borrar-contenedores.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html</link>
     <description>
-&lt;img src="" alt="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune"&gt;
-&lt;br&gt;&lt;p&gt;-imágenes... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/-volúmenes-y-redes-de-tus-dockers-con-prune-borrar-contenedores.html&gt;Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune"&gt;
+&lt;br&gt;&lt;p&gt;Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html&gt;Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>  +0100</pubDate>
-    <category>Si trasteas mucho con docker| siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores</category>
-    <category>2019-08-29</category>
+    <pubDate>Thu, 29 Aug 2019  +0100</pubDate>
     <category>docker</category>
     <category>ssh</category>
-    <guid>https://ugeek.github.io/blog/post/-volúmenes-y-redes-de-tus-dockers-con-prune-borrar-contenedores.html</guid>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html</guid>
    </item>
    <item>
     <title>QTodoTxt. todo.txt en tu escritorio</title>
