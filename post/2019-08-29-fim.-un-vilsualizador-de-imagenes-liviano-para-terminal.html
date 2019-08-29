@@ -1,5 +1,5 @@
 <head>
-<title>Recupera archivos borrados con Test Disk. uGeek Blog </title>
+<title>Fim. Un vilsualizador de imágenes liviano para terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -26,14 +26,14 @@
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Recupera archivos borrados con Test Disk" />
+<meta property="og:title" content="Fim. Un vilsualizador de imágenes liviano para terminal" />
 <meta property="og:description" content=":DESCRIPTION:" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-29-fim.-un-vilsualizador-de-imagenes-liviano-para-terminal.html" />
 
-<meta name="twitter:title" content="Recupera archivos borrados con Test Disk" />
+<meta name="twitter:title" content="Fim. Un vilsualizador de imágenes liviano para terminal" />
 <meta name="twitter:description" content=":DESCRIPTION:" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,28 +53,53 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="recupera-archivos-borrados-con-test-disk-1" title="Recupera archivos borrados con Test Disk" data-export_file_name="Recupera archivos borrados con Test Disk" data-description="" data-export_date="2019-08-15 22:00" data-category="bash" data-tag="bash" data-image="./images-blog/testdisk.png">Recupera archivos borrados con Test Disk</h1>
-<p>Si has borrado por error un archivo en tu terminal, no temas, quizás estas a tiempo de recuperarlo. Voy a explicarte un método muy sencillo de hacerlo con TestDisk</p>
-<center height="250" width="250"> 
-<p><img src="../images-blog/testdisk.png" /></p>
-</center
+<h1 id="fim.-un-vilsualizador-de-imágenes-liviano-para-terminal-1" title="Fim. Un vilsualizador de imágenes liviano para terminal" data-export_file_name="Fim. Un vilsualizador de imagenes liviano para terminal" data-description="" data-export_date="2019-08-29 18:15" data-category="bash" data-tag="ssh, terminal" data-image="">Fim. Un vilsualizador de imágenes liviano para terminal</h1>
+<p>Estoy mejorando mi script de Org-Bash-Blog, con el que está montado este blog.</p>
+<p>Tras mucho darle vueltas, he pensado que la previsualización de los post, en lugar de hacerlo mediante archivos <strong>.html</strong>, abriendo el navegador remotamente instalado en mi Raspberry, que lo haga previsualizando en una imagen en formato jpg o png.</p>
+<p>Tenía que buscar un visualizador de imágenes muy liviano y buscando entre todas las opciones, me quedo con <strong>fim</strong>.</p>
+<p>Fim es un visualizador que he usado hace un tiempo, pero ahora, a diferencia de antes, tenemos la ventaja que ya está en los repositorios oficiales. Voy a explicaros su instalación y un poco algunas de las opciones que tiene.</p>
 <h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install testdisk</code></p>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>Le daremos a: <code>&gt;[ Create ] Create a new log file</code></p>
-<p>Ahora nos mostrará todas las unidades que tenemos en nuestro sistema. Seleccionaremos la unidad desde la que queremos recuperar los datos.</p>
-<p>Pulsaremos esta opción: <code>&gt;[None   ] Non partitioned media</code></p>
-<p>Ahora le daremos a la opción avanzada: <code>&gt;[ Advanced ] Filesystem Utils</code></p>
-<p><strong>En la parte inferior</strong>, seleccionaremos <code>[  List  ]</code></p>
-<p>Ahora navegaremos por nuestro disco. En color rojo saldrán los archivos borrados.</p>
-<h2 id="recuperar-archivo">Recuperar archivo</h2>
-<p>Para recuperar un archivo, nos situaremos encima del archivo rojo y seleccionaremos la letra <strong>C</strong>.</p>
-<p>Ahora TestDisk nos preguntará donde queremos guardar el archivo, volvemos a pulsar la tecla <strong>C</strong> y…</p>
-<p>YA ESTÁ RECUPERADO!!!</p>
-<h2 id="salir-o-ir-hacia-atras">Salir o ir hacia atras</h2>
-<p>Tan sencillo como pulsar la tecla <strong>q</strong>.</p>
+<pre><code>sudo apt-get install fim
+</code></pre>
+<h2 id="abrir-imagen">Abrir Imagen</h2>
+<p>Abrir una imágen:</p>
+<pre><code>fim imagen.jpg
+</code></pre>
+<p>Abrir la imagen con zoom automático:</p>
+<pre><code>fim -a imagen.jpg
+</code></pre>
+<h2 id="carpeta">Carpeta</h2>
+<p>Ver todas las imágenes de una carpeta:</p>
+<pre><code>fim carpeta/
+</code></pre>
+<h2 id="carpeta-recursiva">Carpeta recursiva</h2>
+<p>Para abrir las imagenes de la carpeta y subcarpetaras recursivamente y despues ordenarlas:</p>
+<pre><code>fim -R carpeta/ --sort
+</code></pre>
+<h2 id="en-la-terminal">En la Terminal</h2>
+<p>Ver una imágen renderizada en formato ASCII, desde la propia terminal:</p>
+<pre><code>fim -t imagen.png
+</code></pre>
+<h2 id="atajos">Atajos</h2>
+<p>Algunos de los atajos disponibles:</p>
+<pre><code>PageUp/Down : Prev/Next image
++/- : Zoom in/out
+a : Autoscale
+w : Fit to width
+h : Fit to height
+j/k : Pan down/up
+f/m : flip/mirror
+r/R : Rotate (Clock wise and ant-clock wise)
+ESC/q : Quit
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.nongnu.org/fbi-improved/">nongnu</a></li>
+<li><a href="https://www.ostechnix.com/how-to-display-images-in-the-terminal/">ostecgnix</a></li>
+<li><a href="https://ubunlog.com/fim-ver-imagenes-terminal/">ubunlog</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el jueves 15 agosto del 2019</p>
+<p>Publicado por Angel el jueves 29 agosto del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
