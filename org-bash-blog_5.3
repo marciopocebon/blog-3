@@ -1,8 +1,8 @@
-1;5202;0c#!/bin/bash
+#!/bin/bash
 #
-# <org-bash-blog v5.2.4 . Build a blog from a single orgmode file with pandoc and all the bash power>
+# <org-bash-blog v5.2.3 . Build a blog from a single orgmode file with pandoc and all the bash power>
 #
-# Copyright (C) 08/2019 Angel. uGeek
+# Copyright (C) 2019 Angel. uGeek
 # ugeekpodcast@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,53 +19,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #
-#  Install:
 #
-#
-#   sudo apt install eog
-#
-#
-#
-#
-
-
-
-
-
-
 
 source config
-########
-TEMP_FILE="/home/marc/docker/git/blog/.temp/"
-#######
-
-
-
-if [ $1 = "-w" ] 
+TEMP_FILE="$PATH_BLOG.temp"
+if [ $1 = "-w" ]
 then
-
-
-if [ -d ../program ];
-then
-clear    
-echo "Iniciando Previsualización del Post"
-else
-clear
-echo ""
-echo ""
-echo ""
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-echo ""
-echo "    NO ESTAS EN EL DIRECTORIO PROGRAM!!     "
-echo ""
-echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-echo ""
-echo ""
-echo ""
-exit 1
-fi
-
-    
 echo "Previsualizando... "
 PROGRAMS_ORG=$2   # add manual program.org
 TODO=$(grep -c "^* TODO" $PROGRAMS_ORG)
@@ -76,7 +35,7 @@ grep ":TITLE:"  $PROGRAMS_ORG | cut -d " " -f2- | tail -$TODO > $TEMP_FILE/title
 grep ":EXPORT_DATE:"  $PROGRAMS_ORG | cut -d " " -f2- | tail -$TODO > $TEMP_FILE/date
 grep -n "^* TODO" $PROGRAMS_ORG | cut -d ":" -f1 > $TEMP_FILE/firstlines
 cat $PROGRAMS_ORG  | wc -l >> $TEMP_FILE/firstlines
-#rm *.html
+rm *.html
 while read LINEA; do
     echo "$LINEA - 1" | bc >> $TEMP_FILE/lastlines
 done < $TEMP_FILE/firstlines
@@ -94,17 +53,13 @@ while read LINEA; do
     DIA=$(echo $LINEA | cut -d, -f3)
     TITLEPROGRAM=$(echo $LINEA | cut -d, -f4- | sed -e 's/^[ \t]*//; s/[ \t]*$//; /^$/d')
     TITLE_FILE=$(echo $TITLEPROGRAM | sed -e 's/ /-/g'  ) 
-    sed -n "$LINEAP,$LINEAU"p   $PROGRAMS_ORG | sed 's|^* TODO|*|g' > $TITLE_FILE.org
+    sed -n "$LINEAP,$LINEAU"p   $PROGRAMS_ORG  > $TITLE_FILE.org
     echo $HEAD > $TITLE_FILE.html
     echo $HEAD_PAGE_POST >>  $TITLE_FILE.html
     cat $TITLE_FILE.org | pandoc --from org --to html5 >> $TITLE_FILE.html
     sed -i 's|src="./images-blog/|src="../images-blog/|g' $TITLE_FILE.html
     rm $TITLE_FILE.org
     echo $PIE_WEB >> $TITLE_FILE.html
-#
-
-    #wkhtmltoimage --quality 20 "$TITLE_FILE.html" "$TITLE_FILE.png"
-#
 done < $TEMP_FILE/program.csv
 echo '<head>
 <title></title>
@@ -115,30 +70,16 @@ echo '<head>
 <title>org-bash-blog. Index</title>
 </head>
 <body>
-<h1>Org-bash-blog v 5.2.4</h1>
+<h1>Org-bash-blog v 5.2.2</h1>
 <h3>Indice de todas las páginas creadas en tu repositorio</h3>
 <h5>'$(find . -type f | grep .html | wc -l)' archivos .html</h5>
 <h5>' > org-bash-blog.html
 find . -type f | grep .html | sed -r 's/(.*)/\<a href="\1" target="_blank" rel="noopener">\1\<\/a\><br>/' | sort -r >> org-bash-blog.html
-#$BROWSER org-bash-blog.html 
-#$BROWSER  "$TITLE_FILE.html"  "$TITLE_FILE.jpg"
-$BROWSER
-########################
-#mv "$TITLE_FILE.jpg" ~/docker/02_Org/web
-#################
-# Comprimir imágen
-#jpegoptim --size=100k "$TITLE_FILE.jpg"
-################
-#fim -a "$PATH_BLOG/program/"
-#eog   "$TITLE_FILE.jpg"
-#rm *.html *.png *.jpg
+$BROWSER org-bash-blog.html 
+$BROWSER "$TITLE_FILE.html" 
 #rm $TEMP_FILE/program.csv
 rm  $TEMP_FILE/date  $TEMP_FILE/firstlines  $TEMP_FILE/lastlines  $TEMP_FILE/primeralinea  $TEMP_FILE/temp  $TEMP_FILE/ultimalinea $TEMP_FILE/program.csv  $TEMP_FILE/title
-else    
-
-
-
-    
+else
 if [ $1 = "-h" ]
 then
 echo "
@@ -211,7 +152,6 @@ while read LINEA; do
     echo  "sed -i '"$LINEAP","$LINEAU"d' "$PROGRAMS_ORG"" >> $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh
     echo  "cd $PATH_BLOG  ; $ORG_BASH_BLOG $BLOG_ORG" >> $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh
     echo  $PUBLISH >>  $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh
-    echo  $SECOND_PUBLISH >>  $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh
     echo  "rm   $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh" >>  $PATH_SCRIPTS_PROGRAMS'org-bash-blog_program'$NUM.sh
     echo "Artículo: Nº$NUM  
 Título:   $TITLEPROGRAM   
@@ -774,3 +714,4 @@ fi
 fi
 fi
 fi    
+
