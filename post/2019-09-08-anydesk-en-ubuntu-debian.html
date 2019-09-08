@@ -1,5 +1,5 @@
 <head>
-<title> Descargar todos los episodios de un Podcast con wget. uGeek Blog </title>
+<title>AnyDesk en Ubuntu, Debian. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
+<meta property="og:title" content="AnyDesk en Ubuntu, Debian" />
+<meta property="og:description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/anydesk.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html" />
 
-<meta name="twitter:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="AnyDesk en Ubuntu, Debian" />
+<meta name="twitter:description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/anydesk.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,17 +53,23 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>&quot;FEED&quot;</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<h1 id="anydesk-en-ubuntu-debian-1" title="AnyDesk en Ubuntu, Debian" data-export_file_name="AnyDesk en Ubuntu Debian" data-description="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" data-export_date="2019-09-08 18:07" data-category="terminal" data-tag="ubuntu, debian, servidor, android" data-image="./images-blog/anydesk.png">AnyDesk en Ubuntu, Debian</h1>
+<p>Si os soy sincero, me gusta mas AnyDesk que Teamviewer. AnyDesk Software GmbH fue fundado en 2014 por ex empleados de TeamViewer.</p>
+<center>
+<p><img src="../images-blog/anydesk.png" /></p>
+</center>
+<p>El proceso de instalación de AnyDesk, es similar al de TeamViewer. Vamos a ver el proceso.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Vamos a la <a href="https://anydesk.com/es/downloads/linux">Página de AnyDesk</a>, para descargar el archivo <strong>.deb</strong>. Lo descargaremos y lo instalaremos del siguiente modo:</p>
+<pre><code>sudo dpkg -i anydesk-5.1.2-amd64.deb
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<p>Si lo ejecutas ahora, no funcionará, AnyDesk necesita algunas dependencias. Para que se instalen escribiremos en nuestra terminal:</p>
+<pre><code>sudo apt install -f 
 </code></pre>
-<p>A disfrutar con la magia de la terminal…</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Ya puedes disfrutar de AnyDesk en tu PC con Linux. Así de sencillo</p>
 <br>
-<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<p>Publicado por Angel el domingo 08 septiembre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
