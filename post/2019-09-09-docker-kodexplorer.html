@@ -1,5 +1,5 @@
 <head>
-<title>Docker en Ubuntu 18.04. uGeek Blog </title>
+<title>Docker: KodExplorer. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Vamos a instalar docker en Ubuntu 18.04" />
+<meta name="description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker en Ubuntu 18.04" />
-<meta property="og:description" content="Vamos a instalar docker en Ubuntu 18.04" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html" />
+<meta property="og:title" content="Docker: KodExplorer" />
+<meta property="og:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html" />
 
-<meta name="twitter:title" content="Docker en Ubuntu 18.04" />
-<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 18.04" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta name="twitter:title" content="Docker: KodExplorer" />
+<meta name="twitter:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,46 +53,31 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="docker-en-ubuntu-18.04-1" title="Docker en Ubuntu 18.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 18.04" data-export_date="2019-07-23 18:30" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 18.04</h1>
-<p>Vamos a instalar docker en Ubuntu 18.04:</p>
+<h1 id="docker-kodexplorer-1" title="Docker: KodExplorer" data-export_file_name="Docker KodExplorer" data-description="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" data-export_date="2019-09-09 21:40" data-category="docker" data-tag="ssh, terminal, nas, servicios" data-image="./images-blog/kodexplorer.png">Docker: KodExplorer</h1>
+<p>Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web.</p>
 <center>
-<p><img src="../images-blog/docker.png" /></p>
+<p><img src="../images-blog/kodexplorer.png" /></p>
 </center>
-<h2 id="requisitos-previos">Requisitos Previos</h2>
-<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
-<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
-<h2 id="clave-gpg">Clave GPG</h2>
-<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
-<h2 id="repositorio">Repositorio</h2>
-<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
-<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;
+<p>En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece <strong>&lt;RUTA&gt;</strong>. Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web.</p>
+<p>Puedes <a href="http://demo.kodcloud.com/index.php?user/login">ver una demo aquí</a>.</p>
+<h2 id="montar-docker">Montar Docker</h2>
+<h3 id="montar-docker-para-raspberry-pi-o-arm-32bits">Montar Docker para Raspberry Pi o ARM 32bits</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm
 </code></pre>
-<p>Actualizamos:</p>
-<p><code>sudo apt update</code></p>
-<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
-<p><code>apt-cache policy docker-ce</code></p>
-<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
-<pre><code>apt -y install docker-ce docker-compose
+<h3 id="montar-docker-para-amd64">Montar Docker para amd64</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:amd64
 </code></pre>
-<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
-<pre><code>systemctl enable docker
-systemctl start docker
-</code></pre>
-<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
-<p><code>docker -v</code></p>
-<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
-<p>Creamos el grupo docker:</p>
-<pre><code>groupadd docker
-</code></pre>
-<p>Añadimos al usuario:</p>
-<pre><code>usermod -aG docker $USER
-</code></pre>
-<h2 id="instalando-portainer">Instalando Portainer</h2>
-<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
-<pre><code>docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>La primera vez que iniciamos KodExplorer, nos pedirá que introduzcamos dos veces la contraseña de la cuenta <strong>admin</strong>, que va a ser la que vamos a utilizar para enlazar con nuestra carpeta local en la <strong>&lt;RUTA&gt;</strong>.</p>
+<p>Tras iniciar el servicio, KodExplorer nos pedirá que actualicemos, ya que hay una versión más actualizada no disponible actualmente en GitHub. Le daremos a actualizar.</p>
+<p>Listo!!!! Ya tenemos nuestro KodExplorer totalmente funcional y actualizado a la última</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/kalcaddle/KodExplorer">Repositorio en GitHub</a></li>
+<li><a href="https://cloud.docker.com/u/ugeek/repository/docker/ugeek/kodexplorer">Docker en DockerHub</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el martes 23 julio del 2019</p>
+<p>Publicado por Angel el lunes 09 septiembre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
