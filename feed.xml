@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Convertir de H.265 a H.264</title>
+    <link>https://ugeek.github.io/blog/post/2019-09-11-convertir-de-h265-a-h264.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ffmpeg.png" alt="Convertir de H.265 a H.264"&gt;
+&lt;br&gt;&lt;p&gt;Hay dispositivos, como la primera versión del Fire TV Stick de Amazon, que no reproducen videos en H.265... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-09-11-convertir-de-h265-a-h264.html&gt;Convertir de H.265 a H.264&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 11 Sep 2019  +0100</pubDate>
+    <category>terminal</category>
+    <category>video</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-09-11-convertir-de-h265-a-h264.html</guid>
+   </item>
+   <item>
     <title>Docker: KodExplorer</title>
     <link>https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 09 Sep 2019  +0100</pubDate>
+    <pubDate>Mon, 09 Sep 2019 18:00 +0100</pubDate>
     <category>docker</category>
     <category>ssh</category>
     <category>terminal</category>
@@ -1036,12 +1069,12 @@
     <guid>https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html</guid>
    </item>
    <item>
-    <title>Descargando videos de Internet</title>
+    <title>Descargando videos de Internet con youtube-dl</title>
     <link>https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="Descargando videos de Internet"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="Descargando videos de Internet con youtube-dl"&gt;
 &lt;br&gt;&lt;p&gt;En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html&gt;Descargando videos de Internet&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html&gt;Descargando videos de Internet con youtube-dl&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
