@@ -104,8 +104,8 @@ gtag("config", "UA-131560140-1");
 </code></pre>
 <p>Sustituye las siguientes líneas y pon tus datos. Dominio, ip, puerto… Nextcloud lo tengo montado con letsencript, por eso la ruta del servidor es https. Si tu servicio utiliza http, ponlo así.</p>
 <ul>
-<li>server<sub>name</sub> mi<sub>dominio</sub>.duckdns.org;</li>
-<li>proxy<sub>pass</sub> <a href="https://192.168.1.100:81" class="uri">https://192.168.1.100:81</a>;</li>
+<li><code>server_name mi_dominio.duckdns.org;</code></li>
+<li><code>proxy_pass https://192.168.1.100:81;</code></li>
 </ul>
 <pre><code>server {
     listen 443 ssl;
@@ -137,11 +137,14 @@ gtag("config", "UA-131560140-1");
 <h2 id="iniciar-detener-reiniciar-el-docker">Iniciar, detener, reiniciar el Docker</h2>
 <p>Iniciar, reiniciar o detener el contenedor, no va a ser diferente a cualquier Docker que tengamos corriendo en nuestro servidor:</p>
 <h3 id="iniciar">Iniciar</h3>
-<p><code>docker start letsencrypt</code></p>
+<pre><code>docker start letsencrypt
+</code></pre>
 <h3 id="detener">Detener</h3>
-<p><code>docker stop letsencrypt</code></p>
+<pre><code>docker stop letsencrypt
+</code></pre>
 <h3 id="reiniciar">Reiniciar</h3>
-<p><code>docker restart letsencrypt</code></p>
+<pre><code>docker restart letsencrypt
+</code></pre>
 <h2 id="comprobar-que-todo-vaya-bien">Comprobar que todo vaya bien</h2>
 <p>Es recomendable la primera vez que iniciamos el Docker, comprobar que todo funciona correctamente y no hay ningún error en algún archivo de configuración.</p>
 <p>Si lo hubiera, el <strong>log</strong> nos mostrará donde está este error.</p>
