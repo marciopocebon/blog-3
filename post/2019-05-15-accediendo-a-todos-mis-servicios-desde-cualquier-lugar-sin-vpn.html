@@ -53,7 +53,7 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="docker-letsencript.-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn-1" title="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-export_file_name="Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-description="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" data-export_date="2019-05-15 20:30" data-category="servidor" data-tag="nginx,raspberry,raspbian,docker" data-image="./images-blog/mountain-man.jpg">Docker: Letsencript. Accediendo a todos mis servicios, desde cualquier lugar, sin VPN</h1>
+<h1 id="docker-letsencript.-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn-1" title="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-export_file_name="Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-description="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" data-export_date="2019-05-15 20:30 2019-09-13" data-category="servidor" data-tag="nginx,raspberry,raspbian,docker" data-image="./images-blog/mountain-man.jpg">Docker: Letsencript. Accediendo a todos mis servicios, desde cualquier lugar, sin VPN</h1>
 <center>
 <p><img src="../images-blog/mountain-man.jpg" /></p>
 </center>
@@ -102,7 +102,8 @@ gtag("config", "UA-131560140-1");
 <p>Creamos el nuevo archivo de configuración para Nexcloud.</p>
 <pre><code>nano ~/docker/letsencript/nginx/proxy-confs/nextcloud.subdomain.conf
 </code></pre>
-<p>Sustituye las siguientes líneas y pon tus datos. Dominio, ip, puerto… Nextcloud lo tengo montado con letsencript, por eso la ruta del servidor es https. Si tu servicio utiliza http, ponlo así.</p>
+<p>Sustituye las siguientes líneas y pon tus datos. Dominio, ip, puerto.</p>
+<p>Nextcloud lo tengo montado con letsencript, por eso la ruta del servidor es https. Si tu servicio utiliza http, ponlo así.</p>
 <ul>
 <li><code>server_name mi_dominio.duckdns.org;</code></li>
 <li><code>proxy_pass https://192.168.1.100:81;</code></li>
@@ -148,11 +149,12 @@ gtag("config", "UA-131560140-1");
 <h2 id="comprobar-que-todo-vaya-bien">Comprobar que todo vaya bien</h2>
 <p>Es recomendable la primera vez que iniciamos el Docker, comprobar que todo funciona correctamente y no hay ningún error en algún archivo de configuración.</p>
 <p>Si lo hubiera, el <strong>log</strong> nos mostrará donde está este error.</p>
-<p><code>docker logs -f letsencrypt</code></p>
+<pre><code>docker logs -f letsencrypt
+</code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Os puedo garantizar que el poder acceder desde el exterior de tu red local, a todos estos servicios de un modo seguro y teniendo el control de tus datos tu, es una sensación muy agradable. Montar el Docker no lleva mas de 5 minutos, así que te recomiendo el probarlo y que me cuentes tu experiencia.</p>
 <br>
-<p>Publicado por Angel el miércoles 15 mayo del 2019</p>
+<p>Publicado por Angel el miércoles 15 mayo del 2019 y <strong>actualizado</strong> el viernes 13 septiembre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
