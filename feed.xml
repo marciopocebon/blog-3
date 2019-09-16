@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Listado de Servicios con System V y Systemd</title>
+    <link>https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html</link>
+    <description>
+&lt;img src="" alt="Listado de Servicios con System V y Systemd"&gt;
+&lt;br&gt;&lt;p&gt;Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html&gt;Listado de Servicios con System V y Systemd&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 16 Sep 2019  +0100</pubDate>
+    <category>servidor</category>
+    <category>ssh</category>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html</guid>
+   </item>
+   <item>
     <title>Convertir de H.265 a H.264</title>
     <link>https://ugeek.github.io/blog/post/2019-09-11-convertir-de-h265-a-h264.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 11 Sep 2019  +0100</pubDate>
+    <pubDate>Wed, 11 Sep 2019 17:55 +0100</pubDate>
     <category>terminal</category>
     <category>video</category>
     <category></category>

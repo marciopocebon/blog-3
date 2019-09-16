@@ -1,5 +1,5 @@
 <head>
-<title> Elimina archivos duplicados con fduples. uGeek Blog </title>
+<title>Listado de Servicios con System V y Systemd. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados" />
+<meta name="description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Elimina archivos duplicados con fduples" />
-<meta property="og:description" content="fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html" />
+<meta property="og:title" content="Listado de Servicios con System V y Systemd" />
+<meta property="og:description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html" />
 
-<meta name="twitter:title" content=" Elimina archivos duplicados con fduples" />
-<meta name="twitter:description" content="fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Listado de Servicios con System V y Systemd" />
+<meta name="twitter:description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,38 +53,45 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="elimina-archivos-duplicados-con-fduples-1" title="Elimina archivos duplicados con fduples" data-export_file_name="Elimina archivos duplicados con fduples" data-description="fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados" data-export_date="2019-01-05 11:39" data-category="terminal" data-tag="bash,unix,terminal" data-image="./images-blog/ugeek.png">Elimina archivos duplicados con fduples</h1>
-<p>fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados:</p>
-<h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install fdupes</code></p>
-<h2 id="ver-cuantos-archivos-duplicados-tenemos">Ver cuantos archivos duplicados tenemos</h2>
-<p>Para <strong>ver los archivos duplicados</strong> en una carpeta, utilizaremos el siguiente comando:</p>
-<p><code>fdupes ~/ruta</code></p>
-<h2 id="eliminar-archivos-duplicados">Eliminar archivos duplicados</h2>
-<p>En caso de aparecer archivos, para eliminarlos, utilizaremos <code>-d</code>:</p>
-<p><code>fdupes -d ~/ruta</code></p>
-<p>Tranquilo, esto no eliminará los archivos, simplemente mostrará un asistente donde aparecerán los archivos repetidos y cual de ellos, mediante un número delante, queremos conservar:</p>
-<pre><code>Set 1 of 147, preserve files [1 - 2, all]: 1
-
-   [+] /home/angel/fotos/photo_0001.jpg
-   [-] /home/angel/fotos/2019-01-05-15:15.jpg
+<h1 id="listado-de-servicios-con-system-v-y-systemd-1" title="Listado de Servicios con System V y Systemd" data-export_file_name="Listado de Servicios con System V y Systemd" data-description="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" data-export_date="2019-09-16 17:55" data-category="servidor" data-tag="ssh, terminal" data-image="">Listado de Servicios con System V y Systemd</h1>
+<p>Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado al <a href="https://www.jesusamieiro.com/como-comprobar-que-servicios-estan-en-ejecucion-en-un-sistema-linux/">Blog de Jesus Mieiro</a>, donde explica con System V y Systemd, como obtener esta información.</p>
+<p>Gracias una vez más, nuestro amigo Grep, toda esta información la podemos filtrar accediendo exactamente al servicio que nos interesa.</p>
+<h2 id="basado-en-system-v">Basado en System V</h2>
+<h3 id="comprobar-el-estado-de-los-servicios">Comprobar el estado de los servicios</h3>
+<pre><code>sudo service --status-all
 </code></pre>
-<p>Para entrar recursivamente a subcarpetas dentro de esta, utilizaremos como siempre <code>-r</code></p>
-<p><code>fdupes -d ~/ruta</code></p>
+<h3 id="filtrar-los-servicios-corriendo">Filtrar los servicios corriendo</h3>
+<pre><code>sudo service --status-all | grep +
+</code></pre>
+<h2 id="si-el-sistema-esta-está-systemd">Si el sistema esta está Systemd</h2>
+<h3 id="estado-de-todos-los-servicios">Estado de todos los servicios</h3>
+<pre><code>sudo systemctl list-unit-files
+</code></pre>
+<h3 id="para-filtrar-los-servicios-corriendo">Para filtrar los servicios corriendo</h3>
+<pre><code>sudo systemctl list-unit-files | grep enabled
+sudo systemctl list-unit-files --state=enabled
+</code></pre>
+<h3 id="ver-el-estado-de-docker">Ver el estado de docker</h3>
+<p>Vamos a ver, por ejemplo, el estado del servicio docker.</p>
+<pre><code>sudo systemctl list-unit-files | grep docker
+</code></pre>
+<p>Si quisiéramos filtrarlo todavía mas, podríamos utilizar <strong>cut</strong>.</p>
+<pre><code>sudo systemctl list-unit-files | grep docker.service | cut -d &quot; &quot; -f2-
+</code></pre>
 <br>
-<p>Publicado por Angel el sábado 05 enero del 2019</p>
+<p>Publicado por Angel el lunes 16 septiembre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2019-09-11-convertir-de-h265-a-h264.html">Convertir de H.265 a H.264</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker: KodExplorer</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html">AnyDesk en Ubuntu, Debian</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html">Teamviewer en Ubuntu, Debian</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-29-fim.-un-vilsualizador-de-imagenes-liviano-para-terminal.html">Fim. Un vilsualizador de imágenes liviano para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html">QTodoTxt. todo.txt en tu escritorio</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html">Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html">Actualización automática de tus dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html">Compartiendo tus Dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">Montar un servidor webdav con dafs2</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
