@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Emacs siempre a la última versión, betas, edge... gracias a Snap</title>
+    <link>https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/emacs.png" alt="Emacs siempre a la última versión, betas, edge... gracias a Snap"&gt;
+&lt;br&gt;&lt;p&gt;:DESCRIPTION:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html&gt;Emacs siempre a la última versión, betas, edge... gracias a Snap&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 18 Sep 2019  +0100</pubDate>
+    <category>emacs</category>
+    <category>emacs</category>
+    <category>snap</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html</guid>
+   </item>
+   <item>
     <title>Corrector Ortagráfico para Emacs en Raspbian</title>
     <link>https://ugeek.github.io/blog/post/2019-08-16-corrector-ortagráfico-para-emacs-en-raspbian.html</link>
     <description>
