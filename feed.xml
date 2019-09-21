@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</title>
+    <link>https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/excel.png" alt="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc"&gt;
+&lt;br&gt;&lt;p&gt;Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html&gt;Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 21 Sep 2019  +0100</pubDate>
+    <category>bash</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html</guid>
+   </item>
+   <item>
     <title>Emacs siempre a la última versión, betas, edge... gracias a Snap</title>
     <link>https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 18 Sep 2019  +0100</pubDate>
+    <pubDate>Wed, 18 Sep 2019 14:12 +0100</pubDate>
     <category>emacs</category>
     <category>emacs</category>
     <category>snap</category>

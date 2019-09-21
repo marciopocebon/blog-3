@@ -1,5 +1,5 @@
 <head>
-<title> Crear listas m3u para minidlna o vlc. uGeek Blog </title>
+<title>Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
+<meta name="description" content="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta property="og:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html" />
+<meta property="og:title" content="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" />
+<meta property="og:description" content="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/excel.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html" />
 
-<meta name="twitter:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta name="twitter:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" />
+<meta name="twitter:description" content="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/excel.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,30 +53,33 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="crear-listas-m3u-para-minidlna-o-vlc-1" title="Crear listas m3u para minidlna o vlc" data-export_file_name="crear-listas-m3u-para-minidlna-o-vlc" data-description="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." data-export_date="2019-01-02 20:00" data-category="bash" data-tag="bash, grep ,ls ,unix ,servidor, minidlna, multimedia" data-image="./images-blog/ugeek.png">Crear listas m3u para minidlna o vlc</h1>
-<p>Un archivo <strong>.m3u</strong>, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc. Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidlna.html">minidlna</a>, te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.</p>
-<h2 id="crear-lista-para-minidlna">Crear lista para minidlna</h2>
+<h1 id="exportando-a-csv-desde-microsoft-excel-online-hojas-de-cálculo-de-google-etc-1" title="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" data-export_file_name="Exportando a CSV desde Excel Online" data-description="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" data-export_date="2019-09-21 14:12" data-category="bash" data-tag="terminal" data-image="./images-blog/excel.png">Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</h1>
+<p>Quería trabajar con unos excels de Microsoft Excel Online que me habían compartido y quería integrarlos en un script en bash que he hecho para hacer unos cálculos. El script que he hecho funciona a partir de una archivo <strong>.csv</strong>, así que necesitaba exportar esas Hojas de cálculo a este formato.</p>
+<center>
+<p><img src="../images-blog/excel.png" /></p>
+</center>
+<p>Hojas de cálculo de Google, permite exportar las hojas a muchos formatos, entre ellos a <strong>.csv</strong>, digamos en cierto modo, es mucho mas abierto. Microsoft Excel Online, aunque ya permite exportar a <strong>.ods</strong>, solo permite a este formato y <strong>.xlsx</strong>.</p>
+<p>Se que hay modos de convertir un archivo a <strong>csv</strong>, abriendo con LibreOffice y exportándolo. También se que puedo hacerlo ejecutándolo en segundo plano desde la terminal. Hay otros programas y conversores. <strong>Ninguno de los métodos</strong> deja el <strong>csv</strong> 100% limpio, columnas separadas únicamente por comas.</p>
+<p>Me dió por hacer una prueba. Copiar el contenido de la tabla, que veo en la página web y pegarlo en un editor de texto. Al ver ese contenido desordenado en el editor, hizo que mentalmente mi cerebro corriera <strong>bash</strong> en segundo plano y con <strong>bash</strong> solucioné el problema.</p>
+<h2 id="bash-es-la-solución">Bash es la solución</h2>
+<p>Con este simple comando, dejé el contenido copiado de la página web con el ratón, en un perfecto archivo <strong>.csv</strong> El contenido de la página está en el <strong>archivo.txt</strong></p>
+<pre><code>cat archivo.txt | sed &quot;s/,/./g&quot; | sed &quot;s/\t/,/g&quot; | sed &quot;/^ *$/d&quot;
+</code></pre>
+<p>Explicación:</p>
 <ul>
-<li>Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.</li>
-<li>No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.</li>
+<li><code>cat</code> <strong>–&gt;</strong> Visualiza el archivo de texto</li>
+<li><code>sed &quot;s/,/./g&quot;</code> <strong>–&gt;</strong> El archivo tenía números decimales que se podría confundir con las &quot;comas&quot; del csv, así que convierto las comas a puntos.</li>
+<li><code>sed &quot;s/\t/,/g&quot;</code> <strong>–&gt;</strong> La separación de columnas es superior a dos espacios, así que son un tabulado. Convierte los tabulados en comas</li>
+<li><code>sed &quot;/^ *$/d&quot;</code> <strong>–&gt;</strong> Cada fila, queda representada por una línea en blanco. Sed eliminará las líneas</li>
 </ul>
-<h2 id="lista-dentro-de-un-directorio">Lista dentro de un directorio</h2>
-<ol>
-<li>Nos situamos en el directorio:</li>
-</ol>
-<p>=ls -1 | grep .mp3 &gt; lista.m3u=</p>
-<h3 id="explicación-del-comando-de-listado">Explicación del comando de listado</h3>
-<ul>
-<li>ls -&gt; lista archivos dentro de la carpeta</li>
-<li>-1 -&gt; mostrar un archivo por línea</li>
-</ul>
-<p>Después, podríamos ordenar el listado de diferente maneras, por ejemplo con comandos como <strong>sort</strong>.</p>
-<h2 id="lista-recursiva-entrando-dentro-de-subcarpetas">Lista recursiva entrando dentro de subcarpetas</h2>
-<p><code>ls -1 -R | grep .mp3 &gt; lista.m3u</code></p>
-<h2 id="reproducir-la-lista-desde-nuestra-terminal-con-vlc">Reproducir la lista desde nuestra terminal con vlc</h2>
-<p><code>vlc lista.m3u</code></p>
+<h3 id="exportar-a-cav">Exportar a cav</h3>
+<p>Exportamos a archivo.csv el resultado filtrado por el comando</p>
+<pre><code>cat archivo.txt | sed &quot;s/,/./g&quot; | sed &quot;s/\t/,/g&quot; | sed &quot;/^ *$/d&quot; &gt; archivo.csv
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Como ves, una archivo que tenía que pasar por 2 programas y al final, tener que editarlo a mano para poder arreglar las comas del csv, bash me lo ha solucionado con una única línea de teminal.</p>
 <br>
-<p>Publicado por Angel el miércoles 02 enero del 2019</p>
+<p>Publicado por Angel el sábado 21 septiembre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
