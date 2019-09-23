@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Comando para saber los dockers corriendo y sus puertos</title>
+    <link>https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Comando para saber los dockers corriendo y sus puertos"&gt;
+&lt;br&gt;&lt;p&gt;Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html&gt;Comando para saber los dockers corriendo y sus puertos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 23 Sep 2019  +0100</pubDate>
+    <category>blog</category>
+    <category>blog</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html</guid>
+   </item>
+   <item>
     <title>Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</title>
     <link>https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 21 Sep 2019  +0100</pubDate>
+    <pubDate>Sat, 21 Sep 2019 17:55 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
