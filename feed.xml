@@ -39,9 +39,9 @@
 
 </description>
     <pubDate>Mon, 23 Sep 2019  +0100</pubDate>
-    <category>blog</category>
-    <category>blog</category>
-    <category></category>
+    <category>docker</category>
+    <category>bash</category>
+    <category>terminal</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html</guid>
    </item>
@@ -204,7 +204,7 @@
 
 </description>
     <pubDate>Wed, 11 Sep 2019 17:55 +0100</pubDate>
-    <category>terminal</category>
+    <category>ffmpeg</category>
     <category>video</category>
     <category></category>
     <category></category>
@@ -270,7 +270,7 @@
 
 </description>
     <pubDate>Sun, 08 Sep 2019 21:40 +0100</pubDate>
-    <category>terminal</category>
+    <category>escritorio</category>
     <category>ubuntu</category>
     <category>debian</category>
     <category>servidor</category>
@@ -303,7 +303,7 @@
 
 </description>
     <pubDate>Sun, 08 Sep 2019 18:07 +0100</pubDate>
-    <category>terminal</category>
+    <category>escritorio</category>
     <category>ubuntu</category>
     <category>debian</category>
     <category>servidor</category>
@@ -435,7 +435,7 @@
 
 </description>
     <pubDate>Wed, 21 Aug 2019 10:30 +0100</pubDate>
-    <category>todo.txt</category>
+    <category>notas</category>
     <category>ssh</category>
     <category>terminal</category>
     <category></category>
@@ -831,10 +831,10 @@
 
 </description>
     <pubDate>Tue, 23 Jul 2019 18:00 +0100</pubDate>
-    <category>terminal</category>
+    <category>zsh</category>
     <category>bash</category>
     <category>zsh</category>
-    <category></category>
+    <category>terminal</category>
     <guid>https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html</guid>
    </item>
    <item>
@@ -864,10 +864,10 @@
 
 </description>
     <pubDate>Mon, 22 Jul 2019 21:20 +0100</pubDate>
-    <category>terminal</category>
+    <category>zsh</category>
     <category>bash</category>
     <category>zsh</category>
-    <category></category>
+    <category>terminal</category>
     <guid>https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html</guid>
    </item>
    <item>
@@ -2153,7 +2153,7 @@
     <pubDate>Thu, 07 Feb 2019 22:15 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
-    <category></category>
+    <category>zsh</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html</guid>
    </item>
@@ -2186,7 +2186,7 @@
     <pubDate>Wed, 06 Feb 2019 17:15 +0100</pubDate>
     <category>servidor</category>
     <category>raspberry</category>
-    <category></category>
+    <category>notas</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html</guid>
    </item>
@@ -2318,7 +2318,7 @@
     <pubDate>Thu, 31 Jan 2019 21:45 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
-    <category></category>
+    <category>zsh</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html</guid>
    </item>
@@ -2516,7 +2516,7 @@
     <pubDate>Sat, 26 Jan 2019 19:15 +0100</pubDate>
     <category>terminal</category>
     <category>podcast</category>
-    <category></category>
+    <category>bash</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html</guid>
    </item>
@@ -2580,7 +2580,7 @@
 
 </description>
     <pubDate>Mon, 21 Jan 2019 21:30 +0100</pubDate>
-    <category>arch'</category>
+    <category>arch</category>
     <category>antergos</category>
     <category>comandos</category>
     <category>terminal</category>
