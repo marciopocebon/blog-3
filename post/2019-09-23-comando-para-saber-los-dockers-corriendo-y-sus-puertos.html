@@ -54,7 +54,7 @@ gtag("config", "UA-131560140-1");
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
 <h1 id="comando-para-saber-los-dockers-corriendo-y-sus-puertos-1" title="Comando para saber los dockers corriendo y sus puertos" data-export_file_name="Comando para saber los dockers corriendo y sus puertos" data-description="Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor." data-export_date="2019-09-23 17:55" data-category="docker" data-tag="bash,terminal" data-image="./images-blog/docker.png">Comando para saber los dockers corriendo y sus puertos</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 268 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 382 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor.</p>
 <center>
 <p><img src="../images-blog/docker.png" /></p>
@@ -78,6 +78,21 @@ tt-rss              443/tcp, 0.0.0.0:81-&gt;80/tcp
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Una vez más, un comando en bash nos hace la vida más fácil.</p>
+<p><img src="../images-blog/wallabag.png" /></p>
+</center>
+<p>Ha pasado el tiempo y ahora que estoy liado con la creación de Dockers, así que decidí el intentarlo una vez más y esta vez con éxito.</p>
+<h2 id="montando-el-docker">Montando el Docker</h2>
+<p>Al montar el Docker siguiendo la documentación, se monta pero, pero no aparece del modo correcto, es como que faltan las hojas de estílo. Es muy importante para solucionar esto el añadir la ruta ip de nuestro servidor al montar el docker:</p>
+<p>Ejemplo. Si fuera la ip 192.168.1.100:</p>
+<pre><code>SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100
+</code></pre>
+<h2 id="wallabag-para-arm-o-raspberry-pi">Wallabag para ARM o Raspberry Pi</h2>
+<p>Para arquitectura ARM de 32bits o Raspberry Pi:</p>
+<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:arm
+</code></pre>
+<h2 id="wallabar-para-i386">Wallabar para i386</h2>
+<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:arm
+</code></pre>
 <br>
 <p>Publicado por Angel el lunes 23 septiembre del 2019</p>
 <br><br> 
