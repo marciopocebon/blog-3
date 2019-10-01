@@ -1,5 +1,5 @@
 <head>
-<title>pandoc</title>
+<title>Docker: Wallabag. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -53,9 +53,39 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h2><a>pandoc</a></h2>
+<h1 id="docker-wallabag-1" title="Docker: Wallabag" data-export_file_name="Docker: Wallabag" data-description="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" data-export_date="2019-10-01 5:15" data-category="docker" data-tag="ubuntu, debian, nas, raspberry" data-image="./images-blog/wallabag.png">Docker: Wallabag</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 250 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,… pero dejó de funcionar para Raspberry.</p>
+<center>
+<p><img src="../images-blog/wallabag.png" /></p>
+</center>
+<p>Ha pasado el tiempo y ahora que estoy liado con la creación de Dockers, así que decidí el intentarlo una vez más y esta vez con éxito.</p>
+<h2 id="montando-el-docker">Montando el Docker</h2>
+<p>Al montar el Docker siguiendo la documentación, se monta pero, pero no aparece del modo correcto, es como que faltan las hojas de estílo. Es muy importante para solucionar esto el añadir la ruta ip de nuestro servidor al montar el docker:</p>
+<p>Ejemplo. Si fuera la ip 192.168.1.100:</p>
+<pre><code>SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100
+</code></pre>
+<h2 id="wallabag-para-arm-o-raspberry-pi">Wallabag para ARM o Raspberry Pi</h2>
+<p>Para arquitectura ARM de 32bits o Raspberry Pi:</p>
+<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:arm
+</code></pre>
+<h2 id="wallabar-para-i386">Wallabar para i386</h2>
+<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:arm
+</code></pre>
+<br>
+<p>Publicado por Angel el martes 01 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html>Instala la última versión de Pandoc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html>Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html">Comando para saber los dockers corriendo y sus puertos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker: KodExplorer</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html">Actualización automática de tus dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html">Docker en Ubuntu 18.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-docker-en-debian-buster.html">Docker en debian Buster</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html">Compartiendo tus Dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html">Estando a la Última en tu Raspberry con Debian Testing</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
