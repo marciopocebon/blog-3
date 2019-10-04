@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Acceder dentro de un Docker como usuario root</title>
+    <link>https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Acceder dentro de un Docker como usuario root"&gt;
+&lt;br&gt;&lt;p&gt;:DESCRIPTION:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html&gt;Acceder dentro de un Docker como usuario root&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 04 Oct 2019  +0100</pubDate>
+    <category>docker</category>
+    <category>bash</category>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html</guid>
+   </item>
+   <item>
     <title>Docker: Wallabag</title>
     <link>https://ugeek.github.io/blog/post/2019-10-01-docker:-wallabag.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 01 Oct 2019  +0100</pubDate>
+    <pubDate>Tue, 01 Oct 2019 17:55 +0100</pubDate>
     <category>docker</category>
     <category>ubuntu</category>
     <category>debian</category>

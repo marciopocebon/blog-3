@@ -1,5 +1,5 @@
 <head>
-<title> Monta un servidor web Nginx, con una sola línea de Terminal (Docker). uGeek Blog </title>
+<title>Acceder dentro de un Docker como usuario root. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" />
+<meta name="description" content=":DESCRIPTION:" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" />
-<meta property="og:description" content="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nginx.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html" />
+<meta property="og:title" content="Acceder dentro de un Docker como usuario root" />
+<meta property="og:description" content=":DESCRIPTION:" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html" />
 
-<meta name="twitter:title" content=" Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" />
-<meta name="twitter:description" content="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nginx.png" />
+<meta name="twitter:title" content="Acceder dentro de un Docker como usuario root" />
+<meta name="twitter:description" content=":DESCRIPTION:" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,33 +53,16 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="monta-un-servidor-web-nginx-con-una-sola-línea-de-terminal-docker-1" title="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" data-export_file_name="Monta un servidor web Nginx con una sola linea de Terminal Docker" data-description="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" data-export_date="2019-03-25 21:10" data-category="docker" data-tag="servidor,web" data-image="./images-blog/nginx.png">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 411 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Si quieres montar un servidor web en un pispás y no complicarte la vida, el <a href="https://hub.docker.com/_/nginx">Docker oficial de Nginx</a> es una buenísima solución. Hay tres motivos por los cuales instalar este Docker:</p>
-<ul>
-<li>Versión oficial a la última</li>
-<li>Solo una línea de Terminal</li>
-<li>Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x)</li>
-</ul>
+<h1 id="acceder-dentro-de-un-docker-como-usuario-root-1" title="Acceder dentro de un Docker como usuario root" data-export_file_name="Acceder dentro de un Docker como usuario root" data-description="" data-export_date="2019-10-04 17:55" data-category="docker" data-tag="bash,terminal" data-image="./images-blog/docker.png">Acceder dentro de un Docker como usuario root</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 132 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <center>
-<p><img src="../images-blog/nginx.png" /></p>
+<p><img src="../images-blog/docker.png" /></p>
 </center>
-<p>También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte. En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio.</p>
-<p>Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal <code>-p 90:80</code>.</p>
-<h2 id="montando-el-docker-oficial-de-nginx-para-arquitectura-64bits">Montando el Docker oficial de Nginx para arquitectura 64bits</h2>
-<p>Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El tamaño de la Imagen es de 109MB. Vamos a instalarlo y probar: La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx</code></p>
-<h2 id="docker-oficial-de-nginx-arquitectura-64bits.-alpine-linux">Docker oficial de Nginx, arquitectura 64bits. Alpine Linux</h2>
-<p>Ahora vamos a Instalar el mismo Docker oficial, pero partiendo de un Alpine Linux. Tan solo 16.1MB de Imagen!!! La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro amd64/nginx:alpine</code></p>
-<h2 id="docker-oficial-de-nginx-en-raspberry">Docker oficial de Nginx en Raspberry</h2>
-<p>Me he emocionado tanto instalando Nginx desde un Alpine Linux, que ahora quiero hacer lo propio en mi Raspberry. Tamaño de la Imagen de 13,4 Mb en mi Raspberry.</p>
-<p>Como veis, he utilizado el mismo comando que el apartado anterior. La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code></p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Estoy comenzando a tener Dockerdependencia y es que es inevitable. Poder montar tantos servidores web como quiera con un puerto diferente y con la última versión… Como dice el anuncio, no tiene precio, jejeje</p>
+<p>Vamos a acceder a un contenedor como usuario <strong>root</strong>. Para ello tenemos que utilizar la opción <strong>-u</strong> seguido del usuario, en este caso <strong>root</strong>. Por ejemplo, para acceder dentro de un contenedor llamado nextcloud, utilizaríamos:</p>
+<pre><code>docker exec -it -u root nextcloud /bin/bash
+</code></pre>
 <br>
-<p>Publicado por Angel el lunes 25 marzo del 2019</p>
+<p>Publicado por Angel el viernes 04 octubre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
