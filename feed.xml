@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</title>
+    <link>https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html</link>
+    <description>
+&lt;img src="" alt="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic"&gt;
+&lt;br&gt;&lt;p&gt;-supysonic... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html&gt;Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>  +0100</pubDate>
+    <category>Si tienes el servidor de música *Supysonic*| Subsonic| Airsonic|... Cualquiera de los servidores que utilizan la api de *Subsonic*| quizás quieras utilizar el navegador web como cliente.</category>
+    <category>2019-10-08</category>
+    <category>docker</category>
+    <category>raspberry</category>
+    <guid>https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html</guid>
+   </item>
+   <item>
     <title>Docker: Supysonic. El mejor y más ligero servidor de música</title>
     <link>https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 07 Oct 2019  +0100</pubDate>
+    <pubDate>Mon, 07 Oct 2019 18:00 +0100</pubDate>
     <category>docker</category>
     <category>musica</category>
     <category>raspberry</category>
