@@ -1,5 +1,5 @@
 <head>
-<title>jekyll</title>
+<title>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -53,8 +53,52 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h2><a>jekyll</a></h2>
+<h1 id="docker-jamstash.-cliente-de-subsonic-supysonic-airsonic-1" title="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" data-export_file_name="Docker Jamstash Cliente de Subsonic" data-description="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." data-export_date="2019-10-08 18:00" data-category="docker" data-tag="raspberry,servidor" data-image="./images-blog/jamstash.png">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 271 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Si tienes el servidor de música <strong>Supysonic</strong>, Subsonic, Airsonic,… Cualquiera de los servidores que utilizan la api de <strong>Subsonic</strong>, quizás quieras utilizar el navegador web como cliente.</p>
+<p>Jamstash es un proyecto que pretende el tener un cliente de Subsonic en tu navegador web, instalable en Google Chrome <a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc">a través de su tienda de aplicaciones</a>.</p>
+<center>
+<p><img src="../images-blog/jamstash.png" /></p>
+</center>
+<p>Aprovechando el código de la aplicación disponible en GitHub, he montado un contenedor partiendo de un Alpine Linux y un servidor de Nginx.</p>
+<p>Este cliente permite el reproducir, crear listas, añadir a favoritos, descargar canciones, etc…</p>
+<center>
+<p><img src="../images-blog/jamstash2.png" /></p>
+</center>
+<p>Vamos a ver como montar el contenedor</p>
+<h2 id="docker-para-raspberry-o-arm">Docker para Raspberry o ARM</h2>
+<pre><code>docker run --name jamstash -d -p 80:80 ugeek/jamstash:arm
+</code></pre>
+<h2 id="docker-para-amd64">Docker para amd64</h2>
+<pre><code>docker run --name jamstash -d -p 80:80 ugeek/jamstash:amd64
+</code></pre>
+<h2 id="uso-de-jamstash">Uso de Jamstash</h2>
+<p>Para utilizar el cliente Jamstash, según la línea del ejemplo anterior, corre por el puesto <strong>80</strong>. Podemos personalizar el puerto cambiando a un puerto libre disponible.</p>
+<p>Aquí utilizariamos el puerto 90.</p>
+<pre><code>-p 90:80
+</code></pre>
+<p>Siguiendo este nuevo ejemplo, nos conectaríamos desde nuestro navegador web a <a href="http://tu_ip:90" class="uri">http://tu_ip:90</a></p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html>Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
+<li><a href="http://jamstash.com" class="uri">http://jamstash.com</a></li>
+<li><a href="https://github.com/tsquillario/Jamstash" class="uri">https://github.com/tsquillario/Jamstash</a></li>
+<li><a href="https://github.com/uGeek/docker-jamstash" class="uri">https://github.com/uGeek/docker-jamstash</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc" class="uri">https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el martes 08 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html">Acceder dentro de un Docker como usuario root</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-01-docker:-wallabag.html">Docker: Wallabag</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html">Comando para saber los dockers corriendo y sus puertos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker: KodExplorer</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html">Actualización automática de tus dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html">Docker en Ubuntu 18.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-docker-en-debian-buster.html">Docker en debian Buster</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

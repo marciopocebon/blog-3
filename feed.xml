@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</title>
-    <link>https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html</link>
+    <link>https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html</link>
     <description>
-&lt;img src="" alt="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic"&gt;
-&lt;br&gt;&lt;p&gt;-supysonic... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html&gt;Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/jamstash.png" alt="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic"&gt;
+&lt;br&gt;&lt;p&gt;Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html&gt;Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>  +0100</pubDate>
-    <category>Si tienes el servidor de música *Supysonic*| Subsonic| Airsonic|... Cualquiera de los servidores que utilizan la api de *Subsonic*| quizás quieras utilizar el navegador web como cliente.</category>
-    <category>2019-10-08</category>
+    <pubDate>Tue, 08 Oct 2019  +0100</pubDate>
     <category>docker</category>
     <category>raspberry</category>
-    <guid>https://ugeek.github.io/blog/post/-airsonic-docker:-jamstash.-cliente-de-subsonic.html</guid>
+    <category>servidor</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html</guid>
    </item>
    <item>
     <title>Docker: Supysonic. El mejor y más ligero servidor de música</title>
