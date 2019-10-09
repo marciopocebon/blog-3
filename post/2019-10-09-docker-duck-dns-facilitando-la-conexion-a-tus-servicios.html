@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content=":DESCRIPTION:" />
+<meta name="description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta property="og:description" content=":DESCRIPTION:" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.org" />
+<meta property="og:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html" />
 
 <meta name="twitter:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta name="twitter:description" content=":DESCRIPTION:" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/duckdns.org" />
+<meta name="twitter:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -53,11 +53,11 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor" data-image="./images-blog/duckdns.org">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
+<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor" data-image="./images-blog/duckdns.png">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
 <h5>Tiempo estimado de lectura: 3 minutos. 373 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>La mayor parte de la gente, tiene una conexión a internet con ip dinámica. Esto quiere decir, que la dirección ip va cambiando de tanto en tanto. No es fija.</p>
 <center>
-<p><a href="./images-blog/duckdns.org" class="uri">./images-blog/duckdns.org</a></p>
+<p><img src="../images-blog/duckdns.png" /></p>
 </center>
 <p>Esto puede ser un gran problema si queremos conectarnos desde fuera de nuestra red, a un servicio que tenemos en nuestro servidor. Si la compañía cambia la ip en ese momento, nunca encontraremos nuestro servidor. Para solucionar este problema podemos utilizar servicios DNS como Duck DNS.</p>
 <p>Tal como expliqué en el artículo del <a href="Docker: Letsencript. Accediendo a todos mis servicios, desde cualquier lugar, sin VPN">Docker de Letsencript</a>, podemos crear una cuenta con un dominio o hasta 5 de forma gratuita y ejecutando un script en nuestro servidor, <strong>en nuestra red local</strong>, este script enviará cual es nuestra ip a Duck DNS, para que cada vez que introduzcamos el dominio que registramos en Duck DNS, redirija el tráfico hasta nuestra casa.</p>
