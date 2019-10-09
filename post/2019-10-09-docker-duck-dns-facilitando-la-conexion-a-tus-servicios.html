@@ -1,5 +1,5 @@
 <head>
-<title>zsh</title>
+<title>Docker: Duck DNS. Facilitando la conexión a tus servicios. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -53,12 +53,45 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
-<h2><a>zsh</a></h2>
+<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor" data-image="./images-blog/duckdns.org">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 373 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>La mayor parte de la gente, tiene una conexión a internet con ip dinámica. Esto quiere decir, que la dirección ip va cambiando de tanto en tanto. No es fija.</p>
+<center>
+<p><a href="./images-blog/duckdns.org" class="uri">./images-blog/duckdns.org</a></p>
+</center>
+<p>Esto puede ser un gran problema si queremos conectarnos desde fuera de nuestra red, a un servicio que tenemos en nuestro servidor. Si la compañía cambia la ip en ese momento, nunca encontraremos nuestro servidor. Para solucionar este problema podemos utilizar servicios DNS como Duck DNS.</p>
+<p>Tal como expliqué en el artículo del <a href="Docker: Letsencript. Accediendo a todos mis servicios, desde cualquier lugar, sin VPN">Docker de Letsencript</a>, podemos crear una cuenta con un dominio o hasta 5 de forma gratuita y ejecutando un script en nuestro servidor, <strong>en nuestra red local</strong>, este script enviará cual es nuestra ip a Duck DNS, para que cada vez que introduzcamos el dominio que registramos en Duck DNS, redirija el tráfico hasta nuestra casa.</p>
+<p>Yo finalmente por comodidad, he montado un docker de la comunidad LinuxServer que incluye este script. De esta manera solo tengo que programar en que momento del día quiero que se inicie este docker y el se encargará de enviar esta información.</p>
+<h2 id="docker-duck-dns">Docker Duck DNS</h2>
+<p>Este es un ejemplo de como montar el docker. Tienes que sustituir <strong>SUBDOMAINS</strong>, en este ejemplo correspondería con la dirección ugeekpodcast.duckdns.org y angel.duckdns.org, el <strong>TOKEN</strong> aparece en la página de Duck DNS y <strong>TZ</strong> corresponde con la hora local del lugar donde vivas.</p>
+<pre><code>docker create \
+  --name=duckdns \
+  -e PGID=1000 -e PUID=1000  \
+  -e SUBDOMAINS=ugeekpodcast,angel \
+  -e TOKEN=adbqergh-av7654qwerg-qerg456-45qrg \
+  -e TZ=Europe/Madrid \
+  lsioarmhf/duckdns
+</code></pre>
+<p>El script cada 5 minutos, envía a los servidores de Duck DNS nuestra IP.</p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html>Plugin zsh-autosuggestions. Autocompletado en la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html>Instalar Oh My ZSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html>Crear Alias</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html>Papelera Reciclaje desde la Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html>Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</a></li>
+<li><a href="https://www.duckdns.org/" class="uri">https://www.duckdns.org/</a></li>
+<li><a href="https://hub.docker.com/r/linuxserver/duckdns/" class="uri">https://hub.docker.com/r/linuxserver/duckdns/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 09 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html">Acceder dentro de un Docker como usuario root</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-01-docker:-wallabag.html">Docker: Wallabag</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html">Comando para saber los dockers corriendo y sus puertos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker: KodExplorer</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html">Actualización automática de tus dockers</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html">Docker en Ubuntu 18.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
