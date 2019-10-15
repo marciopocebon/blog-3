@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cron. Ejemplos</title>
+    <link>https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/cron.png" alt="Cron. Ejemplos"&gt;
+&lt;br&gt;&lt;p&gt;Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html&gt;Cron. Ejemplos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 15 Oct 2019  +0100</pubDate>
+    <category>bash</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html</guid>
+   </item>
+   <item>
     <title>Calendario en la terminal</title>
     <link>https://ugeek.github.io/blog/post/2019-10-11-calendario-en-la-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 11 Oct 2019  +0100</pubDate>
+    <pubDate>Fri, 11 Oct 2019 19:30 +0100</pubDate>
     <category>terminal</category>
     <category>bash</category>
     <category></category>
