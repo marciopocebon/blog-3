@@ -1,0 +1,30 @@
+TITLE=$(echo "https://ugeek.github.io/blog/post/")
+
+echo "var tipuesearch = {"pages": [" > content.js
+
+
+while read LINEA
+do
+
+    TITLE_CONTENT=$(echo $LINEA | cut -d, -f1) 
+    TEXT_CONTENT=$(echo $LINEA | cut -d, -f3 | sed 's|\||,|g') 
+    TAGS_CONTENT=$(echo $LINEA | cut -d, -f5-10) 
+
+    DATE_CONTENT=$(echo $LINEA | cut -d, -f4) 	
+    NAME_CONTENT=$(echo $LINEA | cut -d, -f2) 
+    
+    URL_CONTENT=$(echo "$DATE_CONTENT-$NAME_CONTENT.html") 
+
+
+    
+    echo "{"  >> content.js
+    echo "            '"title"': '"$TITLE_CONTENT"',"  >> content.js 
+    echo "            '"text"': '"$TEXT_CONTENT"', "  >> content.js
+    echo "            '"tags"': '"$TAGS_CONTENT"', "  >> content.js
+    echo "            '"url"': '"$TITLE$URL_CONTENT"' "  >> content.js
+    echo "}," >> content.js
+
+done < posts.csv
+
+
+echo "]};" >> content.js

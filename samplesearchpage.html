@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"></meta>
+	<title>Tipue Search</title>
+	<link type="text/css" rel="stylesheet" href="tipuesearch/tipuesearch.css"></link>
+	<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+	<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+	<script type="text/javascript" src="tipuesearch/tipuesearch_content.js"></script>
+	<script type="text/javascript" src="tipuesearch/tipuesearch.min.js"></script>
+</head>
+<body>
+
+<!-- THIS IS THE SEARCH BOX -->
+Try searching the word "sample", "article", "lol"
+
+<form action="samplesearchpage.html">
+<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+<button>Search</button>
+</form>
+
+
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+ $('#tipue_search_input').tipuesearch();
+});
+
+</script>
+tes
+</body>
+</html>
