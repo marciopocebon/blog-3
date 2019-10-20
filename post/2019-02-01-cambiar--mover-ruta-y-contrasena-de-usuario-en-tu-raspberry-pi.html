@@ -62,6 +62,32 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
+
+<!-- THIS IS THE SEARCH BOX -->
+
+<form action="2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+<input type=image src="../icon/lupa.svg" width="25" height="25"> 
+</form>
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
 <h1 id="cambiar-mover-ruta-y-contraseña-de-usuario-en-tu-raspberry-pi-1" title="Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi" data-export_file_name="Cambiar  mover ruta y contrasena de usuario en tu Raspberry Pi" data-description="En este artículo, vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario, en nuestra raspberry" data-export_date="2019-02-01 23:45" data-category="raspberry" data-tag="raspberry" data-image="./images-blog/ugeek.png">Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</h1>
 <h5>Tiempo estimado de lectura: 2 minutos. 286 palabras.    <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
 <p>Vamos a cambiar el usuario &quot;Pi&quot;, por defecto, por el usuario que deseemos, cambiando la carpeta /home/pi por /home/Nuevo<sub>usuario</sub></p>
@@ -90,21 +116,6 @@ PermitRootLogin yes
 <br>
 <p>Publicado por Angel el viernes 01 febrero del 2019</p>
 <br><br> 
-<!-- THIS IS THE SEARCH BOX -->
-<form action="2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-<input type=image src="../icon/lupa.svg" width="25" height="25"> 
-</form>
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
-<script>
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-</script>
-<!-- END BOX -->
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>

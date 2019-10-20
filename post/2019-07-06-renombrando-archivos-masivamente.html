@@ -62,6 +62,32 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
+
+<!-- THIS IS THE SEARCH BOX -->
+
+<form action="2019-07-06-renombrando-archivos-masivamente.html">
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+<input type=image src="../icon/lupa.svg" width="25" height="25"> 
+</form>
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
 <h1 id="renombrando-archivos-masivamente-1" title="Renombrando archivos masivamente" data-export_file_name="Renombrando archivos masivamente" data-description="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" data-export_date="2019-07-06 23:30" data-category="unix" data-tag="terminal,sed,bash" data-image="./images-blog/unix.png">Renombrando archivos masivamente</h1>
 <h5>Tiempo estimado de lectura: 2 minutos. 224 palabras.    <a href="https://ugeek.github.io/blog/categories/unix">unix</a></h5>
 <p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por &quot;_&quot;.</p>
@@ -76,21 +102,6 @@ gtag("config", "UA-131560140-1");
 <br>
 <p>Publicado por Angel el sábado 06 julio del 2019</p>
 <br><br> 
-<!-- THIS IS THE SEARCH BOX -->
-<form action="2019-07-06-renombrando-archivos-masivamente.html">
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-<input type=image src="../icon/lupa.svg" width="25" height="25"> 
-</form>
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
-<script>
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-</script>
-<!-- END BOX -->
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>

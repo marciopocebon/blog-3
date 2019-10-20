@@ -62,6 +62,32 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
+
+<!-- THIS IS THE SEARCH BOX -->
+
+<form action="2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+<input type=image src="../icon/lupa.svg" width="25" height="25"> 
+</form>
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
 <h1 id="cada-vez-mas-clientes-de-jellyfin.-aplicaciones-para-escritorio-linux-windows-mac-android-kodi-1" title="Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi" data-export_file_name="Cada vez mas clientes de Jellyfin" data-description="Solo llevamos unos 9 meses desde el nacimiento de Jellyfin y los clientes ya están llegando al nivel de madurez deseado" data-export_date="2019-08-21 01:30" data-category="jellyfin" data-tag="ssh, terminal" data-image="./images-blog/jellifin.png">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</h1>
 <h5>Tiempo estimado de lectura: 3 minutos. 340 palabras.    <a href="https://ugeek.github.io/blog/categories/jellyfin">jellyfin</a></h5>
 <p>Solo llevamos unos 9 meses desde el nacimiento de Jellyfin y los clientes ya están llegando al nivel de madurez deseado, saliendo de sus estados alpha, beta, para estar disponibles de un modo estable en los respectivos Stores.</p>
@@ -109,21 +135,6 @@ alias jellyfin=&#39;npm start --prefix ~/jellyfin-theater-electron&#39;
 <br>
 <p>Publicado por Angel el miércoles 21 agosto del 2019</p>
 <br><br> 
-<!-- THIS IS THE SEARCH BOX -->
-<form action="2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-<input type=image src="../icon/lupa.svg" width="25" height="25"> 
-</form>
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
-<script>
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-</script>
-<!-- END BOX -->
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>

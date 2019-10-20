@@ -62,6 +62,32 @@ gtag("config", "UA-131560140-1");
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
 
+
+<!-- THIS IS THE SEARCH BOX -->
+
+<form action="2019-08-29-dockers-con-prune.html">
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+<input type=image src="../icon/lupa.svg" width="25" height="25"> 
+</form>
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
 <h1 id="borrar-contenedores-imágenes-volúmenes-y-redes-de-tus-dockers-con-prune-1" title="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune" data-export_file_name="Dockers con Prune" data-description="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" data-export_date="2019-08-29 10:30" data-category="docker" data-tag="ssh, terminal" data-image="./images-blog/docker.png">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</h1>
 <h5>Tiempo estimado de lectura: 5 minutos. 620 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores, imágenes y volúmenes colgados, que ya no están en uso y han quedado obsoletos en tu disco ocupando espacio. Si tienes muchos, es una labor muy tediosa tener que borrar uno a uno todos los contenedores e imágenes. Hay un modo sencillo de borrarlo, vamos a utilizar <strong>prune</strong>.</p>
@@ -140,21 +166,6 @@ gtag("config", "UA-131560140-1");
 <br>
 <p>Publicado por Angel el jueves 29 agosto del 2019</p>
 <br><br> 
-<!-- THIS IS THE SEARCH BOX -->
-<form action="2019-08-29-dockers-con-prune.html">
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-<input type=image src="../icon/lupa.svg" width="25" height="25"> 
-</form>
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
-<script>
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-</script>
-<!-- END BOX -->
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</a></li>
