@@ -31,7 +31,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Acceder dentro de un Docker como usuario root',
-            'text': ':DESCRIPTION:', 
+            'text': 'Vamos a acceder a un contenedor como usuario root', 
             'tags': 'docker,bash,terminal,,,', 
             'url': 'https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html' 
 },
