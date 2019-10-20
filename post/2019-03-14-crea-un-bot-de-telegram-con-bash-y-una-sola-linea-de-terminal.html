@@ -47,11 +47,43 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/tags.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
 
 <h1 id="crea-un-bot-de-telegram-con-bash-y-una-sola-línea-de-terminal-1" title="Crea un Bot de Telegram con Bash y una sola línea de Terminal" data-export_file_name="Crea un Bot de Telegram con Bash y una sola linea de Terminal" data-description="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" data-export_date="2019-03-14 21:30" data-category="telegram" data-tag="bot, telegram" data-image="./images-blog/telegram.jpg">Crea un Bot de Telegram con Bash y una sola línea de Terminal</h1>
 <h5>Tiempo estimado de lectura: 9 minutos. 1005 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
