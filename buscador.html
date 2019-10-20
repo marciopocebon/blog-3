@@ -59,12 +59,12 @@ gtag("config", "UA-131560140-1");
 
   <meta charset="utf-8"></meta>
 	<title>uGeek. Buscador</title>
-	<link type="text/css" rel="stylesheet" href="tipuesearch/tipuesearch.css"></link>
+	<link type="text/css" rel="stylesheet" href="css/search.css"></link>
         <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
-	<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-	<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/tipuesearch_set.js"></script>
 	<script type="text/javascript" src="content.js"></script>
-	<script type="text/javascript" src="tipuesearch/tipuesearch.min.js"></script>
+	<script type="text/javascript" src="js/tipuesearch.min.js"></script>
 </head>
 <body>
 
@@ -75,16 +75,15 @@ gtag("config", "UA-131560140-1");
 
 
 
-
-
-
-
   
 <!-- THIS IS THE SEARCH BOX -->
 
 <form action="buscador.html">
-<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
-<button>Buscar</button>
+
+<input type="text" name="q" id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+<input type=image src="icon/lupa.svg" width="25" height="25"> 
+
 </form>
 
 
@@ -99,11 +98,6 @@ $(document).ready(function() {
 });
 
 </script>
-
-
-
-
-
 
 
 
