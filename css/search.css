@@ -14,6 +14,7 @@ http://www.tipue.com/search
 	color: #333;
 	padding: 12px 12px 12px 40px;
 	width: 170px;
+	height: 35px;
 	border: 1px solid #e2e2e2;
 	border-radius: 0;
 	-moz-appearance: none;
@@ -21,7 +22,9 @@ http://www.tipue.com/search
      box-shadow: none; 
 	outline: 0;
 	margin: 0;
+	border-radius: 15px 15px 15px 15px;
 	background: #fff url('icon/lupa.svg') no-repeat 15px 15px;
+
 }
 
 #tipue_search_content
