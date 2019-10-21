@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Apagada automática de tu Raspberry si hay alta temperatura',
+            'text': 'Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc ...', 
+            'tags': 'raspberry,bash,terminal,script,,', 
+            'url': 'https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html' 
+},
+{
             'title': 'Cron. Ejemplos',
             'text': 'Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede', 
             'tags': 'bash,terminal,,,,', 

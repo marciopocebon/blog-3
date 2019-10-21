@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Apagada automática de tu Raspberry si hay alta temperatura</title>
+    <link>https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" alt="Apagada automática de tu Raspberry si hay alta temperatura"&gt;
+&lt;br&gt;&lt;p&gt;Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc ...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html&gt;Apagada automática de tu Raspberry si hay alta temperatura&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 21 Oct 2019  +0100</pubDate>
+    <category>raspberry</category>
+    <category>bash</category>
+    <category>terminal</category>
+    <category>script</category>
+    <guid>https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html</guid>
+   </item>
+   <item>
     <title>Cron. Ejemplos</title>
     <link>https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 15 Oct 2019  +0100</pubDate>
+    <pubDate>Tue, 15 Oct 2019 18:00 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>
