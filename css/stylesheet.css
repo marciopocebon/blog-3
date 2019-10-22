@@ -5,6 +5,14 @@ img {
 }
 
 
+
+@media (prefers-color-scheme: dark) 
+{
+	body {
+		background-color: #111;
+	}
+}
+
 /* Letras centrales de uGeek */
 
 #ugeek {
