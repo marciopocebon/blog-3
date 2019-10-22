@@ -6,26 +6,14 @@ img {
 
 
 
-/*
-# Dark Mode
+/*# Dark Mode*/
 @media (prefers-color-scheme: dark) 
 {
 	body {
-		background-color: #111;
+	    background-color: #111;
+	    color: grey;
+	    
 	}
-}
-
-*/
-
-
-@media (prefers-color-scheme: dark) {
-  img {
-    opacity: .75;
-    transition: opacity .5s ease-in-out;
-  }
-  img:hover {
-    opacity: 1;
-  }
 }
 
 
