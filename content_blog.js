@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html' 
 },
 {
+            'title': 'Orzly. Tus OrgMode syncronizados por WebDav',
+            'text': 'Ahora tienes un motivo mas para utilizar Orgzly y tus notas en OrgMode. Y es que Orgzly, hoy ha añadido en su versión 1.8-Beta.1 de Android, la posibilidad de', 
+            'tags': 'emacs,orgmode,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html' 
+},
+{
             'title': 'Apagada automática de tu Raspberry si hay alta temperatura',
             'text': 'Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc ...', 
             'tags': 'raspberry,bash,terminal,script,,', 
