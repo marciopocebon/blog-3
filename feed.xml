@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: Servidor Webdav</title>
+    <link>https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/dav.png" alt="Docker: Servidor Webdav"&gt;
+&lt;br&gt;&lt;p&gt;Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html&gt;Docker: Servidor Webdav&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 22 Oct 2019  +0100</pubDate>
+    <category>servidor</category>
+    <category>webdav</category>
+    <category>raspberry</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html</guid>
+   </item>
+   <item>
     <title>Apagada automática de tu Raspberry si hay alta temperatura</title>
     <link>https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 21 Oct 2019  +0100</pubDate>
+    <pubDate>Mon, 21 Oct 2019 17:55 +0100</pubDate>
     <category>raspberry</category>
     <category>bash</category>
     <category>terminal</category>

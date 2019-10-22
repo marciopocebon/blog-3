@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Servidor Webdav',
+            'text': 'Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero', 
+            'tags': 'servidor,webdav,raspberry,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html' 
+},
+{
             'title': 'Apagada automática de tu Raspberry si hay alta temperatura',
             'text': 'Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc ...', 
             'tags': 'raspberry,bash,terminal,script,,', 

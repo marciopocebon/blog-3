@@ -1,5 +1,5 @@
 <head>
-<title> NextcloudPi. Nextcloud en Raspbian con Docker. uGeek Blog </title>
+<title>Docker: Servidor Webdav. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
+<meta name="description" content="Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" NextcloudPi. Nextcloud en Raspbian con Docker" />
-<meta property="og:description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html" />
+<meta property="og:title" content="Docker: Servidor Webdav" />
+<meta property="og:description" content="Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html" />
 
-<meta name="twitter:title" content=" NextcloudPi. Nextcloud en Raspbian con Docker" />
-<meta name="twitter:description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Docker: Servidor Webdav" />
+<meta name="twitter:description" content="Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,26 +85,48 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="nextcloudpi.-nextcloud-en-raspbian-con-docker-1" title="NextcloudPi. Nextcloud en Raspbian con Docker" data-export_file_name="NextcloudPi. Nextcloud en Raspbian con Docker" data-description="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" data-export_date="2019-01-06 14:33" data-category="servidor" data-tag="docker, nextcloud" data-image="./images-blog/ugeek.png">NextcloudPi. Nextcloud en Raspbian con Docker</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 327 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
-<h2 id="descargar-imagen-y-crear-contenedor-nextcloudpi">Descargar Imagen y Crear Contenedor NextcloudPi</h2>
-<p>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.</p>
-<p>Si tenemos un servidor como apache2, vamos a detener el servicio para no utilizar el puerto 80, que éste utiliza por defecto.</p>
-<p>Tendrás que modificar en este comando el usuario <strong>pi</strong> por tu usuario y la ip <strong>192.168.1.100</strong> por la ip local de tu raspberry.</p>
-<pre><code>sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloudplus/:/data --name nextcloudpi ownyourbits/nextcloudplus-armhf 192.168.1.100
+<h1 id="docker-servidor-webdav-1" title="Docker: Servidor Webdav" data-export_file_name="docker-servidor-webdav" data-description="Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero" data-export_date="2019-10-22 17:55" data-category="servidor" data-tag="webdav,raspberry" data-image="./images-blog/dav.png">Docker: Servidor Webdav</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 538 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p>Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos.</p>
+<p>Nextcloud, Box.com, Yandex,… utilizan esta tecnología para conectarnos a sus nubes, pero si lo único que quieres hacer es simplemente compartir, sincronizar o subir y bajar archivos, quizás no necesitas el montar una nube tan pesada como Nextcloud.</p>
+<center>
+<p><img src="../images-blog/dav.png" /></p>
+</center>
+<p>Para conectarte a un servidor Webdav solo necesitas tu navegador. Te conectas a la url y puerto donde montes el servicio, y el servidor te pedirá el usuario y contraseña para acceder.</p>
+<p>Una vez introducido, tendrás acceso a todos los archivos que estén en la carpeta del servidor. Podrás ver todos los archivos desde el navegador.</p>
+<p>Si no quieres utilizar el navegador, también podemos utilizar clientes webdav. Hay aplicaciones como <strong>cadaver</strong>, que nos permite el gestionar archivos desde nuestra terminal. <strong>Curl</strong>, permite el descargar y subir archivos a nuestro servidor <strong>webdav</strong>, muy útil para backups. (En breve haré un artículo sobre esto).</p>
+<p><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">En este artículo, expliqué como montar la carpeta de un servidor webdav, en tu PC local con fuse</a>. Para conectarte desde tu explorador de archivos en Linux, es tan sencillo como escribir <code>dav://tu_ip:puerto/</code>, o <code>davs://tu_ip:puerto/</code> si tienes un certificado de Letsencript.</p>
+<p><strong>Muy importante si abres el servidor a internet, el securizar el servidor con Letsencript para que todo el tráfico vaya cifrado</strong>.</p>
+<p>La mayor parte de exploradores de archivos de Android y IOS, son compatibles con webdav, así que como ves, tus archivos van a ser accesibles desde todos tus dispositivos.</p>
+<p>¿Recuerdas <a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Rclone</a>?, también puedes utilizarlo como cliente y cifrar el contenido de tu nube.</p>
+<p>Hay también muchas aplicaciones de video, notas,… compatibles con servidores webdav como por ejemplo <a href="https://joplinapp.org">Joplin</a>. La velocidad de sincronización de tus notas con el servidor webdav, es muchísimo más rápida que con el servidor webdav de Nextcloud. Eso si, por seguridad, la aplicación te obliga a tener letsencript para sincronizar tus notas.</p>
+<p>Ahora también Orgzly, permite acceso a tu servidor WebDav, de manera que puedes tener tus orgmode centralizados y sincronizados en tu servidor.</p>
+<h2 id="contenedor-del-servidor-webdav">Contenedor del servidor WebDav</h2>
+<p>Monté este docker con idea que fuera lo mas ligero posible, así que lo monté partiendo de un Alpine Linux + un servidor de Nginx. Encontrarás todos estos contenedores en <a href="https://hub.docker.com/r/ugeek/webdav">mi repositorio de DockerHub</a>.</p>
+<p><span class="underline">Configuración</span></p>
+<ul>
+<li>Username: webdav -&gt; usuario</li>
+<li>Password: webdav -&gt; contraseña</li>
+<li>port: 80 -&gt; Puerto del servicio</li>
+<li>root path: $HOME/docker/webdav -&gt; Ruta de la carpeta, donde estarán los archivos</li>
+<li>–restart=unless-stopped -&gt; Siempre se inicia, a menos que tu lo detengas</li>
+</ul>
+<h3 id="raspberry-o-arm">Raspberry o ARM</h3>
+<pre><code>docker run --name webdav --restart=unless-stopped -p 80:80 -v $HOME/docker/webdav:/media -e USERNAME=webdav -e PASSWORD=webdav -d ugeek/webdav:arm
 </code></pre>
-<h2 id="iniciar-nextcloud">Iniciar Nextcloud</h2>
-<p>Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.</p>
-<p>Guardamos las 2 contraseñas y le damos a <strong>Activar</strong> en la parte inferior.</p>
-<p>Una contraseña será para la web de administración de <strong>NextcloudPi</strong> por el puerto 4443 y la otra contraseña será para el servicio <strong>Nextcloud</strong> por el puerto 80 o 443.</p>
-<h2 id="crear-certificado">Crear Certificado</h2>
-<p>Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.</p>
-<p>Ahora vamos a ip::4443 y vamos a crear el certificado en el apartado: Let’s Encrypt.</p>
-<p>Abriremos los puertos 443 y 80 de nuestro Router, dirigiendo el tráfico a la ip local de nuestra Raspberry y clicaremos <strong>Ejecutar</strong>.</p>
-<p>De forma automática, nos generará el certificado por 3 meses.</p>
-<p><a href="https://ownyourbits.com/nextcloudpi/">NextcloudPi</a></p>
+<h3 id="amd64">amd64</h3>
+<pre><code>docker run --name webdav --restart=unless-stopped -p 80:80 -v $HOME/docker/webdav:/media -e USERNAME=webdav -e PASSWORD=webdav -d ugeek/webdav:amd64
+</code></pre>
+<h3 id="i386">i386</h3>
+<pre><code>docker run --name webdav --restart=unless-stopped -p 80:80 -v $HOME/docker/webdav:/media -e USERNAME=webdav -e PASSWORD=webdav -d ugeek/webdav:i386
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="http://www.webdav.org/" class="uri">http://www.webdav.org/</a></li>
+<li><a href="https://hub.docker.com/r/ugeek/webdav" class="uri">https://hub.docker.com/r/ugeek/webdav</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el domingo 06 enero del 2019</p>
+<p>Publicado por Angel el martes 22 octubre del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
