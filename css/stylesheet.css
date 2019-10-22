@@ -14,16 +14,9 @@ img {
 	    color: grey;	    
 	}
 	h1,h2,h3,h4,h5 {
-              color: #7d38d6;
-}
-
-	#icon {
-  position: absolute;
-  font-size: 0.8625em;
-  top: 6.125em;
-  -webkit-filter: invert(100%);
-
+            color: #7d38d6;
 	}
+
 
 }
 
